@@ -46,6 +46,24 @@ def probe(page, url: str, label: str) -> None:
         print(f"    {marker!r}: {'FOUND' if marker in html else 'not found'}", file=sys.stderr)
 
 
+def probe_versions(page, url: str) -> None:
+    print(f"\n-- versions page: {url} --", file=sys.stderr)
+    resp = page.goto(url, wait_until="domcontentloaded", timeout=45000)
+    print(f"  navigation status: {resp.status if resp else 'None'}", file=sys.stderr)
+    page.wait_for_timeout(6000)
+    title = page.title()
+    html = page.content()
+    print(f"  page title: {title!r}", file=sys.stderr)
+    print(f"  html length: {len(html)}", file=sys.stderr)
+    if "Just a moment" in title or "Just a moment" in html[:2000]:
+        print("  STILL BLOCKED by Cloudflare challenge", file=sys.stderr)
+        return
+    print("  Cloudflare challenge NOT present -- real page loaded", file=sys.stderr)
+    for word in ["Français", "French", "France", "Édition française"]:
+        count = html.count(word)
+        print(f"    {word!r}: {count} occurrence(s)", file=sys.stderr)
+
+
 def main() -> int:
     with sync_playwright() as p:
         browser = p.chromium.launch()
@@ -60,6 +78,7 @@ def main() -> int:
         for bgg_id, name in GAMES:
             print(f"\n{'=' * 70}\n{name} (bgg_id={bgg_id})", file=sys.stderr)
             probe(page, f"https://boardgamegeek.com/boardgame/{bgg_id}", "main page")
+            probe_versions(page, f"https://boardgamegeek.com/boardgame/{bgg_id}/versions")
 
         browser.close()
     return 0
