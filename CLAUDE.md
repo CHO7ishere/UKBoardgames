@@ -100,6 +100,32 @@ Stage 7  Static HTML output     sortable table, full result set, source links
   pre-filter). `Langue(s)` field is the primary FR-language signal. Ignore `product.oos` /
   `product.declinaisons` strings seen in cross-sell widgets — unrendered template leakage, not data.
 
+## Stage 2 — offline BGG match (built, blocked on `data/bg_ranks.csv`)
+
+`sources/bgg.py` (CSV loader), `match.py` (normalization + confidence cascade), `score.py`
+(quality gate/score, spec §5.1), `scripts/match_bgg.py` (driver) are all built and unit-tested
+(smoke-tested against the real 4178-product harvest using a small fixture BGG list — real titles
+like "Brass Birmingham" and "Spirit Island (Core Game)" matched their BGG counterparts exactly).
+Needs no network — safe to run in this sandbox, unlike Stages 0/3/4/5.
+
+- **Blocked on `data/bg_ranks.csv`**: this file doesn't exist in the repo yet. Per spec §0.1 it
+  has to be downloaded by hand from `boardgamegeek.com/data_dumps/bg_ranks` while logged into a
+  browser — no token needed for this specific file (unlike Stage 3's `thing`/`search` calls,
+  which do need the token, still pending). `scripts/match_bgg.py` checks for the file and errors
+  loudly with instructions if it's missing rather than silently producing an empty result.
+- **Fuzzy match tuning**: `config.yaml`'s `matching.fuzzy_threshold`/`min_score_gap` (90/5) were
+  picked from empirical rapidfuzz testing, not guessed — `token_sort_ratio` (not `WRatio`, which
+  scores an expansion's title against its own base game at exactly 90.0 due to partial-ratio
+  weighting) cleanly separates genuine near-duplicates (~87-96) from false positives (~62-67).
+  `match.py`'s digit-conflict veto catches the other real false-positive class a plain scorer
+  misses: "Pandemic Legacy: Season 1" vs "Season 2" score ~96% similar despite being different
+  games — any query/candidate pair where both sides have digit tokens that differ is rejected
+  regardless of fuzzy score.
+- **Spec §5.1's worked example is slightly off**: its own formula, given its own numbers (8.4
+  average, 60 votes, M=100, prior=6.5), computes shrunk=7.2125 — not the "~7.7" the prose
+  estimates. Implemented the literal formula (confirmed correct via `score.py`'s tests), not the
+  prose approximation.
+
 ## Tech
 
 Python: `requests`, `beautifulsoup4`/`lxml`, `rapidfuzz`, `pandas`, `jinja2`. SQLite cache keyed by
@@ -109,8 +135,11 @@ live in one YAML config (docs/spec.md §10) — re-scoring never needs re-scrapi
 
 ## Build order
 
-1. Register BGG app + download `bg_ranks.csv` (do this first — token approval is slow).
-2. Zatu JSON harvest + offline match/quality-gate/score against the CSV → first usable ranked list.
+1. Register BGG app + download `bg_ranks.csv` (do this first — token approval is slow). **App
+   registered, token still pending; `bg_ranks.csv` not yet provided.**
+2. Zatu JSON harvest + offline match/quality-gate/score against the CSV → first usable ranked
+   list. **Harvest done (Stage 0/1). Match/gate code done (Stage 2), blocked only on the CSV
+   file landing in `data/`.**
 3. BGG enrich (best-effort, decoupled — don't block the pipeline if the token isn't ready yet).
 4. Philibert adapter (EAN first, title fallback).
 5. Fill any Zatu detail gaps, then HTML render.

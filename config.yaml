@@ -10,6 +10,16 @@ quality:
   min_shrunk: 7.2
   min_votes: 30
 
+# Not in spec §10's original sample — added for Stage 2's fuzzy match tier (spec §4.2). Picked
+# from empirical rapidfuzz testing: token_sort_ratio scores genuine near-duplicates (typos,
+# missing "and", punctuation) at ~87-96 and false positives (an expansion's title against its
+# base game, e.g. "Spirit Island: Branch & Claw" vs "Spirit Island") at ~62-67 — 90/5 cleanly
+# separates them. See match.py's digit-conflict veto for the other false-positive class this
+# threshold alone doesn't catch (numbered sequels/seasons).
+matching:
+  fuzzy_threshold: 90
+  min_score_gap: 5
+
 weights:
   advantage:
     unavailable_fr: 40
