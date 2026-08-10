@@ -17,7 +17,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 import requests  # noqa: E402
 from bs4 import BeautifulSoup  # noqa: E402
 
-BASE_URL = "https://www.philibert.net"
+BASE_URL = "https://www.philibertnet.com"
 USER_AGENT = "UKBoardgamesAdvisor/1.0 (personal one-off tool; contact: mdeygout@gmail.com)"
 
 # Known-real product from spec §11.3, captured live in the original investigation.

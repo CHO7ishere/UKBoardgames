@@ -14,7 +14,9 @@
 >
 > **Verified 2026-08-10, from inside the actual coding environment:** the "limited internet access"
 > isn't flaky Wi-Fi, it's a fixed network policy. Direct `curl` tests to `zatu.com`,
-> `boardgamegeek.com`, `www.philibert.net`, and `1jour-1jeu.com` all get rejected at the gateway
+> `boardgamegeek.com`, `philibertnet.com` (both with and without `www.` — the original test here
+> mistakenly cited `philibert.net`, a different, wrong domain; corrected once the mistake surfaced
+> via a 404 in a live GitHub Actions probe), and `1jour-1jeu.com` all get rejected at the gateway
 > (`403` on `CONNECT`) — this coding sandbox cannot reach any of the three target sites, full stop.
 > Package registries (PyPI, npm) and GitHub work fine, so `pip install` and git push/pull are
 > unaffected. This *confirms* §0.4's "code offline, run online" plan is the right one, but sharpens
