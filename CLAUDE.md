@@ -225,14 +225,25 @@ via GitHub Actions (`.github/workflows/lookup-philibert.yml`) on 2026-08-10 — 
   `<form>` (round 3), a bulk category-browse dead end at 12,812 products with broken pagination
   (round 5), and finally the real endpoint confirmed by a user-supplied working browser URL
   (rounds 6-7): `/fr/recherche?search_query=<query>`.
-- **Real result**: 565/576 survivors got a real per-product EAN from Stage 4 (11 didn't — Zatu
-  detail-page fetch failed or had no barcode). Of the 576 looked up on Philibert: 381
-  `LISTED_IN_STOCK`, 195 `NOT_LISTED`, 0 `LISTED_OUT_OF_STOCK`. Advantage verdicts: 375 `NONE`
-  (the actual ask — removed from the shortlist as "available in France at a similar price"), 195
-  `UNAVAILABLE_FR`, 6 `CHEAPER_UK`. Outputs: `data/philibert_results.json` (all 576, verdict
-  included, for transparency) and `data/shortlist.json` (201 survivors — `NONE`/`EXCLUDED`
-  removed). Confirmed via a driver-level test that a same-price game is actually dropped from the
-  shortlist while a genuinely-cheaper one and a not-listed-in-France one both survive.
+- **Real result (first run, since superseded — see the matching-fix bullets below)**: 565/576
+  survivors got a real per-product EAN from Stage 4 (11 didn't — Zatu detail-page fetch failed or
+  had no barcode). Of the 576 looked up on Philibert: 381 `LISTED_IN_STOCK`, 195 `NOT_LISTED`, 0
+  `LISTED_OUT_OF_STOCK`. Advantage verdicts: 375 `NONE` (the actual ask — removed from the
+  shortlist as "available in France at a similar price"), 195 `UNAVAILABLE_FR`, 6 `CHEAPER_UK`.
+  Confirmed via a driver-level test that a same-price game is actually dropped from the shortlist
+  while a genuinely-cheaper one and a not-listed-in-France one both survive.
+- **Current real result, after the article-normalization + prefix-match + accessory-SKU-filter
+  fixes below (`lookup-philibert.yml` re-dispatched 2026-08-10 16:39 — 53 min)**: 410
+  `LISTED_IN_STOCK`, 166 `NOT_LISTED`, 0 `LISTED_OUT_OF_STOCK`. Advantage verdicts: 402 `NONE`,
+  166 `UNAVAILABLE_FR`, 8 `CHEAPER_UK`. Outputs: `data/philibert_results.json` (all 576, verdict
+  included, for transparency) and `data/shortlist.json` (**174** survivors — `NONE`/`EXCLUDED`
+  removed, down from 201 before the fixes). The 27-game net drop in shortlist size is exactly the
+  expected effect of the fixes: games that were wrongly falling through to `UNAVAILABLE_FR` due
+  to the matching bugs are now correctly recognized as available in France (mostly landing in
+  `NONE`, a couple in `CHEAPER_UK`) and correctly dropped from/reclassified in the shortlist.
+  Slay the Spire itself is confirmed fixed: `LISTED_IN_STOCK`, real Philibert URL, €109.90,
+  verdict `NONE` ("in stock both sides, UK only 2% cheaper below 40% threshold") — matching the
+  user's real-world report exactly.
 - **The zero-out-of-stock result was checked, not just accepted**: ran a follow-up probe against
   5 real product URLs from the actual run and confirmed `.product-actions` (the container
   `_classify_stock` uses) reliably contains the primary product's genuine "Ajouter au panier"
@@ -277,8 +288,9 @@ via GitHub Actions (`.github/workflows/lookup-philibert.yml`) on 2026-08-10 — 
   listing's category slug is always a publisher name, never one of these component-taxonomy
   slugs, so the filter can only help, never wrongly reject a real game. Verified against the real
   captured search results (`tests/fixtures/philibert_search_title_prefix.html`, rebuilt from the
-  actual live probe output) — 119 tests still pass. **Re-dispatched again 2026-08-10** to pick up
-  this second fix; not yet confirmed in the committed `data/shortlist.json`.
+  actual live probe output) — 119 tests still pass. **Confirmed fixed in the real re-run**
+  (2026-08-10 16:39, see the updated Stage 5 result numbers above): Slay the Spire now resolves
+  to `LISTED_IN_STOCK` at its real Philibert URL/price, verdict `NONE`.
 - **Blood on the Clocktower, checked and not a bug**: user-supplied example where Zatu's EAN
   matches the *English* Philibert listing (confirmed "not available" — no French edition), while
   our title-search fallback would find the separate *French*-edition listing (different EAN, on
