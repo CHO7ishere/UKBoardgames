@@ -1,0 +1,98 @@
+{
+  "products": [
+    {
+      "id": 1234567890,
+      "title": "Manipulate",
+      "handle": "manipulate",
+      "product_type": "Board Games",
+      "vendor": "Zatu Games",
+      "tags": ["Cooperative Play", "Party Games"],
+      "variants": [
+        {
+          "id": 987654321,
+          "title": "Default Title",
+          "sku": "ZWV-MANIPULATE",
+          "barcode": "5060453690123",
+          "price": "19.99",
+          "compare_at_price": "29.99",
+          "available": true,
+          "inventory_quantity": 3
+        }
+      ],
+      "images": [{"src": "https://zatu.com/cdn/shop/files/ZWV-MANIPULATE.jpg"}]
+    },
+    {
+      "id": 1234567891,
+      "title": "Gloomhaven: Jaws of the Lion",
+      "handle": "gloomhaven-jaws-of-the-lion",
+      "product_type": "Board Games",
+      "vendor": "Cephalofair Games",
+      "tags": "Cooperative Play, Legacy",
+      "variants": [
+        {
+          "id": 987654322,
+          "title": "Default Title",
+          "sku": "CPH-JOTL",
+          "barcode": "",
+          "price": "44.99",
+          "compare_at_price": null,
+          "available": false,
+          "inventory_quantity": 0
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": 1234567892,
+      "title": "The Mind - Dice Set Expansion",
+      "handle": "the-mind-dice-set",
+      "product_type": "Accessories",
+      "vendor": "Nürnberger Spielkarten",
+      "tags": [],
+      "variants": [
+        {
+          "id": 987654323,
+          "title": "Default Title",
+          "sku": "NSV-MIND-DICE",
+          "barcode": null,
+          "price": "9.99",
+          "compare_at_price": null,
+          "available": true,
+          "inventory_quantity": 12
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": 1234567893,
+      "title": "Brass: Birmingham",
+      "handle": "brass-birmingham",
+      "product_type": "Board Games",
+      "vendor": "Roxley",
+      "tags": ["Strategy"],
+      "variants": [
+        {
+          "id": 987654324,
+          "title": "Standard Edition",
+          "sku": "RXL-BB-STD",
+          "barcode": "681706712456",
+          "price": "54.99",
+          "compare_at_price": "64.99",
+          "available": true,
+          "inventory_quantity": 1
+        },
+        {
+          "id": 987654325,
+          "title": "Deluxe Edition",
+          "sku": "RXL-BB-DLX",
+          "barcode": "681706712999",
+          "price": "89.99",
+          "compare_at_price": null,
+          "available": false,
+          "inventory_quantity": 0
+        }
+      ],
+      "images": []
+    }
+  ]
+}

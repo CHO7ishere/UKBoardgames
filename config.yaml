@@ -1,0 +1,35 @@
+# Single tunable-knobs file — see docs/spec.md §10. Re-scoring never needs re-scraping or code
+# changes, just edits here.
+
+fx_gbp_eur: 1.17 # fixed for the run
+discount_threshold: 0.40
+
+quality:
+  shrink_M: 100
+  prior: 6.5
+  min_shrunk: 7.2
+  min_votes: 30
+
+weights:
+  advantage:
+    unavailable_fr: 40
+    unavailable_fr_weak: 28
+    out_of_stock_fr: 30
+    cheaper_uk_base: 15
+  genre:
+    coop: 12
+    party: 12
+  language:
+    low: 10
+    med: 0
+    high: -15
+    unknown: -3
+
+include_expansions: false
+
+rate_limit_sec:
+  bgg: 5.0 # BGG's documented courtesy limit — do not lower
+  zatu: 1.0
+  philibert: 1.0
+
+bgg_bearer_token: "" # from boardgamegeek.com/applications — required for Stage 3, not Stage 2

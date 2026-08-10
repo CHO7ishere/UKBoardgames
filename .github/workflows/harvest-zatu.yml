@@ -1,0 +1,31 @@
+name: Harvest Zatu catalogue
+
+# Stage 0 needs real internet access to zatu.com, which the coding sandbox this project was
+# written in cannot reach (see CLAUDE.md "Network reality in this coding environment").
+# GitHub-hosted runners have no such restriction, so this is where Stage 0 actually runs.
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: "0 6 * * 1" # weekly, Monday 06:00 UTC — Zatu's catalogue/prices drift slowly
+
+permissions:
+  contents: write
+
+jobs:
+  harvest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - run: python scripts/harvest_zatu.py --out data/zatu_products.json
+      - name: Commit harvested data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/zatu_products.json
+          git diff --cached --quiet || git commit -m "Update Zatu harvest data [skip ci]"
+          git push

@@ -14,10 +14,23 @@ formulas, config schema, and fixture data to code against offline.
 Verified by direct test: this sandbox's network policy **blocks Zatu, BGG, Philibert, and
 1jour-1jeu.com outright** (gateway 403 on CONNECT) — not flaky connectivity, a fixed policy. PyPI/npm/
 GitHub work fine, so installing deps and pushing code is unaffected. Practical upshot: write and
-unit-test Stages 0–2/6/7 here against the fixtures in `docs/spec.md` §11; the live-fetching stages
-(0/3/4/5 hitting real endpoints) need to run somewhere without that restriction — the user's own
-machine, or an environment whose network policy allows those hosts. Don't waste time re-probing this;
+unit-test Stages 0–2/6/7 here against fixtures (`docs/spec.md` §11 and `tests/fixtures/`); the
+live-fetching stages (0/3/4/5 hitting real endpoints) run via **GitHub Actions** instead (see below) —
+GitHub-hosted runners aren't behind this restriction. Don't waste time re-probing this in-session;
 re-check only if the environment's network policy changes.
+
+## Delivery: GitHub Actions does the real fetching
+
+Decided: GitHub Actions runners do all live internet work (they aren't network-restricted the way this
+coding sandbox is); this coding environment only ever writes code and unit tests against fixtures.
+- `.github/workflows/harvest-zatu.yml` — Stage 0. `workflow_dispatch` + weekly cron. Runs
+  `scripts/harvest_zatu.py`, which verifies GBP currency first (aborts loudly if not GBP), harvests +
+  light-filters the catalogue, and commits `data/zatu_products.json` straight to `main` (solo project,
+  no PR needed).
+- `.github/workflows/tests.yml` — runs `pytest` against `tests/fixtures/` on every push to `main`.
+- Later stages (3/4/5, then Stage 7 render) should follow the same pattern: real fetching + commit/
+  deploy happens in a workflow, not in this session. Stage 7's output is a static HTML file, a natural
+  fit for GitHub Pages once the pipeline reaches that stage.
 
 ## Pipeline (see docs/spec.md §2-3 for full detail)
 
