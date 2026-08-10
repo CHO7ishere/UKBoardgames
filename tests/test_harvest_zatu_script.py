@@ -55,8 +55,14 @@ def test_main_writes_expected_json(tmp_path, monkeypatch):
     payload = json.loads(out_file.read_text())
     assert payload["run_metadata"]["currency_verified"] is True
     assert payload["run_metadata"]["kept_count"] == 1
-    assert payload["products"][0]["handle"] == "manipulate"
-    assert payload["products"][0]["variants"][0]["barcode"] == "5060453690123"
+    product = payload["products"][0]
+    assert product["handle"] == "manipulate"
+    assert product["variants"][0]["barcode"] == "5060453690123"
+    # Computed properties (ean/in_stock/min_price_gbp) must survive serialization —
+    # dataclasses.asdict() silently drops @property methods, so this is worth pinning.
+    assert product["ean"] == "5060453690123"
+    assert product["in_stock"] is True
+    assert product["min_price_gbp"] == 19.99
 
 
 def test_skip_currency_check_flag_bypasses_verification(tmp_path, monkeypatch):

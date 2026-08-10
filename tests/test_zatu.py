@@ -79,6 +79,15 @@ def test_parse_product_picks_lowest_price_across_variants(page1):
     assert product.in_stock is True  # standard edition available even though deluxe isn't
 
 
+def test_to_dict_includes_computed_properties(page1):
+    product = parse_product(page1["products"][0])
+    d = product.to_dict()
+    assert d["ean"] == "5060453690123"
+    assert d["in_stock"] is True
+    assert d["min_price_gbp"] == 19.99
+    assert d["handle"] == "manipulate"  # regular fields still present too
+
+
 def test_fetch_products_page_returns_raw_list(page1):
     session = FakeSession(pages=[page1])
     result = fetch_products_page(session, page=1)

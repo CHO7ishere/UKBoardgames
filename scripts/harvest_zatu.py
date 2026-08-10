@@ -9,7 +9,6 @@ that blocks the site outright (see CLAUDE.md "Network reality in this coding env
 from __future__ import annotations
 
 import argparse
-import dataclasses
 import json
 import sys
 from datetime import datetime, timezone
@@ -67,7 +66,7 @@ def main() -> int:
             "kept_count": len(games),
             "dropped_accessory_count": dropped,
         },
-        "products": [dataclasses.asdict(p) for p in games],
+        "products": [p.to_dict() for p in games],
     }
     out_path.write_text(json.dumps(payload, indent=2))
     print(f"Wrote {out_path}", file=sys.stderr)

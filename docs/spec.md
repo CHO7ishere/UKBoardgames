@@ -562,6 +562,20 @@ is the reliable stock boolean; don't parse it out of display text if the JSON is
 `tags` is a plausible (not confirmed) place mechanics/genre hints might live — treat as a bonus signal,
 not a substitute for BGG's own mechanic/category data in Stage 3.
 
+**Verified 2026-08-10, first real harvest (4178 products) via GitHub Actions:** two assumptions above
+don't hold on the live store. `barcode` is `null` on **every single variant** across the whole
+catalogue — Zatu's public `/collections/.../products.json` never populates it, not even sometimes.
+So the EAN-match HIGH-confidence tier in §4.2 has no data to work with from this endpoint; Stage 2
+matching will have to run on title (+ year if available) as the primary key, not EAN. Separately,
+`inventory_quantity` is also `null` on every variant, and `available` is `true` for all 4178
+products — with no inventory number to cross-check against, `available` can't be trusted as a real
+stock signal here, contrary to "the reliable stock boolean" above. Real per-product availability, if
+it's needed with confidence, will have to come from Stage 4's per-product page fetch (the stock-status
+strings in §11.1's confirmed list — `"3+ in stock"`, `"Back-Order"`, `"Out of stock"`, etc.) rather
+than the bulk JSON — likely for most products, not just the "minority" Stage 4 originally assumed.
+Price itself is solid: spot-checked against a manual browser price (Spirit Island Core Game, £67) and
+matched exactly using the bare-path fix above.
+
 ### 11.2 BGG — representative `thing` response (schema per official docs, §0.1)
 
 ```xml

@@ -12,6 +12,7 @@ like this is exactly the kind of thing that can change without notice.
 
 from __future__ import annotations
 
+import dataclasses
 import re
 import time
 from dataclasses import dataclass, field
@@ -68,6 +69,16 @@ class ZatuProduct:
             if v.barcode and _EAN_RE.match(v.barcode.strip()):
                 return v.barcode.strip()
         return None
+
+    def to_dict(self) -> dict:
+        """dataclasses.asdict() only serializes fields, not @property methods — use this
+        instead so `ean`/`in_stock`/`min_price_gbp` actually make it into saved output."""
+        return {
+            **dataclasses.asdict(self),
+            "ean": self.ean,
+            "in_stock": self.in_stock,
+            "min_price_gbp": self.min_price_gbp,
+        }
 
 
 def make_session() -> requests.Session:

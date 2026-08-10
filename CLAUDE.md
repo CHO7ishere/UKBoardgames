@@ -70,7 +70,13 @@ Stage 7  Static HTML output     sortable table, full result set, source links
   real route on this store) — the first harvest run failed on that. Still assert
   currency == GBP once per harvest (`verify_gbp_currency` in `sources/zatu.py`) before trusting
   any price, since this is exactly the kind of storefront behaviour that can change silently.
-  `barcode` field on variants is the EAN when present — stronger match key than fuzzy title.
+  Price itself is solid — spot-checked against a manual browser price and matched exactly.
+  **No EAN, no reliable stock from the bulk endpoint**: confirmed on the full first harvest (4178
+  products) — `barcode` is `null` on every single variant, no exceptions, and so is
+  `inventory_quantity`; `available` reports `true` for all 4178 products, which with no inventory
+  number to cross-check is not a trustworthy stock signal. So Stage 2 matching has to run on title
+  (not EAN — that tier just won't fire), and real per-product availability will need Stage 4's
+  per-product page fetch (stock-status text, spec §11.1) for most products, not just a minority.
 - **Philibert**: PrestaShop, no bulk export — needs page fetches. EAN is in a labeled `EAN` field
   under "Fiche technique" (authoritative) and often in the URL (`...-<ean13>.html`, fast
   pre-filter). `Langue(s)` field is the primary FR-language signal. Ignore `product.oos` /
