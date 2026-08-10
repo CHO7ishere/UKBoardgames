@@ -1,18 +1,16 @@
 #!/usr/bin/env python3
 """One-off diagnostic: probe Philibert's real site behavior before building Stage 5 for real.
 
-Round 5. Round 4 confirmed /fr/recherche?s=<query> just redirects to the homepage regardless of
-query (all three different queries returned the exact same 26 links, and the final response URL
-was /fr/ — search genuinely isn't reachable this way, likely JS/AJAX-driven, possibly a
-third-party widget). Pivoting strategy: check whether bulk category-page browsing (mirroring
-Stage 0's approach, since Philibert has no JSON API) is viable size-wise — total product count
-and real pagination mechanism for the confirmed-working /fr/50-jeux-de-societe category page.
-Not part of the production pipeline; run manually via the probe-philibert workflow.
+Round 6. The user supplied a real, working search URL from their own browser:
+https://www.philibertnet.com/fr/recherche?search_query=spirit%20island — the param is
+`search_query`, not `s` (round 4's guess). Confirms this before Stage 5 is built against it, and
+checks the result markup structure (how to reliably find product links + how a no-results page
+looks, to distinguish NOT_LISTED from a parsing failure). Not part of the production pipeline;
+run manually via the probe-philibert workflow.
 """
 
 from __future__ import annotations
 
-import re
 import sys
 from pathlib import Path
 
@@ -23,7 +21,9 @@ from bs4 import BeautifulSoup  # noqa: E402
 
 BASE_URL = "https://www.philibertnet.com"
 USER_AGENT = "UKBoardgamesAdvisor/1.0 (personal one-off tool; contact: mdeygout@gmail.com)"
-CATEGORY_URL = f"{BASE_URL}/fr/50-jeux-de-societe"
+
+KNOWN_PRODUCT_EAN = "3701551706461"
+KNOWN_PRODUCT_TITLE = "Athlètes de Compète"
 
 
 def make_session() -> requests.Session:
@@ -32,63 +32,39 @@ def make_session() -> requests.Session:
     return session
 
 
-def probe_category_total_count(session: requests.Session) -> None:
-    print("=== Category page: hunting for a total-product-count indicator ===", file=sys.stderr)
-    resp = session.get(CATEGORY_URL, timeout=30)
-    print(f"status={resp.status_code}", file=sys.stderr)
-    text = resp.text
-    # Common PrestaShop phrasing: "NNN produits", "NNN résultats", data-total attributes, etc.
-    for pattern in [r"[\d\s]{1,7}\s*produits?", r"[\d\s]{1,7}\s*résultats?", r'"total"\s*:\s*"?\d+']:
-        hits = re.findall(pattern, text, re.IGNORECASE)
-        if hits:
-            print(f"  pattern {pattern!r} hits: {hits[:5]}", file=sys.stderr)
+def search(session: requests.Session, query: str, label: str) -> None:
+    url = f"{BASE_URL}/fr/recherche"
+    resp = session.get(url, params={"search_query": query}, timeout=30)
+    print(f"\n=== [{label}] search_query={query!r} ===", file=sys.stderr)
+    print(f"GET {resp.url} -> status={resp.status_code}", file=sys.stderr)
+    soup = BeautifulSoup(resp.text, "lxml")
 
-    soup = BeautifulSoup(text, "lxml")
-    for sel in ['[class*="count" i]', '[class*="total" i]', '[class*="result" i]']:
-        for el in soup.select(sel)[:5]:
-            t = el.get_text(strip=True)
-            if t and any(c.isdigit() for c in t):
-                print(f"  {sel} -> {t!r}", file=sys.stderr)
+    # Try to find a dedicated product-listing container first (more reliable than "any .html
+    # link on the page", which also catches header/footer/nav links).
+    product_containers = soup.select(
+        '[class*="product" i][class*="miniature" i], article[class*="product" i], '
+        '[class*="js-product" i], [data-id-product]'
+    )
+    print(f"product-ish container count: {len(product_containers)}", file=sys.stderr)
 
+    all_links = [a.get("href") for a in soup.select('a[href*=".html"]') if a.get("href")]
+    unique_links = list(dict.fromkeys(all_links))
+    print(f"total .html link count: {len(unique_links)}", file=sys.stderr)
+    print(f"sample: {unique_links[:8]}", file=sys.stderr)
 
-def probe_pagination(session: requests.Session) -> None:
-    print("\n=== Category page: pagination mechanism ===", file=sys.stderr)
-    for variant in [
-        f"{CATEGORY_URL}?page=2",
-        f"{CATEGORY_URL}?p=2",
-        f"{CATEGORY_URL}#/page-2",
-        f"{CATEGORY_URL}?page=1&n=100",
-    ]:
-        resp = session.get(variant, timeout=30)
-        soup = BeautifulSoup(resp.text, "lxml")
-        links = list(dict.fromkeys(a.get("href") for a in soup.select('a[href*=".html"]') if a.get("href")))
-        print(f"{variant} -> status={resp.status_code} final={resp.url} link_count={len(links)}",
-              file=sys.stderr)
-
-    # page=1 vs page=2: are the product sets actually different, confirming real pagination?
-    r1 = session.get(f"{CATEGORY_URL}?page=1", timeout=30)
-    r2 = session.get(f"{CATEGORY_URL}?page=2", timeout=30)
-    links1 = set(a.get("href") for a in BeautifulSoup(r1.text, "lxml").select('a[href*=".html"]'))
-    links2 = set(a.get("href") for a in BeautifulSoup(r2.text, "lxml").select('a[href*=".html"]'))
-    overlap = links1 & links2
-    print(f"\npage=1 links: {len(links1)}, page=2 links: {len(links2)}, overlap: {len(overlap)}",
-          file=sys.stderr)
-
-
-def probe_ean_in_url_direct_guess(session: requests.Session) -> None:
-    """If we already know a product's EAN and rough slug (from Zatu's title), can we skip
-    discovery entirely and construct the URL? Almost certainly not (internal id + full slug are
-    unknown), but confirm the failure mode is a clean 404, not something misleading."""
-    print("\n=== Sanity: a guessed (wrong) product URL ===", file=sys.stderr)
-    resp = session.get(f"{BASE_URL}/fr/some-publisher/1-fake-slug-1234567890123.html", timeout=30)
-    print(f"status={resp.status_code}", file=sys.stderr)
+    # "no results" phrasing, if any.
+    text = soup.get_text(" ", strip=True)
+    for phrase in ["Aucun résultat", "aucun résultat", "0 résultat", "Aucun produit"]:
+        if phrase in text:
+            print(f"no-results phrase found: {phrase!r}", file=sys.stderr)
 
 
 def main() -> int:
     session = make_session()
-    probe_category_total_count(session)
-    probe_pagination(session)
-    probe_ean_in_url_direct_guess(session)
+    search(session, "spirit island", "user-confirmed example")
+    search(session, KNOWN_PRODUCT_EAN, "known product's real EAN")
+    search(session, KNOWN_PRODUCT_TITLE, "known product's real title")
+    search(session, "zzz_definitely_not_a_real_game_zzz", "expected no-results case")
     return 0
 
 
