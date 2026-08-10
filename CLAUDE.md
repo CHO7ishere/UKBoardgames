@@ -245,3 +245,34 @@ via GitHub Actions (`.github/workflows/lookup-philibert.yml`) on 2026-08-10 — 
   token). Until then, every `NOT_LISTED` result uses the weaker variant (28 pts, flagged
   `needs_eyeball`) rather than assuming no French edition exists at all — the conservative
   default, revisit once Stage 3 lands.
+- **Real false negative found by user spot-check, fixed 2026-08-10**: Slay the Spire was marked
+  `UNAVAILABLE_FR` in the first real run even though Philibert lists it (under its French
+  subtitle, "Slay the Spire: Le Jeu de Plateau"). Root cause was two-layered: (1)
+  `normalize_title`'s article-stripping was leading-only (`^(a|an|the)\s+`) — stripping the noise
+  phrase "board game" out of "Slay the Spire: **The** Board Game" left a dangling, ungrammatical
+  "the" behind (`"slay the spire the"`) that a leading-only strip could never reach. Fixed by
+  making `_ARTICLE_RE` match `\b(a|an|the)\b` anywhere in the string, substituting a space (not
+  empty) to avoid gluing neighbouring words together. (2) Even with that fixed, `"slay spire"`
+  only scores ~52-61 via `token_sort_ratio` against `"slay spire le jeu de plateau"` — nowhere
+  near the 85 fuzzy threshold, since French-subtitled listings add unrelated tokens rather than
+  extending the same words. Fixed by giving `search_by_title` the same unique-prefix fallback
+  tier Stage 2's `BggIndex` already had (`sources/philibert.py`): tried only when fuzzy finds
+  nothing, accepted only if exactly one candidate's normalized slug extends the query as a
+  word-boundary prefix. Both fixes are unit-tested (`tests/test_match.py`'s new
+  `"Slay the Spire: The Board Game"` case, `tests/test_philibert.py`'s
+  `test_search_by_title_falls_back_to_unique_prefix_match` +
+  `test_search_by_title_rejects_ambiguous_prefix_match`) — 119 tests pass. **Not yet re-run for
+  real**: the committed `data/philibert_results.json`/`data/shortlist.json` still reflect the
+  pre-fix logic (375 `NONE`/195 `UNAVAILABLE_FR`/6 `CHEAPER_UK`), so Slay the Spire and an unknown
+  number of similar French-subtitle misses are still wrongly marked `UNAVAILABLE_FR` in the
+  committed data until `lookup-philibert.yml` is re-dispatched.
+- **Blood on the Clocktower, checked and not a bug**: user-supplied example where Zatu's EAN
+  matches the *English* Philibert listing (confirmed "not available" — no French edition), while
+  our title-search fallback would find the separate *French*-edition listing (different EAN, on
+  preorder, `Langue(s)` = Français) instead. Traced by hand: EAN search on Zatu's own EAN
+  correctly returns nothing (matches the user's cited English-listing URL, confirmed not
+  purchasable there), so the pipeline's EAN tier behaves correctly. Whether the title-fallback
+  then surfacing the French edition as `CHEAPER_UK`/`NONE` (rather than `UNAVAILABLE_FR`) is
+  desired is a genuine judgement call, not a defect — user's framing ("for simplicity sake we can
+  consider this as available") suggests accepting it, but this hasn't been explicitly confirmed
+  either way and no code change was made for it.

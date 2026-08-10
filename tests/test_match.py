@@ -41,6 +41,9 @@ def index(base_games):
         # "core" alone must survive when it's not part of the "core game" phrase — it used to
         # be stripped unconditionally, silently mangling "Core Set" into "set".
         ("Company of Heroes: 2nd Edition Core Set", "company of heroes core set"),
+        # Real miss: stripping the noise phrase "board game" out of "...: The Board Game" used
+        # to leave a dangling "the" behind that a leading-only article strip couldn't reach.
+        ("Slay the Spire: The Board Game", "slay spire"),
     ],
 )
 def test_normalize_title(title, expected):

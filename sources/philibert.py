@@ -97,18 +97,36 @@ def search_by_title(
 ) -> str | None:
     """Title search's results aren't reliably filtered by Philibert itself (spec: a garbage
     query can still return unrelated "you might like" links), so candidates are fuzzy-filtered
-    by title similarity extracted from the URL slug before one is accepted."""
+    by title similarity extracted from the URL slug before one is accepted.
+
+    Falls back to a unique-prefix match (same rationale as Stage 2's `BggIndex`) when fuzzy
+    finds nothing — confirmed necessary by a real miss: Philibert listed "Slay the Spire" under
+    its French subtitle ("...Le Jeu de Plateau"), which no fuzzy score could bridge no matter
+    the threshold, but the English title is a clean prefix of it.
+    """
     links = _search_links(session, title)
     if not links:
         return None
     norm_query = normalize_title(title)
+    candidates = [(link, normalize_title(_slug_to_title(link))) for link in links]
+
     best_link, best_score = None, 0.0
-    for link in links:
-        score = fuzz.token_sort_ratio(norm_query, normalize_title(_slug_to_title(link)))
+    for link, norm_candidate in candidates:
+        score = fuzz.token_sort_ratio(norm_query, norm_candidate)
         if score > best_score:
             best_link, best_score = link, score
     if best_link and best_score >= fuzzy_threshold:
         return _absolute(best_link)
+
+    prefix_links = list(
+        dict.fromkeys(
+            link for link, norm_candidate in candidates
+            if norm_candidate.startswith(norm_query + " ")
+        )
+    )
+    if len(prefix_links) == 1:
+        return _absolute(prefix_links[0])
+
     return None
 
 

@@ -81,6 +81,22 @@ def test_search_by_title_returns_none_for_truly_empty_results():
     assert search_by_title(session, "nothing here") is None
 
 
+def test_search_by_title_falls_back_to_unique_prefix_match():
+    # Real miss found by manual spot-check: Philibert lists "Slay the Spire" under its French
+    # subtitle ("...Le Jeu de Plateau"), which no fuzzy score can bridge -- the English query is
+    # a clean prefix of it instead.
+    session = FakeSession({"Slay the Spire": "philibert_search_title_prefix.html"})
+    url = search_by_title(session, "Slay the Spire: The Board Game")
+    assert url == "https://www.philibertnet.com/fr/matagot/130149-slay-the-spire-le-jeu-de-plateau-3760372232801.html"
+
+
+def test_search_by_title_rejects_ambiguous_prefix_match():
+    # Two different BGG-style subtitled editions both extend the same query prefix -- must not
+    # guess, same rationale as Stage 2's BggIndex.
+    session = FakeSession({"Suspects": "philibert_search_title_ambiguous_prefix.html"})
+    assert search_by_title(session, "Suspects") is None
+
+
 # --- fetch_product_page ---------------------------------------------------------------------
 
 

@@ -45,7 +45,7 @@ _EDITION_NOISE_RE = re.compile(
     r"retail edition|english edition|english|core game|standard edition|"
     r"anniversary edition|collector'?s edition)\b"
 )
-_ARTICLE_RE = re.compile(r"^(a|an|the)\s+")
+_ARTICLE_RE = re.compile(r"\b(a|an|the)\b")
 _PUNCT_RE = re.compile(r"[^\w\s]")
 _WS_RE = re.compile(r"\s+")
 _DIGIT_RE = re.compile(r"\d+")
@@ -66,8 +66,14 @@ _THOUSANDS_COMMA_RE = re.compile(r"(?<=\d),(?=\d)")
 
 
 def normalize_title(title: str) -> str:
-    """Lowercase, strip accents/edition noise/punctuation/leading articles, normalise '&'->'and'
-    and roman numerals, collapse whitespace (spec §4.1)."""
+    """Lowercase, strip accents/edition noise/punctuation/articles, normalise '&'->'and' and
+    roman numerals, collapse whitespace (spec §4.1).
+
+    Articles are stripped anywhere in the string, not just a leading one — found via a real
+    miss ("Slay the Spire: The Board Game" vs Philibert's title for it): stripping the noise
+    phrase "board game" out of "...: The Board Game" left a dangling, ungrammatical "the" behind
+    that a leading-only strip couldn't reach, corrupting the comparison string.
+    """
     text = html.unescape(title).lower()
     text = unicodedata.normalize("NFKD", text)
     text = "".join(c for c in text if not unicodedata.combining(c))
@@ -77,7 +83,7 @@ def normalize_title(title: str) -> str:
     text = _EDITION_NOISE_RE.sub(" ", text)
     text = _ROMAN_RE.sub(lambda m: _ROMAN_MAP.get(m.group(0).lower(), m.group(0)), text)
     text = _PUNCT_RE.sub(" ", text)
-    text = _ARTICLE_RE.sub("", text)
+    text = _ARTICLE_RE.sub(" ", text)
     return _WS_RE.sub(" ", text).strip()
 
 
