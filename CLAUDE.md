@@ -71,19 +71,23 @@ Stage 7  Static HTML output     sortable table, full result set, source links
   currency == GBP once per harvest (`verify_gbp_currency` in `sources/zatu.py`) before trusting
   any price, since this is exactly the kind of storefront behaviour that can change silently.
   Price itself is solid — spot-checked against a manual browser price and matched exactly.
-  **No EAN, no reliable stock from the bulk endpoint**: confirmed on the full first harvest (4178
+  **No EAN, no reliable stock from the *bulk* endpoint**: confirmed on the full first harvest (4178
   products) — `barcode` is `null` on every single variant, no exceptions, and so is
   `inventory_quantity`; `available` reports `true` for all 4178 products, which with no inventory
   number to cross-check is not a trustworthy stock signal. So Stage 2 matching has to run on title
-  (not EAN — that tier just won't fire from the bulk endpoint), and real per-product availability
-  needs Stage 4's per-product page fetch (stock-status text, spec §11.1) for most products, not
-  just a minority. `sources/zatu.py` has Stage 4 building blocks ready for this — `fetch_product_detail`/
-  `fetch_product_ean` (per-product `/products/<handle>.json`) and `fetch_stock_status` (parses
-  `IN_STOCK`/`OUT_OF_STOCK`/`BACK_ORDER`/`PREORDER`/`UNKNOWN` from the rendered page text) — but
-  whether the per-product JSON actually populates `barcode`/`price_currency` where the bulk one
-  doesn't is still **[VERIFY]**, marked as such in the code; `scripts/probe_zatu_detail.py` +
-  the `probe-zatu-detail` workflow exist specifically to check this empirically before Stage 4 is
-  built out further. **Category filter**: `product_type` cleanly separates the catalogue
+  (not EAN — that tier just won't fire from the bulk endpoint). **But the per-product endpoint has
+  what the bulk one is missing** — confirmed live via `scripts/probe_zatu_detail.py`
+  (2026-08-10): `GET /products/<handle>.json` (singular `product` key) returns a real, populated
+  `barcode` for the same products the bulk harvest showed `null` for (e.g. Brass: Birmingham:
+  `9781988884042`), plus a `price_currency` field confirmed `"GBP"` on all three sampled products.
+  `sources/zatu.py` has this wired up: `fetch_product_detail`/`fetch_product_ean` for per-product
+  EAN (normalizes 12-digit UPC-A to EAN-13 via zero-pad), and `verify_gbp_currency` now tries
+  `price_currency` first before falling back to the proven `og:price:currency` meta-tag check.
+  These are Stage 4 tools — one HTTP request per game, meant for the survivors of Stage 2's match,
+  not the whole catalogue. Real per-product availability still needs a separate per-product page
+  fetch (`fetch_stock_status`, parses `IN_STOCK`/`OUT_OF_STOCK`/`BACK_ORDER`/`PREORDER`/`UNKNOWN`
+  from rendered text, spec §11.1) since neither JSON endpoint carries a trustworthy stock signal.
+  **Category filter**: `product_type` cleanly separates the catalogue
   (`Board Games`: 4069, `Accessories`: 81, `Miniatures`/`Books`/`Puzzles`/`Trading Card Games`: 28
   total) — `filters.py` now drops `product_type == "Accessories"` outright (zero ambiguity) but
   leaves the other non-"Board Games" types alone, since Stage 2's BGG match is the real gate and

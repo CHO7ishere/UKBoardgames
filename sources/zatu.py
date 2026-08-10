@@ -156,10 +156,12 @@ def fetch_product_detail(session: requests.Session, handle: str) -> dict:
     shape). One request per game — a Stage 4 tool for the survivors of Stage 2's match, not
     something to run across the whole catalogue (spec's cheap-wide/expensive-narrow rule).
 
-    [VERIFY] Whether this endpoint actually populates `barcode` where the bulk
-    `/collections/.../products.json` doesn't — confirmed empirically that the bulk endpoint
-    returns `barcode: null` on all 4178 harvested products (docs/spec.md §11.1); this endpoint
-    is untested from a network that can reach zatu.com. Confirm on first real Stage 4 run.
+    Confirmed live 2026-08-10 via `scripts/probe_zatu_detail.py`: unlike the bulk
+    `/collections/.../products.json` (which returns `barcode: null` on all 4178 harvested
+    products, docs/spec.md §11.1), this endpoint has a real, populated `barcode` — e.g. Brass:
+    Birmingham came back `9781988884042` here vs `null` in the bulk harvest for the same product.
+    Also carries `price_currency`, which `verify_gbp_currency` uses (confirmed `"GBP"` on all
+    three sampled products).
     """
     url = f"{BASE_URL}/products/{handle}.json"
     resp = session.get(url, timeout=30)
@@ -168,8 +170,8 @@ def fetch_product_detail(session: requests.Session, handle: str) -> dict:
 
 
 def fetch_product_ean(session: requests.Session, handle: str) -> str | None:
-    """Per-product EAN lookup for Stage 4 — see `fetch_product_detail` for the [VERIFY] caveat
-    on whether this endpoint actually carries a barcode the bulk one doesn't."""
+    """Per-product EAN lookup for Stage 4 — confirmed populated (see `fetch_product_detail`)
+    where the bulk collection endpoint returns null for the same products."""
     product = fetch_product_detail(session, handle)
     for v in product.get("variants", []):
         barcode = v.get("barcode")
@@ -223,9 +225,10 @@ def harvest_all(
 
 
 def _currency_from_product_json(session: requests.Session, sample_handle: str) -> str | None:
-    """Try the per-product JSON's `price_currency` field. [VERIFY]: not confirmed to exist on
-    Zatu's storefront from a network that can reach it — if absent, callers should fall back to
-    the proven `og:price:currency` meta-tag check rather than trust a missing field as GBP."""
+    """Try the per-product JSON's `price_currency` field — confirmed present and `"GBP"` on all
+    three products sampled by `scripts/probe_zatu_detail.py` on 2026-08-10. Still falls back to
+    the meta-tag check on a missing/failed response rather than assuming GBP, in case that
+    changes on Zatu's end."""
     try:
         product = fetch_product_detail(session, sample_handle)
     except (requests.RequestException, ValueError):

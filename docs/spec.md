@@ -583,16 +583,19 @@ case-insensitive substring matches hit 338/286 of the 4178 harvested products re
 `product_type == "Accessories"` is now an unambiguous drop (`filters.py`), the others are left for
 Stage 2 to gate since dropping them at Stage 1 would be a pure recall risk.
 
-**Still [VERIFY], not yet confirmed either way:** a per-product JSON endpoint
-(`https://zatu.com/products/<handle>.json`, singular `product` key — standard Shopify shape) may
-carry a populated `barcode` and/or a `price_currency` field on each variant where the bulk
-`/collections/.../products.json` returns `null`/nothing — this would be a meaningfully better EAN
-source than the bulk endpoint. `sources/zatu.py` has `fetch_product_detail`/`fetch_product_ean`
-built defensively for this (EAN normalized to EAN-13 via zero-pad for UPC-A, per Philibert's
-13-digit field), and `verify_gbp_currency` tries `price_currency` first before falling back to the
-proven `og:price:currency` meta-tag check — but neither claim has been checked from a network that
-can actually reach zatu.com yet. `scripts/probe_zatu_detail.py` (run via the `probe-zatu-detail`
-GitHub Actions workflow) exists to confirm this before Stage 4 is built out to rely on it.
+**Confirmed 2026-08-10 via `scripts/probe_zatu_detail.py` on GitHub Actions:** the per-product JSON
+endpoint (`https://zatu.com/products/<handle>.json`, singular `product` key — standard Shopify
+shape) does carry a populated `barcode`, on the same products the bulk `/collections/.../products.json`
+returns `null`/nothing for. Sampled three products directly: Manipulate → `5060629590004`
+(EAN-13), Spirit Island (Core Game) → `798304339291` (12-digit UPC-A, zero-pads to
+`0798304339291`), Brass: Birmingham → `9781988884042` (EAN-13) — all `null` in the same day's bulk
+harvest. Each also carried `price_currency: "GBP"`. This is a meaningfully better EAN source than
+the bulk endpoint, and makes the EAN-match HIGH-confidence tier in §4.2 viable after all — just not
+from Stage 0's bulk harvest; it needs Stage 4's per-product fetch, one request per Stage-2 survivor,
+not the whole catalogue. `sources/zatu.py`'s `fetch_product_detail`/`fetch_product_ean` do this (EAN
+normalized to EAN-13 via zero-pad for UPC-A, matching Philibert's 13-digit field), and
+`verify_gbp_currency` now tries `price_currency` first before falling back to the proven
+`og:price:currency` meta-tag check.
 
 ### 11.2 BGG — representative `thing` response (schema per official docs, §0.1)
 
