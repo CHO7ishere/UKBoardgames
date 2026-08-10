@@ -205,6 +205,39 @@ _EDITION_SUFFIX_NOISE_RE = re.compile(
 )
 _SUBTITLE_COLON_RE = re.compile(r"\s*:\s*")
 
+# Publishers translate a literal "The X Game" trailing descriptor into French "Le Jeu de X" as
+# the localized subtitle -- confirmed as a recurring pattern across two independently-found real
+# misses, not a one-off coincidence: Slay the Spire ("The Board Game" -> "Le Jeu de Plateau",
+# fixed via the prefix tier below) and Marvel Champions: The Card Game ("The Card Game" -> "Le
+# Jeu de Cartes", user-confirmed real listing). Tried FIRST, ahead of the broader tiers below --
+# it reproduces the query's own descriptive suffix instead of discarding it, so it can win on an
+# exact/near-exact fuzzy match even when the bare truncated title (e.g. "Marvel Champions" alone)
+# is hopelessly ambiguous (Marvel Champions alone has 15+ expansion SKUs sharing that prefix on
+# Philibert -- "Marvel Champions: Le Jeu de Cartes - Jessica Jones" etc -- that block the
+# prefix-tier from guessing; only the translated candidate is close enough to the real base-box
+# listing to win outright via the ordinary fuzzy-match tier, no ambiguity check needed).
+_DESCRIPTOR_TRANSLATIONS = {
+    "the card game": "Le Jeu de Cartes",
+    "card game": "Le Jeu de Cartes",
+    "the board game": "Le Jeu de Plateau",
+    "board game": "Le Jeu de Plateau",
+    "the dice game": "Le Jeu de Dés",
+    "dice game": "Le Jeu de Dés",
+}
+
+
+def _translated_title_candidate(title: str) -> str | None:
+    lower = title.lower()
+    for phrase in sorted(_DESCRIPTOR_TRANSLATIONS, key=len, reverse=True):
+        if not lower.endswith(phrase):
+            continue
+        prefix = title[: len(title) - len(phrase)]
+        prefix = re.sub(r"[:\-]\s*$", "", prefix).strip()
+        if not prefix:
+            continue
+        return f"{prefix}: {_DESCRIPTOR_TRANSLATIONS[phrase]}"
+    return None
+
 
 def _base_title_candidates(title: str) -> list[str]:
     """Progressively broader fallback titles, most-specific first, deduplicated, never
@@ -219,6 +252,9 @@ def _base_title_candidates(title: str) -> list[str]:
             seen.add(key)
             candidates.append(candidate)
 
+    translated = _translated_title_candidate(title)
+    if translated:
+        _add(translated)
     _add(_EXPANSION_SUFFIX_RE.sub("", title))
     _add(_EDITION_SUFFIX_NOISE_RE.sub("", title))
     # Last resort: just the part before the first colon (e.g. "Gloomhaven: Buttons & Bugs" ->

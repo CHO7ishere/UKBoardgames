@@ -6,6 +6,7 @@ import requests
 from sources.philibert import (
     _base_title_candidates,
     _has_accessory_token,
+    _translated_title_candidate,
     fetch_product_page,
     search_by_ean,
     search_by_title,
@@ -170,6 +171,40 @@ def test_search_family_title_returns_none_when_title_has_no_candidates():
 def test_search_family_title_returns_none_when_no_candidate_matches():
     session = FakeSession({"Gloomhaven": "philibert_search_title_junk.html"})
     assert search_family_title(session, "Gloomhaven 2nd Edition") is None
+
+
+@pytest.mark.parametrize(
+    "title,expected",
+    [
+        ("Marvel Champions: The Card Game", "Marvel Champions: Le Jeu de Cartes"),
+        ("Slay the Spire: The Board Game", "Slay the Spire: Le Jeu de Plateau"),
+        ("Wingspan", None),
+        ("Card Game", None),  # phrase with nothing in front isn't a real title to translate
+    ],
+)
+def test_translated_title_candidate(title, expected):
+    assert _translated_title_candidate(title) == expected
+
+
+def test_search_family_title_resolves_marvel_champions_despite_many_expansion_skus():
+    # Real case user-confirmed live: the bare base-title fallback ("Marvel Champions") is
+    # hopelessly ambiguous -- 15+ expansion/hero-pack SKUs share that normalized prefix on
+    # Philibert -- but the translated candidate ("Marvel Champions: Le Jeu de Cartes") is an
+    # exact normalized match for the real base box and wins the ordinary fuzzy tier outright
+    # (100.0 vs the closest expansion's 89.19, confirmed against real captured search data).
+    session = FakeSession({
+        "Marvel Champions: Le Jeu de Cartes": "philibert_search_family_marvel_champions.html",
+    })
+    url = search_family_title(session, "Marvel Champions: The Card Game")
+    assert url == "https://www.philibertnet.com/fr/boite-de-base-et-extensions/79262-marvel-champions-le-jeu-de-cartes-8435407628465.html"
+
+
+def test_search_by_title_rejects_ambiguous_bare_base_title_for_marvel_champions():
+    # Documents *why* the fix above is needed: without the translated candidate, searching the
+    # bare "Marvel Champions" against the same real result set is genuinely ambiguous (many
+    # prefix-sharing expansions) and must correctly refuse to guess.
+    session = FakeSession({"Marvel Champions": "philibert_search_family_marvel_champions.html"})
+    assert search_by_title(session, "Marvel Champions") is None
 
 
 # --- fetch_product_page ---------------------------------------------------------------------
