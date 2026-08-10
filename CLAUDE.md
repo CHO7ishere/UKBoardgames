@@ -100,19 +100,21 @@ Stage 7  Static HTML output     sortable table, full result set, source links
   pre-filter). `Langue(s)` field is the primary FR-language signal. Ignore `product.oos` /
   `product.declinaisons` strings seen in cross-sell widgets — unrendered template leakage, not data.
 
-## Stage 2 — offline BGG match (built, blocked on `data/bg_ranks.csv`)
+## Stage 2 — offline BGG match (done, run against the real data)
 
 `sources/bgg.py` (CSV loader), `match.py` (normalization + confidence cascade), `score.py`
-(quality gate/score, spec §5.1), `scripts/match_bgg.py` (driver) are all built and unit-tested
-(smoke-tested against the real 4178-product harvest using a small fixture BGG list — real titles
-like "Brass Birmingham" and "Spirit Island (Core Game)" matched their BGG counterparts exactly).
-Needs no network — safe to run in this sandbox, unlike Stages 0/3/4/5.
+(quality gate/score, spec §5.1), `scripts/match_bgg.py` (driver) — all offline, no network, safe
+to run in this sandbox unlike Stages 0/3/4/5. `data/bg_ranks.csv` (179,794 games, real BGG dump
+dated 2026-08-09, user-provided — no token needed for this file, only Stage 3's `thing`/`search`
+calls need that, still pending) is committed; the real match has been run.
 
-- **Blocked on `data/bg_ranks.csv`**: this file doesn't exist in the repo yet. Per spec §0.1 it
-  has to be downloaded by hand from `boardgamegeek.com/data_dumps/bg_ranks` while logged into a
-  browser — no token needed for this specific file (unlike Stage 3's `thing`/`search` calls,
-  which do need the token, still pending). `scripts/match_bgg.py` checks for the file and errors
-  loudly with instructions if it's missing rather than silently producing an empty result.
+- **Real result**: 4178 Zatu products → 140,261 base games after dropping BGG expansions → **558
+  survivors** (matched + passed the quality gate). Of the 3620 dropped: 2121 no BGG match at all,
+  1231 matched but failed the quality gate, 264 ambiguous (multiple BGG entries — usually
+  base/Big Box/expansion editions, e.g. Carcassonne, Everdell, Dominion 2nd Edition — share the
+  same normalized title; Zatu gives no reliable year to disambiguate, so these are correctly
+  dropped per spec P2 rather than guessed), 4 blocked by the digit-conflict veto. Outputs:
+  `data/matched_games.json` (survivors) and `data/dropped.csv` (with reasons, for skimming).
 - **Fuzzy match tuning**: `config.yaml`'s `matching.fuzzy_threshold`/`min_score_gap` (90/5) were
   picked from empirical rapidfuzz testing, not guessed — `token_sort_ratio` (not `WRatio`, which
   scores an expansion's title against its own base game at exactly 90.0 due to partial-ratio
@@ -121,10 +123,24 @@ Needs no network — safe to run in this sandbox, unlike Stages 0/3/4/5.
   misses: "Pandemic Legacy: Season 1" vs "Season 2" score ~96% similar despite being different
   games — any query/candidate pair where both sides have digit tokens that differ is rejected
   regardless of fuzzy score.
+- **`normalize_title` fixes found by running against the real 4178×179,794 match, not fixture
+  data**: (1) HTML entities leak through unescaped on 8 real Zatu titles (e.g. `"Heroes of Land,
+  Air &amp; Sea"`) — now run through `html.unescape()` first. (2) BGG writes some titles with a
+  thousands-separator comma (463 entries, mostly "Warhammer 40,000" variants) that Zatu's
+  listings never do — general punctuation stripping turned `"40,000"` into two digit tokens
+  instead of one, spuriously tripping the digit-conflict veto; commas between digits are now
+  removed before tokenizing. (3) 18 real Zatu titles carry a trailing `"(2013)"`-style
+  release-year annotation with no BGG counterpart — stripped as noise now, anchored so it can't
+  eat a year that's actually part of the game's name (e.g. "The Great Fire of London 1666").
+  Each fix is backed by a real before/after example found in the actual matched output, not just
+  a hypothetical.
 - **Spec §5.1's worked example is slightly off**: its own formula, given its own numbers (8.4
   average, 60 votes, M=100, prior=6.5), computes shrunk=7.2125 — not the "~7.7" the prose
   estimates. Implemented the literal formula (confirmed correct via `score.py`'s tests), not the
   prose approximation.
+- **Runtime**: ~2m15s for the full match (4178 × 140,261 fuzzy comparisons in the worst case,
+  pure Python loop over `rapidfuzz.process.extract`). Acceptable for a weekly/on-demand personal
+  run; would be worth batching via `rapidfuzz.process.cdist` if this ever needs to run more often.
 
 ## Tech
 
@@ -136,10 +152,12 @@ live in one YAML config (docs/spec.md §10) — re-scoring never needs re-scrapi
 ## Build order
 
 1. Register BGG app + download `bg_ranks.csv` (do this first — token approval is slow). **App
-   registered, token still pending; `bg_ranks.csv` not yet provided.**
+   registered, token still pending. `data/bg_ranks.csv` provided by the user and committed.**
 2. Zatu JSON harvest + offline match/quality-gate/score against the CSV → first usable ranked
-   list. **Harvest done (Stage 0/1). Match/gate code done (Stage 2), blocked only on the CSV
-   file landing in `data/`.**
+   list. **Done. 558 survivors from 4178 Zatu products × 140,261 BGG base games — see the Stage 2
+   section above for the breakdown.**
 3. BGG enrich (best-effort, decoupled — don't block the pipeline if the token isn't ready yet).
+   **Next up — still blocked on the token, so start with the public-game-page HTML fallback
+   (spec §0.1/§3 Stage 3) rather than waiting.**
 4. Philibert adapter (EAN first, title fallback).
 5. Fill any Zatu detail gaps, then HTML render.

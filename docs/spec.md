@@ -346,6 +346,29 @@ to a `dropped.csv` so you can skim it once if you're curious.
   in-stock standard edition, flag if a variant was chosen.
 - **Bundles/multi-packs** — detect by keyword; exclude from price comparison.
 
+**Verified 2026-08-10, real Stage 2 run (4178 Zatu products × 140,261 BGG base games, 558
+survivors):**
+- **"Disambiguate on year" doesn't happen yet** — Zatu's harvested data has no reliable year
+  field, so the "same name, different game" trap currently always resolves to LOW/drop rather
+  than a year-based pick. 264 of 3620 drops were this exact case (`Carcassonne`, `Everdell`,
+  `Dominion 2nd Edition`, etc. — base game vs Big Box vs expansion editions all sharing one
+  normalized title). Correct per this section's own fallback rule ("if still ambiguous, drop"),
+  just confirms year-disambiguation is a real gap, not yet a real feature.
+- **A plain fuzzy scorer is not safe on its own** — empirically, `rapidfuzz`'s `WRatio` scores an
+  expansion's title against its own base game (`"Spirit Island: Branch & Claw"` vs `"Spirit
+  Island"`) at exactly 90.0 due to partial-ratio weighting, and even a stricter scorer
+  (`token_sort_ratio`) scores `"Pandemic Legacy: Season 1"` vs `"Season 2"` at ~96% despite being
+  different games. §4.1/§4.2 as written don't anticipate either failure mode. `match.py` switched
+  scorers and added an explicit digit-conflict veto (any query/candidate pair where both sides
+  carry digit tokens that differ is rejected outright, regardless of score) — 4 real drops were
+  this veto firing correctly (e.g. Zatu's "UNO Toy Story 5" correctly refused a fuzzy match to
+  BGG's "UNO: Toy Story 3"/"4").
+- **§4.1's normalisation needed three additions**, each found by running the real match, not
+  fixture data: HTML-entity unescaping (8 real Zatu titles had literal `&amp;`), stripping a
+  thousands-separator comma from numbers before tokenizing (BGG writes `"Warhammer 40,000"`,
+  Zatu writes `"40000"` — 463 BGG titles affected), and stripping a trailing `"(2013)"`-style
+  release-year annotation (18 real Zatu titles carry one, no BGG counterpart does).
+
 ---
 
 ## 5. Scoring model
@@ -363,6 +386,15 @@ shrunk = (usersrated × average + M × PRIOR) / (usersrated + M)
 
 A 8.4-rated game with 60 votes lands near 7.7 (promising but discounted); with 6,000 votes it stays ~8.4.
 Few votes therefore *automatically* means a more cautious score — no separate rule needed.
+
+**Verified 2026-08-10, implementing `score.py`:** plugging this section's own numbers into its
+own formula gives `shrunk = (60×8.4 + 100×6.5) / (60+100) = 7.2125`, not the "~7.7" stated above —
+the worked example is an imprecise approximation, not a second, different value the formula is
+supposed to hit. Implemented literally as the formula states (confirmed correct against the
+6,000-vote case, which does land at ~8.37 as described). If "~7.7" was actually the intended
+target, `M` would need to be 35, not 100 (solving `(60×8.4 + M×6.5)/(60+M) = 7.7` gives
+`M = 35`) — worth a second look if the gate ever feels too harsh on lightly-voted games in
+practice; `M=100` shrinks noticeably harder toward the 6.5 prior than the prose implies.
 
 - **Gate:** drop if `shrunk < 7.2` **or** `usersrated < 30`. (7.2 shrunk ≈ your "7.5 raw with decent
   evidence" line, while letting a very strong, well-rated game through despite modest votes.)

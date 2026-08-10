@@ -7,6 +7,7 @@ only logged to dropped.csv for later skimming.
 
 from __future__ import annotations
 
+import html
 import re
 import unicodedata
 from collections import defaultdict
@@ -42,13 +43,29 @@ _PUNCT_RE = re.compile(r"[^\w\s]")
 _WS_RE = re.compile(r"\s+")
 _DIGIT_RE = re.compile(r"\d+")
 
+# A trailing "(2013)"-style reprint/release-year annotation — confirmed present on 18 real
+# Zatu titles (e.g. "Pandemic (2013)", "CATAN 6th Edition (2025)") with no BGG counterpart
+# carrying the same suffix; stripped before the digit-conflict veto would otherwise see it as
+# a spurious extra digit token. Anchored to the end and requires parens so it doesn't touch a
+# year that's actually part of the game's name (e.g. "The Great Fire of London 1666").
+_TRAILING_YEAR_RE = re.compile(r"\(\s*(19|20)\d{2}\s*\)\s*$")
+
+# "40,000" -> "40000": BGG writes some titles with a thousands-separator comma (463 real
+# entries, mostly "Warhammer 40,000" variants) that Zatu's listings never do — left alone,
+# general punctuation stripping below would turn "40,000" into two digit tokens ("40", "000")
+# instead of one, so it would never equal Zatu's unpunctuated "40000" and would spuriously
+# trip the digit-conflict veto.
+_THOUSANDS_COMMA_RE = re.compile(r"(?<=\d),(?=\d)")
+
 
 def normalize_title(title: str) -> str:
     """Lowercase, strip accents/edition noise/punctuation/leading articles, normalise '&'->'and'
     and roman numerals, collapse whitespace (spec §4.1)."""
-    text = title.lower()
+    text = html.unescape(title).lower()
     text = unicodedata.normalize("NFKD", text)
     text = "".join(c for c in text if not unicodedata.combining(c))
+    text = _TRAILING_YEAR_RE.sub(" ", text)
+    text = _THOUSANDS_COMMA_RE.sub("", text)
     text = text.replace("&", " and ")
     text = _EDITION_NOISE_RE.sub(" ", text)
     text = _ROMAN_RE.sub(lambda m: _ROMAN_MAP.get(m.group(0).lower(), m.group(0)), text)

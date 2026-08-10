@@ -32,6 +32,12 @@ def index(base_games):
         ("The Mind", "mind"),
         ("Sea Salt & Paper", "sea salt and paper"),
         ("Brass: Birmingham", "brass birmingham"),
+        ("Heroes of Land, Air &amp; Sea", "heroes of land air and sea"),
+        ("Pandemic (2013)", "pandemic"),
+        ("CATAN 6th Edition (2025)", "catan"),
+        ("The Great Fire of London 1666 (2017)", "great fire of london 1666"),
+        ("Munchkin Warhammer 40000", "munchkin warhammer 40000"),
+        ("Warhammer 40,000: Conquest", "warhammer 40000 conquest"),
     ],
 )
 def test_normalize_title(title, expected):
@@ -40,6 +46,11 @@ def test_normalize_title(title, expected):
 
 def test_normalize_title_strips_accents():
     assert normalize_title("Carcassonne: Amigos") == normalize_title("Carcassonné: Amigos")
+
+
+def test_normalize_title_does_not_strip_a_year_thats_part_of_the_name():
+    # "1666" is the actual game name, not a trailing release-year annotation -> must survive.
+    assert "1666" in normalize_title("The Great Fire of London 1666")
 
 
 # --- digit conflict veto ------------------------------------------------------------------
@@ -136,3 +147,28 @@ def test_empty_index_returns_low():
     idx = BggIndex([])
     result = idx.match("Anything")
     assert result.confidence == "LOW"
+
+
+def test_comma_formatted_number_matches_unpunctuated_zatu_title():
+    # Real false-negative found against production data: BGG's "Warhammer 40,000" vs Zatu's
+    # "Warhammer 40000" used to trip the digit-conflict veto because the comma split "40,000"
+    # into two separate digit tokens ("40", "000") instead of one ("40000").
+    from sources.bgg import BggRankedGame
+
+    games = [BggRankedGame(201, "Warhammer 40,000: Conquest", 2017, 300, 6.5, 6.5, 1000, False)]
+    idx = BggIndex(games)
+    result = idx.match("Warhammer 40000 Conquest")
+    assert result.confidence == "HIGH"
+    assert result.bgg_id == 201
+
+
+def test_trailing_release_year_does_not_block_match():
+    # Real false-negative: Zatu's "Pandemic (2013)" against BGG's plain "Pandemic" used to
+    # trip the digit-conflict veto on the stray "2013".
+    from sources.bgg import BggRankedGame
+
+    games = [BggRankedGame(301, "Pandemic", 2008, 10, 7.5, 7.6, 100000, False)]
+    idx = BggIndex(games)
+    result = idx.match("Pandemic (2013)")
+    assert result.confidence == "HIGH"
+    assert result.bgg_id == 301
