@@ -120,6 +120,7 @@ def main() -> int:
             "philibert_price_eur": philibert["price_eur"],
             "philibert_language": philibert["language"],
             "philibert_url": philibert["url"],
+            "philibert_stock_status_raw": philibert.get("stock_status_raw"),
             "advantage_verdict": advantage.verdict,
             "advantage_points": advantage.points,
             "discount_pct": advantage.discount_pct,
