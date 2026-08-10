@@ -417,3 +417,35 @@ Actions round-trip. 16 new tests (`tests/test_score.py`'s genre/language/composi
   fixture (coop-only, party-only, tag-only, and combined coop+tag+text filtering all behave as
   designed) since the real `docs/index.html` won't have real tag data until the live re-run
   above lands.
+
+**Live re-run results (`lookup-philibert.yml` dispatched 2026-08-10 18:34, ~62 min, commit
+`766f419`)**, confirming all four fixes above against the real 582-survivor set: 409
+`LISTED_IN_STOCK`, 142 `NOT_LISTED`, 31 `FAMILY_LISTED_FR` (the new tier). Verdicts: 401 `NONE`,
+142 `UNAVAILABLE_FR`, 31 `FAMILY_AVAILABLE_FR`, 8 `CHEAPER_UK`. Shortlist: **150** games (down
+from 174 — expected: family-available games no longer inflate it, plus the corrected
+582-survivor base). Coop/party counts are real now: 32/8 (was 0/0). All three user-reported
+cases confirmed fixed: Everdell Complete Collection and Everdell: Silverfrost Collector's
+Edition both → `FAMILY_AVAILABLE_FR` (matched to plain "Everdell"); Cthulhu: Death May Die -
+Fear of the Unknown → `FAMILY_AVAILABLE_FR` (matched to base "Cthulhu: Death May Die"). Category
+filter UI verified live with Playwright against the real `docs/index.html`.
+
+- **New precision bug found via this same live run, fixed 2026-08-10 (not yet re-verified live —
+  see below)**: scanning the real results for accessory-looking URLs turned up 3/582 games
+  (Gloomhaven: Jaws of the Lion, Orloj: The Prague Astronomical Clock, Minos: Dawn of the Bronze
+  Age) matched to Philibert **accessory/insert listings** instead of the real game — e.g.
+  Gloomhaven: Jaws of the Lion (a top-12 BGG-ranked, `EXCELLENT`-quality game) matched a €27.50
+  third-party storage insert ("Insert: Gloomhaven Jaws of the Lion", listed under `poland-games`,
+  an ordinary-looking publisher slug the existing `_is_accessory_link` category-slug check
+  doesn't catch since it's not one of the generic component-taxonomy slugs). `token_sort_ratio`
+  barely penalizes one extra token on an otherwise-identical title, so it cleared the fuzzy
+  threshold — producing a bogus price comparison (UK "53% more expensive") and silently dropping
+  a genuinely strong game into `NONE`/excluded-from-shortlist. Fixed with a second, distinct
+  accessory signal in `sources/philibert.py`: `_has_accessory_token` drops any search candidate
+  whose normalized title carries an accessory-indicator word (`insert`, `rangement`,
+  `organiseur`/`organizer`/`organisateur`) that the query itself didn't ask for, regardless of
+  slug/category — catches title-text accessories the URL-category-slug filter structurally can't
+  see. Unit-tested against a fixture rebuilt from the real miss (confirmed the fix rejects it,
+  and doesn't reject a real "Deluxe"-suffixed title with only unrelated extra words). Small
+  blast radius (3/582 ≈ 0.5%) — per user's explicit choice, this was pushed as a code+test fix
+  without spending another ~hour-long GitHub Actions round-trip just for these 3 games; the next
+  live Philibert re-run (whenever one happens for other reasons) will pick it up.

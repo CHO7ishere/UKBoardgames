@@ -52,6 +52,27 @@ def _is_accessory_link(link: str) -> bool:
     match = _CATEGORY_RE.match(link)
     return bool(match) and match.group(1) in _ACCESSORY_CATEGORY_SLUGS
 
+
+# Second, distinct accessory signal: some accessories (storage inserts especially) are sold
+# under an ordinary-looking publisher slug -- e.g. "Insert: Gloomhaven Jaws of the Lion" listed
+# under `/fr/poland-games/...`, a real third-party insert manufacturer, not a generic
+# component-taxonomy slug `_is_accessory_link` would catch. Confirmed live 2026-08-10: this let
+# a genuine, top-BGG-ranked game (Gloomhaven: Jaws of the Lion) get fuzzy-matched to a €27.50
+# storage insert instead of the real game, since `token_sort_ratio` barely penalizes one extra
+# token on an otherwise-identical title -- producing a bogus price comparison and silently
+# dropping the game from the shortlist. Catches it by title-token content instead: if a
+# candidate's normalized title carries an accessory-indicator word that the query itself didn't
+# ask for, it's not a legitimate match for that query, regardless of slug/category.
+_ACCESSORY_TITLE_TOKENS = frozenset({
+    "insert", "inserts", "rangement", "organiseur", "organizer", "organisateur",
+})
+
+
+def _has_accessory_token(norm_candidate: str, norm_query: str) -> bool:
+    query_tokens = set(norm_query.split())
+    candidate_tokens = set(norm_candidate.split())
+    return bool((candidate_tokens - query_tokens) & _ACCESSORY_TITLE_TOKENS)
+
 # Confirmed live (spec §11.3, reconfirmed via probe): the primary product's own purchase state.
 # "Précommande"/"Précommander" is purchasable (a real order, just delayed shipping) so it's
 # treated as available, same spirit as Zatu's own preorder handling (spec §11.1).
@@ -127,7 +148,9 @@ def search_by_title(
     dropped before either tier runs — confirmed live the same game can have several (a spare
     player board, upgrade tokens, an expansion's component set) that also share the base title
     as a normalized prefix, which would otherwise make a genuinely unique game match look
-    ambiguous.
+    ambiguous. A second, distinct accessory signal (`_has_accessory_token`) drops candidates
+    whose title carries an accessory-indicator word (e.g. "Insert") the query didn't ask for,
+    even under an ordinary-looking publisher slug the category-slug check wouldn't catch.
     """
     links = _search_links(session, title)
     if not links:
@@ -137,6 +160,13 @@ def search_by_title(
         return None
     norm_query = normalize_title(title)
     candidates = [(link, normalize_title(_slug_to_title(link))) for link in links]
+    candidates = [
+        (link, norm_candidate)
+        for link, norm_candidate in candidates
+        if not _has_accessory_token(norm_candidate, norm_query)
+    ]
+    if not candidates:
+        return None
 
     best_link, best_score = None, 0.0
     for link, norm_candidate in candidates:

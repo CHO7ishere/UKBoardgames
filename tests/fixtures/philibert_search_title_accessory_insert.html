@@ -1,0 +1,13 @@
+<!-- Synthetic fixture for unit tests only (mirrors the real 2026-08-10 live-run miss): a search
+     for "Gloomhaven: Jaws of the Lion" whose only real result is a third-party storage insert
+     ("Insert: Gloomhaven Jaws of the Lion") listed under an ordinary publisher-looking slug
+     (poland-games) -- not one of the generic component-taxonomy slugs _is_accessory_link
+     catches, so this exercises the separate title-token accessory filter instead. -->
+<html>
+<body>
+  <div class="search-results">
+    <a href="/fr/poland-games/89666-insert-gloomhaven-jaws-of-the-lion-5902643192690.html">Insert: Gloomhaven Jaws of the Lion</a>
+    <a href="/fr/some-publisher/99999-completely-unrelated-game-1112223334445.html">Unrelated Game</a>
+  </div>
+</body>
+</html>

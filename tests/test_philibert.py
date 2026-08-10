@@ -5,6 +5,7 @@ import requests
 
 from sources.philibert import (
     _base_title_candidates,
+    _has_accessory_token,
     fetch_product_page,
     search_by_ean,
     search_by_title,
@@ -92,6 +93,29 @@ def test_search_by_title_falls_back_to_unique_prefix_match():
     session = FakeSession({"Slay the Spire": "philibert_search_title_prefix.html"})
     url = search_by_title(session, "Slay the Spire: The Board Game")
     assert url == "https://www.philibertnet.com/fr/matagot/130149-slay-the-spire-le-jeu-de-plateau-3760372232801.html"
+
+
+def test_has_accessory_token_flags_extra_insert_word():
+    assert _has_accessory_token("insert gloomhaven jaws of lion", "gloomhaven jaws of lion") is True
+
+
+def test_has_accessory_token_ignores_matching_query_without_extra_words():
+    assert _has_accessory_token("gloomhaven jaws of lion", "gloomhaven jaws of lion") is False
+
+
+def test_has_accessory_token_does_not_flag_unrelated_extra_words():
+    assert _has_accessory_token("gloomhaven jaws of lion deluxe", "gloomhaven jaws of lion") is False
+
+
+def test_search_by_title_rejects_accessory_insert_masquerading_as_a_publisher_listing():
+    # Real miss from the 2026-08-10 live run: "Gloomhaven: Jaws of the Lion" fuzzy-matched a
+    # third-party storage insert ("Insert: Gloomhaven Jaws of the Lion") listed under an
+    # ordinary publisher-looking slug (poland-games) -- not caught by the category-slug
+    # accessory filter, and close enough on token_sort_ratio (one extra token) to pass the
+    # fuzzy threshold. Must not accept it: no other real candidate here, so this should refuse
+    # to guess, same as any other ambiguous/no-match case.
+    session = FakeSession({"Gloomhaven: Jaws of the Lion": "philibert_search_title_accessory_insert.html"})
+    assert search_by_title(session, "Gloomhaven: Jaws of the Lion") is None
 
 
 def test_search_by_title_rejects_ambiguous_prefix_match():
