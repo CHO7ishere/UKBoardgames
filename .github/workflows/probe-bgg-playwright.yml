@@ -1,0 +1,20 @@
+name: Probe BGG via headless browser (diagnostic)
+
+# One-off diagnostic: checks whether a real (headless) browser can get past BGG's Cloudflare
+# bot challenge, which blocked plain `requests` outright (scripts/probe_bgg_page.py). Read
+# results in the job log — nothing is committed.
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt playwright
+      - run: playwright install --with-deps chromium
+      - run: python scripts/probe_bgg_playwright.py

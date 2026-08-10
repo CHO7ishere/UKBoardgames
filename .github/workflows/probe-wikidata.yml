@@ -1,0 +1,20 @@
+name: Probe Wikidata as a localized-title source (diagnostic)
+
+# One-off diagnostic: checks whether Wikidata's BoardGameGeek-ID cross-reference (P2339) can
+# serve as a generic, non-hardcoded source of French game titles -- an alternative to BGG's own
+# Alternate Names data while the BGG API token is pending. Read results in the job log — nothing
+# is committed.
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - run: python scripts/probe_wikidata.py
