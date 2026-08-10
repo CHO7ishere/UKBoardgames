@@ -111,11 +111,14 @@ Stage 7  Static HTML output     sortable table, full result set, source links
   value (EAN, Langue(s), Editeur all verified against the real page). Ignore `product.oos` /
   `product.declinaisons` strings seen in cross-sell widgets — unrendered template leakage, not
   data; confirmed live that "Indisponible" text on a real product page was this exact leakage
-  (an unrelated accessory's stock state), not the primary product's own. **[VERIFY still open]**:
-  no dedicated stock/availability container was confirmed live, only the features table —
-  `_classify_stock` uses best-effort selector guesses and reports `UNKNOWN` rather than risk a
-  wrong answer from unscoped page text (which is exactly how the Indisponible false-positive
-  above would happen). Check the `UNKNOWN` rate against the real Stage 5 run before trusting it.
+  (an unrelated accessory's stock state), not the primary product's own. **Stock container
+  confirmed live**: `.product-actions` matched on 5/5 real product URLs sampled from the actual
+  Stage 5 run and reliably contains the primary product's own "Ajouter au panier" text, not
+  cross-sell noise — `_classify_stock` uses it as the primary selector. **Still genuinely open**:
+  the real Stage 5 run found 0 of 381 Philibert-listed survivors out of stock — plausible on its
+  own (Philibert's stock depth), and the 5 spot-checked samples were all confirmed genuinely
+  in-stock, but a real out-of-stock primary product still hasn't been observed live to confirm
+  the exact wording `_OUT_OF_STOCK_RE` looks for.
 
 ## Stage 2 — offline BGG match (done, run against the real data)
 
@@ -193,18 +196,27 @@ live in one YAML config (docs/spec.md §10) — re-scoring never needs re-scrapi
 3. BGG enrich (best-effort, decoupled — don't block the pipeline if the token isn't ready yet).
    **Still blocked on the token — skipped ahead to Stage 5 instead of waiting (see below); start
    with the public-game-page HTML fallback (spec §0.1/§3 Stage 3) whenever it's picked back up.**
-4. Philibert adapter (EAN first, title fallback). **Built — see the Stage 5 section below.**
-5. Fill any Zatu detail gaps, then HTML render.
+4. Philibert adapter (EAN first, title fallback). **Built and run for real — see the Stage 5
+   section below. 201-game shortlist in `data/shortlist.json`.**
+5. Fill any Zatu detail gaps, then HTML render. **Next up for v1** — spec §6/§7: a single static
+   HTML file, sortable table, no fixed cutoff. `data/shortlist.json` already has everything
+   needed except the final composite score (Stage 6 proper — advantage + quality + genre +
+   language) and BGG-derived genre/language columns (blocked on Stage 3, same token wait as
+   above; `zatu_is_coop`/`zatu_is_party` can stand in as a bonus signal per spec until then).
 
-## Stage 5 — Philibert lookup + advantage filter (built, ready to run for real)
+**Noted for later, not blocking v1**: localisation — this tool and its output are currently
+English/GBP-only (Zatu's UI, our column labels, French text only appears as raw Philibert data
+inline). Not a v1 concern for a one-off personal trip-planning tool, but worth a deliberate look
+once the pipeline itself is done, rather than backfilling it into every stage after the fact.
+
+## Stage 5 — Philibert lookup + advantage filter (done, run against the real data)
 
 `sources/philibert.py` (search + product-page parsing), `advantage.py` (spec §5.2's verdict
-table), `scripts/enrich_zatu_ean.py` (Stage 4: real per-product EANs for the 576 survivors, using
-`sources/zatu.py`'s already-confirmed `fetch_product_ean`), `scripts/lookup_philibert.py` (Stage
-5 driver). All the *offline* logic (parsing, fuzzy title filtering, verdict computation) is
-unit-tested against fixtures built from the real captured HTML (28 tests). The live run needs
-GitHub Actions (`.github/workflows/lookup-philibert.yml`, manual-dispatch only — slow, ~576
-survivors × up to 4 requests each at a 1s courtesy rate limit).
+table), `scripts/enrich_zatu_ean.py` (Stage 4: real per-product EANs), `scripts/lookup_philibert.py`
+(Stage 5 driver). All the *offline* logic (parsing, fuzzy title filtering, verdict computation) is
+unit-tested against fixtures built from the real captured HTML (28 tests). The live run happened
+via GitHub Actions (`.github/workflows/lookup-philibert.yml`) on 2026-08-10 — ~51 minutes for all
+576 survivors (Stage 4 EAN enrichment: ~11 min; Stage 5 lookup: ~40 min).
 
 - **Getting the search endpoint right took 7 probe rounds** (`scripts/probe_philibert.py`,
   2026-08-10) — see the Philibert bullet under "Data sources & gotchas" above for the full
@@ -213,19 +225,23 @@ survivors × up to 4 requests each at a 1s courtesy rate limit).
   `<form>` (round 3), a bulk category-browse dead end at 12,812 products with broken pagination
   (round 5), and finally the real endpoint confirmed by a user-supplied working browser URL
   (rounds 6-7): `/fr/recherche?search_query=<query>`.
-- **"Remove any game available at similar price"** (the actual ask) is the `NONE` verdict in
-  spec §5.2's table — in stock on both sides, but the UK discount doesn't clear
-  `discount_threshold` (0.40 in config.yaml). `scripts/lookup_philibert.py` computes the verdict
-  for every survivor and writes two files: `data/philibert_results.json` (everything, verdict
-  included, for transparency) and `data/shortlist.json` (`NONE` and `EXCLUDED` — Zatu itself out
-  of stock — removed). Confirmed via a driver-level test that a same-price game is actually
-  dropped from the shortlist while a genuinely-cheaper one and a not-listed-in-France one both
-  survive.
+- **Real result**: 565/576 survivors got a real per-product EAN from Stage 4 (11 didn't — Zatu
+  detail-page fetch failed or had no barcode). Of the 576 looked up on Philibert: 381
+  `LISTED_IN_STOCK`, 195 `NOT_LISTED`, 0 `LISTED_OUT_OF_STOCK`. Advantage verdicts: 375 `NONE`
+  (the actual ask — removed from the shortlist as "available in France at a similar price"), 195
+  `UNAVAILABLE_FR`, 6 `CHEAPER_UK`. Outputs: `data/philibert_results.json` (all 576, verdict
+  included, for transparency) and `data/shortlist.json` (201 survivors — `NONE`/`EXCLUDED`
+  removed). Confirmed via a driver-level test that a same-price game is actually dropped from the
+  shortlist while a genuinely-cheaper one and a not-listed-in-France one both survive.
+- **The zero-out-of-stock result was checked, not just accepted**: ran a follow-up probe against
+  5 real product URLs from the actual run and confirmed `.product-actions` (the container
+  `_classify_stock` uses) reliably contains the primary product's genuine "Ajouter au panier"
+  text on all 5 — the selector guess was correct, and all 5 spot-checked products really are in
+  stock. Still hasn't seen a real out-of-stock primary product live, so the exact wording is
+  unconfirmed, but the container-scoping risk (the thing that actually mattered for correctness)
+  checked out.
 - **Can't yet distinguish `UNAVAILABLE_FR` from the weaker `UNAVAILABLE_FR?`** (spec §5.2) — that
   needs Stage 3's BGG "does a French edition exist" data, not built yet (blocked on the BGG
   token). Until then, every `NOT_LISTED` result uses the weaker variant (28 pts, flagged
   `needs_eyeball`) rather than assuming no French edition exists at all — the conservative
   default, revisit once Stage 3 lands.
-- **`_classify_stock`'s container selectors are unconfirmed** — see the `[VERIFY]` note in the
-  Philibert data-sources bullet above. Check its `UNKNOWN` rate in the real Stage 5 output; a
-  high rate means another probe round is needed for the real selector.

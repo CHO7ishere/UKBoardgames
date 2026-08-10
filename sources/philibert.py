@@ -37,12 +37,16 @@ _LEADING_ID_RE = re.compile(r"^\d+-")
 _IN_STOCK_RE = re.compile(r"ajouter au panier|pr[ée]command", re.IGNORECASE)
 _OUT_OF_STOCK_RE = re.compile(r"rupture de stock|indisponible|[ée]puis[ée]", re.IGNORECASE)
 
-# [VERIFY] No dedicated stock/availability container was confirmed live — only the
-# product-features table was. These are best-effort guesses at PrestaShop's usual structure;
-# unscoped full-page text search is deliberately NOT used as a fallback, since "Indisponible"
-# was confirmed to leak from unrelated cross-sell widgets elsewhere on the very same page
-# (spec §0.3's own warning, reconfirmed live). Better to report UNKNOWN than risk a confidently
-# wrong answer from a coincidental cross-sell match.
+# `.product-actions` confirmed live against 5 real product pages from the actual Stage 5 run
+# (scripts/probe_philibert.py) — reliably contains the primary product's own "Ajouter au
+# panier" text, not cross-sell noise. The other entries are untested fallbacks kept for
+# resilience if the theme changes; unscoped full-page text search is deliberately NOT used,
+# since "Indisponible" was confirmed to leak from unrelated cross-sell widgets elsewhere on the
+# very same page (spec §0.3's own warning, reconfirmed live). Better to report UNKNOWN than risk
+# a confidently wrong answer from a coincidental cross-sell match. Still open: a genuinely
+# out-of-stock primary product was never observed live (the real Stage 5 run found 0 of 381
+# listed products out of stock — plausible on its own, given Philibert's stock depth, but not
+# yet confirmed against a real example).
 _STOCK_CONTAINER_SELECTORS = [
     "#product-availability",
     ".product-availability",
