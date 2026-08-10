@@ -9,6 +9,16 @@ formulas, config schema, and fixture data to code against offline.
 
 - Solo side project. Work directly on `main`, push directly — no PRs, no feature branches.
 
+## Network reality in this coding environment
+
+Verified by direct test: this sandbox's network policy **blocks Zatu, BGG, Philibert, and
+1jour-1jeu.com outright** (gateway 403 on CONNECT) — not flaky connectivity, a fixed policy. PyPI/npm/
+GitHub work fine, so installing deps and pushing code is unaffected. Practical upshot: write and
+unit-test Stages 0–2/6/7 here against the fixtures in `docs/spec.md` §11; the live-fetching stages
+(0/3/4/5 hitting real endpoints) need to run somewhere without that restriction — the user's own
+machine, or an environment whose network policy allows those hosts. Don't waste time re-probing this;
+re-check only if the environment's network policy changes.
+
 ## Pipeline (see docs/spec.md §2-3 for full detail)
 
 ```

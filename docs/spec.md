@@ -11,6 +11,19 @@
 > v1.1 adds §0, the access investigation, and folds its findings into Stages 0/2/4/5. Given a note
 > about **limited internet access while coding**, §0.4 separates what must happen online now
 > (BGG registration, a manual bulk download) from what the tool itself will fetch at build/run time.
+>
+> **Verified 2026-08-10, from inside the actual coding environment:** the "limited internet access"
+> isn't flaky Wi-Fi, it's a fixed network policy. Direct `curl` tests to `zatu.com`,
+> `boardgamegeek.com`, `www.philibert.net`, and `1jour-1jeu.com` all get rejected at the gateway
+> (`403` on `CONNECT`) — this coding sandbox cannot reach any of the three target sites, full stop.
+> Package registries (PyPI, npm) and GitHub work fine, so `pip install` and git push/pull are
+> unaffected. This *confirms* §0.4's "code offline, run online" plan is the right one, but sharpens
+> the reason: it's not that connectivity might improve once the developer sits down to code, it's
+> that **this environment specifically will never reach those sites**, however long you wait.
+> Practical upshot: build and unit-test Stages 0–2/6/7 here against the §11 fixtures as planned; run
+> the live-fetching stages (0/3/4/5 against real endpoints) from a machine or environment that isn't
+> network-policy-restricted to those hosts — e.g. the developer's own machine, or a Claude Code
+> environment whose network policy is configured to allow them.
 
 ---
 
