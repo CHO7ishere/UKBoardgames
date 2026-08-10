@@ -56,7 +56,7 @@ def test_parse_product_extracts_ean(page1):
     assert product.ean == "5060453690123"
     assert product.in_stock is True
     assert product.min_price_gbp == 19.99
-    assert product.url == "https://zatu.com/en-gb/products/manipulate"
+    assert product.url == "https://zatu.com/products/manipulate"
 
 
 def test_parse_product_handles_string_tags(page1):

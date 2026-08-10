@@ -64,8 +64,12 @@ Stage 7  Static HTML output     sortable table, full result set, source links
   Stage 2. Max 20 ids/call, can return HTTP 202 (poll w/ backoff), 5s courtesy rate limit.
   Fallback if no token: scrape public game pages (mechanics/language/versions are in plain HTML).
 - **Zatu**: Shopify. Public `/products.json` and `/collections/<handle>/products.json`, no auth.
-  **Locale/currency bug**: unforced requests can return USD instead of GBP — force UK locale and
-  assert currency == GBP before trusting any price, or every discount calc is silently wrong.
+  **Currency:** use **bare** paths (`https://zatu.com/products/<handle>`, no locale prefix) —
+  confirmed live, this returns GBP directly. A locale-prefixed URL (`/en-us/...`) returned USD in
+  the original spec investigation, and a guessed `/en-gb/` prefix turned out to be a 404 (not a
+  real route on this store) — the first harvest run failed on that. Still assert
+  currency == GBP once per harvest (`verify_gbp_currency` in `sources/zatu.py`) before trusting
+  any price, since this is exactly the kind of storefront behaviour that can change silently.
   `barcode` field on variants is the EAN when present — stronger match key than fuzzy title.
 - **Philibert**: PrestaShop, no bulk export — needs page fetches. EAN is in a labeled `EAN` field
   under "Fiche technique" (authoritative) and often in the URL (`...-<ean13>.html`, fast

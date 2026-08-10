@@ -1,7 +1,13 @@
 """Zatu catalogue harvest — Stage 0 (docs/spec.md §3). Shopify's public, unauthenticated
-storefront JSON: no auth needed, but currency is locale-dependent and known to default to USD
-on an unforced request (spec §0.2/§11.1) even though Zatu is a UK retailer. Callers must run
-`verify_gbp_currency` before trusting any harvested price.
+storefront JSON: no auth needed.
+
+Currency note: a locale-prefixed URL (e.g. `/en-us/products/<handle>`) is what returned USD in
+the spec's original investigation, and a guessed `/en-gb/` prefix turned out to be a 404 — not a
+real route on this store. The fix, confirmed against the live site: drop the locale prefix
+entirely and hit the **bare** path (`https://zatu.com/products/<handle>`), which returns the
+shop's base currency — GBP, since Zatu is a UK store — directly, no forcing needed. Callers should
+still run `verify_gbp_currency` once per harvest as a live check, since Shopify Markets behaviour
+like this is exactly the kind of thing that can change without notice.
 """
 
 from __future__ import annotations
@@ -14,7 +20,6 @@ import requests
 from bs4 import BeautifulSoup
 
 BASE_URL = "https://zatu.com"
-LOCALE_PREFIX = "/en-gb"
 COLLECTION_HANDLE = "top-5000-board-games"
 PAGE_LIMIT = 250
 USER_AGENT = "UKBoardgamesAdvisor/1.0 (personal one-off tool; contact: mdeygout@gmail.com)"
@@ -102,7 +107,7 @@ def parse_product(raw: dict) -> ZatuProduct:
         zatu_id=raw["id"],
         handle=handle,
         title=raw["title"],
-        url=f"{BASE_URL}{LOCALE_PREFIX}/products/{handle}",
+        url=f"{BASE_URL}/products/{handle}",
         product_type=raw.get("product_type") or None,
         vendor=raw.get("vendor") or None,
         tags=_parse_tags(raw.get("tags")),
@@ -111,7 +116,7 @@ def parse_product(raw: dict) -> ZatuProduct:
 
 
 def fetch_products_page(session: requests.Session, page: int) -> list[dict]:
-    url = f"{BASE_URL}{LOCALE_PREFIX}/collections/{COLLECTION_HANDLE}/products.json"
+    url = f"{BASE_URL}/collections/{COLLECTION_HANDLE}/products.json"
     resp = session.get(url, params={"limit": PAGE_LIMIT, "page": page}, timeout=30)
     resp.raise_for_status()
     return resp.json().get("products", [])
@@ -139,13 +144,13 @@ def verify_gbp_currency(
 ) -> bool:
     """Fetch one product page and check its `og:price:currency` meta tag is GBP.
 
-    Confirmed live (spec §11.1): an unforced request to this same site returned USD in that
-    metadata despite Zatu being a UK retailer. Call this once per harvest before trusting any
-    price — a silent locale failure must fail loudly, not corrupt every discount computation
-    downstream (spec §5.2, §8).
+    A locale-prefixed URL was confirmed to return USD (spec §11.1); the bare path returns GBP
+    directly (module docstring). Call this once per harvest before trusting any price — a silent
+    currency regression must fail loudly, not corrupt every discount computation downstream
+    (spec §5.2, §8).
     """
     session = session or make_session()
-    url = f"{BASE_URL}{LOCALE_PREFIX}/products/{sample_handle}"
+    url = f"{BASE_URL}/products/{sample_handle}"
     resp = session.get(url, headers={"Accept": "text/html"}, timeout=30)
     resp.raise_for_status()
     soup = BeautifulSoup(resp.text, "lxml")
