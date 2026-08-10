@@ -108,13 +108,30 @@ to run in this sandbox unlike Stages 0/3/4/5. `data/bg_ranks.csv` (179,794 games
 dated 2026-08-09, user-provided — no token needed for this file, only Stage 3's `thing`/`search`
 calls need that, still pending) is committed; the real match has been run.
 
-- **Real result**: 4178 Zatu products → 140,261 base games after dropping BGG expansions → **558
-  survivors** (matched + passed the quality gate). Of the 3620 dropped: 2121 no BGG match at all,
-  1231 matched but failed the quality gate, 264 ambiguous (multiple BGG entries — usually
-  base/Big Box/expansion editions, e.g. Carcassonne, Everdell, Dominion 2nd Edition — share the
-  same normalized title; Zatu gives no reliable year to disambiguate, so these are correctly
-  dropped per spec P2 rather than guessed), 4 blocked by the digit-conflict veto. Outputs:
-  `data/matched_games.json` (survivors) and `data/dropped.csv` (with reasons, for skimming).
+- **Real result**: 4178 Zatu products → 140,261 base games after dropping BGG expansions → **576
+  survivors** (matched + passed the quality gate). Of the 3602 dropped: 2036 no BGG match at all,
+  1273 matched but failed the quality gate, 264 ambiguous exact matches + 25 ambiguous prefix
+  matches (multiple BGG entries — usually base/Big Box/expansion editions, e.g. Carcassonne,
+  Everdell, Dominion 2nd Edition — share the same normalized title or prefix; Zatu gives no
+  reliable year to disambiguate, so these are correctly dropped per spec P2 rather than guessed),
+  4 blocked by the digit-conflict veto. Outputs: `data/matched_games.json` (survivors) and
+  `data/dropped.csv` (with reasons, for skimming).
+- **Prefix-match tier added** (+18 net survivors over the first run): after exact and fuzzy both
+  fail, `BggIndex` now checks whether the query is a unique word-boundary prefix of exactly one
+  BGG title — e.g. Zatu's plain "Five Tribes" against BGG's actual title "Five Tribes: The Djinns
+  of Naqala", or "Sub Terra II (Core Game)" against "Sub Terra II: Inferno's Edge" (previously
+  unmatchable — fuzzy scoring favored the *unrelated* shorter "Sub Terra"/"Sub Terra: Collector's
+  Edition" over the correct sequel, since the query had no subtitle to compare against). Purely
+  additive by construction: only tried when fuzzy already returned nothing, so it can only add
+  matches, never override or regress an existing fuzzy decision. Uses a sorted-list binary search
+  (`bisect`), not a linear scan, so it adds negligible runtime. Still drops the ambiguous case
+  (e.g. "Suspects" is a prefix of 14 different "Suspects: <subtitle>" BGG entries) rather than
+  guessing. All 19 real prefix-tier survivors manually spot-checked against the actual matched
+  output — no false positives found.
+- **Fixed a real noise-stripping bug found the same way**: `"core"` used to be stripped as a bare
+  word (originally added for "Spirit Island (Core Game)"), which silently ate the word out of
+  "Company of Heroes: 2nd Edition **Core Set**" — a real BGG product-line term, not marketing
+  filler. Now only the "core game" phrase is stripped, not "core" alone.
 - **Fuzzy match tuning**: `config.yaml`'s `matching.fuzzy_threshold`/`min_score_gap` (90/5) were
   picked from empirical rapidfuzz testing, not guessed — `token_sort_ratio` (not `WRatio`, which
   scores an expansion's title against its own base game at exactly 90.0 due to partial-ratio

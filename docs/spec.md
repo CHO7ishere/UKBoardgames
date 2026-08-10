@@ -346,14 +346,15 @@ to a `dropped.csv` so you can skim it once if you're curious.
   in-stock standard edition, flag if a variant was chosen.
 - **Bundles/multi-packs** — detect by keyword; exclude from price comparison.
 
-**Verified 2026-08-10, real Stage 2 run (4178 Zatu products × 140,261 BGG base games, 558
+**Verified 2026-08-10, real Stage 2 run (4178 Zatu products × 140,261 BGG base games, 576
 survivors):**
 - **"Disambiguate on year" doesn't happen yet** — Zatu's harvested data has no reliable year
   field, so the "same name, different game" trap currently always resolves to LOW/drop rather
-  than a year-based pick. 264 of 3620 drops were this exact case (`Carcassonne`, `Everdell`,
-  `Dominion 2nd Edition`, etc. — base game vs Big Box vs expansion editions all sharing one
-  normalized title). Correct per this section's own fallback rule ("if still ambiguous, drop"),
-  just confirms year-disambiguation is a real gap, not yet a real feature.
+  than a year-based pick. 264 exact-title + 25 prefix-title drops were this case (`Carcassonne`,
+  `Everdell`, `Dominion 2nd Edition`, etc. — base game vs Big Box vs expansion editions all
+  sharing one normalized title or prefix). Correct per this section's own fallback rule ("if
+  still ambiguous, drop"), just confirms year-disambiguation is a real gap, not yet a real
+  feature.
 - **A plain fuzzy scorer is not safe on its own** — empirically, `rapidfuzz`'s `WRatio` scores an
   expansion's title against its own base game (`"Spirit Island: Branch & Claw"` vs `"Spirit
   Island"`) at exactly 90.0 due to partial-ratio weighting, and even a stricter scorer
@@ -367,7 +368,20 @@ survivors):**
   fixture data: HTML-entity unescaping (8 real Zatu titles had literal `&amp;`), stripping a
   thousands-separator comma from numbers before tokenizing (BGG writes `"Warhammer 40,000"`,
   Zatu writes `"40000"` — 463 BGG titles affected), and stripping a trailing `"(2013)"`-style
-  release-year annotation (18 real Zatu titles carry one, no BGG counterpart does).
+  release-year annotation (18 real Zatu titles carry one, no BGG counterpart does). Also found
+  and fixed a bug where `"core"` was stripped as a bare noise word (added for "Spirit Island
+  (Core Game)"), which silently ate the word out of "Company of Heroes: 2nd Edition **Core
+  Set**" — a real BGG product-line term. Only the "core game" phrase is stripped now.
+- **§4.2's confidence cascade is missing a real, common case**: a retailer shortening a title by
+  dropping the BGG subtitle (Zatu's "Five Tribes" for BGG's "Five Tribes: The Djinns of Naqala").
+  This isn't a fuzzy-match problem — dropping most of the candidate's text tanks any
+  string-similarity score — so added a fourth tier, tried only as a fallback after exact+fuzzy
+  both fail (purely additive, can't regress an existing decision): a query that's a unique
+  word-boundary prefix of exactly one BGG title is accepted at MEDIUM confidence; a prefix shared
+  by multiple BGG titles (e.g. "Suspects" against 14 different "Suspects: <subtitle>" entries) is
+  still dropped as ambiguous, same philosophy as the exact-match tier. +18 net survivors on the
+  real data (19 new prefix matches, one of which then correctly failed the quality gate); all 19
+  manually spot-checked against the real matched output, no false positives found.
 
 ---
 

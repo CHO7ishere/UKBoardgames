@@ -38,6 +38,9 @@ def index(base_games):
         ("The Great Fire of London 1666 (2017)", "great fire of london 1666"),
         ("Munchkin Warhammer 40000", "munchkin warhammer 40000"),
         ("Warhammer 40,000: Conquest", "warhammer 40000 conquest"),
+        # "core" alone must survive when it's not part of the "core game" phrase — it used to
+        # be stripped unconditionally, silently mangling "Core Set" into "set".
+        ("Company of Heroes: 2nd Edition Core Set", "company of heroes core set"),
     ],
 )
 def test_normalize_title(title, expected):
@@ -172,3 +175,60 @@ def test_trailing_release_year_does_not_block_match():
     result = idx.match("Pandemic (2013)")
     assert result.confidence == "HIGH"
     assert result.bgg_id == 301
+
+
+# --- BggIndex.match: prefix tier (fallback after fuzzy fails) ----------------------------------
+
+
+def test_unique_prefix_match_is_accepted():
+    # Real false-negative: Zatu lists this as just "Five Tribes"; BGG's actual title has a
+    # subtitle. Fuzzy alone (dropping most of the title) scores too low to accept.
+    from sources.bgg import BggRankedGame
+
+    games = [BggRankedGame(401, "Five Tribes: The Djinns of Naqala", 2014, 40, 7.8, 7.9, 40000, False)]
+    idx = BggIndex(games)
+    result = idx.match("Five Tribes")
+    assert result.confidence == "MEDIUM"
+    assert result.bgg_id == 401
+    assert "prefix" in result.reason
+
+
+def test_ambiguous_prefix_match_is_dropped():
+    # Real case: "Suspects" is a prefix of 14 different "Suspects: <subtitle>" BGG entries —
+    # genuinely ambiguous, must not guess one.
+    from sources.bgg import BggRankedGame
+
+    games = [
+        BggRankedGame(501, "Suspects: Claire Harper Takes the Stage", 2022, 500, 7.0, 7.0, 300, False),
+        BggRankedGame(502, "Suspects: Adele and Neville", 2023, 600, 7.0, 7.0, 300, False),
+    ]
+    idx = BggIndex(games)
+    result = idx.match("Suspects")
+    assert result.confidence == "LOW"
+    assert result.bgg_id is None
+    assert "ambiguous" in result.reason
+
+
+def test_prefix_tier_does_not_override_a_successful_fuzzy_match():
+    # If fuzzy already found a confident match, the prefix fallback must never be consulted —
+    # confirmed here via a title that both fuzzy-matches one game AND is a substring-prefix of
+    # a completely different one; the fuzzy winner must be returned.
+    from sources.bgg import BggRankedGame
+
+    games = [
+        BggRankedGame(601, "Spirit Islan", 2017, 20, 8.2, 8.4, 60000, False),  # near-typo match
+        BggRankedGame(602, "Spirit Island Companion App Guide", 2020, 9000, 6.0, 6.0, 50, False),
+    ]
+    idx = BggIndex(games)
+    result = idx.match("Spirit Island")
+    assert result.bgg_id == 601
+
+
+def test_no_prefix_candidates_still_returns_low():
+    from sources.bgg import BggRankedGame
+
+    games = [BggRankedGame(701, "Completely Different Game", 2020, 1, 5.0, 5.0, 100, False)]
+    idx = BggIndex(games)
+    result = idx.match("Unrelated Title Entirely")
+    assert result.confidence == "LOW"
+    assert result.bgg_id is None

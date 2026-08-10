@@ -1,12 +1,16 @@
 """Stage 2 — offline BGG match (docs/spec.md §3-4). Matches a title against the pre-downloaded
 bg_ranks.csv; no network calls. Confidence cascade per spec §4.2: exact normalized-title match
-is HIGH; a fuzzy match above threshold with a clear gap to the runner-up is MEDIUM; anything
-else is LOW and gets dropped — ambiguous matches are never surfaced for manual review (spec P2),
-only logged to dropped.csv for later skimming.
+is HIGH; a fuzzy match above threshold with a clear gap to the runner-up is MEDIUM; a title
+that's a unique shortened prefix of exactly one BGG title (e.g. Zatu's "Five Tribes" for BGG's
+"Five Tribes: The Djinns of Naqala") is also MEDIUM, tried only as a fallback after fuzzy finds
+nothing; anything else is LOW and gets dropped — ambiguous matches (multiple BGG entries tied on
+exact title or shared prefix) are never surfaced for manual review (spec P2), only logged to
+dropped.csv for later skimming.
 """
 
 from __future__ import annotations
 
+import bisect
 import html
 import re
 import unicodedata
@@ -33,9 +37,12 @@ _ROMAN_RE = re.compile(r"\b(x|ix|viii|vii|vi|v|iv|iii|ii|i)\b", re.IGNORECASE)
 
 # Marketing/edition noise stripped before comparison (spec §4.1). Matched as whole phrases so
 # "2nd edition"/"deluxe edition" disappear together rather than leaving a stray "2"/"deluxe".
+# NOTE: "core" is deliberately NOT stripped as a bare word (only the "core game" phrase) —
+# it used to be, which silently mangled "Company of Heroes: 2nd Edition Core Set" into "...set"
+# by eating "core" out of "Core Set", a real BGG product-line term, not marketing noise.
 _EDITION_NOISE_RE = re.compile(
     r"\b(board game|card game|\d+(st|nd|rd|th)\s+edition|deluxe edition|deluxe|big box|"
-    r"retail edition|english edition|english|core game|core|standard edition|"
+    r"retail edition|english edition|english|core game|standard edition|"
     r"anniversary edition|collector'?s edition)\b"
 )
 _ARTICLE_RE = re.compile(r"^(a|an|the)\s+")
@@ -104,6 +111,22 @@ class BggIndex:
         for game, norm in zip(games, self.normalized_names):
             self._exact[norm].append(game)
 
+        # Sorted (normalized_name, game) pairs for O(log n) prefix lookups — see
+        # `_prefix_matches`. Confirmed valuable against the real 4178-product harvest: 62 titles
+        # like "Five Tribes" are a retailer's shortened form of a BGG title with a subtitle
+        # ("Five Tribes: The Djinns of Naqala") and would otherwise never match at all.
+        self._sorted_pairs = sorted(zip(self.normalized_names, games), key=lambda p: p[0])
+        self._sorted_names = [name for name, _ in self._sorted_pairs]
+
+    def _prefix_matches(self, norm: str) -> list[BggRankedGame]:
+        """BGG games whose normalized name is `norm` followed by a space and more text — i.e.
+        `norm` is a shortened, word-boundary-safe prefix of the full title."""
+        prefix = norm + " "
+        lo = bisect.bisect_left(self._sorted_names, prefix)
+        upper_bound = prefix[:-1] + chr(ord(" ") + 1)  # next char after space
+        hi = bisect.bisect_left(self._sorted_names, upper_bound)
+        return [self._sorted_pairs[i][1] for i in range(lo, hi)]
+
     def match(
         self, title: str, fuzzy_threshold: float = 90.0, min_gap: float = 5.0
     ) -> MatchResult:
@@ -128,6 +151,40 @@ class BggIndex:
         if not self.normalized_names:
             return MatchResult(title, None, None, "LOW", None, "no BGG candidates loaded")
 
+        fuzzy_result = self._match_fuzzy(title, norm, fuzzy_threshold, min_gap)
+        if fuzzy_result.confidence != "LOW":
+            return fuzzy_result
+
+        # Fuzzy failed — try a unique-prefix fallback before giving up. Purely additive: it
+        # only fires when fuzzy already found nothing acceptable, so it can't override or
+        # regress an existing fuzzy decision.
+        prefix_hits = self._prefix_matches(norm)
+        unique_ids = {g.id for g in prefix_hits}
+        if len(unique_ids) == 1:
+            bgg = prefix_hits[0]
+            return MatchResult(
+                title,
+                bgg.id,
+                bgg.name,
+                "MEDIUM",
+                95.0,
+                "unique prefix match (query is a shortened form of the BGG title)",
+            )
+        if len(unique_ids) > 1:
+            return MatchResult(
+                title,
+                None,
+                None,
+                "LOW",
+                fuzzy_result.score,
+                "ambiguous: multiple BGG entries share this title as a prefix",
+            )
+
+        return fuzzy_result
+
+    def _match_fuzzy(
+        self, title: str, norm: str, fuzzy_threshold: float, min_gap: float
+    ) -> MatchResult:
         results = process.extract(
             norm, self.normalized_names, scorer=fuzz.token_sort_ratio, limit=2
         )
