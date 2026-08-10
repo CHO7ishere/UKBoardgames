@@ -16,6 +16,16 @@ VERDICT_OUT_OF_STOCK_FR = "OUT_OF_STOCK_FR"
 VERDICT_CHEAPER_UK = "CHEAPER_UK"
 VERDICT_NONE = "NONE"
 VERDICT_EXCLUDED = "EXCLUDED"  # Zatu itself out of stock — spec: "not a real opportunity"
+# This exact Zatu SKU (a specific edition/expansion/collection) isn't listed on Philibert, but
+# the base/family game is, under a plainer title -- e.g. Zatu's "Everdell Complete Collection"
+# vs Philibert's plain "Everdell", or "Cthulhu: Death May Die - Fear of the Unknown" vs
+# Philibert's "Cthulhu: Death May Die". User-confirmed real cases: treat "the family is
+# available in France" the same as a genuine French availability -- no UK-buy urgency, so this
+# is excluded from the shortlist just like NONE/EXCLUDED, not scored as an advantage. Distinct
+# from NONE (which means "this exact game, in stock both sides, at a similar price") because we
+# deliberately never fetched/compared this SKU's own price -- it would be comparing the wrong
+# product.
+VERDICT_FAMILY_AVAILABLE_FR = "FAMILY_AVAILABLE_FR"
 
 
 @dataclass
@@ -30,7 +40,7 @@ class AdvantageResult:
 def compute_advantage(
     zatu_in_stock: bool,
     zatu_price_gbp: float | None,
-    philibert_status: str,  # "NOT_LISTED" | "LISTED_OUT_OF_STOCK" | "LISTED_IN_STOCK"
+    philibert_status: str,  # "NOT_LISTED" | "LISTED_OUT_OF_STOCK" | "LISTED_IN_STOCK" | "FAMILY_LISTED_FR"
     philibert_price_eur: float | None,
     fx_gbp_eur: float,
     discount_threshold: float,
@@ -42,6 +52,16 @@ def compute_advantage(
     if not zatu_in_stock:
         return AdvantageResult(
             VERDICT_EXCLUDED, 0.0, None, False, "Zatu itself is out of stock — not a real opportunity"
+        )
+
+    if philibert_status == "FAMILY_LISTED_FR":
+        return AdvantageResult(
+            VERDICT_FAMILY_AVAILABLE_FR,
+            0.0,
+            None,
+            True,
+            "not listed under this exact edition, but the base/family game is listed on "
+            "Philibert -- treated as available in France",
         )
 
     if philibert_status == "NOT_LISTED":

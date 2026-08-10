@@ -74,6 +74,40 @@ def test_not_listed_unknown_fr_edition_defaults_to_weaker_and_flagged():
     assert result.needs_eyeball is True
 
 
+def test_family_listed_fr_is_excluded_style_verdict_and_flagged():
+    # search_family_title found the base/family game on Philibert, not this exact Zatu SKU --
+    # user-confirmed real cases (Everdell Complete Collection, Cthulhu: Death May Die - Fear of
+    # the Unknown, Gloomhaven 2nd Edition): treat "the family is available in France" as no
+    # genuine UK-buy urgency, distinct from a real price-comparable NONE/LISTED_IN_STOCK match.
+    result = compute_advantage(
+        zatu_in_stock=True,
+        zatu_price_gbp=39.99,
+        philibert_status="FAMILY_LISTED_FR",
+        philibert_price_eur=None,
+        fx_gbp_eur=FX,
+        discount_threshold=THRESHOLD,
+        weights=WEIGHTS,
+    )
+    assert result.verdict == "FAMILY_AVAILABLE_FR"
+    assert result.points == 0.0
+    assert result.needs_eyeball is True
+
+
+def test_family_listed_fr_takes_priority_even_when_zatu_out_of_stock():
+    # zatu_in_stock=False still wins (EXCLUDED) -- "not a real opportunity" is checked first
+    # regardless of Philibert status.
+    result = compute_advantage(
+        zatu_in_stock=False,
+        zatu_price_gbp=39.99,
+        philibert_status="FAMILY_LISTED_FR",
+        philibert_price_eur=None,
+        fx_gbp_eur=FX,
+        discount_threshold=THRESHOLD,
+        weights=WEIGHTS,
+    )
+    assert result.verdict == "EXCLUDED"
+
+
 def test_out_of_stock_fr():
     result = compute_advantage(
         zatu_in_stock=True,

@@ -46,6 +46,30 @@
     color: var(--text);
   }
   #result-count { font-size: 0.9rem; color: var(--text-dim); }
+  .category-filters { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1rem; }
+  .category-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.25rem 0.6rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--panel);
+    font-size: 0.82rem;
+    cursor: pointer;
+    user-select: none;
+  }
+  .category-chip input { margin: 0; }
+  .category-chip.pinned { font-weight: 600; }
+  #more-tags-toggle {
+    font-size: 0.82rem;
+    color: var(--link);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem 0;
+  }
+  .category-filters.tags-collapsed .tag-chip { display: none; }
   .table-wrap {
     overflow-x: auto;
     border: 1px solid var(--border);
@@ -126,6 +150,15 @@
     <span id="result-count">{{ games | length }} games matched your criteria</span>
   </div>
 
+  <div class="category-filters" id="category-filters">
+    <label class="category-chip pinned"><input type="checkbox" data-category="coop"> Coop</label>
+    <label class="category-chip pinned"><input type="checkbox" data-category="party"> Party</label>
+    {% for tag in filter_tags %}
+    <label class="category-chip tag-chip"><input type="checkbox" data-category-tag="{{ tag }}"> {{ tag }}</label>
+    {% endfor %}
+    {% if filter_tags %}<button type="button" id="more-tags-toggle">show more tags</button>{% endif %}
+  </div>
+
   <div class="table-wrap">
     <table id="games-table">
       <thead>
@@ -154,7 +187,10 @@
             data-discount_pct="{{ game.discount_pct if game.discount_pct is not none else '' }}"
             data-match_confidence="{{ game.match_confidence }}"
             data-flags_text="{{ game.flags | join(',') }}"
-            data-filter-text="{{ game.zatu_title | lower }}">
+            data-filter-text="{{ game.zatu_title | lower }}"
+            data-is-coop="{{ '1' if game.zatu_is_coop else '0' }}"
+            data-is-party="{{ '1' if game.zatu_is_party else '0' }}"
+            data-category-tags="{{ game.category_tags | join('|') | lower }}">
           <td class="score num">{{ "%.1f" | format(game.composite_score) }}</td>
           <td>
             <div class="game-title">{{ game.zatu_title }}{% if game.bgg_year %} <span class="num">({{ game.bgg_year }})</span>{% endif %}</div>
@@ -235,16 +271,50 @@
 
   var filterInput = document.getElementById('filter');
   var resultCount = document.getElementById('result-count');
-  filterInput.addEventListener('input', function () {
+  var categoryFilters = document.getElementById('category-filters');
+  var coopBox = categoryFilters.querySelector('[data-category="coop"]');
+  var partyBox = categoryFilters.querySelector('[data-category="party"]');
+  var tagBoxes = Array.prototype.slice.call(categoryFilters.querySelectorAll('[data-category-tag]'));
+
+  function applyFilters() {
     var needle = filterInput.value.trim().toLowerCase();
+    var checkedTags = tagBoxes.filter(function (el) { return el.checked; })
+      .map(function (el) { return el.dataset.categoryTag.toLowerCase(); });
+    var anyCategorySelected = coopBox.checked || partyBox.checked || checkedTags.length > 0;
     var visible = 0;
     rows.forEach(function (row) {
-      var match = row.dataset.filterText.indexOf(needle) !== -1;
+      var textMatch = row.dataset.filterText.indexOf(needle) !== -1;
+      var categoryMatch = !anyCategorySelected;
+      if (!categoryMatch) {
+        if (coopBox.checked && row.dataset.isCoop === '1') categoryMatch = true;
+        if (partyBox.checked && row.dataset.isParty === '1') categoryMatch = true;
+        if (checkedTags.length) {
+          var rowTags = row.dataset.categoryTags ? row.dataset.categoryTags.split('|') : [];
+          for (var i = 0; i < checkedTags.length; i++) {
+            if (rowTags.indexOf(checkedTags[i]) !== -1) { categoryMatch = true; break; }
+          }
+        }
+      }
+      var match = textMatch && categoryMatch;
       row.classList.toggle('hidden-row', !match);
       if (match) visible++;
     });
     resultCount.textContent = visible + ' games matched your criteria';
+  }
+
+  filterInput.addEventListener('input', applyFilters);
+  categoryFilters.querySelectorAll('input[type=checkbox]').forEach(function (el) {
+    el.addEventListener('change', applyFilters);
   });
+
+  var moreTagsToggle = document.getElementById('more-tags-toggle');
+  if (moreTagsToggle) {
+    categoryFilters.classList.add('tags-collapsed');
+    moreTagsToggle.addEventListener('click', function () {
+      var collapsed = categoryFilters.classList.toggle('tags-collapsed');
+      moreTagsToggle.textContent = collapsed ? 'show more tags' : 'show fewer tags';
+    });
+  }
 })();
 </script>
 </body>

@@ -2,7 +2,7 @@ import re
 
 import pytest
 
-from render import build_flags, build_why, prepare_games, render_html
+from render import build_flags, build_why, clean_category_tags, prepare_games, render_html, top_category_tags
 
 GAME_UNAVAILABLE = {
     "zatu_handle": "unavailable-game",
@@ -11,6 +11,7 @@ GAME_UNAVAILABLE = {
     "zatu_price_gbp": 39.99,
     "zatu_is_coop": True,
     "zatu_is_party": False,
+    "zatu_tags": ["Cooperative Play", "Legacy", "2-4 Players", "30-60 Minutes", "Christmas"],
     "bgg_id": 12345,
     "bgg_year": 2021,
     "bgg_average": 8.2,
@@ -83,6 +84,34 @@ def test_prepare_games_uses_real_philibert_url_when_listed():
     prepared = prepare_games([GAME_CHEAPER])[0]
     assert prepared["philibert_link_is_search"] is False
     assert prepared["philibert_link_url"] == GAME_CHEAPER["philibert_url"]
+
+
+def test_clean_category_tags_drops_player_count_duration_and_marketing_noise():
+    tags = ["Cooperative Play", "Legacy", "2-4 Players", "30-60 Minutes", "Christmas", "Party Games"]
+    assert clean_category_tags(tags) == ["Legacy"]
+
+
+def test_clean_category_tags_dedupes_case_insensitively():
+    assert clean_category_tags(["Legacy", "legacy", "Deck Building"]) == ["Legacy", "Deck Building"]
+
+
+def test_clean_category_tags_handles_none_and_empty():
+    assert clean_category_tags(None) == []
+    assert clean_category_tags([]) == []
+
+
+def test_top_category_tags_ranks_by_frequency_and_respects_limit():
+    games = [
+        {"category_tags": ["Legacy", "Deck Building"]},
+        {"category_tags": ["Legacy"]},
+        {"category_tags": ["Legacy", "Abstract"]},
+    ]
+    assert top_category_tags(games, limit=2) == ["Legacy", "Deck Building"]
+
+
+def test_prepare_games_includes_cleaned_category_tags():
+    prepared = prepare_games([GAME_UNAVAILABLE])[0]
+    assert prepared["category_tags"] == ["Legacy"]
 
 
 def test_prepare_games_maps_advantage_verdict_to_css_class():

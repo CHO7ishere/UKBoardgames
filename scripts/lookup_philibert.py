@@ -22,12 +22,18 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 import yaml  # noqa: E402
 
-from advantage import VERDICT_EXCLUDED, VERDICT_NONE, compute_advantage  # noqa: E402
+from advantage import (  # noqa: E402
+    VERDICT_EXCLUDED,
+    VERDICT_FAMILY_AVAILABLE_FR,
+    VERDICT_NONE,
+    compute_advantage,
+)
 from sources.philibert import (  # noqa: E402
     fetch_product_page,
     make_session,
     search_by_ean,
     search_by_title,
+    search_family_title,
 )
 
 
@@ -48,13 +54,24 @@ def lookup_one(session, survivor: dict, rate_limit_sec: float) -> dict:
         url = search_by_title(session, survivor["zatu_title"])
         time.sleep(rate_limit_sec)
 
+    matched_family = False
+    if not url:
+        url = search_family_title(session, survivor["zatu_title"])
+        time.sleep(rate_limit_sec)
+        matched_family = url is not None
+
     if not url:
         return {"status": "NOT_LISTED", "price_eur": None, "language": None, "url": None}
 
     detail = fetch_product_page(session, url)
     time.sleep(rate_limit_sec)
 
-    if detail["stock_status"] == "OUT_OF_STOCK":
+    if matched_family:
+        # Never compare this SKU's price against a different edition's listing -- still
+        # surface url/price for transparency in the full results file, but the status (and
+        # therefore the advantage verdict) reflects "family available", not a real price match.
+        status = "FAMILY_LISTED_FR"
+    elif detail["stock_status"] == "OUT_OF_STOCK":
         status = "LISTED_OUT_OF_STOCK"
     else:
         # IN_STOCK or UNKNOWN: treat as listed-in-stock if we got a price, since the primary
@@ -133,7 +150,11 @@ def main() -> int:
         if i % 50 == 0 or i == len(survivors):
             print(f"  [{i}/{len(survivors)}] {verdict_counts}", file=sys.stderr)
 
-    shortlist = [r for r in results if r["advantage_verdict"] not in (VERDICT_NONE, VERDICT_EXCLUDED)]
+    shortlist = [
+        r
+        for r in results
+        if r["advantage_verdict"] not in (VERDICT_NONE, VERDICT_EXCLUDED, VERDICT_FAMILY_AVAILABLE_FR)
+    ]
     print(f"Done: {len(results)} looked up, {len(shortlist)} kept in the shortlist "
           f"({len(results) - len(shortlist)} removed: available in France at a similar price, "
           f"or excluded as UK-out-of-stock). {verdict_counts}", file=sys.stderr)

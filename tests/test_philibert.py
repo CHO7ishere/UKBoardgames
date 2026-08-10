@@ -4,9 +4,11 @@ import pytest
 import requests
 
 from sources.philibert import (
+    _base_title_candidates,
     fetch_product_page,
     search_by_ean,
     search_by_title,
+    search_family_title,
 )
 
 FIXTURES = Path(__file__).parent / "fixtures"
@@ -97,6 +99,53 @@ def test_search_by_title_rejects_ambiguous_prefix_match():
     # guess, same rationale as Stage 2's BggIndex.
     session = FakeSession({"Suspects": "philibert_search_title_ambiguous_prefix.html"})
     assert search_by_title(session, "Suspects") is None
+
+
+# --- _base_title_candidates / search_family_title --------------------------------------------
+
+
+@pytest.mark.parametrize(
+    "title,expected",
+    [
+        ("Everdell Complete Collection", ["Everdell"]),
+        ("Cthulhu: Death May Die - Fear of the Unknown", ["Cthulhu: Death May Die", "Cthulhu"]),
+        ("Gloomhaven 2nd Edition", ["Gloomhaven"]),
+        ("Everdell: Silverfrost Collector's Edition", ["Everdell: Silverfrost", "Everdell"]),
+        ("Gloomhaven: Buttons & Bugs", ["Gloomhaven"]),
+        ("Wingspan", []),  # no edition/expansion/subtitle qualifier -- nothing to strip
+    ],
+)
+def test_base_title_candidates(title, expected):
+    assert _base_title_candidates(title) == expected
+
+
+def test_search_family_title_finds_base_game_for_complete_collection_sku():
+    # User-confirmed real case: Zatu's "Everdell Complete Collection" isn't listed as such on
+    # Philibert, but plain "Everdell" is.
+    session = FakeSession({"Everdell": "philibert_search_family_everdell.html"})
+    url = search_family_title(session, "Everdell Complete Collection")
+    assert url == "https://www.philibertnet.com/fr/starling-games/64111-everdell-3760175514442.html"
+
+
+def test_search_family_title_finds_base_game_before_trying_broader_prefix_tier():
+    # "Cthulhu: Death May Die - Fear of the Unknown" -> first candidate strips the " - "
+    # expansion suffix to "Cthulhu: Death May Die", which should match here without ever
+    # needing the broader "Cthulhu"-only fallback tier.
+    session = FakeSession({"Cthulhu: Death May Die": "philibert_search_family_cthulhu.html"})
+    url = search_family_title(session, "Cthulhu: Death May Die - Fear of the Unknown")
+    assert url == "https://www.philibertnet.com/fr/cmon/65222-cthulhu-death-may-die-3558380077800.html"
+
+
+def test_search_family_title_returns_none_when_title_has_no_candidates():
+    # search_family_title must not fire at all for a title with no edition/expansion/subtitle
+    # qualifier to strip -- there's nothing broader to try.
+    session = FakeSession({})
+    assert search_family_title(session, "Wingspan") is None
+
+
+def test_search_family_title_returns_none_when_no_candidate_matches():
+    session = FakeSession({"Gloomhaven": "philibert_search_title_junk.html"})
+    assert search_family_title(session, "Gloomhaven 2nd Edition") is None
 
 
 # --- fetch_product_page ---------------------------------------------------------------------

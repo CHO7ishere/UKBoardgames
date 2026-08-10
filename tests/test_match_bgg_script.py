@@ -51,6 +51,31 @@ def test_run_survivor_carries_zatu_and_bgg_fields():
     assert brass["zatu_price_gbp"] == 54.99
     assert brass["match_confidence"] == "HIGH"
     assert brass["quality_label"] == "EXCELLENT"
+    assert brass["zatu_is_coop"] is False
+    assert brass["zatu_is_party"] is False
+    assert brass["zatu_tags"] == ["Strategy"]
+
+
+def test_run_derives_coop_from_tags_even_without_is_coop_dict_keys():
+    # Regression: the real committed data/zatu_products.json has no "is_coop"/"is_party" keys
+    # at all (only "tags") -- product.get("is_coop") used to silently return None for every
+    # survivor. Simulate that exact shape here rather than the richer ZatuProduct.to_dict()
+    # fixture shape the other tests use.
+    products = [
+        {
+            "handle": "gloomhaven-jaws-of-the-lion",
+            "title": "Gloomhaven: Jaws of the Lion",
+            "url": "https://zatu.com/products/gloomhaven-jaws-of-the-lion",
+            "tags": ["Cooperative Play", "Legacy"],
+            "min_price_gbp": 34.99,
+            "in_stock": True,
+            "ean": None,
+        }
+    ]
+    survivors, _ = match_bgg.run(products, _bgg_games(), TEST_CONFIG)
+    assert len(survivors) == 1
+    assert survivors[0]["zatu_is_coop"] is True
+    assert survivors[0]["zatu_is_party"] is False
 
 
 def test_run_drop_reason_distinguishes_match_vs_quality_failure():

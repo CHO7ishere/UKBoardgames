@@ -49,6 +49,15 @@ TEST_CONFIG = {
 }
 
 
+SURVIVOR_FAMILY_LISTED = {
+    "zatu_handle": "complete-collection",
+    "zatu_title": "Some Game Complete Collection",
+    "zatu_ean": None,
+    "zatu_price_gbp": 60.0,
+    "zatu_in_stock": True,
+}
+
+
 def fake_lookup_one(session, survivor, rate_limit_sec):
     if survivor["zatu_handle"] == "cheap-in-uk":
         return {"status": "LISTED_IN_STOCK", "price_eur": 100.0, "language": "Français", "url": "u1"}
@@ -56,7 +65,36 @@ def fake_lookup_one(session, survivor, rate_limit_sec):
         return {"status": "LISTED_IN_STOCK", "price_eur": 50.0, "language": "Français", "url": "u2"}
     if survivor["zatu_handle"] == "uk-oos":
         return {"status": "LISTED_IN_STOCK", "price_eur": 50.0, "language": "Français", "url": "u3"}
+    if survivor["zatu_handle"] == "complete-collection":
+        return {"status": "FAMILY_LISTED_FR", "price_eur": 45.0, "language": "Français", "url": "u4"}
     return {"status": "NOT_LISTED", "price_eur": None, "language": None, "url": None}
+
+
+def test_lookup_one_uses_family_fallback_when_exact_title_not_listed(monkeypatch):
+    # Real lookup_one() (not the fake), with search_by_ean/search_by_title/search_family_title
+    # patched directly, confirms the wiring: exact EAN and title search both fail, family
+    # fallback finds a base-game listing -> status FAMILY_LISTED_FR, not NOT_LISTED.
+    import lookup_philibert as mod
+
+    monkeypatch.setattr(mod, "search_by_ean", lambda session, ean: None)
+    monkeypatch.setattr(mod, "search_by_title", lambda session, title, **kw: None)
+    monkeypatch.setattr(mod, "search_family_title", lambda session, title, **kw: "https://www.philibertnet.com/fr/pub/1-base-game.html")
+    monkeypatch.setattr(
+        mod,
+        "fetch_product_page",
+        lambda session, url: {
+            "ean": None,
+            "language": "Français",
+            "publisher": "Pub",
+            "price_eur": 45.0,
+            "stock_status": "IN_STOCK",
+        },
+    )
+
+    result = mod.lookup_one(session=None, survivor=SURVIVOR_FAMILY_LISTED, rate_limit_sec=0)
+
+    assert result["status"] == "FAMILY_LISTED_FR"
+    assert result["url"] == "https://www.philibertnet.com/fr/pub/1-base-game.html"
 
 
 def test_main_removes_similar_price_games_keeps_cheaper_and_not_listed(tmp_path, monkeypatch):
@@ -67,6 +105,7 @@ def test_main_removes_similar_price_games_keeps_cheaper_and_not_listed(tmp_path,
             SURVIVOR_SIMILAR_PRICE,
             SURVIVOR_NOT_LISTED,
             SURVIVOR_UK_OUT_OF_STOCK,
+            SURVIVOR_FAMILY_LISTED,
         ]
     }))
     config_file = tmp_path / "config.yaml"
@@ -104,11 +143,14 @@ def test_main_removes_similar_price_games_keeps_cheaper_and_not_listed(tmp_path,
     assert by_handle["similar-price"]["advantage_verdict"] == "NONE"
     assert by_handle["not-listed"]["advantage_verdict"] == "UNAVAILABLE_FR"
     assert by_handle["uk-oos"]["advantage_verdict"] == "EXCLUDED"
+    assert by_handle["complete-collection"]["advantage_verdict"] == "FAMILY_AVAILABLE_FR"
 
     shortlist_handles = {r["zatu_handle"] for r in shortlist}
     assert shortlist_handles == {"cheap-in-uk", "not-listed"}
     assert "similar-price" not in shortlist_handles  # the actual removal the user asked for
     assert "uk-oos" not in shortlist_handles
+    # family-available games aren't a real UK-buy opportunity either -- same treatment as NONE
+    assert "complete-collection" not in shortlist_handles
 
 
 def test_main_survives_a_lookup_error(tmp_path, monkeypatch, capsys):

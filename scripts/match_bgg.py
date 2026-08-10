@@ -19,6 +19,7 @@ import yaml  # noqa: E402
 from match import BggIndex  # noqa: E402
 from score import evaluate_quality  # noqa: E402
 from sources.bgg import filter_base_games, load_bg_ranks  # noqa: E402
+from sources.zatu import is_coop_tag, is_party_tag  # noqa: E402
 
 _DROPPED_FIELDNAMES = ["zatu_handle", "zatu_title", "reason", "bgg_id", "bgg_name", "score"]
 
@@ -91,8 +92,15 @@ def run(zatu_products: list[dict], bgg_games, config: dict) -> tuple[list[dict],
                 "zatu_price_gbp": product.get("min_price_gbp"),
                 "zatu_in_stock": product.get("in_stock"),
                 "zatu_ean": product.get("ean"),
-                "zatu_is_coop": product.get("is_coop"),
-                "zatu_is_party": product.get("is_party"),
+                "zatu_tags": product.get("tags", []),
+                # Derived from the raw `tags` list rather than trusting `is_coop`/`is_party`
+                # keys on the product dict -- those only exist on a ZatuProduct.to_dict()
+                # output, not on the committed data/zatu_products.json's plainer product
+                # records, so product.get("is_coop") silently returned None for every survivor
+                # until this was traced down (confirmed live: tags are always present, the
+                # derived keys never were).
+                "zatu_is_coop": is_coop_tag(product.get("tags", [])),
+                "zatu_is_party": is_party_tag(product.get("tags", [])),
                 "bgg_id": bgg.id,
                 "bgg_name": bgg.name,
                 "bgg_year": bgg.year,

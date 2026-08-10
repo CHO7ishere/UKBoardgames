@@ -357,3 +357,63 @@ Actions round-trip. 16 new tests (`tests/test_score.py`'s genre/language/composi
   stage currently captures a preorder-wording signal or a deluxe/Kickstarter-vs-retail SKU
   signal, so there's nothing for `build_flags()` to read yet. `NEEDS_EYEBALL` and `UNKNOWN_LANG`
   (spec's other two) are both live.
+
+## Post-v1 fixes from real user spot-checks (2026-08-10)
+
+- **Genre bonus was 0 for every game — real bug, not just missing data.** The v1 gap note above
+  ("committed harvest predates `is_coop`/`is_party`") was actually a red herring: `tags` was
+  always present in `data/zatu_products.json` (confirmed live), but `scripts/match_bgg.py` read
+  `product.get("is_coop")`/`.get("is_party")` — keys that only exist on a `ZatuProduct.to_dict()`
+  object, never on the plainer dicts the committed JSON actually stores. Fixed by deriving both
+  from `product["tags"]` directly via two new shared helpers (`sources/zatu.py`'s
+  `is_coop_tag`/`is_party_tag`, also used by `ZatuProduct`'s own properties now, so the logic
+  lives in one place). Purely offline — no re-harvest needed, `tags` was already there.
+- **Re-running `match_bgg.py` after this fix also surfaced a second, unrelated staleness bug**:
+  `match.py`'s dangling-article fix (commit `67622bd`, made for Stage 5's Slay the Spire miss)
+  changed `normalize_title`'s output for every title with a mid-string article, but Stage 2's own
+  `data/matched_games.json` was never re-run after that commit landed — it was silently stale
+  relative to the code. Re-running it offline (safe, no network) gave **582 survivors** (574
+  common + 8 newly matched, mostly `EXIT:` puzzle titles that couldn't match before + `This War
+  of Mine` + 2 correctly *dropped* as newly-ambiguous: `HeroQuest` and `War of the Ring: The Card
+  Game` now collide on normalized title with other BGG entries once "the" strips mid-string too —
+  a correct precision improvement, not a regression). Committed the fresh
+  `data/matched_games.json`/`data/dropped.csv`. The 8 new survivors and the corrected coop/party
+  values for all 582 need a live Stage 4 (EAN)/5 (Philibert) re-run to get real
+  price/availability data — bundled into the same GitHub Actions dispatch as the fixes below
+  rather than a separate live round-trip.
+- **`zatu_tags` (the raw Zatu tag list) is now carried through Stage 2's survivor records too**
+  (previously only the derived `is_coop`/`is_party` booleans were kept) — needed for the new
+  category-filter UI below.
+- **Philibert base-title/family fallback, for a real false-negative class user-confirmed live**:
+  `search_by_title` correctly found nothing for Zatu SKUs like "Everdell Complete Collection",
+  "Cthulhu: Death May Die - Fear of the Unknown", and "Gloomhaven 2nd Edition" — not a
+  matching-precision bug, those exact editions/expansions genuinely aren't listed — but the
+  *base/family* game is (plain "Everdell", "Cthulhu: Death May Die", "Gloomhaven"), and the user
+  wants that generalized: if the family exists in France, don't flag the SKU as a UK-exclusive
+  buy. Added `sources/philibert.py`'s `_base_title_candidates()` (strips a " - "-separated
+  expansion suffix, then edition/collection marketing noise, then falls back to the part before
+  the first colon — most-specific tier first) and `search_family_title()`, tried only after the
+  exact title search already found nothing, reusing `search_by_title`'s own fuzzy/prefix/
+  accessory-filtering so a family hit still has to clear the same bar. Wired into
+  `scripts/lookup_philibert.py`'s `lookup_one()` as a third tier after EAN and exact-title
+  search. New `philibert_status` value `FAMILY_LISTED_FR` deliberately never compares this SKU's
+  price against the family listing's price (different products) — `advantage.py`'s new
+  `FAMILY_AVAILABLE_FR` verdict scores 0 points, flags `needs_eyeball`, and is excluded from the
+  shortlist the same way `NONE`/`EXCLUDED` are (no genuine UK-buy urgency once the family is
+  confirmed available in France). Unit-tested against synthetic fixtures (real captured HTML
+  wasn't available for these specific title variants in this sandbox) — needs the same live
+  GitHub Actions dispatch as above to confirm against the real 166 `NOT_LISTED` survivors,
+  including the three real cases the user reported.
+- **Category filter UI added to the HTML report**, per user request ("would love to filter on
+  categories such as coop or party but even other from Zatu"). Coop/party get dedicated pinned
+  checkboxes (reusing the now-fixed `zatu_is_coop`/`zatu_is_party`); `render.py`'s
+  `clean_category_tags()` strips Zatu's player-count/duration/holiday/site-admin noise tags from
+  the raw `zatu_tags` list (kept simple — a blocklist + a couple of regexes, not a full taxonomy)
+  and `top_category_tags()` surfaces the ~24 most common surviving tags across the shortlist as
+  additional checkbox chips (collapsed behind a "show more tags" toggle to keep the UI from being
+  overwhelming). All still inline vanilla JS, no CDN dependency, consistent with the rest of
+  Stage 7 — checking multiple boxes is OR (any selected category), combined via AND with the
+  existing title-text filter. Verified live with Playwright against a synthetic multi-game
+  fixture (coop-only, party-only, tag-only, and combined coop+tag+text filtering all behave as
+  designed) since the real `docs/index.html` won't have real tag data until the live re-run
+  above lands.

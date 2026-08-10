@@ -35,6 +35,14 @@ def _normalize_ean(code: str) -> str:
     return code.zfill(13) if len(code) == 12 else code
 
 
+def is_coop_tag(tags: list[str]) -> bool:
+    return any("cooperat" in t.lower() for t in tags)
+
+
+def is_party_tag(tags: list[str]) -> bool:
+    return any("party" in t.lower() for t in tags)
+
+
 @dataclass
 class ZatuVariant:
     variant_id: int
@@ -80,11 +88,11 @@ class ZatuProduct:
 
     @property
     def is_coop(self) -> bool:
-        return any("cooperat" in t.lower() for t in self.tags)
+        return is_coop_tag(self.tags)
 
     @property
     def is_party(self) -> bool:
-        return any("party" in t.lower() for t in self.tags)
+        return is_party_tag(self.tags)
 
     def to_dict(self) -> dict:
         """dataclasses.asdict() only serializes fields, not @property methods — use this

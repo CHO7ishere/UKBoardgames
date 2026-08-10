@@ -158,6 +158,62 @@ def search_by_title(
     return None
 
 
+# Marketing/edition/expansion qualifiers that mark a specific SKU rather than the base-game
+# family. User-confirmed real misses: Zatu sells "Everdell Complete Collection" and "Gloomhaven
+# 2nd Edition" as distinct products from Philibert's plain "Everdell"/"Gloomhaven" listings, and
+# "Cthulhu: Death May Die - Fear of the Unknown" (an expansion, separated by " - ") isn't listed
+# even though the base "Cthulhu: Death May Die" is. `search_by_title` genuinely finds nothing
+# for these -- not a fuzzy-threshold or prefix-tier problem, the exact SKU just isn't listed --
+# so this is a deliberate widen-the-net fallback tried only once the exact title has already
+# failed, not a matching-precision fix. A caller must treat a hit here as weaker evidence (the
+# family exists in France, not necessarily this edition) rather than a confirmed exact match.
+_EXPANSION_SUFFIX_RE = re.compile(r"\s+-\s+.+$")
+_EDITION_SUFFIX_NOISE_RE = re.compile(
+    r"\b(\d+(st|nd|rd|th)\s+edition|deluxe edition|collector'?s edition|complete collection|"
+    r"anniversary edition|definitive edition|big box)\b",
+    re.IGNORECASE,
+)
+_SUBTITLE_COLON_RE = re.compile(r"\s*:\s*")
+
+
+def _base_title_candidates(title: str) -> list[str]:
+    """Progressively broader fallback titles, most-specific first, deduplicated, never
+    including the original title itself (callers already tried that)."""
+    seen = {title.strip().lower()}
+    candidates = []
+
+    def _add(candidate: str) -> None:
+        candidate = re.sub(r"\s+", " ", candidate).strip()
+        key = candidate.lower()
+        if candidate and key not in seen:
+            seen.add(key)
+            candidates.append(candidate)
+
+    _add(_EXPANSION_SUFFIX_RE.sub("", title))
+    _add(_EDITION_SUFFIX_NOISE_RE.sub("", title))
+    # Last resort: just the part before the first colon (e.g. "Gloomhaven: Buttons & Bugs" ->
+    # "Gloomhaven") -- broadest tier, tried last since it discards the most information.
+    head = _SUBTITLE_COLON_RE.split(title, maxsplit=1)[0]
+    _add(head)
+
+    return candidates
+
+
+def search_family_title(
+    session: requests.Session, title: str, fuzzy_threshold: float = 85.0
+) -> str | None:
+    """Fallback for when `search_by_title(session, title)` already returned nothing: tries
+    `_base_title_candidates(title)` in order (most-specific first) and returns the first hit.
+    Reuses `search_by_title`'s own fuzzy/prefix matching and accessory-SKU filtering for each
+    candidate, so a base-title hit still has to clear the same bar as a normal title search --
+    only the search *query* is broadened, not the acceptance criteria."""
+    for candidate in _base_title_candidates(title):
+        url = search_by_title(session, candidate, fuzzy_threshold=fuzzy_threshold)
+        if url:
+            return url
+    return None
+
+
 def _extract_features(soup: BeautifulSoup) -> dict[str, str]:
     features: dict[str, str] = {}
     for item in soup.select("li.product-features__item"):
