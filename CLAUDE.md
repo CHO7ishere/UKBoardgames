@@ -261,11 +261,24 @@ via GitHub Actions (`.github/workflows/lookup-philibert.yml`) on 2026-08-10 — 
   word-boundary prefix. Both fixes are unit-tested (`tests/test_match.py`'s new
   `"Slay the Spire: The Board Game"` case, `tests/test_philibert.py`'s
   `test_search_by_title_falls_back_to_unique_prefix_match` +
-  `test_search_by_title_rejects_ambiguous_prefix_match`) — 119 tests pass. **Not yet re-run for
-  real**: the committed `data/philibert_results.json`/`data/shortlist.json` still reflect the
-  pre-fix logic (375 `NONE`/195 `UNAVAILABLE_FR`/6 `CHEAPER_UK`), so Slay the Spire and an unknown
-  number of similar French-subtitle misses are still wrongly marked `UNAVAILABLE_FR` in the
-  committed data until `lookup-philibert.yml` is re-dispatched.
+  `test_search_by_title_rejects_ambiguous_prefix_match`) — 119 tests pass initially, but **the
+  real re-run still showed Slay the Spire as `NOT_LISTED`** (`lookup-philibert.yml` re-dispatched
+  2026-08-10 16:29 — 55 min). Root-caused via `scripts/probe_philibert.py` against the live site:
+  Philibert's own search was never the problem — all three query variants ("Slay the Spire: The
+  Board Game", "Slay the Spire", "slay spire") returned the correct listing as the top hit. The
+  bug was in our own prefix tier: Philibert also lists 4 accessory SKUs for the same game (a
+  spare player board, a compatible upgrade-token set, a player board with lid, an expansion's
+  component set) that ALL normalize to "slay spire ..." too, so the unique-prefix check saw 5
+  candidates instead of 1 and correctly refused to guess. Fixed by filtering out links whose URL
+  category slug is a known generic accessory-taxonomy term (`pions`,
+  `pions-pour-jeux-specifiques`, `plateau-de-jeu-individuel`) before either the fuzzy or prefix
+  tier runs — in every real sample seen so far (this game and all prior ones: Wingspan, Pandemic,
+  Azul, Ticket to Ride, Spirit Island, Flip 7, Athletes de Compete) the *primary* board-game
+  listing's category slug is always a publisher name, never one of these component-taxonomy
+  slugs, so the filter can only help, never wrongly reject a real game. Verified against the real
+  captured search results (`tests/fixtures/philibert_search_title_prefix.html`, rebuilt from the
+  actual live probe output) — 119 tests still pass. **Re-dispatched again 2026-08-10** to pick up
+  this second fix; not yet confirmed in the committed `data/shortlist.json`.
 - **Blood on the Clocktower, checked and not a bug**: user-supplied example where Zatu's EAN
   matches the *English* Philibert listing (confirmed "not available" — no French edition), while
   our title-search fallback would find the separate *French*-edition listing (different EAN, on

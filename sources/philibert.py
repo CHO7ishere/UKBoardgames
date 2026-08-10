@@ -30,6 +30,27 @@ USER_AGENT = "UKBoardgamesAdvisor/1.0 (personal one-off tool; contact: mdeygout@
 
 _TRAILING_EAN_RE = re.compile(r"-\d{8,14}$")
 _LEADING_ID_RE = re.compile(r"^\d+-")
+_CATEGORY_RE = re.compile(r"(?:https?://[^/]+)?/fr/([^/]+)/")
+
+# Component/accessory SKUs (spare player boards, upgrade-token sets, expansion component sets)
+# share a handful of generic French category slugs across many different games, confirmed live
+# 2026-08-10 via a real Slay the Spire search: 4 accessory listings all normalized to
+# "slay spire <something>", breaking the unique-prefix check below (5 candidates, not 1) even
+# though the real base-game listing was Philibert's own top search result throughout. In every
+# confirmed real sample so far the primary board-game listing's category slug is a publisher
+# name (matagot, zman-games, next-move, days-of-wonder, the-op, intrafin, iello, ...); these
+# generic component-taxonomy slugs are never used for a primary listing, so filtering them out
+# can only help, never wrongly reject the real game.
+_ACCESSORY_CATEGORY_SLUGS = frozenset({
+    "pions",
+    "pions-pour-jeux-specifiques",
+    "plateau-de-jeu-individuel",
+})
+
+
+def _is_accessory_link(link: str) -> bool:
+    match = _CATEGORY_RE.match(link)
+    return bool(match) and match.group(1) in _ACCESSORY_CATEGORY_SLUGS
 
 # Confirmed live (spec §11.3, reconfirmed via probe): the primary product's own purchase state.
 # "Précommande"/"Précommander" is purchasable (a real order, just delayed shipping) so it's
@@ -102,9 +123,16 @@ def search_by_title(
     Falls back to a unique-prefix match (same rationale as Stage 2's `BggIndex`) when fuzzy
     finds nothing — confirmed necessary by a real miss: Philibert listed "Slay the Spire" under
     its French subtitle ("...Le Jeu de Plateau"), which no fuzzy score could bridge no matter
-    the threshold, but the English title is a clean prefix of it.
+    the threshold, but the English title is a clean prefix of it. Accessory/component SKUs are
+    dropped before either tier runs — confirmed live the same game can have several (a spare
+    player board, upgrade tokens, an expansion's component set) that also share the base title
+    as a normalized prefix, which would otherwise make a genuinely unique game match look
+    ambiguous.
     """
     links = _search_links(session, title)
+    if not links:
+        return None
+    links = [link for link in links if not _is_accessory_link(link)]
     if not links:
         return None
     norm_query = normalize_title(title)

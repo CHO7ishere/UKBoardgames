@@ -82,9 +82,11 @@ def test_search_by_title_returns_none_for_truly_empty_results():
 
 
 def test_search_by_title_falls_back_to_unique_prefix_match():
-    # Real miss found by manual spot-check: Philibert lists "Slay the Spire" under its French
-    # subtitle ("...Le Jeu de Plateau"), which no fuzzy score can bridge -- the English query is
-    # a clean prefix of it instead.
+    # Real scenario, fixture built from the actual live search results (probed 2026-08-10):
+    # Philibert lists "Slay the Spire" under its French subtitle ("...Le Jeu de Plateau") plus
+    # four accessory SKUs (spare player board, upgrade tokens, an expansion's component set)
+    # that ALSO share "slay the spire" as a normalized-title prefix -- without the accessory
+    # category filter, the prefix tier saw 5 candidates instead of 1 and refused to guess.
     session = FakeSession({"Slay the Spire": "philibert_search_title_prefix.html"})
     url = search_by_title(session, "Slay the Spire: The Board Game")
     assert url == "https://www.philibertnet.com/fr/matagot/130149-slay-the-spire-le-jeu-de-plateau-3760372232801.html"
