@@ -29,6 +29,12 @@ USER_AGENT = "UKBoardgamesAdvisor/1.0 (personal one-off tool; contact: mdeygout@
 _EAN_RE = re.compile(r"^\d{8}$|^\d{12,14}$")
 
 
+def _normalize_ean(code: str) -> str:
+    """UPC-A (12 digits) is EAN-13 with the leading zero dropped — zero-pad it back so it
+    compares directly against Philibert's 13-digit EAN field. EAN-8/13/14 pass through as-is."""
+    return code.zfill(13) if len(code) == 12 else code
+
+
 @dataclass
 class ZatuVariant:
     variant_id: int
@@ -64,11 +70,21 @@ class ZatuProduct:
     @property
     def ean(self) -> str | None:
         """First variant barcode that looks like a real EAN/UPC/GTIN — the strongest
-        available key for matching this product on BGG/Philibert (spec §0.2, §4.2)."""
+        available key for matching this product on BGG/Philibert (spec §0.2, §4.2).
+        Normalised to EAN-13 (UPC-A is zero-padded) so it compares directly against
+        Philibert's 13-digit EAN field."""
         for v in self.variants:
             if v.barcode and _EAN_RE.match(v.barcode.strip()):
-                return v.barcode.strip()
+                return _normalize_ean(v.barcode.strip())
         return None
+
+    @property
+    def is_coop(self) -> bool:
+        return any("cooperat" in t.lower() for t in self.tags)
+
+    @property
+    def is_party(self) -> bool:
+        return any("party" in t.lower() for t in self.tags)
 
     def to_dict(self) -> dict:
         """dataclasses.asdict() only serializes fields, not @property methods — use this
@@ -78,6 +94,8 @@ class ZatuProduct:
             "ean": self.ean,
             "in_stock": self.in_stock,
             "min_price_gbp": self.min_price_gbp,
+            "is_coop": self.is_coop,
+            "is_party": self.is_party,
         }
 
 
@@ -133,6 +151,60 @@ def fetch_products_page(session: requests.Session, page: int) -> list[dict]:
     return resp.json().get("products", [])
 
 
+def fetch_product_detail(session: requests.Session, handle: str) -> dict:
+    """Per-product JSON (`/products/<handle>.json`, singular `product` key — standard Shopify
+    shape). One request per game — a Stage 4 tool for the survivors of Stage 2's match, not
+    something to run across the whole catalogue (spec's cheap-wide/expensive-narrow rule).
+
+    [VERIFY] Whether this endpoint actually populates `barcode` where the bulk
+    `/collections/.../products.json` doesn't — confirmed empirically that the bulk endpoint
+    returns `barcode: null` on all 4178 harvested products (docs/spec.md §11.1); this endpoint
+    is untested from a network that can reach zatu.com. Confirm on first real Stage 4 run.
+    """
+    url = f"{BASE_URL}/products/{handle}.json"
+    resp = session.get(url, timeout=30)
+    resp.raise_for_status()
+    return resp.json().get("product", {})
+
+
+def fetch_product_ean(session: requests.Session, handle: str) -> str | None:
+    """Per-product EAN lookup for Stage 4 — see `fetch_product_detail` for the [VERIFY] caveat
+    on whether this endpoint actually carries a barcode the bulk one doesn't."""
+    product = fetch_product_detail(session, handle)
+    for v in product.get("variants", []):
+        barcode = v.get("barcode")
+        if barcode and _EAN_RE.match(str(barcode).strip()):
+            return _normalize_ean(str(barcode).strip())
+    return None
+
+
+# Stock-status phrases confirmed in Zatu's rendered product-page UI (spec §11.1). The bulk and
+# per-product JSON carry no `available`/`inventory_quantity` signal worth trusting (confirmed —
+# `available` was `true` for all 4178 harvested products with no inventory number behind it), so
+# real stock has to come from this text.
+_STOCK_TEXT_PATTERNS = [
+    (re.compile(r"\bout of stock\b", re.I), "OUT_OF_STOCK"),
+    (re.compile(r"\bback-?order\b", re.I), "BACK_ORDER"),
+    (re.compile(r"\border in next\b", re.I), "PREORDER"),
+    (re.compile(r"\d+\+?\s*in stock\b", re.I), "IN_STOCK"),
+]
+
+
+def fetch_stock_status(session: requests.Session, handle: str) -> str:
+    """Best-effort stock status scraped from the rendered product page text. Returns one of
+    OUT_OF_STOCK / BACK_ORDER / PREORDER / IN_STOCK / UNKNOWN. The exact out-of-stock wording
+    was never confirmed live (spec §11.3 flags this as the one still-open string) — treat
+    UNKNOWN as "couldn't tell", not "definitely in stock"."""
+    url = f"{BASE_URL}/products/{handle}"
+    resp = session.get(url, headers={"Accept": "text/html"}, timeout=30)
+    resp.raise_for_status()
+    text = BeautifulSoup(resp.text, "lxml").get_text(" ", strip=True)
+    for pattern, status in _STOCK_TEXT_PATTERNS:
+        if pattern.search(text):
+            return status
+    return "UNKNOWN"
+
+
 def harvest_all(
     session: requests.Session | None = None,
     rate_limit_sec: float = 1.0,
@@ -150,21 +222,45 @@ def harvest_all(
     return products
 
 
-def verify_gbp_currency(
-    session: requests.Session | None = None, sample_handle: str = "manipulate"
-) -> bool:
-    """Fetch one product page and check its `og:price:currency` meta tag is GBP.
+def _currency_from_product_json(session: requests.Session, sample_handle: str) -> str | None:
+    """Try the per-product JSON's `price_currency` field. [VERIFY]: not confirmed to exist on
+    Zatu's storefront from a network that can reach it — if absent, callers should fall back to
+    the proven `og:price:currency` meta-tag check rather than trust a missing field as GBP."""
+    try:
+        product = fetch_product_detail(session, sample_handle)
+    except (requests.RequestException, ValueError):
+        return None
+    for v in product.get("variants", []):
+        currency = v.get("price_currency")
+        if currency:
+            return currency
+    return None
 
-    A locale-prefixed URL was confirmed to return USD (spec §11.1); the bare path returns GBP
-    directly (module docstring). Call this once per harvest before trusting any price — a silent
-    currency regression must fail loudly, not corrupt every discount computation downstream
-    (spec §5.2, §8).
-    """
-    session = session or make_session()
+
+def _currency_from_meta_tag(session: requests.Session, sample_handle: str) -> str | None:
     url = f"{BASE_URL}/products/{sample_handle}"
     resp = session.get(url, headers={"Accept": "text/html"}, timeout=30)
     resp.raise_for_status()
     soup = BeautifulSoup(resp.text, "lxml")
     tag = soup.find("meta", attrs={"property": "og:price:currency"})
-    currency = tag.get("content") if tag else None
+    return tag.get("content") if tag else None
+
+
+def verify_gbp_currency(
+    session: requests.Session | None = None, sample_handle: str = "manipulate"
+) -> bool:
+    """Check one product's currency is GBP before trusting any harvested price.
+
+    A locale-prefixed URL was confirmed to return USD (spec §11.1); the bare path returns GBP
+    directly (module docstring). Call this once per harvest — a silent currency regression must
+    fail loudly, not corrupt every discount computation downstream (spec §5.2, §8).
+
+    Tries the per-product JSON's `price_currency` field first (cheaper, no HTML parsing); falls
+    back to the `og:price:currency` meta tag, which is the proven method — confirmed GBP against
+    the live site on the first successful harvest.
+    """
+    session = session or make_session()
+    currency = _currency_from_product_json(session, sample_handle)
+    if currency is None:
+        currency = _currency_from_meta_tag(session, sample_handle)
     return currency == "GBP"

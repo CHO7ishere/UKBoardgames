@@ -2,10 +2,14 @@ import json
 from pathlib import Path
 
 import pytest
+import requests
 
 from sources.zatu import (
     ZatuProduct,
+    fetch_product_detail,
+    fetch_product_ean,
     fetch_products_page,
+    fetch_stock_status,
     harvest_all,
     parse_product,
     verify_gbp_currency,
@@ -15,23 +19,33 @@ FIXTURES = Path(__file__).parent / "fixtures"
 
 
 class FakeResponse:
-    def __init__(self, json_data=None, text=""):
+    def __init__(self, json_data=None, text="", status_code=200):
         self._json = json_data
         self.text = text
+        self.status_code = status_code
 
     def raise_for_status(self):
-        pass
+        if self.status_code >= 400:
+            raise requests.exceptions.HTTPError(f"{self.status_code} error")
 
     def json(self):
         return self._json
 
 
 class FakeSession:
-    """Stands in for requests.Session: serves fixed pages by call order, no network."""
+    """Stands in for requests.Session: serves fixed pages/detail/html by URL, no network."""
 
-    def __init__(self, pages: list[dict] | None = None, html: str | None = None):
+    def __init__(
+        self,
+        pages: list[dict] | None = None,
+        html: str | None = None,
+        product_detail: dict | None = None,
+        product_detail_404: bool = False,
+    ):
         self._pages = pages or []
         self._html = html
+        self._product_detail = product_detail
+        self._product_detail_404 = product_detail_404
         self.calls = 0
 
     def get(self, url, params=None, headers=None, timeout=None):
@@ -40,7 +54,11 @@ class FakeSession:
             page_num = params["page"]
             data = self._pages[page_num - 1] if page_num <= len(self._pages) else {"products": []}
             return FakeResponse(json_data=data)
-        return FakeResponse(text=self._html)
+        if url.endswith(".json"):
+            if self._product_detail_404:
+                return FakeResponse(status_code=404)
+            return FakeResponse(json_data={"product": self._product_detail or {}})
+        return FakeResponse(text=self._html or "")
 
 
 @pytest.fixture
@@ -91,18 +109,20 @@ def test_to_dict_includes_computed_properties(page1):
 def test_fetch_products_page_returns_raw_list(page1):
     session = FakeSession(pages=[page1])
     result = fetch_products_page(session, page=1)
-    assert len(result) == 4
+    assert len(result) == 5
 
 
 def test_harvest_all_stops_on_empty_page(page1):
     session = FakeSession(pages=[page1])  # page 2 onward returns {"products": []}
     products = harvest_all(session=session, rate_limit_sec=0, max_pages=5)
-    assert len(products) == 4
+    assert len(products) == 5
     assert all(isinstance(p, ZatuProduct) for p in products)
     assert session.calls == 2  # page 1 (hit), page 2 (empty, stops)
 
 
 def test_verify_gbp_currency_true_for_gbp_page():
+    # No product_detail configured -> per-product JSON has no price_currency field ->
+    # falls back to the proven meta-tag check.
     html = (FIXTURES / "product_page_gbp.html").read_text()
     session = FakeSession(html=html)
     assert verify_gbp_currency(session) is True
@@ -112,3 +132,64 @@ def test_verify_gbp_currency_false_for_usd_page():
     html = (FIXTURES / "product_page_usd.html").read_text()
     session = FakeSession(html=html)
     assert verify_gbp_currency(session) is False
+
+
+def test_verify_gbp_currency_prefers_json_field_when_present():
+    # If the per-product JSON does carry price_currency, use it without touching the HTML page.
+    detail = {"variants": [{"price_currency": "GBP"}]}
+    html = (FIXTURES / "product_page_usd.html").read_text()  # would fail if this were read
+    session = FakeSession(html=html, product_detail=detail)
+    assert verify_gbp_currency(session) is True
+
+
+def test_verify_gbp_currency_falls_back_when_detail_endpoint_404s():
+    html = (FIXTURES / "product_page_gbp.html").read_text()
+    session = FakeSession(html=html, product_detail_404=True)
+    assert verify_gbp_currency(session) is True
+
+
+def test_fetch_product_detail_unwraps_product_key():
+    session = FakeSession(product_detail={"handle": "manipulate", "variants": []})
+    detail = fetch_product_detail(session, "manipulate")
+    assert detail["handle"] == "manipulate"
+
+
+def test_fetch_product_ean_normalizes_upc_a_to_ean13():
+    # 12-digit UPC-A -> zero-padded to 13 digits.
+    session = FakeSession(product_detail={"variants": [{"barcode": "681706712456"}]})
+    assert fetch_product_ean(session, "brass-birmingham") == "0681706712456"
+
+
+def test_fetch_product_ean_passes_through_ean13():
+    session = FakeSession(product_detail={"variants": [{"barcode": "5060453690123"}]})
+    assert fetch_product_ean(session, "manipulate") == "5060453690123"
+
+
+def test_fetch_product_ean_none_when_no_barcode():
+    session = FakeSession(product_detail={"variants": [{"barcode": None}]})
+    assert fetch_product_ean(session, "gloomhaven-jaws-of-the-lion") is None
+
+
+@pytest.mark.parametrize(
+    "page_text,expected",
+    [
+        ("Buy now. 3+ in stock. Next day delivery.", "IN_STOCK"),
+        ("Sorry, this item is currently Out of Stock.", "OUT_OF_STOCK"),
+        ("Status: Back-Order — ships in 2 weeks.", "BACK_ORDER"),
+        ("Order in next 4 hours for Next Day Delivery.", "PREORDER"),
+        ("No recognizable status text here.", "UNKNOWN"),
+    ],
+)
+def test_fetch_stock_status_patterns(page_text, expected):
+    session = FakeSession(html=f"<html><body>{page_text}</body></html>")
+    assert fetch_stock_status(session, "manipulate") == expected
+
+
+def test_is_coop_and_is_party_tags(page1):
+    manipulate = parse_product(page1["products"][0])  # tags: Cooperative Play, Party Games
+    assert manipulate.is_coop is True
+    assert manipulate.is_party is True
+
+    brass = parse_product(page1["products"][3])  # tags: Strategy
+    assert brass.is_coop is False
+    assert brass.is_party is False

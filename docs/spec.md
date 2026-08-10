@@ -576,6 +576,24 @@ than the bulk JSON — likely for most products, not just the "minority" Stage 4
 Price itself is solid: spot-checked against a manual browser price (Spirit Island Core Game, £67) and
 matched exactly using the bare-path fix above.
 
+`tags` did turn out useful as a bonus signal, still not a substitute for BGG: `"cooperat"`/`"party"`
+case-insensitive substring matches hit 338/286 of the 4178 harvested products respectively.
+`product_type` is a clean field for light Stage 1 filtering — the harvest split as `Board Games`:
+4069, `Accessories`: 81, `Miniatures`: 11, `Books`: 10, `Puzzles`: 6, `Trading Card Games`: 1;
+`product_type == "Accessories"` is now an unambiguous drop (`filters.py`), the others are left for
+Stage 2 to gate since dropping them at Stage 1 would be a pure recall risk.
+
+**Still [VERIFY], not yet confirmed either way:** a per-product JSON endpoint
+(`https://zatu.com/products/<handle>.json`, singular `product` key — standard Shopify shape) may
+carry a populated `barcode` and/or a `price_currency` field on each variant where the bulk
+`/collections/.../products.json` returns `null`/nothing — this would be a meaningfully better EAN
+source than the bulk endpoint. `sources/zatu.py` has `fetch_product_detail`/`fetch_product_ean`
+built defensively for this (EAN normalized to EAN-13 via zero-pad for UPC-A, per Philibert's
+13-digit field), and `verify_gbp_currency` tries `price_currency` first before falling back to the
+proven `og:price:currency` meta-tag check — but neither claim has been checked from a network that
+can actually reach zatu.com yet. `scripts/probe_zatu_detail.py` (run via the `probe-zatu-detail`
+GitHub Actions workflow) exists to confirm this before Stage 4 is built out to rely on it.
+
 ### 11.2 BGG — representative `thing` response (schema per official docs, §0.1)
 
 ```xml

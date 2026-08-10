@@ -75,8 +75,22 @@ Stage 7  Static HTML output     sortable table, full result set, source links
   products) — `barcode` is `null` on every single variant, no exceptions, and so is
   `inventory_quantity`; `available` reports `true` for all 4178 products, which with no inventory
   number to cross-check is not a trustworthy stock signal. So Stage 2 matching has to run on title
-  (not EAN — that tier just won't fire), and real per-product availability will need Stage 4's
-  per-product page fetch (stock-status text, spec §11.1) for most products, not just a minority.
+  (not EAN — that tier just won't fire from the bulk endpoint), and real per-product availability
+  needs Stage 4's per-product page fetch (stock-status text, spec §11.1) for most products, not
+  just a minority. `sources/zatu.py` has Stage 4 building blocks ready for this — `fetch_product_detail`/
+  `fetch_product_ean` (per-product `/products/<handle>.json`) and `fetch_stock_status` (parses
+  `IN_STOCK`/`OUT_OF_STOCK`/`BACK_ORDER`/`PREORDER`/`UNKNOWN` from the rendered page text) — but
+  whether the per-product JSON actually populates `barcode`/`price_currency` where the bulk one
+  doesn't is still **[VERIFY]**, marked as such in the code; `scripts/probe_zatu_detail.py` +
+  the `probe-zatu-detail` workflow exist specifically to check this empirically before Stage 4 is
+  built out further. **Category filter**: `product_type` cleanly separates the catalogue
+  (`Board Games`: 4069, `Accessories`: 81, `Miniatures`/`Books`/`Puzzles`/`Trading Card Games`: 28
+  total) — `filters.py` now drops `product_type == "Accessories"` outright (zero ambiguity) but
+  leaves the other non-"Board Games" types alone, since Stage 2's BGG match is the real gate and
+  dropping them here would be a pure recall risk with no upside. **Coop/party**: `tags` substring
+  match (`"cooperat"` / `"party"`, case-insensitive) hits 338/286 of the 4178 products — exposed
+  as `ZatuProduct.is_coop`/`.is_party`, still a bonus signal per spec, not a substitute for BGG's
+  own mechanic data in Stage 3.
 - **Philibert**: PrestaShop, no bulk export — needs page fetches. EAN is in a labeled `EAN` field
   under "Fiche technique" (authoritative) and often in the URL (`...-<ean13>.html`, fast
   pre-filter). `Langue(s)` field is the primary FR-language signal. Ignore `product.oos` /

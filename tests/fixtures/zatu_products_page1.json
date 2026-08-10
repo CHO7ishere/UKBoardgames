@@ -93,6 +93,27 @@
         }
       ],
       "images": []
+    },
+    {
+      "id": 1234567894,
+      "title": "Wooden Meeple Set - Rainbow",
+      "handle": "wooden-meeple-set",
+      "product_type": "Accessories",
+      "vendor": "Zatu",
+      "tags": [],
+      "variants": [
+        {
+          "id": 987654326,
+          "title": "Default Title",
+          "sku": "ZAT-MEEPLE-RBW",
+          "barcode": null,
+          "price": "6.99",
+          "compare_at_price": null,
+          "available": true,
+          "inventory_quantity": 20
+        }
+      ],
+      "images": []
     }
   ]
 }

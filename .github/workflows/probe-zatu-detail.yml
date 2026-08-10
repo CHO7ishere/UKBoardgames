@@ -1,0 +1,20 @@
+name: Probe Zatu per-product detail (diagnostic)
+
+# One-off diagnostic, not part of the production pipeline: prints the raw per-product JSON for a
+# few sample handles so we can confirm/refute, from a network that can reach zatu.com, whether
+# /products/<handle>.json carries fields the bulk collection endpoint doesn't (see the [VERIFY]
+# notes in sources/zatu.py). Read the results in the job log — nothing is committed.
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - run: python scripts/probe_zatu_detail.py
