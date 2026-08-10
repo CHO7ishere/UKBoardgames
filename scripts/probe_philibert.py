@@ -1,18 +1,19 @@
 #!/usr/bin/env python3
 """One-off diagnostic: probe Philibert's real site behavior before building Stage 5 for real.
 
-Spec (docs/spec.md §0.3/§11.3) only confirmed ONE direct product-page fetch live — the search
-endpoint was never tested, and the exact "out of stock" wording for a primary product was never
-observed. Round 1 (guessed search URL patterns) all 404/500'd — this round discovers the real
-search form directly from the homepage HTML instead of guessing further. Not part of the
-production pipeline; run manually via the probe-philibert workflow, read the job log.
+Round 3. Round 1 (guessed search URLs) all 404/500'd. Round 2 (discover the search <form> from
+the homepage) found no form matching a "name/type contains 'search'" heuristic — the header
+search may be JS-driven. This round dumps every homepage form unconditionally (so a human/LLM
+can pick the right one by eye) and checks two alternative discovery paths: sitemap.xml (would
+give a Zatu-Stage-0-style bulk URL list) and the known board-games category page (spec §0.3's
+"/fr/50-jeux-de-societe" root), in case search genuinely isn't reachable without a browser.
+Not part of the production pipeline; run manually via the probe-philibert workflow.
 """
 
 from __future__ import annotations
 
 import sys
 from pathlib import Path
-from urllib.parse import urljoin
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
@@ -23,8 +24,6 @@ BASE_URL = "https://www.philibertnet.com"
 USER_AGENT = "UKBoardgamesAdvisor/1.0 (personal one-off tool; contact: mdeygout@gmail.com)"
 
 KNOWN_PRODUCT_URL = f"{BASE_URL}/fr/iello/171597-athletes-de-compete-3701551706461.html"
-KNOWN_PRODUCT_EAN = "3701551706461"
-SEARCH_QUERY = "Catan"
 
 
 def make_session() -> requests.Session:
@@ -33,123 +32,83 @@ def make_session() -> requests.Session:
     return session
 
 
-def probe_known_product_structure(session: requests.Session) -> None:
-    print("\n=== Known product page: real DOM structure around EAN/stock ===", file=sys.stderr)
+def probe_known_product_features(session: requests.Session) -> None:
+    print("\n=== Known product page: full product-features table ===", file=sys.stderr)
     resp = session.get(KNOWN_PRODUCT_URL, timeout=30)
     print(f"status={resp.status_code}", file=sys.stderr)
     if resp.status_code != 200:
         return
     soup = BeautifulSoup(resp.text, "lxml")
-
-    # Find whichever element's own text contains "EAN" and print its tag chain, so a real
-    # parser can target it structurally instead of via a fragile text-offset guess.
-    ean_label = soup.find(string=lambda s: s and s.strip() == "EAN")
-    if ean_label:
-        parent = ean_label.parent
-        print(f"EAN label tag: <{parent.name} class={parent.get('class')}>", file=sys.stderr)
-        container = parent.parent
-        print(f"EAN container tag: <{container.name} class={container.get('class')}>", file=sys.stderr)
-        print(f"EAN container text: {container.get_text(' | ', strip=True)[:300]}", file=sys.stderr)
-    else:
-        print("No standalone 'EAN' text node found — trying substring search.", file=sys.stderr)
-        for tag in soup.find_all(string=lambda s: s and "EAN" in s):
-            print(f"  substring hit in <{tag.parent.name}>: {tag.strip()[:100]!r}", file=sys.stderr)
-
-    langue_label = soup.find(string=lambda s: s and "Langue" in s)
-    if langue_label:
-        print(f"Langue(s) context: {langue_label.parent.get_text(' | ', strip=True)[:200]}", file=sys.stderr)
-
-    # All occurrences of "Indisponible" with surrounding context, to tell a real stock signal
-    # from leaked cross-sell-widget template text (spec §0.3 already flags this risk class).
-    full_text = soup.get_text(" ", strip=True)
-    start = 0
-    hits = 0
-    while True:
-        idx = full_text.find("Indisponible", start)
-        if idx == -1 or hits >= 5:
-            break
-        print(f"'Indisponible' context: ...{full_text[max(0,idx-80):idx+80]}...", file=sys.stderr)
-        start = idx + 1
-        hits += 1
-
-    price_tag = soup.find(string=lambda s: s and "€" in s)
-    print(f"first '€' text node: {price_tag.strip() if price_tag else None!r}", file=sys.stderr)
+    items = soup.select("li.product-features__item")
+    print(f"product-features__item count: {len(items)}", file=sys.stderr)
+    for item in items:
+        label = item.select_one(".product-features__name")
+        label_text = label.get_text(strip=True) if label else None
+        full_text = item.get_text(" | ", strip=True)
+        print(f"  [{label_text}] -> {full_text}", file=sys.stderr)
 
 
-def discover_search_form(session: requests.Session) -> tuple[str, str, dict] | None:
-    """Fetch the homepage and find the real search form: action URL, method, and param names
-    (including hidden fields) — more reliable than guessing PrestaShop's route conventions."""
-    print("\n=== Discovering the real search form from the homepage ===", file=sys.stderr)
+def dump_all_homepage_forms(session: requests.Session) -> None:
+    print("\n=== Every <form> on the homepage (unfiltered) ===", file=sys.stderr)
     resp = session.get(f"{BASE_URL}/", timeout=30)
     print(f"homepage status={resp.status_code}", file=sys.stderr)
     if resp.status_code != 200:
-        return None
+        return
     soup = BeautifulSoup(resp.text, "lxml")
+    forms = soup.find_all("form")
+    print(f"form count: {len(forms)}", file=sys.stderr)
+    for i, form in enumerate(forms):
+        action = form.get("action")
+        method = form.get("method")
+        inputs = [
+            {"name": inp.get("name"), "type": inp.get("type"), "placeholder": inp.get("placeholder")}
+            for inp in form.find_all("input")
+        ]
+        print(f"form[{i}] action={action!r} method={method!r} id={form.get('id')!r} "
+              f"class={form.get('class')!r}", file=sys.stderr)
+        print(f"  inputs: {inputs}", file=sys.stderr)
 
-    candidates = []
-    for form in soup.find_all("form"):
-        inputs = form.find_all("input")
-        search_input = None
-        for inp in inputs:
-            name = (inp.get("name") or "").lower()
-            itype = (inp.get("type") or "").lower()
-            if "search" in name or itype == "search":
-                search_input = inp
-                break
-        if search_input:
-            candidates.append((form, search_input))
-
-    if not candidates:
-        print("No <form> with a search-like <input> found on the homepage.", file=sys.stderr)
-        return None
-
-    form, search_input = candidates[0]
-    action = form.get("action") or f"{BASE_URL}/"
-    action = urljoin(f"{BASE_URL}/", action)
-    method = (form.get("method") or "get").lower()
-    params = {}
-    for inp in form.find_all("input"):
-        name = inp.get("name")
-        if not name:
-            continue
-        params[name] = inp.get("value", "")
-    search_field_name = search_input.get("name")
-    print(f"form action={action} method={method} fields={list(params.keys())}", file=sys.stderr)
-    print(f"search field name={search_field_name!r}", file=sys.stderr)
-    return action, search_field_name, params
+    # Also look for any element hinting at a search widget even outside a <form> (JS-driven
+    # header search bars often keep a bare <input> the JS wires up on submit/keypress).
+    search_inputs = soup.select('input[type="search"], input[placeholder*="ech" i], input[name*="search" i], input[name="s"]')
+    print(f"\nstandalone search-like <input> candidates (any container): {len(search_inputs)}", file=sys.stderr)
+    for inp in search_inputs[:5]:
+        print(f"  {inp}", file=sys.stderr)
 
 
-def probe_search_with_discovered_form(
-    session: requests.Session, action: str, field_name: str, base_params: dict
-) -> list[str]:
-    print("\n=== Trying discovered search form with a real query ===", file=sys.stderr)
-    params = dict(base_params)
-    params[field_name] = SEARCH_QUERY
-    resp = session.get(action, params=params, timeout=30)
-    print(f"GET {resp.url} -> status={resp.status_code}", file=sys.stderr)
+def probe_sitemap(session: requests.Session) -> None:
+    print("\n=== sitemap.xml ===", file=sys.stderr)
+    for path in ["/sitemap.xml", "/sitemap_index.xml", "/modules/prestashopsitemap/sitemap.xml"]:
+        resp = session.get(f"{BASE_URL}{path}", timeout=30)
+        print(f"{path} -> status={resp.status_code} content-type={resp.headers.get('Content-Type')} "
+              f"len={len(resp.content)}", file=sys.stderr)
+        if resp.status_code == 200 and len(resp.content) > 0:
+            print(f"  first 500 chars: {resp.text[:500]}", file=sys.stderr)
+
+
+def probe_category_page(session: requests.Session) -> None:
+    print("\n=== Known category page (spec §0.3: /fr/50-jeux-de-societe) ===", file=sys.stderr)
+    resp = session.get(f"{BASE_URL}/fr/50-jeux-de-societe", timeout=30)
+    print(f"status={resp.status_code} final_url={resp.url}", file=sys.stderr)
     if resp.status_code != 200:
-        return []
+        return
     soup = BeautifulSoup(resp.text, "lxml")
     product_links = [a.get("href") for a in soup.select('a[href*=".html"]') if a.get("href")]
     unique_links = list(dict.fromkeys(product_links))
     print(f"product_link_count={len(unique_links)}", file=sys.stderr)
     print(f"sample: {unique_links[:8]}", file=sys.stderr)
-    return unique_links
+    # look for pagination hints
+    pagination = soup.select('[class*="pagination" i] a')
+    print(f"pagination link count: {len(pagination)}", file=sys.stderr)
+    print(f"pagination hrefs: {[a.get('href') for a in pagination[:10]]}", file=sys.stderr)
 
 
 def main() -> int:
     session = make_session()
-    probe_known_product_structure(session)
-    form_info = discover_search_form(session)
-    if form_info:
-        action, field_name, params = form_info
-        if field_name:
-            probe_search_with_discovered_form(session, action, field_name, params)
-        else:
-            print("Found a form but couldn't identify the search field name.", file=sys.stderr)
-    else:
-        print("\nCould not discover a search form — Stage 5 may need a different discovery "
-              "path (category browsing, sitemap, or an external aggregator).", file=sys.stderr)
+    probe_known_product_features(session)
+    dump_all_homepage_forms(session)
+    probe_sitemap(session)
+    probe_category_page(session)
     return 0
 
 
