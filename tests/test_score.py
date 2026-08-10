@@ -1,7 +1,18 @@
 import pytest
 
-from score import evaluate_quality, quality_label, quality_points, shrunk_rating
+from score import (
+    composite_score,
+    evaluate_quality,
+    genre_points,
+    language_points,
+    quality_label,
+    quality_points,
+    shrunk_rating,
+)
 from sources.bgg import BggRankedGame
+
+GENRE_WEIGHTS = {"coop": 12, "party": 12}
+LANGUAGE_WEIGHTS = {"low": 10, "med": 0, "high": -15, "unknown": -3}
 
 
 def _game(average, usersrated):
@@ -75,3 +86,52 @@ def test_evaluate_quality_fails_gate_on_low_votes_even_with_high_rating():
 )
 def test_quality_label_bands(average, usersrated, expected):
     assert quality_label(average, usersrated) == expected
+
+
+# --- genre_points --------------------------------------------------------------------------
+
+
+def test_genre_points_coop_and_party_stack():
+    assert genre_points(is_coop=True, is_party=True, weights=GENRE_WEIGHTS) == 24
+
+
+def test_genre_points_coop_only():
+    assert genre_points(is_coop=True, is_party=False, weights=GENRE_WEIGHTS) == 12
+
+
+def test_genre_points_neither():
+    assert genre_points(is_coop=False, is_party=False, weights=GENRE_WEIGHTS) == 0
+
+
+def test_genre_points_unknown_is_not_a_penalty():
+    # None (signal unavailable) must score the same as False, not a negative.
+    assert genre_points(is_coop=None, is_party=None, weights=GENRE_WEIGHTS) == 0
+
+
+# --- language_points ------------------------------------------------------------------------
+
+
+@pytest.mark.parametrize(
+    "level,expected_pts,expected_unknown",
+    [
+        ("LOW", 10, False),
+        ("MED", 0, False),
+        ("HIGH", -15, False),
+        (None, -3, True),
+    ],
+)
+def test_language_points(level, expected_pts, expected_unknown):
+    pts, is_unknown = language_points(level, weights=LANGUAGE_WEIGHTS)
+    assert pts == expected_pts
+    assert is_unknown is expected_unknown
+
+
+# --- composite_score -------------------------------------------------------------------------
+
+
+def test_composite_score_sums_all_four_components():
+    assert composite_score(advantage_pts=40, quality_pts=45, genre_pts=24, language_pts=10) == 119
+
+
+def test_composite_score_handles_negative_language_penalty():
+    assert composite_score(advantage_pts=28, quality_pts=18.38, genre_pts=0, language_pts=-3) == pytest.approx(43.38)

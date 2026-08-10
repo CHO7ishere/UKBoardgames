@@ -197,12 +197,14 @@ live in one YAML config (docs/spec.md §10) — re-scoring never needs re-scrapi
    **Still blocked on the token — skipped ahead to Stage 5 instead of waiting (see below); start
    with the public-game-page HTML fallback (spec §0.1/§3 Stage 3) whenever it's picked back up.**
 4. Philibert adapter (EAN first, title fallback). **Built and run for real — see the Stage 5
-   section below. 201-game shortlist in `data/shortlist.json`.**
-5. Fill any Zatu detail gaps, then HTML render. **Next up for v1** — spec §6/§7: a single static
-   HTML file, sortable table, no fixed cutoff. `data/shortlist.json` already has everything
-   needed except the final composite score (Stage 6 proper — advantage + quality + genre +
-   language) and BGG-derived genre/language columns (blocked on Stage 3, same token wait as
-   above; `zatu_is_coop`/`zatu_is_party` can stand in as a bonus signal per spec until then).
+   section below. 174-game shortlist in `data/shortlist.json`** (after the matching-accuracy
+   fixes documented there — was 201 before them).
+5. Fill any Zatu detail gaps, then HTML render. **Done — v1 complete.** See the Stage 6/7 section
+   below: `docs/index.html` is the live static report, 174 games, generated from real data.
+   Composite score = advantage + quality + genre + language per spec §5, with two known gaps
+   (documented in that section) rather than blockers: genre bonus scores 0 for everyone (the
+   committed Zatu harvest predates the `is_coop`/`is_party` fields), and language is
+   unconditionally `UNKNOWN` (Stage 3/BGG enrich is still blocked on the token).
 
 **Noted for later, not blocking v1**: localisation — this tool and its output are currently
 English/GBP-only (Zatu's UI, our column labels, French text only appears as raw Philibert data
@@ -301,3 +303,57 @@ via GitHub Actions (`.github/workflows/lookup-philibert.yml`) on 2026-08-10 — 
   desired is a genuine judgement call, not a defect — user's framing ("for simplicity sake we can
   consider this as available") suggests accepting it, but this hasn't been explicitly confirmed
   either way and no code change was made for it.
+
+## Stage 6/7 — composite scoring + static HTML report (done, v1 complete)
+
+`score.py` (extended with `genre_points`/`language_points`/`composite_score`, spec §5.3-5.4),
+`scripts/score_games.py` (Stage 6 driver: `data/shortlist.json` → `data/scored_games.json`,
+sorted by composite score descending), `render.py` + `templates/report.html.jinja2` (Stage 7),
+`scripts/render_html.py` (driver: `data/scored_games.json` → `docs/index.html`). Both stages are
+pure offline computation over already-fetched JSON — no network calls, so unlike Stages 0/3/4/5
+they were built *and run* directly in this coding sandbox, verified live with Playwright
+(sort-by-column, filter-by-title, and the CHEAPER_UK/UNAVAILABLE_FR row rendering all confirmed
+working against the real 174-game shortlist before committing) rather than needing a GitHub
+Actions round-trip. 16 new tests (`tests/test_score.py`'s genre/language/composite cases,
+`tests/test_score_games_script.py`, `tests/test_render.py`, `tests/test_render_html_script.py`) —
+143 total passing.
+
+- **Self-contained by design, deviating from spec §7's DataTables/Alpine suggestion**: the sort
+  (click a column header) and filter (title search box) are both plain inline vanilla JS with no
+  CDN dependency, since spec §6 itself calls for "a single self-contained file" and a CDN script
+  tag would make the page depend on internet access to render correctly even though it's a static
+  file. `tests/test_render.py` asserts no `<script src=...>`/`<link href=...>` at all, and that
+  every in-page link only ever points at zatu.com/boardgamegeek.com/philibertnet.com.
+- **Wired into `.github/workflows/lookup-philibert.yml`** as two more steps after Stage 5, so a
+  live Philibert re-run always regenerates and commits `data/scored_games.json` +
+  `docs/index.html` together with the shortlist — never lets the rendered report drift out of
+  sync with the data it's supposed to reflect.
+- **`docs/index.html` is GitHub Pages-ready** (a repo's `/docs` folder on the default branch
+  needs zero extra config to serve) but Pages itself hasn't been enabled on the repo — that's a
+  one-time manual step in the repo's Settings → Pages, not something this session can do.
+- **Two known, documented gaps, not blockers** (both flagged inline in the rendered page too):
+  - **Genre bonus scores 0 for every game right now.** `genre_points()` reads
+    `zatu_is_coop`/`zatu_is_party`, but the *committed* `data/zatu_products.json` harvest predates
+    `ZatuProduct.to_dict()` gaining those fields (confirmed: `is_coop`/`is_party` keys are
+    entirely absent from the committed file, not just false) — every record's value is `None`,
+    which `genre_points()` correctly treats as "no bonus" rather than a penalty, so this degrades
+    gracefully rather than mis-scoring anything. Fix path when it's worth the ~50min GitHub
+    Actions round-trip: re-run `harvest-zatu.yml`, re-run `scripts/match_bgg.py` (offline, safe
+    here, ~2m15s) to regenerate `matched_games.json` with the fields populated, then re-run
+    `lookup-philibert.yml` (now also re-runs Stage 6/7 automatically, see above).
+  - **Language dependence is unconditionally `UNKNOWN` (-3 pts, `UNKNOWN_LANG` flag on every
+    row)** — same root cause as Stage 5's `UNAVAILABLE_FR`/`UNAVAILABLE_FR?` gap: Stage 3 (BGG
+    enrich) is still blocked on the BGG token. `language_points()` is written generically against
+    a `"LOW"`/`"MED"`/`"HIGH"`/`None` level so it's ready to pick up real values the moment Stage
+    3 lands, no signature change needed.
+- **Not built**: the `results.csv`/`dropped.csv`/`run_metadata.json` sidecar files spec §6
+  mentions (`dropped.csv` already exists from Stage 2, independently). `docs/index.html`'s own
+  header line (generated timestamp, FX rate, discount threshold, harvest/survivor counts) covers
+  the `run_metadata.json` content inline instead; a separate `results.csv` export would be
+  redundant with `data/scored_games.json`, which already has everything in the same shape. Low
+  priority for a one-off personal tool — worth adding only if CSV import into something else
+  becomes an actual need.
+- **PREORDER/VARIANT_EDITION flags aren't detected** (spec §6's flag badge list) — no upstream
+  stage currently captures a preorder-wording signal or a deluxe/Kickstarter-vs-retail SKU
+  signal, so there's nothing for `build_flags()` to read yet. `NEEDS_EYEBALL` and `UNKNOWN_LANG`
+  (spec's other two) are both live.

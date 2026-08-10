@@ -1,6 +1,7 @@
-"""Stage 2 quality gate + score (docs/spec.md §5.1). Shrinks the raw BGG rating toward a
-neutral prior so vote count is a continuous signal rather than a hard switch — a game with few
-votes is automatically scored more cautiously, no separate rule needed.
+"""Stage 2 quality gate + score (docs/spec.md §5.1), plus Stage 6's genre/language/composite
+scoring (§5.3-5.4). Shrinks the raw BGG rating toward a neutral prior so vote count is a
+continuous signal rather than a hard switch — a game with few votes is automatically scored more
+cautiously, no separate rule needed.
 """
 
 from __future__ import annotations
@@ -60,3 +61,35 @@ def evaluate_quality(
         passes_gate=passes,
         label=quality_label(average, usersrated),
     )
+
+
+def genre_points(is_coop: bool | None, is_party: bool | None, weights: dict) -> float:
+    """Spec §5.3: coop and party bonuses stack. `None` (unknown, e.g. the Zatu tag signal wasn't
+    available for this product) is treated the same as False — no bonus, not a penalty."""
+    pts = 0.0
+    if is_coop:
+        pts += weights["coop"]
+    if is_party:
+        pts += weights["party"]
+    return pts
+
+
+def language_points(level: str | None, weights: dict) -> tuple[float, bool]:
+    """Spec §5.4: `level` is "LOW" (1-2), "MED" (3), "HIGH" (4-5), or None when unknown (no BGG
+    language-dependence data yet — Stage 3 is blocked on the BGG token). Returns
+    `(points, is_unknown)`; `is_unknown` drives the `UNKNOWN_LANG` flag badge in the Stage 7
+    render, spec §6."""
+    if level == "LOW":
+        return weights["low"], False
+    if level == "MED":
+        return weights["med"], False
+    if level == "HIGH":
+        return weights["high"], False
+    return weights["unknown"], True
+
+
+def composite_score(
+    advantage_pts: float, quality_pts: float, genre_pts: float, language_pts: float
+) -> float:
+    """Spec §5: composite = advantage + quality + genre + language."""
+    return advantage_pts + quality_pts + genre_pts + language_pts

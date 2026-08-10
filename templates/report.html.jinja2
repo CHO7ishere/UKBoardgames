@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Buy in the UK? — Board Games Advisor</title>
+<style>
+  :root {
+    --bg: #f7f7f5;
+    --panel: #ffffff;
+    --border: #e2e0da;
+    --text: #24211c;
+    --text-dim: #6b6559;
+    --link: #1a5276;
+    --unavailable: #2e7d32;
+    --outofstock: #b8860b;
+    --cheaper: #1565c0;
+    --flag-bg: #fdecea;
+    --flag-text: #b71c1c;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 2rem 1.5rem 4rem;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  h1 { margin: 0 0 0.25rem; font-size: 1.6rem; }
+  .subtitle { color: var(--text-dim); margin: 0 0 1.25rem; font-size: 0.95rem; }
+  .meta { color: var(--text-dim); font-size: 0.85rem; margin-bottom: 1.5rem; }
+  .controls {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+  }
+  #filter {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    min-width: 240px;
+    background: var(--panel);
+    color: var(--text);
+  }
+  #result-count { font-size: 0.9rem; color: var(--text-dim); }
+  .table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--panel);
+  }
+  table { border-collapse: collapse; width: 100%; min-width: 1100px; }
+  thead th {
+    position: sticky;
+    top: 0;
+    background: var(--panel);
+    border-bottom: 2px solid var(--border);
+    text-align: left;
+    padding: 0.6rem 0.75rem;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    color: var(--text-dim);
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+  }
+  thead th:hover { color: var(--text); }
+  thead th.sorted::after { content: " " attr(data-arrow); }
+  tbody td {
+    padding: 0.6rem 0.75rem;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.88rem;
+    vertical-align: top;
+  }
+  tbody tr:hover { background: #fafaf7; }
+  tbody tr { border-left: 4px solid transparent; }
+  tbody tr.adv-unavailable { border-left-color: var(--unavailable); }
+  tbody tr.adv-outofstock { border-left-color: var(--outofstock); }
+  tbody tr.adv-cheaper { border-left-color: var(--cheaper); }
+  .game-title { font-weight: 600; }
+  .why { color: var(--text-dim); font-size: 0.82rem; margin-top: 0.2rem; }
+  .score { font-weight: 700; font-variant-numeric: tabular-nums; }
+  .advantage-badge {
+    display: inline-block;
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #fff;
+  }
+  .adv-unavailable .advantage-badge { background: var(--unavailable); }
+  .adv-outofstock .advantage-badge { background: var(--outofstock); }
+  .adv-cheaper .advantage-badge { background: var(--cheaper); }
+  .flag-badge {
+    display: inline-block;
+    padding: 0.1rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.72rem;
+    background: var(--flag-bg);
+    color: var(--flag-text);
+    margin-right: 0.25rem;
+  }
+  .links a { margin-right: 0.6rem; font-size: 0.82rem; color: var(--link); text-decoration: none; }
+  .links a:hover { text-decoration: underline; }
+  .links .search-link { font-style: italic; }
+  .num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+  footer { margin-top: 2rem; color: var(--text-dim); font-size: 0.8rem; }
+  tr.hidden-row { display: none; }
+</style>
+</head>
+<body>
+  <h1>Buy in the UK? — Board Games Advisor</h1>
+  <p class="subtitle">Every game from Zatu's catalogue that passed the BGG quality gate and has a genuine UK-vs-France advantage. Default sort: composite score, highest first.</p>
+  <p class="meta">
+    Generated {{ meta.generated_at }} · FX {{ meta.fx_gbp_eur }} GBP→EUR · discount threshold {{ (meta.discount_threshold * 100) | round(0) }}%
+    {% if meta.zatu_products_count %} · {{ meta.zatu_products_count }} Zatu products harvested{% endif %}
+    {% if meta.stage2_survivors_count %} · {{ meta.stage2_survivors_count }} passed quality gate{% endif %}
+  </p>
+
+  <div class="controls">
+    <input id="filter" type="search" placeholder="Filter by title…" autocomplete="off">
+    <span id="result-count">{{ games | length }} games matched your criteria</span>
+  </div>
+
+  <div class="table-wrap">
+    <table id="games-table">
+      <thead>
+        <tr>
+          <th data-key="composite_score" data-type="num">Score</th>
+          <th data-key="zatu_title" data-type="str">Game</th>
+          <th data-key="advantage_verdict" data-type="str">Advantage</th>
+          <th data-key="quality_shrunk" data-type="num">Quality</th>
+          <th data-key="zatu_price_gbp" data-type="num">GBP</th>
+          <th data-key="philibert_price_eur" data-type="num">EUR</th>
+          <th data-key="discount_pct" data-type="num">Discount</th>
+          <th data-key="match_confidence" data-type="str">Match</th>
+          <th data-key="flags_text" data-type="str">Flags</th>
+          <th data-key="links" data-type="none">Links</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for game in games %}
+        <tr class="{{ game.advantage_css_class }}"
+            data-composite_score="{{ game.composite_score }}"
+            data-zatu_title="{{ game.zatu_title | lower }}"
+            data-advantage_verdict="{{ game.advantage_verdict }}"
+            data-quality_shrunk="{{ game.quality_shrunk }}"
+            data-zatu_price_gbp="{{ game.zatu_price_gbp if game.zatu_price_gbp is not none else '' }}"
+            data-philibert_price_eur="{{ game.philibert_price_eur if game.philibert_price_eur is not none else '' }}"
+            data-discount_pct="{{ game.discount_pct if game.discount_pct is not none else '' }}"
+            data-match_confidence="{{ game.match_confidence }}"
+            data-flags_text="{{ game.flags | join(',') }}"
+            data-filter-text="{{ game.zatu_title | lower }}">
+          <td class="score num">{{ "%.1f" | format(game.composite_score) }}</td>
+          <td>
+            <div class="game-title">{{ game.zatu_title }}{% if game.bgg_year %} <span class="num">({{ game.bgg_year }})</span>{% endif %}</div>
+            <div class="why">{{ game.why }}</div>
+          </td>
+          <td><span class="advantage-badge">{{ game.advantage_verdict }}</span></td>
+          <td>
+            {{ game.quality_label }}<br>
+            <span class="num">{{ "%.2f" | format(game.quality_shrunk) }} shrunk · {{ "%.2f" | format(game.bgg_average) }} raw · {{ "{:,}".format(game.bgg_usersrated) }} votes</span>
+          </td>
+          <td class="num">{% if game.zatu_price_gbp is not none %}£{{ "%.2f" | format(game.zatu_price_gbp) }}{% else %}—{% endif %}</td>
+          <td class="num">{% if game.philibert_price_eur is not none %}€{{ "%.2f" | format(game.philibert_price_eur) }}{% else %}—{% endif %}</td>
+          <td class="num">{% if game.discount_pct is not none %}{{ (game.discount_pct * 100) | round(0) | int }}%{% else %}—{% endif %}</td>
+          <td>{{ game.match_confidence }}</td>
+          <td>
+            {% for flag in game.flags %}<span class="flag-badge">{{ flag }}</span>{% endfor %}
+          </td>
+          <td class="links">
+            <a href="https://boardgamegeek.com/boardgame/{{ game.bgg_id }}" target="_blank" rel="noopener">BGG</a>
+            <a href="{{ game.zatu_url }}" target="_blank" rel="noopener">Zatu</a>
+            <a class="{{ 'search-link' if game.philibert_link_is_search else '' }}" href="{{ game.philibert_link_url }}" target="_blank" rel="noopener">Philibert{% if game.philibert_link_is_search %} (search){% endif %}</a>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <footer>
+    Zatu is the universe: a game not sold by Zatu is out of scope. Ambiguous BGG/Philibert matches are dropped, not guessed.
+    Language dependence isn't scored yet (BGG enrich, Stage 3, is pending) — every row currently carries the conservative UNKNOWN_LANG flag.
+    Treat this as a shortlist to verify on arrival, not a guarantee.
+  </footer>
+
+<script>
+(function () {
+  var table = document.getElementById('games-table');
+  var tbody = table.querySelector('tbody');
+  var rows = Array.prototype.slice.call(tbody.querySelectorAll('tr'));
+  var headers = table.querySelectorAll('thead th');
+  var currentSort = { key: 'composite_score', dir: -1 };
+
+  function sortRows(key, type, dir) {
+    rows.sort(function (a, b) {
+      var av = a.dataset[key];
+      var bv = b.dataset[key];
+      if (type === 'num') {
+        av = av === '' ? -Infinity : parseFloat(av);
+        bv = bv === '' ? -Infinity : parseFloat(bv);
+        return (av - bv) * dir;
+      }
+      av = (av || '').toString();
+      bv = (bv || '').toString();
+      return av.localeCompare(bv) * dir;
+    });
+    rows.forEach(function (row) { tbody.appendChild(row); });
+  }
+
+  headers.forEach(function (th) {
+    var key = th.dataset.key;
+    var type = th.dataset.type;
+    if (type === 'none') return;
+    th.addEventListener('click', function () {
+      var dir = (currentSort.key === key && currentSort.dir === -1) ? 1 : -1;
+      currentSort = { key: key, dir: dir };
+      headers.forEach(function (h) { h.classList.remove('sorted'); h.removeAttribute('data-arrow'); });
+      th.classList.add('sorted');
+      th.setAttribute('data-arrow', dir === 1 ? '▲' : '▼');
+      sortRows(key, type, dir);
+    });
+  });
+
+  // Initial sort: composite score, descending.
+  sortRows('composite_score', 'num', -1);
+  var scoreHeader = table.querySelector('th[data-key="composite_score"]');
+  scoreHeader.classList.add('sorted');
+  scoreHeader.setAttribute('data-arrow', '▼');
+
+  var filterInput = document.getElementById('filter');
+  var resultCount = document.getElementById('result-count');
+  filterInput.addEventListener('input', function () {
+    var needle = filterInput.value.trim().toLowerCase();
+    var visible = 0;
+    rows.forEach(function (row) {
+      var match = row.dataset.filterText.indexOf(needle) !== -1;
+      row.classList.toggle('hidden-row', !match);
+      if (match) visible++;
+    });
+    resultCount.textContent = visible + ' games matched your criteria';
+  });
+})();
+</script>
+</body>
+</html>
