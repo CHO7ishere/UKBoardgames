@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """One-off diagnostic: probe Philibert's real site behavior before building Stage 5 for real.
 
-Round 6. The user supplied a real, working search URL from their own browser:
-https://www.philibertnet.com/fr/recherche?search_query=spirit%20island — the param is
-`search_query`, not `s` (round 4's guess). Confirms this before Stage 5 is built against it, and
-checks the result markup structure (how to reliably find product links + how a no-results page
-looks, to distinguish NOT_LISTED from a parsing failure). Not part of the production pipeline;
-run manually via the probe-philibert workflow.
+Round 7 (final confirmation). Round 6 confirmed /fr/recherche?search_query=<q> is real and
+works: EAN search for a real EAN returned exactly 1 correct link; a garbage TEXT query returned
+46 unrelated links (query-relaxation fallback, not a clean "no results"), so link-count alone
+can't signal NOT_LISTED. This round checks whether a garbage EAN-SHAPED query (13 digits, not a
+real EAN) behaves the same way or cleanly returns nothing — needed to design a reliable
+NOT_LISTED check for Stage 5. Not part of the production pipeline; run via the probe-philibert
+workflow.
 """
 
 from __future__ import annotations
@@ -22,9 +23,6 @@ from bs4 import BeautifulSoup  # noqa: E402
 BASE_URL = "https://www.philibertnet.com"
 USER_AGENT = "UKBoardgamesAdvisor/1.0 (personal one-off tool; contact: mdeygout@gmail.com)"
 
-KNOWN_PRODUCT_EAN = "3701551706461"
-KNOWN_PRODUCT_TITLE = "Athlètes de Compète"
-
 
 def make_session() -> requests.Session:
     session = requests.Session()
@@ -35,36 +33,32 @@ def make_session() -> requests.Session:
 def search(session: requests.Session, query: str, label: str) -> None:
     url = f"{BASE_URL}/fr/recherche"
     resp = session.get(url, params={"search_query": query}, timeout=30)
-    print(f"\n=== [{label}] search_query={query!r} ===", file=sys.stderr)
-    print(f"GET {resp.url} -> status={resp.status_code}", file=sys.stderr)
     soup = BeautifulSoup(resp.text, "lxml")
-
-    # Try to find a dedicated product-listing container first (more reliable than "any .html
-    # link on the page", which also catches header/footer/nav links).
-    product_containers = soup.select(
-        '[class*="product" i][class*="miniature" i], article[class*="product" i], '
-        '[class*="js-product" i], [data-id-product]'
-    )
-    print(f"product-ish container count: {len(product_containers)}", file=sys.stderr)
-
-    all_links = [a.get("href") for a in soup.select('a[href*=".html"]') if a.get("href")]
-    unique_links = list(dict.fromkeys(all_links))
-    print(f"total .html link count: {len(unique_links)}", file=sys.stderr)
-    print(f"sample: {unique_links[:8]}", file=sys.stderr)
-
-    # "no results" phrasing, if any.
+    links = list(dict.fromkeys(a.get("href") for a in soup.select('a[href*=".html"]') if a.get("href")))
     text = soup.get_text(" ", strip=True)
-    for phrase in ["Aucun résultat", "aucun résultat", "0 résultat", "Aucun produit"]:
+    no_results_hit = None
+    for phrase in ["Aucun résultat", "aucun résultat", "0 résultat", "Aucun produit",
+                   "ne correspond", "n'a donné aucun résultat"]:
         if phrase in text:
-            print(f"no-results phrase found: {phrase!r}", file=sys.stderr)
+            no_results_hit = phrase
+            break
+    print(f"=== [{label}] search_query={query!r} ===", file=sys.stderr)
+    print(f"status={resp.status_code} link_count={len(links)} no_results_phrase={no_results_hit!r}",
+          file=sys.stderr)
+    if links:
+        print(f"  sample: {links[:5]}", file=sys.stderr)
+    # Print a chunk of text near any "résultat" mention for exact wording.
+    idx = text.lower().find("résultat")
+    if idx >= 0:
+        print(f"  'résultat' context: ...{text[max(0,idx-100):idx+100]}...", file=sys.stderr)
+    print(file=sys.stderr)
 
 
 def main() -> int:
     session = make_session()
-    search(session, "spirit island", "user-confirmed example")
-    search(session, KNOWN_PRODUCT_EAN, "known product's real EAN")
-    search(session, KNOWN_PRODUCT_TITLE, "known product's real title")
-    search(session, "zzz_definitely_not_a_real_game_zzz", "expected no-results case")
+    search(session, "9999999999999", "garbage EAN-shaped query")
+    search(session, "1234567890123", "another garbage EAN-shaped query")
+    search(session, "3701551706461", "real known EAN (control)")
     return 0
 
 
