@@ -1,0 +1,19 @@
+name: Probe BGG public page scraping (diagnostic)
+
+# One-off diagnostic: checks whether the public BGG game page (no auth, no token) exposes the
+# language-dependence poll and version/language data server-side, as a Stage 3 fallback while
+# the BGG API token is still pending. Read the results in the job log — nothing is committed.
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - run: python scripts/probe_bgg_page.py
