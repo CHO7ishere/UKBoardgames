@@ -177,15 +177,38 @@ def fetch_product_detail(session: requests.Session, handle: str) -> dict:
     return resp.json().get("product", {})
 
 
-def fetch_product_ean(session: requests.Session, handle: str) -> str | None:
-    """Per-product EAN lookup for Stage 4 — confirmed populated (see `fetch_product_detail`)
-    where the bulk collection endpoint returns null for the same products."""
-    product = fetch_product_detail(session, handle)
+def extract_ean(product: dict) -> str | None:
     for v in product.get("variants", []):
         barcode = v.get("barcode")
         if barcode and _EAN_RE.match(str(barcode).strip()):
             return _normalize_ean(str(barcode).strip())
     return None
+
+
+def extract_image_url(product: dict) -> str | None:
+    """Shopify's standard per-product JSON shape carries a primary `image` object and a full
+    `images` gallery -- the bulk collection harvest (data/zatu_products.json) never captured
+    either (parse_product only reads handle/title/tags/variants), so this is a Stage-4-only
+    signal like the EAN, read from the same per-product detail fetch."""
+    image = product.get("image") or {}
+    src = image.get("src")
+    if src:
+        return src
+    images = product.get("images") or []
+    if images and isinstance(images[0], dict):
+        return images[0].get("src")
+    return None
+
+
+def fetch_product_ean(session: requests.Session, handle: str) -> str | None:
+    """Per-product EAN lookup for Stage 4 — confirmed populated (see `fetch_product_detail`)
+    where the bulk collection endpoint returns null for the same products."""
+    return extract_ean(fetch_product_detail(session, handle))
+
+
+def fetch_product_image(session: requests.Session, handle: str) -> str | None:
+    """Per-product image URL, for the report's card layout."""
+    return extract_image_url(fetch_product_detail(session, handle))
 
 
 # Stock-status phrases confirmed in Zatu's rendered product-page UI (spec §11.1). The bulk and

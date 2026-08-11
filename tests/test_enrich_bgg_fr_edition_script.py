@@ -11,43 +11,44 @@ SURVIVOR_C = {"zatu_handle": "game-c", "zatu_title": "Game C", "bgg_id": 3}
 
 
 # --- select_survivors_to_check (pure, no browser needed) --------------------------------------
+#
+# language_level is read for every scored row (unlike fr_edition_exists, only read for
+# NOT_LISTED-on-Philibert survivors) -- 2026-08-11: selection scope widened from "NOT_LISTED or
+# brand new" to "any bgg_id not yet fully cached" (i.e. missing language_level), since both
+# fields come from the same two page loads and there's no longer a cost reason to gate on
+# Philibert status.
 
 
-def test_selects_brand_new_survivors_with_no_prior_philibert_record():
+def test_selects_brand_new_survivors_with_no_prior_cache_entry():
     to_check = enrich_bgg_fr_edition.select_survivors_to_check(
         survivors=[SURVIVOR_A], philibert_results=[], cache={}, refresh=False
     )
     assert to_check == [SURVIVOR_A]
 
 
-def test_selects_survivors_that_were_not_listed_last_run():
-    philibert_results = [{"zatu_handle": "game-a", "philibert_status": "NOT_LISTED"}]
+def test_skips_survivors_whose_bgg_id_is_fully_cached():
     to_check = enrich_bgg_fr_edition.select_survivors_to_check(
-        survivors=[SURVIVOR_A], philibert_results=philibert_results, cache={}, refresh=False
+        survivors=[SURVIVOR_A], philibert_results=[],
+        cache={"1": {"fr_edition_exists": True, "language_level": "LOW"}}, refresh=False,
+    )
+    assert to_check == []
+
+
+def test_rechecks_a_cached_bgg_id_missing_language_level():
+    # An entry cached before language-dependence scraping landed (or one that hasn't been
+    # backfilled yet) has fr_edition_exists but no language_level key at all -- still needs a
+    # visit, even though fr_edition_exists is already known.
+    to_check = enrich_bgg_fr_edition.select_survivors_to_check(
+        survivors=[SURVIVOR_A], philibert_results=[],
+        cache={"1": {"fr_edition_exists": True, "fr_edition_titles": []}}, refresh=False,
     )
     assert to_check == [SURVIVOR_A]
 
 
-def test_skips_survivors_that_were_actually_listed_last_run():
-    # fr_edition_exists is only read by compute_advantage's NOT_LISTED branch -- checking a
-    # game Philibert already found live would be wasted browser time.
-    philibert_results = [{"zatu_handle": "game-a", "philibert_status": "LISTED_IN_STOCK"}]
+def test_refresh_flag_rechecks_even_fully_cached_survivors():
     to_check = enrich_bgg_fr_edition.select_survivors_to_check(
-        survivors=[SURVIVOR_A], philibert_results=philibert_results, cache={}, refresh=False
-    )
-    assert to_check == []
-
-
-def test_skips_survivors_whose_bgg_id_is_already_cached():
-    to_check = enrich_bgg_fr_edition.select_survivors_to_check(
-        survivors=[SURVIVOR_A], philibert_results=[], cache={"1": {"fr_edition_exists": True}}, refresh=False
-    )
-    assert to_check == []
-
-
-def test_refresh_flag_rechecks_even_cached_survivors():
-    to_check = enrich_bgg_fr_edition.select_survivors_to_check(
-        survivors=[SURVIVOR_A], philibert_results=[], cache={"1": {"fr_edition_exists": True}}, refresh=True
+        survivors=[SURVIVOR_A], philibert_results=[],
+        cache={"1": {"fr_edition_exists": True, "language_level": "LOW"}}, refresh=True,
     )
     assert to_check == [SURVIVOR_A]
 
@@ -61,15 +62,10 @@ def test_dedupes_multiple_zatu_skus_sharing_the_same_bgg_id():
 
 
 def test_mixed_selection_across_survivors():
-    philibert_results = [
-        {"zatu_handle": "game-a", "philibert_status": "LISTED_IN_STOCK"},  # skip
-        {"zatu_handle": "game-b", "philibert_status": "NOT_LISTED"},  # check
-        # game-c has no prior record at all -- check
-    ]
     to_check = enrich_bgg_fr_edition.select_survivors_to_check(
         survivors=[SURVIVOR_A, SURVIVOR_B, SURVIVOR_C],
-        philibert_results=philibert_results,
-        cache={},
+        philibert_results=[],
+        cache={"1": {"fr_edition_exists": True, "language_level": "LOW"}},  # fully cached, skip
         refresh=False,
     )
     assert to_check == [SURVIVOR_B, SURVIVOR_C]
@@ -116,7 +112,12 @@ def test_main_writes_fr_edition_cache(tmp_path, monkeypatch):
     out_file = tmp_path / "bgg_fr_editions.json"
 
     def fake_fetch(page, bgg_id):
-        return {"fr_edition_exists": bgg_id == 1, "fr_edition_titles": ["Le Jeu"] if bgg_id == 1 else []}
+        return {
+            "fr_edition_exists": bgg_id == 1,
+            "fr_edition_titles": ["Le Jeu"] if bgg_id == 1 else [],
+            "language_level": "LOW" if bgg_id == 1 else None,
+            "language_votes": {},
+        }
 
     monkeypatch.setattr(enrich_bgg_fr_edition, "sync_playwright", lambda: _FakePlaywright())
     monkeypatch.setattr(enrich_bgg_fr_edition, "fetch_french_edition_info", fake_fetch)
@@ -137,6 +138,7 @@ def test_main_writes_fr_edition_cache(tmp_path, monkeypatch):
     assert exit_code == 0
     cache = json.loads(out_file.read_text())
     assert cache["1"]["fr_edition_exists"] is True
+    assert cache["1"]["language_level"] == "LOW"
     assert cache["2"]["fr_edition_exists"] is False
 
 
@@ -181,13 +183,15 @@ def test_main_preserves_existing_cache_entries_not_rechecked(tmp_path, monkeypat
         {"zatu_handle": "game-b", "philibert_status": "NOT_LISTED"},
     ]}))
     out_file = tmp_path / "bgg_fr_editions.json"
-    out_file.write_text(json.dumps({"1": {"fr_edition_exists": True, "fr_edition_titles": ["Cached"]}}))
+    out_file.write_text(json.dumps({
+        "1": {"fr_edition_exists": True, "fr_edition_titles": ["Cached"], "language_level": "MED", "language_votes": {}},
+    }))
 
     calls = []
 
     def tracking_fetch(page, bgg_id):
         calls.append(bgg_id)
-        return {"fr_edition_exists": False, "fr_edition_titles": []}
+        return {"fr_edition_exists": False, "fr_edition_titles": [], "language_level": None, "language_votes": {}}
 
     monkeypatch.setattr(enrich_bgg_fr_edition, "sync_playwright", lambda: _FakePlaywright())
     monkeypatch.setattr(enrich_bgg_fr_edition, "fetch_french_edition_info", tracking_fetch)
@@ -206,7 +210,7 @@ def test_main_preserves_existing_cache_entries_not_rechecked(tmp_path, monkeypat
     exit_code = enrich_bgg_fr_edition.main()
 
     assert exit_code == 0
-    assert calls == [2]  # bgg_id=1 already cached, only bgg_id=2 gets fetched
+    assert calls == [2]  # bgg_id=1 is fully cached (has language_level), only bgg_id=2 gets fetched
     cache = json.loads(out_file.read_text())
-    assert cache["1"] == {"fr_edition_exists": True, "fr_edition_titles": ["Cached"]}
+    assert cache["1"] == {"fr_edition_exists": True, "fr_edition_titles": ["Cached"], "language_level": "MED", "language_votes": {}}
     assert cache["2"]["fr_edition_exists"] is False

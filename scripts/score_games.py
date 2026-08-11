@@ -9,10 +9,10 @@ fields being added to `ZatuProduct.to_dict()`, so every record scores 0 genre po
 is re-harvested and Stage 2 re-matched -- `genre_points()` treats None the same as False (no
 bonus, not a penalty), so this doesn't block v1, it just means the genre bonus isn't live yet.
 
-Language dependence is unconditionally UNKNOWN for the same reason Stage 5's advantage verdict
-can't yet distinguish UNAVAILABLE_FR from UNAVAILABLE_FR? -- Stage 3 (BGG enrich) is still
-blocked on the BGG token. Every game gets the flat -3 penalty and the `language_unknown` flag,
-spec §5.4's own conservative default for missing data.
+Language dependence (`bgg_language_level`) comes from Stage 3's BGG community-poll scrape
+(sources/bgg_versions.py's parse_language_dependence, wired in via lookup_philibert.py) when
+available; games Stage 3 hasn't checked yet fall back to language_points()'s own conservative
+UNKNOWN default (flat -3 penalty, `language_unknown` flag), spec §5.4's default for missing data.
 """
 
 from __future__ import annotations

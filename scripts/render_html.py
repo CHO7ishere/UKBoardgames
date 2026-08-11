@@ -18,7 +18,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 import yaml  # noqa: E402
 
-from render import render_html  # noqa: E402
+from render import _DISPLAY_MATCH_CATEGORIES, render_html  # noqa: E402
 
 
 def load_config(path: str) -> dict:
@@ -42,6 +42,15 @@ def load_excluded_handles(path: str) -> set[str]:
     return set(json.loads(file.read_text()).get("excluded_handles", []))
 
 
+def load_favorited_handles(path: str) -> set[str]:
+    """Manually-curated "favorites" list -- same never-auto-regenerated pattern as
+    data/excluded_games.json, populated by hand or via the report's "Export favorites" button."""
+    file = Path(path)
+    if not file.exists():
+        return set()
+    return set(json.loads(file.read_text()).get("favorited_handles", []))
+
+
 def build_run_metadata(config: dict, zatu_products_path: str, matched_path: str) -> dict:
     return {
         "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
@@ -60,6 +69,7 @@ def main() -> int:
     parser.add_argument("--matched", default="data/matched_games.json")
     parser.add_argument("--unmatched", default="data/unmatched_games.json")
     parser.add_argument("--excluded", default="data/excluded_games.json")
+    parser.add_argument("--favorited", default="data/favorited_games.json")
     parser.add_argument("--out", default="docs/index.html")
     args = parser.parse_args()
 
@@ -72,16 +82,21 @@ def main() -> int:
         json.loads(unmatched_path.read_text())["unmatched"] if unmatched_path.exists() else []
     )
     excluded_handles = load_excluded_handles(args.excluded)
+    favorited_handles = load_favorited_handles(args.favorited)
 
-    html = render_html(games, metadata, unmatched_games, excluded_handles)
+    html = render_html(games, metadata, unmatched_games, excluded_handles, favorited_handles)
 
     out_path = Path(args.out)
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(html)
 
+    unmatched_shown = sum(
+        1 for g in unmatched_games if g.get("match_category") in _DISPLAY_MATCH_CATEGORIES
+    )
     print(
-        f"Rendered {len(games)} scored games + {len(unmatched_games)} unmatched "
-        f"({len(excluded_handles)} manually excluded) -> {out_path}",
+        f"Rendered {len(games)} scored games + {unmatched_shown}/{len(unmatched_games)} unmatched "
+        f"(no-confident-match only, rest excluded for a known reason) "
+        f"({len(excluded_handles)} manually excluded, {len(favorited_handles)} favorited) -> {out_path}",
         file=sys.stderr,
     )
     return 0

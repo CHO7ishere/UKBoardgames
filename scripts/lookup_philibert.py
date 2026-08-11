@@ -243,6 +243,9 @@ def main() -> int:
             "discount_pct": advantage.discount_pct,
             "needs_eyeball": advantage.needs_eyeball,
             "advantage_reason": advantage.reason,
+            # Real BGG community-poll data when Stage 3 has checked this bgg_id, else the
+            # pre-existing None default -- score.py's language_points() already handles both.
+            "bgg_language_level": fr_edition_info.get("language_level") if fr_edition_info else None,
         }
         results.append(record)
         verdict_counts[advantage.verdict] = verdict_counts.get(advantage.verdict, 0) + 1

@@ -344,6 +344,76 @@ def test_main_passes_fr_edition_exists_into_the_advantage_verdict(tmp_path, monk
     assert shortlist == []
 
 
+def test_main_passes_bgg_language_level_through_to_the_record(tmp_path, monkeypatch):
+    survivor = {**SURVIVOR_NOT_LISTED, "bgg_id": 174430}
+    matched_file = tmp_path / "matched.json"
+    matched_file.write_text(json.dumps({"survivors": [survivor]}))
+    config_file = tmp_path / "config.yaml"
+    import yaml
+    config_file.write_text(yaml.dump(TEST_CONFIG))
+    out_file = tmp_path / "results.json"
+    shortlist_file = tmp_path / "shortlist.json"
+    fr_editions_file = tmp_path / "fr_editions.json"
+    fr_editions_file.write_text(json.dumps({
+        "174430": {"fr_edition_exists": False, "fr_edition_titles": [], "language_level": "MED", "language_votes": {}},
+    }))
+
+    monkeypatch.setattr(
+        lookup_philibert, "lookup_one",
+        lambda session, survivor, rate_limit_sec, override_title=None: {"status": "NOT_LISTED", "price_eur": None, "language": None, "url": None},
+    )
+    monkeypatch.setattr(
+        sys,
+        "argv",
+        [
+            "lookup_philibert.py",
+            "--matched", str(matched_file),
+            "--config", str(config_file),
+            "--out", str(out_file),
+            "--shortlist-out", str(shortlist_file),
+            "--fr-editions", str(fr_editions_file),
+        ],
+    )
+
+    exit_code = lookup_philibert.main()
+
+    assert exit_code == 0
+    results = json.loads(out_file.read_text())["results"]
+    assert results[0]["bgg_language_level"] == "MED"
+
+
+def test_main_bgg_language_level_none_when_not_checked(tmp_path, monkeypatch):
+    matched_file = tmp_path / "matched.json"
+    matched_file.write_text(json.dumps({"survivors": [SURVIVOR_NOT_LISTED]}))
+    config_file = tmp_path / "config.yaml"
+    import yaml
+    config_file.write_text(yaml.dump(TEST_CONFIG))
+    out_file = tmp_path / "results.json"
+    shortlist_file = tmp_path / "shortlist.json"
+
+    monkeypatch.setattr(
+        lookup_philibert, "lookup_one",
+        lambda session, survivor, rate_limit_sec, override_title=None: {"status": "NOT_LISTED", "price_eur": None, "language": None, "url": None},
+    )
+    monkeypatch.setattr(
+        sys,
+        "argv",
+        [
+            "lookup_philibert.py",
+            "--matched", str(matched_file),
+            "--config", str(config_file),
+            "--out", str(out_file),
+            "--shortlist-out", str(shortlist_file),
+        ],
+    )
+
+    exit_code = lookup_philibert.main()
+
+    assert exit_code == 0
+    results = json.loads(out_file.read_text())["results"]
+    assert results[0]["bgg_language_level"] is None
+
+
 def test_main_reuses_cached_durable_result_without_a_live_lookup(tmp_path, monkeypatch):
     matched_file = tmp_path / "matched.json"
     matched_file.write_text(json.dumps({"survivors": [SURVIVOR_LISTED_CHEAPER]}))

@@ -1146,3 +1146,110 @@ but was showing as `UNAVAILABLE_FR`/`NOT_LISTED` in `data/philibert_results.json
 - **Not yet live** — same pattern as every Philibert-side fix this session: needs the next
   `lookup-philibert.yml` dispatch to confirm the override title actually resolves to the real
   listing on Philibert's live search (this sandbox can't reach philibertnet.com to verify).
+
+## Unmatched-list filter, favorites, mobile UX modernization, BGG language dependence (2026-08-11)
+
+User's follow-up, three asks in one message: (1) the "Not matched to BGG" list should only show
+titles Stage 2 genuinely tried and failed to match, not ones dropped for an already-understood
+reason (expansions etc); (2) a "favorite"/heart feature, same persistence model as "not
+interested"; (3) a full mobile card UX pass — box art, a better-displayed rating, discount only
+when meaningful, coop/party/duration shown as visible badges instead of buried in text, and (if
+feasible) real BGG language-dependence data instead of the permanent UNKNOWN placeholder.
+
+- **Unmatched-list filter** (`render.py`): `prepare_unmatched()` now only keeps
+  `match_category == "NO_CONFIDENT_MATCH"` — `MATCHES_EXCLUDED_EXPANSION`/`AMBIGUOUS_EXACT`/
+  `AMBIGUOUS_PREFIX`/`DIGIT_CONFLICT` all found a real BGG candidate and were declined for a
+  specific, already-understood reason, not a genuine "we looked and found nothing" case.
+  Display-only filter — `data/unmatched_games.json` itself stays untrimmed for transparency.
+  Real effect: 1943 → 1511 shown. `scripts/render_html.py`'s summary line now reports both counts.
+- **Favorites** (`data/favorited_games.json`, new — same manually-maintained, never-auto-
+  regenerated pattern as `data/excluded_games.json`): a ♡/♥ toggle button on every row in BOTH
+  the main scored table and the unmatched table (unlike "not interested", which stays scoped to
+  the scored table only — favoriting is explicitly meant to work while eyeballing the unmatched
+  list too, per the user's stated purpose "so I start creating a list"). One shared
+  `localStorage` set (`ukbg_favorited_handles`) spans both tables since a handle only ever
+  appears in one of them; each table gets its own "Only favorites (N)" filter checkbox, while
+  Export/Clear are wired once at the top level against the shared set. `render.py`/
+  `scripts/render_html.py` gained the same `favorited_handles`/`--favorited` plumbing as the
+  hide feature. Verified live end-to-end with Playwright against the real report: toggle in
+  either table, reload persistence, per-table "only favorites" filtering, export downloads the
+  right `{"favorited_handles": [...]}` shape, and the global clear button resets both tables'
+  counts/buttons in one action.
+- **Mobile card redesign** (`templates/report.html.jinja2`, `render.py`), still scoped to the
+  mobile breakpoint only per the user's own framing ("still only on mobile") — desktop table
+  markup/behavior confirmed unchanged via a live 1400px Playwright check:
+  - **Box art**: `sources/zatu.py` gained `extract_image_url()`/`fetch_product_image()` — Zatu's
+    bulk harvest never captured an image at all (confirmed: `parse_product` only ever read
+    handle/title/tags/variants), but the per-product detail endpoint Stage 4 already fetches for
+    the EAN carries one for free. `scripts/enrich_zatu_ean.py` now fetches product detail once
+    per survivor and extracts both `zatu_ean` and `zatu_image_url` from the same request (was
+    two separate fetch paths for EAN alone; now genuinely one request, zero added network cost).
+    Card shows the image when present, degrades to no image (not a broken-image icon) when
+    absent — real image data needs the next live Stage 4 dispatch, not populated yet.
+  - **Rating "well displayed"**: replaced the quality cell's wall of text
+    ("8.05 shrunk · 8.2 raw · 3,400 votes") with a `★ 8.4` lead figure, a colored quality-label
+    pill (EXCELLENT/STRONG/BORDERLINE/UNPROVEN/UNLABELED, one color per band), and the
+    votes/shrunk detail demoted to a smaller secondary line.
+  - **Discount only if meaningful**: confirmed via `advantage.py` that `discount_pct` is only
+    ever non-null in the shortlist's `CHEAPER_UK` rows (`UNAVAILABLE_FR`/`OUT_OF_STOCK_FR` both
+    hard-code `None`) — so "meaningful" was already true in the data, the actual problem was
+    display: a "Discount: —" line was rendered on literally every non-`CHEAPER_UK` card (the
+    large majority). Fixed by marking the `<td>` `is-empty` when `discount_pct`/`flags` are
+    empty and hiding `.is-empty` cells only inside the mobile media query — desktop still shows
+    "—" for column-alignment reasons, confirmed unaffected.
+  - **Coop/party/duration/player-count, more visible**: previously only mentioned inline in the
+    "why" sentence (coop/party) or not shown at all (duration/players — `clean_category_tags()`
+    strips "N-M Minutes"/"N Players" as pure filter noise). Added `render.py`'s
+    `extract_duration_tag()`/`extract_player_count_tag()` (reads the same raw `zatu_tags` list,
+    just for *display* rather than the filter chips) and a `.game-badges` row of colored pills
+    under the title, on both breakpoints.
+  - **Language clause de-cluttered**: `build_why()` used to unconditionally append
+    "language unknown" to every single card's why-line (100% of rows, since Stage 3 had never
+    run) — user's explicit ask: "no need to say for all titles we don't know". Now the language
+    clause (and the `UNKNOWN_LANG` badge) is omitted entirely when the level is unknown, and only
+    shown when a real LOW/MED/HIGH value exists — ties directly into the language-dependence
+    scraping below, which is what actually populates real values now.
+- **BGG language-dependence scraping, built for real** (`sources/bgg_versions.py`): user's
+  direct lead — a real BGG page (e.g. `/boardgame/437705/horrified-dungeons-and-dragons`) shows a
+  "Language Dependence" community poll BGG itself is confirmed to render into a real headless
+  browser's DOM (`scripts/probe_bgg_playwright.py`'s prior finding: "Language Dependence poll
+  text present and extractable"). `parse_language_dependence(html)` extracts it from the *same*
+  main-page load Stage 3 already does to resolve the title slug — zero extra navigations. Maps
+  BGG's 5-point poll (`LANGUAGE_DEPENDENCE_LABELS`) to `score.py`'s existing LOW (1-2)/MED
+  (3)/HIGH (4-5) scale, already designed generically for exactly this ("ready to pick up real
+  values the moment Stage 3 lands, no signature change needed" — true, no changes needed to
+  `score.py`/`score_games.py` at all).
+  - **Deliberately markup-agnostic**: works off HTML-tag-stripped plain text, searching for each
+    of the five official label phrases near the "Language Dependence" heading and reading the
+    nearest adjacent integer as its vote count (checking both before and after the label text,
+    since the real number/label ordering in BGG's actual rendered poll wasn't verifiable from
+    this sandbox — see the caveat below). Picks the plurality (highest-vote) label, matching how
+    BGG's own poll UI presents a "current consensus." Degrades to `language_level: None` (not a
+    guess) whenever the heading or a countable label can't be found, so a markup mismatch fails
+    silently into "unknown" — the same state every row was already in — rather than
+    misclassifying a game.
+  - **Explicitly NOT yet confirmed against a real captured page**: this sandbox cannot reach
+    boardgamegeek.com (network-blocked, per this file's own top-level policy note), so
+    `parse_language_dependence` is only unit-tested against a synthetic reconstruction of BGG's
+    poll (`tests/test_bgg_versions.py`), not real markup — flagged inline in both the function's
+    docstring and `enrich_bgg_fr_edition.py`'s module docstring. Needs a live GitHub Actions
+    dispatch, then a manual spot-check of a handful of real results (e.g. does Horrified:
+    Dungeons & Dragons come back with a sane level?) before this data should be fully trusted.
+  - **Selection scope widened** (`scripts/enrich_bgg_fr_edition.py`): `fr_edition_exists` was
+    deliberately narrow (only NOT_LISTED-on-Philibert survivors, since that's the only branch
+    that reads it) — but `language_level` is read by every scored row's composite score, so
+    `select_survivors_to_check()` changed from "NOT_LISTED or brand new" to "any bgg_id not yet
+    fully cached" (missing `language_level` in its cache entry). Real cost consequence: the next
+    live dispatch will need to visit closer to all ~678 survivors' bgg_ids (not the previous
+    ~142), since none of the 237 already-cached entries have `language_level` yet — roughly
+    678 × 2 page loads × ~13s ≈ 2-3 hours, a materially bigger run than any prior dispatch this
+    project has done. Not yet dispatched — flagged for the user to confirm before kicking off a
+    run this long.
+  - **Wired through** `scripts/lookup_philibert.py`: each record now carries
+    `bgg_language_level` read from `data/bgg_fr_editions.json` by `bgg_id` (same file/lookup
+    `fr_edition_exists` already used) — `score_games.py`'s `score_one()` needed zero changes,
+    exactly as its own prior docstring predicted.
+  - 245 → 255 tests pass (10 new: 6 `parse_language_dependence` cases including two
+    synthetic-poll fixtures, 2 `fetch_french_edition_info` integration cases confirming language
+    data rides the existing page load with no extra navigation, 2 `lookup_philibert.py` wiring
+    cases).

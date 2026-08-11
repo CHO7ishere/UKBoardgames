@@ -1,18 +1,27 @@
 #!/usr/bin/env python3
-"""Stage 3 (partial): for each Stage 2 survivor not already known to be listed on Philibert,
-check BGG's own versions data (via a real headless browser -- BGG is Cloudflare-protected, see
-sources/bgg_versions.py) for whether a French edition exists at all, even if it's not currently
-purchasable anywhere. Feeds `fr_edition_exists` into Stage 5's advantage verdict (spec §5.2's
-UNAVAILABLE_FR vs the weaker UNAVAILABLE_FR? distinction) -- user's explicit ask (2026-08-11):
-"I don't want to buy English versions if a French one exists (even if unavailable)". Real case
-that prompted this: Gloomhaven: Jaws of the Lion (bgg_id=291457) is NOT_LISTED on Philibert, but
-BGG's own versions data confirms a real French edition exists.
+"""Stage 3: for each Stage 2 survivor, check BGG's own data (via a real headless browser -- BGG
+is Cloudflare-protected, see sources/bgg_versions.py) for (a) whether a French edition exists at
+all, even if it's not currently purchasable anywhere, and (b) BGG's community language-dependence
+poll result -- both come from the same two page loads per bgg_id, no extra requests either way.
 
-Scoped to survivors that are (a) not yet cached in --out, and (b) either brand new or were
-NOT_LISTED on Philibert in the last run (per --philibert-results) -- fr_edition_exists is only
-ever read by compute_advantage's NOT_LISTED branch, so checking games Philibert already found
-live would be wasted browser time. This data is essentially static (BGG's own catalogued
-versions), so once a bgg_id is checked it's cached indefinitely; --refresh forces a full re-check.
+fr_edition_exists feeds Stage 5's advantage verdict (spec §5.2's UNAVAILABLE_FR vs the weaker
+UNAVAILABLE_FR? distinction) -- user's explicit ask (2026-08-11): "I don't want to buy English
+versions if a French one exists (even if unavailable)". Real case that prompted this: Gloomhaven:
+Jaws of the Lion (bgg_id=291457) is NOT_LISTED on Philibert, but BGG's own versions data confirms
+a real French edition exists.
+
+language_level feeds every scored row's composite score (score.py's language_points(), spec
+§5.4) -- unlike fr_edition_exists, this is read for EVERY row, not just NOT_LISTED-on-Philibert
+ones, so (2026-08-11) the survivor-selection scope widened from "NOT_LISTED or brand new" to
+"any bgg_id not yet fully cached" -- see select_survivors_to_check. NOT YET CONFIRMED against a
+real captured BGG page: this sandbox can't reach boardgamegeek.com (network-blocked), so
+parse_language_dependence (sources/bgg_versions.py) is only tested against a synthetic
+reconstruction of BGG's poll markup. Needs a live GitHub Actions dispatch to confirm the parser
+actually extracts the right data from the real rendered page -- treat language_level as
+unverified until that run's output has been spot-checked against a few real BGG pages by hand.
+
+Both fields are essentially static (BGG's own catalogued versions / crowd poll), so once a
+bgg_id is checked it's cached indefinitely; --refresh forces a full re-check.
 
 Needs real network access to boardgamegeek.com and a headless Chromium -- run via GitHub
 Actions, not this coding sandbox.
@@ -53,23 +62,23 @@ def _load_cache(path: str) -> dict[str, dict]:
 def select_survivors_to_check(
     survivors: list[dict], philibert_results: list[dict], cache: dict[str, dict], refresh: bool
 ) -> list[dict]:
-    not_listed_handles = {
-        r["zatu_handle"] for r in philibert_results if r.get("philibert_status") == "NOT_LISTED"
-    }
-    checked_handles = {r["zatu_handle"] for r in philibert_results}
-
+    """A bgg_id needs a (re-)check when its cache entry is missing `language_level` entirely --
+    that field is read for every scored row (unlike fr_edition_exists, only read for NOT_LISTED
+    survivors), so a bgg_id is only "fully cached" once both fields are known. Both come from
+    the same two page loads, so there's no reason to gate on Philibert status anymore -- a
+    bgg_id either needs a visit or it doesn't. `philibert_results` is accepted for backward-
+    compatible call signatures but is no longer read."""
     to_check = []
     seen_bgg_ids = set()
     for survivor in survivors:
         bgg_id = str(survivor["bgg_id"])
-        if not refresh and bgg_id in cache:
-            continue
         if bgg_id in seen_bgg_ids:  # multiple Zatu SKUs can share a base bgg_id
             continue
-        handle = survivor["zatu_handle"]
-        if handle not in checked_handles or handle in not_listed_handles:
-            to_check.append(survivor)
-            seen_bgg_ids.add(bgg_id)
+        cached = None if refresh else cache.get(bgg_id)
+        if cached is not None and "language_level" in cached:
+            continue
+        to_check.append(survivor)
+        seen_bgg_ids.add(bgg_id)
     return to_check
 
 

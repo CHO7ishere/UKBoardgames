@@ -59,6 +59,25 @@ def top_category_tags(games: list[dict], limit: int = 24) -> list[str]:
 
 _LANGUAGE_LABELS = {"LOW": "low text", "MED": "medium text", "HIGH": "heavy text"}
 
+_DURATION_TAG_RE = re.compile(r"^\d+[+\-–]?\d*\s*minutes?$", re.IGNORECASE)
+_PLAYER_COUNT_TAG_RE = re.compile(r"^\d+[+\-–]?\d*\s*players?$", re.IGNORECASE)
+
+
+def extract_duration_tag(tags: list[str] | None) -> str | None:
+    """The one real "N-M Minutes" tag Zatu attaches, if any -- clean_category_tags() strips this
+    same tag as filter noise, but it's a genuinely useful at-a-glance signal on a card."""
+    for tag in tags or []:
+        if _DURATION_TAG_RE.match(tag.strip()):
+            return tag.strip()
+    return None
+
+
+def extract_player_count_tag(tags: list[str] | None) -> str | None:
+    for tag in tags or []:
+        if _PLAYER_COUNT_TAG_RE.match(tag.strip()):
+            return tag.strip()
+    return None
+
 _ADVANTAGE_CSS_CLASS = {
     "UNAVAILABLE_FR": "adv-unavailable",
     "OUT_OF_STOCK_FR": "adv-outofstock",
@@ -101,31 +120,39 @@ def build_closest_bgg_guess(game: dict) -> str | None:
 
 def build_why(game: dict) -> str:
     """Spec §6: 'a one-line "why"' per row, e.g. "Not sold in France, no FR edition exists ·
-    8.2 (3,400 votes) · coop · low text.\""""
+    8.2 (3,400 votes) · coop · low text." Coop/party/duration/player-count now get their own
+    dedicated card badges (see extract_duration_tag/extract_player_count_tag) rather than living
+    only in this text, so they're not repeated here. The language clause is only included when a
+    real level is known (2026-08-11: every row was UNKNOWN before Stage 3's language scraping
+    landed, making "language unknown" pure noise repeated on literally every card -- omitted
+    entirely rather than stated as a universal disclaimer; once real LOW/MED/HIGH data exists for
+    a game this shows it, silence for the rest is the correct default)."""
     reason = game["advantage_reason"]
     parts = [reason[0].upper() + reason[1:] if reason else reason]
     parts.append(f"{game['bgg_average']:.1f} ({game['bgg_usersrated']:,} votes)")
-    if game.get("zatu_is_coop"):
-        parts.append("coop")
-    if game.get("zatu_is_party"):
-        parts.append("party")
-    parts.append(_LANGUAGE_LABELS.get(game.get("bgg_language_level"), "language unknown"))
+    language_label = _LANGUAGE_LABELS.get(game.get("bgg_language_level"))
+    if language_label:
+        parts.append(language_label)
     return " · ".join(parts)
 
 
 def build_flags(game: dict) -> list[str]:
-    """Spec §6: flag badges for NEEDS_EYEBALL, UNKNOWN_LANG (PREORDER/VARIANT_EDITION aren't
-    detected yet -- no stock-wording or SKU-variant signal is captured upstream for those)."""
+    """Spec §6: flag badge for NEEDS_EYEBALL (PREORDER/VARIANT_EDITION aren't detected yet -- no
+    stock-wording or SKU-variant signal is captured upstream for those). UNKNOWN_LANG is
+    deliberately not surfaced as a per-row badge -- see build_why's docstring."""
     flags = []
     if game.get("needs_eyeball"):
         flags.append("NEEDS_EYEBALL")
-    if game.get("language_unknown"):
-        flags.append("UNKNOWN_LANG")
     return flags
 
 
-def prepare_games(games: list[dict], excluded_handles: set[str] | None = None) -> list[dict]:
+def prepare_games(
+    games: list[dict],
+    excluded_handles: set[str] | None = None,
+    favorited_handles: set[str] | None = None,
+) -> list[dict]:
     excluded_handles = excluded_handles or set()
+    favorited_handles = favorited_handles or set()
     prepared = []
     for game in games:
         prepared.append(
@@ -138,19 +165,37 @@ def prepare_games(games: list[dict], excluded_handles: set[str] | None = None) -
                 or _philibert_search_url(game["zatu_title"]),
                 "philibert_link_is_search": game.get("philibert_url") is None,
                 "category_tags": clean_category_tags(game.get("zatu_tags")),
+                "duration_tag": extract_duration_tag(game.get("zatu_tags")),
+                "player_count_tag": extract_player_count_tag(game.get("zatu_tags")),
                 "user_excluded": game["zatu_handle"] in excluded_handles,
+                "user_favorited": game["zatu_handle"] in favorited_handles,
             }
         )
     return prepared
 
 
-def prepare_unmatched(games: list[dict]) -> list[dict]:
+# User's explicit framing (2026-08-11): "remove all the titles removed for a good reason
+# (typically the extensions) and only keep the ones where we tried to find a match on bgg and
+# failed." AMBIGUOUS_EXACT/AMBIGUOUS_PREFIX/DIGIT_CONFLICT/MATCHES_EXCLUDED_EXPANSION all found a
+# real BGG candidate (or several) and declined for a specific, already-understood reason -- not
+# a genuine "we looked and there's nothing" case. NO_CONFIDENT_MATCH is the only bucket where
+# Stage 2 tried and found no candidate at all, which is the one worth a human eyeballing for a
+# missed gem. The full, untrimmed list stays in data/unmatched_games.json for transparency --
+# this filter is display-only, applied here rather than at Stage 2.
+_DISPLAY_MATCH_CATEGORIES = {"NO_CONFIDENT_MATCH"}
+
+
+def prepare_unmatched(games: list[dict], favorited_handles: set[str] | None = None) -> list[dict]:
     """Games Stage 2 could never confidently match to BGG at all (not just failed the quality
     gate) -- no score/quality data exists for these, so they can never reach the scored
     shortlist, but they're still real Zatu listings worth a human's own eyeball. See
-    scripts/match_bgg.py's `run()`."""
+    scripts/match_bgg.py's `run()`. Only NO_CONFIDENT_MATCH is shown -- see
+    _DISPLAY_MATCH_CATEGORIES."""
+    favorited_handles = favorited_handles or set()
     prepared = []
     for game in games:
+        if game.get("match_category") not in _DISPLAY_MATCH_CATEGORIES:
+            continue
         prepared.append(
             {
                 **game,
@@ -160,6 +205,7 @@ def prepare_unmatched(games: list[dict]) -> list[dict]:
                 "closest_bgg_guess": build_closest_bgg_guess(game),
                 "bgg_search_url": _bgg_search_url(game["zatu_title"]),
                 "category_tags": clean_category_tags(game.get("zatu_tags")),
+                "user_favorited": game["zatu_handle"] in favorited_handles,
             }
         )
     return prepared
@@ -170,14 +216,15 @@ def render_html(
     run_metadata: dict,
     unmatched_games: list[dict] | None = None,
     excluded_handles: set[str] | None = None,
+    favorited_handles: set[str] | None = None,
 ) -> str:
     env = Environment(
         loader=FileSystemLoader(str(TEMPLATE_DIR)),
         autoescape=select_autoescape(["html"]),
     )
     template = env.get_template("report.html.jinja2")
-    prepared = prepare_games(games, excluded_handles)
-    prepared_unmatched = prepare_unmatched(unmatched_games or [])
+    prepared = prepare_games(games, excluded_handles, favorited_handles)
+    prepared_unmatched = prepare_unmatched(unmatched_games or [], favorited_handles)
     return template.render(
         games=prepared,
         meta=run_metadata,

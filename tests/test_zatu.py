@@ -6,8 +6,11 @@ import requests
 
 from sources.zatu import (
     ZatuProduct,
+    extract_ean,
+    extract_image_url,
     fetch_product_detail,
     fetch_product_ean,
+    fetch_product_image,
     fetch_products_page,
     fetch_stock_status,
     harvest_all,
@@ -168,6 +171,35 @@ def test_fetch_product_ean_passes_through_ean13():
 def test_fetch_product_ean_none_when_no_barcode():
     session = FakeSession(product_detail={"variants": [{"barcode": None}]})
     assert fetch_product_ean(session, "gloomhaven-jaws-of-the-lion") is None
+
+
+def test_extract_image_url_prefers_primary_image_field():
+    product = {
+        "image": {"src": "https://cdn.zatu.example/primary.jpg"},
+        "images": [{"src": "https://cdn.zatu.example/gallery-0.jpg"}],
+    }
+    assert extract_image_url(product) == "https://cdn.zatu.example/primary.jpg"
+
+
+def test_extract_image_url_falls_back_to_first_gallery_image():
+    product = {"image": None, "images": [{"src": "https://cdn.zatu.example/gallery-0.jpg"}]}
+    assert extract_image_url(product) == "https://cdn.zatu.example/gallery-0.jpg"
+
+
+def test_extract_image_url_none_when_no_images_at_all():
+    assert extract_image_url({"image": None, "images": []}) is None
+    assert extract_image_url({}) is None
+
+
+def test_fetch_product_image_reads_through_product_detail():
+    session = FakeSession(product_detail={"image": {"src": "https://cdn.zatu.example/manipulate.jpg"}})
+    assert fetch_product_image(session, "manipulate") == "https://cdn.zatu.example/manipulate.jpg"
+
+
+def test_extract_ean_matches_fetch_product_ean():
+    # extract_ean is the pure function fetch_product_ean now wraps -- same behavior either way.
+    product = {"variants": [{"barcode": "681706712456"}]}
+    assert extract_ean(product) == "0681706712456"
 
 
 @pytest.mark.parametrize(

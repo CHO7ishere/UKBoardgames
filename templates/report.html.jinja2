@@ -17,6 +17,7 @@
     --cheaper: #1565c0;
     --flag-bg: #fdecea;
     --flag-text: #b71c1c;
+    --favorite: #c2185b;
   }
   * { box-sizing: border-box; }
   body {
@@ -73,6 +74,20 @@
   .links .hide-btn:hover { color: var(--text); border-color: var(--text-dim); }
   tbody tr.is-hidden { opacity: 0.45; }
   tbody tr.is-hidden .hide-btn { color: var(--link); border-color: var(--link); }
+  .links .favorite-btn {
+    display: inline-block;
+    margin-top: 0.4rem;
+    font-size: 1.05rem;
+    line-height: 1;
+    padding: 0.15rem 0.45rem;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: var(--panel);
+    color: var(--text-dim);
+    cursor: pointer;
+  }
+  .links .favorite-btn:hover { border-color: var(--favorite); }
+  .links .favorite-btn.is-favorited { color: var(--favorite); border-color: var(--favorite); }
   .category-filters { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1rem; }
   .category-chip {
     display: inline-flex;
@@ -133,7 +148,43 @@
   tbody tr.adv-outofstock { border-left-color: var(--outofstock); }
   tbody tr.adv-cheaper { border-left-color: var(--cheaper); }
   .game-title { font-weight: 600; }
-  .why { color: var(--text-dim); font-size: 0.82rem; margin-top: 0.2rem; }
+  .game-thumb {
+    display: block;
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 6px;
+    float: left;
+    margin: 0 0.6rem 0.3rem 0;
+    background: var(--bg);
+  }
+  .game-badges { margin-top: 0.3rem; display: flex; flex-wrap: wrap; gap: 0.3rem; }
+  .badge {
+    display: inline-block;
+    padding: 0.1rem 0.45rem;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .badge-coop { background: #e3f2e1; color: #2e7d32; }
+  .badge-party { background: #fce4ec; color: #ad1457; }
+  .badge-meta { background: var(--bg); color: var(--text-dim); font-weight: 500; border: 1px solid var(--border); }
+  .rating-star { font-weight: 700; font-variant-numeric: tabular-nums; }
+  .quality-pill {
+    display: inline-block;
+    margin-left: 0.4rem;
+    padding: 0.05rem 0.4rem;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    font-weight: 600;
+  }
+  .quality-excellent { background: #e3f2e1; color: #2e7d32; }
+  .quality-strong { background: #e8f0fe; color: #1a5276; }
+  .quality-borderline { background: #fff3e0; color: #b8860b; }
+  .quality-unproven, .quality-unlabeled { background: var(--bg); color: var(--text-dim); }
+  .rating-meta { color: var(--text-dim); font-size: 0.78rem; margin-top: 0.15rem; }
+  .why { color: var(--text-dim); font-size: 0.82rem; margin-top: 0.2rem; clear: left; }
   .score { font-weight: 700; font-variant-numeric: tabular-nums; }
   .advantage-badge {
     display: inline-block;
@@ -237,8 +288,23 @@
       font-size: 1.1rem;
     }
     td.game-cell { padding-right: 3.5rem; }
+    .game-thumb { width: 56px; height: 56px; margin-right: 0.75rem; }
+    .game-badges { margin-top: 0.35rem; }
+    .badge { font-size: 0.74rem; padding: 0.15rem 0.55rem; }
+
+    /* Discount/Flags carry no information for most rows (only CHEAPER_UK ever has a real
+       discount; most rows have no flags at all) -- rather than a "Discount: —" line repeated on
+       every card, the whole line is omitted when there's nothing to show. Desktop keeps the
+       "—" placeholder so the table's column alignment is untouched. */
+    td.is-empty { display: none; }
+
+    td[data-label="Rating"] { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 0.3rem; }
+    td[data-label="Rating"]::before { width: 100%; }
+    .rating-meta { width: 100%; margin-top: 0.1rem; }
+
     td.links { display: flex; flex-wrap: wrap; align-items: center; gap: 0.7rem 0.9rem; padding-top: 0.5rem; }
     td.links a { font-size: 0.9rem; }
+    td.links .favorite-btn { margin-top: 0; padding: 0.5rem 0.7rem; font-size: 1.2rem; }
     td.links .hide-btn { margin-top: 0; margin-left: auto; padding: 0.5rem 0.9rem; font-size: 0.85rem; }
   }
 </style>
@@ -256,8 +322,11 @@
     <input id="filter" class="filter-input" type="search" placeholder="Filter by title…" autocomplete="off">
     <span id="result-count">{{ games | length }} games matched your criteria</span>
     <label class="hide-toggle"><input type="checkbox" id="show-hidden"> Show hidden (<span id="hidden-count">0</span>)</label>
+    <label class="hide-toggle"><input type="checkbox" id="show-favorites-only"> Only favorites (<span id="favorites-count">0</span>)</label>
     <button type="button" id="export-hidden-btn">Export hidden list</button>
     <button type="button" id="clear-hidden-btn">Clear hidden</button>
+    <button type="button" id="export-favorites-btn">Export favorites</button>
+    <button type="button" id="clear-favorites-btn">Clear favorites</button>
   </div>
   <div class="mobile-sort-wrap">
     <label>Sort by
@@ -272,9 +341,10 @@
     </label>
   </div>
   <p class="meta" id="hide-help">
-    Click "Not interested" on a row to hide it (saved in this browser, survives future site rebuilds automatically).
-    To make hidden games stay hidden for everyone / across devices, click "Export hidden list", save the downloaded
-    file as <code>data/excluded_games.json</code> in the repo, and commit it.
+    Click "Not interested" on a row to hide it, or the ♡ to favorite it (both saved in this browser, survive future
+    site rebuilds automatically). To make hidden/favorited games stick for everyone / across devices, click
+    "Export hidden list" / "Export favorites", save the downloaded file as <code>data/excluded_games.json</code> /
+    <code>data/favorited_games.json</code> in the repo, and commit it.
   </p>
 
   <div class="category-filters" id="category-filters">
@@ -307,6 +377,7 @@
         <tr class="{{ game.advantage_css_class }}"
             data-handle="{{ game.zatu_handle }}"
             data-user_excluded="{{ '1' if game.user_excluded else '0' }}"
+            data-user_favorited="{{ '1' if game.user_favorited else '0' }}"
             data-composite_score="{{ game.composite_score }}"
             data-zatu_title="{{ game.zatu_title | lower }}"
             data-advantage_verdict="{{ game.advantage_verdict }}"
@@ -322,25 +393,34 @@
             data-category-tags="{{ game.category_tags | join('|') | lower }}">
           <td class="score num" data-label="Score">{{ "%.1f" | format(game.composite_score) }}</td>
           <td class="game-cell">
+            {% if game.zatu_image_url %}<img class="game-thumb" src="{{ game.zatu_image_url }}" alt="" loading="lazy">{% endif %}
             <div class="game-title">{{ game.zatu_title }}{% if game.bgg_year %} <span class="num">({{ game.bgg_year }})</span>{% endif %}</div>
+            <div class="game-badges">
+              {% if game.zatu_is_coop %}<span class="badge badge-coop">Coop</span>{% endif %}
+              {% if game.zatu_is_party %}<span class="badge badge-party">Party</span>{% endif %}
+              {% if game.player_count_tag %}<span class="badge badge-meta">{{ game.player_count_tag }}</span>{% endif %}
+              {% if game.duration_tag %}<span class="badge badge-meta">{{ game.duration_tag }}</span>{% endif %}
+            </div>
             <div class="why">{{ game.why }}</div>
           </td>
           <td data-label="Advantage"><span class="advantage-badge">{{ game.advantage_verdict }}</span></td>
-          <td data-label="Quality">
-            {{ game.quality_label }}<br>
-            <span class="num">{{ "%.2f" | format(game.quality_shrunk) }} shrunk · {{ "%.2f" | format(game.bgg_average) }} raw · {{ "{:,}".format(game.bgg_usersrated) }} votes</span>
+          <td data-label="Rating">
+            <span class="rating-star">★ {{ "%.1f" | format(game.bgg_average) }}</span>
+            <span class="quality-pill quality-{{ game.quality_label | lower }}">{{ game.quality_label }}</span>
+            <div class="num rating-meta">{{ "{:,}".format(game.bgg_usersrated) }} votes · {{ "%.2f" | format(game.quality_shrunk) }} shrunk</div>
           </td>
           <td class="num" data-label="UK price">{% if game.zatu_price_gbp is not none %}£{{ "%.2f" | format(game.zatu_price_gbp) }}{% else %}—{% endif %}</td>
           <td class="num" data-label="FR price">{% if game.philibert_price_eur is not none %}€{{ "%.2f" | format(game.philibert_price_eur) }}{% else %}—{% endif %}</td>
-          <td class="num" data-label="Discount">{% if game.discount_pct is not none %}{{ (game.discount_pct * 100) | round(0) | int }}%{% else %}—{% endif %}</td>
+          <td class="num {{ 'is-empty' if game.discount_pct is none }}" data-label="Discount">{% if game.discount_pct is not none %}{{ (game.discount_pct * 100) | round(0) | int }}%{% else %}—{% endif %}</td>
           <td data-label="Match">{{ game.match_confidence }}</td>
-          <td data-label="Flags">
+          <td class="{{ 'is-empty' if not game.flags }}" data-label="Flags">
             {% for flag in game.flags %}<span class="flag-badge">{{ flag }}</span>{% endfor %}
           </td>
           <td class="links">
             <a href="https://boardgamegeek.com/boardgame/{{ game.bgg_id }}" target="_blank" rel="noopener">BGG</a>
             <a href="{{ game.zatu_url }}" target="_blank" rel="noopener">Zatu</a>
             <a class="{{ 'search-link' if game.philibert_link_is_search else '' }}" href="{{ game.philibert_link_url }}" target="_blank" rel="noopener">Philibert{% if game.philibert_link_is_search %} (search){% endif %}</a>
+            <button type="button" class="favorite-btn" aria-pressed="{{ 'true' if game.user_favorited else 'false' }}" aria-label="Favorite this game" title="Favorite this game">♡</button>
             <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
@@ -352,15 +432,17 @@
   <details id="unmatched-section">
     <summary>Not matched to BGG ({{ unmatched_games | length }} games) — unscored, Zatu-only data, worth an eyeball</summary>
     <p class="subtitle">
-      These Zatu listings never got a confident BGG match (or matched more than one BGG entry) at all — Stage 2's
-      precision-first matcher deliberately drops anything it isn't sure about rather than guessing, so there's no
-      quality/price-advantage score for these. "Closest BGG guess" is shown for transparency where one exists, but
-      it was never trusted automatically — always verify by hand before buying.
+      Zatu listings where Stage 2 genuinely tried to find a BGG match and found nothing confident enough — no
+      quality/price-advantage score exists for these. Titles dropped for a known reason (a real BGG expansion,
+      an ambiguous multi-edition tie, a numbered-sequel conflict) are excluded here since there's nothing to
+      investigate for those. "Closest BGG guess" is shown for transparency where one exists, but it was never
+      trusted automatically — always verify by hand before buying.
     </p>
 
     <div class="controls">
       <input id="unmatched-filter" class="filter-input" type="search" placeholder="Filter by title…" autocomplete="off">
       <span id="unmatched-result-count">{{ unmatched_games | length }} games matched your criteria</span>
+      <label class="hide-toggle"><input type="checkbox" id="unmatched-show-favorites-only"> Only favorites (<span id="unmatched-favorites-count">0</span>)</label>
     </div>
     <div class="mobile-sort-wrap">
       <label>Sort by
@@ -395,7 +477,9 @@
         </thead>
         <tbody>
           {% for game in unmatched_games %}
-          <tr data-zatu_title="{{ game.zatu_title | lower }}"
+          <tr data-handle="{{ game.zatu_handle }}"
+              data-user_favorited="{{ '1' if game.user_favorited else '0' }}"
+              data-zatu_title="{{ game.zatu_title | lower }}"
               data-zatu_price_gbp="{{ game.zatu_price_gbp if game.zatu_price_gbp is not none else '' }}"
               data-zatu_in_stock="{{ 'in stock' if game.zatu_in_stock else 'out of stock' }}"
               data-match_category="{{ game.match_category }}"
@@ -412,6 +496,7 @@
             <td class="links">
               <a href="{{ game.zatu_url }}" target="_blank" rel="noopener">Zatu</a>
               <a class="search-link" href="{{ game.bgg_search_url }}" target="_blank" rel="noopener">BGG (search)</a>
+              <button type="button" class="favorite-btn" aria-pressed="{{ 'true' if game.user_favorited else 'false' }}" aria-label="Favorite this game" title="Favorite this game">♡</button>
             </td>
           </tr>
           {% endfor %}
@@ -422,13 +507,14 @@
 
   <footer>
     Zatu is the universe: a game not sold by Zatu is out of scope. Ambiguous BGG/Philibert matches are dropped, not guessed.
-    Language dependence isn't scored yet (BGG enrich, Stage 3, is pending) — every row currently carries the conservative UNKNOWN_LANG flag.
+    Language dependence is shown when BGG's own community poll data is known for a game; not every game has been checked yet.
     Treat this as a shortlist to verify on arrival, not a guarantee.
   </footer>
 
 <script>
 (function () {
   var HIDE_STORAGE_KEY = 'ukbg_hidden_handles';
+  var FAVORITE_STORAGE_KEY = 'ukbg_favorited_handles';
 
   function loadHiddenSet(seedHandles) {
     var raw = null;
@@ -444,6 +530,39 @@
   function saveHiddenSet(set) {
     try { localStorage.setItem(HIDE_STORAGE_KEY, JSON.stringify(Array.from(set))); }
     catch (e) { /* storage unavailable (private browsing, quota) -- hiding still works this tab */ }
+  }
+
+  function loadFavoriteSet(seedHandles) {
+    var raw = null;
+    try { raw = localStorage.getItem(FAVORITE_STORAGE_KEY); } catch (e) { /* storage unavailable */ }
+    if (raw !== null) {
+      try { return new Set(JSON.parse(raw)); } catch (e) { /* corrupt, fall through */ }
+    }
+    return new Set(seedHandles);
+  }
+
+  function saveFavoriteSet(set) {
+    try { localStorage.setItem(FAVORITE_STORAGE_KEY, JSON.stringify(Array.from(set))); }
+    catch (e) { /* storage unavailable */ }
+  }
+
+  // Favorites are one set shared by both tables (a game only ever appears in one of them, but
+  // the storage/export/clear controls are global) -- loaded once here, seeded from whichever
+  // rows either table baked in as already-favorited (data/favorited_games.json), before either
+  // table is set up.
+  var allHandleRows = Array.prototype.slice.call(document.querySelectorAll('tbody tr[data-handle]'));
+  var favoriteSeed = allHandleRows.filter(function (row) { return row.dataset.user_favorited === '1'; })
+    .map(function (row) { return row.dataset.handle; });
+  var favoriteSet = loadFavoriteSet(favoriteSeed);
+  var tableRefreshers = [];
+
+  function refreshFavoriteButton(row) {
+    var btn = row.querySelector('.favorite-btn');
+    if (!btn) return;
+    var isFav = favoriteSet.has(row.dataset.handle);
+    btn.textContent = isFav ? '♥' : '♡';
+    btn.classList.toggle('is-favorited', isFav);
+    btn.setAttribute('aria-pressed', isFav ? 'true' : 'false');
   }
 
   function setupTable(opts) {
@@ -514,6 +633,25 @@
           applyFilters();
         });
       }
+    }
+
+    var showFavoritesOnlyBox = opts.showFavoritesOnlyId ? document.getElementById(opts.showFavoritesOnlyId) : null;
+    var favoritesCountEl = opts.favoritesCountId ? document.getElementById(opts.favoritesCountId) : null;
+
+    if (opts.enableFavorite) {
+      rows.forEach(function (row) {
+        refreshFavoriteButton(row);
+        var btn = row.querySelector('.favorite-btn');
+        if (!btn) return;
+        btn.addEventListener('click', function () {
+          var handle = row.dataset.handle;
+          if (favoriteSet.has(handle)) { favoriteSet.delete(handle); } else { favoriteSet.add(handle); }
+          saveFavoriteSet(favoriteSet);
+          refreshFavoriteButton(row);
+          applyFilters();
+        });
+      });
+      if (showFavoritesOnlyBox) showFavoritesOnlyBox.addEventListener('change', applyFilters);
     }
 
     function sortRows(key, type, dir) {
@@ -600,12 +738,19 @@
           var isHidden = hiddenSet.has(row.dataset.handle);
           hideOk = !isHidden || (showHiddenBox && showHiddenBox.checked);
         }
-        var match = textMatch && categoryMatch && hideOk;
+        var favoriteOk = true;
+        if (opts.enableFavorite && showFavoritesOnlyBox && showFavoritesOnlyBox.checked) {
+          favoriteOk = favoriteSet.has(row.dataset.handle);
+        }
+        var match = textMatch && categoryMatch && hideOk && favoriteOk;
         row.classList.toggle('hidden-row', !match);
         if (match) visible++;
       });
       resultCount.textContent = visible + opts.resultSuffix;
       if (opts.enableHide && hiddenCountEl) hiddenCountEl.textContent = hiddenSet.size;
+      if (opts.enableFavorite && favoritesCountEl) {
+        favoritesCountEl.textContent = rows.filter(function (row) { return favoriteSet.has(row.dataset.handle); }).length;
+      }
     }
 
     filterInput.addEventListener('input', applyFilters);
@@ -622,7 +767,14 @@
       });
     }
 
-    if (opts.enableHide) applyFilters();
+    if (opts.enableHide || opts.enableFavorite) applyFilters();
+
+    if (opts.enableFavorite) {
+      tableRefreshers.push(function () {
+        rows.forEach(refreshFavoriteButton);
+        applyFilters();
+      });
+    }
   }
 
   setupTable({
@@ -641,6 +793,9 @@
     exportButtonId: 'export-hidden-btn',
     clearButtonId: 'clear-hidden-btn',
     sortSelectId: 'games-sort-select',
+    enableFavorite: true,
+    showFavoritesOnlyId: 'show-favorites-only',
+    favoritesCountId: 'favorites-count',
   });
 
   setupTable({
@@ -656,7 +811,38 @@
     defaultSortDir: -1,
     resultSuffix: ' games matched your criteria',
     sortSelectId: 'unmatched-sort-select',
+    enableFavorite: true,
+    showFavoritesOnlyId: 'unmatched-show-favorites-only',
+    favoritesCountId: 'unmatched-favorites-count',
   });
+
+  // Export/Clear operate on the one favoriteSet shared by both tables -- wired once here rather
+  // than per-table, then every table's own buttons/counts are refreshed via tableRefreshers.
+  var exportFavoritesBtn = document.getElementById('export-favorites-btn');
+  if (exportFavoritesBtn) {
+    exportFavoritesBtn.addEventListener('click', function () {
+      var handles = Array.from(favoriteSet).sort();
+      var payload = JSON.stringify({ favorited_handles: handles }, null, 2) + '\n';
+      var blob = new Blob([payload], { type: 'application/json' });
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement('a');
+      a.href = url;
+      a.download = 'favorited_games.json';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    });
+  }
+
+  var clearFavoritesBtn = document.getElementById('clear-favorites-btn');
+  if (clearFavoritesBtn) {
+    clearFavoritesBtn.addEventListener('click', function () {
+      favoriteSet.clear();
+      saveFavoriteSet(favoriteSet);
+      tableRefreshers.forEach(function (refresh) { refresh(); });
+    });
+  }
 })();
 </script>
 </body>
