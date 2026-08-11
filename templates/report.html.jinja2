@@ -134,6 +134,15 @@
   .num { font-variant-numeric: tabular-nums; white-space: nowrap; }
   footer { margin-top: 2rem; color: var(--text-dim); font-size: 0.8rem; }
   tr.hidden-row { display: none; }
+  #unmatched-section { margin-top: 2rem; }
+  #unmatched-section summary {
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.05rem;
+    padding: 0.5rem 0;
+  }
+  #unmatched-section summary:hover { color: var(--link); }
+  #unmatched-section .subtitle { margin-top: 0.25rem; }
 </style>
 </head>
 <body>
@@ -219,6 +228,68 @@
     </table>
   </div>
 
+  <details id="unmatched-section">
+    <summary>Not matched to BGG ({{ unmatched_games | length }} games) — unscored, Zatu-only data, worth an eyeball</summary>
+    <p class="subtitle">
+      These Zatu listings never got a confident BGG match (or matched more than one BGG entry) at all — Stage 2's
+      precision-first matcher deliberately drops anything it isn't sure about rather than guessing, so there's no
+      quality/price-advantage score for these. "Closest BGG guess" is shown for transparency where one exists, but
+      it was never trusted automatically — always verify by hand before buying.
+    </p>
+
+    <div class="controls">
+      <input id="unmatched-filter" type="search" placeholder="Filter by title…" autocomplete="off">
+      <span id="unmatched-result-count">{{ unmatched_games | length }} games matched your criteria</span>
+    </div>
+
+    <div class="category-filters" id="unmatched-category-filters">
+      <label class="category-chip pinned"><input type="checkbox" data-category="coop"> Coop</label>
+      <label class="category-chip pinned"><input type="checkbox" data-category="party"> Party</label>
+      {% for tag in unmatched_filter_tags %}
+      <label class="category-chip tag-chip"><input type="checkbox" data-category-tag="{{ tag }}"> {{ tag }}</label>
+      {% endfor %}
+      {% if unmatched_filter_tags %}<button type="button" id="unmatched-more-tags-toggle">show more tags</button>{% endif %}
+    </div>
+
+    <div class="table-wrap">
+      <table id="unmatched-games-table">
+        <thead>
+          <tr>
+            <th data-key="zatu_title" data-type="str">Game</th>
+            <th data-key="zatu_price_gbp" data-type="num">GBP</th>
+            <th data-key="zatu_in_stock" data-type="str">Stock</th>
+            <th data-key="match_category" data-type="str">Why unmatched</th>
+            <th data-key="match_score" data-type="num">Closest BGG guess</th>
+            <th data-key="links" data-type="none">Links</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for game in unmatched_games %}
+          <tr data-zatu_title="{{ game.zatu_title | lower }}"
+              data-zatu_price_gbp="{{ game.zatu_price_gbp if game.zatu_price_gbp is not none else '' }}"
+              data-zatu_in_stock="{{ 'in stock' if game.zatu_in_stock else 'out of stock' }}"
+              data-match_category="{{ game.match_category }}"
+              data-match_score="{{ game.match_score if game.match_score is not none else '' }}"
+              data-filter-text="{{ game.zatu_title | lower }}"
+              data-is-coop="{{ '1' if game.zatu_is_coop else '0' }}"
+              data-is-party="{{ '1' if game.zatu_is_party else '0' }}"
+              data-category-tags="{{ game.category_tags | join('|') | lower }}">
+            <td class="game-title">{{ game.zatu_title }}</td>
+            <td class="num">{% if game.zatu_price_gbp is not none %}£{{ "%.2f" | format(game.zatu_price_gbp) }}{% else %}—{% endif %}</td>
+            <td>{{ 'In stock' if game.zatu_in_stock else 'Out of stock' }}</td>
+            <td>{{ game.match_category_label }}</td>
+            <td>{{ game.closest_bgg_guess or '—' }}</td>
+            <td class="links">
+              <a href="{{ game.zatu_url }}" target="_blank" rel="noopener">Zatu</a>
+              <a class="search-link" href="{{ game.bgg_search_url }}" target="_blank" rel="noopener">BGG (search)</a>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </details>
+
   <footer>
     Zatu is the universe: a game not sold by Zatu is out of scope. Ambiguous BGG/Philibert matches are dropped, not guessed.
     Language dependence isn't scored yet (BGG enrich, Stage 3, is pending) — every row currently carries the conservative UNKNOWN_LANG flag.
@@ -227,94 +298,123 @@
 
 <script>
 (function () {
-  var table = document.getElementById('games-table');
-  var tbody = table.querySelector('tbody');
-  var rows = Array.prototype.slice.call(tbody.querySelectorAll('tr'));
-  var headers = table.querySelectorAll('thead th');
-  var currentSort = { key: 'composite_score', dir: -1 };
+  function setupTable(opts) {
+    var table = document.getElementById(opts.tableId);
+    if (!table) return;
+    var tbody = table.querySelector('tbody');
+    var rows = Array.prototype.slice.call(tbody.querySelectorAll('tr'));
+    var headers = table.querySelectorAll('thead th');
+    var currentSort = { key: opts.defaultSortKey, dir: opts.defaultSortDir };
 
-  function sortRows(key, type, dir) {
-    rows.sort(function (a, b) {
-      var av = a.dataset[key];
-      var bv = b.dataset[key];
-      if (type === 'num') {
-        av = av === '' ? -Infinity : parseFloat(av);
-        bv = bv === '' ? -Infinity : parseFloat(bv);
-        return (av - bv) * dir;
-      }
-      av = (av || '').toString();
-      bv = (bv || '').toString();
-      return av.localeCompare(bv) * dir;
+    function sortRows(key, type, dir) {
+      rows.sort(function (a, b) {
+        var av = a.dataset[key];
+        var bv = b.dataset[key];
+        if (type === 'num') {
+          av = av === '' ? -Infinity : parseFloat(av);
+          bv = bv === '' ? -Infinity : parseFloat(bv);
+          return (av - bv) * dir;
+        }
+        av = (av || '').toString();
+        bv = (bv || '').toString();
+        return av.localeCompare(bv) * dir;
+      });
+      rows.forEach(function (row) { tbody.appendChild(row); });
+    }
+
+    headers.forEach(function (th) {
+      var key = th.dataset.key;
+      var type = th.dataset.type;
+      if (type === 'none') return;
+      th.addEventListener('click', function () {
+        var dir = (currentSort.key === key && currentSort.dir === -1) ? 1 : -1;
+        currentSort = { key: key, dir: dir };
+        headers.forEach(function (h) { h.classList.remove('sorted'); h.removeAttribute('data-arrow'); });
+        th.classList.add('sorted');
+        th.setAttribute('data-arrow', dir === 1 ? '▲' : '▼');
+        sortRows(key, type, dir);
+      });
     });
-    rows.forEach(function (row) { tbody.appendChild(row); });
-  }
 
-  headers.forEach(function (th) {
-    var key = th.dataset.key;
-    var type = th.dataset.type;
-    if (type === 'none') return;
-    th.addEventListener('click', function () {
-      var dir = (currentSort.key === key && currentSort.dir === -1) ? 1 : -1;
-      currentSort = { key: key, dir: dir };
-      headers.forEach(function (h) { h.classList.remove('sorted'); h.removeAttribute('data-arrow'); });
-      th.classList.add('sorted');
-      th.setAttribute('data-arrow', dir === 1 ? '▲' : '▼');
-      sortRows(key, type, dir);
-    });
-  });
+    // Initial sort, per table.
+    sortRows(opts.defaultSortKey, opts.defaultSortType, opts.defaultSortDir);
+    var defaultHeader = table.querySelector('th[data-key="' + opts.defaultSortKey + '"]');
+    defaultHeader.classList.add('sorted');
+    defaultHeader.setAttribute('data-arrow', opts.defaultSortDir === 1 ? '▲' : '▼');
 
-  // Initial sort: composite score, descending.
-  sortRows('composite_score', 'num', -1);
-  var scoreHeader = table.querySelector('th[data-key="composite_score"]');
-  scoreHeader.classList.add('sorted');
-  scoreHeader.setAttribute('data-arrow', '▼');
+    var filterInput = document.getElementById(opts.filterId);
+    var resultCount = document.getElementById(opts.resultCountId);
+    var categoryFilters = document.getElementById(opts.categoryFiltersId);
+    var coopBox = categoryFilters.querySelector('[data-category="coop"]');
+    var partyBox = categoryFilters.querySelector('[data-category="party"]');
+    var tagBoxes = Array.prototype.slice.call(categoryFilters.querySelectorAll('[data-category-tag]'));
 
-  var filterInput = document.getElementById('filter');
-  var resultCount = document.getElementById('result-count');
-  var categoryFilters = document.getElementById('category-filters');
-  var coopBox = categoryFilters.querySelector('[data-category="coop"]');
-  var partyBox = categoryFilters.querySelector('[data-category="party"]');
-  var tagBoxes = Array.prototype.slice.call(categoryFilters.querySelectorAll('[data-category-tag]'));
-
-  function applyFilters() {
-    var needle = filterInput.value.trim().toLowerCase();
-    var checkedTags = tagBoxes.filter(function (el) { return el.checked; })
-      .map(function (el) { return el.dataset.categoryTag.toLowerCase(); });
-    var anyCategorySelected = coopBox.checked || partyBox.checked || checkedTags.length > 0;
-    var visible = 0;
-    rows.forEach(function (row) {
-      var textMatch = row.dataset.filterText.indexOf(needle) !== -1;
-      var categoryMatch = !anyCategorySelected;
-      if (!categoryMatch) {
-        if (coopBox.checked && row.dataset.isCoop === '1') categoryMatch = true;
-        if (partyBox.checked && row.dataset.isParty === '1') categoryMatch = true;
-        if (checkedTags.length) {
-          var rowTags = row.dataset.categoryTags ? row.dataset.categoryTags.split('|') : [];
-          for (var i = 0; i < checkedTags.length; i++) {
-            if (rowTags.indexOf(checkedTags[i]) !== -1) { categoryMatch = true; break; }
+    function applyFilters() {
+      var needle = filterInput.value.trim().toLowerCase();
+      var checkedTags = tagBoxes.filter(function (el) { return el.checked; })
+        .map(function (el) { return el.dataset.categoryTag.toLowerCase(); });
+      var anyCategorySelected = coopBox.checked || partyBox.checked || checkedTags.length > 0;
+      var visible = 0;
+      rows.forEach(function (row) {
+        var textMatch = row.dataset.filterText.indexOf(needle) !== -1;
+        var categoryMatch = !anyCategorySelected;
+        if (!categoryMatch) {
+          if (coopBox.checked && row.dataset.isCoop === '1') categoryMatch = true;
+          if (partyBox.checked && row.dataset.isParty === '1') categoryMatch = true;
+          if (checkedTags.length) {
+            var rowTags = row.dataset.categoryTags ? row.dataset.categoryTags.split('|') : [];
+            for (var i = 0; i < checkedTags.length; i++) {
+              if (rowTags.indexOf(checkedTags[i]) !== -1) { categoryMatch = true; break; }
+            }
           }
         }
-      }
-      var match = textMatch && categoryMatch;
-      row.classList.toggle('hidden-row', !match);
-      if (match) visible++;
+        var match = textMatch && categoryMatch;
+        row.classList.toggle('hidden-row', !match);
+        if (match) visible++;
+      });
+      resultCount.textContent = visible + opts.resultSuffix;
+    }
+
+    filterInput.addEventListener('input', applyFilters);
+    categoryFilters.querySelectorAll('input[type=checkbox]').forEach(function (el) {
+      el.addEventListener('change', applyFilters);
     });
-    resultCount.textContent = visible + ' games matched your criteria';
+
+    var moreTagsToggle = document.getElementById(opts.moreTagsToggleId);
+    if (moreTagsToggle) {
+      categoryFilters.classList.add('tags-collapsed');
+      moreTagsToggle.addEventListener('click', function () {
+        var collapsed = categoryFilters.classList.toggle('tags-collapsed');
+        moreTagsToggle.textContent = collapsed ? 'show more tags' : 'show fewer tags';
+      });
+    }
   }
 
-  filterInput.addEventListener('input', applyFilters);
-  categoryFilters.querySelectorAll('input[type=checkbox]').forEach(function (el) {
-    el.addEventListener('change', applyFilters);
+  setupTable({
+    tableId: 'games-table',
+    filterId: 'filter',
+    resultCountId: 'result-count',
+    categoryFiltersId: 'category-filters',
+    moreTagsToggleId: 'more-tags-toggle',
+    defaultSortKey: 'composite_score',
+    defaultSortType: 'num',
+    defaultSortDir: -1,
+    resultSuffix: ' games matched your criteria',
   });
 
-  var moreTagsToggle = document.getElementById('more-tags-toggle');
-  if (moreTagsToggle) {
-    categoryFilters.classList.add('tags-collapsed');
-    moreTagsToggle.addEventListener('click', function () {
-      var collapsed = categoryFilters.classList.toggle('tags-collapsed');
-      moreTagsToggle.textContent = collapsed ? 'show more tags' : 'show fewer tags';
-    });
-  }
+  setupTable({
+    tableId: 'unmatched-games-table',
+    filterId: 'unmatched-filter',
+    resultCountId: 'unmatched-result-count',
+    categoryFiltersId: 'unmatched-category-filters',
+    moreTagsToggleId: 'unmatched-more-tags-toggle',
+    // Highest fuzzy score first -- near-misses (most likely to be a real overlooked match) sort
+    // above genuine no-BGG-candidate cases, which carry no score at all.
+    defaultSortKey: 'match_score',
+    defaultSortType: 'num',
+    defaultSortDir: -1,
+    resultSuffix: ' games matched your criteria',
+  });
 })();
 </script>
 </body>

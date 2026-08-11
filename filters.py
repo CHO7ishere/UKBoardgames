@@ -33,11 +33,18 @@ _ACCESSORY_KEYWORDS = (
 )
 
 
-def is_probably_accessory(product: ZatuProduct) -> bool:
-    if product.product_type == "Accessories":
+def is_probably_accessory_fields(product_type: str | None, title: str) -> bool:
+    """Same check as `is_probably_accessory`, taking plain fields instead of a `ZatuProduct` --
+    for callers working off the committed JSON's raw dicts (e.g. the unmatched-games list),
+    which don't need a full `ZatuProduct` just to run this one check."""
+    if product_type == "Accessories":
         return True
-    title = product.title.lower()
+    title = title.lower()
     return any(keyword in title for keyword in _ACCESSORY_KEYWORDS)
+
+
+def is_probably_accessory(product: ZatuProduct) -> bool:
+    return is_probably_accessory_fields(product.product_type, product.title)
 
 
 def filter_board_games(products: list[ZatuProduct]) -> list[ZatuProduct]:

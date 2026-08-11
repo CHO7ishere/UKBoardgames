@@ -6,7 +6,7 @@
       "zatu_url": "https://zatu.com/products/pandemic-2013",
       "zatu_price_gbp": 31.95,
       "zatu_in_stock": true,
-      "zatu_ean": "0681706711003",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "30-45 Minutes",
@@ -51,7 +51,7 @@
       "zatu_url": "https://zatu.com/products/wingspan",
       "zatu_price_gbp": 39.99,
       "zatu_in_stock": true,
-      "zatu_ean": "0644216627721",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-5 Players",
         "10+",
@@ -95,7 +95,7 @@
       "zatu_url": "https://zatu.com/products/flip-7",
       "zatu_price_gbp": 7.44,
       "zatu_in_stock": true,
-      "zatu_ean": "0700304159960",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Card Games",
@@ -128,7 +128,7 @@
       "zatu_url": "https://zatu.com/products/quacks-of-quedlinburg",
       "zatu_price_gbp": 28.99,
       "zatu_in_stock": true,
-      "zatu_ean": "4001504882204",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "30-45 Minutes",
@@ -173,7 +173,7 @@
       "zatu_url": "https://zatu.com/products/ticket-to-ride-europe",
       "zatu_price_gbp": 32.99,
       "zatu_in_stock": true,
-      "zatu_ean": "0824968717929",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-5 Players",
         "45-60 Minutes",
@@ -221,7 +221,7 @@
       "zatu_url": "https://zatu.com/products/azul",
       "zatu_price_gbp": 29.99,
       "zatu_in_stock": true,
-      "zatu_ean": "0826956600107",
+      "zatu_ean": null,
       "zatu_tags": [
         "Azul",
         "BGG Golden Geek",
@@ -263,7 +263,7 @@
       "zatu_url": "https://zatu.com/products/7-wonders-duel",
       "zatu_price_gbp": 22.99,
       "zatu_in_stock": true,
-      "zatu_ean": "5425016923818",
+      "zatu_ean": null,
       "zatu_tags": [
         "7 Wonders",
         "BGG Golden Geek",
@@ -299,7 +299,7 @@
       "zatu_url": "https://zatu.com/products/splendor",
       "zatu_price_gbp": 24.85,
       "zatu_in_stock": true,
-      "zatu_ean": "3558380021537",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "20-30 Minutes",
@@ -342,7 +342,7 @@
       "zatu_url": "https://zatu.com/products/jaipur-2nd-edition",
       "zatu_price_gbp": 14.95,
       "zatu_in_stock": true,
-      "zatu_ean": "3558380063933",
+      "zatu_ean": null,
       "zatu_tags": [
         "2 Players",
         "20-30 Minutes",
@@ -382,7 +382,7 @@
       "zatu_url": "https://zatu.com/products/patchwork",
       "zatu_price_gbp": 22.99,
       "zatu_in_stock": true,
-      "zatu_ean": "4260402316901",
+      "zatu_ean": null,
       "zatu_tags": [
         "2 Players",
         "20-30 Minutes",
@@ -419,7 +419,7 @@
       "zatu_url": "https://zatu.com/products/sky-team",
       "zatu_price_gbp": 22.99,
       "zatu_in_stock": true,
-      "zatu_ean": "0807658001287",
+      "zatu_ean": null,
       "zatu_tags": [
         "2 Players",
         "Aviation",
@@ -455,7 +455,7 @@
       "zatu_url": "https://zatu.com/products/exit-advent-calendar-the-intergalactic-race",
       "zatu_price_gbp": 30.3,
       "zatu_in_stock": true,
-      "zatu_ean": "5060282511989",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-10+ Players",
         "30-45 Minutes",
@@ -483,8 +483,8 @@
       "bgg_rank": 4957,
       "bgg_average": 7.59064,
       "bgg_usersrated": 379,
-      "match_confidence": "MEDIUM",
-      "match_score": 93.97590361445783,
+      "match_confidence": "HIGH",
+      "match_score": 100.0,
       "quality_shrunk": 7.363,
       "quality_pts": 5.24,
       "quality_label": "STRONG"
@@ -495,7 +495,7 @@
       "zatu_url": "https://zatu.com/products/sea-salt-and-paper",
       "zatu_price_gbp": 11.9,
       "zatu_in_stock": true,
-      "zatu_ean": "3760267991073",
+      "zatu_ean": null,
       "zatu_tags": [
         "Best Sellers",
         "Board Games",
@@ -528,7 +528,7 @@
       "zatu_url": "https://zatu.com/products/root",
       "zatu_price_gbp": 56.25,
       "zatu_in_stock": true,
-      "zatu_ean": "0602573655900",
+      "zatu_ean": null,
       "zatu_tags": [
         "Back-Order",
         "BGG Golden Geek",
@@ -563,7 +563,7 @@
       "zatu_url": "https://zatu.com/products/kingdomino",
       "zatu_price_gbp": 15.95,
       "zatu_in_stock": true,
-      "zatu_ean": "5055341600025",
+      "zatu_ean": null,
       "zatu_tags": [
         "10-20 Minutes",
         "2-4 Players",
@@ -605,7 +605,7 @@
       "zatu_url": "https://zatu.com/products/terraforming-mars",
       "zatu_price_gbp": 55.95,
       "zatu_in_stock": true,
-      "zatu_ean": "0696859265808",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-5 Players",
         "90-120 Minutes",
@@ -651,7 +651,7 @@
       "zatu_url": "https://zatu.com/products/the-lord-of-the-rings-fate-of-the-fellowship",
       "zatu_price_gbp": 50.89,
       "zatu_in_stock": true,
-      "zatu_ean": "0841333132088",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Dice",
@@ -684,7 +684,7 @@
       "zatu_url": "https://zatu.com/products/gloomhaven-jaws-of-the-lion",
       "zatu_price_gbp": 35.99,
       "zatu_in_stock": true,
-      "zatu_ean": "0644216610563",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "90-120 Minutes",
@@ -726,7 +726,7 @@
       "zatu_url": "https://zatu.com/products/bomb-busters",
       "zatu_price_gbp": 26.89,
       "zatu_in_stock": true,
-      "zatu_ean": "4250231739545",
+      "zatu_ean": null,
       "zatu_tags": [
         "Best Sellers",
         "Board Games",
@@ -763,7 +763,7 @@
       "zatu_url": "https://zatu.com/products/cascadia",
       "zatu_price_gbp": 33.55,
       "zatu_in_stock": true,
-      "zatu_ean": "0729220070982",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "30-45 Minutes",
@@ -803,7 +803,7 @@
       "zatu_url": "https://zatu.com/products/wyrmspan",
       "zatu_price_gbp": 39.6,
       "zatu_in_stock": true,
-      "zatu_ean": "0850032180788",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-5 Players",
         "60-90 Minutes",
@@ -842,7 +842,7 @@
       "zatu_url": "https://zatu.com/products/brass-birmingham",
       "zatu_price_gbp": 61.8,
       "zatu_in_stock": true,
-      "zatu_ean": "9781988884042",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "90-120 Minutes",
@@ -884,7 +884,7 @@
       "zatu_url": "https://zatu.com/products/7-wonders-2nd-edition",
       "zatu_price_gbp": 31.49,
       "zatu_in_stock": true,
-      "zatu_ean": "5425016924006",
+      "zatu_ean": null,
       "zatu_tags": [
         "20-30 Minutes",
         "3-7 Players",
@@ -927,7 +927,7 @@
       "zatu_url": "https://zatu.com/products/harmonies",
       "zatu_price_gbp": 26.95,
       "zatu_in_stock": true,
-      "zatu_ean": "3558380116691",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "30-45 Minutes",
@@ -965,7 +965,7 @@
       "zatu_url": "https://zatu.com/products/sushi-go-party-game",
       "zatu_price_gbp": 18.35,
       "zatu_in_stock": true,
-      "zatu_ean": "0759751004194",
+      "zatu_ean": null,
       "zatu_tags": [
         "10-20 Minutes",
         "2-8 Players",
@@ -1004,7 +1004,7 @@
       "zatu_url": "https://zatu.com/products/the-lord-of-the-rings-duel-for-middle-earth",
       "zatu_price_gbp": 21.95,
       "zatu_in_stock": true,
-      "zatu_ean": "5425016928011",
+      "zatu_ean": null,
       "zatu_tags": [
         "2 Players",
         "30-45 Minutes",
@@ -1050,7 +1050,7 @@
       "zatu_url": "https://zatu.com/products/scythe",
       "zatu_price_gbp": 57.29,
       "zatu_in_stock": true,
-      "zatu_ean": "0653341025005",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-5 Players",
         "90-120 Minutes",
@@ -1097,7 +1097,7 @@
       "zatu_url": "https://zatu.com/products/ark-nova",
       "zatu_price_gbp": 47.99,
       "zatu_in_stock": true,
-      "zatu_ean": "0850000576407",
+      "zatu_ean": null,
       "zatu_tags": [
         "Best Sellers",
         "BGG Golden Geek",
@@ -1130,7 +1130,7 @@
       "zatu_url": "https://zatu.com/products/forest-shuffle",
       "zatu_price_gbp": 19.85,
       "zatu_in_stock": true,
-      "zatu_ean": "4260402316758",
+      "zatu_ean": null,
       "zatu_tags": [
         "Best Sellers",
         "Board Games",
@@ -1162,7 +1162,7 @@
       "zatu_url": "https://zatu.com/products/finspan",
       "zatu_price_gbp": 32.75,
       "zatu_in_stock": true,
-      "zatu_ean": "0850032180931",
+      "zatu_ean": null,
       "zatu_tags": [
         "Best Sellers",
         "Board Games",
@@ -1195,7 +1195,7 @@
       "zatu_url": "https://zatu.com/products/thames-murders-sherlock-holmes-consulting-detective-2017",
       "zatu_price_gbp": 37.95,
       "zatu_in_stock": true,
-      "zatu_ean": "9782370990075",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Golden Pear",
@@ -1229,7 +1229,7 @@
       "zatu_url": "https://zatu.com/products/chronicles-of-crime",
       "zatu_price_gbp": 22.45,
       "zatu_in_stock": true,
-      "zatu_ean": "0603813959628",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "60-90 Minutes",
@@ -1269,7 +1269,7 @@
       "zatu_url": "https://zatu.com/products/marvel-champions-the-card-game",
       "zatu_price_gbp": 39.99,
       "zatu_in_stock": true,
-      "zatu_ean": "0841333109967",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "60-90 Minutes",
@@ -1315,7 +1315,7 @@
       "zatu_url": "https://zatu.com/products/dorfromantik-the-board-game",
       "zatu_price_gbp": 32.75,
       "zatu_in_stock": true,
-      "zatu_ean": "4250231735486",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-6 Players",
         "45-60 Minutes",
@@ -1355,7 +1355,7 @@
       "zatu_url": "https://zatu.com/products/courtisans",
       "zatu_price_gbp": 17.49,
       "zatu_in_stock": true,
-      "zatu_ean": "5065014806258",
+      "zatu_ean": null,
       "zatu_tags": [
         "Back-Order",
         "Best Sellers",
@@ -1386,7 +1386,7 @@
       "zatu_url": "https://zatu.com/products/exit-dead-man-orient-express",
       "zatu_price_gbp": 12.75,
       "zatu_in_stock": true,
-      "zatu_ean": "0814743013582",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "12+",
@@ -1413,8 +1413,8 @@
       "bgg_rank": 614,
       "bgg_average": 7.52633,
       "bgg_usersrated": 5644,
-      "match_confidence": "MEDIUM",
-      "match_score": 92.53731343283582,
+      "match_confidence": "HIGH",
+      "match_score": 100.0,
       "quality_shrunk": 7.508,
       "quality_pts": 9.91,
       "quality_label": "STRONG"
@@ -1425,7 +1425,7 @@
       "zatu_url": "https://zatu.com/products/flamme-rouge",
       "zatu_price_gbp": 29.99,
       "zatu_in_stock": true,
-      "zatu_ean": "6430018270517",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "30-45 Minutes",
@@ -1461,7 +1461,7 @@
       "zatu_url": "https://zatu.com/products/arboretum",
       "zatu_price_gbp": 18.2,
       "zatu_in_stock": true,
-      "zatu_ean": "0850505008304",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "20-30 Minutes",
@@ -1498,7 +1498,7 @@
       "zatu_url": "https://zatu.com/products/slay-the-spire-the-board-game",
       "zatu_price_gbp": 91.95,
       "zatu_in_stock": true,
-      "zatu_ean": "0745808253646",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "120-150 Minutes",
@@ -1538,7 +1538,7 @@
       "zatu_url": "https://zatu.com/products/the-lord-of-the-rings-journeys-in-middle-earth",
       "zatu_price_gbp": 87.9,
       "zatu_in_stock": true,
-      "zatu_ean": "0841333107086",
+      "zatu_ean": null,
       "zatu_tags": [
         "BGG Top 100",
         "Board Games",
@@ -1572,7 +1572,7 @@
       "zatu_url": "https://zatu.com/products/micromacro-crime-city",
       "zatu_price_gbp": 21.29,
       "zatu_in_stock": true,
-      "zatu_ean": "4250231728082",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "30-45 Minutes",
@@ -1614,7 +1614,7 @@
       "zatu_url": "https://zatu.com/products/barenpark",
       "zatu_price_gbp": 29.99,
       "zatu_in_stock": true,
-      "zatu_ean": "4260402315898",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "30-45 Minutes",
@@ -1650,7 +1650,7 @@
       "zatu_url": "https://zatu.com/products/castle-combo",
       "zatu_price_gbp": 17.45,
       "zatu_in_stock": true,
-      "zatu_ean": "5065014806357",
+      "zatu_ean": null,
       "zatu_tags": [
         "10-20 Minutes",
         "2-5 Players",
@@ -1686,7 +1686,7 @@
       "zatu_url": "https://zatu.com/products/exit-advent-calendar-the-silent-storm",
       "zatu_price_gbp": 31.8,
       "zatu_in_stock": true,
-      "zatu_ean": "5060282511552",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "Board Games",
@@ -1710,8 +1710,8 @@
       "bgg_rank": 2739,
       "bgg_average": 7.83709,
       "bgg_usersrated": 793,
-      "match_confidence": "MEDIUM",
-      "match_score": 92.95774647887323,
+      "match_confidence": "HIGH",
+      "match_score": 100.0,
       "quality_shrunk": 7.687,
       "quality_pts": 15.67,
       "quality_label": "STRONG"
@@ -1722,7 +1722,7 @@
       "zatu_url": "https://zatu.com/products/splendor-duel",
       "zatu_price_gbp": 20.05,
       "zatu_in_stock": true,
-      "zatu_ean": "3558380100294",
+      "zatu_ean": null,
       "zatu_tags": [
         "2 Players",
         "20-30 Minutes",
@@ -1761,7 +1761,7 @@
       "zatu_url": "https://zatu.com/products/azul-summer-pavilion",
       "zatu_price_gbp": 36.99,
       "zatu_in_stock": true,
-      "zatu_ean": "0826956600503",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "30-45 Minutes",
@@ -1799,7 +1799,7 @@
       "zatu_url": "https://zatu.com/products/stardew-valley-the-board-game",
       "zatu_price_gbp": 49.29,
       "zatu_in_stock": true,
-      "zatu_ean": "0703355455531",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "180+ Minutes",
@@ -1842,7 +1842,7 @@
       "zatu_url": "https://zatu.com/products/a-gentle-rain",
       "zatu_price_gbp": 21.99,
       "zatu_in_stock": true,
-      "zatu_ean": "0810041483966",
+      "zatu_ean": null,
       "zatu_tags": [
         "1 Players",
         "Best Sellers",
@@ -1877,7 +1877,7 @@
       "zatu_url": "https://zatu.com/products/spirit-island-core-game",
       "zatu_price_gbp": 67.0,
       "zatu_in_stock": true,
-      "zatu_ean": "0798304339291",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "90-120 Minutes",
@@ -1919,7 +1919,7 @@
       "zatu_url": "https://zatu.com/products/the-crew-mission-deep-sea",
       "zatu_price_gbp": 12.7,
       "zatu_in_stock": true,
-      "zatu_ean": "0814743015975",
+      "zatu_ean": null,
       "zatu_tags": [
         "10-20 Minutes",
         "2-5 Players",
@@ -1964,7 +1964,7 @@
       "zatu_url": "https://zatu.com/products/horrified-dungeons-dragons",
       "zatu_price_gbp": 22.25,
       "zatu_in_stock": true,
-      "zatu_ean": "4005556247547",
+      "zatu_ean": null,
       "zatu_tags": [
         "Best Sellers",
         "Board Games",
@@ -1996,7 +1996,7 @@
       "zatu_url": "https://zatu.com/products/gwent-the-legendary-card-game",
       "zatu_price_gbp": 35.99,
       "zatu_in_stock": true,
-      "zatu_ean": "0612735072032",
+      "zatu_ean": null,
       "zatu_tags": [
         "Best Sellers",
         "Board Games",
@@ -2031,7 +2031,7 @@
       "zatu_url": "https://zatu.com/products/flamecraft",
       "zatu_price_gbp": 29.2,
       "zatu_in_stock": true,
-      "zatu_ean": "0196852692798",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-5 Players",
         "45-60 Minutes",
@@ -2067,7 +2067,7 @@
       "zatu_url": "https://zatu.com/products/dune-imperium-uprising",
       "zatu_price_gbp": 45.95,
       "zatu_in_stock": true,
-      "zatu_ean": "0810058800282",
+      "zatu_ean": null,
       "zatu_tags": [
         "Best Sellers",
         "Board Games",
@@ -2100,7 +2100,7 @@
       "zatu_url": "https://zatu.com/products/klask",
       "zatu_price_gbp": 42.99,
       "zatu_in_stock": true,
-      "zatu_ean": "6430031713503",
+      "zatu_ean": null,
       "zatu_tags": [
         "2 Players",
         "Big Potato",
@@ -2138,7 +2138,7 @@
       "zatu_url": "https://zatu.com/products/blood-on-the-clocktower",
       "zatu_price_gbp": 118.65,
       "zatu_in_stock": true,
-      "zatu_ean": "0787790164142",
+      "zatu_ean": null,
       "zatu_tags": [
         "15+",
         "6-10+ Players",
@@ -2172,7 +2172,7 @@
       "zatu_url": "https://zatu.com/products/seti-search-for-extraterrestrial-intelligence",
       "zatu_price_gbp": 53.9,
       "zatu_in_stock": true,
-      "zatu_ean": "8594156311209",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "120-150 Minutes",
@@ -2210,7 +2210,7 @@
       "zatu_url": "https://zatu.com/products/earthborne-rangers",
       "zatu_price_gbp": 76.45,
       "zatu_in_stock": true,
-      "zatu_ean": "0741365775041",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "180+ Minutes",
@@ -2247,7 +2247,7 @@
       "zatu_url": "https://zatu.com/products/azul-master-chocolatier",
       "zatu_price_gbp": 42.99,
       "zatu_in_stock": true,
-      "zatu_ean": "0826956601104",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "30-45 Minutes",
@@ -2284,7 +2284,7 @@
       "zatu_url": "https://zatu.com/products/the-isle-of-cats",
       "zatu_price_gbp": 39.89,
       "zatu_in_stock": true,
-      "zatu_ean": "5060716751011",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "60-90 Minutes",
@@ -2324,7 +2324,7 @@
       "zatu_url": "https://zatu.com/products/clank-catacombs",
       "zatu_price_gbp": 52.45,
       "zatu_in_stock": true,
-      "zatu_ean": "0810058800145",
+      "zatu_ean": null,
       "zatu_tags": [
         "Best Sellers",
         "BGG Golden Geek",
@@ -2356,7 +2356,7 @@
       "zatu_url": "https://zatu.com/products/ganz-schon-clever",
       "zatu_price_gbp": 11.85,
       "zatu_in_stock": true,
-      "zatu_ean": "4001504881986",
+      "zatu_ean": null,
       "zatu_tags": [
         "BGG Golden Geek",
         "Board Games",
@@ -2382,12 +2382,53 @@
       "quality_label": "STRONG"
     },
     {
+      "zatu_handle": "exit-the-abandoned-cabin",
+      "zatu_title": "EXIT - The Abandoned Cabin",
+      "zatu_url": "https://zatu.com/products/exit-the-abandoned-cabin",
+      "zatu_price_gbp": 12.75,
+      "zatu_in_stock": true,
+      "zatu_ean": null,
+      "zatu_tags": [
+        "1-6 Players",
+        "90-120 Minutes",
+        "Board Games",
+        "Companion App",
+        "Cooperative",
+        "Deduction",
+        "Escape Room Games",
+        "EXIT",
+        "Golden Pear",
+        "Inka Brand",
+        "Kennerspiel",
+        "Markus Brand",
+        "Next Day Delivery",
+        "no gift wrap",
+        "Stocking Fillers",
+        "Thames & Kosmos",
+        "Top 5000 Board Games",
+        "Zatu Silver Award"
+      ],
+      "zatu_is_coop": true,
+      "zatu_is_party": false,
+      "bgg_id": 203420,
+      "bgg_name": "EXIT: The Game \u2013 The Abandoned Cabin",
+      "bgg_year": 2016,
+      "bgg_rank": 422,
+      "bgg_average": 7.39858,
+      "bgg_usersrated": 12238,
+      "match_confidence": "HIGH",
+      "match_score": 100.0,
+      "quality_shrunk": 7.391,
+      "quality_pts": 6.15,
+      "quality_label": "UNLABELED"
+    },
+    {
       "zatu_handle": "dune-imperium",
       "zatu_title": "Dune: Imperium",
       "zatu_url": "https://zatu.com/products/dune-imperium",
       "zatu_price_gbp": 43.95,
       "zatu_in_stock": true,
-      "zatu_ean": "0810058800008",
+      "zatu_ean": null,
       "zatu_tags": [
         "BGG Golden Geek",
         "BGG Top 100",
@@ -2425,7 +2466,7 @@
       "zatu_url": "https://zatu.com/products/micromacro-crime-city-full-house",
       "zatu_price_gbp": 20.99,
       "zatu_in_stock": true,
-      "zatu_ean": "0850066043080",
+      "zatu_ean": null,
       "zatu_tags": [
         "Best Sellers",
         "Board Games",
@@ -2458,7 +2499,7 @@
       "zatu_url": "https://zatu.com/products/exit-advent-calendar-the-missing-hollywood-star",
       "zatu_price_gbp": 29.95,
       "zatu_in_stock": true,
-      "zatu_ean": "5060282511743",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-10+ Players",
         "Advent Calendar",
@@ -2482,8 +2523,8 @@
       "bgg_rank": 3174,
       "bgg_average": 7.7298,
       "bgg_usersrated": 684,
-      "match_confidence": "MEDIUM",
-      "match_score": 94.5054945054945,
+      "match_confidence": "HIGH",
+      "match_score": 100.0,
       "quality_shrunk": 7.573,
       "quality_pts": 11.99,
       "quality_label": "STRONG"
@@ -2494,7 +2535,7 @@
       "zatu_url": "https://zatu.com/products/compile-main-2",
       "zatu_price_gbp": 19.99,
       "zatu_in_stock": true,
-      "zatu_ean": "0850008736551",
+      "zatu_ean": null,
       "zatu_tags": [
         "Best Sellers",
         "Board Games",
@@ -2528,7 +2569,7 @@
       "zatu_url": "https://zatu.com/products/escape-the-dark-castle",
       "zatu_price_gbp": 28.99,
       "zatu_in_stock": true,
-      "zatu_ean": "5060548580001",
+      "zatu_ean": null,
       "zatu_tags": [
         "Back-Order",
         "Board Games",
@@ -2558,7 +2599,7 @@
       "zatu_url": "https://zatu.com/products/zombie-kidz-evolution",
       "zatu_price_gbp": 18.95,
       "zatu_in_stock": true,
-      "zatu_ean": "0807658000792",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Mother's Day",
@@ -2587,7 +2628,7 @@
       "zatu_url": "https://zatu.com/products/hanamikoji",
       "zatu_price_gbp": 16.9,
       "zatu_in_stock": true,
-      "zatu_ean": "4713052640013",
+      "zatu_ean": null,
       "zatu_tags": [
         "2 Players",
         "Area Control",
@@ -2624,7 +2665,7 @@
       "zatu_url": "https://zatu.com/products/mansions-madness-2nd-edition",
       "zatu_price_gbp": 85.45,
       "zatu_in_stock": true,
-      "zatu_ean": "0841333101213",
+      "zatu_ean": null,
       "zatu_tags": [
         "BGG Golden Geek",
         "BGG Top 100",
@@ -2659,7 +2700,7 @@
       "zatu_url": "https://zatu.com/products/lost-ruins-of-arnak",
       "zatu_price_gbp": 48.5,
       "zatu_in_stock": true,
-      "zatu_ean": "8594156310592",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "90-120 Minutes",
@@ -2699,7 +2740,7 @@
       "zatu_url": "https://zatu.com/products/the-white-castle",
       "zatu_price_gbp": 26.95,
       "zatu_in_stock": true,
-      "zatu_ean": "8436607940593",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "60-90 Minutes",
@@ -2738,7 +2779,7 @@
       "zatu_url": "https://zatu.com/products/gloomhaven-buttons-bugs",
       "zatu_price_gbp": 16.69,
       "zatu_in_stock": true,
-      "zatu_ean": "0732388179008",
+      "zatu_ean": null,
       "zatu_tags": [
         "Back-Order",
         "Board Games",
@@ -2768,7 +2809,7 @@
       "zatu_url": "https://zatu.com/products/so-clover",
       "zatu_price_gbp": 17.99,
       "zatu_in_stock": true,
-      "zatu_ean": "5425016924983",
+      "zatu_ean": null,
       "zatu_tags": [
         "Best Sellers",
         "BGG Golden Geek",
@@ -2800,7 +2841,7 @@
       "zatu_url": "https://zatu.com/products/the-taverns-of-tiefenthal",
       "zatu_price_gbp": 36.99,
       "zatu_in_stock": true,
-      "zatu_ean": "4001504882556",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "45-60 Minutes",
@@ -2835,7 +2876,7 @@
       "zatu_url": "https://zatu.com/products/star-wars-rebellion",
       "zatu_price_gbp": 85.95,
       "zatu_in_stock": true,
-      "zatu_ean": "0841333101053",
+      "zatu_ean": null,
       "zatu_tags": [
         "180+ Minutes",
         "2-4 Players",
@@ -2888,7 +2929,7 @@
       "zatu_url": "https://zatu.com/products/escape-the-dark-sector",
       "zatu_price_gbp": 32.65,
       "zatu_in_stock": true,
-      "zatu_ean": "5060548580131",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "45-60 Minutes",
@@ -2924,7 +2965,7 @@
       "zatu_url": "https://zatu.com/products/unlock",
       "zatu_price_gbp": 19.45,
       "zatu_in_stock": true,
-      "zatu_ean": "3558380044314",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Card Games",
@@ -2958,7 +2999,7 @@
       "zatu_url": "https://zatu.com/products/lacuna",
       "zatu_price_gbp": 19.89,
       "zatu_in_stock": true,
-      "zatu_ean": "0860009077515",
+      "zatu_ean": null,
       "zatu_tags": [
         "2 Players",
         "Area Control",
@@ -2992,7 +3033,7 @@
       "zatu_url": "https://zatu.com/products/destinies",
       "zatu_price_gbp": 28.99,
       "zatu_in_stock": true,
-      "zatu_ean": "0752830298484",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-3 Players",
         "120-150 Minutes",
@@ -3030,7 +3071,7 @@
       "zatu_url": "https://zatu.com/products/cozy-stickerville",
       "zatu_price_gbp": 36.95,
       "zatu_in_stock": true,
-      "zatu_ean": "0841333134440",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-6 Players",
         "20-30 Minutes",
@@ -3061,7 +3102,7 @@
       "zatu_url": "https://zatu.com/products/skull-king",
       "zatu_price_gbp": 12.55,
       "zatu_in_stock": true,
-      "zatu_ean": "0713757559539",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-8 Players",
         "20-30 Minutes",
@@ -3096,7 +3137,7 @@
       "zatu_url": "https://zatu.com/products/monikers",
       "zatu_price_gbp": 18.99,
       "zatu_in_stock": true,
-      "zatu_ean": "0869388000008",
+      "zatu_ean": null,
       "zatu_tags": [
         "4-10+ Players",
         "45-60 Minutes",
@@ -3129,7 +3170,7 @@
       "zatu_url": "https://zatu.com/products/tag-team",
       "zatu_price_gbp": 22.0,
       "zatu_in_stock": true,
-      "zatu_ean": "0807658001683",
+      "zatu_ean": null,
       "zatu_tags": [
         "Best Sellers",
         "Board Games",
@@ -3166,7 +3207,7 @@
       "zatu_url": "https://zatu.com/products/the-resistance-avalon",
       "zatu_price_gbp": 19.95,
       "zatu_in_stock": true,
-      "zatu_ean": "0722301926192",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Golden Pear",
@@ -3197,7 +3238,7 @@
       "zatu_url": "https://zatu.com/products/viticulture-essential-edition",
       "zatu_price_gbp": 46.09,
       "zatu_in_stock": true,
-      "zatu_ean": "0748252980618",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-6 Players",
         "60-90 Minutes",
@@ -3241,7 +3282,7 @@
       "zatu_url": "https://zatu.com/products/deep-regrets",
       "zatu_price_gbp": 48.0,
       "zatu_in_stock": true,
-      "zatu_ean": "5070002482420",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-5 Players",
         "120-150 Minutes",
@@ -3280,7 +3321,7 @@
       "zatu_url": "https://zatu.com/products/kelp-standard-edition",
       "zatu_price_gbp": 40.0,
       "zatu_in_stock": true,
-      "zatu_ean": "4262376840222",
+      "zatu_ean": null,
       "zatu_tags": [
         "2 Players",
         "Asymmetric",
@@ -3314,7 +3355,7 @@
       "zatu_url": "https://zatu.com/products/toy-battle",
       "zatu_price_gbp": 19.99,
       "zatu_in_stock": true,
-      "zatu_ean": "5425016928493",
+      "zatu_ean": null,
       "zatu_tags": [
         "10-20 Minutes",
         "Area Control",
@@ -3345,7 +3386,7 @@
       "zatu_url": "https://zatu.com/products/dorfromantik-sakura",
       "zatu_price_gbp": 28.95,
       "zatu_in_stock": true,
-      "zatu_ean": "4250231740435",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-6 Players",
         "60-90 Minutes",
@@ -3379,7 +3420,7 @@
       "zatu_url": "https://zatu.com/products/wandering-towers",
       "zatu_price_gbp": 29.99,
       "zatu_in_stock": true,
-      "zatu_ean": "0850045365127",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-6 Players",
         "20-30 Minutes",
@@ -3416,7 +3457,7 @@
       "zatu_url": "https://zatu.com/products/micromacro-kids-crazy-city-park",
       "zatu_price_gbp": 23.99,
       "zatu_in_stock": true,
-      "zatu_ean": "7091351017352",
+      "zatu_ean": null,
       "zatu_tags": [
         "Best Sellers",
         "Board Games",
@@ -3450,7 +3491,7 @@
       "zatu_url": "https://zatu.com/products/turing-machine",
       "zatu_price_gbp": 26.15,
       "zatu_in_stock": true,
-      "zatu_ean": "0807658001201",
+      "zatu_ean": null,
       "zatu_tags": [
         "Back-Order",
         "Best Sellers",
@@ -3480,7 +3521,7 @@
       "zatu_url": "https://zatu.com/products/ticket-to-ride-legacy-legends-of-the-west",
       "zatu_price_gbp": 79.95,
       "zatu_in_stock": true,
-      "zatu_ean": "0824968200360",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-5 Players",
         "60-90 Minutes",
@@ -3518,7 +3559,7 @@
       "zatu_url": "https://zatu.com/products/concordia",
       "zatu_price_gbp": 40.35,
       "zatu_in_stock": true,
-      "zatu_ean": "4280000097088",
+      "zatu_ean": null,
       "zatu_tags": [
         "BGG Top 100",
         "Board Games",
@@ -3549,7 +3590,7 @@
       "zatu_url": "https://zatu.com/products/forest-shuffle-dartmoor",
       "zatu_price_gbp": 22.49,
       "zatu_in_stock": true,
-      "zatu_ean": "4260402316567",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-5 Players",
         "45-60 Minutes",
@@ -3583,7 +3624,7 @@
       "zatu_url": "https://zatu.com/products/sherlock-holmes-consulting-detective-the-baker-street-irregulars",
       "zatu_price_gbp": 38.35,
       "zatu_in_stock": true,
-      "zatu_ean": "9782370990112",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-8 Players",
         "60-90 Minutes",
@@ -3621,7 +3662,7 @@
       "zatu_url": "https://zatu.com/products/agricola",
       "zatu_price_gbp": 33.05,
       "zatu_in_stock": true,
-      "zatu_ean": "4260402315287",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-5 Players",
         "120-150 Minutes",
@@ -3663,7 +3704,7 @@
       "zatu_url": "https://zatu.com/products/under-falling-skies",
       "zatu_price_gbp": 24.4,
       "zatu_in_stock": true,
-      "zatu_ean": "8594156310585",
+      "zatu_ean": null,
       "zatu_tags": [
         "1 Players",
         "30-45 Minutes",
@@ -3703,7 +3744,7 @@
       "zatu_url": "https://zatu.com/products/unlock-5-heroic-adventures",
       "zatu_price_gbp": 24.85,
       "zatu_in_stock": true,
-      "zatu_ean": "3558380062974",
+      "zatu_ean": null,
       "zatu_tags": [
         "Back-Order",
         "Board Games",
@@ -3733,7 +3774,7 @@
       "zatu_url": "https://zatu.com/products/feed-the-kraken",
       "zatu_price_gbp": 33.29,
       "zatu_in_stock": true,
-      "zatu_ean": "0625012193955",
+      "zatu_ean": null,
       "zatu_tags": [
         "5-10 Players",
         "Board Games",
@@ -3762,7 +3803,7 @@
       "zatu_url": "https://zatu.com/products/res-arcana",
       "zatu_price_gbp": 21.99,
       "zatu_in_stock": true,
-      "zatu_ean": "0850004236116",
+      "zatu_ean": null,
       "zatu_tags": [
         "12+",
         "2-4 Players",
@@ -3799,7 +3840,7 @@
       "zatu_url": "https://zatu.com/products/schotten-totten",
       "zatu_price_gbp": 10.89,
       "zatu_in_stock": true,
-      "zatu_ean": "3760175513039",
+      "zatu_ean": null,
       "zatu_tags": [
         "10-20 Minutes",
         "2 Players",
@@ -3835,7 +3876,7 @@
       "zatu_url": "https://zatu.com/products/unmatched-cobble-fog",
       "zatu_price_gbp": 28.09,
       "zatu_in_stock": true,
-      "zatu_ean": "3760175518058",
+      "zatu_ean": null,
       "zatu_tags": [
         "Best Sellers",
         "Board Games",
@@ -3868,7 +3909,7 @@
       "zatu_url": "https://zatu.com/products/sail",
       "zatu_price_gbp": 14.65,
       "zatu_in_stock": true,
-      "zatu_ean": "0618149323340",
+      "zatu_ean": null,
       "zatu_tags": [
         "8+",
         "Back-Order",
@@ -3897,7 +3938,7 @@
       "zatu_url": "https://zatu.com/products/duel-for-cardia",
       "zatu_price_gbp": 11.95,
       "zatu_in_stock": true,
-      "zatu_ean": "3558380133506",
+      "zatu_ean": null,
       "zatu_tags": [
         "10-20 Minutes",
         "2 Players",
@@ -3930,7 +3971,7 @@
       "zatu_url": "https://zatu.com/products/the-quacks-of-quedlinburg-the-duel",
       "zatu_price_gbp": 17.75,
       "zatu_in_stock": true,
-      "zatu_ean": "4001504884925",
+      "zatu_ean": null,
       "zatu_tags": [
         "2 Players",
         "45-60 Minutes",
@@ -3966,7 +4007,7 @@
       "zatu_url": "https://zatu.com/products/earth",
       "zatu_price_gbp": 29.36,
       "zatu_in_stock": true,
-      "zatu_ean": "0619264453127",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-5 Players",
         "60-90 Minutes",
@@ -3999,7 +4040,7 @@
       "zatu_url": "https://zatu.com/products/undaunted-normandy",
       "zatu_price_gbp": 24.89,
       "zatu_in_stock": true,
-      "zatu_ean": "9781472834706",
+      "zatu_ean": null,
       "zatu_tags": [
         "2 Players",
         "45-60 Minutes",
@@ -4040,7 +4081,7 @@
       "zatu_url": "https://zatu.com/products/heroes-of-barcadia",
       "zatu_price_gbp": 47.69,
       "zatu_in_stock": true,
-      "zatu_ean": "0850036587132",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-6 Players",
         "60-90 Minutes",
@@ -4075,7 +4116,7 @@
       "zatu_url": "https://zatu.com/products/grand-austria-hotel",
       "zatu_price_gbp": 42.99,
       "zatu_in_stock": true,
-      "zatu_ean": "4260402316529",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "90-120 Minutes",
@@ -4113,7 +4154,7 @@
       "zatu_url": "https://zatu.com/products/le-havre",
       "zatu_price_gbp": 32.99,
       "zatu_in_stock": true,
-      "zatu_ean": "0029877035182",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-5 Players",
         "120-150 Minutes",
@@ -4149,7 +4190,7 @@
       "zatu_url": "https://zatu.com/products/micro-macro-crime-city-4-showdown",
       "zatu_price_gbp": 9.89,
       "zatu_in_stock": true,
-      "zatu_ean": "0850066043103",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Father's Day",
@@ -4179,7 +4220,7 @@
       "zatu_url": "https://zatu.com/products/azul-stained-glass-of-sintra",
       "zatu_price_gbp": 33.99,
       "zatu_in_stock": true,
-      "zatu_ean": "0826956600114",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "30-45 Minutes",
@@ -4219,7 +4260,7 @@
       "zatu_url": "https://zatu.com/products/a-place-for-all-my-books-board-game",
       "zatu_price_gbp": 39.99,
       "zatu_in_stock": true,
-      "zatu_ean": "0894769000407",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "45-60 Minutes",
@@ -4246,12 +4287,50 @@
       "quality_label": "UNLABELED"
     },
     {
+      "zatu_handle": "exit-the-venice-conspiracy",
+      "zatu_title": "EXIT: The Venice Conspiracy",
+      "zatu_url": "https://zatu.com/products/exit-the-venice-conspiracy",
+      "zatu_price_gbp": 12.45,
+      "zatu_in_stock": true,
+      "zatu_ean": null,
+      "zatu_tags": [
+        "1-4 Players",
+        "60-90 Minutes",
+        "Action/Adventure",
+        "Adventure",
+        "Best Sellers",
+        "Board Games",
+        "Companion App",
+        "Cooperative",
+        "Deduction",
+        "EXIT",
+        "Fun for Kids",
+        "Next Day Delivery",
+        "no gift wrap",
+        "Thames & Kosmos",
+        "Top 5000 Board Games"
+      ],
+      "zatu_is_coop": true,
+      "zatu_is_party": false,
+      "bgg_id": 406312,
+      "bgg_name": "EXIT: The Game \u2013 The Venice Conspiracy",
+      "bgg_year": 2024,
+      "bgg_rank": 5452,
+      "bgg_average": 7.7894,
+      "bgg_usersrated": 305,
+      "match_confidence": "HIGH",
+      "match_score": 100.0,
+      "quality_shrunk": 7.471,
+      "quality_pts": 8.71,
+      "quality_label": "STRONG"
+    },
+    {
       "zatu_handle": "cyclades-legendary-edition",
       "zatu_title": "Cyclades Legendary edition",
       "zatu_url": "https://zatu.com/products/cyclades-legendary-edition",
       "zatu_price_gbp": 55.49,
       "zatu_in_stock": true,
-      "zatu_ean": "3616450013711",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-6 Players",
         "60-90 Minutes",
@@ -4288,7 +4367,7 @@
       "zatu_url": "https://zatu.com/products/gloomhaven-2nd-edition",
       "zatu_price_gbp": 128.69,
       "zatu_in_stock": true,
-      "zatu_ean": "0732388600946",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "90-120 Minutes",
@@ -4327,7 +4406,7 @@
       "zatu_url": "https://zatu.com/products/unlock-6-timeless-adventures",
       "zatu_price_gbp": 23.95,
       "zatu_in_stock": true,
-      "zatu_ean": "3558380070634",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-6 Players",
         "60-90 Minutes",
@@ -4359,7 +4438,7 @@
       "zatu_url": "https://zatu.com/products/for-northwood",
       "zatu_price_gbp": 11.89,
       "zatu_in_stock": true,
-      "zatu_ean": "0658580369866",
+      "zatu_ean": null,
       "zatu_tags": [
         "Back-Order",
         "Board Games",
@@ -4382,12 +4461,49 @@
       "quality_label": "STRONG"
     },
     {
+      "zatu_handle": "unmatched-battle-of-legends-vol-3",
+      "zatu_title": "Unmatched : Battle of Legends Vol.3",
+      "zatu_url": "https://zatu.com/products/unmatched-battle-of-legends-vol-3",
+      "zatu_price_gbp": 29.9,
+      "zatu_in_stock": true,
+      "zatu_ean": null,
+      "zatu_tags": [
+        "2-4 Players",
+        "30-45 Minutes",
+        "Board Games",
+        "Campaign",
+        "Card Games",
+        "Fantasy",
+        "Fighting",
+        "Hand Management",
+        "Iello",
+        "no gift wrap",
+        "Novel-based",
+        "Top 5000 Board Games",
+        "Unmatched",
+        "Zatu Platinum Award"
+      ],
+      "zatu_is_coop": false,
+      "zatu_is_party": false,
+      "bgg_id": 439765,
+      "bgg_name": "Unmatched: Battle of Legends, Volume Three",
+      "bgg_year": 2025,
+      "bgg_rank": 2990,
+      "bgg_average": 8.5274,
+      "bgg_usersrated": 557,
+      "match_confidence": "HIGH",
+      "match_score": 100.0,
+      "quality_shrunk": 8.219,
+      "quality_pts": 32.75,
+      "quality_label": "EXCELLENT"
+    },
+    {
       "zatu_handle": "a-feast-for-odin",
       "zatu_title": "A Feast for Odin",
       "zatu_url": "https://zatu.com/products/a-feast-for-odin",
       "zatu_price_gbp": 53.15,
       "zatu_in_stock": true,
-      "zatu_ean": "0681706716909",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "90-120 Minutes",
@@ -4432,7 +4548,7 @@
       "zatu_url": "https://zatu.com/products/eldritch-horror",
       "zatu_price_gbp": 42.75,
       "zatu_in_stock": true,
-      "zatu_ean": "9781616617660",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-8 Players",
         "150-180 Minutes",
@@ -4467,7 +4583,7 @@
       "zatu_url": "https://zatu.com/products/great-western-trail-2nd-edition",
       "zatu_price_gbp": 26.15,
       "zatu_in_stock": true,
-      "zatu_ean": "4061897501601",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "120-150 Minutes",
@@ -4505,7 +4621,7 @@
       "zatu_url": "https://zatu.com/products/unmatched-robin-hood-vs-bigfoot",
       "zatu_price_gbp": 20.4,
       "zatu_in_stock": true,
-      "zatu_ean": "3760175517594",
+      "zatu_ean": null,
       "zatu_tags": [
         "10-20 Minutes",
         "2 Players",
@@ -4546,7 +4662,7 @@
       "zatu_url": "https://zatu.com/products/take-time",
       "zatu_price_gbp": 19.15,
       "zatu_in_stock": true,
-      "zatu_ean": "3558380131168",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "20-30 Minutes",
@@ -4578,7 +4694,7 @@
       "zatu_url": "https://zatu.com/products/the-lord-of-the-rings-the-two-towers-trick-taking-game",
       "zatu_price_gbp": 20.8,
       "zatu_in_stock": true,
-      "zatu_ean": "0841333134334",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "10-20 Minutes",
@@ -4613,7 +4729,7 @@
       "zatu_url": "https://zatu.com/products/ra",
       "zatu_price_gbp": 45.25,
       "zatu_in_stock": true,
-      "zatu_ean": "0860006586829",
+      "zatu_ean": null,
       "zatu_tags": [
         "Back-Order",
         "Board Games",
@@ -4643,7 +4759,7 @@
       "zatu_url": "https://zatu.com/products/unmatched-adventures-teenage-mutant-ninja-turtles-2",
       "zatu_price_gbp": 56.95,
       "zatu_in_stock": true,
-      "zatu_ean": "3701551705181",
+      "zatu_ean": null,
       "zatu_tags": [
         "Back-Order",
         "Board Games",
@@ -4674,7 +4790,7 @@
       "zatu_url": "https://zatu.com/products/moon-colony-bloodbath",
       "zatu_price_gbp": 41.19,
       "zatu_in_stock": true,
-      "zatu_ean": "0655132006477",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-5 Players",
         "60-90 Minutes",
@@ -4704,7 +4820,7 @@
       "zatu_url": "https://zatu.com/products/calico",
       "zatu_price_gbp": 33.05,
       "zatu_in_stock": true,
-      "zatu_ean": "0729220062109",
+      "zatu_ean": null,
       "zatu_tags": [
         "Back-Order",
         "Board Games",
@@ -4735,7 +4851,7 @@
       "zatu_url": "https://zatu.com/products/kinfire-delve-vainglorys-grotto",
       "zatu_price_gbp": 20.0,
       "zatu_in_stock": true,
-      "zatu_ean": "0850052382001",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-2 Players",
         "45-60 Minutes",
@@ -4771,7 +4887,7 @@
       "zatu_url": "https://zatu.com/products/unlock-7-epic-adventures",
       "zatu_price_gbp": 17.65,
       "zatu_in_stock": true,
-      "zatu_ean": "3558380073987",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Escape Room Games",
@@ -4801,7 +4917,7 @@
       "zatu_url": "https://zatu.com/products/exit-catacombs-of-horror",
       "zatu_price_gbp": 17.1,
       "zatu_in_stock": true,
-      "zatu_ean": "0814743014237",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "150-180 Minutes",
@@ -4829,8 +4945,8 @@
       "bgg_rank": 1828,
       "bgg_average": 7.27508,
       "bgg_usersrated": 2066,
-      "match_confidence": "MEDIUM",
-      "match_score": 90.56603773584906,
+      "match_confidence": "HIGH",
+      "match_score": 100.0,
       "quality_shrunk": 7.239,
       "quality_pts": 1.26,
       "quality_label": "UNLABELED"
@@ -4841,7 +4957,7 @@
       "zatu_url": "https://zatu.com/products/rumble-nation",
       "zatu_price_gbp": 26.9,
       "zatu_in_stock": true,
-      "zatu_ean": "3558380126249",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "30-45 Minutes",
@@ -4873,7 +4989,7 @@
       "zatu_url": "https://zatu.com/products/ticket-ride-rails-sails",
       "zatu_price_gbp": 59.99,
       "zatu_in_stock": true,
-      "zatu_ean": "0824968720028",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Days of Wonder",
@@ -4904,7 +5020,7 @@
       "zatu_url": "https://zatu.com/products/unmatched-the-witcher-silver-steel",
       "zatu_price_gbp": 32.49,
       "zatu_in_stock": true,
-      "zatu_ean": "3701551703897",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-3 Players",
         "30-45 Minutes",
@@ -4942,7 +5058,7 @@
       "zatu_url": "https://zatu.com/products/forbidden-jungle",
       "zatu_price_gbp": 27.19,
       "zatu_in_stock": true,
-      "zatu_ean": "0759751004293",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-5 Players",
         "30-45 Minutes",
@@ -4981,7 +5097,7 @@
       "zatu_url": "https://zatu.com/products/dnup",
       "zatu_price_gbp": 10.38,
       "zatu_in_stock": true,
-      "zatu_ean": "3558387002287",
+      "zatu_ean": null,
       "zatu_tags": [
         "10-20 Minutes",
         "2-5 Players",
@@ -5010,12 +5126,46 @@
       "quality_label": "UNLABELED"
     },
     {
+      "zatu_handle": "unmatched-battle-of-legends-vol-1",
+      "zatu_title": "Unmatched Battle Of Legends, Vol. 1",
+      "zatu_url": "https://zatu.com/products/unmatched-battle-of-legends-vol-1",
+      "zatu_price_gbp": 35.65,
+      "zatu_in_stock": true,
+      "zatu_ean": null,
+      "zatu_tags": [
+        "Board Games",
+        "Exceptional Components",
+        "Golden Pear",
+        "Great For Two",
+        "Iello",
+        "Manual Release Date",
+        "Next Day Delivery",
+        "no gift wrap",
+        "Restoration Games",
+        "Top 5000 Board Games",
+        "Unmatched"
+      ],
+      "zatu_is_coop": false,
+      "zatu_is_party": false,
+      "bgg_id": 274637,
+      "bgg_name": "Unmatched: Battle of Legends, Volume One",
+      "bgg_year": 2019,
+      "bgg_rank": 293,
+      "bgg_average": 7.67726,
+      "bgg_usersrated": 11135,
+      "match_confidence": "HIGH",
+      "match_score": 100.0,
+      "quality_shrunk": 7.667,
+      "quality_pts": 15.0,
+      "quality_label": "STRONG"
+    },
+    {
       "zatu_handle": "daybreak",
       "zatu_title": "Daybreak",
       "zatu_url": "https://zatu.com/products/daybreak",
       "zatu_price_gbp": 51.85,
       "zatu_in_stock": true,
-      "zatu_ean": "0860009077539",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "90-120 Minutes",
@@ -5049,7 +5199,7 @@
       "zatu_url": "https://zatu.com/products/rebirth",
       "zatu_price_gbp": 54.99,
       "zatu_in_stock": true,
-      "zatu_ean": "5350705999853",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "45-60 Minutes",
@@ -5082,7 +5232,7 @@
       "zatu_url": "https://zatu.com/products/brass-lancashire",
       "zatu_price_gbp": 65.55,
       "zatu_in_stock": true,
-      "zatu_ean": "9781988884028",
+      "zatu_ean": null,
       "zatu_tags": [
         "Back-Order",
         "BGG Top 100",
@@ -5110,7 +5260,7 @@
       "zatu_url": "https://zatu.com/products/targi",
       "zatu_price_gbp": 15.37,
       "zatu_in_stock": true,
-      "zatu_ean": "0814743013605",
+      "zatu_ean": null,
       "zatu_tags": [
         "2 Players",
         "45-60 Minutes",
@@ -5146,7 +5296,7 @@
       "zatu_url": "https://zatu.com/products/welcome-to-the-moon",
       "zatu_price_gbp": 30.95,
       "zatu_in_stock": true,
-      "zatu_ean": "3770006370175",
+      "zatu_ean": null,
       "zatu_tags": [
         "Blue Cocker Games",
         "Board Games",
@@ -5175,7 +5325,7 @@
       "zatu_url": "https://zatu.com/products/unmatched-adventures-tales-to-amaze",
       "zatu_price_gbp": 39.5,
       "zatu_in_stock": true,
-      "zatu_ean": "3701551701626",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Free Promo Item",
@@ -5207,7 +5357,7 @@
       "zatu_url": "https://zatu.com/products/zombie-teenz-evolution",
       "zatu_price_gbp": 20.09,
       "zatu_in_stock": true,
-      "zatu_ean": "0807658001065",
+      "zatu_ean": null,
       "zatu_tags": [
         "10-20 Minutes",
         "2-4 Players",
@@ -5243,7 +5393,7 @@
       "zatu_url": "https://zatu.com/products/long-shot-the-dice-game",
       "zatu_price_gbp": 23.8,
       "zatu_in_stock": true,
-      "zatu_ean": "0859094005343",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Father's Day",
@@ -5274,7 +5424,7 @@
       "zatu_url": "https://zatu.com/products/whitehall-mystery",
       "zatu_price_gbp": 36.4,
       "zatu_in_stock": true,
-      "zatu_ean": "8058773206763",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "45-60 Minutes",
@@ -5311,7 +5461,7 @@
       "zatu_url": "https://zatu.com/products/survive-the-island",
       "zatu_price_gbp": 22.7,
       "zatu_in_stock": true,
-      "zatu_ean": "3558380119197",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Manual Release Date",
@@ -5341,7 +5491,7 @@
       "zatu_url": "https://zatu.com/products/galactic-cruise",
       "zatu_price_gbp": 84.95,
       "zatu_in_stock": true,
-      "zatu_ean": "5060750950203",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "120-150 Minutes",
@@ -5382,7 +5532,7 @@
       "zatu_url": "https://zatu.com/products/hegemony-lead-your-class-to-victory",
       "zatu_price_gbp": 63.25,
       "zatu_in_stock": true,
-      "zatu_ean": "0753692068918",
+      "zatu_ean": null,
       "zatu_tags": [
         "150-180 Minutes",
         "2-4 Players",
@@ -5416,7 +5566,7 @@
       "zatu_url": "https://zatu.com/products/micromacro-crime-city-3-all-in",
       "zatu_price_gbp": 21.95,
       "zatu_in_stock": true,
-      "zatu_ean": "4250231734007",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Cooperative",
@@ -5449,7 +5599,7 @@
       "zatu_url": "https://zatu.com/products/everdell-duo",
       "zatu_price_gbp": 24.29,
       "zatu_in_stock": true,
-      "zatu_ean": "0810082831849",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-2 Players",
         "20-30 Minutes",
@@ -5489,7 +5639,7 @@
       "zatu_url": "https://zatu.com/products/star-wars-outer-rim",
       "zatu_price_gbp": 58.85,
       "zatu_in_stock": true,
-      "zatu_ean": "0841333109103",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Fantasy Flight Games",
@@ -5520,7 +5670,7 @@
       "zatu_url": "https://zatu.com/products/ito",
       "zatu_price_gbp": 11.95,
       "zatu_in_stock": true,
-      "zatu_ean": "0850039564574",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-10 Players",
         "Arcane Wonders",
@@ -5551,7 +5701,7 @@
       "zatu_url": "https://zatu.com/products/river-valley-glassworks",
       "zatu_price_gbp": 29.49,
       "zatu_in_stock": true,
-      "zatu_ean": "0618149323593",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-5 Players",
         "30-45 Minutes",
@@ -5585,7 +5735,7 @@
       "zatu_url": "https://zatu.com/products/zoo-vadis",
       "zatu_price_gbp": 41.5,
       "zatu_in_stock": true,
-      "zatu_ean": "0691835050805",
+      "zatu_ean": null,
       "zatu_tags": [
         "Back-Order",
         "Board Games",
@@ -5613,7 +5763,7 @@
       "zatu_url": "https://zatu.com/products/fromage-standard-edition",
       "zatu_price_gbp": 39.8,
       "zatu_in_stock": true,
-      "zatu_ean": "0850030414151",
+      "zatu_ean": null,
       "zatu_tags": [
         "Best Sellers",
         "Board Games",
@@ -5642,7 +5792,7 @@
       "zatu_url": "https://zatu.com/products/captain-sonar-2022",
       "zatu_price_gbp": 39.25,
       "zatu_in_stock": true,
-      "zatu_ean": "3760146643741",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-8 Players",
         "45-60 Minutes",
@@ -5677,7 +5827,7 @@
       "zatu_url": "https://zatu.com/products/unmatched-sling-arrows",
       "zatu_price_gbp": 28.15,
       "zatu_in_stock": true,
-      "zatu_ean": "3701551702685",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Card Games",
@@ -5709,7 +5859,7 @@
       "zatu_url": "https://zatu.com/products/splendor-marvel",
       "zatu_price_gbp": 30.4,
       "zatu_in_stock": true,
-      "zatu_ean": "3558380067870",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "20-30 Minutes",
@@ -5743,7 +5893,7 @@
       "zatu_url": "https://zatu.com/products/fliptoons-card-game",
       "zatu_price_gbp": 15.65,
       "zatu_in_stock": true,
-      "zatu_ean": "0198715263879",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "20-30 Minutes",
@@ -5776,7 +5926,7 @@
       "zatu_url": "https://zatu.com/products/the-vale-of-eternity",
       "zatu_price_gbp": 26.9,
       "zatu_in_stock": true,
-      "zatu_ean": "0810011726741",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "30-45 Minutes",
@@ -5811,7 +5961,7 @@
       "zatu_url": "https://zatu.com/products/arkham-horror-third-edition",
       "zatu_price_gbp": 53.9,
       "zatu_in_stock": true,
-      "zatu_ean": "0841333107147",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-6 Players",
         "150-180 Minutes",
@@ -5848,7 +5998,7 @@
       "zatu_url": "https://zatu.com/products/zombicide-black-plague",
       "zatu_price_gbp": 85.69,
       "zatu_in_stock": true,
-      "zatu_ean": "0889696000781",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-6 Players",
         "150-180 Minutes",
@@ -5885,7 +6035,7 @@
       "zatu_url": "https://zatu.com/products/river-of-gold",
       "zatu_price_gbp": 37.99,
       "zatu_in_stock": true,
-      "zatu_ean": "0841333127381",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "60-90 Minutes",
@@ -5920,7 +6070,7 @@
       "zatu_url": "https://zatu.com/products/clank-legacy-acquisitions-incorporated",
       "zatu_price_gbp": 87.95,
       "zatu_in_stock": true,
-      "zatu_ean": "0810058800169",
+      "zatu_ean": null,
       "zatu_tags": [
         "BGG Top 100",
         "Board Games",
@@ -5949,7 +6099,7 @@
       "zatu_url": "https://zatu.com/products/lets-go-to-japan",
       "zatu_price_gbp": 39.95,
       "zatu_in_stock": true,
-      "zatu_ean": "0729220071163",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "45-60 Minutes",
@@ -5986,7 +6136,7 @@
       "zatu_url": "https://zatu.com/products/thunder-road-vendetta",
       "zatu_price_gbp": 47.69,
       "zatu_in_stock": true,
-      "zatu_ean": "0857476008463",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Manual Release Date",
@@ -6015,7 +6165,7 @@
       "zatu_url": "https://zatu.com/products/a-wild-venture",
       "zatu_price_gbp": 24.85,
       "zatu_in_stock": true,
-      "zatu_ean": "5298005760011",
+      "zatu_ean": null,
       "zatu_tags": [
         "2 Players",
         "45-60 Minutes",
@@ -6048,7 +6198,7 @@
       "zatu_url": "https://zatu.com/products/arkham-horror-lovecraft-letter",
       "zatu_price_gbp": 11.95,
       "zatu_in_stock": true,
-      "zatu_ean": "0841333129279",
+      "zatu_ean": null,
       "zatu_tags": [
         "Arkham Horror",
         "Board Games",
@@ -6080,7 +6230,7 @@
       "zatu_url": "https://zatu.com/products/exit-the-gate-between-worlds",
       "zatu_price_gbp": 12.78,
       "zatu_in_stock": true,
-      "zatu_ean": "0814743015944",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "60-90 Minutes",
@@ -6103,8 +6253,8 @@
       "bgg_rank": 2740,
       "bgg_average": 7.32081,
       "bgg_usersrated": 1136,
-      "match_confidence": "MEDIUM",
-      "match_score": 90.56603773584906,
+      "match_confidence": "HIGH",
+      "match_score": 100.0,
       "quality_shrunk": 7.254,
       "quality_pts": 1.75,
       "quality_label": "UNLABELED"
@@ -6115,7 +6265,7 @@
       "zatu_url": "https://zatu.com/products/the-isle-of-cats-duel",
       "zatu_price_gbp": 19.99,
       "zatu_in_stock": true,
-      "zatu_ean": "5060716751035",
+      "zatu_ean": null,
       "zatu_tags": [
         "2 Players",
         "20-30 Minutes",
@@ -6147,7 +6297,7 @@
       "zatu_url": "https://zatu.com/products/kinfire-delve-callous-lab",
       "zatu_price_gbp": 19.99,
       "zatu_in_stock": true,
-      "zatu_ean": "0850052382025",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-2 Players",
         "45-60 Minutes",
@@ -6183,7 +6333,7 @@
       "zatu_url": "https://zatu.com/products/xia-legend-of-a-drift-system",
       "zatu_price_gbp": 73.35,
       "zatu_in_stock": true,
-      "zatu_ean": "0748252116314",
+      "zatu_ean": null,
       "zatu_tags": [
         "3-5 Players",
         "Back-Order",
@@ -6208,12 +6358,42 @@
       "quality_label": "STRONG"
     },
     {
+      "zatu_handle": "unmatched-battle-of-legends-vol-2",
+      "zatu_title": "Unmatched - Battle of Legends Vol 2",
+      "zatu_url": "https://zatu.com/products/unmatched-battle-of-legends-vol-2",
+      "zatu_price_gbp": 27.95,
+      "zatu_in_stock": true,
+      "zatu_ean": null,
+      "zatu_tags": [
+        "Board Games",
+        "Great For Two",
+        "Iello",
+        "Next Day Delivery",
+        "no gift wrap",
+        "Top 5000 Board Games",
+        "Unmatched"
+      ],
+      "zatu_is_coop": false,
+      "zatu_is_party": false,
+      "bgg_id": 335764,
+      "bgg_name": "Unmatched: Battle of Legends, Volume Two",
+      "bgg_year": 2021,
+      "bgg_rank": 475,
+      "bgg_average": 8.19662,
+      "bgg_usersrated": 3569,
+      "match_confidence": "HIGH",
+      "match_score": 100.0,
+      "quality_shrunk": 8.15,
+      "quality_pts": 30.55,
+      "quality_label": "EXCELLENT"
+    },
+    {
       "zatu_handle": "horrified-pandora-unleashed-monsters-game",
       "zatu_title": "Horrified: Greek Monsters",
       "zatu_url": "https://zatu.com/products/horrified-pandora-unleashed-monsters-game",
       "zatu_price_gbp": 33.45,
       "zatu_in_stock": true,
-      "zatu_ean": "4005556224074",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Next Day Delivery",
@@ -6240,7 +6420,7 @@
       "zatu_url": "https://zatu.com/products/unstoppable-core-game",
       "zatu_price_gbp": 53.25,
       "zatu_in_stock": true,
-      "zatu_ean": "0810011727328",
+      "zatu_ean": null,
       "zatu_tags": [
         "Back-Order",
         "Board Games",
@@ -6268,7 +6448,7 @@
       "zatu_url": "https://zatu.com/products/shackleton-base-a-journey-to-the-moon",
       "zatu_price_gbp": 54.99,
       "zatu_in_stock": true,
-      "zatu_ean": "3616450009837",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Hachette",
@@ -6298,7 +6478,7 @@
       "zatu_url": "https://zatu.com/products/architects-of-the-west-kingdom",
       "zatu_price_gbp": 50.85,
       "zatu_in_stock": true,
-      "zatu_ean": "0850505008199",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-5 Players",
         "60-90 Minutes",
@@ -6334,7 +6514,7 @@
       "zatu_url": "https://zatu.com/products/star-trek-captains-chair-card-game",
       "zatu_price_gbp": 49.29,
       "zatu_in_stock": true,
-      "zatu_ean": "0634482876015",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-2 Players",
         "90-120 Minutes",
@@ -6369,7 +6549,7 @@
       "zatu_url": "https://zatu.com/products/aeons-end",
       "zatu_price_gbp": 48.29,
       "zatu_in_stock": true,
-      "zatu_ean": "0792273251554",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "45-60 Minutes",
@@ -6405,7 +6585,7 @@
       "zatu_url": "https://zatu.com/products/tales-of-the-arthurian-knights",
       "zatu_price_gbp": 59.99,
       "zatu_in_stock": true,
-      "zatu_ean": "0634482875896",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "150-180 Minutes",
@@ -6439,7 +6619,7 @@
       "zatu_url": "https://zatu.com/products/blood-rage",
       "zatu_price_gbp": 56.75,
       "zatu_in_stock": true,
-      "zatu_ean": "0889696000033",
+      "zatu_ean": null,
       "zatu_tags": [
         "Back-Order",
         "BGG Top 100",
@@ -6469,7 +6649,7 @@
       "zatu_url": "https://zatu.com/products/daybreak-one-night-ultimate-werewolf-exp",
       "zatu_price_gbp": 23.25,
       "zatu_in_stock": true,
-      "zatu_ean": "0689070015048",
+      "zatu_ean": null,
       "zatu_tags": [
         "Back-Order",
         "Board Games",
@@ -6487,7 +6667,7 @@
       "bgg_average": 7.28071,
       "bgg_usersrated": 6546,
       "match_confidence": "MEDIUM",
-      "match_score": 94.73684210526316,
+      "match_score": 94.44444444444444,
       "quality_shrunk": 7.269,
       "quality_pts": 2.22,
       "quality_label": "UNLABELED"
@@ -6498,7 +6678,7 @@
       "zatu_url": "https://zatu.com/products/unmatched-the-witcher-realms-fall",
       "zatu_price_gbp": 33.7,
       "zatu_in_stock": true,
-      "zatu_ean": "3701551703910",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-3 Players",
         "30-45 Minutes",
@@ -6536,7 +6716,7 @@
       "zatu_url": "https://zatu.com/products/roll-player",
       "zatu_price_gbp": 45.79,
       "zatu_in_stock": true,
-      "zatu_ean": "0680474010523",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "10+",
@@ -6570,7 +6750,7 @@
       "zatu_url": "https://zatu.com/products/pergola",
       "zatu_price_gbp": 31.4,
       "zatu_in_stock": true,
-      "zatu_ean": "5902650619814",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "45-60 Minutes",
@@ -6603,7 +6783,7 @@
       "zatu_url": "https://zatu.com/products/ticket-to-ride-northern-lights",
       "zatu_price_gbp": 37.95,
       "zatu_in_stock": true,
-      "zatu_ean": "0824968200377",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-5 Players",
         "45-60 Minutes",
@@ -6637,7 +6817,7 @@
       "zatu_url": "https://zatu.com/products/awkward-guests-the-walton-case",
       "zatu_price_gbp": 27.85,
       "zatu_in_stock": true,
-      "zatu_ean": "8414606982677",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-8 Players",
         "45-60 Minutes",
@@ -6672,7 +6852,7 @@
       "zatu_url": "https://zatu.com/products/jack-ripper-west-end-adventures",
       "zatu_price_gbp": 36.49,
       "zatu_in_stock": true,
-      "zatu_ean": "9782370990037",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-8 Players",
         "90-120 Minutes",
@@ -6713,7 +6893,7 @@
       "zatu_url": "https://zatu.com/products/king-is-dead-second-edition",
       "zatu_price_gbp": 27.85,
       "zatu_in_stock": true,
-      "zatu_ean": "9781472836601",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Great For Two",
@@ -6743,7 +6923,7 @@
       "zatu_url": "https://zatu.com/products/return-to-dark-tower",
       "zatu_price_gbp": 156.19,
       "zatu_in_stock": true,
-      "zatu_ean": "0857476008104",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Companion App",
@@ -6773,7 +6953,7 @@
       "zatu_url": "https://zatu.com/products/warps-edge",
       "zatu_price_gbp": 27.45,
       "zatu_in_stock": true,
-      "zatu_ean": "0810011720725",
+      "zatu_ean": null,
       "zatu_tags": [
         "1 Players",
         "10+",
@@ -6806,7 +6986,7 @@
       "zatu_url": "https://zatu.com/products/the-lord-of-the-rings-the-card-game-revised-core-set",
       "zatu_price_gbp": 55.95,
       "zatu_in_stock": true,
-      "zatu_ean": "0841333113476",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "60-90 Minutes",
@@ -6846,7 +7026,7 @@
       "zatu_url": "https://zatu.com/products/civolution",
       "zatu_price_gbp": 65.5,
       "zatu_in_stock": true,
-      "zatu_ean": "4250231741050",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "150-180 Minutes",
@@ -6883,7 +7063,7 @@
       "zatu_url": "https://zatu.com/products/the-hobbit-there-and-back-again",
       "zatu_price_gbp": 22.93,
       "zatu_in_stock": true,
-      "zatu_ean": "0841333132248",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "20-30 Minutes",
@@ -6914,7 +7094,7 @@
       "zatu_url": "https://zatu.com/products/ultra-tiny-epic-galaxies",
       "zatu_price_gbp": 12.45,
       "zatu_in_stock": true,
-      "zatu_ean": "0728028482836",
+      "zatu_ean": null,
       "zatu_tags": [
         "Back-Order",
         "Board Games",
@@ -6944,7 +7124,7 @@
       "zatu_url": "https://zatu.com/products/iki",
       "zatu_price_gbp": 36.15,
       "zatu_in_stock": true,
-      "zatu_ean": "7141041901437",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Dice Tower Award",
@@ -6976,7 +7156,7 @@
       "zatu_url": "https://zatu.com/products/ace-of-spades-card-game",
       "zatu_price_gbp": 24.95,
       "zatu_in_stock": true,
-      "zatu_ean": "8436607946656",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-2 Players",
         "30-45 Minutes",
@@ -7010,7 +7190,7 @@
       "zatu_url": "https://zatu.com/products/final-girl-board-game-starter-box",
       "zatu_price_gbp": 30.99,
       "zatu_in_stock": true,
-      "zatu_ean": "0850024976245",
+      "zatu_ean": null,
       "zatu_tags": [
         "Back-Order",
         "Board Games",
@@ -7041,7 +7221,7 @@
       "zatu_url": "https://zatu.com/products/exit-kidnapped-in-fortune-city",
       "zatu_price_gbp": 11.49,
       "zatu_in_stock": true,
-      "zatu_ean": "0814743016002",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "2-4 Players",
@@ -7069,8 +7249,8 @@
       "bgg_rank": 2412,
       "bgg_average": 7.80791,
       "bgg_usersrated": 934,
-      "match_confidence": "MEDIUM",
-      "match_score": 92.3076923076923,
+      "match_confidence": "HIGH",
+      "match_score": 100.0,
       "quality_shrunk": 7.681,
       "quality_pts": 15.47,
       "quality_label": "STRONG"
@@ -7109,7 +7289,7 @@
       "zatu_url": "https://zatu.com/products/secret-identity",
       "zatu_price_gbp": 17.95,
       "zatu_in_stock": true,
-      "zatu_ean": "3616450000315",
+      "zatu_ean": null,
       "zatu_tags": [
         "20-30 Minutes",
         "3-8 Players",
@@ -7143,7 +7323,7 @@
       "zatu_url": "https://zatu.com/products/ticket-ride-germany",
       "zatu_price_gbp": 37.95,
       "zatu_in_stock": true,
-      "zatu_ean": "0824968200155",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-5 Players",
         "45-60 Minutes",
@@ -7181,7 +7361,7 @@
       "zatu_url": "https://zatu.com/products/mindbug-first-contact",
       "zatu_price_gbp": 15.45,
       "zatu_in_stock": true,
-      "zatu_ean": "0650414644606",
+      "zatu_ean": null,
       "zatu_tags": [
         "10-20 Minutes",
         "2 Players",
@@ -7218,7 +7398,7 @@
       "zatu_url": "https://zatu.com/products/cthulhu-death-may-die-fear-of-the-unknown",
       "zatu_price_gbp": 89.95,
       "zatu_in_stock": true,
-      "zatu_ean": "0889696016355",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-5 Players",
         "60-90 Minutes",
@@ -7254,7 +7434,7 @@
       "zatu_url": "https://zatu.com/products/downforce",
       "zatu_price_gbp": 25.59,
       "zatu_in_stock": true,
-      "zatu_ean": "3760175515125",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Companion App",
@@ -7290,7 +7470,7 @@
       "zatu_url": "https://zatu.com/products/river-valley-glassworks-deluxe",
       "zatu_price_gbp": 55.79,
       "zatu_in_stock": true,
-      "zatu_ean": "0618149323845",
+      "zatu_ean": null,
       "zatu_tags": [
         "Back-Order",
         "Best Sellers",
@@ -7318,7 +7498,7 @@
       "zatu_url": "https://zatu.com/products/sniper-elite-the-board-game",
       "zatu_price_gbp": 39.75,
       "zatu_in_stock": true,
-      "zatu_ean": "0634158478031",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "45-60 Minutes",
@@ -7351,7 +7531,7 @@
       "zatu_url": "https://zatu.com/products/stuffed-fables",
       "zatu_price_gbp": 61.4,
       "zatu_in_stock": true,
-      "zatu_ean": "0699788109915",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "60-90 Minutes",
@@ -7385,7 +7565,7 @@
       "zatu_url": "https://zatu.com/products/azul-queens-garden",
       "zatu_price_gbp": 34.35,
       "zatu_in_stock": true,
-      "zatu_ean": "0826956600909",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "45-60 Minutes",
@@ -7421,7 +7601,7 @@
       "zatu_url": "https://zatu.com/products/viscounts-of-the-west-kingdom",
       "zatu_price_gbp": 54.85,
       "zatu_in_stock": true,
-      "zatu_ean": "0810011721272",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "60-90 Minutes",
@@ -7456,7 +7636,7 @@
       "zatu_url": "https://zatu.com/products/terrorscape",
       "zatu_price_gbp": 61.95,
       "zatu_in_stock": true,
-      "zatu_ean": "4897139630248",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "30-45 Minutes",
@@ -7490,7 +7670,7 @@
       "zatu_url": "https://zatu.com/products/next-station-london",
       "zatu_price_gbp": 11.9,
       "zatu_in_stock": true,
-      "zatu_ean": "3770000904116",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "20-30 Minutes",
@@ -7524,7 +7704,7 @@
       "zatu_url": "https://zatu.com/products/joyride-survival-of-the-fastest",
       "zatu_price_gbp": 39.65,
       "zatu_in_stock": true,
-      "zatu_ean": "0634158476709",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "45-60 Minutes",
@@ -7559,7 +7739,7 @@
       "zatu_url": "https://zatu.com/products/wilmots-warehouse",
       "zatu_price_gbp": 32.15,
       "zatu_in_stock": true,
-      "zatu_ean": "0850056808019",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-6 Players",
         "20-30 Minutes",
@@ -7592,7 +7772,7 @@
       "zatu_url": "https://zatu.com/products/dice-forge",
       "zatu_price_gbp": 28.05,
       "zatu_in_stock": true,
-      "zatu_ean": "3558380045717",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "30-45 Minutes",
@@ -7626,7 +7806,7 @@
       "zatu_url": "https://zatu.com/products/sleeping-gods",
       "zatu_price_gbp": 84.09,
       "zatu_in_stock": true,
-      "zatu_ean": "0051497120917",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "180+ Minutes",
@@ -7671,7 +7851,7 @@
       "zatu_url": "https://zatu.com/products/robinson-crusoe-board-game-adventures-on-the-cursed-island-4th-edition",
       "zatu_price_gbp": 37.65,
       "zatu_in_stock": true,
-      "zatu_ean": "5902560380064",
+      "zatu_ean": null,
       "zatu_tags": [
         "BGG Top 100",
         "Board Games",
@@ -7704,7 +7884,7 @@
       "zatu_url": "https://zatu.com/products/king-of-tokyo-monster-box",
       "zatu_price_gbp": 42.99,
       "zatu_in_stock": true,
-      "zatu_ean": "3760175518775",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Iello",
@@ -7734,7 +7914,7 @@
       "zatu_url": "https://zatu.com/products/unmatched-houdini-vs-genie",
       "zatu_price_gbp": 22.25,
       "zatu_in_stock": true,
-      "zatu_ean": "3701551700612",
+      "zatu_ean": null,
       "zatu_tags": [
         "2 Players",
         "20-30 Minutes",
@@ -7767,7 +7947,7 @@
       "zatu_url": "https://zatu.com/products/sherlock-holmes-consulting-detective-carlton-house-queens-park",
       "zatu_price_gbp": 30.09,
       "zatu_in_stock": true,
-      "zatu_ean": "9782370990099",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-8 Players",
         "60-90 Minutes",
@@ -7805,7 +7985,7 @@
       "zatu_url": "https://zatu.com/products/knarr",
       "zatu_price_gbp": 20.95,
       "zatu_in_stock": true,
-      "zatu_ean": "3770000010626",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Bombyx",
@@ -7833,7 +8013,7 @@
       "zatu_url": "https://zatu.com/products/coffee-roaster",
       "zatu_price_gbp": 26.85,
       "zatu_in_stock": true,
-      "zatu_ean": "4260184330348",
+      "zatu_ean": null,
       "zatu_tags": [
         "1 Players",
         "20-30 Minutes",
@@ -7866,7 +8046,7 @@
       "zatu_url": "https://zatu.com/products/come-sail-away",
       "zatu_price_gbp": 31.0,
       "zatu_in_stock": true,
-      "zatu_ean": "3558380126904",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "Board Games",
@@ -7894,7 +8074,7 @@
       "zatu_url": "https://zatu.com/products/undaunted-2200-callisto",
       "zatu_price_gbp": 43.8,
       "zatu_in_stock": true,
-      "zatu_ean": "9781472862846",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "45-60 Minutes",
@@ -7933,7 +8113,7 @@
       "zatu_url": "https://zatu.com/products/imperium-classics",
       "zatu_price_gbp": 27.85,
       "zatu_in_stock": true,
-      "zatu_ean": "9781472844743",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "Board Games",
@@ -7964,7 +8144,7 @@
       "zatu_url": "https://zatu.com/products/western-legends",
       "zatu_price_gbp": 54.45,
       "zatu_in_stock": true,
-      "zatu_ean": "0843495100042",
+      "zatu_ean": null,
       "zatu_tags": [
         "Back-Order",
         "Board Games",
@@ -7995,7 +8175,7 @@
       "zatu_url": "https://zatu.com/products/clank-in-space",
       "zatu_price_gbp": 36.65,
       "zatu_in_stock": true,
-      "zatu_ean": "0810058800220",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Clank!",
@@ -8025,7 +8205,7 @@
       "zatu_url": "https://zatu.com/products/kronologic-paris-1920",
       "zatu_price_gbp": 21.45,
       "zatu_in_stock": true,
-      "zatu_ean": "3770023051767",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "20-30 Minutes",
@@ -8057,7 +8237,7 @@
       "zatu_url": "https://zatu.com/products/kinfire-delve-scorns-stockade",
       "zatu_price_gbp": 19.99,
       "zatu_in_stock": true,
-      "zatu_ean": "0850052382018",
+      "zatu_ean": null,
       "zatu_tags": [
         "Best Sellers",
         "Board Games",
@@ -8089,7 +8269,7 @@
       "zatu_url": "https://zatu.com/products/imperium-horizons",
       "zatu_price_gbp": 40.15,
       "zatu_in_stock": true,
-      "zatu_ean": "9781472858368",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "120-150 Minutes",
@@ -8122,7 +8302,7 @@
       "zatu_url": "https://zatu.com/products/talisman-core",
       "zatu_price_gbp": 42.09,
       "zatu_in_stock": true,
-      "zatu_ean": "5010996213341",
+      "zatu_ean": null,
       "zatu_tags": [
         "Avalon Hill",
         "Board Games",
@@ -8151,7 +8331,7 @@
       "zatu_url": "https://zatu.com/products/exit-the-return-to-the-abandoned-cabin",
       "zatu_price_gbp": 13.55,
       "zatu_in_stock": true,
-      "zatu_ean": "0814743017085",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "60-90 Minutes",
@@ -8175,8 +8355,8 @@
       "bgg_rank": 3144,
       "bgg_average": 7.59279,
       "bgg_usersrated": 775,
-      "match_confidence": "MEDIUM",
-      "match_score": 92.3076923076923,
+      "match_confidence": "HIGH",
+      "match_score": 100.0,
       "quality_shrunk": 7.468,
       "quality_pts": 8.61,
       "quality_label": "STRONG"
@@ -8187,7 +8367,7 @@
       "zatu_url": "https://zatu.com/products/codex-naturalis",
       "zatu_price_gbp": 14.99,
       "zatu_in_stock": true,
-      "zatu_ean": "3760267990519",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "20-30 Minutes",
@@ -8223,7 +8403,7 @@
       "zatu_url": "https://zatu.com/products/andor-the-family-fantasy-game",
       "zatu_price_gbp": 22.95,
       "zatu_in_stock": true,
-      "zatu_ean": "0814743015968",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "30-45 Minutes",
@@ -8259,7 +8439,7 @@
       "zatu_url": "https://zatu.com/products/tea-witches",
       "zatu_price_gbp": 45.6,
       "zatu_in_stock": true,
-      "zatu_ean": "0700304159687",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "60-90 Minutes",
@@ -8293,7 +8473,7 @@
       "zatu_url": "https://zatu.com/products/bunny-kingdom",
       "zatu_price_gbp": 35.99,
       "zatu_in_stock": true,
-      "zatu_ean": "3760175513138",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "45-60 Minutes",
@@ -8325,7 +8505,7 @@
       "zatu_url": "https://zatu.com/products/las-vegas-royale",
       "zatu_price_gbp": 36.65,
       "zatu_in_stock": true,
-      "zatu_ean": "4005556269181",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-5 Players",
         "45-60 Minutes",
@@ -8356,7 +8536,7 @@
       "zatu_url": "https://zatu.com/products/aquatica",
       "zatu_price_gbp": 39.6,
       "zatu_in_stock": true,
-      "zatu_ean": "0853211004660",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "45-60 Minutes",
@@ -8391,7 +8571,7 @@
       "zatu_url": "https://zatu.com/products/unmatched-little-red-riding-hood-vs-beowulf",
       "zatu_price_gbp": 27.95,
       "zatu_in_stock": true,
-      "zatu_ean": "3760175518713",
+      "zatu_ean": null,
       "zatu_tags": [
         "10-20 Minutes",
         "2 Players",
@@ -8427,7 +8607,7 @@
       "zatu_url": "https://zatu.com/products/dc-super-heroes-united-batman-hush",
       "zatu_price_gbp": 33.99,
       "zatu_in_stock": true,
-      "zatu_ean": "0889696019882",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-5 Players",
         "30-45 Minutes",
@@ -8495,7 +8675,7 @@
       "zatu_url": "https://zatu.com/products/ready-set-bet",
       "zatu_price_gbp": 31.8,
       "zatu_in_stock": true,
-      "zatu_ean": "0729220071279",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-9 Players",
         "45-60 Minutes",
@@ -8530,7 +8710,7 @@
       "zatu_url": "https://zatu.com/products/unmatched-suns-origin",
       "zatu_price_gbp": 19.95,
       "zatu_in_stock": true,
-      "zatu_ean": "3701551702616",
+      "zatu_ean": null,
       "zatu_tags": [
         "2 Players",
         "30-45 Minutes",
@@ -8564,7 +8744,7 @@
       "zatu_url": "https://zatu.com/products/beer-bread",
       "zatu_price_gbp": 25.6,
       "zatu_in_stock": true,
-      "zatu_ean": "4250231734991",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Great For Two",
@@ -8593,7 +8773,7 @@
       "zatu_url": "https://zatu.com/products/tenby",
       "zatu_price_gbp": 29.99,
       "zatu_in_stock": true,
-      "zatu_ean": "5350705999716",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-5 Players",
         "45-60 Minutes",
@@ -8629,7 +8809,7 @@
       "zatu_url": "https://zatu.com/products/secret-hitler-board-game",
       "zatu_price_gbp": 43.15,
       "zatu_in_stock": true,
-      "zatu_ean": "0856454008129",
+      "zatu_ean": null,
       "zatu_tags": [
         "30-45 Minutes",
         "5-10 Players",
@@ -8665,7 +8845,7 @@
       "zatu_url": "https://zatu.com/products/honey-buzz",
       "zatu_price_gbp": 34.3,
       "zatu_in_stock": true,
-      "zatu_ean": "8720077287198",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "60-90 Minutes",
@@ -8701,7 +8881,7 @@
       "zatu_url": "https://zatu.com/products/explorers-of-navoria",
       "zatu_price_gbp": 29.19,
       "zatu_in_stock": true,
-      "zatu_ean": "5060750950142",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "60-90 Minutes",
@@ -8736,7 +8916,7 @@
       "zatu_url": "https://zatu.com/products/libertalia-winds-of-galecrest",
       "zatu_price_gbp": 41.85,
       "zatu_in_stock": true,
-      "zatu_ean": "0850032180146",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-6 Players",
         "45-60 Minutes",
@@ -8771,7 +8951,7 @@
       "zatu_url": "https://zatu.com/products/innovation-ultimate",
       "zatu_price_gbp": 63.95,
       "zatu_in_stock": true,
-      "zatu_ean": "0859358006178",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-5 Players",
         "45-60 Minutes",
@@ -8804,7 +8984,7 @@
       "zatu_url": "https://zatu.com/products/my-island",
       "zatu_price_gbp": 27.95,
       "zatu_in_stock": true,
-      "zatu_ean": "0814743018167",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "20-30 Minutes",
@@ -8837,7 +9017,7 @@
       "zatu_url": "https://zatu.com/products/the-dungenerator-die-in-a-dungeon",
       "zatu_price_gbp": 22.29,
       "zatu_in_stock": true,
-      "zatu_ean": "0199284158733",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-2 Players",
         "10+",
@@ -8870,7 +9050,7 @@
       "zatu_url": "https://zatu.com/products/unlock-10-game-adventures",
       "zatu_price_gbp": 24.95,
       "zatu_in_stock": true,
-      "zatu_ean": "3558380098645",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Escape Room Games",
@@ -8902,7 +9082,7 @@
       "zatu_url": "https://zatu.com/products/expeditions",
       "zatu_price_gbp": 63.55,
       "zatu_in_stock": true,
-      "zatu_ean": "0850032180535",
+      "zatu_ean": null,
       "zatu_tags": [
         "Back-Order",
         "Board Games",
@@ -8931,7 +9111,7 @@
       "zatu_url": "https://zatu.com/products/the-kings-dilemma",
       "zatu_price_gbp": 68.25,
       "zatu_in_stock": true,
-      "zatu_ean": "8056324760245",
+      "zatu_ean": null,
       "zatu_tags": [
         "3-5 Players",
         "45-60 Minutes",
@@ -8966,7 +9146,7 @@
       "zatu_url": "https://zatu.com/products/star-wars-the-deckbuilding-game",
       "zatu_price_gbp": 24.89,
       "zatu_in_stock": true,
-      "zatu_ean": "0841333117924",
+      "zatu_ean": null,
       "zatu_tags": [
         "2 Players",
         "20-30 Minutes",
@@ -9005,7 +9185,7 @@
       "zatu_url": "https://zatu.com/products/five-tribes",
       "zatu_price_gbp": 45.79,
       "zatu_in_stock": true,
-      "zatu_ean": "0824968784914",
+      "zatu_ean": null,
       "zatu_tags": [
         "BGG Golden Geek",
         "BGG Top 100",
@@ -9040,7 +9220,7 @@
       "zatu_url": "https://zatu.com/products/aeons-end-war-eternal",
       "zatu_price_gbp": 49.49,
       "zatu_in_stock": true,
-      "zatu_ean": "0792273251561",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "45-60 Minutes",
@@ -9074,7 +9254,7 @@
       "zatu_url": "https://zatu.com/products/roll-for-the-galaxy",
       "zatu_price_gbp": 43.75,
       "zatu_in_stock": true,
-      "zatu_ean": "0655132004923",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-5 Players",
         "30-45 Minutes",
@@ -9111,7 +9291,7 @@
       "zatu_url": "https://zatu.com/products/kavango-retail-edition",
       "zatu_price_gbp": 39.99,
       "zatu_in_stock": true,
-      "zatu_ean": "0724022286067",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-5 Players",
         "45-60 Minutes",
@@ -9142,7 +9322,7 @@
       "zatu_url": "https://zatu.com/products/dominion-intrigue-2nd-edition",
       "zatu_price_gbp": 31.4,
       "zatu_in_stock": true,
-      "zatu_ean": "0655132005326",
+      "zatu_ean": null,
       "zatu_tags": [
         "BGG Top 100",
         "Board Games",
@@ -9172,7 +9352,7 @@
       "zatu_url": "https://zatu.com/products/everdell-silverfrost-collectors-edition",
       "zatu_price_gbp": 74.9,
       "zatu_in_stock": true,
-      "zatu_ean": "0810082831931",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Everdell",
@@ -9202,7 +9382,7 @@
       "zatu_url": "https://zatu.com/products/molly-house-board-game",
       "zatu_price_gbp": 52.99,
       "zatu_in_stock": true,
-      "zatu_ean": "0860000996075",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-5 Players",
         "90-120 Minutes",
@@ -9237,7 +9417,7 @@
       "zatu_url": "https://zatu.com/products/light-speed-arena",
       "zatu_price_gbp": 21.49,
       "zatu_in_stock": true,
-      "zatu_ean": "9180021190018",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "10-20 Minutes",
@@ -9269,7 +9449,7 @@
       "zatu_url": "https://zatu.com/products/legacy-of-yu",
       "zatu_price_gbp": 55.05,
       "zatu_in_stock": true,
-      "zatu_ean": "0810011725102",
+      "zatu_ean": null,
       "zatu_tags": [
         "1 Players",
         "45-60 Minutes",
@@ -9304,7 +9484,7 @@
       "zatu_url": "https://zatu.com/products/undaunted-battle-of-britain",
       "zatu_price_gbp": 31.0,
       "zatu_in_stock": true,
-      "zatu_ean": "9781472855510",
+      "zatu_ean": null,
       "zatu_tags": [
         "2 Players",
         "45-60 Minutes",
@@ -9340,7 +9520,7 @@
       "zatu_url": "https://zatu.com/products/war-story-occupied-france",
       "zatu_price_gbp": 31.8,
       "zatu_in_stock": true,
-      "zatu_ean": "9781472858740",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-6 Players",
         "15+",
@@ -9377,7 +9557,7 @@
       "zatu_url": "https://zatu.com/products/purple-haze",
       "zatu_price_gbp": 77.89,
       "zatu_in_stock": true,
-      "zatu_ean": "5904063811274",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "90-120 Minutes",
@@ -9414,7 +9594,7 @@
       "zatu_url": "https://zatu.com/products/disney-villainous-project-crabhands",
       "zatu_price_gbp": 19.95,
       "zatu_in_stock": true,
-      "zatu_ean": "4005556234837",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-3 Players",
         "Board Games",
@@ -9445,7 +9625,7 @@
       "zatu_url": "https://zatu.com/products/blood-bowl-third-season-edition",
       "zatu_price_gbp": 63.92,
       "zatu_in_stock": true,
-      "zatu_ean": "5011921249053",
+      "zatu_ean": null,
       "zatu_tags": [
         "Back-Order",
         "Blood Bowl",
@@ -9475,7 +9655,7 @@
       "zatu_url": "https://zatu.com/products/rock-hard-1977",
       "zatu_price_gbp": 39.69,
       "zatu_in_stock": true,
-      "zatu_ean": "8436607943679",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-5 Players",
         "60-90 Minutes",
@@ -9509,7 +9689,7 @@
       "zatu_url": "https://zatu.com/products/deckers",
       "zatu_price_gbp": 33.1,
       "zatu_in_stock": true,
-      "zatu_ean": "4250231743511",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "60-90 Minutes",
@@ -9543,7 +9723,7 @@
       "zatu_url": "https://zatu.com/products/horrified-american-monsters",
       "zatu_price_gbp": 31.99,
       "zatu_in_stock": true,
-      "zatu_ean": "4005556273638",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-5 Players",
         "45-60 Minutes",
@@ -9578,7 +9758,7 @@
       "zatu_url": "https://zatu.com/products/war-chest",
       "zatu_price_gbp": 41.2,
       "zatu_in_stock": true,
-      "zatu_ean": "0729220070357",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "20-30 Minutes",
@@ -9617,7 +9797,7 @@
       "zatu_url": "https://zatu.com/products/the-thing-the-boardgame-2",
       "zatu_price_gbp": 63.25,
       "zatu_in_stock": true,
-      "zatu_ean": "8054181515244",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-8 Players",
         "60-90 Minutes",
@@ -9654,7 +9834,7 @@
       "zatu_url": "https://zatu.com/products/dwellings-of-eldervale-2nd-edition",
       "zatu_price_gbp": 73.55,
       "zatu_in_stock": true,
-      "zatu_ean": "0856454008815",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-5 Players",
         "120-150 Minutes",
@@ -9687,7 +9867,7 @@
       "zatu_url": "https://zatu.com/products/hitster",
       "zatu_price_gbp": 18.99,
       "zatu_in_stock": true,
-      "zatu_ean": "8710126001325",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Next Day Delivery",
@@ -9714,7 +9894,7 @@
       "zatu_url": "https://zatu.com/products/clank-legacy-acquisitions-incorporated-2-darkest-magic",
       "zatu_price_gbp": 90.99,
       "zatu_in_stock": true,
-      "zatu_ean": "0810058800275",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Clank!",
@@ -9743,7 +9923,7 @@
       "zatu_url": "https://zatu.com/products/railroad-ink-challenge-lush-green-edition",
       "zatu_price_gbp": 12.89,
       "zatu_in_stock": true,
-      "zatu_ean": "8056324760481",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "20-30 Minutes",
@@ -9778,7 +9958,7 @@
       "zatu_url": "https://zatu.com/products/sub-terra-ii-core-game",
       "zatu_price_gbp": 38.9,
       "zatu_in_stock": true,
-      "zatu_ean": "5060522880332",
+      "zatu_ean": null,
       "zatu_tags": [
         "Action/Adventure",
         "Board Games",
@@ -9809,7 +9989,7 @@
       "zatu_url": "https://zatu.com/products/res-arcana-duo",
       "zatu_price_gbp": 15.95,
       "zatu_in_stock": true,
-      "zatu_ean": "0850004236093",
+      "zatu_ean": null,
       "zatu_tags": [
         "2 Players",
         "45-60 Minutes",
@@ -9844,7 +10024,7 @@
       "zatu_url": "https://zatu.com/products/stone-age",
       "zatu_price_gbp": 45.25,
       "zatu_in_stock": true,
-      "zatu_ean": "0681706712604",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "60-90 Minutes",
@@ -9880,7 +10060,7 @@
       "zatu_url": "https://zatu.com/products/kingdom-rush-rift-in-time",
       "zatu_price_gbp": 38.49,
       "zatu_in_stock": true,
-      "zatu_ean": "0752830299481",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "60-90 Minutes",
@@ -9915,7 +10095,7 @@
       "zatu_url": "https://zatu.com/products/massive-darkness-2-hellscape",
       "zatu_price_gbp": 90.09,
       "zatu_in_stock": true,
-      "zatu_ean": "0889696012623",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-6 Players",
         "45-60 Minutes",
@@ -9953,7 +10133,7 @@
       "zatu_url": "https://zatu.com/products/cubitos",
       "zatu_price_gbp": 47.05,
       "zatu_in_stock": true,
-      "zatu_ean": "0729220070845",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "45-60 Minutes",
@@ -9987,7 +10167,7 @@
       "zatu_url": "https://zatu.com/products/race-for-the-galaxy",
       "zatu_price_gbp": 30.49,
       "zatu_in_stock": true,
-      "zatu_ean": "0655132003018",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "45-60 Minutes",
@@ -10029,7 +10209,7 @@
       "zatu_url": "https://zatu.com/products/bitoku",
       "zatu_price_gbp": 31.95,
       "zatu_in_stock": true,
-      "zatu_ean": "8436589624832",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "90-120 Minutes",
@@ -10067,7 +10247,7 @@
       "zatu_url": "https://zatu.com/products/pictomania-second-edition",
       "zatu_price_gbp": 17.15,
       "zatu_in_stock": true,
-      "zatu_ean": "8594156310479",
+      "zatu_ean": null,
       "zatu_tags": [
         "3-6 Players",
         "30-45 Minutes",
@@ -10099,7 +10279,7 @@
       "zatu_url": "https://zatu.com/products/art-society",
       "zatu_price_gbp": 39.99,
       "zatu_in_stock": true,
-      "zatu_ean": "5350705999969",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "45-60 Minutes",
@@ -10133,7 +10313,7 @@
       "zatu_url": "https://zatu.com/products/kingdom-crossing",
       "zatu_price_gbp": 29.98,
       "zatu_in_stock": true,
-      "zatu_ean": "3616450010291",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "60-90 Minutes",
@@ -10162,7 +10342,7 @@
       "zatu_url": "https://zatu.com/products/great-western-trail-new-zealand",
       "zatu_price_gbp": 33.55,
       "zatu_in_stock": true,
-      "zatu_ean": "4061897501809",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Next Day Delivery",
@@ -10190,7 +10370,7 @@
       "zatu_url": "https://zatu.com/products/dixit-disney",
       "zatu_price_gbp": 20.99,
       "zatu_in_stock": true,
-      "zatu_ean": "3558380107064",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Disney",
@@ -10220,7 +10400,7 @@
       "zatu_url": "https://zatu.com/products/through-the-ages-a-new-story-of-civilization",
       "zatu_price_gbp": 54.95,
       "zatu_in_stock": true,
-      "zatu_ean": "8594156310325",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "90-120 Minutes",
@@ -10260,7 +10440,7 @@
       "zatu_url": "https://zatu.com/products/imperium-legends",
       "zatu_price_gbp": 24.05,
       "zatu_in_stock": true,
-      "zatu_ean": "9781472844750",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "120-150 Minutes",
@@ -10294,7 +10474,7 @@
       "zatu_url": "https://zatu.com/products/boss-fighters-qr",
       "zatu_price_gbp": 32.95,
       "zatu_in_stock": true,
-      "zatu_ean": "4250231743856",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "45-60 Minutes",
@@ -10331,7 +10511,7 @@
       "zatu_url": "https://zatu.com/products/feyas-swamp",
       "zatu_price_gbp": 35.49,
       "zatu_in_stock": true,
-      "zatu_ean": "3760372236458",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "60-90 Minutes",
@@ -10370,7 +10550,7 @@
       "zatu_url": "https://zatu.com/products/dewan",
       "zatu_price_gbp": 27.89,
       "zatu_in_stock": true,
-      "zatu_ean": "3558380135357",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "30-45 Minutes",
@@ -10401,7 +10581,7 @@
       "zatu_url": "https://zatu.com/products/ingenious-3d",
       "zatu_price_gbp": 23.39,
       "zatu_in_stock": true,
-      "zatu_ean": "5060282512061",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "30-45 Minutes",
@@ -10434,7 +10614,7 @@
       "zatu_url": "https://zatu.com/products/unlock-9-legendary-adventures",
       "zatu_price_gbp": 23.95,
       "zatu_in_stock": true,
-      "zatu_ean": "3558380090052",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Escape Room Games",
@@ -10463,7 +10643,7 @@
       "zatu_url": "https://zatu.com/products/dracula-vs-van-helsing",
       "zatu_price_gbp": 24.25,
       "zatu_in_stock": true,
-      "zatu_ean": "0850037822355",
+      "zatu_ean": null,
       "zatu_tags": [
         "Back-Order",
         "Board Games",
@@ -10491,7 +10671,7 @@
       "zatu_url": "https://zatu.com/products/raiders-of-scythia",
       "zatu_price_gbp": 40.09,
       "zatu_in_stock": true,
-      "zatu_ean": "0810011721395",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "60-90 Minutes",
@@ -10526,7 +10706,7 @@
       "zatu_url": "https://zatu.com/products/pirates-of-maracaibo",
       "zatu_price_gbp": 30.95,
       "zatu_in_stock": true,
-      "zatu_ean": "0850045365417",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "60-90 Minutes",
@@ -10561,7 +10741,7 @@
       "zatu_url": "https://zatu.com/products/mayor-of-chicago",
       "zatu_price_gbp": 11.94,
       "zatu_in_stock": true,
-      "zatu_ean": "3760353370225",
+      "zatu_ean": null,
       "zatu_tags": [
         "1 Players",
         "20-30 Minutes",
@@ -10593,7 +10773,7 @@
       "zatu_url": "https://zatu.com/products/huang",
       "zatu_price_gbp": 30.29,
       "zatu_in_stock": true,
-      "zatu_ean": "5904063811397",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "60-90 Minutes",
@@ -10630,7 +10810,7 @@
       "zatu_url": "https://zatu.com/products/daydream",
       "zatu_price_gbp": 16.79,
       "zatu_in_stock": true,
-      "zatu_ean": "3558380137429",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-5 Players",
         "20-30 Minutes",
@@ -10661,7 +10841,7 @@
       "zatu_url": "https://zatu.com/products/a-war-of-whispers-2nd-edition",
       "zatu_price_gbp": 39.95,
       "zatu_in_stock": true,
-      "zatu_ean": "0610585962336",
+      "zatu_ean": null,
       "zatu_tags": [
         "Back-Order",
         "Board Games",
@@ -10689,7 +10869,7 @@
       "zatu_url": "https://zatu.com/products/flip-7-deluxe",
       "zatu_price_gbp": 14.35,
       "zatu_in_stock": true,
-      "zatu_ean": "0700304160577",
+      "zatu_ean": null,
       "zatu_tags": [
         "10-20 Minutes",
         "Board Games",
@@ -10720,7 +10900,7 @@
       "zatu_url": "https://zatu.com/products/pagan-fate-of-roanoke-2",
       "zatu_price_gbp": 33.7,
       "zatu_in_stock": true,
-      "zatu_ean": "0850045365448",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Card Games",
@@ -10749,7 +10929,7 @@
       "zatu_url": "https://zatu.com/products/tzolkin-mayan-calendar",
       "zatu_price_gbp": 41.25,
       "zatu_in_stock": true,
-      "zatu_ean": "8594156310196",
+      "zatu_ean": null,
       "zatu_tags": [
         "BGG Top 100",
         "Board Games",
@@ -10780,7 +10960,7 @@
       "zatu_url": "https://zatu.com/products/decorum",
       "zatu_price_gbp": 37.05,
       "zatu_in_stock": true,
-      "zatu_ean": "0850030923035",
+      "zatu_ean": null,
       "zatu_tags": [
         "Back-Order",
         "Board Games",
@@ -10839,7 +11019,7 @@
       "zatu_url": "https://zatu.com/products/the-white-castle-duel",
       "zatu_price_gbp": 19.49,
       "zatu_in_stock": true,
-      "zatu_ean": "8436607949947",
+      "zatu_ean": null,
       "zatu_tags": [
         "30-45 Minutes",
         "Board Games",
@@ -10869,7 +11049,7 @@
       "zatu_url": "https://zatu.com/products/dune-war-for-arrakis",
       "zatu_price_gbp": 109.95,
       "zatu_in_stock": true,
-      "zatu_ean": "0889696016911",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "90-120 Minutes",
@@ -10908,7 +11088,7 @@
       "zatu_url": "https://zatu.com/products/world-wonders",
       "zatu_price_gbp": 39.99,
       "zatu_in_stock": true,
-      "zatu_ean": "0850039564383",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-5 Players",
         "45-60 Minutes",
@@ -10942,7 +11122,7 @@
       "zatu_url": "https://zatu.com/products/undaunted-stalingrad",
       "zatu_price_gbp": 64.1,
       "zatu_in_stock": true,
-      "zatu_ean": "9781472852670",
+      "zatu_ean": null,
       "zatu_tags": [
         "2 Players",
         "45-60 Minutes",
@@ -10980,7 +11160,7 @@
       "zatu_url": "https://zatu.com/products/resident-evil-2-the-board-game",
       "zatu_price_gbp": 114.99,
       "zatu_in_stock": true,
-      "zatu_ean": "5060453692394",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "90-120 Minutes",
@@ -11014,7 +11194,7 @@
       "zatu_url": "https://zatu.com/products/stellar",
       "zatu_price_gbp": 20.6,
       "zatu_in_stock": true,
-      "zatu_ean": "0810011720503",
+      "zatu_ean": null,
       "zatu_tags": [
         "Back-Order",
         "Board Games",
@@ -11044,7 +11224,7 @@
       "zatu_url": "https://zatu.com/products/invincible-the-hero-building-game",
       "zatu_price_gbp": 34.05,
       "zatu_in_stock": true,
-      "zatu_ean": "0810058800350",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "60-90 Minutes",
@@ -11076,7 +11256,7 @@
       "zatu_url": "https://zatu.com/products/red-cathedral",
       "zatu_price_gbp": 23.7,
       "zatu_in_stock": true,
-      "zatu_ean": "8436589621046",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "8+",
@@ -11111,7 +11291,7 @@
       "zatu_url": "https://zatu.com/products/apiary",
       "zatu_price_gbp": 44.99,
       "zatu_in_stock": true,
-      "zatu_ean": "0850032180559",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-5 Players",
         "60-90 Minutes",
@@ -11146,7 +11326,7 @@
       "zatu_url": "https://zatu.com/products/the-shipwreck-arcana",
       "zatu_price_gbp": 20.79,
       "zatu_in_stock": true,
-      "zatu_ean": "0793888375086",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-5 Players",
         "20-30 Minutes",
@@ -11177,7 +11357,7 @@
       "zatu_url": "https://zatu.com/products/the-resistance-avalon-big-box",
       "zatu_price_gbp": 32.65,
       "zatu_in_stock": true,
-      "zatu_ean": "0810017900282",
+      "zatu_ean": null,
       "zatu_tags": [
         "20-30 Minutes",
         "5-10 Players",
@@ -11215,7 +11395,7 @@
       "zatu_url": "https://zatu.com/products/frostpunk-the-board-game",
       "zatu_price_gbp": 77.45,
       "zatu_in_stock": true,
-      "zatu_ean": "5904292004003",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "120-150 Minutes",
@@ -11254,7 +11434,7 @@
       "zatu_url": "https://zatu.com/products/spectacular",
       "zatu_price_gbp": 20.55,
       "zatu_in_stock": true,
-      "zatu_ean": "7090057170057",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-6 Players",
         "20-30 Minutes",
@@ -11283,12 +11463,42 @@
       "quality_label": "UNLABELED"
     },
     {
+      "zatu_handle": "dice-throne-season-one-rerolled-barbarian-vs-moon-elf",
+      "zatu_title": "Dice Throne Season One ReRolled: Barbarian vs Moon Elf",
+      "zatu_url": "https://zatu.com/products/dice-throne-season-one-rerolled-barbarian-vs-moon-elf",
+      "zatu_price_gbp": 25.85,
+      "zatu_in_stock": true,
+      "zatu_ean": null,
+      "zatu_tags": [
+        "Back-Order",
+        "Board Games",
+        "Dice",
+        "Dice Throne",
+        "Manual Release Date",
+        "no gift wrap",
+        "Top 5000 Board Games"
+      ],
+      "zatu_is_coop": false,
+      "zatu_is_party": false,
+      "bgg_id": 322561,
+      "bgg_name": "Dice Throne: Season One Rerolled \u2013 Battle 1:  Barbarian v. Moon Elf",
+      "bgg_year": 2021,
+      "bgg_rank": 2040,
+      "bgg_average": 7.51123,
+      "bgg_usersrated": 1508,
+      "match_confidence": "MEDIUM",
+      "match_score": 91.89189189189189,
+      "quality_shrunk": 7.448,
+      "quality_pts": 7.98,
+      "quality_label": "STRONG"
+    },
+    {
       "zatu_handle": "mythwind",
       "zatu_title": "Mythwind",
       "zatu_url": "https://zatu.com/products/mythwind",
       "zatu_price_gbp": 68.39,
       "zatu_in_stock": true,
-      "zatu_ean": "0672975796129",
+      "zatu_ean": null,
       "zatu_tags": [
         "15+",
         "Adventure",
@@ -11320,7 +11530,7 @@
       "zatu_url": "https://zatu.com/products/r-a-v-e-l",
       "zatu_price_gbp": 10.35,
       "zatu_in_stock": true,
-      "zatu_ean": "3760353370256",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Next Day Delivery",
@@ -11348,7 +11558,7 @@
       "zatu_url": "https://zatu.com/products/hitster-summer-party",
       "zatu_price_gbp": 18.99,
       "zatu_in_stock": true,
-      "zatu_ean": "8721017600084",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-10 Players",
         "20-30 Minutes",
@@ -11380,7 +11590,7 @@
       "zatu_url": "https://zatu.com/products/air-land-sea-spies-lies-supplies",
       "zatu_price_gbp": 14.9,
       "zatu_in_stock": true,
-      "zatu_ean": "0853211004912",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "20-30 Minutes",
@@ -11414,7 +11624,7 @@
       "zatu_url": "https://zatu.com/products/mind-mgmt-the-psychic-espionage-game",
       "zatu_price_gbp": 58.09,
       "zatu_in_stock": true,
-      "zatu_ean": "0093674636101",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-5 Players",
         "45-60 Minutes",
@@ -11448,7 +11658,7 @@
       "zatu_url": "https://zatu.com/products/general-orders-sengoku-jidai",
       "zatu_price_gbp": 20.95,
       "zatu_in_stock": true,
-      "zatu_ean": "9781472869791",
+      "zatu_ean": null,
       "zatu_tags": [
         "2 Players",
         "30-45 Minutes",
@@ -11479,7 +11689,7 @@
       "zatu_url": "https://zatu.com/products/anno-1800",
       "zatu_price_gbp": 31.95,
       "zatu_in_stock": true,
-      "zatu_ean": "0814743015920",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "90-120 Minutes",
@@ -11513,7 +11723,7 @@
       "zatu_url": "https://zatu.com/products/alchemists",
       "zatu_price_gbp": 37.95,
       "zatu_in_stock": true,
-      "zatu_ean": "8594156310271",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Companion App",
@@ -11543,7 +11753,7 @@
       "zatu_url": "https://zatu.com/products/everdell-farshore",
       "zatu_price_gbp": 69.9,
       "zatu_in_stock": true,
-      "zatu_ean": "0810082831399",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "60-90 Minutes",
@@ -11580,7 +11790,7 @@
       "zatu_url": "https://zatu.com/products/shobu",
       "zatu_price_gbp": 28.69,
       "zatu_in_stock": true,
-      "zatu_ean": "9780974646152",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Great For Two",
@@ -11609,7 +11819,7 @@
       "zatu_url": "https://zatu.com/products/furnace",
       "zatu_price_gbp": 31.49,
       "zatu_in_stock": true,
-      "zatu_ean": "0853211004721",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "45-60 Minutes",
@@ -11644,7 +11854,7 @@
       "zatu_url": "https://zatu.com/products/nemesis-lockdown",
       "zatu_price_gbp": 102.35,
       "zatu_in_stock": true,
-      "zatu_ean": "5907222999837",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-5 Players",
         "150-180 Minutes",
@@ -11681,7 +11891,7 @@
       "zatu_url": "https://zatu.com/products/the-queens-dilemma",
       "zatu_price_gbp": 94.05,
       "zatu_in_stock": true,
-      "zatu_ean": "8056324761860",
+      "zatu_ean": null,
       "zatu_tags": [
         "15+",
         "3-6 Players",
@@ -11713,7 +11923,7 @@
       "zatu_url": "https://zatu.com/products/quacks-co-quedlinburg-dash",
       "zatu_price_gbp": 26.99,
       "zatu_in_stock": true,
-      "zatu_ean": "4001504884093",
+      "zatu_ean": null,
       "zatu_tags": [
         "10-20 Minutes",
         "2-4 Players",
@@ -11746,7 +11956,7 @@
       "zatu_url": "https://zatu.com/products/a-gest-of-robin-hood",
       "zatu_price_gbp": 63.99,
       "zatu_in_stock": true,
-      "zatu_ean": "0817054012725",
+      "zatu_ean": null,
       "zatu_tags": [
         "Accessories",
         "GMT Games",
@@ -11774,7 +11984,7 @@
       "zatu_url": "https://zatu.com/products/emberleaf",
       "zatu_price_gbp": 47.95,
       "zatu_in_stock": true,
-      "zatu_ean": "5060716751059",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-5 Players",
         "90-120 Minutes",
@@ -11806,7 +12016,7 @@
       "zatu_url": "https://zatu.com/products/exit-puzzle-nightfall-manor",
       "zatu_price_gbp": 12.69,
       "zatu_in_stock": true,
-      "zatu_ean": "0814743016620",
+      "zatu_ean": null,
       "zatu_tags": [
         "200-499 Pieces",
         "Board Games",
@@ -11825,8 +12035,8 @@
       "bgg_rank": 4748,
       "bgg_average": 7.35801,
       "bgg_usersrated": 462,
-      "match_confidence": "MEDIUM",
-      "match_score": 91.52542372881356,
+      "match_confidence": "HIGH",
+      "match_score": 100.0,
       "quality_shrunk": 7.205,
       "quality_pts": 0.17,
       "quality_label": "UNLABELED"
@@ -11837,7 +12047,7 @@
       "zatu_url": "https://zatu.com/products/hadrians-wall",
       "zatu_price_gbp": 50.7,
       "zatu_in_stock": true,
-      "zatu_ean": "0810011722002",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-6 Players",
         "45-60 Minutes",
@@ -11871,7 +12081,7 @@
       "zatu_url": "https://zatu.com/products/revive",
       "zatu_price_gbp": 76.99,
       "zatu_in_stock": true,
-      "zatu_ean": "7090044370231",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "90-120 Minutes",
@@ -11905,7 +12115,7 @@
       "zatu_url": "https://zatu.com/products/heroquest-first-light-2",
       "zatu_price_gbp": 35.95,
       "zatu_in_stock": true,
-      "zatu_ean": "5010996280602",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "no gift wrap",
@@ -11931,7 +12141,7 @@
       "zatu_url": "https://zatu.com/products/rival-cities",
       "zatu_price_gbp": 19.15,
       "zatu_in_stock": true,
-      "zatu_ean": "4250231741418",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Next Day Delivery",
@@ -11959,7 +12169,7 @@
       "zatu_url": "https://zatu.com/products/wildlands",
       "zatu_price_gbp": 47.05,
       "zatu_in_stock": true,
-      "zatu_ean": "9781472826954",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "45-60 Minutes",
@@ -11995,7 +12205,7 @@
       "zatu_url": "https://zatu.com/products/last-light",
       "zatu_price_gbp": 40.59,
       "zatu_in_stock": true,
-      "zatu_ean": "0195893528073",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "45-60 Minutes",
@@ -12034,7 +12244,7 @@
       "zatu_url": "https://zatu.com/products/star-realms-frontier",
       "zatu_price_gbp": 19.95,
       "zatu_in_stock": true,
-      "zatu_ean": "0852613005480",
+      "zatu_ean": null,
       "zatu_tags": [
         "Back-Order",
         "Board Games",
@@ -12064,7 +12274,7 @@
       "zatu_url": "https://zatu.com/products/in-the-footsteps-of-darwin",
       "zatu_price_gbp": 29.95,
       "zatu_in_stock": true,
-      "zatu_ean": "3616450010345",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Hachette",
@@ -12092,7 +12302,7 @@
       "zatu_url": "https://zatu.com/products/pinatas",
       "zatu_price_gbp": 13.74,
       "zatu_in_stock": true,
-      "zatu_ean": "0618149325269",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-5 Players",
         "30-45 Minutes",
@@ -12121,7 +12331,7 @@
       "zatu_url": "https://zatu.com/products/oranges-and-lemons",
       "zatu_price_gbp": 41.82,
       "zatu_in_stock": true,
-      "zatu_ean": "0733968654793",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Manual Release Date",
@@ -12152,7 +12362,7 @@
       "zatu_url": "https://zatu.com/products/ironwood",
       "zatu_price_gbp": 47.9,
       "zatu_in_stock": true,
-      "zatu_ean": "5999138700355",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-2 Players",
         "45-60 Minutes",
@@ -12187,7 +12397,7 @@
       "zatu_url": "https://zatu.com/products/next-station-paris",
       "zatu_price_gbp": 11.85,
       "zatu_in_stock": true,
-      "zatu_ean": "3664824002274",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "20-30 Minutes",
@@ -12221,7 +12431,7 @@
       "zatu_url": "https://zatu.com/products/coraquest",
       "zatu_price_gbp": 33.05,
       "zatu_in_stock": true,
-      "zatu_ean": "5060905120017",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "45-60 Minutes",
@@ -12254,7 +12464,7 @@
       "zatu_url": "https://zatu.com/products/fateforge-chronicles-of-kaan",
       "zatu_price_gbp": 89.99,
       "zatu_in_stock": true,
-      "zatu_ean": "5350705999952",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Distribution",
@@ -12283,7 +12493,7 @@
       "zatu_url": "https://zatu.com/products/the-light-in-the-mist",
       "zatu_price_gbp": 26.35,
       "zatu_in_stock": true,
-      "zatu_ean": "0787790795926",
+      "zatu_ean": null,
       "zatu_tags": [
         "Back-Order",
         "Board Games",
@@ -12310,7 +12520,7 @@
       "zatu_url": "https://zatu.com/products/unfathomable",
       "zatu_price_gbp": 69.99,
       "zatu_in_stock": true,
-      "zatu_ean": "0841333113414",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Next Day Delivery",
@@ -12337,7 +12547,7 @@
       "zatu_url": "https://zatu.com/products/everdell-complete-collection",
       "zatu_price_gbp": 269.79,
       "zatu_in_stock": true,
-      "zatu_ean": "0810082830880",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Next Day Delivery",
@@ -12364,7 +12574,7 @@
       "zatu_url": "https://zatu.com/products/sleeping-gods-distant-skies",
       "zatu_price_gbp": 79.95,
       "zatu_in_stock": true,
-      "zatu_ean": "0051497333393",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "180+ Minutes",
@@ -12398,7 +12608,7 @@
       "zatu_url": "https://zatu.com/products/cyclades",
       "zatu_price_gbp": 47.29,
       "zatu_in_stock": true,
-      "zatu_ean": "3760146649767",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-5 Players",
         "60-90 Minutes",
@@ -12440,7 +12650,7 @@
       "zatu_url": "https://zatu.com/products/stonespine-architects-card-game",
       "zatu_price_gbp": 31.29,
       "zatu_in_stock": true,
-      "zatu_ean": "0196852656066",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-5 Players",
         "45-60 Minutes",
@@ -12472,7 +12682,7 @@
       "zatu_url": "https://zatu.com/products/verdant",
       "zatu_price_gbp": 31.99,
       "zatu_in_stock": true,
-      "zatu_ean": "0729220071347",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-5 Players",
         "45-60 Minutes",
@@ -12506,7 +12716,7 @@
       "zatu_url": "https://zatu.com/products/galileo-galilei",
       "zatu_price_gbp": 45.55,
       "zatu_in_stock": true,
-      "zatu_ean": "0850045365714",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "90-120 Minutes",
@@ -12538,7 +12748,7 @@
       "zatu_url": "https://zatu.com/products/marvel-crisis-protocol-earths-mightiest-core-set",
       "zatu_price_gbp": 119.95,
       "zatu_in_stock": true,
-      "zatu_ean": "0841333123246",
+      "zatu_ean": null,
       "zatu_tags": [
         "2 Players",
         "30-45 Minutes",
@@ -12572,7 +12782,7 @@
       "zatu_url": "https://zatu.com/products/sankore",
       "zatu_price_gbp": 59.99,
       "zatu_in_stock": true,
-      "zatu_ean": "9781472857040",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Next Day Delivery",
@@ -12600,7 +12810,7 @@
       "zatu_url": "https://zatu.com/products/creature-comforts",
       "zatu_price_gbp": 40.35,
       "zatu_in_stock": true,
-      "zatu_ean": "0782150647389",
+      "zatu_ean": null,
       "zatu_tags": [
         "Back-Order",
         "Board Games",
@@ -12627,7 +12837,7 @@
       "zatu_url": "https://zatu.com/products/diatoms",
       "zatu_price_gbp": 40.09,
       "zatu_in_stock": true,
-      "zatu_ean": "0850037822454",
+      "zatu_ean": null,
       "zatu_tags": [
         "25th Century Games",
         "Back-Order",
@@ -12655,7 +12865,7 @@
       "zatu_url": "https://zatu.com/products/marvel-dice-throne-captain-marvel-vs-black-panther",
       "zatu_price_gbp": 23.95,
       "zatu_in_stock": true,
-      "zatu_ean": "0700304156051",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Dice Throne",
@@ -12673,8 +12883,8 @@
       "bgg_rank": 3705,
       "bgg_average": 7.69233,
       "bgg_usersrated": 617,
-      "match_confidence": "MEDIUM",
-      "match_score": 94.94949494949495,
+      "match_confidence": "HIGH",
+      "match_score": 100.0,
       "quality_shrunk": 7.526,
       "quality_pts": 10.48,
       "quality_label": "STRONG"
@@ -12685,7 +12895,7 @@
       "zatu_url": "https://zatu.com/products/unlock-11-extraordinary-adventures",
       "zatu_price_gbp": 25.55,
       "zatu_in_stock": true,
-      "zatu_ean": "3558380115717",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Next Day Delivery",
@@ -12714,7 +12924,7 @@
       "zatu_url": "https://zatu.com/products/detective-city-of-angels",
       "zatu_price_gbp": 76.89,
       "zatu_in_stock": true,
-      "zatu_ean": "0680140514140",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-5 Players",
         "120-150 Minutes",
@@ -12751,7 +12961,7 @@
       "zatu_url": "https://zatu.com/products/oceans",
       "zatu_price_gbp": 44.44,
       "zatu_in_stock": true,
-      "zatu_ean": "0892884000234",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Card Games",
@@ -12783,7 +12993,7 @@
       "zatu_url": "https://zatu.com/products/zombicide-white-death",
       "zatu_price_gbp": 87.95,
       "zatu_in_stock": true,
-      "zatu_ean": "0889696016584",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-6 Players",
         "150-180 Minutes",
@@ -12816,7 +13026,7 @@
       "zatu_url": "https://zatu.com/products/trickerion-legends-of-illusion",
       "zatu_price_gbp": 44.9,
       "zatu_in_stock": true,
-      "zatu_ean": "0645871789267",
+      "zatu_ean": null,
       "zatu_tags": [
         "Ape Games",
         "Board Games",
@@ -12846,7 +13056,7 @@
       "zatu_url": "https://zatu.com/products/dice-throne-season-one-rerolled-pyromancer-vs-shadow-thief",
       "zatu_price_gbp": 24.85,
       "zatu_in_stock": true,
-      "zatu_ean": "9781988884660",
+      "zatu_ean": null,
       "zatu_tags": [
         "Back-Order",
         "Board Games",
@@ -12864,8 +13074,8 @@
       "bgg_rank": 2302,
       "bgg_average": 7.70559,
       "bgg_usersrated": 1152,
-      "match_confidence": "MEDIUM",
-      "match_score": 95.65217391304348,
+      "match_confidence": "HIGH",
+      "match_score": 100.0,
       "quality_shrunk": 7.609,
       "quality_pts": 13.16,
       "quality_label": "STRONG"
@@ -12876,7 +13086,7 @@
       "zatu_url": "https://zatu.com/products/mini-rogue",
       "zatu_price_gbp": 13.59,
       "zatu_in_stock": true,
-      "zatu_ean": "3770009354561",
+      "zatu_ean": null,
       "zatu_tags": [
         "Back-Order",
         "Board Games",
@@ -12904,7 +13114,7 @@
       "zatu_url": "https://zatu.com/products/clever-4ever",
       "zatu_price_gbp": 13.69,
       "zatu_in_stock": true,
-      "zatu_ean": "4001504884413",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "20-30 Minutes",
@@ -12935,7 +13145,7 @@
       "zatu_url": "https://zatu.com/products/marvel-united-multiverse",
       "zatu_price_gbp": 22.39,
       "zatu_in_stock": true,
-      "zatu_ean": "0889696017253",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-5 Players",
         "30-45 Minutes",
@@ -12970,7 +13180,7 @@
       "zatu_url": "https://zatu.com/products/men-nefer",
       "zatu_price_gbp": 47.95,
       "zatu_in_stock": true,
-      "zatu_ean": "0793588575526",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Next Day Delivery",
@@ -12999,7 +13209,7 @@
       "zatu_url": "https://zatu.com/products/orloj-the-prague-astronomical-clock",
       "zatu_price_gbp": 53.45,
       "zatu_in_stock": true,
-      "zatu_ean": "8436625613684",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "90-120 Minutes",
@@ -13035,7 +13245,7 @@
       "zatu_url": "https://zatu.com/products/kinfire-council",
       "zatu_price_gbp": 60.0,
       "zatu_in_stock": true,
-      "zatu_ean": "0850052382254",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-6 Players",
         "90-120 Minutes",
@@ -13066,7 +13276,7 @@
       "zatu_url": "https://zatu.com/products/nucleum",
       "zatu_price_gbp": 52.69,
       "zatu_in_stock": true,
-      "zatu_ean": "6425453001598",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "120-150 Minutes",
@@ -13102,7 +13312,7 @@
       "zatu_url": "https://zatu.com/products/cthulhu-dark-providence",
       "zatu_price_gbp": 38.95,
       "zatu_in_stock": true,
-      "zatu_ean": "0889696018205",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-5 Players",
         "15+",
@@ -13135,7 +13345,7 @@
       "zatu_url": "https://zatu.com/products/roll-player-adventures",
       "zatu_price_gbp": 117.99,
       "zatu_in_stock": true,
-      "zatu_ean": "0680168938560",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "120-150 Minutes",
@@ -13169,7 +13379,7 @@
       "zatu_url": "https://zatu.com/products/skara-brae",
       "zatu_price_gbp": 45.69,
       "zatu_in_stock": true,
-      "zatu_ean": "0810011727991",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "45-60 Minutes",
@@ -13201,7 +13411,7 @@
       "zatu_url": "https://zatu.com/products/aeons-end-outcasts",
       "zatu_price_gbp": 47.79,
       "zatu_in_stock": true,
-      "zatu_ean": "0792273252377",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "45-60 Minutes",
@@ -13239,7 +13449,7 @@
       "zatu_url": "https://zatu.com/products/marvel-remix-card-game",
       "zatu_price_gbp": 15.79,
       "zatu_in_stock": true,
-      "zatu_ean": "0634482875599",
+      "zatu_ean": null,
       "zatu_tags": [
         "10-20 Minutes",
         "2-6 Players",
@@ -13273,7 +13483,7 @@
       "zatu_url": "https://zatu.com/products/saltfjord",
       "zatu_price_gbp": 41.8,
       "zatu_in_stock": true,
-      "zatu_ean": "7090044370279",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "60-90 Minutes",
@@ -13306,7 +13516,7 @@
       "zatu_url": "https://zatu.com/products/heroes-land-air-sea",
       "zatu_price_gbp": 52.6,
       "zatu_in_stock": true,
-      "zatu_ean": "0728028444797",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Miniatures",
@@ -13335,7 +13545,7 @@
       "zatu_url": "https://zatu.com/products/menara",
       "zatu_price_gbp": 27.65,
       "zatu_in_stock": true,
-      "zatu_ean": "4015682051017",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Cooperative",
@@ -13366,7 +13576,7 @@
       "zatu_url": "https://zatu.com/products/paladins-of-the-west-kingdom-retail-edition",
       "zatu_price_gbp": 55.05,
       "zatu_in_stock": true,
-      "zatu_ean": "0810011720336",
+      "zatu_ean": null,
       "zatu_tags": [
         "Back-Order",
         "BGG Top 100",
@@ -13395,7 +13605,7 @@
       "zatu_url": "https://zatu.com/products/marvel-dice-throne-black-widow-vs-doctor-strange",
       "zatu_price_gbp": 26.05,
       "zatu_in_stock": true,
-      "zatu_ean": "0700304156068",
+      "zatu_ean": null,
       "zatu_tags": [
         "Back-Order",
         "Board Games",
@@ -13414,10 +13624,44 @@
       "bgg_rank": 3262,
       "bgg_average": 7.85254,
       "bgg_usersrated": 669,
-      "match_confidence": "MEDIUM",
-      "match_score": 94.73684210526316,
+      "match_confidence": "HIGH",
+      "match_score": 100.0,
       "quality_shrunk": 7.677,
       "quality_pts": 15.32,
+      "quality_label": "STRONG"
+    },
+    {
+      "zatu_handle": "exit-the-professors-last-riddle",
+      "zatu_title": "EXIT: The Professors Last Riddle",
+      "zatu_url": "https://zatu.com/products/exit-the-professors-last-riddle",
+      "zatu_price_gbp": 12.75,
+      "zatu_in_stock": true,
+      "zatu_ean": null,
+      "zatu_tags": [
+        "1-4 Players",
+        "90-120 Minutes",
+        "Board Games",
+        "Companion App",
+        "Cooperative",
+        "Deduction",
+        "EXIT",
+        "Next Day Delivery",
+        "no gift wrap",
+        "Thames Kosmos",
+        "Top 5000 Board Games"
+      ],
+      "zatu_is_coop": true,
+      "zatu_is_party": false,
+      "bgg_id": 356313,
+      "bgg_name": "EXIT: The Game \u2013 The Professor's Last Riddle",
+      "bgg_year": 2022,
+      "bgg_rank": 3745,
+      "bgg_average": 7.62006,
+      "bgg_usersrated": 579,
+      "match_confidence": "MEDIUM",
+      "match_score": 94.54545454545455,
+      "quality_shrunk": 7.455,
+      "quality_pts": 8.2,
       "quality_label": "STRONG"
     },
     {
@@ -13426,7 +13670,7 @@
       "zatu_url": "https://zatu.com/products/star-trek-ascendancy",
       "zatu_price_gbp": 58.79,
       "zatu_in_stock": true,
-      "zatu_ean": "9781940825915",
+      "zatu_ean": null,
       "zatu_tags": [
         "150-180 Minutes",
         "3 Players",
@@ -13466,7 +13710,7 @@
       "zatu_url": "https://zatu.com/products/kitchen-rush",
       "zatu_price_gbp": 34.25,
       "zatu_in_stock": true,
-      "zatu_ean": "4250231726477",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Next Day Delivery",
@@ -13493,7 +13737,7 @@
       "zatu_url": "https://zatu.com/products/gloom-of-kilforth",
       "zatu_price_gbp": 47.15,
       "zatu_in_stock": true,
-      "zatu_ean": "0602573734605",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Hall or Nothing Productions",
@@ -13523,7 +13767,7 @@
       "zatu_url": "https://zatu.com/products/dice-miner",
       "zatu_price_gbp": 29.45,
       "zatu_in_stock": true,
-      "zatu_ean": "0700040014806",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "20-30 Minutes",
@@ -13558,7 +13802,7 @@
       "zatu_url": "https://zatu.com/products/first-rat",
       "zatu_price_gbp": 26.2,
       "zatu_in_stock": true,
-      "zatu_ean": "4250231729942",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-5 Players",
         "45-60 Minutes",
@@ -13592,7 +13836,7 @@
       "zatu_url": "https://zatu.com/products/flatiron",
       "zatu_price_gbp": 24.95,
       "zatu_in_stock": true,
-      "zatu_ean": "0793588575502",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Building",
@@ -13621,7 +13865,7 @@
       "zatu_url": "https://zatu.com/products/wispwood",
       "zatu_price_gbp": 24.99,
       "zatu_in_stock": true,
-      "zatu_ean": "8594156311339",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "30-45 Minutes",
@@ -13654,7 +13898,7 @@
       "zatu_url": "https://zatu.com/products/animals-of-baker-street",
       "zatu_price_gbp": 23.99,
       "zatu_in_stock": true,
-      "zatu_ean": "3701551700278",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Iello",
@@ -13682,7 +13926,7 @@
       "zatu_url": "https://zatu.com/products/stupor-mundi",
       "zatu_price_gbp": 36.4,
       "zatu_in_stock": true,
-      "zatu_ean": "4250231742040",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "90-120 Minutes",
@@ -13712,7 +13956,7 @@
       "zatu_url": "https://zatu.com/products/red-dragon-inn-4",
       "zatu_price_gbp": 29.29,
       "zatu_in_stock": true,
-      "zatu_ean": "9780980209228",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "45-60 Minutes",
@@ -13751,7 +13995,7 @@
       "zatu_url": "https://zatu.com/products/rolling-realms-redux",
       "zatu_price_gbp": 18.94,
       "zatu_in_stock": true,
-      "zatu_ean": "0850032180887",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-6 Players",
         "30-45 Minutes",
@@ -13783,7 +14027,7 @@
       "zatu_url": "https://zatu.com/products/ezra-and-nehemiah",
       "zatu_price_gbp": 44.75,
       "zatu_in_stock": true,
-      "zatu_ean": "0810011726482",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "no gift wrap",
@@ -13810,7 +14054,7 @@
       "zatu_url": "https://zatu.com/products/whispering-woods",
       "zatu_price_gbp": 27.99,
       "zatu_in_stock": true,
-      "zatu_ean": "4262376840529",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "30-45 Minutes",
@@ -13840,7 +14084,7 @@
       "zatu_url": "https://zatu.com/products/this-war-of-mine",
       "zatu_price_gbp": 59.85,
       "zatu_in_stock": true,
-      "zatu_ean": "5902259204008",
+      "zatu_ean": null,
       "zatu_tags": [
         "Back-Order",
         "Board Games",
@@ -13869,7 +14113,7 @@
       "zatu_url": "https://zatu.com/products/above-and-below",
       "zatu_price_gbp": 39.95,
       "zatu_in_stock": true,
-      "zatu_ean": "0040232261213",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Next Day Delivery",
@@ -13897,7 +14141,7 @@
       "zatu_url": "https://zatu.com/products/frosted-blooms",
       "zatu_price_gbp": 24.99,
       "zatu_in_stock": true,
-      "zatu_ean": "0894342000756",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "20-30 Minutes",
@@ -13930,7 +14174,7 @@
       "zatu_url": "https://zatu.com/products/explorers-north-sea",
       "zatu_price_gbp": 44.6,
       "zatu_in_stock": true,
-      "zatu_ean": "00859930005865",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "45-60 Minutes",
@@ -13966,7 +14210,7 @@
       "zatu_url": "https://zatu.com/products/clever-cubed",
       "zatu_price_gbp": 12.55,
       "zatu_in_stock": true,
-      "zatu_ean": "4001504884116",
+      "zatu_ean": null,
       "zatu_tags": [
         "Back-Order",
         "Board Games",
@@ -13994,7 +14238,7 @@
       "zatu_url": "https://zatu.com/products/freelancers-crossroads-game",
       "zatu_price_gbp": 47.99,
       "zatu_in_stock": true,
-      "zatu_ean": "0850018877503",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Next Day Delivery",
@@ -14022,7 +14266,7 @@
       "zatu_url": "https://zatu.com/products/tales-from-the-red-dragon-inn-board-game",
       "zatu_price_gbp": 74.95,
       "zatu_in_stock": true,
-      "zatu_ean": "9781945323287",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "60-90 Minutes",
@@ -14055,7 +14299,7 @@
       "zatu_url": "https://zatu.com/products/space-alert",
       "zatu_price_gbp": 35.85,
       "zatu_in_stock": true,
-      "zatu_ean": "8594156310059",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-5 Players",
         "20-30 Minutes",
@@ -14095,7 +14339,7 @@
       "zatu_url": "https://zatu.com/products/small-world-underground",
       "zatu_price_gbp": 43.65,
       "zatu_in_stock": true,
-      "zatu_ean": "0824968726990",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-5 Players",
         "60-90 Minutes",
@@ -14130,7 +14374,7 @@
       "zatu_url": "https://zatu.com/products/nunatak",
       "zatu_price_gbp": 26.99,
       "zatu_in_stock": true,
-      "zatu_ean": "5060282511729",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "30-45 Minutes",
@@ -14161,7 +14405,7 @@
       "zatu_url": "https://zatu.com/products/monikers-monikers-er",
       "zatu_price_gbp": 20.25,
       "zatu_in_stock": true,
-      "zatu_ean": "0860009077584",
+      "zatu_ean": null,
       "zatu_tags": [
         "4-10+ Players",
         "45-60 Minutes",
@@ -14191,7 +14435,7 @@
       "zatu_url": "https://zatu.com/products/habitats",
       "zatu_price_gbp": 29.2,
       "zatu_in_stock": true,
-      "zatu_ean": "0618149322930",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Next Day Delivery",
@@ -14218,7 +14462,7 @@
       "zatu_url": "https://zatu.com/products/maple-valley",
       "zatu_price_gbp": 31.15,
       "zatu_in_stock": true,
-      "zatu_ean": "0787416368640",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Mother's Day",
@@ -14246,7 +14490,7 @@
       "zatu_url": "https://zatu.com/products/salton-sea",
       "zatu_price_gbp": 22.95,
       "zatu_in_stock": true,
-      "zatu_ean": "8436607942610",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "90-120 Minutes",
@@ -14282,7 +14526,7 @@
       "zatu_url": "https://zatu.com/products/millennium-blades",
       "zatu_price_gbp": 69.8,
       "zatu_in_stock": true,
-      "zatu_ean": "0810100190156",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-5 Players",
         "90-120 Minutes",
@@ -14318,7 +14562,7 @@
       "zatu_url": "https://zatu.com/products/ministry-of-lost-things-case-1-lint-collection",
       "zatu_price_gbp": 21.49,
       "zatu_in_stock": true,
-      "zatu_ean": "0691835759791",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "150-180 Minutes",
@@ -14351,7 +14595,7 @@
       "zatu_url": "https://zatu.com/products/7-empires",
       "zatu_price_gbp": 59.8,
       "zatu_in_stock": true,
-      "zatu_ean": "4260754850160",
+      "zatu_ean": null,
       "zatu_tags": [
         "120-150 Minutes",
         "2-6 Players",
@@ -14386,7 +14630,7 @@
       "zatu_url": "https://zatu.com/products/red-dragon-inn-6-villains",
       "zatu_price_gbp": 30.55,
       "zatu_in_stock": true,
-      "zatu_ean": "9781945323034",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "45-60 Minutes",
@@ -14421,7 +14665,7 @@
       "zatu_url": "https://zatu.com/products/magnate-the-first-city-promo",
       "zatu_price_gbp": 36.65,
       "zatu_in_stock": true,
-      "zatu_ean": "0744109268007",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-5 Players",
         "90-120 Minutes",
@@ -14457,7 +14701,7 @@
       "zatu_url": "https://zatu.com/products/red-dragon-inn-5-the-character-trove-red-dragon-inn-exp",
       "zatu_price_gbp": 45.19,
       "zatu_in_stock": true,
-      "zatu_ean": "9780980209273",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "45-60 Minutes",
@@ -14496,7 +14740,7 @@
       "zatu_url": "https://zatu.com/products/cease-desist-smash",
       "zatu_price_gbp": 20.85,
       "zatu_in_stock": true,
-      "zatu_ean": "0729220055101",
+      "zatu_ean": null,
       "zatu_tags": [
         "2 Players",
         "30-45 Minutes",
@@ -14534,7 +14778,7 @@
       "zatu_url": "https://zatu.com/products/the-initiative",
       "zatu_price_gbp": 47.4,
       "zatu_in_stock": true,
-      "zatu_ean": "0841333110130",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "45-60 Minutes",
@@ -14570,7 +14814,7 @@
       "zatu_url": "https://zatu.com/products/threads-of-fate",
       "zatu_price_gbp": 73.95,
       "zatu_in_stock": true,
-      "zatu_ean": "0793888734876",
+      "zatu_ean": null,
       "zatu_tags": [
         "15+",
         "Board Games",
@@ -14599,7 +14843,7 @@
       "zatu_url": "https://zatu.com/products/general-orders-world-war-ii",
       "zatu_price_gbp": 19.99,
       "zatu_in_stock": true,
-      "zatu_ean": "9781472859860",
+      "zatu_ean": null,
       "zatu_tags": [
         "2 Players",
         "20-30 Minutes",
@@ -14635,7 +14879,7 @@
       "zatu_url": "https://zatu.com/products/high-frontier-4-all",
       "zatu_price_gbp": 73.39,
       "zatu_in_stock": true,
-      "zatu_ean": "6533410411660",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Next Day Delivery",
@@ -14662,7 +14906,7 @@
       "zatu_url": "https://zatu.com/products/rival-restaurants",
       "zatu_price_gbp": 49.99,
       "zatu_in_stock": true,
-      "zatu_ean": "0860001208405",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Next Day Delivery",
@@ -14689,7 +14933,7 @@
       "zatu_url": "https://zatu.com/products/inventors-of-the-south-tigris",
       "zatu_price_gbp": 47.95,
       "zatu_in_stock": true,
-      "zatu_ean": "0810011727434",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "90-120 Minutes",
@@ -14724,7 +14968,7 @@
       "zatu_url": "https://zatu.com/products/leaders",
       "zatu_price_gbp": 25.0,
       "zatu_in_stock": true,
-      "zatu_ean": "3616450014053",
+      "zatu_ean": null,
       "zatu_tags": [
         "10-20 Minutes",
         "2 Players",
@@ -14753,7 +14997,7 @@
       "zatu_url": "https://zatu.com/products/remember-our-trip",
       "zatu_price_gbp": 25.69,
       "zatu_in_stock": true,
-      "zatu_ean": "4260184330386",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "20-30 Minutes",
@@ -14786,7 +15030,7 @@
       "zatu_url": "https://zatu.com/products/a-war-of-whispers-collectors-edition",
       "zatu_price_gbp": 66.49,
       "zatu_in_stock": true,
-      "zatu_ean": "0610585962251",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Next Day Delivery",
@@ -14814,7 +15058,7 @@
       "zatu_url": "https://zatu.com/products/fairy-ring",
       "zatu_price_gbp": 23.9,
       "zatu_in_stock": true,
-      "zatu_ean": "5425016927731",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Manual Release Date",
@@ -14843,7 +15087,7 @@
       "zatu_url": "https://zatu.com/products/tomb-raider-the-crypt-of-chronos",
       "zatu_price_gbp": 45.0,
       "zatu_in_stock": true,
-      "zatu_ean": "0760851554083",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Distribution",
@@ -14871,7 +15115,7 @@
       "zatu_url": "https://zatu.com/products/temple-of-elemental-evil-board-game",
       "zatu_price_gbp": 74.45,
       "zatu_in_stock": true,
-      "zatu_ean": "0634482718186",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-5 Players",
         "45-60 Minutes",
@@ -14907,7 +15151,7 @@
       "zatu_url": "https://zatu.com/products/a-message-from-the-stars-board-game",
       "zatu_price_gbp": 23.69,
       "zatu_in_stock": true,
-      "zatu_ean": "0618149323586",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Next Day Delivery",
@@ -14936,7 +15180,7 @@
       "zatu_url": "https://zatu.com/products/carnegie",
       "zatu_price_gbp": 39.99,
       "zatu_in_stock": true,
-      "zatu_ean": "4250231730849",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Next Day Delivery",
@@ -14963,7 +15207,7 @@
       "zatu_url": "https://zatu.com/products/iss-vanguard",
       "zatu_price_gbp": 142.19,
       "zatu_in_stock": true,
-      "zatu_ean": "5904689270356",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "90-120 Minutes",
@@ -15001,7 +15245,7 @@
       "zatu_url": "https://zatu.com/products/fountains",
       "zatu_price_gbp": 31.15,
       "zatu_in_stock": true,
-      "zatu_ean": "0700304159656",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-5 Players",
         "30-45 Minutes",
@@ -15033,7 +15277,7 @@
       "zatu_url": "https://zatu.com/products/nanty-narking",
       "zatu_price_gbp": 21.39,
       "zatu_in_stock": true,
-      "zatu_ean": "5900741508450",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "45-60 Minutes",
@@ -15073,7 +15317,7 @@
       "zatu_url": "https://zatu.com/products/astro-knights",
       "zatu_price_gbp": 39.35,
       "zatu_in_stock": true,
-      "zatu_ean": "0810017900305",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Next Day Delivery",
@@ -15100,7 +15344,7 @@
       "zatu_url": "https://zatu.com/products/the-search-for-lost-species",
       "zatu_price_gbp": 34.9,
       "zatu_in_stock": true,
-      "zatu_ean": "0810011724686",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "45-60 Minutes",
@@ -15132,7 +15376,7 @@
       "zatu_url": "https://zatu.com/products/naishi",
       "zatu_price_gbp": 20.99,
       "zatu_in_stock": true,
-      "zatu_ean": "0810011728349",
+      "zatu_ean": null,
       "zatu_tags": [
         "2 Players",
         "20-30 Minutes",
@@ -15165,7 +15409,7 @@
       "zatu_url": "https://zatu.com/products/fit-to-print",
       "zatu_price_gbp": 31.8,
       "zatu_in_stock": true,
-      "zatu_ean": "0729220010285",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-6 Players",
         "20-30 Minutes",
@@ -15200,7 +15444,7 @@
       "zatu_url": "https://zatu.com/products/draft-write-records",
       "zatu_price_gbp": 19.95,
       "zatu_in_stock": true,
-      "zatu_ean": "0619264453165",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-6 Players",
         "45-60 Minutes",
@@ -15234,7 +15478,7 @@
       "zatu_url": "https://zatu.com/products/shipwrights-of-the-north-sea-redux",
       "zatu_price_gbp": 47.1,
       "zatu_in_stock": true,
-      "zatu_ean": "0810011726420",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-5 Players",
         "60-90 Minutes",
@@ -15270,7 +15514,7 @@
       "zatu_url": "https://zatu.com/products/robot-quest-arena",
       "zatu_price_gbp": 62.99,
       "zatu_in_stock": true,
-      "zatu_ean": "0810019150821",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "45-60 Minutes",
@@ -15301,7 +15545,7 @@
       "zatu_url": "https://zatu.com/products/cascadero",
       "zatu_price_gbp": 36.89,
       "zatu_in_stock": true,
-      "zatu_ean": "0691835051604",
+      "zatu_ean": null,
       "zatu_tags": [
         "Bitewing Games",
         "Board Games",
@@ -15331,7 +15575,7 @@
       "zatu_url": "https://zatu.com/products/kutna-hora-the-city-of-silver",
       "zatu_price_gbp": 37.25,
       "zatu_in_stock": true,
-      "zatu_ean": "8594156310707",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Czech Games Edition",
@@ -15359,7 +15603,7 @@
       "zatu_url": "https://zatu.com/products/tea-garden",
       "zatu_price_gbp": 44.9,
       "zatu_in_stock": true,
-      "zatu_ean": "0850045365707",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "90-120 Minutes",
@@ -15392,7 +15636,7 @@
       "zatu_url": "https://zatu.com/products/eila-and-something-shiny-board-game",
       "zatu_price_gbp": 51.99,
       "zatu_in_stock": true,
-      "zatu_ean": "0892884000722",
+      "zatu_ean": null,
       "zatu_tags": [
         "1 Players",
         "30-45 Minutes",
@@ -15424,7 +15668,7 @@
       "zatu_url": "https://zatu.com/products/king-of-tokyo-x-mindbug",
       "zatu_price_gbp": 11.4,
       "zatu_in_stock": true,
-      "zatu_ean": "3701551704818",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-6 Players",
         "20-30 Minutes",
@@ -15460,7 +15704,7 @@
       "zatu_url": "https://zatu.com/products/moonrollers-standard-edition",
       "zatu_price_gbp": 28.0,
       "zatu_in_stock": true,
-      "zatu_ean": "0850041297965",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-5 Players",
         "20-30 Minutes",
@@ -15495,7 +15739,7 @@
       "zatu_url": "https://zatu.com/products/after-the-virus",
       "zatu_price_gbp": 21.89,
       "zatu_in_stock": true,
-      "zatu_ean": "0610098346050",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Next Day Delivery",
@@ -15522,7 +15766,7 @@
       "zatu_url": "https://zatu.com/products/expedition-to-newdale",
       "zatu_price_gbp": 23.49,
       "zatu_in_stock": true,
-      "zatu_ean": "4260402316130",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "60-90 Minutes",
@@ -15559,7 +15803,7 @@
       "zatu_url": "https://zatu.com/products/sagrada-artisans",
       "zatu_price_gbp": 54.65,
       "zatu_in_stock": true,
-      "zatu_ean": "0850030923103",
+      "zatu_ean": null,
       "zatu_tags": [
         "Back-Order",
         "Board Games",
@@ -15588,7 +15832,7 @@
       "zatu_url": "https://zatu.com/products/seas-of-strife",
       "zatu_price_gbp": 12.69,
       "zatu_in_stock": true,
-      "zatu_ean": "0655132006392",
+      "zatu_ean": null,
       "zatu_tags": [
         "3-6 Players",
         "30-45 Minutes",
@@ -15621,7 +15865,7 @@
       "zatu_url": "https://zatu.com/products/forestry",
       "zatu_price_gbp": 63.05,
       "zatu_in_stock": true,
-      "zatu_ean": "0850045365851",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "90-120 Minutes",
@@ -15652,7 +15896,7 @@
       "zatu_url": "https://zatu.com/products/citizens-of-the-spark-card-game",
       "zatu_price_gbp": 43.7,
       "zatu_in_stock": true,
-      "zatu_ean": "0198168748473",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-5 Players",
         "45-60 Minutes",
@@ -15683,7 +15927,7 @@
       "zatu_url": "https://zatu.com/products/yokohama-2",
       "zatu_price_gbp": 35.99,
       "zatu_in_stock": true,
-      "zatu_ean": "0894342000480",
+      "zatu_ean": null,
       "zatu_tags": [
         "15+",
         "2-4 Players",
@@ -15716,7 +15960,7 @@
       "zatu_url": "https://zatu.com/products/navegador",
       "zatu_price_gbp": 36.45,
       "zatu_in_stock": true,
-      "zatu_ean": "4280000097040",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Next Day Delivery",
@@ -15743,7 +15987,7 @@
       "zatu_url": "https://zatu.com/products/chinas-war",
       "zatu_price_gbp": 67.95,
       "zatu_in_stock": true,
-      "zatu_ean": "0817054012978",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "150-180 Minutes",
@@ -15775,7 +16019,7 @@
       "zatu_url": "https://zatu.com/products/everdell-emerland-collectors-edition",
       "zatu_price_gbp": 75.7,
       "zatu_in_stock": true,
-      "zatu_ean": "0810082832181",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "90-120 Minutes",
@@ -15814,7 +16058,7 @@
       "zatu_url": "https://zatu.com/products/kemet-blood-and-sand",
       "zatu_price_gbp": 62.55,
       "zatu_in_stock": true,
-      "zatu_ean": "3760146648685",
+      "zatu_ean": null,
       "zatu_tags": [
         "150-180 Minutes",
         "2-5 Players",
@@ -15854,7 +16098,7 @@
       "zatu_url": "https://zatu.com/products/familiar-tales",
       "zatu_price_gbp": 46.42,
       "zatu_in_stock": true,
-      "zatu_ean": "0850018877220",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "90-120 Minutes",
@@ -15887,7 +16131,7 @@
       "zatu_url": "https://zatu.com/products/gutenberg",
       "zatu_price_gbp": 30.19,
       "zatu_in_stock": true,
-      "zatu_ean": "5900221113938",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "90-120 Minutes",
@@ -15920,7 +16164,7 @@
       "zatu_url": "https://zatu.com/products/amalfi-renaissance",
       "zatu_price_gbp": 45.9,
       "zatu_in_stock": true,
-      "zatu_ean": "0631080233080",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Next Day Delivery",
@@ -15947,7 +16191,7 @@
       "zatu_url": "https://zatu.com/products/legends-of-andor-the-last-hope",
       "zatu_price_gbp": 23.95,
       "zatu_in_stock": true,
-      "zatu_ean": "0814743013032",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "60-90 Minutes",
@@ -15982,7 +16226,7 @@
       "zatu_url": "https://zatu.com/products/ashes-reborn-rise-of-the-phoenixborn",
       "zatu_price_gbp": 41.19,
       "zatu_in_stock": true,
-      "zatu_ean": "0850018877039",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "90-120 Minutes",
@@ -16024,7 +16268,7 @@
       "zatu_url": "https://zatu.com/products/dungeon-degenerates",
       "zatu_price_gbp": 62.39,
       "zatu_in_stock": true,
-      "zatu_ean": "0051497369736",
+      "zatu_ean": null,
       "zatu_tags": [
         "Back-Order",
         "Board Games",
@@ -16052,7 +16296,7 @@
       "zatu_url": "https://zatu.com/products/minos-dawn-of-the-bronze-age",
       "zatu_price_gbp": 27.39,
       "zatu_in_stock": true,
-      "zatu_ean": "6425453001741",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Next Day Delivery",
@@ -16079,7 +16323,7 @@
       "zatu_url": "https://zatu.com/products/daitoshi",
       "zatu_price_gbp": 46.79,
       "zatu_in_stock": true,
-      "zatu_ean": "8436607943990",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "90-120 Minutes",
@@ -16112,7 +16356,7 @@
       "zatu_url": "https://zatu.com/products/vagrantsong",
       "zatu_price_gbp": 65.59,
       "zatu_in_stock": true,
-      "zatu_ean": "0812152033283",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "90-120 Minutes",
@@ -16149,7 +16393,7 @@
       "zatu_url": "https://zatu.com/products/pantheum-board-game-demigods-of-olympia",
       "zatu_price_gbp": 32.95,
       "zatu_in_stock": true,
-      "zatu_ean": "0198715464825",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "45-60 Minutes",
@@ -16181,7 +16425,7 @@
       "zatu_url": "https://zatu.com/products/masters-of-crime-shadows",
       "zatu_price_gbp": 13.55,
       "zatu_in_stock": true,
-      "zatu_ean": "0814743018945",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-6 Players",
         "15+",
@@ -16247,7 +16491,7 @@
       "zatu_url": "https://zatu.com/products/argent-the-consortium-board-game",
       "zatu_price_gbp": 44.27,
       "zatu_in_stock": true,
-      "zatu_ean": "0810100190163",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Next Day Delivery",
@@ -16274,7 +16518,7 @@
       "zatu_url": "https://zatu.com/products/evenfall",
       "zatu_price_gbp": 44.95,
       "zatu_in_stock": true,
-      "zatu_ean": "9120111440050",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "90-120 Minutes",
@@ -16307,7 +16551,7 @@
       "zatu_url": "https://zatu.com/products/maladum-dungeons-of-enveron-dice",
       "zatu_price_gbp": 7.99,
       "zatu_in_stock": true,
-      "zatu_ean": "5060660091027",
+      "zatu_ean": null,
       "zatu_tags": [
         "Accessories",
         "Battle Systems",
@@ -16335,7 +16579,7 @@
       "zatu_url": "https://zatu.com/products/the-prodigals-club",
       "zatu_price_gbp": 29.85,
       "zatu_in_stock": true,
-      "zatu_ean": "8594156310332",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-5 Players",
         "60-90 Minutes",
@@ -16368,7 +16612,7 @@
       "zatu_url": "https://zatu.com/products/woodcraft",
       "zatu_price_gbp": 44.99,
       "zatu_in_stock": true,
-      "zatu_ean": "8594195080159",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "90-120 Minutes",
@@ -16403,7 +16647,7 @@
       "zatu_url": "https://zatu.com/products/army-of-the-dead-a-zombicide-game",
       "zatu_price_gbp": 71.95,
       "zatu_in_stock": true,
-      "zatu_ean": "0889696013965",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-6 Players",
         "45-60 Minutes",
@@ -16439,7 +16683,7 @@
       "zatu_url": "https://zatu.com/products/the-fox-experiment",
       "zatu_price_gbp": 32.39,
       "zatu_in_stock": true,
-      "zatu_ean": "0850029278719",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Next Day Delivery",
@@ -16468,7 +16712,7 @@
       "zatu_url": "https://zatu.com/products/reef-project",
       "zatu_price_gbp": 26.0,
       "zatu_in_stock": true,
-      "zatu_ean": "6425453001659",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "60-90 Minutes",
@@ -16502,7 +16746,7 @@
       "zatu_url": "https://zatu.com/products/votes-for-women-board-game",
       "zatu_price_gbp": 55.99,
       "zatu_in_stock": true,
-      "zatu_ean": "0860031002516",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "45-60 Minutes",
@@ -16536,7 +16780,7 @@
       "zatu_url": "https://zatu.com/products/conservas",
       "zatu_price_gbp": 35.0,
       "zatu_in_stock": true,
-      "zatu_ean": "8495390806127",
+      "zatu_ean": null,
       "zatu_tags": [
         "1 Players",
         "30-45 Minutes",
@@ -16570,7 +16814,7 @@
       "zatu_url": "https://zatu.com/products/resident-evil-3-the-board-game",
       "zatu_price_gbp": 114.99,
       "zatu_in_stock": true,
-      "zatu_ean": "5060453695647",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "60-90 Minutes",
@@ -16603,7 +16847,7 @@
       "zatu_url": "https://zatu.com/products/terraforming-mars-the-dice-game",
       "zatu_price_gbp": 36.65,
       "zatu_in_stock": true,
-      "zatu_ean": "0810017900428",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "30-45 Minutes",
@@ -16671,7 +16915,7 @@
       "zatu_url": "https://zatu.com/products/suna-valo",
       "zatu_price_gbp": 34.95,
       "zatu_in_stock": true,
-      "zatu_ean": "0850045365783",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-2 Players",
         "2 Players",
@@ -16704,7 +16948,7 @@
       "zatu_url": "https://zatu.com/products/cross-bronx-expressway",
       "zatu_price_gbp": 69.59,
       "zatu_in_stock": true,
-      "zatu_ean": "0817054012985",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-3 Players",
         "Board Games",
@@ -16735,7 +16979,7 @@
       "zatu_url": "https://zatu.com/products/city-of-the-great-machine",
       "zatu_price_gbp": 53.25,
       "zatu_in_stock": true,
-      "zatu_ean": "0672975295356",
+      "zatu_ean": null,
       "zatu_tags": [
         "Back-Order",
         "Board Games",
@@ -16764,7 +17008,7 @@
       "zatu_url": "https://zatu.com/products/maximum-apocalypse-2nd-edition",
       "zatu_price_gbp": 52.89,
       "zatu_in_stock": true,
-      "zatu_ean": "0691835199306",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Next Day Delivery",
@@ -16791,7 +17035,7 @@
       "zatu_url": "https://zatu.com/products/sea-dragons",
       "zatu_price_gbp": 26.68,
       "zatu_in_stock": true,
-      "zatu_ean": "0691835008134",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-5 Players",
         "30-45 Minutes",
@@ -16826,7 +17070,7 @@
       "zatu_url": "https://zatu.com/products/kronologic-cuzco-1450",
       "zatu_price_gbp": 20.45,
       "zatu_in_stock": true,
-      "zatu_ean": "3770023051934",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "20-30 Minutes",
@@ -16858,7 +17102,7 @@
       "zatu_url": "https://zatu.com/products/dodos-riding-dinos-kickstarter-edition",
       "zatu_price_gbp": 65.09,
       "zatu_in_stock": true,
-      "zatu_ean": "0787790784395",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-8 Players",
         "10-20 Minutes",
@@ -16892,7 +17136,7 @@
       "zatu_url": "https://zatu.com/products/between-two-cities-essential",
       "zatu_price_gbp": 36.61,
       "zatu_in_stock": true,
-      "zatu_ean": "0850032180085",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Next Day Delivery",
@@ -16920,7 +17164,7 @@
       "zatu_url": "https://zatu.com/products/phoenix-new-horizon",
       "zatu_price_gbp": 41.49,
       "zatu_in_stock": true,
-      "zatu_ean": "0764451912038",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "90-120 Minutes",
@@ -16955,7 +17199,7 @@
       "zatu_url": "https://zatu.com/products/wayfarers-of-the-south-tigris",
       "zatu_price_gbp": 55.05,
       "zatu_in_stock": true,
-      "zatu_ean": "0810011725096",
+      "zatu_ean": null,
       "zatu_tags": [
         "Back-Order",
         "Board Games",
@@ -16985,7 +17229,7 @@
       "zatu_url": "https://zatu.com/products/neuroriders",
       "zatu_price_gbp": 14.99,
       "zatu_in_stock": true,
-      "zatu_ean": "0691835006536",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "30-45 Minutes",
@@ -17018,7 +17262,7 @@
       "zatu_url": "https://zatu.com/products/gazebo",
       "zatu_price_gbp": 40.0,
       "zatu_in_stock": true,
-      "zatu_ean": "0732388024544",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "30-45 Minutes",
@@ -17048,7 +17292,7 @@
       "zatu_url": "https://zatu.com/products/rallyman-dirt",
       "zatu_price_gbp": 37.0,
       "zatu_in_stock": true,
-      "zatu_ean": "0894342000565",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-6 Players",
         "45-60 Minutes",
@@ -17079,7 +17323,7 @@
       "zatu_url": "https://zatu.com/products/terraforming-mars-ares-expedition-crisis",
       "zatu_price_gbp": 17.0,
       "zatu_in_stock": true,
-      "zatu_ean": "0810017900336",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Next Day Delivery",
@@ -17107,7 +17351,7 @@
       "zatu_url": "https://zatu.com/products/papyria",
       "zatu_price_gbp": 35.99,
       "zatu_in_stock": true,
-      "zatu_ean": "0635040937216",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "15+",
@@ -17140,7 +17384,7 @@
       "zatu_url": "https://zatu.com/products/cowboy-bebop-space-serenade",
       "zatu_price_gbp": 47.95,
       "zatu_in_stock": true,
-      "zatu_ean": "0703558839206",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Japanime Games",
@@ -17169,7 +17413,7 @@
       "zatu_url": "https://zatu.com/products/terraforming-mars-ares-expedition",
       "zatu_price_gbp": 41.19,
       "zatu_in_stock": true,
-      "zatu_ean": "0810017900206",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "45-60 Minutes",
@@ -17205,7 +17449,7 @@
       "zatu_url": "https://zatu.com/products/dodos-riding-dinos-dodo-dash",
       "zatu_price_gbp": 29.82,
       "zatu_in_stock": true,
-      "zatu_ean": "0793888244054",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-6 Players",
         "45-60 Minutes",
@@ -17241,7 +17485,7 @@
       "zatu_url": "https://zatu.com/products/heroscape-board-game-age-of-annihilation-master-set",
       "zatu_price_gbp": 99.9,
       "zatu_in_stock": true,
-      "zatu_ean": "0810011726932",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Next Day Delivery",
@@ -17268,7 +17512,7 @@
       "zatu_url": "https://zatu.com/products/doggerland",
       "zatu_price_gbp": 45.09,
       "zatu_in_stock": true,
-      "zatu_ean": "3770023051750",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "90-120 Minutes",
@@ -17301,7 +17545,7 @@
       "zatu_url": "https://zatu.com/products/life-of-the-amazonia-2",
       "zatu_price_gbp": 49.9,
       "zatu_in_stock": true,
-      "zatu_ean": "8809597071408",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "no gift wrap",
@@ -17328,7 +17572,7 @@
       "zatu_url": "https://zatu.com/products/wild-tiled-west",
       "zatu_price_gbp": 52.95,
       "zatu_in_stock": true,
-      "zatu_ean": "0810058800251",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-5 Players",
         "60-90 Minutes",
@@ -17364,7 +17608,7 @@
       "zatu_url": "https://zatu.com/products/stars-of-akarios-board-game",
       "zatu_price_gbp": 98.19,
       "zatu_in_stock": true,
-      "zatu_ean": "0672975796167",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "90-120 Minutes",
@@ -17401,7 +17645,7 @@
       "zatu_url": "https://zatu.com/products/lockup-a-roll-players-tale",
       "zatu_price_gbp": 45.79,
       "zatu_in_stock": true,
-      "zatu_ean": "0680168938546",
+      "zatu_ean": null,
       "zatu_tags": [
         "Accessories",
         "Next Day Delivery",
@@ -17430,7 +17674,7 @@
       "zatu_url": "https://zatu.com/products/star-realms-academy",
       "zatu_price_gbp": 22.49,
       "zatu_in_stock": true,
-      "zatu_ean": "0810019151118",
+      "zatu_ean": null,
       "zatu_tags": [
         "10-20 Minutes",
         "2 Players",
@@ -17488,7 +17732,7 @@
       "zatu_url": "https://zatu.com/products/small-samurai-empires",
       "zatu_price_gbp": 35.05,
       "zatu_in_stock": true,
-      "zatu_ean": "0672975286200",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "60-90 Minutes",
@@ -17519,7 +17763,7 @@
       "zatu_url": "https://zatu.com/products/imperial",
       "zatu_price_gbp": 40.4,
       "zatu_in_stock": true,
-      "zatu_ean": "4280000097033",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Next Day Delivery",
@@ -17547,7 +17791,7 @@
       "zatu_url": "https://zatu.com/products/red-dragon-inn-8-the-pub-crawl",
       "zatu_price_gbp": 33.95,
       "zatu_in_stock": true,
-      "zatu_ean": "9781945323171",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Next Day Delivery",
@@ -17574,7 +17818,7 @@
       "zatu_url": "https://zatu.com/products/battles-of-napoleon-volume-i-eylau-1807",
       "zatu_price_gbp": 84.59,
       "zatu_in_stock": true,
-      "zatu_ean": "4270003147972",
+      "zatu_ean": null,
       "zatu_tags": [
         "180+ Minutes",
         "2 Players",
@@ -17605,7 +17849,7 @@
       "zatu_url": "https://zatu.com/products/heroscape-battle-for-the-wellspring-battle-box",
       "zatu_price_gbp": 35.39,
       "zatu_in_stock": true,
-      "zatu_ean": "0810011726949",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Next Day Delivery",
@@ -17632,7 +17876,7 @@
       "zatu_url": "https://zatu.com/products/everdell-emerland",
       "zatu_price_gbp": 38.95,
       "zatu_in_stock": true,
-      "zatu_ean": "0810082832204",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "90-120 Minutes",
@@ -17671,7 +17915,7 @@
       "zatu_url": "https://zatu.com/products/onus-traianus",
       "zatu_price_gbp": 69.99,
       "zatu_in_stock": true,
-      "zatu_ean": "0850050897071",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "90-120 Minutes",
@@ -17705,7 +17949,7 @@
       "zatu_url": "https://zatu.com/products/genotype-a-mendelian-genetics-game",
       "zatu_price_gbp": 47.59,
       "zatu_in_stock": true,
-      "zatu_ean": "0653341737809",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-5 Players",
         "60-90 Minutes",
@@ -17740,7 +17984,7 @@
       "zatu_url": "https://zatu.com/products/mission-red-planet-third-edition",
       "zatu_price_gbp": 44.99,
       "zatu_in_stock": true,
-      "zatu_ean": "3760372234942",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-6 Players",
         "45-60 Minutes",
@@ -17770,7 +18014,7 @@
       "zatu_url": "https://zatu.com/products/siberian-manhunt-standard-edition",
       "zatu_price_gbp": 43.19,
       "zatu_in_stock": true,
-      "zatu_ean": "0726529599701",
+      "zatu_ean": null,
       "zatu_tags": [
         "2 Players",
         "90-120 Minutes",
@@ -17801,7 +18045,7 @@
       "zatu_url": "https://zatu.com/products/mistwind",
       "zatu_price_gbp": 66.21,
       "zatu_in_stock": true,
-      "zatu_ean": "0658580871598",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "60-90 Minutes",
@@ -17872,7 +18116,7 @@
       "zatu_url": "https://zatu.com/products/wonder-book",
       "zatu_price_gbp": 37.49,
       "zatu_in_stock": true,
-      "zatu_ean": "8032611690426",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "60-90 Minutes",
@@ -17907,7 +18151,7 @@
       "zatu_url": "https://zatu.com/products/call-of-kilforth",
       "zatu_price_gbp": 47.99,
       "zatu_in_stock": true,
-      "zatu_ean": "5060716160080",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Next Day Delivery",
@@ -17934,7 +18178,7 @@
       "zatu_url": "https://zatu.com/products/rajas-of-the-ganges-the-dice-charmers",
       "zatu_price_gbp": 15.57,
       "zatu_in_stock": true,
-      "zatu_ean": "4260071881373",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-5 Players",
         "30-45 Minutes",
@@ -17964,7 +18208,7 @@
       "zatu_url": "https://zatu.com/products/empires-void-ii",
       "zatu_price_gbp": 61.9,
       "zatu_in_stock": true,
-      "zatu_ean": "0040232630811",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Next Day Delivery",
@@ -17992,7 +18236,7 @@
       "zatu_url": "https://zatu.com/products/khora-rise-of-an-empire",
       "zatu_price_gbp": 35.89,
       "zatu_in_stock": true,
-      "zatu_ean": "3760175517518",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Next Day Delivery",
@@ -18019,7 +18263,7 @@
       "zatu_url": "https://zatu.com/products/the-peak-team",
       "zatu_price_gbp": 35.0,
       "zatu_in_stock": true,
-      "zatu_ean": "3760372236397",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-5 Players",
         "45-60 Minutes",
@@ -18051,7 +18295,7 @@
       "zatu_url": "https://zatu.com/products/tianxia",
       "zatu_price_gbp": 39.59,
       "zatu_in_stock": true,
-      "zatu_ean": "6425453002120",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "90-120 Minutes",
@@ -18085,7 +18329,7 @@
       "zatu_url": "https://zatu.com/products/hidden-games-crime-scene-case-2-the-midnight-crown",
       "zatu_price_gbp": 21.59,
       "zatu_in_stock": true,
-      "zatu_ean": "4260686490649",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Next Day Delivery",
@@ -18112,7 +18356,7 @@
       "zatu_url": "https://zatu.com/products/bios-origins-2nd-edition",
       "zatu_price_gbp": 67.95,
       "zatu_in_stock": true,
-      "zatu_ean": "6533410405652",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Next Day Delivery",
@@ -18139,7 +18383,7 @@
       "zatu_url": "https://zatu.com/products/dreadful-meadows",
       "zatu_price_gbp": 40.99,
       "zatu_in_stock": true,
-      "zatu_ean": "0781005673856",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "45-60 Minutes",
@@ -18175,7 +18419,7 @@
       "zatu_url": "https://zatu.com/products/pillars-of-heracles",
       "zatu_price_gbp": 46.9,
       "zatu_in_stock": true,
-      "zatu_ean": "0860013199968",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "90-120 Minutes",
@@ -18209,7 +18453,7 @@
       "zatu_url": "https://zatu.com/products/die-macher",
       "zatu_price_gbp": 51.58,
       "zatu_in_stock": true,
-      "zatu_ean": "0741049185418",
+      "zatu_ean": null,
       "zatu_tags": [
         "3-5 Players",
         "Board Games",
@@ -18280,7 +18524,7 @@
       "zatu_url": "https://zatu.com/products/aces-of-aces-powerhouse-series-deluxe-edition",
       "zatu_price_gbp": 79.0,
       "zatu_in_stock": true,
-      "zatu_ean": "0609456649001",
+      "zatu_ean": null,
       "zatu_tags": [
         "2 Players",
         "20-30 Minutes",
@@ -18311,7 +18555,7 @@
       "zatu_url": "https://zatu.com/products/dvonn",
       "zatu_price_gbp": 35.0,
       "zatu_in_stock": true,
-      "zatu_ean": "4260071882479",
+      "zatu_ean": null,
       "zatu_tags": [
         "2 Players",
         "20-30 Minutes",
@@ -18342,7 +18586,7 @@
       "zatu_url": "https://zatu.com/products/rolling-heights",
       "zatu_price_gbp": 58.95,
       "zatu_in_stock": true,
-      "zatu_ean": "0729220070852",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "45-60 Minutes",
@@ -18378,7 +18622,7 @@
       "zatu_url": "https://zatu.com/products/ascension-tactics-inferno",
       "zatu_price_gbp": 40.49,
       "zatu_in_stock": true,
-      "zatu_ean": "0857789002646",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "Board Games",
@@ -18410,7 +18654,7 @@
       "zatu_url": "https://zatu.com/products/above-and-below-haunted",
       "zatu_price_gbp": 46.79,
       "zatu_in_stock": true,
-      "zatu_ean": "0850070701006",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "90-120 Minutes",
@@ -18442,7 +18686,7 @@
       "zatu_url": "https://zatu.com/products/tragedy-looper-new-tragedies",
       "zatu_price_gbp": 35.85,
       "zatu_in_stock": true,
-      "zatu_ean": "0634482875285",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "45-60 Minutes",
@@ -18477,7 +18721,7 @@
       "zatu_url": "https://zatu.com/products/feudum-septennial-edition",
       "zatu_price_gbp": 93.95,
       "zatu_in_stock": true,
-      "zatu_ean": "0602573231173",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-5 Players",
         "12+",
@@ -18510,7 +18754,7 @@
       "zatu_url": "https://zatu.com/products/lyngk",
       "zatu_price_gbp": 35.0,
       "zatu_in_stock": true,
-      "zatu_ean": "4260071879837",
+      "zatu_ean": null,
       "zatu_tags": [
         "2 Players",
         "45-60 Minutes",
@@ -18542,7 +18786,7 @@
       "zatu_url": "https://zatu.com/products/tzaar",
       "zatu_price_gbp": 35.0,
       "zatu_in_stock": true,
-      "zatu_ean": "4260071879530",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Distribution",
@@ -18571,7 +18815,7 @@
       "zatu_url": "https://zatu.com/products/mythic-mischief-vol-ii",
       "zatu_price_gbp": 41.99,
       "zatu_in_stock": true,
-      "zatu_ean": "0850041297538",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "45-60 Minutes",
@@ -18601,7 +18845,7 @@
       "zatu_url": "https://zatu.com/products/wicked-cribbage",
       "zatu_price_gbp": 20.0,
       "zatu_in_stock": true,
-      "zatu_ean": "0198168222058",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "30-45 Minutes",
@@ -18635,7 +18879,7 @@
       "zatu_url": "https://zatu.com/products/mindbug-x-king-of-tokyo",
       "zatu_price_gbp": 18.8,
       "zatu_in_stock": true,
-      "zatu_ean": "4262429411119",
+      "zatu_ean": null,
       "zatu_tags": [
         "2 Players",
         "20-30 Minutes",
@@ -18669,7 +18913,7 @@
       "zatu_url": "https://zatu.com/products/resafa",
       "zatu_price_gbp": 63.89,
       "zatu_in_stock": true,
-      "zatu_ean": "0655132006897",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "120-150 Minutes",
@@ -18703,7 +18947,7 @@
       "zatu_url": "https://zatu.com/products/fractured-sky-deluxe",
       "zatu_price_gbp": 139.0,
       "zatu_in_stock": true,
-      "zatu_ean": "0850041297453",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "IV Studio",
@@ -18732,7 +18976,7 @@
       "zatu_url": "https://zatu.com/products/forges-of-ravenshire-board-game",
       "zatu_price_gbp": 39.89,
       "zatu_in_stock": true,
-      "zatu_ean": "0658580784515",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "60-90 Minutes",
@@ -18768,7 +19012,7 @@
       "zatu_url": "https://zatu.com/products/the-guerrilla-generation",
       "zatu_price_gbp": 85.7,
       "zatu_in_stock": true,
-      "zatu_ean": "0817054013159",
+      "zatu_ean": null,
       "zatu_tags": [
         "2 Players",
         "Board Games",
@@ -18798,7 +19042,7 @@
       "zatu_url": "https://zatu.com/products/karak-ii",
       "zatu_price_gbp": 37.99,
       "zatu_in_stock": true,
-      "zatu_ean": "0625012195539",
+      "zatu_ean": null,
       "zatu_tags": [
         "10+",
         "2-5 Players",
@@ -18829,7 +19073,7 @@
       "zatu_url": "https://zatu.com/products/espana-1936",
       "zatu_price_gbp": 39.95,
       "zatu_in_stock": true,
-      "zatu_ean": "8436589626690",
+      "zatu_ean": null,
       "zatu_tags": [
         "150-180 Minutes",
         "2 Players",
@@ -18861,7 +19105,7 @@
       "zatu_url": "https://zatu.com/products/the-battle-of-versailles",
       "zatu_price_gbp": 30.0,
       "zatu_in_stock": true,
-      "zatu_ean": "8495390733706",
+      "zatu_ean": null,
       "zatu_tags": [
         "2 Players",
         "30-45 Minutes",
@@ -18893,7 +19137,7 @@
       "zatu_url": "https://zatu.com/products/newton-great-discoveries-2nd-edition",
       "zatu_price_gbp": 47.5,
       "zatu_in_stock": true,
-      "zatu_ean": "8034055582893",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Cranio Creations",
@@ -18921,7 +19165,7 @@
       "zatu_url": "https://zatu.com/products/revenant",
       "zatu_price_gbp": 41.69,
       "zatu_in_stock": true,
-      "zatu_ean": "5999138700669",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "90-120 Minutes",
@@ -18953,7 +19197,7 @@
       "zatu_url": "https://zatu.com/products/one-hit-heroes",
       "zatu_price_gbp": 33.29,
       "zatu_in_stock": true,
-      "zatu_ean": "0824284700018",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "30-45 Minutes",
@@ -19013,7 +19257,7 @@
       "zatu_url": "https://zatu.com/products/snakes-of-wrath",
       "zatu_price_gbp": 18.29,
       "zatu_in_stock": true,
-      "zatu_ean": "0700304160812",
+      "zatu_ean": null,
       "zatu_tags": [
         "2 Players",
         "20-30 Minutes",
@@ -19043,7 +19287,7 @@
       "zatu_url": "https://zatu.com/products/mindbug-battlefruit-galaxy",
       "zatu_price_gbp": 16.19,
       "zatu_in_stock": true,
-      "zatu_ean": "4262429410617",
+      "zatu_ean": null,
       "zatu_tags": [
         "2 Players",
         "20-30 Minutes",
@@ -19075,7 +19319,7 @@
       "zatu_url": "https://zatu.com/products/rats-of-wistar",
       "zatu_price_gbp": 56.95,
       "zatu_in_stock": true,
-      "zatu_ean": "0850045365264",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "60-90 Minutes",
@@ -19136,7 +19380,7 @@
       "zatu_url": "https://zatu.com/products/yokai-pagoda",
       "zatu_price_gbp": 12.95,
       "zatu_in_stock": true,
-      "zatu_ean": "8425402874875",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "30-45 Minutes",
@@ -19166,7 +19410,7 @@
       "zatu_url": "https://zatu.com/products/barbarossa-army-group-north-1941-2nd-edition",
       "zatu_price_gbp": 84.9,
       "zatu_in_stock": true,
-      "zatu_ean": "0817054012961",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "12+",
@@ -19198,7 +19442,7 @@
       "zatu_url": "https://zatu.com/products/seljuk-byzantium-besieged-1068-1071",
       "zatu_price_gbp": 81.15,
       "zatu_in_stock": true,
-      "zatu_ean": "0817054012916",
+      "zatu_ean": null,
       "zatu_tags": [
         "2 Players",
         "Board Games",
@@ -19228,7 +19472,7 @@
       "zatu_url": "https://zatu.com/products/mindbug-battlefruit-kingdom",
       "zatu_price_gbp": 16.19,
       "zatu_in_stock": true,
-      "zatu_ean": "4262429410594",
+      "zatu_ean": null,
       "zatu_tags": [
         "2 Players",
         "20-30 Minutes",
@@ -19260,7 +19504,7 @@
       "zatu_url": "https://zatu.com/products/skytear-horde-campaigns",
       "zatu_price_gbp": 209.99,
       "zatu_in_stock": true,
-      "zatu_ean": "8058269031411",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "Card Games",
@@ -19288,7 +19532,7 @@
       "zatu_url": "https://zatu.com/products/pillars-of-hercules-awaken-the-legends-classic",
       "zatu_price_gbp": 46.9,
       "zatu_in_stock": true,
-      "zatu_ean": "0860013199968",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-4 Players",
         "30-45 Minutes",
@@ -19350,7 +19594,7 @@
       "zatu_url": "https://zatu.com/products/labyrinth-chronicles",
       "zatu_price_gbp": 134.99,
       "zatu_in_stock": true,
-      "zatu_ean": "4005556250158",
+      "zatu_ean": null,
       "zatu_tags": [
         "2-4 Players",
         "30-45 Minutes",
@@ -19382,7 +19626,7 @@
       "zatu_url": "https://zatu.com/products/legacy-of-eastbrook-hills",
       "zatu_price_gbp": 59.05,
       "zatu_in_stock": true,
-      "zatu_ean": "3760372236786",
+      "zatu_ean": null,
       "zatu_tags": [
         "1-6 Players",
         "12+",
@@ -19415,7 +19659,7 @@
       "zatu_url": "https://zatu.com/products/italy-43",
       "zatu_price_gbp": 45.45,
       "zatu_in_stock": true,
-      "zatu_ean": "0817054013036",
+      "zatu_ean": null,
       "zatu_tags": [
         "2 Players",
         "Board Games",
@@ -19445,7 +19689,7 @@
       "zatu_url": "https://zatu.com/products/thug-life-the-board-game",
       "zatu_price_gbp": 38.59,
       "zatu_in_stock": true,
-      "zatu_ean": "0863892000325",
+      "zatu_ean": null,
       "zatu_tags": [
         "Board Games",
         "no gift wrap",
@@ -19460,8 +19704,8 @@
       "bgg_rank": 23527,
       "bgg_average": 8.64179,
       "bgg_usersrated": 67,
-      "match_confidence": "MEDIUM",
-      "match_score": 95.0,
+      "match_confidence": "HIGH",
+      "match_score": 100.0,
       "quality_shrunk": 7.359,
       "quality_pts": 5.12,
       "quality_label": "UNPROVEN"
@@ -19472,7 +19716,7 @@
       "zatu_url": "https://zatu.com/products/by-swords-and-bayonets",
       "zatu_price_gbp": 45.45,
       "zatu_in_stock": true,
-      "zatu_ean": "0817054012800",
+      "zatu_ean": null,
       "zatu_tags": [
         "2 Players",
         "Board Games",

@@ -48,6 +48,7 @@ def main() -> int:
     parser.add_argument("--config", default="config.yaml")
     parser.add_argument("--zatu-products", default="data/zatu_products.json")
     parser.add_argument("--matched", default="data/matched_games.json")
+    parser.add_argument("--unmatched", default="data/unmatched_games.json")
     parser.add_argument("--out", default="docs/index.html")
     args = parser.parse_args()
 
@@ -55,13 +56,21 @@ def main() -> int:
     games = json.loads(Path(args.scored).read_text())["games"]
     metadata = build_run_metadata(config, args.zatu_products, args.matched)
 
-    html = render_html(games, metadata)
+    unmatched_path = Path(args.unmatched)
+    unmatched_games = (
+        json.loads(unmatched_path.read_text())["unmatched"] if unmatched_path.exists() else []
+    )
+
+    html = render_html(games, metadata, unmatched_games)
 
     out_path = Path(args.out)
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(html)
 
-    print(f"Rendered {len(games)} games -> {out_path}", file=sys.stderr)
+    print(
+        f"Rendered {len(games)} scored games + {len(unmatched_games)} unmatched -> {out_path}",
+        file=sys.stderr,
+    )
     return 0
 
 

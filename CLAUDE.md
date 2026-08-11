@@ -603,3 +603,79 @@ BGG API token.
   price can. Calling `data/bgg_fr_editions.json` a "cache" undersells it; once written it's
   functionally permanent data, only ever added to (new bgg_ids) or explicitly corrected
   (`--refresh`), never expired on its own.
+
+## Stage 2 matching improvements + unmatched-games list (2026-08-11)
+
+User's follow-up after seeing the shortlist shrink to 58: *"I did not find anything amazing in
+the current list. I wonder if in the games from Zatu we did not match in bgg there is not more
+potential"* — asked for (1) a visible list of Zatu games Stage 2 never matched to BGG at all, so
+they could eyeball it for hidden gems, and (2) a look at whether matching itself could be
+improved for the near-miss cases. Both offline, no network needed.
+
+- **Real normalization bugs found and fixed in `match.py`**, each backed by a concrete
+  before/after from the real 3597-row `dropped.csv`, not a hypothetical:
+  - **"Vol." abbreviation**: BGG spells out "Volume One"/"Volume Two", Zatu abbreviates
+    "Vol. 1"/"Vol 2" — `_VOL_DOT_RE`/`_VOL_WORD_RE` expand the abbreviation to "volume" (kept,
+    not stripped as noise — the volume number is exactly what distinguishes these entries).
+  - **Word-numbers**: paired with the above, BGG spells "One"/"Two"/"Three" as words where Zatu
+    uses digits — `_WORD_NUM_RE`/`_WORD_NUM_MAP` convert them the same way roman numerals
+    already were, so both sides land on the same digit token.
+  - **"The Game" as a franchise qualifier**: BGG catalogues the whole EXIT: puzzle-room series
+    as "EXIT: The Game – <subtitle>", but Zatu drops "The Game" entirely
+    ("EXIT: The Sinister Mansion") — added to `_EDITION_NOISE_RE` alongside the existing "board
+    game"/"card game" phrases. Safe even in the worst case: if two genuinely different BGG
+    entries only differ by "the game", stripping it just makes them collide into the
+    ambiguous-exact-match branch (correctly dropped), never a wrong silent match.
+  - **"v." as "versus", not roman numeral V**: found as a real *regression* the fixes above
+    exposed — once "Season One" became "Season 1" on both sides, a preexisting latent bug (the
+    roman-numeral regex misreading Dice Throne's "... Pyromancer v. Shadow Thief" abbreviation
+    as roman "V" = 5) started a genuine digit ("1") disagreeing with a fake one ("5"), tripping
+    the digit-conflict veto on a game that used to match by accident (previously masked because
+    only one side ever carried a digit). Fixed by normalizing "v." (only when followed by
+    whitespace, so a genuine roman "V" edition number is never touched) to "vs" before the
+    roman-numeral pass ever sees it — confirmed via `bg_ranks.csv` that all 23 real "v."
+    occurrences are this exact Dice Throne matchup-naming convention, nothing else.
+  - **Real, measured result** (re-running `scripts/match_bgg.py` offline against the live 4178×
+    140,261 corpus, verified via a before/after diff of `data/matched_games.json` survivor
+    handles): 582 → **589 survivors, net +7, zero regressions** — 3 EXIT titles, 3 "Unmatched:
+    Battle of Legends" volumes, 1 Dice Throne matchup recovered; nothing that used to match
+    stopped matching. All 205 tests (36 in `test_match.py` alone) still pass unchanged.
+- **`MatchResult` gained a `candidates` field** (`match.py`) — purely informational, populated
+  only on LOW-confidence results (the single best fuzzy/digit-conflict candidate, or up to 5 tied
+  exact/prefix candidates), never used to decide match/no-match. `bgg_id`/`bgg_name` stay `None`
+  on LOW exactly as before, so nothing downstream can mistake this for an actual match — it
+  exists solely so a human can see *why* something looked close without re-running the matcher.
+- **New unmatched-games list**: `scripts/match_bgg.py`'s `run()` now returns a third list
+  alongside survivors/dropped — every LOW-confidence-dropped product that isn't itself an
+  accessory (reusing `filters.py`'s accessory check, refactored into
+  `is_probably_accessory_fields()` so it works off plain dict fields, not just a `ZatuProduct`),
+  carrying full Zatu fields (price, stock, tags, coop/party) plus a categorized `match_category`
+  (`NO_CONFIDENT_MATCH`/`AMBIGUOUS_EXACT`/`AMBIGUOUS_PREFIX`/`DIGIT_CONFLICT`) and the candidate
+  info above. Written to `data/unmatched_games.json` (real result: **2220 games** — 1911 no
+  confident match, 283 ambiguous-exact, 21 ambiguous-prefix, 5 digit-conflict — after excluding
+  accessories from the raw 2227 LOW-confidence drops). Deliberately distinct from spec P2's
+  "ambiguous matches never surfaced for manual review" — that principle is about *auto-picking*
+  one of several tied BGG candidates (still never done), not about hiding the raw dropped list
+  itself from a human who explicitly asked to see it.
+- **`docs/index.html` gained a second, collapsed-by-default `<details>` section** ("Not
+  matched to BGG (2220 games)") below the main scored table — its own sortable/filterable table
+  (`render.py`'s `prepare_unmatched()`/`build_closest_bgg_guess()`), reusing the same coop/party/
+  tag category-filter chips. Default sort is by fuzzy match score descending (nulls/ambiguous
+  cases sort last, real near-misses bubble to the top) so the most promising "did we just miss
+  this" candidates are the first thing seen on expand — confirmed live via Playwright: "Battle
+  Royale: Last One Standing" (100% similar, dropped only for being too close to a runner-up) and
+  the remaining Dice Throne/EXIT near-misses surface first, exactly as intended. The main table's
+  sort/filter JS was refactored into a shared `setupTable()` function called twice (was a single
+  inline IIFE) rather than duplicating ~90 lines of JS for the second table. Still fully
+  self-contained (no CDN, verified by the existing `test_render.py` domain-allowlist assertion,
+  which now also covers the new `boardgamegeek.com` search-link URLs) — `docs/index.html` is now
+  ~2.5MB (2220 extra rows), still loads and filters instantly in a live Playwright check.
+- **Not yet live**: the 7 newly-recovered survivors (from the matching fixes above) are in the
+  refreshed `data/matched_games.json` but don't have Stage 3/4/5 data (BGG French-edition check,
+  EAN, Philibert lookup) yet — `data/shortlist.json`/`data/scored_games.json` and the main
+  scored table in `docs/index.html` are unchanged from the last live run until the next
+  `lookup-philibert.yml` dispatch picks them up (their Philibert-lookup cache only skips
+  survivors it already has an entry for by `zatu_handle`, so these 7 will be fetched live, not
+  skipped). The new unmatched-games list itself needed no live run at all — every field it uses
+  (Zatu price/stock/tags, BGG candidate names) was already sitting in already-fetched local
+  files.

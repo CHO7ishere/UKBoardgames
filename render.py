@@ -70,6 +70,35 @@ def _philibert_search_url(title: str) -> str:
     return f"https://www.philibertnet.com/fr/recherche?search_query={quote(title)}"
 
 
+def _bgg_search_url(title: str) -> str:
+    return f"https://boardgamegeek.com/geeksearch.php?action=search&objecttype=boardgame&q={quote(title)}"
+
+
+_MATCH_CATEGORY_LABELS = {
+    "NO_CONFIDENT_MATCH": "No confident BGG match",
+    "AMBIGUOUS_EXACT": "Ambiguous — multiple BGG editions share this title",
+    "AMBIGUOUS_PREFIX": "Ambiguous — multiple BGG entries share this as a subtitle prefix",
+    "DIGIT_CONFLICT": "Possible mismatch — looks like a different numbered sequel/expansion",
+}
+
+
+def build_closest_bgg_guess(game: dict) -> str | None:
+    """A one-line "closest BGG guess" for a game Stage 2 couldn't confidently match, so a human
+    can eyeball a dropped title and judge "near-miss worth a closer look" vs "genuinely not on
+    BGG" without re-running the matcher by hand."""
+    candidates = game.get("bgg_candidates") or []
+    if not candidates:
+        return None
+    names = [c["bgg_name"] for c in candidates[:3]]
+    label = ", ".join(names)
+    if len(candidates) > 3:
+        label += f", +{len(candidates) - 3} more"
+    score = game.get("match_score")
+    if score is not None and len(candidates) == 1:
+        label += f" ({score:.0f}% similar)"
+    return label
+
+
 def build_why(game: dict) -> str:
     """Spec §6: 'a one-line "why"' per row, e.g. "Not sold in France, no FR edition exists ·
     8.2 (3,400 votes) · coop · low text.\""""
@@ -113,11 +142,41 @@ def prepare_games(games: list[dict]) -> list[dict]:
     return prepared
 
 
-def render_html(games: list[dict], run_metadata: dict) -> str:
+def prepare_unmatched(games: list[dict]) -> list[dict]:
+    """Games Stage 2 could never confidently match to BGG at all (not just failed the quality
+    gate) -- no score/quality data exists for these, so they can never reach the scored
+    shortlist, but they're still real Zatu listings worth a human's own eyeball. See
+    scripts/match_bgg.py's `run()`."""
+    prepared = []
+    for game in games:
+        prepared.append(
+            {
+                **game,
+                "match_category_label": _MATCH_CATEGORY_LABELS.get(
+                    game.get("match_category"), game.get("match_category")
+                ),
+                "closest_bgg_guess": build_closest_bgg_guess(game),
+                "bgg_search_url": _bgg_search_url(game["zatu_title"]),
+                "category_tags": clean_category_tags(game.get("zatu_tags")),
+            }
+        )
+    return prepared
+
+
+def render_html(
+    games: list[dict], run_metadata: dict, unmatched_games: list[dict] | None = None
+) -> str:
     env = Environment(
         loader=FileSystemLoader(str(TEMPLATE_DIR)),
         autoescape=select_autoescape(["html"]),
     )
     template = env.get_template("report.html.jinja2")
     prepared = prepare_games(games)
-    return template.render(games=prepared, meta=run_metadata, filter_tags=top_category_tags(prepared))
+    prepared_unmatched = prepare_unmatched(unmatched_games or [])
+    return template.render(
+        games=prepared,
+        meta=run_metadata,
+        filter_tags=top_category_tags(prepared),
+        unmatched_games=prepared_unmatched,
+        unmatched_filter_tags=top_category_tags(prepared_unmatched),
+    )

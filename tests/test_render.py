@@ -2,7 +2,16 @@ import re
 
 import pytest
 
-from render import build_flags, build_why, clean_category_tags, prepare_games, render_html, top_category_tags
+from render import (
+    build_closest_bgg_guess,
+    build_flags,
+    build_why,
+    clean_category_tags,
+    prepare_games,
+    prepare_unmatched,
+    render_html,
+    top_category_tags,
+)
 
 GAME_UNAVAILABLE = {
     "zatu_handle": "unavailable-game",
@@ -120,15 +129,88 @@ def test_prepare_games_maps_advantage_verdict_to_css_class():
     assert prepared[1]["advantage_css_class"] == "adv-cheaper"
 
 
+UNMATCHED_NO_CANDIDATE = {
+    "zatu_handle": "totally-obscure-game",
+    "zatu_title": "Totally Obscure Game",
+    "zatu_url": "https://zatu.com/products/totally-obscure-game",
+    "zatu_price_gbp": 12.5,
+    "zatu_in_stock": True,
+    "zatu_is_coop": False,
+    "zatu_is_party": True,
+    "zatu_tags": ["Party Games", "2-4 Players"],
+    "match_category": "NO_CONFIDENT_MATCH",
+    "bgg_candidates": [],
+    "match_score": None,
+}
+
+UNMATCHED_NEAR_MISS = {
+    "zatu_handle": "near-miss-game",
+    "zatu_title": "Near Miss Game Deluxe",
+    "zatu_url": "https://zatu.com/products/near-miss-game",
+    "zatu_price_gbp": 25.0,
+    "zatu_in_stock": False,
+    "zatu_is_coop": False,
+    "zatu_is_party": False,
+    "zatu_tags": [],
+    "match_category": "DIGIT_CONFLICT",
+    "bgg_candidates": [{"bgg_id": 999, "bgg_name": "Near Miss Game 2"}],
+    "match_score": 92.5,
+}
+
+UNMATCHED_AMBIGUOUS = {
+    "zatu_handle": "ambiguous-game",
+    "zatu_title": "Ambiguous Game",
+    "zatu_url": "https://zatu.com/products/ambiguous-game",
+    "zatu_price_gbp": None,
+    "zatu_in_stock": True,
+    "zatu_is_coop": False,
+    "zatu_is_party": False,
+    "zatu_tags": [],
+    "match_category": "AMBIGUOUS_EXACT",
+    "bgg_candidates": [
+        {"bgg_id": 1, "bgg_name": "Ambiguous Game (2001)"},
+        {"bgg_id": 2, "bgg_name": "Ambiguous Game (Big Box)"},
+    ],
+    "match_score": None,
+}
+
+
+def test_build_closest_bgg_guess_none_when_no_candidates():
+    assert build_closest_bgg_guess(UNMATCHED_NO_CANDIDATE) is None
+
+
+def test_build_closest_bgg_guess_includes_score_for_single_candidate():
+    guess = build_closest_bgg_guess(UNMATCHED_NEAR_MISS)
+    assert guess == "Near Miss Game 2 (92% similar)"
+
+
+def test_build_closest_bgg_guess_lists_multiple_candidates_without_a_score():
+    guess = build_closest_bgg_guess(UNMATCHED_AMBIGUOUS)
+    assert guess == "Ambiguous Game (2001), Ambiguous Game (Big Box)"
+
+
+def test_prepare_unmatched_maps_category_to_friendly_label_and_bgg_search_url():
+    prepared = prepare_unmatched([UNMATCHED_NEAR_MISS])
+    assert prepared[0]["match_category_label"].startswith("Possible mismatch")
+    assert prepared[0]["bgg_search_url"].startswith(
+        "https://boardgamegeek.com/geeksearch.php?"
+    )
+    assert prepared[0]["closest_bgg_guess"] == "Near Miss Game 2 (92% similar)"
+
+
 def test_render_html_produces_self_contained_page_with_both_games():
     html = render_html(
         [GAME_UNAVAILABLE, GAME_CHEAPER],
         {"generated_at": "2026-08-10 12:00 UTC", "fx_gbp_eur": 1.17, "discount_threshold": 0.40},
+        [UNMATCHED_NO_CANDIDATE, UNMATCHED_NEAR_MISS],
     )
     assert "<!doctype html>" in html.lower()
     assert "Unavailable Game" in html
     assert "Cheaper Game" in html
     assert "2 games matched your criteria" in html
+    assert "Totally Obscure Game" in html
+    assert "Near Miss Game Deluxe" in html
+    assert "Near Miss Game 2 (92% similar)" in html
     # self-contained: every external link points at one of the three known content sources,
     # never a CDN asset (script/style src) -- no <script src=...> or <link href=...> at all.
     assert "<script src=" not in html

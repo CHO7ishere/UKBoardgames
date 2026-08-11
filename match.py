@@ -15,7 +15,7 @@ import html
 import re
 import unicodedata
 from collections import defaultdict
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
 from rapidfuzz import fuzz, process
 
@@ -35,14 +35,50 @@ _ROMAN_MAP = {
 }
 _ROMAN_RE = re.compile(r"\b(x|ix|viii|vii|vi|v|iv|iii|ii|i)\b", re.IGNORECASE)
 
+# "Volume One"/"Vol. 3"/"Vol 2" all denote the same thing -- found via a real miss (Zatu's
+# "Unmatched Battle Of Legends, Vol. 1" vs BGG's "Unmatched: Battle of Legends, Volume One",
+# ~87% fuzzy, below threshold). Expand the retailer's "Vol."/"Vol" abbreviation to BGG's
+# spelled-out "volume" first (two-step: turn a trailing dot into a space, then match the bare
+# word) so the two sides compare equal, rather than stripping the word entirely -- the volume
+# number is exactly what distinguishes these entries, so it must be kept and aligned, not noise.
+_VOL_DOT_RE = re.compile(r"\bvol\.(?=\s|\d)")
+_VOL_WORD_RE = re.compile(r"\bvol\b")
+
+# Same real miss also showed BGG spelling the volume number as a word ("One"/"Two"/"Three")
+# where Zatu uses a digit ("1"/"2"/"3") -- convert low word-numbers to digits the same way roman
+# numerals already are, so both sides land on the same digit token.
+_WORD_NUM_MAP = {
+    "one": "1", "two": "2", "three": "3", "four": "4", "five": "5",
+    "six": "6", "seven": "7", "eight": "8", "nine": "9", "ten": "10",
+}
+_WORD_NUM_RE = re.compile(r"\b(one|two|three|four|five|six|seven|eight|nine|ten)\b")
+
+# "v." as a bare "versus" abbreviation (all 23 real occurrences in bg_ranks.csv are Dice Throne
+# matchup titles, e.g. "Dice Throne: ... Pyromancer v. Shadow Thief") was being silently
+# misread by the roman-numeral regex below as "V" = 5 -- found via a real regression the vol/
+# word-number fixes above exposed: once "Season One" on both sides became "Season 1", the
+# query's real digit ("1") and the candidate's *fake* one (this "v"->5 misread) started
+# disagreeing, tripping the digit-conflict veto on a game that used to match. Normalize the
+# abbreviation to "vs" (matching how Zatu spells it) before the roman-numeral pass ever sees a
+# bare "v", rather than letting it get read as a numeral -- restricted to "v." followed by
+# whitespace so it can't misfire on a genuine roman-numeral "V" (which never carries a trailing
+# dot in these titles).
+_V_DOT_RE = re.compile(r"\bv\.(?=\s)")
+
 # Marketing/edition noise stripped before comparison (spec §4.1). Matched as whole phrases so
 # "2nd edition"/"deluxe edition" disappear together rather than leaving a stray "2"/"deluxe".
 # NOTE: "core" is deliberately NOT stripped as a bare word (only the "core game" phrase) —
 # it used to be, which silently mangled "Company of Heroes: 2nd Edition Core Set" into "...set"
 # by eating "core" out of "Core Set", a real BGG product-line term, not marketing noise.
+# "the game" is here too -- found via a real, concentrated miss class: BGG catalogues the whole
+# EXIT: puzzle-room series as "EXIT: The Game – <subtitle>", but Zatu's listings drop "The Game"
+# entirely ("EXIT: The Sinister Mansion" / "EXiT - The Sinister Mansion"), landing ~15 real EXIT
+# titles at 85-90% fuzzy, just under/too close-to-threshold. Safe even in the worst case: if two
+# genuinely different BGG entries only differ by "the game", stripping it just makes them collide
+# into the ambiguous-exact-match branch (correctly dropped), never a wrong silent match.
 _EDITION_NOISE_RE = re.compile(
-    r"\b(board game|card game|\d+(st|nd|rd|th)\s+edition|deluxe edition|deluxe|big box|"
-    r"retail edition|english edition|english|core game|standard edition|"
+    r"\b(board game|card game|the game|\d+(st|nd|rd|th)\s+edition|deluxe edition|deluxe|"
+    r"big box|retail edition|english edition|english|core game|standard edition|"
     r"anniversary edition|collector'?s edition)\b"
 )
 _ARTICLE_RE = re.compile(r"\b(a|an|the)\b")
@@ -80,7 +116,11 @@ def normalize_title(title: str) -> str:
     text = _TRAILING_YEAR_RE.sub(" ", text)
     text = _THOUSANDS_COMMA_RE.sub("", text)
     text = text.replace("&", " and ")
+    text = _VOL_DOT_RE.sub("vol ", text)
+    text = _VOL_WORD_RE.sub("volume", text)
+    text = _V_DOT_RE.sub("vs", text)
     text = _EDITION_NOISE_RE.sub(" ", text)
+    text = _WORD_NUM_RE.sub(lambda m: _WORD_NUM_MAP[m.group(0)], text)
     text = _ROMAN_RE.sub(lambda m: _ROMAN_MAP.get(m.group(0).lower(), m.group(0)), text)
     text = _PUNCT_RE.sub(" ", text)
     text = _ARTICLE_RE.sub(" ", text)
@@ -105,6 +145,13 @@ class MatchResult:
     confidence: str  # "HIGH" | "MEDIUM" | "LOW"
     score: float | None
     reason: str
+    # Purely informational, never used to decide match/no-match: the BGG entry/entries that
+    # were closest to (or tied with) the query when a LOW-confidence result is returned, so a
+    # human can eyeball a dropped title and judge "near-miss worth a closer look" vs "genuinely
+    # not on BGG" -- e.g. surfaced in the website's unmatched-games list. Deliberately kept
+    # separate from bgg_id/bgg_name, which stay None on LOW so nothing downstream can mistake
+    # this for an actual match.
+    candidates: list[tuple[int, str]] = field(default_factory=list)
 
 
 class BggIndex:
@@ -152,6 +199,7 @@ class BggIndex:
                 "LOW",
                 None,
                 "ambiguous: multiple BGG entries share this normalized title",
+                candidates=[(g.id, g.name) for g in exact[:5]],
             )
 
         if not self.normalized_names:
@@ -184,6 +232,7 @@ class BggIndex:
                 "LOW",
                 fuzzy_result.score,
                 "ambiguous: multiple BGG entries share this title as a prefix",
+                candidates=[(g.id, g.name) for g in prefix_hits[:5]],
             )
 
         return fuzzy_result
@@ -201,6 +250,8 @@ class BggIndex:
         second_score = results[1][1] if len(results) > 1 else 0.0
         best_norm = self.normalized_names[best_idx]
 
+        best_bgg = self.games[best_idx]
+
         if best_score < fuzzy_threshold or (best_score - second_score) < min_gap:
             return MatchResult(
                 title,
@@ -209,6 +260,7 @@ class BggIndex:
                 "LOW",
                 best_score,
                 "fuzzy score below threshold or too close to runner-up",
+                candidates=[(best_bgg.id, best_bgg.name)],
             )
 
         if _digits_conflict(norm, best_norm):
@@ -219,13 +271,13 @@ class BggIndex:
                 "LOW",
                 best_score,
                 "digit conflict (likely a different sequel/season/expansion)",
+                candidates=[(best_bgg.id, best_bgg.name)],
             )
 
-        bgg = self.games[best_idx]
         return MatchResult(
             title,
-            bgg.id,
-            bgg.name,
+            best_bgg.id,
+            best_bgg.name,
             "MEDIUM",
             best_score,
             "fuzzy match above threshold with clear gap to runner-up",

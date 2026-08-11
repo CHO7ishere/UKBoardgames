@@ -45,7 +45,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/matched_games.json data/bgg_fr_editions.json data/philibert_results.json data/shortlist.json data/scored_games.json docs/index.html
+          git add data/matched_games.json data/unmatched_games.json data/bgg_fr_editions.json data/philibert_results.json data/shortlist.json data/scored_games.json docs/index.html
           git diff --cached --quiet && { echo "Nothing to commit."; exit 0; }
           git commit -m "Update Philibert lookup + shortlist + report [skip ci]"
           for attempt in 1 2 3 4 5; do

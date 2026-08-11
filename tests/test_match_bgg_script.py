@@ -30,7 +30,7 @@ def _bgg_games():
 
 
 def test_run_produces_expected_survivors_and_drops():
-    survivors, dropped = match_bgg.run(_zatu_products(), _bgg_games(), TEST_CONFIG)
+    survivors, dropped, unmatched = match_bgg.run(_zatu_products(), _bgg_games(), TEST_CONFIG)
 
     survivor_handles = {s["zatu_handle"] for s in survivors}
     assert survivor_handles == {"gloomhaven-jaws-of-the-lion", "brass-birmingham"}
@@ -42,9 +42,17 @@ def test_run_produces_expected_survivors_and_drops():
         "wooden-meeple-set",  # no BGG candidate
     }
 
+    # Both of this fixture's LOW_CONFIDENCE_MATCH drops are themselves real accessories
+    # ("the-mind-dice-set" by title keyword, "wooden-meeple-set" by product_type ==
+    # "Accessories") -- correctly kept out of the unmatched-games list, which is for real,
+    # unscored *games* a human might want to eyeball, not spare parts. See
+    # test_run_unmatched_carries_zatu_fields_and_category for a real, non-accessory case.
+    unmatched_handles = {u["zatu_handle"] for u in unmatched}
+    assert unmatched_handles == set()
+
 
 def test_run_survivor_carries_zatu_and_bgg_fields():
-    survivors, _ = match_bgg.run(_zatu_products(), _bgg_games(), TEST_CONFIG)
+    survivors, _, _ = match_bgg.run(_zatu_products(), _bgg_games(), TEST_CONFIG)
     brass = next(s for s in survivors if s["zatu_handle"] == "brass-birmingham")
     assert brass["bgg_id"] == 2
     assert brass["bgg_name"] == "Brass: Birmingham"
@@ -72,17 +80,42 @@ def test_run_derives_coop_from_tags_even_without_is_coop_dict_keys():
             "ean": None,
         }
     ]
-    survivors, _ = match_bgg.run(products, _bgg_games(), TEST_CONFIG)
+    survivors, _, _ = match_bgg.run(products, _bgg_games(), TEST_CONFIG)
     assert len(survivors) == 1
     assert survivors[0]["zatu_is_coop"] is True
     assert survivors[0]["zatu_is_party"] is False
 
 
 def test_run_drop_reason_distinguishes_match_vs_quality_failure():
-    _, dropped = match_bgg.run(_zatu_products(), _bgg_games(), TEST_CONFIG)
+    _, dropped, _ = match_bgg.run(_zatu_products(), _bgg_games(), TEST_CONFIG)
     by_handle = {d["zatu_handle"]: d for d in dropped}
     assert by_handle["manipulate"]["reason"].startswith("QUALITY_GATE")
     assert by_handle["the-mind-dice-set"]["reason"].startswith("LOW_CONFIDENCE_MATCH")
+
+
+def test_run_unmatched_carries_zatu_fields_and_category():
+    # A real, unscored game (unlike this fixture's two accessory drops): no title anywhere near
+    # bg_ranks_sample.csv's 7 games, and product_type "Board Games" so it isn't filtered out as
+    # an accessory the way the-mind-dice-set/wooden-meeple-set are.
+    products = _zatu_products() + [
+        {
+            "handle": "totally-obscure-game",
+            "title": "Totally Obscure Game Nobody Has Heard Of",
+            "url": "https://zatu.com/products/totally-obscure-game",
+            "product_type": "Board Games",
+            "tags": ["Party Games"],
+            "min_price_gbp": 12.5,
+            "in_stock": True,
+            "ean": None,
+        }
+    ]
+    _, _, unmatched = match_bgg.run(products, _bgg_games(), TEST_CONFIG)
+    obscure = next(u for u in unmatched if u["zatu_handle"] == "totally-obscure-game")
+    assert obscure["zatu_title"] == "Totally Obscure Game Nobody Has Heard Of"
+    assert obscure["zatu_price_gbp"] == 12.5
+    assert obscure["zatu_is_party"] is True
+    assert obscure["match_category"] == "NO_CONFIDENT_MATCH"
+    assert isinstance(obscure["bgg_candidates"], list)
 
 
 def test_main_end_to_end(tmp_path, monkeypatch):
@@ -93,6 +126,7 @@ def test_main_end_to_end(tmp_path, monkeypatch):
 
     out_file = tmp_path / "matched.json"
     dropped_file = tmp_path / "dropped.csv"
+    unmatched_file = tmp_path / "unmatched.json"
     monkeypatch.setattr(
         sys,
         "argv",
@@ -108,6 +142,8 @@ def test_main_end_to_end(tmp_path, monkeypatch):
             str(out_file),
             "--dropped-out",
             str(dropped_file),
+            "--unmatched-out",
+            str(unmatched_file),
         ],
     )
 
@@ -118,6 +154,8 @@ def test_main_end_to_end(tmp_path, monkeypatch):
     assert len(payload["survivors"]) == 2
     assert dropped_file.exists()
     assert "QUALITY_GATE" in dropped_file.read_text()
+    unmatched_payload = json.loads(unmatched_file.read_text())
+    assert unmatched_payload["unmatched"] == []
 
 
 def test_main_errors_loudly_when_bg_ranks_missing(tmp_path, monkeypatch, capsys):

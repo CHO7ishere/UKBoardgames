@@ -16,12 +16,31 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 import yaml  # noqa: E402
 
+from filters import is_probably_accessory_fields  # noqa: E402
 from match import BggIndex  # noqa: E402
 from score import evaluate_quality  # noqa: E402
 from sources.bgg import filter_base_games, load_bg_ranks  # noqa: E402
 from sources.zatu import is_coop_tag, is_party_tag  # noqa: E402
 
 _DROPPED_FIELDNAMES = ["zatu_handle", "zatu_title", "reason", "bgg_id", "bgg_name", "score"]
+
+# Maps a LOW-confidence MatchResult.reason (see match.py's BggIndex.match) to a short label for
+# the website's unmatched-games list -- the raw reason strings are written for dropped.csv
+# skimming, not meant as UI copy.
+_MATCH_CATEGORY_LABELS = [
+    ("ambiguous: multiple BGG entries share this normalized title", "AMBIGUOUS_EXACT"),
+    ("ambiguous: multiple BGG entries share this title as a prefix", "AMBIGUOUS_PREFIX"),
+    ("digit conflict", "DIGIT_CONFLICT"),
+    ("fuzzy score below threshold", "NO_CONFIDENT_MATCH"),
+    ("no BGG candidates", "NO_CONFIDENT_MATCH"),
+]
+
+
+def _categorize_match_reason(reason: str) -> str:
+    for needle, label in _MATCH_CATEGORY_LABELS:
+        if needle in reason:
+            return label
+    return "NO_CONFIDENT_MATCH"
 
 
 def load_config(path: str) -> dict:
@@ -33,7 +52,9 @@ def load_zatu_products(path: str) -> list[dict]:
     return payload["products"]
 
 
-def run(zatu_products: list[dict], bgg_games, config: dict) -> tuple[list[dict], list[dict]]:
+def run(
+    zatu_products: list[dict], bgg_games, config: dict
+) -> tuple[list[dict], list[dict], list[dict]]:
     index = BggIndex(bgg_games)
     by_id = {g.id: g for g in bgg_games}
 
@@ -49,6 +70,7 @@ def run(zatu_products: list[dict], bgg_games, config: dict) -> tuple[list[dict],
 
     survivors = []
     dropped = []
+    unmatched = []
 
     for product in zatu_products:
         result = index.match(product["title"], fuzzy_threshold=fuzzy_threshold, min_gap=min_gap)
@@ -64,6 +86,32 @@ def run(zatu_products: list[dict], bgg_games, config: dict) -> tuple[list[dict],
                     "score": result.score if result.score is not None else "",
                 }
             )
+            # A product genuinely couldn't be matched to BGG at all -- no quality/score data
+            # exists for it, so it can never reach the scored shortlist, but it's still a real
+            # Zatu listing the user might want to eyeball by hand (spec P2's "never surfaced for
+            # manual review" was about *ambiguous* matches specifically -- thousands of
+            # candidates makes per-game confirmation impossible, but showing the raw list
+            # itself, unscored, is a different and much cheaper thing than confirming each one).
+            # Accessories are excluded the same way filters.py already excludes them from the
+            # main pipeline -- a spare dice tray was never going to be a "hidden gem".
+            if not is_probably_accessory_fields(product.get("product_type"), product["title"]):
+                unmatched.append(
+                    {
+                        "zatu_handle": product["handle"],
+                        "zatu_title": product["title"],
+                        "zatu_url": product["url"],
+                        "zatu_price_gbp": product.get("min_price_gbp"),
+                        "zatu_in_stock": product.get("in_stock"),
+                        "zatu_tags": product.get("tags", []),
+                        "zatu_is_coop": is_coop_tag(product.get("tags", [])),
+                        "zatu_is_party": is_party_tag(product.get("tags", [])),
+                        "match_category": _categorize_match_reason(result.reason),
+                        "bgg_candidates": [
+                            {"bgg_id": cid, "bgg_name": cname} for cid, cname in result.candidates
+                        ],
+                        "match_score": result.score,
+                    }
+                )
             continue
 
         bgg = by_id[result.bgg_id]
@@ -115,7 +163,7 @@ def run(zatu_products: list[dict], bgg_games, config: dict) -> tuple[list[dict],
             }
         )
 
-    return survivors, dropped
+    return survivors, dropped, unmatched
 
 
 def main() -> int:
@@ -125,6 +173,7 @@ def main() -> int:
     parser.add_argument("--config", default="config.yaml")
     parser.add_argument("--out", default="data/matched_games.json")
     parser.add_argument("--dropped-out", default="data/dropped.csv")
+    parser.add_argument("--unmatched-out", default="data/unmatched_games.json")
     args = parser.parse_args()
 
     if not Path(args.bgg_ranks).exists():
@@ -147,9 +196,11 @@ def main() -> int:
     )
     print(f"{len(bgg_games)} base games in bg_ranks.csv after dropping expansions.", file=sys.stderr)
 
-    survivors, dropped = run(products, bgg_games, config)
+    survivors, dropped, unmatched = run(products, bgg_games, config)
     print(
-        f"{len(survivors)} survivors (matched + passed quality gate), {len(dropped)} dropped.",
+        f"{len(survivors)} survivors (matched + passed quality gate), {len(dropped)} dropped "
+        f"({len(unmatched)} of those never matched BGG at all, not just failed the quality "
+        "gate).",
         file=sys.stderr,
     )
 
@@ -163,7 +214,10 @@ def main() -> int:
         writer.writeheader()
         writer.writerows(dropped)
 
-    print(f"Wrote {out_path} and {dropped_path}", file=sys.stderr)
+    unmatched_path = Path(args.unmatched_out)
+    unmatched_path.write_text(json.dumps({"unmatched": unmatched}, indent=2))
+
+    print(f"Wrote {out_path}, {dropped_path}, and {unmatched_path}", file=sys.stderr)
     return 0
 
 

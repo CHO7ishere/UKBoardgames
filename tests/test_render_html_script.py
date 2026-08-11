@@ -58,6 +58,8 @@ def test_main_renders_html_file(tmp_path, monkeypatch):
             str(tmp_path / "missing_zatu.json"),
             "--matched",
             str(tmp_path / "missing_matched.json"),
+            "--unmatched",
+            str(tmp_path / "missing_unmatched.json"),
             "--out",
             str(out_file),
         ],
@@ -69,6 +71,64 @@ def test_main_renders_html_file(tmp_path, monkeypatch):
     html = out_file.read_text()
     assert "Test Game" in html
     assert "1 games matched your criteria" in html
+    assert "Not matched to BGG (0 games)" in html
+
+
+def test_main_includes_unmatched_games_when_file_present(tmp_path, monkeypatch):
+    scored_file = tmp_path / "scored.json"
+    scored_file.write_text(json.dumps({"games": [GAME]}))
+    config_file = tmp_path / "config.yaml"
+    config_file.write_text(yaml.dump(TEST_CONFIG))
+    unmatched_file = tmp_path / "unmatched.json"
+    unmatched_file.write_text(
+        json.dumps(
+            {
+                "unmatched": [
+                    {
+                        "zatu_handle": "obscure-game",
+                        "zatu_title": "Obscure Game",
+                        "zatu_url": "https://zatu.com/products/obscure-game",
+                        "zatu_price_gbp": 9.99,
+                        "zatu_in_stock": True,
+                        "zatu_is_coop": False,
+                        "zatu_is_party": False,
+                        "zatu_tags": [],
+                        "match_category": "NO_CONFIDENT_MATCH",
+                        "bgg_candidates": [],
+                        "match_score": None,
+                    }
+                ]
+            }
+        )
+    )
+    out_file = tmp_path / "index.html"
+
+    monkeypatch.setattr(
+        sys,
+        "argv",
+        [
+            "render_html.py",
+            "--scored",
+            str(scored_file),
+            "--config",
+            str(config_file),
+            "--zatu-products",
+            str(tmp_path / "missing_zatu.json"),
+            "--matched",
+            str(tmp_path / "missing_matched.json"),
+            "--unmatched",
+            str(unmatched_file),
+            "--out",
+            str(out_file),
+        ],
+    )
+
+    exit_code = render_html_script.main()
+
+    assert exit_code == 0
+    html = out_file.read_text()
+    assert "Obscure Game" in html
+    assert "Not matched to BGG (1 games)" in html
 
 
 def test_build_run_metadata_counts_are_none_when_files_missing(tmp_path):
