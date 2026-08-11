@@ -50,10 +50,10 @@
       "philibert_url": null,
       "philibert_stock_status_raw": null,
       "advantage_verdict": "UNAVAILABLE_FR",
-      "advantage_points": 28,
+      "advantage_points": 40,
       "discount_pct": null,
-      "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "needs_eyeball": false,
+      "advantage_reason": "not listed on Philibert, no French edition exists at all"
     },
     {
       "zatu_handle": "exit-advent-calendar-the-intergalactic-race",
@@ -100,10 +100,10 @@
       "philibert_url": null,
       "philibert_stock_status_raw": null,
       "advantage_verdict": "UNAVAILABLE_FR",
-      "advantage_points": 28,
+      "advantage_points": 40,
       "discount_pct": null,
-      "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "needs_eyeball": false,
+      "advantage_reason": "not listed on Philibert, no French edition exists at all"
     },
     {
       "zatu_handle": "gloomhaven-jaws-of-the-lion",
@@ -155,7 +155,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "scythe",
@@ -212,7 +212,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "thames-murders-sherlock-holmes-consulting-detective-2017",
@@ -256,7 +256,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "exit-dead-man-orient-express",
@@ -305,7 +305,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "castle-combo",
@@ -351,7 +351,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "exit-advent-calendar-the-silent-storm",
@@ -397,7 +397,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "horrified-dungeons-dragons",
@@ -486,7 +486,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "the-isle-of-cats",
@@ -536,7 +536,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "ganz-schon-clever",
@@ -577,7 +577,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "exit-advent-calendar-the-missing-hollywood-star",
@@ -623,7 +623,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "gloomhaven-buttons-bugs",
@@ -663,7 +663,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "the-taverns-of-tiefenthal",
@@ -708,7 +708,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "escape-the-dark-sector",
@@ -754,7 +754,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "monikers",
@@ -794,10 +794,10 @@
       "philibert_url": null,
       "philibert_stock_status_raw": null,
       "advantage_verdict": "UNAVAILABLE_FR",
-      "advantage_points": 28,
+      "advantage_points": 40,
       "discount_pct": null,
-      "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "needs_eyeball": false,
+      "advantage_reason": "not listed on Philibert, no French edition exists at all"
     },
     {
       "zatu_handle": "micromacro-kids-crazy-city-park",
@@ -841,7 +841,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "sherlock-holmes-consulting-detective-the-baker-street-irregulars",
@@ -889,7 +889,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "unlock-5-heroic-adventures",
@@ -929,7 +929,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "feed-the-kraken",
@@ -968,7 +968,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "the-quacks-of-quedlinburg-the-duel",
@@ -1014,7 +1014,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "heroes-of-barcadia",
@@ -1056,10 +1056,10 @@
       "philibert_url": null,
       "philibert_stock_status_raw": null,
       "advantage_verdict": "UNAVAILABLE_FR",
-      "advantage_points": 28,
+      "advantage_points": 40,
       "discount_pct": null,
-      "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "needs_eyeball": false,
+      "advantage_reason": "not listed on Philibert, no French edition exists at all"
     },
     {
       "zatu_handle": "micro-macro-crime-city-4-showdown",
@@ -1148,7 +1148,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "unlock-6-timeless-adventures",
@@ -1190,7 +1190,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "for-northwood",
@@ -1228,7 +1228,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "a-feast-for-odin",
@@ -1283,7 +1283,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "unlock-7-epic-adventures",
@@ -1323,7 +1323,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "exit-catacombs-of-horror",
@@ -1373,7 +1373,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "rumble-nation",
@@ -1415,7 +1415,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "ticket-ride-rails-sails",
@@ -1456,7 +1456,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "forbidden-jungle",
@@ -1502,10 +1502,10 @@
       "philibert_url": null,
       "philibert_stock_status_raw": null,
       "advantage_verdict": "UNAVAILABLE_FR",
-      "advantage_points": 28,
+      "advantage_points": 40,
       "discount_pct": null,
-      "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "needs_eyeball": false,
+      "advantage_reason": "not listed on Philibert, no French edition exists at all"
     },
     {
       "zatu_handle": "targi",
@@ -1551,7 +1551,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "zombie-teenz-evolution",
@@ -1597,7 +1597,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "whitehall-mystery",
@@ -1644,7 +1644,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "micromacro-crime-city-3-all-in",
@@ -1687,7 +1687,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "captain-sonar-2022",
@@ -1732,7 +1732,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "unmatched-sling-arrows",
@@ -1774,7 +1774,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "a-wild-venture",
@@ -1817,7 +1817,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "exit-the-gate-between-worlds",
@@ -1862,7 +1862,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "the-isle-of-cats-duel",
@@ -1901,10 +1901,10 @@
       "philibert_url": null,
       "philibert_stock_status_raw": null,
       "advantage_verdict": "UNAVAILABLE_FR",
-      "advantage_points": 28,
+      "advantage_points": 40,
       "discount_pct": null,
-      "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "needs_eyeball": false,
+      "advantage_reason": "not listed on Philibert, no French edition exists at all"
     },
     {
       "zatu_handle": "xia-legend-of-a-drift-system",
@@ -1941,10 +1941,10 @@
       "philibert_url": null,
       "philibert_stock_status_raw": null,
       "advantage_verdict": "UNAVAILABLE_FR",
-      "advantage_points": 28,
+      "advantage_points": 40,
       "discount_pct": null,
-      "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "needs_eyeball": false,
+      "advantage_reason": "not listed on Philibert, no French edition exists at all"
     },
     {
       "zatu_handle": "jack-ripper-west-end-adventures",
@@ -1995,7 +1995,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "king-is-dead-second-edition",
@@ -2035,7 +2035,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "return-to-dark-tower",
@@ -2075,7 +2075,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "iki",
@@ -2117,7 +2117,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "final-girl-board-game-starter-box",
@@ -2158,7 +2158,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "exit-kidnapped-in-fortune-city",
@@ -2208,7 +2208,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "planted",
@@ -2243,10 +2243,10 @@
       "philibert_url": null,
       "philibert_stock_status_raw": null,
       "advantage_verdict": "UNAVAILABLE_FR",
-      "advantage_points": 28,
+      "advantage_points": 40,
       "discount_pct": null,
-      "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "needs_eyeball": false,
+      "advantage_reason": "not listed on Philibert, no French edition exists at all"
     },
     {
       "zatu_handle": "stuffed-fables",
@@ -2290,7 +2290,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "terrorscape",
@@ -2389,7 +2389,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "sherlock-holmes-consulting-detective-carlton-house-queens-park",
@@ -2437,7 +2437,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "imperium-classics",
@@ -2478,7 +2478,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "talisman-core",
@@ -2517,7 +2517,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "exit-the-return-to-the-abandoned-cabin",
@@ -2563,7 +2563,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "dc-super-heroes-united-batman-hush",
@@ -2602,10 +2602,10 @@
       "philibert_url": null,
       "philibert_stock_status_raw": null,
       "advantage_verdict": "UNAVAILABLE_FR",
-      "advantage_points": 28,
+      "advantage_points": 40,
       "discount_pct": null,
-      "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "needs_eyeball": false,
+      "advantage_reason": "not listed on Philibert, no French edition exists at all"
     },
     {
       "zatu_handle": "honey-buzz",
@@ -2651,7 +2651,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "roll-for-the-galaxy",
@@ -2698,7 +2698,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "disney-villainous-project-crabhands",
@@ -2739,7 +2739,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "blood-bowl-third-season-edition",
@@ -2776,10 +2776,10 @@
       "philibert_url": null,
       "philibert_stock_status_raw": null,
       "advantage_verdict": "UNAVAILABLE_FR",
-      "advantage_points": 28,
+      "advantage_points": 40,
       "discount_pct": null,
-      "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "needs_eyeball": false,
+      "advantage_reason": "not listed on Philibert, no French edition exists at all"
     },
     {
       "zatu_handle": "horrified-american-monsters",
@@ -2867,7 +2867,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "kingdom-rush-rift-in-time",
@@ -2912,7 +2912,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "pictomania-second-edition",
@@ -2951,10 +2951,10 @@
       "philibert_url": null,
       "philibert_stock_status_raw": null,
       "advantage_verdict": "UNAVAILABLE_FR",
-      "advantage_points": 28,
+      "advantage_points": 40,
       "discount_pct": null,
-      "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "needs_eyeball": false,
+      "advantage_reason": "not listed on Philibert, no French edition exists at all"
     },
     {
       "zatu_handle": "great-western-trail-new-zealand",
@@ -2992,7 +2992,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "ingenious-3d",
@@ -3032,10 +3032,10 @@
       "philibert_url": null,
       "philibert_stock_status_raw": null,
       "advantage_verdict": "UNAVAILABLE_FR",
-      "advantage_points": 28,
+      "advantage_points": 40,
       "discount_pct": null,
-      "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "needs_eyeball": false,
+      "advantage_reason": "not listed on Philibert, no French edition exists at all"
     },
     {
       "zatu_handle": "mayor-of-chicago",
@@ -3077,7 +3077,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "a-war-of-whispers-2nd-edition",
@@ -3115,7 +3115,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "resident-evil-2-the-board-game",
@@ -3156,10 +3156,10 @@
       "philibert_url": null,
       "philibert_stock_status_raw": null,
       "advantage_verdict": "UNAVAILABLE_FR",
-      "advantage_points": 28,
+      "advantage_points": 40,
       "discount_pct": null,
-      "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "needs_eyeball": false,
+      "advantage_reason": "not listed on Philibert, no French edition exists at all"
     },
     {
       "zatu_handle": "the-shipwreck-arcana",
@@ -3197,10 +3197,10 @@
       "philibert_url": null,
       "philibert_stock_status_raw": null,
       "advantage_verdict": "UNAVAILABLE_FR",
-      "advantage_points": 28,
+      "advantage_points": 40,
       "discount_pct": null,
-      "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "needs_eyeball": false,
+      "advantage_reason": "not listed on Philibert, no French edition exists at all"
     },
     {
       "zatu_handle": "the-resistance-avalon-big-box",
@@ -3248,7 +3248,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "r-a-v-e-l",
@@ -3286,7 +3286,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "anno-1800",
@@ -3330,7 +3330,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "alchemists",
@@ -3370,7 +3370,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "furnace",
@@ -3415,7 +3415,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "quacks-co-quedlinburg-dash",
@@ -3458,7 +3458,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "exit-puzzle-nightfall-manor",
@@ -3496,10 +3496,10 @@
       "philibert_url": null,
       "philibert_stock_status_raw": null,
       "advantage_verdict": "UNAVAILABLE_FR",
-      "advantage_points": 28,
+      "advantage_points": 40,
       "discount_pct": null,
-      "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "needs_eyeball": false,
+      "advantage_reason": "not listed on Philibert, no French edition exists at all"
     },
     {
       "zatu_handle": "last-light",
@@ -3545,10 +3545,10 @@
       "philibert_url": null,
       "philibert_stock_status_raw": null,
       "advantage_verdict": "UNAVAILABLE_FR",
-      "advantage_points": 28,
+      "advantage_points": 40,
       "discount_pct": null,
-      "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "needs_eyeball": false,
+      "advantage_reason": "not listed on Philibert, no French edition exists at all"
     },
     {
       "zatu_handle": "in-the-footsteps-of-darwin",
@@ -3586,7 +3586,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "unfathomable",
@@ -3623,7 +3623,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "creature-comforts",
@@ -3660,7 +3660,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "dice-throne-season-one-rerolled-pyromancer-vs-shadow-thief",
@@ -3700,7 +3700,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "clever-4ever",
@@ -3741,7 +3741,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "kinfire-council",
@@ -3818,10 +3818,10 @@
       "philibert_url": null,
       "philibert_stock_status_raw": null,
       "advantage_verdict": "UNAVAILABLE_FR",
-      "advantage_points": 28,
+      "advantage_points": 40,
       "discount_pct": null,
-      "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "needs_eyeball": false,
+      "advantage_reason": "not listed on Philibert, no French edition exists at all"
     },
     {
       "zatu_handle": "paladins-of-the-west-kingdom-retail-edition",
@@ -3860,7 +3860,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "marvel-dice-throne-black-widow-vs-doctor-strange",
@@ -3898,10 +3898,10 @@
       "philibert_url": null,
       "philibert_stock_status_raw": null,
       "advantage_verdict": "UNAVAILABLE_FR",
-      "advantage_points": 28,
+      "advantage_points": 40,
       "discount_pct": null,
-      "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "needs_eyeball": false,
+      "advantage_reason": "not listed on Philibert, no French edition exists at all"
     },
     {
       "zatu_handle": "gloom-of-kilforth",
@@ -3941,7 +3941,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "animals-of-baker-street",
@@ -3979,7 +3979,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "red-dragon-inn-4",
@@ -4025,10 +4025,10 @@
       "philibert_url": null,
       "philibert_stock_status_raw": null,
       "advantage_verdict": "UNAVAILABLE_FR",
-      "advantage_points": 28,
+      "advantage_points": 40,
       "discount_pct": null,
-      "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "needs_eyeball": false,
+      "advantage_reason": "not listed on Philibert, no French edition exists at all"
     },
     {
       "zatu_handle": "whispering-woods",
@@ -4065,10 +4065,10 @@
       "philibert_url": null,
       "philibert_stock_status_raw": null,
       "advantage_verdict": "UNAVAILABLE_FR",
-      "advantage_points": 28,
+      "advantage_points": 40,
       "discount_pct": null,
-      "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "needs_eyeball": false,
+      "advantage_reason": "not listed on Philibert, no French edition exists at all"
     },
     {
       "zatu_handle": "this-war-of-mine",
@@ -4107,7 +4107,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "clever-cubed",
@@ -4145,7 +4145,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "tales-from-the-red-dragon-inn-board-game",
@@ -4185,10 +4185,10 @@
       "philibert_url": null,
       "philibert_stock_status_raw": null,
       "advantage_verdict": "UNAVAILABLE_FR",
-      "advantage_points": 28,
+      "advantage_points": 40,
       "discount_pct": null,
-      "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "needs_eyeball": false,
+      "advantage_reason": "not listed on Philibert, no French edition exists at all"
     },
     {
       "zatu_handle": "monikers-monikers-er",
@@ -4225,10 +4225,10 @@
       "philibert_url": null,
       "philibert_stock_status_raw": null,
       "advantage_verdict": "UNAVAILABLE_FR",
-      "advantage_points": 28,
+      "advantage_points": 40,
       "discount_pct": null,
-      "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "needs_eyeball": false,
+      "advantage_reason": "not listed on Philibert, no French edition exists at all"
     },
     {
       "zatu_handle": "ministry-of-lost-things-case-1-lint-collection",
@@ -4268,10 +4268,10 @@
       "philibert_url": null,
       "philibert_stock_status_raw": null,
       "advantage_verdict": "UNAVAILABLE_FR",
-      "advantage_points": 28,
+      "advantage_points": 40,
       "discount_pct": null,
-      "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "needs_eyeball": false,
+      "advantage_reason": "not listed on Philibert, no French edition exists at all"
     },
     {
       "zatu_handle": "red-dragon-inn-6-villains",
@@ -4313,10 +4313,10 @@
       "philibert_url": null,
       "philibert_stock_status_raw": null,
       "advantage_verdict": "UNAVAILABLE_FR",
-      "advantage_points": 28,
+      "advantage_points": 40,
       "discount_pct": null,
-      "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "needs_eyeball": false,
+      "advantage_reason": "not listed on Philibert, no French edition exists at all"
     },
     {
       "zatu_handle": "magnate-the-first-city-promo",
@@ -4408,10 +4408,10 @@
       "philibert_url": null,
       "philibert_stock_status_raw": null,
       "advantage_verdict": "UNAVAILABLE_FR",
-      "advantage_points": 28,
+      "advantage_points": 40,
       "discount_pct": null,
-      "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "needs_eyeball": false,
+      "advantage_reason": "not listed on Philibert, no French edition exists at all"
     },
     {
       "zatu_handle": "the-initiative",
@@ -4457,7 +4457,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "remember-our-trip",
@@ -4500,7 +4500,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "a-war-of-whispers-collectors-edition",
@@ -4538,7 +4538,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "tomb-raider-the-crypt-of-chronos",
@@ -4573,10 +4573,10 @@
       "philibert_url": null,
       "philibert_stock_status_raw": null,
       "advantage_verdict": "UNAVAILABLE_FR",
-      "advantage_points": 28,
+      "advantage_points": 40,
       "discount_pct": null,
-      "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "needs_eyeball": false,
+      "advantage_reason": "not listed on Philibert, no French edition exists at all"
     },
     {
       "zatu_handle": "iss-vanguard",
@@ -4624,7 +4624,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "nanty-narking",
@@ -4674,7 +4674,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "eila-and-something-shiny-board-game",
@@ -4716,7 +4716,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "moonrollers-standard-edition",
@@ -4758,10 +4758,10 @@
       "philibert_url": null,
       "philibert_stock_status_raw": null,
       "advantage_verdict": "UNAVAILABLE_FR",
-      "advantage_points": 28,
+      "advantage_points": 40,
       "discount_pct": null,
-      "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "needs_eyeball": false,
+      "advantage_reason": "not listed on Philibert, no French edition exists at all"
     },
     {
       "zatu_handle": "after-the-virus",
@@ -4795,10 +4795,10 @@
       "philibert_url": null,
       "philibert_stock_status_raw": null,
       "advantage_verdict": "UNAVAILABLE_FR",
-      "advantage_points": 28,
+      "advantage_points": 40,
       "discount_pct": null,
-      "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "needs_eyeball": false,
+      "advantage_reason": "not listed on Philibert, no French edition exists at all"
     },
     {
       "zatu_handle": "expedition-to-newdale",
@@ -4845,7 +4845,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "seas-of-strife",
@@ -4885,10 +4885,10 @@
       "philibert_url": null,
       "philibert_stock_status_raw": null,
       "advantage_verdict": "UNAVAILABLE_FR",
-      "advantage_points": 28,
+      "advantage_points": 40,
       "discount_pct": null,
-      "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "needs_eyeball": false,
+      "advantage_reason": "not listed on Philibert, no French edition exists at all"
     },
     {
       "zatu_handle": "navegador",
@@ -4925,7 +4925,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "familiar-tales",
@@ -4968,7 +4968,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "gutenberg",
@@ -5056,7 +5056,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "ashes-reborn-rise-of-the-phoenixborn",
@@ -5108,7 +5108,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "dungeon-degenerates",
@@ -5143,10 +5143,10 @@
       "philibert_url": null,
       "philibert_stock_status_raw": null,
       "advantage_verdict": "UNAVAILABLE_FR",
-      "advantage_points": 28,
+      "advantage_points": 40,
       "discount_pct": null,
-      "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "needs_eyeball": false,
+      "advantage_reason": "not listed on Philibert, no French edition exists at all"
     },
     {
       "zatu_handle": "minos-dawn-of-the-bronze-age",
@@ -5183,7 +5183,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "masters-of-crime-shadows",
@@ -5226,10 +5226,10 @@
       "philibert_url": null,
       "philibert_stock_status_raw": null,
       "advantage_verdict": "UNAVAILABLE_FR",
-      "advantage_points": 28,
+      "advantage_points": 40,
       "discount_pct": null,
-      "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "needs_eyeball": false,
+      "advantage_reason": "not listed on Philibert, no French edition exists at all"
     },
     {
       "zatu_handle": "argent-the-consortium-board-game",
@@ -5263,10 +5263,10 @@
       "philibert_url": null,
       "philibert_stock_status_raw": null,
       "advantage_verdict": "UNAVAILABLE_FR",
-      "advantage_points": 28,
+      "advantage_points": 40,
       "discount_pct": null,
-      "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "needs_eyeball": false,
+      "advantage_reason": "not listed on Philibert, no French edition exists at all"
     },
     {
       "zatu_handle": "the-prodigals-club",
@@ -5309,7 +5309,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "reef-project",
@@ -5350,10 +5350,10 @@
       "philibert_url": null,
       "philibert_stock_status_raw": null,
       "advantage_verdict": "UNAVAILABLE_FR",
-      "advantage_points": 28,
+      "advantage_points": 40,
       "discount_pct": null,
-      "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "needs_eyeball": false,
+      "advantage_reason": "not listed on Philibert, no French edition exists at all"
     },
     {
       "zatu_handle": "resident-evil-3-the-board-game",
@@ -5393,10 +5393,10 @@
       "philibert_url": null,
       "philibert_stock_status_raw": null,
       "advantage_verdict": "UNAVAILABLE_FR",
-      "advantage_points": 28,
+      "advantage_points": 40,
       "discount_pct": null,
-      "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "needs_eyeball": false,
+      "advantage_reason": "not listed on Philibert, no French edition exists at all"
     },
     {
       "zatu_handle": "cross-bronx-expressway",
@@ -5434,10 +5434,10 @@
       "philibert_url": null,
       "philibert_stock_status_raw": null,
       "advantage_verdict": "UNAVAILABLE_FR",
-      "advantage_points": 28,
+      "advantage_points": 40,
       "discount_pct": null,
-      "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "needs_eyeball": false,
+      "advantage_reason": "not listed on Philibert, no French edition exists at all"
     },
     {
       "zatu_handle": "sea-dragons",
@@ -5482,7 +5482,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "neuroriders",
@@ -5522,10 +5522,10 @@
       "philibert_url": null,
       "philibert_stock_status_raw": null,
       "advantage_verdict": "UNAVAILABLE_FR",
-      "advantage_points": 28,
+      "advantage_points": 40,
       "discount_pct": null,
-      "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "needs_eyeball": false,
+      "advantage_reason": "not listed on Philibert, no French edition exists at all"
     },
     {
       "zatu_handle": "red-dragon-inn-8-the-pub-crawl",
@@ -5559,10 +5559,10 @@
       "philibert_url": null,
       "philibert_stock_status_raw": null,
       "advantage_verdict": "UNAVAILABLE_FR",
-      "advantage_points": 28,
+      "advantage_points": 40,
       "discount_pct": null,
-      "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "needs_eyeball": false,
+      "advantage_reason": "not listed on Philibert, no French edition exists at all"
     },
     {
       "zatu_handle": "siberian-manhunt-standard-edition",
@@ -5603,7 +5603,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "mistwind",
@@ -5644,10 +5644,10 @@
       "philibert_url": null,
       "philibert_stock_status_raw": null,
       "advantage_verdict": "UNAVAILABLE_FR",
-      "advantage_points": 28,
+      "advantage_points": 40,
       "discount_pct": null,
-      "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "needs_eyeball": false,
+      "advantage_reason": "not listed on Philibert, no French edition exists at all"
     },
     {
       "zatu_handle": "wonder-book",
@@ -5692,7 +5692,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "call-of-kilforth",
@@ -5726,10 +5726,10 @@
       "philibert_url": null,
       "philibert_stock_status_raw": null,
       "advantage_verdict": "UNAVAILABLE_FR",
-      "advantage_points": 28,
+      "advantage_points": 40,
       "discount_pct": null,
-      "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "needs_eyeball": false,
+      "advantage_reason": "not listed on Philibert, no French edition exists at all"
     },
     {
       "zatu_handle": "hidden-games-crime-scene-case-2-the-midnight-crown",
@@ -5766,7 +5766,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "dvonn",
@@ -5807,7 +5807,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "ascension-tactics-inferno",
@@ -5846,10 +5846,10 @@
       "philibert_url": null,
       "philibert_stock_status_raw": null,
       "advantage_verdict": "UNAVAILABLE_FR",
-      "advantage_points": 28,
+      "advantage_points": 40,
       "discount_pct": null,
-      "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "needs_eyeball": false,
+      "advantage_reason": "not listed on Philibert, no French edition exists at all"
     },
     {
       "zatu_handle": "tragedy-looper-new-tragedies",
@@ -5891,10 +5891,10 @@
       "philibert_url": null,
       "philibert_stock_status_raw": null,
       "advantage_verdict": "UNAVAILABLE_FR",
-      "advantage_points": 28,
+      "advantage_points": 40,
       "discount_pct": null,
-      "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "needs_eyeball": false,
+      "advantage_reason": "not listed on Philibert, no French edition exists at all"
     },
     {
       "zatu_handle": "feudum-septennial-edition",
@@ -5937,7 +5937,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "mythic-mischief-vol-ii",
@@ -5974,10 +5974,10 @@
       "philibert_url": null,
       "philibert_stock_status_raw": null,
       "advantage_verdict": "UNAVAILABLE_FR",
-      "advantage_points": 28,
+      "advantage_points": 40,
       "discount_pct": null,
-      "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "needs_eyeball": false,
+      "advantage_reason": "not listed on Philibert, no French edition exists at all"
     },
     {
       "zatu_handle": "wicked-cribbage",
@@ -6018,10 +6018,10 @@
       "philibert_url": null,
       "philibert_stock_status_raw": null,
       "advantage_verdict": "UNAVAILABLE_FR",
-      "advantage_points": 28,
+      "advantage_points": 40,
       "discount_pct": null,
-      "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "needs_eyeball": false,
+      "advantage_reason": "not listed on Philibert, no French edition exists at all"
     },
     {
       "zatu_handle": "fractured-sky-deluxe",
@@ -6057,10 +6057,10 @@
       "philibert_url": null,
       "philibert_stock_status_raw": null,
       "advantage_verdict": "UNAVAILABLE_FR",
-      "advantage_points": 28,
+      "advantage_points": 40,
       "discount_pct": null,
-      "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "needs_eyeball": false,
+      "advantage_reason": "not listed on Philibert, no French edition exists at all"
     },
     {
       "zatu_handle": "forges-of-ravenshire-board-game",
@@ -6144,10 +6144,10 @@
       "philibert_url": null,
       "philibert_stock_status_raw": null,
       "advantage_verdict": "UNAVAILABLE_FR",
-      "advantage_points": 28,
+      "advantage_points": 40,
       "discount_pct": null,
-      "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "needs_eyeball": false,
+      "advantage_reason": "not listed on Philibert, no French edition exists at all"
     },
     {
       "zatu_handle": "aspens-deluxe-edition",
@@ -6183,10 +6183,10 @@
       "philibert_url": null,
       "philibert_stock_status_raw": null,
       "advantage_verdict": "UNAVAILABLE_FR",
-      "advantage_points": 28,
+      "advantage_points": 40,
       "discount_pct": null,
-      "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "needs_eyeball": false,
+      "advantage_reason": "not listed on Philibert, no French edition exists at all"
     },
     {
       "zatu_handle": "snakes-of-wrath",
@@ -6223,10 +6223,10 @@
       "philibert_url": null,
       "philibert_stock_status_raw": null,
       "advantage_verdict": "UNAVAILABLE_FR",
-      "advantage_points": 28,
+      "advantage_points": 40,
       "discount_pct": null,
-      "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "needs_eyeball": false,
+      "advantage_reason": "not listed on Philibert, no French edition exists at all"
     },
     {
       "zatu_handle": "mindbug-battlefruit-galaxy",
@@ -6268,7 +6268,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "rats-of-wistar",
@@ -6309,7 +6309,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "club-of-cthulhu",
@@ -6346,10 +6346,10 @@
       "philibert_url": null,
       "philibert_stock_status_raw": null,
       "advantage_verdict": "UNAVAILABLE_FR",
-      "advantage_points": 28,
+      "advantage_points": 40,
       "discount_pct": null,
-      "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "needs_eyeball": false,
+      "advantage_reason": "not listed on Philibert, no French edition exists at all"
     },
     {
       "zatu_handle": "mindbug-battlefruit-kingdom",
@@ -6391,7 +6391,7 @@
       "advantage_points": 28,
       "discount_pct": null,
       "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "advantage_reason": "not listed on Philibert, but a French edition exists elsewhere"
     },
     {
       "zatu_handle": "legacy-of-eastbrook-hills",
@@ -6431,10 +6431,10 @@
       "philibert_url": null,
       "philibert_stock_status_raw": null,
       "advantage_verdict": "UNAVAILABLE_FR",
-      "advantage_points": 28,
+      "advantage_points": 40,
       "discount_pct": null,
-      "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "needs_eyeball": false,
+      "advantage_reason": "not listed on Philibert, no French edition exists at all"
     },
     {
       "zatu_handle": "thug-life-the-board-game",
@@ -6468,10 +6468,10 @@
       "philibert_url": null,
       "philibert_stock_status_raw": null,
       "advantage_verdict": "UNAVAILABLE_FR",
-      "advantage_points": 28,
+      "advantage_points": 40,
       "discount_pct": null,
-      "needs_eyeball": true,
-      "advantage_reason": "not listed on Philibert; French-edition-exists check unavailable (Stage 3 not built yet)"
+      "needs_eyeball": false,
+      "advantage_reason": "not listed on Philibert, no French edition exists at all"
     }
   ]
 }
