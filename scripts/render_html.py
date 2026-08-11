@@ -32,6 +32,16 @@ def _count_or_none(path: str, key: str) -> int | None:
     return len(json.loads(file.read_text())[key])
 
 
+def load_excluded_handles(path: str) -> set[str]:
+    """Manually-curated "not interested" list (spec's own plain-JSON-everywhere pattern) --
+    unlike everything else in data/, nothing ever regenerates this file; it's edited by hand
+    (or via the report's own "Export hidden list" button) and only ever read here."""
+    file = Path(path)
+    if not file.exists():
+        return set()
+    return set(json.loads(file.read_text()).get("excluded_handles", []))
+
+
 def build_run_metadata(config: dict, zatu_products_path: str, matched_path: str) -> dict:
     return {
         "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
@@ -49,6 +59,7 @@ def main() -> int:
     parser.add_argument("--zatu-products", default="data/zatu_products.json")
     parser.add_argument("--matched", default="data/matched_games.json")
     parser.add_argument("--unmatched", default="data/unmatched_games.json")
+    parser.add_argument("--excluded", default="data/excluded_games.json")
     parser.add_argument("--out", default="docs/index.html")
     args = parser.parse_args()
 
@@ -60,15 +71,17 @@ def main() -> int:
     unmatched_games = (
         json.loads(unmatched_path.read_text())["unmatched"] if unmatched_path.exists() else []
     )
+    excluded_handles = load_excluded_handles(args.excluded)
 
-    html = render_html(games, metadata, unmatched_games)
+    html = render_html(games, metadata, unmatched_games, excluded_handles)
 
     out_path = Path(args.out)
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(html)
 
     print(
-        f"Rendered {len(games)} scored games + {len(unmatched_games)} unmatched -> {out_path}",
+        f"Rendered {len(games)} scored games + {len(unmatched_games)} unmatched "
+        f"({len(excluded_handles)} manually excluded) -> {out_path}",
         file=sys.stderr,
     )
     return 0

@@ -124,7 +124,8 @@ def build_flags(game: dict) -> list[str]:
     return flags
 
 
-def prepare_games(games: list[dict]) -> list[dict]:
+def prepare_games(games: list[dict], excluded_handles: set[str] | None = None) -> list[dict]:
+    excluded_handles = excluded_handles or set()
     prepared = []
     for game in games:
         prepared.append(
@@ -137,6 +138,7 @@ def prepare_games(games: list[dict]) -> list[dict]:
                 or _philibert_search_url(game["zatu_title"]),
                 "philibert_link_is_search": game.get("philibert_url") is None,
                 "category_tags": clean_category_tags(game.get("zatu_tags")),
+                "user_excluded": game["zatu_handle"] in excluded_handles,
             }
         )
     return prepared
@@ -164,14 +166,17 @@ def prepare_unmatched(games: list[dict]) -> list[dict]:
 
 
 def render_html(
-    games: list[dict], run_metadata: dict, unmatched_games: list[dict] | None = None
+    games: list[dict],
+    run_metadata: dict,
+    unmatched_games: list[dict] | None = None,
+    excluded_handles: set[str] | None = None,
 ) -> str:
     env = Environment(
         loader=FileSystemLoader(str(TEMPLATE_DIR)),
         autoescape=select_autoescape(["html"]),
     )
     template = env.get_template("report.html.jinja2")
-    prepared = prepare_games(games)
+    prepared = prepare_games(games, excluded_handles)
     prepared_unmatched = prepare_unmatched(unmatched_games or [])
     return template.render(
         games=prepared,

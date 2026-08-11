@@ -46,6 +46,33 @@
     color: var(--text);
   }
   #result-count { font-size: 0.9rem; color: var(--text-dim); }
+  .hide-toggle { font-size: 0.85rem; color: var(--text-dim); display: inline-flex; align-items: center; gap: 0.35rem; }
+  .hide-toggle input { margin: 0; }
+  #export-hidden-btn, #clear-hidden-btn {
+    font-size: 0.82rem;
+    padding: 0.35rem 0.7rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--panel);
+    color: var(--text);
+    cursor: pointer;
+  }
+  #export-hidden-btn:hover, #clear-hidden-btn:hover { background: var(--bg); }
+  #hide-help { margin: -0.5rem 0 1rem; font-size: 0.8rem; }
+  .links .hide-btn {
+    display: inline-block;
+    margin-top: 0.4rem;
+    font-size: 0.75rem;
+    padding: 0.15rem 0.5rem;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: var(--panel);
+    color: var(--text-dim);
+    cursor: pointer;
+  }
+  .links .hide-btn:hover { color: var(--text); border-color: var(--text-dim); }
+  tbody tr.is-hidden { opacity: 0.45; }
+  tbody tr.is-hidden .hide-btn { color: var(--link); border-color: var(--link); }
   .category-filters { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1rem; }
   .category-chip {
     display: inline-flex;
@@ -149,7 +176,7 @@
   <h1>Buy in the UK? — Board Games Advisor</h1>
   <p class="subtitle">Every game from Zatu's catalogue that passed the BGG quality gate and has a genuine UK-vs-France advantage. Default sort: composite score, highest first.</p>
   <p class="meta">
-    Generated 2026-08-11 15:33 UTC · FX 1.17 GBP→EUR · discount threshold 40.0%
+    Generated 2026-08-11 16:20 UTC · FX 1.17 GBP→EUR · discount threshold 40.0%
      · 4178 Zatu products harvested
      · 678 passed quality gate
   </p>
@@ -157,7 +184,15 @@
   <div class="controls">
     <input id="filter" type="search" placeholder="Filter by title…" autocomplete="off">
     <span id="result-count">69 games matched your criteria</span>
+    <label class="hide-toggle"><input type="checkbox" id="show-hidden"> Show hidden (<span id="hidden-count">0</span>)</label>
+    <button type="button" id="export-hidden-btn">Export hidden list</button>
+    <button type="button" id="clear-hidden-btn">Clear hidden</button>
   </div>
+  <p class="meta" id="hide-help">
+    Click "Not interested" on a row to hide it (saved in this browser, survives future site rebuilds automatically).
+    To make hidden games stay hidden for everyone / across devices, click "Export hidden list", save the downloaded
+    file as <code>data/excluded_games.json</code> in the repo, and commit it.
+  </p>
 
   <div class="category-filters" id="category-filters">
     <label class="category-chip pinned"><input type="checkbox" data-category="coop"> Coop</label>
@@ -233,6 +268,8 @@
       <tbody>
         
         <tr class="adv-unavailable"
+            data-handle="gloomhaven-2nd-edition"
+            data-user_excluded="0"
             data-composite_score="80.87"
             data-zatu_title="gloomhaven 2nd edition"
             data-advantage_verdict="UNAVAILABLE_FR"
@@ -267,10 +304,13 @@
             <a href="https://boardgamegeek.com/boardgame/390478" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/gloomhaven-2nd-edition" target="_blank" rel="noopener">Zatu</a>
             <a class="search-link" href="https://www.philibertnet.com/fr/recherche?search_query=Gloomhaven%202nd%20Edition" target="_blank" rel="noopener">Philibert (search)</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-unavailable"
+            data-handle="resident-evil-3-the-board-game"
+            data-user_excluded="0"
             data-composite_score="67.89"
             data-zatu_title="resident evil 3: the board game"
             data-advantage_verdict="UNAVAILABLE_FR"
@@ -305,10 +345,13 @@
             <a href="https://boardgamegeek.com/boardgame/306637" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/resident-evil-3-the-board-game" target="_blank" rel="noopener">Zatu</a>
             <a class="search-link" href="https://www.philibertnet.com/fr/recherche?search_query=Resident%20Evil%203%3A%20The%20Board%20Game" target="_blank" rel="noopener">Philibert (search)</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-unavailable"
+            data-handle="tales-from-the-red-dragon-inn-board-game"
+            data-user_excluded="0"
             data-composite_score="67.78999999999999"
             data-zatu_title="tales from the red dragon inn board game"
             data-advantage_verdict="UNAVAILABLE_FR"
@@ -343,10 +386,13 @@
             <a href="https://boardgamegeek.com/boardgame/345266" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/tales-from-the-red-dragon-inn-board-game" target="_blank" rel="noopener">Zatu</a>
             <a class="search-link" href="https://www.philibertnet.com/fr/recherche?search_query=Tales%20From%20The%20Red%20Dragon%20Inn%20Board%20Game" target="_blank" rel="noopener">Philibert (search)</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-unavailable"
+            data-handle="nusfjord-big-box"
+            data-user_excluded="0"
             data-composite_score="67.55"
             data-zatu_title="nusfjord big box"
             data-advantage_verdict="UNAVAILABLE_FR"
@@ -381,10 +427,13 @@
             <a href="https://boardgamegeek.com/boardgame/378979" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/nusfjord-big-box" target="_blank" rel="noopener">Zatu</a>
             <a class="search-link" href="https://www.philibertnet.com/fr/recherche?search_query=Nusfjord%20Big%20Box" target="_blank" rel="noopener">Philibert (search)</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-unavailable"
+            data-handle="blood-bowl-third-season-edition"
+            data-user_excluded="0"
             data-composite_score="67.44"
             data-zatu_title="blood bowl: third season edition"
             data-advantage_verdict="UNAVAILABLE_FR"
@@ -419,10 +468,13 @@
             <a href="https://boardgamegeek.com/boardgame/457587" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/blood-bowl-third-season-edition" target="_blank" rel="noopener">Zatu</a>
             <a class="search-link" href="https://www.philibertnet.com/fr/recherche?search_query=Blood%20Bowl%3A%20Third%20Season%20Edition" target="_blank" rel="noopener">Philibert (search)</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-unavailable"
+            data-handle="monikers"
+            data-user_excluded="0"
             data-composite_score="66.23"
             data-zatu_title="monikers"
             data-advantage_verdict="UNAVAILABLE_FR"
@@ -457,10 +509,13 @@
             <a href="https://boardgamegeek.com/boardgame/156546" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/monikers" target="_blank" rel="noopener">Zatu</a>
             <a class="search-link" href="https://www.philibertnet.com/fr/recherche?search_query=Monikers" target="_blank" rel="noopener">Philibert (search)</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-unavailable"
+            data-handle="monikers-monikers-er"
+            data-user_excluded="0"
             data-composite_score="64.74000000000001"
             data-zatu_title="monikers monikers-er"
             data-advantage_verdict="UNAVAILABLE_FR"
@@ -495,10 +550,13 @@
             <a href="https://boardgamegeek.com/boardgame/404462" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/monikers-monikers-er" target="_blank" rel="noopener">Zatu</a>
             <a class="search-link" href="https://www.philibertnet.com/fr/recherche?search_query=Monikers%20Monikers-er" target="_blank" rel="noopener">Philibert (search)</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-unavailable"
+            data-handle="red-dragon-inn-6-villains"
+            data-user_excluded="0"
             data-composite_score="62.78"
             data-zatu_title="the red dragon inn 6: villains"
             data-advantage_verdict="UNAVAILABLE_FR"
@@ -533,10 +591,13 @@
             <a href="https://boardgamegeek.com/boardgame/212662" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/red-dragon-inn-6-villains" target="_blank" rel="noopener">Zatu</a>
             <a class="search-link" href="https://www.philibertnet.com/fr/recherche?search_query=The%20Red%20Dragon%20Inn%206%3A%20Villains" target="_blank" rel="noopener">Philibert (search)</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-unavailable"
+            data-handle="townsfolk-tussle-2nd-edition-base-game"
+            data-user_excluded="0"
             data-composite_score="62.66"
             data-zatu_title="townsfolk tussle 2nd edition base game"
             data-advantage_verdict="UNAVAILABLE_FR"
@@ -571,10 +632,13 @@
             <a href="https://boardgamegeek.com/boardgame/312859" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/townsfolk-tussle-2nd-edition-base-game" target="_blank" rel="noopener">Zatu</a>
             <a class="search-link" href="https://www.philibertnet.com/fr/recherche?search_query=Townsfolk%20Tussle%202nd%20Edition%20Base%20Game" target="_blank" rel="noopener">Philibert (search)</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-unavailable"
+            data-handle="dc-super-heroes-united-batman-hush"
+            data-user_excluded="0"
             data-composite_score="61.120000000000005"
             data-zatu_title="dc super heroes united: batman hush"
             data-advantage_verdict="UNAVAILABLE_FR"
@@ -609,10 +673,13 @@
             <a href="https://boardgamegeek.com/boardgame/436446" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/dc-super-heroes-united-batman-hush" target="_blank" rel="noopener">Zatu</a>
             <a class="search-link" href="https://www.philibertnet.com/fr/recherche?search_query=DC%20Super%20Heroes%20United%3A%20Batman%20Hush" target="_blank" rel="noopener">Philibert (search)</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-unavailable"
+            data-handle="dungeon-degenerates"
+            data-user_excluded="0"
             data-composite_score="61.120000000000005"
             data-zatu_title="dungeon degenerates"
             data-advantage_verdict="UNAVAILABLE_FR"
@@ -647,10 +714,13 @@
             <a href="https://boardgamegeek.com/boardgame/210232" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/dungeon-degenerates" target="_blank" rel="noopener">Zatu</a>
             <a class="search-link" href="https://www.philibertnet.com/fr/recherche?search_query=Dungeon%20Degenerates" target="_blank" rel="noopener">Philibert (search)</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-unavailable"
+            data-handle="red-dragon-inn-7-the-tavern-crew"
+            data-user_excluded="0"
             data-composite_score="60.96"
             data-zatu_title="the red dragon inn 7: the tavern crew"
             data-advantage_verdict="UNAVAILABLE_FR"
@@ -685,10 +755,13 @@
             <a href="https://boardgamegeek.com/boardgame/244258" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/red-dragon-inn-7-the-tavern-crew" target="_blank" rel="noopener">Zatu</a>
             <a class="search-link" href="https://www.philibertnet.com/fr/recherche?search_query=The%20Red%20Dragon%20Inn%207%3A%20The%20Tavern%20Crew" target="_blank" rel="noopener">Philibert (search)</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-unavailable"
+            data-handle="legacy-of-eastbrook-hills"
+            data-user_excluded="0"
             data-composite_score="60.38"
             data-zatu_title="legacy of eastbrook hills"
             data-advantage_verdict="UNAVAILABLE_FR"
@@ -723,10 +796,13 @@
             <a href="https://boardgamegeek.com/boardgame/422742" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/legacy-of-eastbrook-hills" target="_blank" rel="noopener">Zatu</a>
             <a class="search-link" href="https://www.philibertnet.com/fr/recherche?search_query=Legacy%20of%20Eastbrook%20Hills" target="_blank" rel="noopener">Philibert (search)</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-unavailable"
+            data-handle="ministry-of-lost-things-case-1-lint-collection"
+            data-user_excluded="0"
             data-composite_score="59.980000000000004"
             data-zatu_title="ministry of lost things: case 1 lint collection"
             data-advantage_verdict="UNAVAILABLE_FR"
@@ -761,10 +837,13 @@
             <a href="https://boardgamegeek.com/boardgame/425765" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/ministry-of-lost-things-case-1-lint-collection" target="_blank" rel="noopener">Zatu</a>
             <a class="search-link" href="https://www.philibertnet.com/fr/recherche?search_query=Ministry%20of%20Lost%20Things%3A%20Case%201%20Lint%20Collection" target="_blank" rel="noopener">Philibert (search)</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-unavailable"
+            data-handle="pictomania-second-edition"
+            data-user_excluded="0"
             data-composite_score="59.49"
             data-zatu_title="pictomania (second edition)"
             data-advantage_verdict="UNAVAILABLE_FR"
@@ -799,10 +878,13 @@
             <a href="https://boardgamegeek.com/boardgame/252526" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/pictomania-second-edition" target="_blank" rel="noopener">Zatu</a>
             <a class="search-link" href="https://www.philibertnet.com/fr/recherche?search_query=Pictomania%20%28second%20edition%29" target="_blank" rel="noopener">Philibert (search)</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-unavailable"
+            data-handle="red-dragon-inn-5-the-character-trove-red-dragon-inn-exp"
+            data-user_excluded="0"
             data-composite_score="58.63"
             data-zatu_title="the red dragon inn 5: the character trove"
             data-advantage_verdict="UNAVAILABLE_FR"
@@ -837,10 +919,13 @@
             <a href="https://boardgamegeek.com/boardgame/173634" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/red-dragon-inn-5-the-character-trove-red-dragon-inn-exp" target="_blank" rel="noopener">Zatu</a>
             <a class="search-link" href="https://www.philibertnet.com/fr/recherche?search_query=The%20Red%20Dragon%20Inn%205%3A%20The%20Character%20Trove" target="_blank" rel="noopener">Philibert (search)</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-unavailable"
+            data-handle="exit-the-venice-conspiracy"
+            data-user_excluded="0"
             data-composite_score="57.71"
             data-zatu_title="exit: the venice conspiracy"
             data-advantage_verdict="UNAVAILABLE_FR"
@@ -875,10 +960,13 @@
             <a href="https://boardgamegeek.com/boardgame/406312" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/exit-the-venice-conspiracy" target="_blank" rel="noopener">Zatu</a>
             <a class="search-link" href="https://www.philibertnet.com/fr/recherche?search_query=EXIT%3A%20The%20Venice%20Conspiracy" target="_blank" rel="noopener">Philibert (search)</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-unavailable"
+            data-handle="xia-legend-of-a-drift-system"
+            data-user_excluded="0"
             data-composite_score="57.58"
             data-zatu_title="xia: legends of a drift system"
             data-advantage_verdict="UNAVAILABLE_FR"
@@ -913,10 +1001,13 @@
             <a href="https://boardgamegeek.com/boardgame/82222" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/xia-legend-of-a-drift-system" target="_blank" rel="noopener">Zatu</a>
             <a class="search-link" href="https://www.philibertnet.com/fr/recherche?search_query=Xia%3A%20Legends%20Of%20A%20Drift%20System" target="_blank" rel="noopener">Philibert (search)</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-unavailable"
+            data-handle="ascension-tactics-inferno"
+            data-user_excluded="0"
             data-composite_score="57.07"
             data-zatu_title="ascension tactics inferno"
             data-advantage_verdict="UNAVAILABLE_FR"
@@ -951,10 +1042,13 @@
             <a href="https://boardgamegeek.com/boardgame/378574" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/ascension-tactics-inferno" target="_blank" rel="noopener">Zatu</a>
             <a class="search-link" href="https://www.philibertnet.com/fr/recherche?search_query=Ascension%20Tactics%20Inferno" target="_blank" rel="noopener">Philibert (search)</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-cheaper"
+            data-handle="vantage"
+            data-user_excluded="0"
             data-composite_score="55.44325662831416"
             data-zatu_title="vantage board game"
             data-advantage_verdict="CHEAPER_UK"
@@ -989,10 +1083,13 @@
             <a href="https://boardgamegeek.com/boardgame/420033" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/vantage" target="_blank" rel="noopener">Zatu</a>
             <a class="" href="https://www.philibertnet.com/fr/stonemaier-games/165083-vantage-850032180863.html" target="_blank" rel="noopener">Philibert</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-unavailable"
+            data-handle="quacks-of-quedlinburg"
+            data-user_excluded="0"
             data-composite_score="55.379999999999995"
             data-zatu_title="the quacks of quedlinburg"
             data-advantage_verdict="UNAVAILABLE_FR"
@@ -1027,10 +1124,13 @@
             <a href="https://boardgamegeek.com/boardgame/326869" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/quacks-of-quedlinburg" target="_blank" rel="noopener">Zatu</a>
             <a class="search-link" href="https://www.philibertnet.com/fr/recherche?search_query=The%20Quacks%20of%20Quedlinburg" target="_blank" rel="noopener">Philibert (search)</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-unavailable"
+            data-handle="resident-evil-2-the-board-game"
+            data-user_excluded="0"
             data-composite_score="53.019999999999996"
             data-zatu_title="resident evil 2: the board game"
             data-advantage_verdict="UNAVAILABLE_FR"
@@ -1065,10 +1165,13 @@
             <a href="https://boardgamegeek.com/boardgame/233896" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/resident-evil-2-the-board-game" target="_blank" rel="noopener">Zatu</a>
             <a class="search-link" href="https://www.philibertnet.com/fr/recherche?search_query=Resident%20Evil%202%3A%20The%20Board%20Game" target="_blank" rel="noopener">Philibert (search)</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-unavailable"
+            data-handle="marvel-dice-throne-black-widow-vs-doctor-strange"
+            data-user_excluded="0"
             data-composite_score="52.32"
             data-zatu_title="marvel dice throne: black widow vs doctor strange"
             data-advantage_verdict="UNAVAILABLE_FR"
@@ -1103,10 +1206,13 @@
             <a href="https://boardgamegeek.com/boardgame/360152" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/marvel-dice-throne-black-widow-vs-doctor-strange" target="_blank" rel="noopener">Zatu</a>
             <a class="search-link" href="https://www.philibertnet.com/fr/recherche?search_query=Marvel%20Dice%20Throne%3A%20Black%20Widow%20vs%20Doctor%20Strange" target="_blank" rel="noopener">Philibert (search)</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-unavailable"
+            data-handle="club-of-cthulhu"
+            data-user_excluded="0"
             data-composite_score="50.81"
             data-zatu_title="club of cthulhu"
             data-advantage_verdict="UNAVAILABLE_FR"
@@ -1141,10 +1247,13 @@
             <a href="https://boardgamegeek.com/boardgame/445785" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/club-of-cthulhu" target="_blank" rel="noopener">Zatu</a>
             <a class="search-link" href="https://www.philibertnet.com/fr/recherche?search_query=Club%20of%20Cthulhu" target="_blank" rel="noopener">Philibert (search)</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-unavailable"
+            data-handle="red-dragon-inn-4"
+            data-user_excluded="0"
             data-composite_score="50.77"
             data-zatu_title="the red dragon inn 4"
             data-advantage_verdict="UNAVAILABLE_FR"
@@ -1179,10 +1288,13 @@
             <a href="https://boardgamegeek.com/boardgame/142402" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/red-dragon-inn-4" target="_blank" rel="noopener">Zatu</a>
             <a class="search-link" href="https://www.philibertnet.com/fr/recherche?search_query=The%20Red%20Dragon%20Inn%204" target="_blank" rel="noopener">Philibert (search)</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-unavailable"
+            data-handle="one-hit-heroes"
+            data-user_excluded="0"
             data-composite_score="50.1"
             data-zatu_title="one-hit heroes"
             data-advantage_verdict="UNAVAILABLE_FR"
@@ -1217,10 +1329,13 @@
             <a href="https://boardgamegeek.com/boardgame/412731" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/one-hit-heroes" target="_blank" rel="noopener">Zatu</a>
             <a class="search-link" href="https://www.philibertnet.com/fr/recherche?search_query=One-Hit%20Heroes" target="_blank" rel="noopener">Philibert (search)</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-unavailable"
+            data-handle="forbidden-jungle"
+            data-user_excluded="0"
             data-composite_score="50.04"
             data-zatu_title="forbidden jungle"
             data-advantage_verdict="UNAVAILABLE_FR"
@@ -1255,10 +1370,13 @@
             <a href="https://boardgamegeek.com/boardgame/380226" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/forbidden-jungle" target="_blank" rel="noopener">Zatu</a>
             <a class="search-link" href="https://www.philibertnet.com/fr/recherche?search_query=Forbidden%20Jungle" target="_blank" rel="noopener">Philibert (search)</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-unavailable"
+            data-handle="masters-of-crime-shadows"
+            data-user_excluded="0"
             data-composite_score="49.88"
             data-zatu_title="masters of crime: shadows"
             data-advantage_verdict="UNAVAILABLE_FR"
@@ -1293,10 +1411,13 @@
             <a href="https://boardgamegeek.com/boardgame/371539" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/masters-of-crime-shadows" target="_blank" rel="noopener">Zatu</a>
             <a class="search-link" href="https://www.philibertnet.com/fr/recherche?search_query=Masters%20of%20Crime%3A%20Shadows" target="_blank" rel="noopener">Philibert (search)</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-unavailable"
+            data-handle="argent-the-consortium-board-game"
+            data-user_excluded="0"
             data-composite_score="49.2"
             data-zatu_title="argent: the consortium board game"
             data-advantage_verdict="UNAVAILABLE_FR"
@@ -1331,10 +1452,13 @@
             <a href="https://boardgamegeek.com/boardgame/144797" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/argent-the-consortium-board-game" target="_blank" rel="noopener">Zatu</a>
             <a class="search-link" href="https://www.philibertnet.com/fr/recherche?search_query=Argent%3A%20The%20Consortium%20Board%20Game" target="_blank" rel="noopener">Philibert (search)</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-unavailable"
+            data-handle="heroes-of-barcadia"
+            data-user_excluded="0"
             data-composite_score="49.16"
             data-zatu_title="heroes of barcadia"
             data-advantage_verdict="UNAVAILABLE_FR"
@@ -1369,10 +1493,13 @@
             <a href="https://boardgamegeek.com/boardgame/341027" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/heroes-of-barcadia" target="_blank" rel="noopener">Zatu</a>
             <a class="search-link" href="https://www.philibertnet.com/fr/recherche?search_query=Heroes%20of%20Barcadia" target="_blank" rel="noopener">Philibert (search)</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-unavailable"
+            data-handle="mistwind"
+            data-user_excluded="0"
             data-composite_score="48.56"
             data-zatu_title="mistwind"
             data-advantage_verdict="UNAVAILABLE_FR"
@@ -1407,10 +1534,13 @@
             <a href="https://boardgamegeek.com/boardgame/366251" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/mistwind" target="_blank" rel="noopener">Zatu</a>
             <a class="search-link" href="https://www.philibertnet.com/fr/recherche?search_query=Mistwind" target="_blank" rel="noopener">Philibert (search)</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-unavailable"
+            data-handle="mythic-mischief-vol-ii"
+            data-user_excluded="0"
             data-composite_score="47.62"
             data-zatu_title="mythic mischief vol ii"
             data-advantage_verdict="UNAVAILABLE_FR"
@@ -1445,10 +1575,13 @@
             <a href="https://boardgamegeek.com/boardgame/400617" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/mythic-mischief-vol-ii" target="_blank" rel="noopener">Zatu</a>
             <a class="search-link" href="https://www.philibertnet.com/fr/recherche?search_query=Mythic%20Mischief%20VOL%20II" target="_blank" rel="noopener">Philibert (search)</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-unavailable"
+            data-handle="heroes-land-air-sea"
+            data-user_excluded="0"
             data-composite_score="47.14"
             data-zatu_title="heroes of land, air &amp; sea"
             data-advantage_verdict="UNAVAILABLE_FR"
@@ -1483,10 +1616,13 @@
             <a href="https://boardgamegeek.com/boardgame/198830" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/heroes-land-air-sea" target="_blank" rel="noopener">Zatu</a>
             <a class="search-link" href="https://www.philibertnet.com/fr/recherche?search_query=Heroes%20of%20Land%2C%20Air%20%26amp%3B%20Sea" target="_blank" rel="noopener">Philibert (search)</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-unavailable"
+            data-handle="whispering-woods"
+            data-user_excluded="0"
             data-composite_score="46.99"
             data-zatu_title="whispering woods"
             data-advantage_verdict="UNAVAILABLE_FR"
@@ -1521,10 +1657,13 @@
             <a href="https://boardgamegeek.com/boardgame/411402" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/whispering-woods" target="_blank" rel="noopener">Zatu</a>
             <a class="search-link" href="https://www.philibertnet.com/fr/recherche?search_query=Whispering%20Woods" target="_blank" rel="noopener">Philibert (search)</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-unavailable"
+            data-handle="tomb-raider-the-crypt-of-chronos"
+            data-user_excluded="0"
             data-composite_score="45.42"
             data-zatu_title="tomb raider: the crypt of chronos"
             data-advantage_verdict="UNAVAILABLE_FR"
@@ -1559,10 +1698,13 @@
             <a href="https://boardgamegeek.com/boardgame/425796" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/tomb-raider-the-crypt-of-chronos" target="_blank" rel="noopener">Zatu</a>
             <a class="search-link" href="https://www.philibertnet.com/fr/recherche?search_query=Tomb%20Raider%3A%20The%20Crypt%20of%20Chronos" target="_blank" rel="noopener">Philibert (search)</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-unavailable"
+            data-handle="aspens"
+            data-user_excluded="0"
             data-composite_score="44.87"
             data-zatu_title="aspens - kickstarter standard edition"
             data-advantage_verdict="UNAVAILABLE_FR"
@@ -1597,10 +1739,13 @@
             <a href="https://boardgamegeek.com/boardgame/424507" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/aspens" target="_blank" rel="noopener">Zatu</a>
             <a class="search-link" href="https://www.philibertnet.com/fr/recherche?search_query=Aspens%20-%20Kickstarter%20Standard%20Edition" target="_blank" rel="noopener">Philibert (search)</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-unavailable"
+            data-handle="aspens-deluxe-edition"
+            data-user_excluded="0"
             data-composite_score="44.87"
             data-zatu_title="aspens - deluxe edition"
             data-advantage_verdict="UNAVAILABLE_FR"
@@ -1635,10 +1780,13 @@
             <a href="https://boardgamegeek.com/boardgame/424507" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/aspens-deluxe-edition" target="_blank" rel="noopener">Zatu</a>
             <a class="search-link" href="https://www.philibertnet.com/fr/recherche?search_query=Aspens%20-%20Deluxe%20Edition" target="_blank" rel="noopener">Philibert (search)</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-unavailable"
+            data-handle="red-dragon-inn-8-the-pub-crawl"
+            data-user_excluded="0"
             data-composite_score="44.81"
             data-zatu_title="red dragon inn 8 - the pub crawl"
             data-advantage_verdict="UNAVAILABLE_FR"
@@ -1673,10 +1821,13 @@
             <a href="https://boardgamegeek.com/boardgame/330097" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/red-dragon-inn-8-the-pub-crawl" target="_blank" rel="noopener">Zatu</a>
             <a class="search-link" href="https://www.philibertnet.com/fr/recherche?search_query=Red%20Dragon%20Inn%208%20-%20The%20Pub%20Crawl" target="_blank" rel="noopener">Philibert (search)</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-unavailable"
+            data-handle="call-of-kilforth"
+            data-user_excluded="0"
             data-composite_score="44.2"
             data-zatu_title="call of kilforth"
             data-advantage_verdict="UNAVAILABLE_FR"
@@ -1711,10 +1862,13 @@
             <a href="https://boardgamegeek.com/boardgame/329121" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/call-of-kilforth" target="_blank" rel="noopener">Zatu</a>
             <a class="search-link" href="https://www.philibertnet.com/fr/recherche?search_query=Call%20of%20Kilforth" target="_blank" rel="noopener">Philibert (search)</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-unavailable"
+            data-handle="wicked-cribbage"
+            data-user_excluded="0"
             data-composite_score="43.86"
             data-zatu_title="wicked cribbage"
             data-advantage_verdict="UNAVAILABLE_FR"
@@ -1749,10 +1903,13 @@
             <a href="https://boardgamegeek.com/boardgame/419170" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/wicked-cribbage" target="_blank" rel="noopener">Zatu</a>
             <a class="search-link" href="https://www.philibertnet.com/fr/recherche?search_query=Wicked%20Cribbage" target="_blank" rel="noopener">Philibert (search)</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-unavailable"
+            data-handle="fractured-sky-deluxe"
+            data-user_excluded="0"
             data-composite_score="43.44"
             data-zatu_title="fractured sky: deluxe"
             data-advantage_verdict="UNAVAILABLE_FR"
@@ -1787,10 +1944,13 @@
             <a href="https://boardgamegeek.com/boardgame/370581" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/fractured-sky-deluxe" target="_blank" rel="noopener">Zatu</a>
             <a class="search-link" href="https://www.philibertnet.com/fr/recherche?search_query=Fractured%20Sky%3A%20Deluxe" target="_blank" rel="noopener">Philibert (search)</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-unavailable"
+            data-handle="the-shipwreck-arcana"
+            data-user_excluded="0"
             data-composite_score="43.0"
             data-zatu_title="the shipwreck arcana"
             data-advantage_verdict="UNAVAILABLE_FR"
@@ -1825,10 +1985,13 @@
             <a href="https://boardgamegeek.com/boardgame/220517" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/the-shipwreck-arcana" target="_blank" rel="noopener">Zatu</a>
             <a class="search-link" href="https://www.philibertnet.com/fr/recherche?search_query=The%20Shipwreck%20Arcana" target="_blank" rel="noopener">Philibert (search)</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-unavailable"
+            data-handle="ingenious-3d"
+            data-user_excluded="0"
             data-composite_score="42.85"
             data-zatu_title="ingenious: 3d"
             data-advantage_verdict="UNAVAILABLE_FR"
@@ -1863,10 +2026,13 @@
             <a href="https://boardgamegeek.com/boardgame/406305" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/ingenious-3d" target="_blank" rel="noopener">Zatu</a>
             <a class="search-link" href="https://www.philibertnet.com/fr/recherche?search_query=Ingenious%3A%203D" target="_blank" rel="noopener">Philibert (search)</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-unavailable"
+            data-handle="reef-project"
+            data-user_excluded="0"
             data-composite_score="42.81"
             data-zatu_title="reef project"
             data-advantage_verdict="UNAVAILABLE_FR"
@@ -1901,10 +2067,13 @@
             <a href="https://boardgamegeek.com/boardgame/419199" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/reef-project" target="_blank" rel="noopener">Zatu</a>
             <a class="search-link" href="https://www.philibertnet.com/fr/recherche?search_query=Reef%20Project" target="_blank" rel="noopener">Philibert (search)</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-unavailable"
+            data-handle="neuroriders"
+            data-user_excluded="0"
             data-composite_score="42.57"
             data-zatu_title="neuroriders"
             data-advantage_verdict="UNAVAILABLE_FR"
@@ -1939,10 +2108,13 @@
             <a href="https://boardgamegeek.com/boardgame/350992" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/neuroriders" target="_blank" rel="noopener">Zatu</a>
             <a class="search-link" href="https://www.philibertnet.com/fr/recherche?search_query=Neuroriders" target="_blank" rel="noopener">Philibert (search)</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-unavailable"
+            data-handle="exit-advent-calendar-the-intergalactic-race"
+            data-user_excluded="0"
             data-composite_score="42.24"
             data-zatu_title="exit: advent calendar - the intergalactic race"
             data-advantage_verdict="UNAVAILABLE_FR"
@@ -1977,10 +2149,13 @@
             <a href="https://boardgamegeek.com/boardgame/430765" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/exit-advent-calendar-the-intergalactic-race" target="_blank" rel="noopener">Zatu</a>
             <a class="search-link" href="https://www.philibertnet.com/fr/recherche?search_query=EXIT%3A%20Advent%20Calendar%20-%20The%20Intergalactic%20Race" target="_blank" rel="noopener">Philibert (search)</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-unavailable"
+            data-handle="thug-life-the-board-game"
+            data-user_excluded="0"
             data-composite_score="42.12"
             data-zatu_title="thug life: the board game"
             data-advantage_verdict="UNAVAILABLE_FR"
@@ -2015,10 +2190,13 @@
             <a href="https://boardgamegeek.com/boardgame/211693" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/thug-life-the-board-game" target="_blank" rel="noopener">Zatu</a>
             <a class="search-link" href="https://www.philibertnet.com/fr/recherche?search_query=Thug%20Life%3A%20The%20Board%20Game" target="_blank" rel="noopener">Philibert (search)</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-unavailable"
+            data-handle="the-isle-of-cats-duel"
+            data-user_excluded="0"
             data-composite_score="41.46"
             data-zatu_title="the isle of cats: duel"
             data-advantage_verdict="UNAVAILABLE_FR"
@@ -2053,10 +2231,13 @@
             <a href="https://boardgamegeek.com/boardgame/431718" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/the-isle-of-cats-duel" target="_blank" rel="noopener">Zatu</a>
             <a class="search-link" href="https://www.philibertnet.com/fr/recherche?search_query=The%20Isle%20of%20Cats%3A%20Duel" target="_blank" rel="noopener">Philibert (search)</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-unavailable"
+            data-handle="cross-bronx-expressway"
+            data-user_excluded="0"
             data-composite_score="41.41"
             data-zatu_title="cross-bronx expressway"
             data-advantage_verdict="UNAVAILABLE_FR"
@@ -2091,10 +2272,13 @@
             <a href="https://boardgamegeek.com/boardgame/347601" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/cross-bronx-expressway" target="_blank" rel="noopener">Zatu</a>
             <a class="search-link" href="https://www.philibertnet.com/fr/recherche?search_query=Cross-Bronx%20Expressway" target="_blank" rel="noopener">Philibert (search)</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-unavailable"
+            data-handle="seas-of-strife"
+            data-user_excluded="0"
             data-composite_score="41.06"
             data-zatu_title="seas of strife"
             data-advantage_verdict="UNAVAILABLE_FR"
@@ -2129,10 +2313,13 @@
             <a href="https://boardgamegeek.com/boardgame/225482" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/seas-of-strife" target="_blank" rel="noopener">Zatu</a>
             <a class="search-link" href="https://www.philibertnet.com/fr/recherche?search_query=Seas%20of%20Strife" target="_blank" rel="noopener">Philibert (search)</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-unavailable"
+            data-handle="moonrollers-standard-edition"
+            data-user_excluded="0"
             data-composite_score="40.7"
             data-zatu_title="moonrollers standard edition"
             data-advantage_verdict="UNAVAILABLE_FR"
@@ -2167,10 +2354,13 @@
             <a href="https://boardgamegeek.com/boardgame/405923" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/moonrollers-standard-edition" target="_blank" rel="noopener">Zatu</a>
             <a class="search-link" href="https://www.philibertnet.com/fr/recherche?search_query=Moonrollers%20Standard%20Edition" target="_blank" rel="noopener">Philibert (search)</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-cheaper"
+            data-handle="terrorscape"
+            data-user_excluded="0"
             data-composite_score="39.99053403535164"
             data-zatu_title="terrorscape"
             data-advantage_verdict="CHEAPER_UK"
@@ -2205,10 +2395,13 @@
             <a href="https://boardgamegeek.com/boardgame/371433" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/terrorscape" target="_blank" rel="noopener">Zatu</a>
             <a class="" href="https://www.philibertnet.com/fr/ice-makes/134911-terrorscape-4897139630248.html" target="_blank" rel="noopener">Philibert</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-unavailable"
+            data-handle="last-light"
+            data-user_excluded="0"
             data-composite_score="39.88"
             data-zatu_title="last light"
             data-advantage_verdict="UNAVAILABLE_FR"
@@ -2243,10 +2436,13 @@
             <a href="https://boardgamegeek.com/boardgame/315727" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/last-light" target="_blank" rel="noopener">Zatu</a>
             <a class="search-link" href="https://www.philibertnet.com/fr/recherche?search_query=Last%20Light" target="_blank" rel="noopener">Philibert (search)</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-unavailable"
+            data-handle="after-the-virus"
+            data-user_excluded="0"
             data-composite_score="39.38"
             data-zatu_title="after the virus"
             data-advantage_verdict="UNAVAILABLE_FR"
@@ -2281,10 +2477,13 @@
             <a href="https://boardgamegeek.com/boardgame/232361" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/after-the-virus" target="_blank" rel="noopener">Zatu</a>
             <a class="search-link" href="https://www.philibertnet.com/fr/recherche?search_query=After%20the%20Virus" target="_blank" rel="noopener">Philibert (search)</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-unavailable"
+            data-handle="snakes-of-wrath"
+            data-user_excluded="0"
             data-composite_score="38.54"
             data-zatu_title="snakes of wrath"
             data-advantage_verdict="UNAVAILABLE_FR"
@@ -2319,10 +2518,13 @@
             <a href="https://boardgamegeek.com/boardgame/372197" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/snakes-of-wrath" target="_blank" rel="noopener">Zatu</a>
             <a class="search-link" href="https://www.philibertnet.com/fr/recherche?search_query=Snakes%20of%20Wrath" target="_blank" rel="noopener">Philibert (search)</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-unavailable"
+            data-handle="tragedy-looper-new-tragedies"
+            data-user_excluded="0"
             data-composite_score="37.99"
             data-zatu_title="tragedy looper: new tragedies"
             data-advantage_verdict="UNAVAILABLE_FR"
@@ -2357,10 +2559,13 @@
             <a href="https://boardgamegeek.com/boardgame/374266" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/tragedy-looper-new-tragedies" target="_blank" rel="noopener">Zatu</a>
             <a class="search-link" href="https://www.philibertnet.com/fr/recherche?search_query=Tragedy%20Looper%3A%20New%20Tragedies" target="_blank" rel="noopener">Philibert (search)</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-unavailable"
+            data-handle="exit-puzzle-nightfall-manor"
+            data-user_excluded="0"
             data-composite_score="37.17"
             data-zatu_title="exit puzzle: nightfall manor"
             data-advantage_verdict="UNAVAILABLE_FR"
@@ -2395,10 +2600,13 @@
             <a href="https://boardgamegeek.com/boardgame/333516" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/exit-puzzle-nightfall-manor" target="_blank" rel="noopener">Zatu</a>
             <a class="search-link" href="https://www.philibertnet.com/fr/recherche?search_query=EXIT%20Puzzle%3A%20Nightfall%20Manor" target="_blank" rel="noopener">Philibert (search)</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-unavailable"
+            data-handle="planted"
+            data-user_excluded="0"
             data-composite_score="37.11"
             data-zatu_title="planted"
             data-advantage_verdict="UNAVAILABLE_FR"
@@ -2433,10 +2641,13 @@
             <a href="https://boardgamegeek.com/boardgame/365104" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/planted" target="_blank" rel="noopener">Zatu</a>
             <a class="search-link" href="https://www.philibertnet.com/fr/recherche?search_query=Planted" target="_blank" rel="noopener">Philibert (search)</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-cheaper"
+            data-handle="micro-macro-crime-city-4-showdown"
+            data-user_excluded="0"
             data-composite_score="31.362551020408162"
             data-zatu_title="micromacro: crime city 4 - showdown"
             data-advantage_verdict="CHEAPER_UK"
@@ -2471,10 +2682,13 @@
             <a href="https://boardgamegeek.com/boardgame/398162" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/micro-macro-crime-city-4-showdown" target="_blank" rel="noopener">Zatu</a>
             <a class="" href="https://www.philibertnet.com/fr/blackrock-editions/129017-micromacro-crime-city-showdown-3770000282887.html" target="_blank" rel="noopener">Philibert</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-cheaper"
+            data-handle="horrified-american-monsters"
+            data-user_excluded="0"
             data-composite_score="30.424448818897645"
             data-zatu_title="horrified: american monsters"
             data-advantage_verdict="CHEAPER_UK"
@@ -2509,10 +2723,13 @@
             <a href="https://boardgamegeek.com/boardgame/343562" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/horrified-american-monsters" target="_blank" rel="noopener">Zatu</a>
             <a class="" href="https://www.philibertnet.com/fr/ravensburger/113629-horrified-american-monsters-810558019405.html" target="_blank" rel="noopener">Philibert</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-cheaper"
+            data-handle="forges-of-ravenshire-board-game"
+            data-user_excluded="0"
             data-composite_score="29.11"
             data-zatu_title="forges of ravenshire board game"
             data-advantage_verdict="CHEAPER_UK"
@@ -2547,10 +2764,13 @@
             <a href="https://boardgamegeek.com/boardgame/367833" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/forges-of-ravenshire-board-game" target="_blank" rel="noopener">Zatu</a>
             <a class="" href="https://www.philibertnet.com/fr/ba-games/147016-forges-of-ravenshire-mastersmith-pledge-2100001097561.html" target="_blank" rel="noopener">Philibert</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-cheaper"
+            data-handle="kinfire-council"
+            data-user_excluded="0"
             data-composite_score="27.79609869956652"
             data-zatu_title="kinfire council"
             data-advantage_verdict="CHEAPER_UK"
@@ -2585,10 +2805,13 @@
             <a href="https://boardgamegeek.com/boardgame/411894" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/kinfire-council" target="_blank" rel="noopener">Zatu</a>
             <a class="" href="https://www.philibertnet.com/fr/incredible-dream-studios/157749-kinfire-council-deluxe-bundle-2100001050092.html" target="_blank" rel="noopener">Philibert</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-cheaper"
+            data-handle="modern-art"
+            data-user_excluded="0"
             data-composite_score="27.315061638868748"
             data-zatu_title="modern art"
             data-advantage_verdict="CHEAPER_UK"
@@ -2623,10 +2846,13 @@
             <a href="https://boardgamegeek.com/boardgame/118" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/modern-art" target="_blank" rel="noopener">Zatu</a>
             <a class="" href="https://www.philibertnet.com/fr/dicetree-games/130556-modern-art-8801236547541.html" target="_blank" rel="noopener">Philibert</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-cheaper"
+            data-handle="march-of-the-ants-evolved-edition"
+            data-user_excluded="0"
             data-composite_score="24.486183897093856"
             data-zatu_title="march of the ants evolved edition"
             data-advantage_verdict="CHEAPER_UK"
@@ -2661,10 +2887,13 @@
             <a href="https://boardgamegeek.com/boardgame/416079" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/march-of-the-ants-evolved-edition" target="_blank" rel="noopener">Zatu</a>
             <a class="" href="https://www.philibertnet.com/fr/weird-city-games/170502-march-of-the-ants-evolved-edition-deluxe-edition-691835954790.html" target="_blank" rel="noopener">Philibert</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-cheaper"
+            data-handle="santorini-board-game-2nd-edition"
+            data-user_excluded="0"
             data-composite_score="18.541278488048913"
             data-zatu_title="santorini board game: 2nd edition"
             data-advantage_verdict="CHEAPER_UK"
@@ -2699,10 +2928,13 @@
             <a href="https://boardgamegeek.com/boardgame/194655" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/santorini-board-game-2nd-edition" target="_blank" rel="noopener">Zatu</a>
             <a class="" href="https://www.philibertnet.com/fr/roxley-games/154921-santorini-riddle-of-the-sphinx-deluxe-edition-acrylic-tokens-2100001147532.html" target="_blank" rel="noopener">Philibert</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-cheaper"
+            data-handle="magnate-the-first-city-promo"
+            data-user_excluded="0"
             data-composite_score="18.300665097115953"
             data-zatu_title="magnate: the first city"
             data-advantage_verdict="CHEAPER_UK"
@@ -2737,10 +2969,13 @@
             <a href="https://boardgamegeek.com/boardgame/258242" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/magnate-the-first-city-promo" target="_blank" rel="noopener">Zatu</a>
             <a class="" href="https://www.philibertnet.com/fr/naylor-games/164697-magnate-the-first-city-744109268007.html" target="_blank" rel="noopener">Philibert</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-cheaper"
+            data-handle="in-too-deep-2"
+            data-user_excluded="0"
             data-composite_score="15.197826086956521"
             data-zatu_title="in too deep"
             data-advantage_verdict="CHEAPER_UK"
@@ -2775,10 +3010,13 @@
             <a href="https://boardgamegeek.com/boardgame/295681" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/in-too-deep-2" target="_blank" rel="noopener">Zatu</a>
             <a class="" href="https://www.philibertnet.com/fr/jolly-dutch-production/132285-in-too-deep-8720938477041.html" target="_blank" rel="noopener">Philibert</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-cheaper"
+            data-handle="gutenberg"
+            data-user_excluded="0"
             data-composite_score="14.778313380815273"
             data-zatu_title="gutenberg"
             data-advantage_verdict="CHEAPER_UK"
@@ -2813,10 +3051,13 @@
             <a href="https://boardgamegeek.com/boardgame/339958" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/gutenberg" target="_blank" rel="noopener">Zatu</a>
             <a class="" href="https://www.philibertnet.com/fr/portal/176846-gutenberg-5900221113938.html" target="_blank" rel="noopener">Philibert</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
         <tr class="adv-cheaper"
+            data-handle="horrified-dungeons-dragons"
+            data-user_excluded="0"
             data-composite_score="14.401412680756398"
             data-zatu_title="horrified: dungeons & dragons"
             data-advantage_verdict="CHEAPER_UK"
@@ -2851,6 +3092,7 @@
             <a href="https://boardgamegeek.com/boardgame/437705" target="_blank" rel="noopener">BGG</a>
             <a href="https://zatu.com/products/horrified-dungeons-dragons" target="_blank" rel="noopener">Zatu</a>
             <a class="" href="https://www.philibertnet.com/fr/ravensburger/174434-horrified-dungeons-dragons-4005556247547.html" target="_blank" rel="noopener">Philibert</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         
@@ -41814,6 +42056,24 @@
 
 <script>
 (function () {
+  var HIDE_STORAGE_KEY = 'ukbg_hidden_handles';
+
+  function loadHiddenSet(seedHandles) {
+    var raw = null;
+    try { raw = localStorage.getItem(HIDE_STORAGE_KEY); } catch (e) { /* storage unavailable */ }
+    if (raw !== null) {
+      try { return new Set(JSON.parse(raw)); } catch (e) { /* corrupt, fall through */ }
+    }
+    // First-ever visit from this browser: seed from whatever's already baked into the page
+    // (data/excluded_games.json), so a fresh browser starts in sync with the committed list.
+    return new Set(seedHandles);
+  }
+
+  function saveHiddenSet(set) {
+    try { localStorage.setItem(HIDE_STORAGE_KEY, JSON.stringify(Array.from(set))); }
+    catch (e) { /* storage unavailable (private browsing, quota) -- hiding still works this tab */ }
+  }
+
   function setupTable(opts) {
     var table = document.getElementById(opts.tableId);
     if (!table) return;
@@ -41821,6 +42081,68 @@
     var rows = Array.prototype.slice.call(tbody.querySelectorAll('tr'));
     var headers = table.querySelectorAll('thead th');
     var currentSort = { key: opts.defaultSortKey, dir: opts.defaultSortDir };
+
+    var hiddenSet = null;
+    var showHiddenBox = null;
+    var hiddenCountEl = null;
+
+    function refreshHideButton(row) {
+      var btn = row.querySelector('.hide-btn');
+      if (!btn) return;
+      var isHidden = hiddenSet.has(row.dataset.handle);
+      btn.textContent = isHidden ? 'Un-hide' : 'Not interested';
+      row.classList.toggle('is-hidden', isHidden);
+    }
+
+    if (opts.enableHide) {
+      var seedHandles = rows.filter(function (row) { return row.dataset.user_excluded === '1'; })
+        .map(function (row) { return row.dataset.handle; });
+      hiddenSet = loadHiddenSet(seedHandles);
+      showHiddenBox = document.getElementById(opts.showHiddenId);
+      hiddenCountEl = document.getElementById(opts.hiddenCountId);
+
+      rows.forEach(function (row) {
+        refreshHideButton(row);
+        var btn = row.querySelector('.hide-btn');
+        if (!btn) return;
+        btn.addEventListener('click', function () {
+          var handle = row.dataset.handle;
+          if (hiddenSet.has(handle)) { hiddenSet.delete(handle); } else { hiddenSet.add(handle); }
+          saveHiddenSet(hiddenSet);
+          refreshHideButton(row);
+          applyFilters();
+        });
+      });
+
+      if (showHiddenBox) showHiddenBox.addEventListener('change', applyFilters);
+
+      var exportBtn = document.getElementById(opts.exportButtonId);
+      if (exportBtn) {
+        exportBtn.addEventListener('click', function () {
+          var handles = Array.from(hiddenSet).sort();
+          var payload = JSON.stringify({ excluded_handles: handles }, null, 2) + '\n';
+          var blob = new Blob([payload], { type: 'application/json' });
+          var url = URL.createObjectURL(blob);
+          var a = document.createElement('a');
+          a.href = url;
+          a.download = 'excluded_games.json';
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          URL.revokeObjectURL(url);
+        });
+      }
+
+      var clearBtn = document.getElementById(opts.clearButtonId);
+      if (clearBtn) {
+        clearBtn.addEventListener('click', function () {
+          hiddenSet.clear();
+          saveHiddenSet(hiddenSet);
+          rows.forEach(refreshHideButton);
+          applyFilters();
+        });
+      }
+    }
 
     function sortRows(key, type, dir) {
       rows.sort(function (a, b) {
@@ -41884,11 +42206,17 @@
             }
           }
         }
-        var match = textMatch && categoryMatch;
+        var hideOk = true;
+        if (opts.enableHide) {
+          var isHidden = hiddenSet.has(row.dataset.handle);
+          hideOk = !isHidden || (showHiddenBox && showHiddenBox.checked);
+        }
+        var match = textMatch && categoryMatch && hideOk;
         row.classList.toggle('hidden-row', !match);
         if (match) visible++;
       });
       resultCount.textContent = visible + opts.resultSuffix;
+      if (opts.enableHide && hiddenCountEl) hiddenCountEl.textContent = hiddenSet.size;
     }
 
     filterInput.addEventListener('input', applyFilters);
@@ -41904,6 +42232,8 @@
         moreTagsToggle.textContent = collapsed ? 'show more tags' : 'show fewer tags';
       });
     }
+
+    if (opts.enableHide) applyFilters();
   }
 
   setupTable({
@@ -41916,6 +42246,11 @@
     defaultSortType: 'num',
     defaultSortDir: -1,
     resultSuffix: ' games matched your criteria',
+    enableHide: true,
+    showHiddenId: 'show-hidden',
+    hiddenCountId: 'hidden-count',
+    exportButtonId: 'export-hidden-btn',
+    clearButtonId: 'clear-hidden-btn',
   });
 
   setupTable({

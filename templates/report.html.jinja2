@@ -46,6 +46,33 @@
     color: var(--text);
   }
   #result-count { font-size: 0.9rem; color: var(--text-dim); }
+  .hide-toggle { font-size: 0.85rem; color: var(--text-dim); display: inline-flex; align-items: center; gap: 0.35rem; }
+  .hide-toggle input { margin: 0; }
+  #export-hidden-btn, #clear-hidden-btn {
+    font-size: 0.82rem;
+    padding: 0.35rem 0.7rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--panel);
+    color: var(--text);
+    cursor: pointer;
+  }
+  #export-hidden-btn:hover, #clear-hidden-btn:hover { background: var(--bg); }
+  #hide-help { margin: -0.5rem 0 1rem; font-size: 0.8rem; }
+  .links .hide-btn {
+    display: inline-block;
+    margin-top: 0.4rem;
+    font-size: 0.75rem;
+    padding: 0.15rem 0.5rem;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: var(--panel);
+    color: var(--text-dim);
+    cursor: pointer;
+  }
+  .links .hide-btn:hover { color: var(--text); border-color: var(--text-dim); }
+  tbody tr.is-hidden { opacity: 0.45; }
+  tbody tr.is-hidden .hide-btn { color: var(--link); border-color: var(--link); }
   .category-filters { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1rem; }
   .category-chip {
     display: inline-flex;
@@ -157,7 +184,15 @@
   <div class="controls">
     <input id="filter" type="search" placeholder="Filter by title…" autocomplete="off">
     <span id="result-count">{{ games | length }} games matched your criteria</span>
+    <label class="hide-toggle"><input type="checkbox" id="show-hidden"> Show hidden (<span id="hidden-count">0</span>)</label>
+    <button type="button" id="export-hidden-btn">Export hidden list</button>
+    <button type="button" id="clear-hidden-btn">Clear hidden</button>
   </div>
+  <p class="meta" id="hide-help">
+    Click "Not interested" on a row to hide it (saved in this browser, survives future site rebuilds automatically).
+    To make hidden games stay hidden for everyone / across devices, click "Export hidden list", save the downloaded
+    file as <code>data/excluded_games.json</code> in the repo, and commit it.
+  </p>
 
   <div class="category-filters" id="category-filters">
     <label class="category-chip pinned"><input type="checkbox" data-category="coop"> Coop</label>
@@ -187,6 +222,8 @@
       <tbody>
         {% for game in games %}
         <tr class="{{ game.advantage_css_class }}"
+            data-handle="{{ game.zatu_handle }}"
+            data-user_excluded="{{ '1' if game.user_excluded else '0' }}"
             data-composite_score="{{ game.composite_score }}"
             data-zatu_title="{{ game.zatu_title | lower }}"
             data-advantage_verdict="{{ game.advantage_verdict }}"
@@ -221,6 +258,7 @@
             <a href="https://boardgamegeek.com/boardgame/{{ game.bgg_id }}" target="_blank" rel="noopener">BGG</a>
             <a href="{{ game.zatu_url }}" target="_blank" rel="noopener">Zatu</a>
             <a class="{{ 'search-link' if game.philibert_link_is_search else '' }}" href="{{ game.philibert_link_url }}" target="_blank" rel="noopener">Philibert{% if game.philibert_link_is_search %} (search){% endif %}</a>
+            <button type="button" class="hide-btn">Not interested</button>
           </td>
         </tr>
         {% endfor %}
@@ -298,6 +336,24 @@
 
 <script>
 (function () {
+  var HIDE_STORAGE_KEY = 'ukbg_hidden_handles';
+
+  function loadHiddenSet(seedHandles) {
+    var raw = null;
+    try { raw = localStorage.getItem(HIDE_STORAGE_KEY); } catch (e) { /* storage unavailable */ }
+    if (raw !== null) {
+      try { return new Set(JSON.parse(raw)); } catch (e) { /* corrupt, fall through */ }
+    }
+    // First-ever visit from this browser: seed from whatever's already baked into the page
+    // (data/excluded_games.json), so a fresh browser starts in sync with the committed list.
+    return new Set(seedHandles);
+  }
+
+  function saveHiddenSet(set) {
+    try { localStorage.setItem(HIDE_STORAGE_KEY, JSON.stringify(Array.from(set))); }
+    catch (e) { /* storage unavailable (private browsing, quota) -- hiding still works this tab */ }
+  }
+
   function setupTable(opts) {
     var table = document.getElementById(opts.tableId);
     if (!table) return;
@@ -305,6 +361,68 @@
     var rows = Array.prototype.slice.call(tbody.querySelectorAll('tr'));
     var headers = table.querySelectorAll('thead th');
     var currentSort = { key: opts.defaultSortKey, dir: opts.defaultSortDir };
+
+    var hiddenSet = null;
+    var showHiddenBox = null;
+    var hiddenCountEl = null;
+
+    function refreshHideButton(row) {
+      var btn = row.querySelector('.hide-btn');
+      if (!btn) return;
+      var isHidden = hiddenSet.has(row.dataset.handle);
+      btn.textContent = isHidden ? 'Un-hide' : 'Not interested';
+      row.classList.toggle('is-hidden', isHidden);
+    }
+
+    if (opts.enableHide) {
+      var seedHandles = rows.filter(function (row) { return row.dataset.user_excluded === '1'; })
+        .map(function (row) { return row.dataset.handle; });
+      hiddenSet = loadHiddenSet(seedHandles);
+      showHiddenBox = document.getElementById(opts.showHiddenId);
+      hiddenCountEl = document.getElementById(opts.hiddenCountId);
+
+      rows.forEach(function (row) {
+        refreshHideButton(row);
+        var btn = row.querySelector('.hide-btn');
+        if (!btn) return;
+        btn.addEventListener('click', function () {
+          var handle = row.dataset.handle;
+          if (hiddenSet.has(handle)) { hiddenSet.delete(handle); } else { hiddenSet.add(handle); }
+          saveHiddenSet(hiddenSet);
+          refreshHideButton(row);
+          applyFilters();
+        });
+      });
+
+      if (showHiddenBox) showHiddenBox.addEventListener('change', applyFilters);
+
+      var exportBtn = document.getElementById(opts.exportButtonId);
+      if (exportBtn) {
+        exportBtn.addEventListener('click', function () {
+          var handles = Array.from(hiddenSet).sort();
+          var payload = JSON.stringify({ excluded_handles: handles }, null, 2) + '\n';
+          var blob = new Blob([payload], { type: 'application/json' });
+          var url = URL.createObjectURL(blob);
+          var a = document.createElement('a');
+          a.href = url;
+          a.download = 'excluded_games.json';
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          URL.revokeObjectURL(url);
+        });
+      }
+
+      var clearBtn = document.getElementById(opts.clearButtonId);
+      if (clearBtn) {
+        clearBtn.addEventListener('click', function () {
+          hiddenSet.clear();
+          saveHiddenSet(hiddenSet);
+          rows.forEach(refreshHideButton);
+          applyFilters();
+        });
+      }
+    }
 
     function sortRows(key, type, dir) {
       rows.sort(function (a, b) {
@@ -368,11 +486,17 @@
             }
           }
         }
-        var match = textMatch && categoryMatch;
+        var hideOk = true;
+        if (opts.enableHide) {
+          var isHidden = hiddenSet.has(row.dataset.handle);
+          hideOk = !isHidden || (showHiddenBox && showHiddenBox.checked);
+        }
+        var match = textMatch && categoryMatch && hideOk;
         row.classList.toggle('hidden-row', !match);
         if (match) visible++;
       });
       resultCount.textContent = visible + opts.resultSuffix;
+      if (opts.enableHide && hiddenCountEl) hiddenCountEl.textContent = hiddenSet.size;
     }
 
     filterInput.addEventListener('input', applyFilters);
@@ -388,6 +512,8 @@
         moreTagsToggle.textContent = collapsed ? 'show more tags' : 'show fewer tags';
       });
     }
+
+    if (opts.enableHide) applyFilters();
   }
 
   setupTable({
@@ -400,6 +526,11 @@
     defaultSortType: 'num',
     defaultSortDir: -1,
     resultSuffix: ' games matched your criteria',
+    enableHide: true,
+    showHiddenId: 'show-hidden',
+    hiddenCountId: 'hidden-count',
+    exportButtonId: 'export-hidden-btn',
+    clearButtonId: 'clear-hidden-btn',
   });
 
   setupTable({

@@ -95,6 +95,17 @@ def test_prepare_games_uses_real_philibert_url_when_listed():
     assert prepared["philibert_link_url"] == GAME_CHEAPER["philibert_url"]
 
 
+def test_prepare_games_marks_user_excluded_by_handle():
+    prepared = prepare_games([GAME_UNAVAILABLE, GAME_CHEAPER], {GAME_UNAVAILABLE["zatu_handle"]})
+    assert prepared[0]["user_excluded"] is True
+    assert prepared[1]["user_excluded"] is False
+
+
+def test_prepare_games_defaults_to_none_excluded():
+    prepared = prepare_games([GAME_UNAVAILABLE])
+    assert prepared[0]["user_excluded"] is False
+
+
 def test_clean_category_tags_drops_player_count_duration_and_marketing_noise():
     tags = ["Cooperative Play", "Legacy", "2-4 Players", "30-60 Minutes", "Christmas", "Party Games"]
     assert clean_category_tags(tags) == ["Legacy"]
@@ -208,6 +219,9 @@ def test_render_html_produces_self_contained_page_with_both_games():
     assert "Unavailable Game" in html
     assert "Cheaper Game" in html
     assert "2 games matched your criteria" in html
+    # "Not interested" hide button + handle are baked into every scored row.
+    assert html.count('class="hide-btn"') == 2
+    assert 'data-handle="unavailable-game"' in html
     assert "Totally Obscure Game" in html
     assert "Near Miss Game Deluxe" in html
     assert "Near Miss Game 2 (92% similar)" in html
