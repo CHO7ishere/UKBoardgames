@@ -109,6 +109,32 @@ def probe_versions_language_filtered(page, bgg_id: int, slug: str, name: str) ->
         print(f"    {href}  ->  {text.strip()!r}", file=sys.stderr)
 
 
+def probe_no_slug_url(page, bgg_id: int, name: str) -> None:
+    # Our own pipeline data (data/matched_games.json) only stores bgg_id, never BGG's title
+    # slug -- confirming a slug-less URL works (BGG presumably redirects/serves it directly) is
+    # what decides whether Stage 3 can be built against bgg_id alone or needs to also carry a
+    # slug through the pipeline (real extra plumbing). User-reported real case: Gloomhaven: Jaws
+    # of the Lion (bgg_id=291457) has a real French edition per
+    # https://boardgamegeek.com/boardgame/291457/gloomhaven-jaws-of-the-lion/versions?pageid=1&language=2187
+    url = f"https://boardgamegeek.com/boardgame/{bgg_id}/versions?language={FRENCH_LANGUAGE_ID}"
+    print(f"\n-- no-slug FRENCH-filtered versions: {url} --", file=sys.stderr)
+    resp = page.goto(url, wait_until="domcontentloaded", timeout=45000)
+    page.wait_for_timeout(6000)
+    html = page.content()
+    print(f"  navigation status: {resp.status if resp else 'None'}", file=sys.stderr)
+    print(f"  final url: {page.url}", file=sys.stderr)
+    print(f"  html length: {len(html)}", file=sys.stderr)
+    if "Just a moment" in page.title():
+        print("  STILL BLOCKED by Cloudflare challenge", file=sys.stderr)
+        return
+    links = re.findall(r'href="(/boardgameversion/(\d+)/[^"]+)"[^>]*>([^<]*)', html)
+    unique_ids = sorted({vid for _, vid, _ in links})
+    print(f"  {len(links)} raw link(s), {len(unique_ids)} unique version id(s): {unique_ids}", file=sys.stderr)
+    for href, vid, text in links[:15]:
+        if text.strip():
+            print(f"    {href}  ->  {text.strip()!r}", file=sys.stderr)
+
+
 def main() -> int:
     with sync_playwright() as p:
         browser = p.chromium.launch()
@@ -128,6 +154,9 @@ def main() -> int:
         for bgg_id, name, slug in VERSIONS_LANGUAGE_GAMES:
             print(f"\n{'=' * 70}\n{name} (bgg_id={bgg_id}) -- language-filtered versions", file=sys.stderr)
             probe_versions_language_filtered(page, bgg_id, slug, name)
+
+        print(f"\n{'=' * 70}\nGloomhaven: Jaws of the Lion (bgg_id=291457) -- no-slug URL check", file=sys.stderr)
+        probe_no_slug_url(page, 291457, "Gloomhaven: Jaws of the Lion")
 
         browser.close()
     return 0
