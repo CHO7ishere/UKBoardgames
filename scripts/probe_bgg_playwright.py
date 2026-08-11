@@ -81,18 +81,21 @@ def probe_versions(page, url: str) -> None:
 
 
 def probe_versions_language_filtered(page, bgg_id: int, slug: str, name: str) -> None:
+    # networkidle times out (BGG never goes fully idle -- confirmed live, 45s timeout hit on
+    # every attempt, presumably persistent analytics/background requests). domcontentloaded + a
+    # fixed settle wait is what actually worked in every earlier probe round.
     unfiltered_url = f"https://boardgamegeek.com/boardgame/{bgg_id}/{slug}/versions"
     filtered_url = f"{unfiltered_url}?language={FRENCH_LANGUAGE_ID}"
 
     print(f"\n-- unfiltered versions: {unfiltered_url} --", file=sys.stderr)
-    page.goto(unfiltered_url, wait_until="networkidle", timeout=45000)
-    page.wait_for_timeout(3000)
+    page.goto(unfiltered_url, wait_until="domcontentloaded", timeout=45000)
+    page.wait_for_timeout(6000)
     unfiltered_html = page.content()
     print(f"  html length: {len(unfiltered_html)}", file=sys.stderr)
 
     print(f"\n-- FRENCH-filtered versions: {filtered_url} --", file=sys.stderr)
-    resp = page.goto(filtered_url, wait_until="networkidle", timeout=45000)
-    page.wait_for_timeout(3000)
+    resp = page.goto(filtered_url, wait_until="domcontentloaded", timeout=45000)
+    page.wait_for_timeout(6000)
     filtered_html = page.content()
     print(f"  navigation status: {resp.status if resp else 'None'}", file=sys.stderr)
     print(f"  html length: {len(filtered_html)}", file=sys.stderr)
