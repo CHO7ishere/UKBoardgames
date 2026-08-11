@@ -222,6 +222,12 @@ def test_render_html_produces_self_contained_page_with_both_games():
     # "Not interested" hide button + handle are baked into every scored row.
     assert html.count('class="hide-btn"') == 2
     assert 'data-handle="unavailable-game"' in html
+    # Mobile card layout (thead hidden, td stacked) reads each cell's own data-label -- a
+    # regression here would silently drop the label prefix on narrow screens.
+    assert 'data-label="Score"' in html
+    assert 'data-label="Advantage"' in html
+    assert 'data-label="UK price"' in html
+    assert 'id="games-sort-select"' in html
     assert "Totally Obscure Game" in html
     assert "Near Miss Game Deluxe" in html
     assert "Near Miss Game 2 (92% similar)" in html

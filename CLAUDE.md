@@ -413,6 +413,61 @@ be able to manually mark games as not interested and have them filtered out by d
   new: `prepare_games` excluded-handle marking x2, a baked-`data-handle`/hide-button assertion on
   the self-contained-page test, `load_excluded_handles` x2, plus a `--excluded`-flag script test).
 
+## Mobile layout (2026-08-11)
+
+User: *"Can you optimize the display for mobile phone (iPhone 16 if that helps)?"* Verified before
+and after with Playwright's built-in `iPhone 16` device profile (393×852 CSS px), not just by
+eyeballing the CSS — the pre-existing page technically "worked" on mobile (viewport meta tag was
+already there, `.table-wrap { overflow-x: auto }` meant no page-level horizontal scroll) but the
+real problem was invisible from a desktop-only check: the 10-column table's `min-width: 1100px`
+meant only Score/Game/Advantage were ever on-screen by default — Quality, price, Match, Flags,
+and critically the row's own links *and* its new "Not interested" button were all off-screen,
+reachable only by scrolling the table horizontally in isolation from the row's title.
+
+- **Table → stacked cards below a 700px breakpoint**, `templates/report.html.jinja2`: `thead`
+  hidden, each `tr` becomes a bordered card (`display: block`), each `td` a labeled line via
+  `content: attr(data-label)` in `::before` — added a `data-label` attribute to every `<td>` that
+  needs one (Score, Advantage, Quality, UK price, FR price, Discount, Match, Flags; the game
+  title and the links row don't need a label, they're visually self-evident). The composite
+  score is pulled out via `position: absolute` into a corner badge on the card rather than yet
+  another labeled line, since it's the thing a user scans first. No Jinja reordering needed —
+  the DOM order is unchanged, only mobile CSS display roles differ, so the desktop table markup/
+  behavior is provably untouched (confirmed via a 1400px-viewport Playwright check after the
+  change: `thead` still visible, table still a real `<table>`).
+- **Sort-by `<select>`, CSS-hidden above 700px**: clicking a column header to sort doesn't exist
+  once `thead` is hidden, so a dropdown (`#games-sort-select` / `#unmatched-sort-select`)
+  encodes `key|type|dir` per option and reuses the exact same `sortRows()`/header-highlighting
+  logic as desktop (refactored the shared bit into `applySortAndMarkHeader()` so there's one
+  code path, not two). Each table's dropdown only lists its own genuinely useful columns (not
+  all 10) — full column-by-column sorting isn't essential on a phone, a handful of the ones
+  someone would actually reach for while standing in a shop is enough. Default option matches
+  each table's existing default sort exactly, so switching to mobile width never silently
+  reorders anything.
+- **Fixed a real pre-existing gap found while doing this, not a new regression**: `#unmatched-filter`
+  (the second table's title-search box) had no CSS at all — only `#filter` (the main table's) was
+  ever styled, so it rendered as an unstyled native input on every screen size, not just mobile.
+  Both now share a `.filter-input` class.
+- **iOS zoom-on-focus avoided**: both filter inputs' font-size was `0.95rem` (~15.2px); Safari on
+  iOS auto-zooms the page on focusing any input under 16px. Bumped to `1rem` globally (not just
+  in the mobile media query — no reason for it to differ by breakpoint).
+- **Touch targets sized up for the elements people actually tap repeatedly on a phone**: the
+  "Not interested" button measured 92.7×20.8px pre-fix (well under Apple's 44pt HIG guidance) —
+  confirmed via a live Playwright `bounding_box()` read against the real rendered page, not a
+  visual guess. Bumped its mobile padding/font-size to ~115×33px, plus a similar bump for the
+  category filter chips and the export/clear buttons. The native checkbox for "Show hidden" stays
+  small (13×13px) by design — it's wrapped in a `<label>` whose full text is also clickable
+  (confirmed its real hit area is 154×31px), so the visible checkbox size doesn't reflect the
+  actual tap target.
+- **Verified live end-to-end on the real 69-game report**, not just unit tests: at the iPhone 16
+  viewport — no page-level horizontal scroll (`scrollWidth === clientWidth === 393`), cards render
+  with all fields reachable without scrolling, the sort dropdown re-orders rows exactly like the
+  desktop header click would, the title filter and coop/party category chips both still work, and
+  the "Not interested" flow (tap to hide, `localStorage` persists across a reload, "Show hidden"
+  reveals it dimmed, export downloads the right JSON) all still work unchanged on the new layout.
+  Re-checked the desktop view at 1400px afterward to confirm zero visual/behavioral difference
+  there. 227 tests pass (2 new: `data-label`/`games-sort-select` presence asserted on the
+  self-contained-page test, guarding the mobile card layout against a silent regression).
+
 ## Post-v1 fixes from real user spot-checks (2026-08-10)
 
 - **Genre bonus was 0 for every game — real bug, not just missing data.** The v1 gap note above

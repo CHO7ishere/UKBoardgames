@@ -36,11 +36,11 @@
     margin-bottom: 1rem;
     flex-wrap: wrap;
   }
-  #filter {
+  .filter-input {
     padding: 0.5rem 0.75rem;
     border: 1px solid var(--border);
     border-radius: 6px;
-    font-size: 0.95rem;
+    font-size: 1rem;
     min-width: 240px;
     background: var(--panel);
     color: var(--text);
@@ -170,6 +170,77 @@
   }
   #unmatched-section summary:hover { color: var(--link); }
   #unmatched-section .subtitle { margin-top: 0.25rem; }
+
+  .mobile-sort-wrap { display: none; }
+
+  @media (max-width: 700px) {
+    body { padding: 1.25rem 1rem 3rem; }
+    h1 { font-size: 1.35rem; }
+    .subtitle { font-size: 0.85rem; }
+    .meta { font-size: 0.78rem; }
+    .controls { gap: 0.6rem; }
+    .filter-input { min-width: 0; width: 100%; }
+    .hide-toggle { padding: 0.4rem 0; }
+    #export-hidden-btn, #clear-hidden-btn { padding: 0.6rem 0.9rem; font-size: 0.88rem; }
+    .category-chip { padding: 0.45rem 0.75rem; font-size: 0.85rem; }
+
+    /* A tap-friendly "Sort by" dropdown replaces clicking column headers, which don't exist
+       in the card layout below. */
+    .mobile-sort-wrap { display: block; margin-bottom: 0.85rem; }
+    .mobile-sort-wrap label { display: block; font-size: 0.8rem; color: var(--text-dim); }
+    .mobile-sort-select {
+      display: block;
+      width: 100%;
+      margin-top: 0.3rem;
+      padding: 0.55rem 0.7rem;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--panel);
+      color: var(--text);
+      font-size: 1rem;
+    }
+
+    /* Table -> stacked cards: a 10-column table has no readable layout on a phone screen, and
+       the previous horizontal-scroll fallback hid the advantage badge/price/links (including
+       the "Not interested" button) off-screen by default. */
+    .table-wrap { overflow-x: visible; border: none; border-radius: 0; background: none; }
+    table { min-width: 0; width: 100%; }
+    thead { display: none; }
+    tbody tr {
+      display: block;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-left-width: 4px;
+      border-radius: 10px;
+      padding: 0.85rem 0.9rem;
+      margin-bottom: 0.75rem;
+      position: relative;
+    }
+    tbody td {
+      display: block;
+      padding: 0.3rem 0;
+      border-bottom: none;
+      font-size: 0.9rem;
+    }
+    tbody td[data-label]::before {
+      content: attr(data-label);
+      display: block;
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--text-dim);
+    }
+    td.score {
+      position: absolute;
+      top: 0.85rem;
+      right: 0.9rem;
+      font-size: 1.1rem;
+    }
+    td.game-cell { padding-right: 3.5rem; }
+    td.links { display: flex; flex-wrap: wrap; align-items: center; gap: 0.7rem 0.9rem; padding-top: 0.5rem; }
+    td.links a { font-size: 0.9rem; }
+    td.links .hide-btn { margin-top: 0; margin-left: auto; padding: 0.5rem 0.9rem; font-size: 0.85rem; }
+  }
 </style>
 </head>
 <body>
@@ -182,11 +253,23 @@
   </p>
 
   <div class="controls">
-    <input id="filter" type="search" placeholder="Filter by title…" autocomplete="off">
+    <input id="filter" class="filter-input" type="search" placeholder="Filter by title…" autocomplete="off">
     <span id="result-count">{{ games | length }} games matched your criteria</span>
     <label class="hide-toggle"><input type="checkbox" id="show-hidden"> Show hidden (<span id="hidden-count">0</span>)</label>
     <button type="button" id="export-hidden-btn">Export hidden list</button>
     <button type="button" id="clear-hidden-btn">Clear hidden</button>
+  </div>
+  <div class="mobile-sort-wrap">
+    <label>Sort by
+      <select id="games-sort-select" class="mobile-sort-select">
+        <option value="composite_score|num|-1">Score (high → low)</option>
+        <option value="composite_score|num|1">Score (low → high)</option>
+        <option value="zatu_title|str|1">Game title (A → Z)</option>
+        <option value="quality_shrunk|num|-1">Quality (high → low)</option>
+        <option value="zatu_price_gbp|num|1">UK price (low → high)</option>
+        <option value="discount_pct|num|-1">Discount (high → low)</option>
+      </select>
+    </label>
   </div>
   <p class="meta" id="hide-help">
     Click "Not interested" on a row to hide it (saved in this browser, survives future site rebuilds automatically).
@@ -237,21 +320,21 @@
             data-is-coop="{{ '1' if game.zatu_is_coop else '0' }}"
             data-is-party="{{ '1' if game.zatu_is_party else '0' }}"
             data-category-tags="{{ game.category_tags | join('|') | lower }}">
-          <td class="score num">{{ "%.1f" | format(game.composite_score) }}</td>
-          <td>
+          <td class="score num" data-label="Score">{{ "%.1f" | format(game.composite_score) }}</td>
+          <td class="game-cell">
             <div class="game-title">{{ game.zatu_title }}{% if game.bgg_year %} <span class="num">({{ game.bgg_year }})</span>{% endif %}</div>
             <div class="why">{{ game.why }}</div>
           </td>
-          <td><span class="advantage-badge">{{ game.advantage_verdict }}</span></td>
-          <td>
+          <td data-label="Advantage"><span class="advantage-badge">{{ game.advantage_verdict }}</span></td>
+          <td data-label="Quality">
             {{ game.quality_label }}<br>
             <span class="num">{{ "%.2f" | format(game.quality_shrunk) }} shrunk · {{ "%.2f" | format(game.bgg_average) }} raw · {{ "{:,}".format(game.bgg_usersrated) }} votes</span>
           </td>
-          <td class="num">{% if game.zatu_price_gbp is not none %}£{{ "%.2f" | format(game.zatu_price_gbp) }}{% else %}—{% endif %}</td>
-          <td class="num">{% if game.philibert_price_eur is not none %}€{{ "%.2f" | format(game.philibert_price_eur) }}{% else %}—{% endif %}</td>
-          <td class="num">{% if game.discount_pct is not none %}{{ (game.discount_pct * 100) | round(0) | int }}%{% else %}—{% endif %}</td>
-          <td>{{ game.match_confidence }}</td>
-          <td>
+          <td class="num" data-label="UK price">{% if game.zatu_price_gbp is not none %}£{{ "%.2f" | format(game.zatu_price_gbp) }}{% else %}—{% endif %}</td>
+          <td class="num" data-label="FR price">{% if game.philibert_price_eur is not none %}€{{ "%.2f" | format(game.philibert_price_eur) }}{% else %}—{% endif %}</td>
+          <td class="num" data-label="Discount">{% if game.discount_pct is not none %}{{ (game.discount_pct * 100) | round(0) | int }}%{% else %}—{% endif %}</td>
+          <td data-label="Match">{{ game.match_confidence }}</td>
+          <td data-label="Flags">
             {% for flag in game.flags %}<span class="flag-badge">{{ flag }}</span>{% endfor %}
           </td>
           <td class="links">
@@ -276,8 +359,17 @@
     </p>
 
     <div class="controls">
-      <input id="unmatched-filter" type="search" placeholder="Filter by title…" autocomplete="off">
+      <input id="unmatched-filter" class="filter-input" type="search" placeholder="Filter by title…" autocomplete="off">
       <span id="unmatched-result-count">{{ unmatched_games | length }} games matched your criteria</span>
+    </div>
+    <div class="mobile-sort-wrap">
+      <label>Sort by
+        <select id="unmatched-sort-select" class="mobile-sort-select">
+          <option value="match_score|num|-1">Closest BGG guess (high → low)</option>
+          <option value="zatu_title|str|1">Game title (A → Z)</option>
+          <option value="zatu_price_gbp|num|1">UK price (low → high)</option>
+        </select>
+      </label>
     </div>
 
     <div class="category-filters" id="unmatched-category-filters">
@@ -313,10 +405,10 @@
               data-is-party="{{ '1' if game.zatu_is_party else '0' }}"
               data-category-tags="{{ game.category_tags | join('|') | lower }}">
             <td class="game-title">{{ game.zatu_title }}</td>
-            <td class="num">{% if game.zatu_price_gbp is not none %}£{{ "%.2f" | format(game.zatu_price_gbp) }}{% else %}—{% endif %}</td>
-            <td>{{ 'In stock' if game.zatu_in_stock else 'Out of stock' }}</td>
-            <td>{{ game.match_category_label }}</td>
-            <td>{{ game.closest_bgg_guess or '—' }}</td>
+            <td class="num" data-label="UK price">{% if game.zatu_price_gbp is not none %}£{{ "%.2f" | format(game.zatu_price_gbp) }}{% else %}—{% endif %}</td>
+            <td data-label="Stock">{{ 'In stock' if game.zatu_in_stock else 'Out of stock' }}</td>
+            <td data-label="Why unmatched">{{ game.match_category_label }}</td>
+            <td data-label="Closest BGG guess">{{ game.closest_bgg_guess or '—' }}</td>
             <td class="links">
               <a href="{{ game.zatu_url }}" target="_blank" rel="noopener">Zatu</a>
               <a class="search-link" href="{{ game.bgg_search_url }}" target="_blank" rel="noopener">BGG (search)</a>
@@ -440,19 +532,36 @@
       rows.forEach(function (row) { tbody.appendChild(row); });
     }
 
+    function applySortAndMarkHeader(key, type, dir) {
+      currentSort = { key: key, dir: dir };
+      headers.forEach(function (h) { h.classList.remove('sorted'); h.removeAttribute('data-arrow'); });
+      var th = table.querySelector('th[data-key="' + key + '"]');
+      if (th) {
+        th.classList.add('sorted');
+        th.setAttribute('data-arrow', dir === 1 ? '▲' : '▼');
+      }
+      sortRows(key, type, dir);
+    }
+
     headers.forEach(function (th) {
       var key = th.dataset.key;
       var type = th.dataset.type;
       if (type === 'none') return;
       th.addEventListener('click', function () {
         var dir = (currentSort.key === key && currentSort.dir === -1) ? 1 : -1;
-        currentSort = { key: key, dir: dir };
-        headers.forEach(function (h) { h.classList.remove('sorted'); h.removeAttribute('data-arrow'); });
-        th.classList.add('sorted');
-        th.setAttribute('data-arrow', dir === 1 ? '▲' : '▼');
-        sortRows(key, type, dir);
+        applySortAndMarkHeader(key, type, dir);
       });
     });
+
+    // Column headers aren't clickable in the mobile card layout (no header row) -- this
+    // dropdown, CSS-hidden above 700px, is the mobile equivalent.
+    var sortSelect = document.getElementById(opts.sortSelectId);
+    if (sortSelect) {
+      sortSelect.addEventListener('change', function () {
+        var parts = sortSelect.value.split('|');
+        applySortAndMarkHeader(parts[0], parts[1], parseInt(parts[2], 10));
+      });
+    }
 
     // Initial sort, per table.
     sortRows(opts.defaultSortKey, opts.defaultSortType, opts.defaultSortDir);
@@ -531,6 +640,7 @@
     hiddenCountId: 'hidden-count',
     exportButtonId: 'export-hidden-btn',
     clearButtonId: 'clear-hidden-btn',
+    sortSelectId: 'games-sort-select',
   });
 
   setupTable({
@@ -545,6 +655,7 @@
     defaultSortType: 'num',
     defaultSortDir: -1,
     resultSuffix: ' games matched your criteria',
+    sortSelectId: 'unmatched-sort-select',
   });
 })();
 </script>
