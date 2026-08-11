@@ -1,5 +1,4 @@
 zatu_handle,zatu_title,reason,bgg_id,bgg_name,score
-carcassonne-2015-new-edition,Carcassonne,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
 muffin-time-2021-edition,Muffin Time - (Inc. Both Expansions),LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,59.64912280701755
 bananagrams,Bananagrams,"QUALITY_GATE: shrunk=6.43, usersrated=13728",27225,Bananagrams,100.0
 cockroach-poker-english-edition,Cockroach Poker English Edition,"QUALITY_GATE: shrunk=6.80, usersrated=16668",11971,Cockroach Poker,100.0
@@ -21,7 +20,6 @@ sushi-go,Sushi Go,"QUALITY_GATE: shrunk=6.98, usersrated=52888",133473,Sushi Go!
 vantage,Vantage Board Game,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
 compile-card-game-main-1-edition,Compile Card Game: Main 1 Edition,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,80.0
 heat,Heat,"QUALITY_GATE: shrunk=6.29, usersrated=284",157815,Heat,100.0
-everdell,Everdell,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
 forbidden-island,Forbidden Island,"QUALITY_GATE: shrunk=6.75, usersrated=54744",65244,Forbidden Island,100.0
 dobble,Dobble,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this title as a prefix,,,83.33333333333334
 bandido,Bandido,"QUALITY_GATE: shrunk=6.40, usersrated=7681",191925,Bandido,100.0
@@ -78,7 +76,7 @@ the-drowned-city-campaign-expansion-arkham-horror-the-card-game,The Drowned City
 marvel-champions-age-of-apocalypse-exp,Marvel Champions: Age of Apocalypse Exp,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,67.53246753246754
 hot-streak,Hot Streak,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
 extra-salt-sea-salt-and-paper-expansion,Extra Salt: Sea Salt and Paper expansion,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,74.28571428571429
-colt-express,Colt Express,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
+colt-express,Colt Express,"QUALITY_GATE: shrunk=7.10, usersrated=35685",158899,Colt Express,100.0
 obsession-board-game-2nd-edition,Obsession Board Game: 2nd Edition,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
 the-castles-of-burgundy-new-edition,The Castles Of Burgundy - New Edition,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,81.81818181818181
 dro-polter,Dro Polter,"QUALITY_GATE: shrunk=7.05, usersrated=3253",405537,DroPolter,94.73684210526316
@@ -89,7 +87,7 @@ flip-7-with-a-vengeance,Flip 7 with a Vengeance,"QUALITY_GATE: shrunk=7.15, user
 roll-player-cartographers-expansion,Cartographers: A Roll Player Tale,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,72.0
 extra-pepper-sea-salt-and-paper-expansion,Extra Pepper: Sea Salt and Paper expansion,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,76.63551401869158
 forest-shuffle-alpine,Forest Shuffle: Alpine,"LOW_CONFIDENCE_MATCH: exact match is a BGG expansion/non-base entry, out of scope -- refusing to fall back to a fuzzy match against an unrelated base game",,,100.0
-exploding-kittens,Exploding Kittens,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
+exploding-kittens,Exploding Kittens,"QUALITY_GATE: shrunk=6.07, usersrated=42190",172225,Exploding Kittens,100.0
 scythe-invaders-from-afar,Scythe: Invaders From Afar,"LOW_CONFIDENCE_MATCH: exact match is a BGG expansion/non-base entry, out of scope -- refusing to fall back to a fuzzy match against an unrelated base game",,,100.0
 happy-trails-horror-final-girl-exp,Happy Trails Horror: Final Girl Exp.,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,57.14285714285714
 qwirkle-travel,Qwirkle Travel,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,76.92307692307692
@@ -120,9 +118,8 @@ odins-ravens,Odin's Ravens,"QUALITY_GATE: shrunk=6.64, usersrated=3968",4396,Odi
 heat-pedal-to-the-metal-expansion-heavy-rain,Heat: Pedal to the Metal Expansion - Heavy Rain,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,64.40677966101696
 scythe-wind-gambit,Scythe: The Wind Gambit,"LOW_CONFIDENCE_MATCH: exact match is a BGG expansion/non-base entry, out of scope -- refusing to fall back to a fuzzy match against an unrelated base game",,,100.0
 root-the-underworld-expansion,Root: The Underworld Expansion,"LOW_CONFIDENCE_MATCH: exact match is a BGG expansion/non-base entry, out of scope -- refusing to fall back to a fuzzy match against an unrelated base game",,,100.0
-carcassonne-big-box,Carcassonne Big Box,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
 mistborn-the-deck-building-game,Mistborn: The Deck Building Game,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,83.63636363636364
-the-fox-in-the-forest,The Fox in the Forest,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
+the-fox-in-the-forest,The Fox in the Forest,"QUALITY_GATE: shrunk=7.05, usersrated=18517",221965,The Fox in the Forest,100.0
 streaking-kittens-exploding-kittens-exp,Streaking Kittens: Exploding Kittens Expansion,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,67.53246753246754
 azul-duel,Azul Duel,"QUALITY_GATE: shrunk=6.97, usersrated=3110",431038,Azul Duel,100.0
 fog-of-love,Fog of Love,"QUALITY_GATE: shrunk=6.59, usersrated=8734",175324,Fog of Love,100.0
@@ -158,14 +155,13 @@ everdell-bellfaire-expansion,Everdell: Bellfaire Expansion,LOW_CONFIDENCE_MATCH:
 scrawl-green-box-edition,Scrawl - Green Box Edition,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,72.0
 star-realms,Star Realms,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
 cosmic-encounter,Cosmic Encounter,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
-5-minute-dungeon,5 Minute Dungeon,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
+5-minute-dungeon,5 Minute Dungeon,"QUALITY_GATE: shrunk=6.89, usersrated=11874",207830,5-Minute Dungeon,100.0
 dune-imperium-rise-of-ix-expansion,Dune: Imperium - Rise of Ix Expansion,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,68.57142857142857
 the-quacks-of-quedlinburg-the-alchemists-expansion,The Quacks of Quedlinburg: The Alchemists Expansion,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,73.23943661971832
 sleeping-queens,Sleeping Queens,"QUALITY_GATE: shrunk=6.47, usersrated=5480",17053,Sleeping Queens,100.0
 alice-is-missing,Alice is Missing,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,75.86206896551724
 arcs-leaders-lore-pack,Arcs: Leaders & Lore Pack,"LOW_CONFIDENCE_MATCH: exact match is a BGG expansion/non-base entry, out of scope -- refusing to fall back to a fuzzy match against an unrelated base game",,,100.0
 unlock-2,Unlock 2!,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,75.0
-colt-express-big-box,Colt Express: Big Box,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
 space-base,Space Base,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
 marvel-champions-the-green-goblin-scenario-pack,Marvel Champions: The Green Goblin Scenario Pack,"LOW_CONFIDENCE_MATCH: exact match is a BGG expansion/non-base entry, out of scope -- refusing to fall back to a fuzzy match against an unrelated base game",,,100.0
 zatu-six-sided-dice-d6,Zatu Six-Sided Dice (d6),LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,60.60606060606061
@@ -197,7 +193,7 @@ fluxx-5-0,Fluxx 5.0,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too clo
 bristol-1350,Bristol 1350,"QUALITY_GATE: shrunk=6.87, usersrated=2688",308989,Bristol 1350,100.0
 bandida,Bandida,"QUALITY_GATE: shrunk=6.45, usersrated=1837",299571,Bandida,100.0
 marvel-champions-black-widow-hero-pack,Marvel Champions: Black Widow Hero Pack,"LOW_CONFIDENCE_MATCH: exact match is a BGG expansion/non-base entry, out of scope -- refusing to fall back to a fuzzy match against an unrelated base game",,,100.0
-richard-osmans-house-of-games,Richard Osman's House Of Games,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
+richard-osmans-house-of-games,Richard Osman's House Of Games,"QUALITY_GATE: shrunk=6.14, usersrated=21",366246,Richard Osman's House of Games,100.0
 unlock-star-wars-escape-game,Unlock! Star Wars Escape Game,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,85.71428571428572
 7-wonders-2nd-edition-cities-expansion,7 Wonders 2nd Edition: Cities Expansion,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,68.0
 horizons-of-spirit-island-standalone,Horizons of Spirit Island (Standalone),LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,81.9672131147541
@@ -214,9 +210,7 @@ poetry-for-neanderthals,Poetry for Neanderthals,"QUALITY_GATE: shrunk=6.63, user
 grand-tour-flamme-rouge-expansion,Grand Tour: Flamme Rouge Expansion,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,63.1578947368421
 angel-hero-pack-marvel-champions,Angel Hero Pack: Marvel Champions,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,66.66666666666667
 exit-the-enchanted-forest,EXIT: The Enchanted Forest,"QUALITY_GATE: shrunk=6.91, usersrated=1721",295944,EXIT: The Game – The Enchanted Forest,100.0
-tiny-epic-galaxies,Tiny Epic Galaxies,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
 ticket-to-ride-united-kingdom-pennsylvania,Ticket to Ride United Kingdom & Pennsylvania,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,56.81818181818181
-nusfjord-big-box,Nusfjord Big Box,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
 dixit-odyssey-english-only,Dixit Odyssey (English Only),LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,83.87096774193549
 things-in-rings,Things in Rings,"QUALITY_GATE: shrunk=7.06, usersrated=3831",408547,Things in Rings,100.0
 bang-the-dice-game,Bang! The Dice Game,"QUALITY_GATE: shrunk=6.87, usersrated=26592",143741,BANG! The Dice Game,100.0
@@ -226,7 +220,6 @@ luna-capital,LUNA Capital,"QUALITY_GATE: shrunk=7.04, usersrated=2068",323613,LU
 p-for-pizza,P For Pizza,"QUALITY_GATE: shrunk=6.32, usersrated=636",311330,P for Pizza,100.0
 coffee-rush-piece-of-cake-expansion,Coffee Rush: Piece of Cake Expansion,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,62.295081967213115
 coup-2nd-edition-reformation-expansion,Coup 2nd Edition: Reformation Expansion,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,69.76744186046511
-cat-in-the-box,Cat in the Box: Deluxe Edition,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
 what-next-the-action-adventure-board-game,What Next - The Action Adventure Board Game,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,71.42857142857143
 citadels-revised-edition,Citadels Revised Edition,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,75.0
 the-bloody-inn-the-carnies-expansion,The Bloody Inn: The Carnies Expansion,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,66.66666666666667
@@ -239,10 +232,8 @@ flamme-rouge-peloton-expansion-mlv,Flamme Rouge: Peloton Expansion (MLV),LOW_CON
 cryptid,Cryptid,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
 machi-koro-2,Machi Koro 2,"QUALITY_GATE: shrunk=7.06, usersrated=2733",340364,Machi Koro 2,100.0
 seaside,Seaside,"QUALITY_GATE: shrunk=7.06, usersrated=1640",406660,Seaside,100.0
-tiny-epic-dinosaurs,Tiny Epic Dinosaurs,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
 this-is-gonna-get-messy,This is Gonna Get Messy,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,65.0
 tapestry,Tapestry,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
-critter-kitchen,Critter Kitchen,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
 a-feast-for-odin-the-norwegians,A Feast for Odin: The Norwegians,"LOW_CONFIDENCE_MATCH: exact match is a BGG expansion/non-base entry, out of scope -- refusing to fall back to a fuzzy match against an unrelated base game",,,100.0
 stomp-the-plank,Stomp the Plank,"QUALITY_GATE: shrunk=6.87, usersrated=1029",367771,Stomp the Plank,100.0
 secrets-lies-mysterium-expansion-2,Secrets & Lies: Mysterium Expansion 2,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,66.66666666666667
@@ -254,18 +245,14 @@ beyond-threshold-mansions-madness,Mansions of Madness 2nd Edition: Beyond the Th
 gloom-card-game-2nd-edition,Gloom! Card Game 2nd Edition,"QUALITY_GATE: shrunk=6.33, usersrated=16561",12692,Gloom,100.0
 twilight-imperium-4th-edition,Twilight Imperium 4th Edition,"QUALITY_GATE: shrunk=6.57, usersrated=728",24,Twilight Imperium,100.0
 the-fox-in-the-forest-duet,The Fox in the Forest Duet,"QUALITY_GATE: shrunk=6.95, usersrated=4446",288169,The Fox in the Forest Duet,100.0
-modern-art,Modern Art,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
 obsession-board-game-2nd-edition-wessex-expansion,Obsession Board Game: 2nd Edition Wessex Expansion,"LOW_CONFIDENCE_MATCH: exact match is a BGG expansion/non-base entry, out of scope -- refusing to fall back to a fuzzy match against an unrelated base game",,,100.0
-endeavor-deep-sea,Endeavor Deep Sea,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
 cdsk,CDSK,"QUALITY_GATE: shrunk=7.05, usersrated=497",383789,CDSK,100.0
 hidden-signs-mysterium-expansion-1,Hidden Signs: Mysterium Expansion 1,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,61.76470588235294
-el-grande,El Grande,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
 scythe-the-rise-of-fenris,Scythe: The Rise of Fenris,"LOW_CONFIDENCE_MATCH: exact match is a BGG expansion/non-base entry, out of scope -- refusing to fall back to a fuzzy match against an unrelated base game",,,100.0
 bus-complete-edition,BUS: Complete Edition,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,81.81818181818181
 blood-on-the-clocktower-the-carousel,Blood on the Clocktower: The Carousel,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,80.85106382978724
 twilight-imperium-thunders-edge,Twilight Imperium - Thunder's Edge,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,76.19047619047619
 war-of-the-ring-2nd-edition,War of the Ring 2nd Edition,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
-tiny-epic-dungeons,Tiny Epic Dungeons,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
 tally-up,Tally Up!,"QUALITY_GATE: shrunk=6.63, usersrated=267",460372,Tally Up,100.0
 trial-by-trolley,Trial by Trolley,"QUALITY_GATE: shrunk=6.00, usersrated=4625",282171,Trial by Trolley,100.0
 3-chapters,3 Chapters,"QUALITY_GATE: shrunk=7.01, usersrated=2628",423517,3 Chapters,100.0
@@ -291,14 +278,13 @@ exit-the-stormy-flight,EXIT: The Stormy Flight,"QUALITY_GATE: shrunk=6.77, users
 crossroads-forgotten-waters,Crossroads: Forgotten Waters,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,74.4186046511628
 lairs-lost-chambers-clank-catacombs-exp,Lairs & Lost Chambers: Clank!: Catacombs Exp,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,57.53424657534247
 ligretto-red,Ligretto Red,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,80.0
-sub-terra,Sub Terra,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
 tacta,Tacta,"QUALITY_GATE: shrunk=6.67, usersrated=2317",401636,Tacta,100.0
 power-king-tokyo-expansion,Power Up! King of Tokyo Expansion,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,62.06896551724138
 paris-la-cite-de-la-lumiere-city-of-light,Paris - La Cite de la Lumiere (City of Light),LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,79.41176470588236
 trio,Trio,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
 hansa-teutonica-big-box-german-english,Hansa Teutonica Big Box (German/English),LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,81.08108108108108
 earthborne-rangers-stewards-of-the-valley,Earthborne Rangers: Stewards of the Valley,"LOW_CONFIDENCE_MATCH: exact match is a BGG expansion/non-base entry, out of scope -- refusing to fall back to a fuzzy match against an unrelated base game",,,100.0
-nekojima,Nekojima,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
+nekojima,Nekojima,"QUALITY_GATE: shrunk=7.10, usersrated=2307",359029,Nekojima,100.0
 streets-of-arkham-mansions-madness-2nd-ed-exp,Mansions of Madness 2nd Edition: Streets of Arkham Expansion,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,66.66666666666667
 forsaken-lore-eldritch-horror-exp,Forsaken Lore: Eldritch Horror Exp,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,62.96296296296296
 221b-baker-street,221B baker Street,"QUALITY_GATE: shrunk=6.02, usersrated=3372",1275,221B Baker Street: The Master Detective Game,95.0
@@ -315,7 +301,7 @@ marvel-champions-the-card-game-falcon-hero-pack,Marvel Champions: The Card Game 
 memoir-44,Memoir '44 Refresh,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,69.23076923076923
 perudo-tin,Perudo Tin,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,75.0
 love-letter-classic-eco-box,Love Letter Classic Eco Box,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,66.66666666666667
-tiny-epic-zombies,Tiny Epic Zombies,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
+tiny-epic-zombies,Tiny Epic Zombies,"QUALITY_GATE: shrunk=6.94, usersrated=6164",244536,Tiny Epic Zombies,100.0
 dixit-exp-9-anniversary,Dixit: Anniversary Expansion,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,67.9245283018868
 marvel-champions-gambit-hero-pack,Marvel Champions: Gambit Hero Pack,"LOW_CONFIDENCE_MATCH: exact match is a BGG expansion/non-base entry, out of scope -- refusing to fall back to a fuzzy match against an unrelated base game",,,100.0
 dobble-kids,Dobble Kids - 55 Card Version,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,66.66666666666667
@@ -352,22 +338,19 @@ exit-theft-on-the-mississippi,EXIT: Theft on the Mississippi,"QUALITY_GATE: shru
 deep-regrets-lamentable-tentacles-mini-expansion,Deep Regrets Lamentable Tentacles Mini Expansion,"LOW_CONFIDENCE_MATCH: exact match is a BGG expansion/non-base entry, out of scope -- refusing to fall back to a fuzzy match against an unrelated base game",,,100.0
 ticket-ride-map-collection-volume-3-heart-africa,Ticket To Ride Map Collection: Volume 3 - Heart Of Africa,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,58.33333333333333
 cult-death-knight-escape-dark-castle-exp,Adventure Pack 1: Cult of the Death Knight: Escape the Dark Castle Exp.,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,57.77777777777777
-dominion-second-edition-big-box,Dominion (Second Edition) Big Box,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
 carcassonne-sheep-shepherds-exp-9-2025,Carcassonne: Sheep & Shepherds - Exp 9 (2025),LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,68.57142857142857
 final-girl-series-2-game-mat-bundle,Final Girl Series 2: Game Mat Bundle,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,61.76470588235294
 unmatched-bruce-lee-vs-muhammad-ali,Unmatched: Bruce Lee vs Muhammad Ali,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,72.72727272727273
-fields-of-arle,Fields of Arle,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
 oathsworn-into-the-deepwood-standee-base-game,Oathsworn: Into The Deepwood - Standee Base Game,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,71.875
 men-at-work,Men at Work,"QUALITY_GATE: shrunk=7.18, usersrated=3906",261114,Men at Work,100.0
 rummikub-mini-pouch,Rummikub Mini Pouch,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,64.70588235294117
 unstoppable-tyrants-end,Unstoppable: Tyrant's End,"LOW_CONFIDENCE_MATCH: exact match is a BGG expansion/non-base entry, out of scope -- refusing to fall back to a fuzzy match against an unrelated base game",,,100.0
 whirly-derby,Whirly Derby,"QUALITY_GATE: shrunk=6.57, usersrated=298",449137,Whirly Derby,100.0
 fugitive-2nd-edition,Fugitive - 2nd Edition,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
-istanbul-big-box,Istanbul Big Box,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
 were-doomed,We're Doomed,"QUALITY_GATE: shrunk=6.39, usersrated=1294",264806,We're Doomed!,100.0
 kiri-ai-the-duel,Kiri-Ai: The Duel,"QUALITY_GATE: shrunk=6.92, usersrated=736",387769,Kiri-ai: The Duel,100.0
 mr-listers-quiz-shootout,Mr. Lister's Quiz Shootout,"QUALITY_GATE: shrunk=6.31, usersrated=395",182635,Mr Lister's Quiz Shootout,100.0
-munchkin-card-game,Munchkin,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
+munchkin-card-game,Munchkin,"QUALITY_GATE: shrunk=5.88, usersrated=53639",1927,Munchkin,100.0
 terraforming-mars-prelude-2,Terraforming Mars: Prelude 2,"LOW_CONFIDENCE_MATCH: exact match is a BGG expansion/non-base entry, out of scope -- refusing to fall back to a fuzzy match against an unrelated base game",,,100.0
 here-to-slay-base-game,Here To Slay Base Game,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,70.58823529411764
 paleo,Paleo,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
@@ -409,7 +392,7 @@ dino-dump,Dino Dump,"QUALITY_GATE: shrunk=6.14, usersrated=80",265583,Dino Dump,
 exit-the-cursed-labyrinth,Exit: The Cursed Labyrinth,"QUALITY_GATE: shrunk=6.64, usersrated=822",317432,EXIT: The Game – The Cursed Labyrinth,100.0
 herd-mentality-mini,Herd Mentality Mini,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,84.84848484848484
 marvel-x-men-dice-throne-box-1,Marvel X-Men Dice Throne Box 1,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,89.28571428571429
-worms-the-board-game,Worms: The Board Game,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
+worms-the-board-game,Worms: The Board Game,"QUALITY_GATE: shrunk=7.00, usersrated=767",397788,Worms: The Board Game,100.0
 air-land-sea-revised-edition,"Air, Land & Sea: Revised Edition",LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,70.76923076923076
 friday,Friday,"QUALITY_GATE: shrunk=7.11, usersrated=23356",43570,Friday,100.0
 saboteur-20-years-jubilee-edition,Saboteur 20 Years Jubilee Edition,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,63.33333333333333
@@ -426,7 +409,7 @@ tiny-epic-dungeons-stories-expansion,Tiny Epic Dungeons Stories Expansion,LOW_CO
 doppelt-so-clever,Doppelt so clever,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,64.86486486486487
 escape-the-dark-castle-adventure-pack-3-blight-of-the-plague-lord,Escape the Dark Castle: Adventure Pack 3 - Blight of the Plague Lord,"LOW_CONFIDENCE_MATCH: exact match is a BGG expansion/non-base entry, out of scope -- refusing to fall back to a fuzzy match against an unrelated base game",,,100.0
 rummikub-travel,Rummikub Travel,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,75.86206896551724
-rivals-for-catan,Rivals for Catan,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
+rivals-for-catan,Rivals for Catan,"QUALITY_GATE: shrunk=6.93, usersrated=8541",66056,Rivals for Catan,100.0
 the-lost-words-card-game,The Lost Words - Card Game,"QUALITY_GATE: shrunk=5.99, usersrated=75",317847,The Lost Words,100.0
 ticket-to-ride-france-old-west-map-collection,Ticket To Ride France & Old West: Map Collection,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,62.7906976744186
 tortuga-1667,Tortuga 1667,"QUALITY_GATE: shrunk=6.86, usersrated=4217",218530,Tortuga 1667,100.0
@@ -440,12 +423,10 @@ coloretto,Coloretto,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share 
 dragons-of-etchinstone-campaign-bundle,Dragons Of Etchinstone: Campaign Bundle,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,73.33333333333334
 giant-pass-the-pigs,Giant Pass the Pigs,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,78.57142857142857
 rat-a-tat-cat,Rat-A-Tat-Cat,"QUALITY_GATE: shrunk=6.27, usersrated=4367",3837,Rat-a-Tat Cat,100.0
-port-royal-big-box,Port Royal Big Box,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
 bang-4th-edition-card-game,Bang! 4th Edition Card Game,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
 beacon-patrol,Beacon Patrol,"QUALITY_GATE: shrunk=7.04, usersrated=2686",362976,Beacon Patrol,100.0
 final-girl-north-pole-nightmare,Final Girl: North Pole Nightmare,"LOW_CONFIDENCE_MATCH: exact match is a BGG expansion/non-base entry, out of scope -- refusing to fall back to a fuzzy match against an unrelated base game",,,100.0
 wingspan-fan-designed-packs,Wingspan Fan Designed Packs,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,60.46511627906976
-galaxy-trucker-2021,Galaxy Trucker (2021),LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
 bristol-1350-deluxe,Bristol 1350 Deluxe,"QUALITY_GATE: shrunk=6.87, usersrated=2688",308989,Bristol 1350,100.0
 marvel-champions-the-galaxys-most-wanted-expansion,Marvel Champions: The Galaxy's Most Wanted Expansion,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,62.745098039215684
 river-valley-glassworks-river-glass-and-other-sundries,River Valley Glassworks: River Glass and Other Sundries,"LOW_CONFIDENCE_MATCH: exact match is a BGG expansion/non-base entry, out of scope -- refusing to fall back to a fuzzy match against an unrelated base game",,,100.0
@@ -475,12 +456,10 @@ shit-happens,Shit Happens!,"QUALITY_GATE: shrunk=5.33, usersrated=2053",196379,S
 heroes-of-the-borderlands-starter-set-dungeons-dragons,Heroes of the Borderlands Starter Set: Dungeons & Dragons,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,74.4186046511628
 ruins-card-game,Ruins Card Game,"QUALITY_GATE: shrunk=7.05, usersrated=1773",428635,Ruins,100.0
 lux-tenebrae-res-arcana-expansion,Lux & Tenebrae: Res Arcana Expansion,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,60.526315789473685
-creature-caravan,Creature Caravan,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
 dragon-shield-perfect-fit-sealable-clear,Dragon Shield Perfect Fit Sealable- Clear,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,57.14285714285714
 alien-rpg-boxed-starter-set-evolved-edition,Alien RPG - Boxed Starter Set - Evolved Edition,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,66.66666666666667
 exit-the-disappearance-of-sherlock-holmes,EXIT: The Disappearance of Sherlock Holmes,"QUALITY_GATE: shrunk=6.93, usersrated=685",366318,EXIT: The Game – The Disappearance of Sherlock Holmes,100.0
 arkham-horror-the-card-game-winifred-habbamock-investigator-starter-pack,Arkham Horror: The Card Game - Winifred Habbamock Investigator Starter Pack,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,56.56565656565656
-food-chain-magnate,Food Chain Magnate,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
 adventure-games-volcanic-island,Adventure Games: Volcanic Island,"QUALITY_GATE: shrunk=5.96, usersrated=781",284082,Adventure Games: The Volcanic Island,100.0
 the-dream-eaters-investigator-expansion-arkham-horror-the-card-game,The Dream-Eaters Investigator Expansion - Arkham Horror: The Card Game,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,60.526315789473685
 collect,Collect!,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
@@ -496,7 +475,7 @@ xia-legend-of-a-drift-system-embers-of-a-forsaken-star-expansion,Xia: Legends Of
 salem-1692-card-game-new-edition,Salem 1692 Card Game: New Edition,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,74.4186046511628
 final-girl-terror-from-above-vignette,Final Girl: Terror From Above (Vignette),LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,61.111111111111114
 nippon-zaibatsu-emperors-edition,Nippon: Zaibatsu Emperor's Edition,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,64.70588235294117
-my-little-scythe,My Little Scythe,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
+my-little-scythe,My Little Scythe,"QUALITY_GATE: shrunk=7.18, usersrated=6415",226320,My Little Scythe,100.0
 mascarade,Mascarade,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
 lords-middle-earth-war-ring,Lords of Middle Earth: War of The Ring,"QUALITY_GATE: shrunk=6.43, usersrated=20",4195,War of the Ring: The Game of Middle Earth,90.0
 destinies-sea-of-sand,Destinies: Sea of Sand,"LOW_CONFIDENCE_MATCH: exact match is a BGG expansion/non-base entry, out of scope -- refusing to fall back to a fuzzy match against an unrelated base game",,,100.0
@@ -514,7 +493,6 @@ harmonies-pulse,Harmonies Pulse,"LOW_CONFIDENCE_MATCH: exact match is a BGG expa
 imhotep-the-duel-2,Imhotep - The Duel,"QUALITY_GATE: shrunk=7.03, usersrated=3529",255674,Imhotep: The Duel,100.0
 werewords-deluxe,Werewords Deluxe,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
 ticket-ride-map-collection-volume-4-nederland,Ticket to Ride Map Collection: Volume 4 - Nederland,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,58.82352941176471
-war-of-the-ring-the-card-game,War of the Ring: The Card Game,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
 exit-the-hunt-through-amsterdam,EXIT: The Hunt Through Amsterdam,"QUALITY_GATE: shrunk=7.16, usersrated=416",376478,EXIT: The Game – The Hunt Through Amsterdam,100.0
 brick-like-this,Brick Like This!,"QUALITY_GATE: shrunk=6.62, usersrated=549",439310,Brick Like This!,100.0
 undaunted-reinforcements,Undaunted: Reinforcements - Revised Edition,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,64.70588235294117
@@ -532,17 +510,16 @@ my-lil-everdell-standard-edition,My Lil' Everdell Standard Edition,LOW_CONFIDENC
 horrified-dungeons-dragons-ravenloft,Horrified: Dungeons & Dragons - Ravenloft,"QUALITY_GATE: shrunk=6.77, usersrated=40",468829,Horrified: Dungeons & Dragons – Ravenloft,100.0
 cat-lady,Cat Lady,"QUALITY_GATE: shrunk=6.97, usersrated=7109",228504,Cat Lady,100.0
 oath-chronicles-of-empire-and-exile,Oath: Chronicles of Empire and Exile,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,62.96296296296296
-pass-the-pigs,Pass the Pigs,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
+pass-the-pigs,Pass the Pigs,"QUALITY_GATE: shrunk=5.52, usersrated=7205",2593,Pass the Pigs,100.0
 happy-little-dinosaurs-base-game,Happy Little Dinosaurs Base Game,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,81.4814814814815
 star-wars-the-mandalorian-adventures,Star Wars The Mandalorian: Adventures,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,81.4814814814815
 quoridor-pac-man,Quoridor Pac-man,"QUALITY_GATE: shrunk=6.43, usersrated=497",411617,Quoridor Pac-Man,100.0
 root-marauder-hirelings-pack-hireling-box,Root: Marauder Hirelings Pack & Hireling Box,"LOW_CONFIDENCE_MATCH: exact match is a BGG expansion/non-base entry, out of scope -- refusing to fall back to a fuzzy match against an unrelated base game",,,100.0
 king-of-tokyo-anubis-monster-pack,King Of Tokyo: Anubis Monster Pack,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,79.3103448275862
-cartographers-heroes,Cartographers Heroes,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
 agemonia,Agemonia (Second Printing),LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,71.11111111111111
 root-board-game-the-homeland-expansion,Root Board Game: The Homeland Expansion,"LOW_CONFIDENCE_MATCH: exact match is a BGG expansion/non-base entry, out of scope -- refusing to fall back to a fuzzy match against an unrelated base game",,,100.0
 maladum-dungeons-of-enveron-starter-set,Maladum Dungeons of Enveron Starter Set,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,81.81818181818181
-hellapagos-big-box,Hellapagos: Big Box,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
+hellapagos-big-box,Hellapagos: Big Box,"QUALITY_GATE: shrunk=6.95, usersrated=419",347802,Hellapagos: Big Box,100.0
 marvel-united-base-game,Marvel United Base Game,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,81.63265306122449
 exit-the-magical-academy,EXIT: The Magical Academy,"QUALITY_GATE: shrunk=6.61, usersrated=359",376477,EXIT: The Game – The Magical Academy,100.0
 waterfall-park,Waterfall Park,"QUALITY_GATE: shrunk=6.99, usersrated=1242",396618,Waterfall Park,100.0
@@ -579,7 +556,6 @@ unlock-short-adventures-9-birmingham,Unlock! Short Adventures 9: Birmingham,LOW_
 ticket-to-ride-amsterdam,Ticket To Ride: Amsterdam,"QUALITY_GATE: shrunk=6.88, usersrated=1956",309113,Ticket to Ride: Amsterdam,100.0
 zombie-dice-horde-edition,Zombie Dice Horde Edition,"QUALITY_GATE: shrunk=6.83, usersrated=960",224035,Zombie Dice Horde Edition,100.0
 lost-ruins-of-arnak-twisted-paths-expansion,Lost Ruins of Arnak: Twisted Paths Expansion,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,61.29032258064516
-oh-my-goods-big-box,Oh My Goods! Big Box,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
 the-brussel-sprout-game,The Brussel Sprout Game,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,72.22222222222221
 legends-of-andor-base-game,Legends of Andor - Base Game,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,76.92307692307692
 agricola-bubulcus-deck,Agricola: Bubulcus Deck,"LOW_CONFIDENCE_MATCH: exact match is a BGG expansion/non-base entry, out of scope -- refusing to fall back to a fuzzy match against an unrelated base game",,,100.0
@@ -684,7 +660,6 @@ fountain-of-youth-the-lost-expedition,Fountain of Youth: The Lost Expedition,LOW
 potion-explosion-2nd-edition,Potion Explosion 2nd Edition,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
 scythe-board-game-realistic-resources,Scythe Board Game: Realistic Resources,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,64.28571428571428
 the-binding-of-isaac-four-souls-requiem-big-boi-box,The Binding of Isaac: Four Souls - Requiem Big Boi Box,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,70.58823529411764
-the-witcher-old-world,The Witcher: Old World,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
 sausage-sizzle,Sausage Sizzle,"QUALITY_GATE: shrunk=6.54, usersrated=1212",118215,Sausage Sizzle!,100.0
 spyfall-2,Spyfall 2,"QUALITY_GATE: shrunk=6.79, usersrated=3552",193308,Spyfall 2,100.0
 cthulhu-wars-windwalker-faction-expansion-2,Cthulhu Wars: Windwalker Faction Expansion,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,63.76811594202898
@@ -720,7 +695,7 @@ catan-c2-96-explorers-pirates-6th-edition,CATAN - Explorers & Pirates 6th Editio
 kittin,Kittin,"QUALITY_GATE: shrunk=6.25, usersrated=632",302477,Kittin,100.0
 oltree-undead-alive,Oltree: Undead & Alive,"LOW_CONFIDENCE_MATCH: exact match is a BGG expansion/non-base entry, out of scope -- refusing to fall back to a fuzzy match against an unrelated base game",,,100.0
 cabanga,Cabanga!,"QUALITY_GATE: shrunk=6.50, usersrated=0",447931,Cabana,92.3076923076923
-tiny-epic-cthulhu,Tiny Epic Cthulhu,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
+tiny-epic-cthulhu,Tiny Epic Cthulhu,"QUALITY_GATE: shrunk=6.86, usersrated=597",404893,Tiny Epic Cthulhu,100.0
 mountain-goats-board-game-expansion-pack,Mountain Goats Board Game: Expansion Pack,"LOW_CONFIDENCE_MATCH: exact match is a BGG expansion/non-base entry, out of scope -- refusing to fall back to a fuzzy match against an unrelated base game",,,100.0
 inside-job,Inside Job,"QUALITY_GATE: shrunk=6.96, usersrated=2361",324914,Inside Job,100.0
 on-the-air-the-networks-expansion,On The Air The Networks Expansion,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,62.5
@@ -775,8 +750,8 @@ next-station-tokyo,Next Station - Tokyo,"QUALITY_GATE: shrunk=7.13, usersrated=2
 forgotten-lands-explorers-of-navoria-expansion,Forgotten Lands: Explorers of Navoria Expansion,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,60.97560975609756
 twisted-cryptids,Twisted Cryptids,"QUALITY_GATE: shrunk=6.63, usersrated=476",429840,Twisted Cryptids,100.0
 carcassonne-castles-bridges-exp-8-2025,Carcassonne: Castles & Bridges - Exp 8 (2025),LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,65.45454545454545
-rivals-for-catan-deluxe,Rivals for Catan: Deluxe,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
-jim-hensons-labyrinth-board-game,Jim Henson's Labyrinth: The Board Game,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
+rivals-for-catan-deluxe,Rivals for Catan: Deluxe,"QUALITY_GATE: shrunk=7.05, usersrated=846",203219,Rivals for Catan: Deluxe,100.0
+jim-hensons-labyrinth-board-game,Jim Henson's Labyrinth: The Board Game,"QUALITY_GATE: shrunk=5.40, usersrated=844",198447,Jim Henson's Labyrinth: The Board Game,100.0
 king-toyko-monster-pack-cthulhu,King of Tokyo: Monster Pack: Cthulhu,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,74.57627118644068
 dice-throne-season-two-box-4-vampire-lord-vs-seraph,Dice Throne Season Two Box 4: Vampire Lord vs. Seraph,LOW_CONFIDENCE_MATCH: digit conflict (likely a different sequel/season/expansion),,,93.47826086956522
 atlantis-rising,Atlantis Rising,"QUALITY_GATE: shrunk=6.48, usersrated=1023",92120,Atlantis Rising,100.0
@@ -826,7 +801,6 @@ king-of-monster-island,King of Monster Island,"QUALITY_GATE: shrunk=7.08, usersr
 cthulhu-death-may-die-godzilla,Cthulhu: Death May Die - Godzilla,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,82.35294117647058
 kerplunk-2,Kerplunk,"QUALITY_GATE: shrunk=4.89, usersrated=1868",3728,Ker Plunk,94.11764705882352
 chronicles-of-crime-noir,Chronicles of Crime: NOIR,"LOW_CONFIDENCE_MATCH: exact match is a BGG expansion/non-base entry, out of scope -- refusing to fall back to a fuzzy match against an unrelated base game",,,100.0
-heroquest,HeroQuest,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
 geekbox-slim,Geekbox: Slim,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,60.86956521739131
 oath-new-foundations-includes-deck-deluxe-components-ii,Oath New Foundations (includes Deck & Deluxe Components II),LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,55.55555555555556
 terraforming-mars-automa,Terraforming Mars: Automa,"LOW_CONFIDENCE_MATCH: exact match is a BGG expansion/non-base entry, out of scope -- refusing to fall back to a fuzzy match against an unrelated base game",,,100.0
@@ -940,7 +914,6 @@ cthulhu-wars-tcho-tcho-faction-expansion-2,Cthulhu Wars: Tcho-Tcho Faction Expan
 star-fluxx,Star Fluxx,"QUALITY_GATE: shrunk=6.30, usersrated=6026",102104,Star Fluxx,100.0
 pirate-fluxx,Pirate Fluxx,"QUALITY_GATE: shrunk=6.21, usersrated=2926",73538,Pirate Fluxx,100.0
 mantis-falls,Mantis Falls,"QUALITY_GATE: shrunk=7.10, usersrated=1853",291847,Mantis Falls,100.0
-tiny-epic-vikings,Tiny Epic Vikings,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
 between-two-castles-essential-edition,Between Two Castles: Essential Edition,"QUALITY_GATE: shrunk=7.10, usersrated=153",437698,Between Two Castles: Essential Edition,100.0
 escape-from-the-lost-temple,Escape from the Lost Temple,"QUALITY_GATE: shrunk=6.62, usersrated=21",444816,Escape from the Lost Temple,100.0
 gang-of-four,Gang of Four,"QUALITY_GATE: shrunk=6.62, usersrated=2543",3085,Gang of Four,100.0
@@ -985,13 +958,13 @@ tba-timeline-twist,Timeline Twist,"QUALITY_GATE: shrunk=6.13, usersrated=562",37
 through-the-desert-board-game-bazaar-expansion,Through The Desert Board Game: Bazaar Expansion,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,64.40677966101696
 de-profundis-abyss,De Profundis: Abyss,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,68.75
 gloomies,Gloomies,"QUALITY_GATE: shrunk=6.98, usersrated=396",433386,Gloomies,100.0
-ichor,Ichor,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
+ichor,Ichor,"QUALITY_GATE: shrunk=7.19, usersrated=760",420915,Ichor,100.0
 final-girl-a-rotten-harvest,Final Girl: A Rotten Harvest,"LOW_CONFIDENCE_MATCH: exact match is a BGG expansion/non-base entry, out of scope -- refusing to fall back to a fuzzy match against an unrelated base game",,,100.0
 limit,Limit,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
 core-space-crew-booster-poseidon,Core Space Crew Booster: Poseidon,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,66.66666666666667
 wooden-classic-chess,Wooden Classic Chess,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,69.56521739130434
 smart-10,Smart 10,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,80.0
-raccoon-tycoon,Raccoon Tycoon,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
+raccoon-tycoon,Raccoon Tycoon,"QUALITY_GATE: shrunk=7.19, usersrated=5769",254386,Raccoon Tycoon,100.0
 catan-dice-game-clamshell,Catan Dice Game - Clamshell Edition,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,65.57377049180329
 jamaica-2nd-edition,Jamaica 2nd Edition,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
 unlock-short-6-the-secrets-of-the-octopus,Unlock! Short 6 - The Secrets of the Octopus,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,85.33333333333333
@@ -1060,7 +1033,6 @@ mr-mrs-pocket-edition,Mr &amp; Mrs Pocket Edition,LOW_CONFIDENCE_MATCH: fuzzy sc
 hollywood-1947-deluxe,Hollywood 1947 Deluxe,"QUALITY_GATE: shrunk=7.07, usersrated=1089",370621,Hollywood 1947,100.0
 murdle-the-game,Murdle The Game,"QUALITY_GATE: shrunk=5.74, usersrated=155",427787,Murdle,100.0
 flower-power-pixies-expansion,Flower Power - Pixies Expansion,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,64.15094339622642
-tiny-epic-game-of-thrones,Tiny Epic: Game of Thrones,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
 takenoko-new-chibis-new-eco-edition,Takenoko New: Chibis - New Eco Edition,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,64.51612903225806
 insider-black,Insider Black,"QUALITY_GATE: shrunk=7.08, usersrated=474",307997,Insider Black,100.0
 rise-and-fall-3d,Rise and Fall 3D,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,89.65517241379311
@@ -1089,7 +1061,7 @@ ticket-to-ride-ghost-train-first-journey,Ticket to Ride - Ghost Train (First Jou
 final-girl-vehicle-pack-1,Final Girl: Vehicle Pack 1,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,58.82352941176471
 mindbug-expansion-beyond-eternity,Mindbug Expansion- Beyond Eternity,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,82.14285714285714
 5211-azul-special-edition,5211: Azul Special Edition,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,73.46938775510203
-exploding-kittens-the-board-game,Exploding Kittens The Board Game,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
+exploding-kittens-the-board-game,Exploding Kittens The Board Game,"QUALITY_GATE: shrunk=5.99, usersrated=276",447244,Exploding Kittens: The Board Game,100.0
 trapwords,Trapwords,"QUALITY_GATE: shrunk=6.98, usersrated=3768",257527,Trapwords,100.0
 cat-chaos-card-game,Cat Chaos Card Game,"QUALITY_GATE: shrunk=5.77, usersrated=142",242289,Cat Chaos Card Game: Celebrity Edition,95.0
 royal-visit,Royal Visit,"QUALITY_GATE: shrunk=6.70, usersrated=3089",22245,Royal Visit,100.0
@@ -1103,7 +1075,7 @@ ashes-ascendancy-starter-set,Ashes Ascendancy Starter Set,LOW_CONFIDENCE_MATCH: 
 the-game-of-pigeon,The Game of Pigeon,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,80.0
 deckscape-escape-from-alcatraz,Deckscape: Escape from Alcatraz,"QUALITY_GATE: shrunk=6.74, usersrated=740",295565,Deckscape: Escape from Alcatraz,100.0
 men-of-iron-infidel-blood-roses,"Men of Iron: Infidel, Blood &amp; Roses Triple Pack",LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,79.27927927927928
-trivial-pursuit,Trivial Pursuit,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
+trivial-pursuit,Trivial Pursuit,"QUALITY_GATE: shrunk=6.50, usersrated=1",472010,Trivial Pursuit,100.0
 selfish-space-edition-game,Selfish Space Edition Game,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,89.36170212765957
 horses-ponies-monopoly,Monopoly: Horses & Ponies,"QUALITY_GATE: shrunk=6.49, usersrated=6",340121,Monopoly: Horses and Ponies,100.0
 whos-in-the-bag,Who's in the Bag,"QUALITY_GATE: shrunk=6.32, usersrated=56",13623,Who's in the Bag,100.0
@@ -1157,7 +1129,7 @@ perspectives-blue-box,Perspectives Blue Box,LOW_CONFIDENCE_MATCH: fuzzy score be
 tiletum-prospect-for-silver,Tiletum: Prospect for Silver,"LOW_CONFIDENCE_MATCH: exact match is a BGG expansion/non-base entry, out of scope -- refusing to fall back to a fuzzy match against an unrelated base game",,,100.0
 in-the-footsteps-of-darwin-correspondence-expansion,In the Footsteps of Darwin: Correspondence Expansion,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,63.76811594202898
 mazescape-ariadne,Mazescape Ariadne,"QUALITY_GATE: shrunk=6.53, usersrated=544",331652,Mazescape: Ariadne,100.0
-dungeon-fighter-2,Dungeon Fighter,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
+dungeon-fighter-2,Dungeon Fighter,"QUALITY_GATE: shrunk=6.78, usersrated=7207",102548,Dungeon Fighter,100.0
 farmyard-heads-and-tails,Farmyard Heads And Tails,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,76.92307692307692
 on-a-scale-of-one-to-t-rex,On A Scale of One to T-Rex,"QUALITY_GATE: shrunk=5.77, usersrated=695",289018,On a Scale of One to T-Rex,100.0
 hero-realms-journeys-hunters,Hero Realms: Journeys - Hunters,"LOW_CONFIDENCE_MATCH: exact match is a BGG expansion/non-base entry, out of scope -- refusing to fall back to a fuzzy match against an unrelated base game",,,100.0
@@ -1189,10 +1161,8 @@ mindbug-expansion-beyond-evolution,Mindbug Expansion- Beyond Evolution,LOW_CONFI
 joyride-duel-next-gen,JOYRIDE DUEL: Next Gen,"QUALITY_GATE: shrunk=7.11, usersrated=154",399318,Joyride Duel: Next Gen,100.0
 ashes-reborn-red-rains-the-flood-of-moon-cove,Ashes Reborn: Red Rains - The Flood of Moon Cove,"LOW_CONFIDENCE_MATCH: exact match is a BGG expansion/non-base entry, out of scope -- refusing to fall back to a fuzzy match against an unrelated base game",,,100.0
 propolis,Propolis,"QUALITY_GATE: shrunk=7.04, usersrated=1404",431994,Propolis,100.0
-march-of-the-ants-evolved-edition,March of the Ants Evolved Edition,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
 axis-allies-ww1-1914,Axis & Allies WW1 1914,LOW_CONFIDENCE_MATCH: digit conflict (likely a different sequel/season/expansion),,,95.83333333333334
 legends-of-andor-journey-to-the-north,Legends of Andor - Journey to the North,"LOW_CONFIDENCE_MATCH: exact match is a BGG expansion/non-base entry, out of scope -- refusing to fall back to a fuzzy match against an unrelated base game",,,100.0
-red-dragon-inn-7-the-tavern-crew,The Red Dragon Inn 7: The Tavern Crew,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
 star-realms-promo-pack-i,Star Realms: Promo Pack I,"LOW_CONFIDENCE_MATCH: exact match is a BGG expansion/non-base entry, out of scope -- refusing to fall back to a fuzzy match against an unrelated base game",,,100.0
 polynesia,Polynesia,"QUALITY_GATE: shrunk=6.69, usersrated=959",301084,Polynesia,100.0
 zombie-fluxx,Zombie Fluxx,"QUALITY_GATE: shrunk=6.00, usersrated=6905",29387,Zombie Fluxx,100.0
@@ -1215,7 +1185,7 @@ mind-games-pagan-content-pack,Mind Games: Pagan Content Pack,LOW_CONFIDENCE_MATC
 ascension-tactics,Ascension: Tactics,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this title as a prefix,,,80.95238095238095
 add-to-playlist,Add to Playlist,"QUALITY_GATE: shrunk=6.68, usersrated=52",446468,Add To Playlist,100.0
 fluxx-creeper-pack,Fluxx Creeper Pack,"LOW_CONFIDENCE_MATCH: exact match is a BGG expansion/non-base entry, out of scope -- refusing to fall back to a fuzzy match against an unrelated base game",,,100.0
-tiny-epic-mechs,Tiny Epic Mechs,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
+tiny-epic-mechs,Tiny Epic Mechs,"QUALITY_GATE: shrunk=6.66, usersrated=2706",257283,Tiny Epic Mechs,100.0
 dragon-shield-matte-sapphire,Dragon Shield Matte - Sapphire,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,63.1578947368421
 imperial-settlers-card-game-empires-of-the-north-roman-banners-expansion,Imperial Settlers Card Game: Empires Of The North: Roman Banners Expansion,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,73.91304347826086
 vampire-the-masquerade-chapters-character-expansion-banu-haqim,Vampire: The Masquerade - CHAPTERS. Character expansion - Banu Haqim,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,63.52941176470588
@@ -1254,7 +1224,7 @@ frosthaven-solo-scenarios,Frosthaven: Solo Scenarios,"LOW_CONFIDENCE_MATCH: exac
 sub-terra-ii-typhaon-wakes,Sub Terra II: Typhaon Wakes,"LOW_CONFIDENCE_MATCH: exact match is a BGG expansion/non-base entry, out of scope -- refusing to fall back to a fuzzy match against an unrelated base game",,,100.0
 robo-rally,Robo Rally,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
 cluedo-vintage-bookshelf-uk-edition,Cluedo Vintage Bookshelf UK Edition,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,62.745098039215684
-rainbow-card-game,Rainbow Card Game,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
+rainbow-card-game,Rainbow Card Game,"QUALITY_GATE: shrunk=6.50, usersrated=0",451317,Rainbow: The Card Game,100.0
 light-speed-arena-glyphon,Light Speed: Arena - Glyphon,"LOW_CONFIDENCE_MATCH: exact match is a BGG expansion/non-base entry, out of scope -- refusing to fall back to a fuzzy match against an unrelated base game",,,100.0
 similo-myths,Similo: Myths,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,66.66666666666667
 warps-edge-anomaly-expansion,Warp's Edge Anomaly Expansion,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,61.53846153846154
@@ -1336,12 +1306,11 @@ the-four-doors,The Four Doors,"QUALITY_GATE: shrunk=6.70, usersrated=218",447687
 comic-backing-boards-current,Comic Backing Boards Current,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,59.57446808510638
 the-deck-of-many-things-alternate-cover-dungeons-dragons,The Deck of Many Things (Alternate Cover): Dungeons & Dragons,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,65.95744680851064
 epic,Epic,"QUALITY_GATE: shrunk=6.40, usersrated=5054",175621,Epic Card Game,100.0
-werewords,Werewords,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
+werewords,Werewords,"QUALITY_GATE: shrunk=7.09, usersrated=6393",219215,Werewords,100.0
 rummy,Rummy,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
 tapeworm,Tapeworm,"QUALITY_GATE: shrunk=6.41, usersrated=575",308416,Tapeworm,100.0
 the-witcher-old-world-metal-coins,The Witcher: Old World - Metal Coins,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,73.91304347826086
 house-of-games-card-game,House of Games Card Game,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,81.4814814814815
-k2-big-box,K2: Big Box,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
 factory-funner,Factory Funner,"QUALITY_GATE: shrunk=7.11, usersrated=2061",183284,Factory Funner,100.0
 smash-up-excellent-movies-dudes,"Smash Up: Excellent Movies, Dudes!","QUALITY_GATE: shrunk=7.16, usersrated=112",379164,"Smash Up: Excellent Movies, Dudes!",100.0
 ashes-reborn-red-rains-the-siege-of-lordswall-phoenixborn-chimera-expansion-decks,Ashes Reborn: Red Rains - The Siege of Lordswall - Phoenixborn & Chimera Expansion Decks,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,54.86725663716814
@@ -1398,7 +1367,7 @@ pagan-fate-of-roanoke-until-proven-guilty-content-pack,Pagan Fate of Roanoke: Un
 labyrinth-smart-choice,Labyrinth [Smart Choice],LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,76.19047619047619
 rivers-of-london-the-roleplaying-game,Rivers Of London: The Roleplaying Game,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,66.66666666666667
 escape-room-the-game-3-pack,Escape Room The Game 3-pack,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,89.47368421052632
-my-first-stone-age,My First Stone Age,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
+my-first-stone-age,My First Stone Age,"QUALITY_GATE: shrunk=6.61, usersrated=3077",191004,My First Stone Age,100.0
 cthulhu-wars-dreamlands-underworld-monster-expansion,Cthulhu Wars: Dreamlands Underworld Monster Expansion,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,57.49999999999999
 karen,Karen,"QUALITY_GATE: shrunk=5.81, usersrated=58",367583,Karen,100.0
 summoner-wars-cloaks,Summoner Wars: Cloaks,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,78.78787878787878
@@ -1415,7 +1384,6 @@ la-fleur,La Fleur,"QUALITY_GATE: shrunk=7.16, usersrated=340",402817,La Fleur,10
 nature-board-game-module-1-flight-module,Nature Board Game: Module 1 Flight Module,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,62.745098039215684
 monopoly-vintage-bookshelf-uk-edition,Monopoly Vintage Bookshelf UK Edition,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,70.76923076923076
 thief-s-market-refresh,Thief's Market (Refresh),LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,77.77777777777779
-lorenzo-il-magnifico,Lorenzo il Magnifico,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
 cockroach-salad-game-multi-lingual-edition,Cockroach Salad Game (Multi Lingual Edition),LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,61.111111111111114
 star-realms-command-deck-the-alliance,Star Realms Command Deck: The Alliance,"LOW_CONFIDENCE_MATCH: exact match is a BGG expansion/non-base entry, out of scope -- refusing to fall back to a fuzzy match against an unrelated base game",,,100.0
 avocado-smash-game,Avocado Smash Game,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,83.87096774193549
@@ -1423,7 +1391,6 @@ dont-say-it,Don't Say It,"QUALITY_GATE: shrunk=6.05, usersrated=64",38665,Don't 
 runequest-starter-set,RuneQuest: Starter Set,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,79.06976744186046
 dead-men-tell-no-tales-renegade-games-edition,Dead Men Tell No Tales (Renegade Games Edition),LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,65.67164179104478
 similo-spookies,Similo: Spookies,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,72.0
-leaf,Leaf,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
 mythwind-board-game-winds-of-magic-expansion,Mythwind Board Game: Winds Of Magic Expansion,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,60.71428571428572
 our-family-is-so-weird,Our Family is So Weird,"QUALITY_GATE: shrunk=6.17, usersrated=16",455133,Our Family Is So Weird,100.0
 cascadia-rolling-hills,Cascadia: Rolling Hills,"QUALITY_GATE: shrunk=7.08, usersrated=1238",407317,Cascadia: Rolling Hills,100.0
@@ -1550,7 +1517,7 @@ purple-haze-born-to-kill,Purple Haze: Born to Kill,"LOW_CONFIDENCE_MATCH: exact 
 disney-villainous-unstoppable,Disney Villainous - Unstoppable,"QUALITY_GATE: shrunk=6.40, usersrated=85",437654,Disney Villainous Unstoppable!,100.0
 money-card-game,Money! Card Game,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
 quixo-mini,Quixo Mini,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,84.21052631578947
-the-fox-in-the-forest-deluxe,The Fox In The Forest Deluxe,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
+the-fox-in-the-forest-deluxe,The Fox In The Forest Deluxe,"QUALITY_GATE: shrunk=7.17, usersrated=89",455906,The Fox in the Forest Deluxe,100.0
 bohemians,Bohemians,"QUALITY_GATE: shrunk=6.53, usersrated=1111",437384,Bohemians,100.0
 cats-knocking-things-off-ledges,Cats Knocking Things Off Ledges,"QUALITY_GATE: shrunk=6.61, usersrated=159",459990,Cats Knocking Things Off Ledges,100.0
 noodle-flip,Noodle Flip,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,73.6842105263158
@@ -1633,7 +1600,7 @@ charades-for-kids,Charades For Kids,"QUALITY_GATE: shrunk=5.76, usersrated=165",
 cthulhu-wars-azathoth-faction-expansion,Cthulhu Wars: Azathoth Faction Expansion,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,65.67164179104478
 proving-grounds,Proving Grounds,"QUALITY_GATE: shrunk=6.61, usersrated=1155",268890,Proving Grounds,100.0
 euphoria-with-game-trayz-insert,Euphoria,"QUALITY_GATE: shrunk=6.69, usersrated=34",159911,Euphoria,100.0
-bookworm-the-card-game,Bookworm - The Card Game,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
+bookworm-the-card-game,Bookworm - The Card Game,"QUALITY_GATE: shrunk=6.33, usersrated=26",276124,Bookworm: The Card Game,100.0
 the-elder-scrolls-botse-valenwood,The Elder Scrolls: BoTSE: Valenwood,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,61.81818181818181
 cormac-the-mighty-the-red-dragon-inn,The Red Dragon Inn: Allies - Cormac the Mighty,"LOW_CONFIDENCE_MATCH: exact match is a BGG expansion/non-base entry, out of scope -- refusing to fall back to a fuzzy match against an unrelated base game",,,100.0
 destinies-4-player-neoprene-mats,Destinies - 4 Player Neoprene Mats,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,62.5
@@ -1692,7 +1659,7 @@ abductor-pack-1-hostage-negotiator,Abductor Pack #1: Hostage Negotiator,LOW_CONF
 red-dragon-inn-piper-vs-ripsnarl,Red Dragon Inn: Piper vs. Ripsnarl,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,63.1578947368421
 cards-against-humanity-theatre-pack,Cards Against Humanity Theatre Pack,"LOW_CONFIDENCE_MATCH: exact match is a BGG expansion/non-base entry, out of scope -- refusing to fall back to a fuzzy match against an unrelated base game",,,100.0
 everdell-tales-from-the-green-acorn,Everdell Tales from the Green Acorn,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,61.53846153846154
-power-grid-the-card-game,Power Grid: The Card Game,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
+power-grid-the-card-game,Power Grid: The Card Game,"QUALITY_GATE: shrunk=6.64, usersrated=2129",203780,Power Grid: The Card Game,100.0
 lunch-box-game,Lunch Box Game,"QUALITY_GATE: shrunk=6.42, usersrated=13",50625,Lunch Box Game,100.0
 mince-spies,Mince Spies,"QUALITY_GATE: shrunk=6.50, usersrated=1",426995,Mince Spies,100.0
 ashes-reborn-the-breaker-of-fate-deluxe-expansion-set,Ashes Reborn: The Breaker of Fate Deluxe Expansion Set,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,60.0
@@ -1731,7 +1698,6 @@ the-mind-soulmates-uk-edition,The Mind Soulmates (UK Edition),LOW_CONFIDENCE_MAT
 2001-a-spacy-odyssey,2001: A Space Odyssey,"QUALITY_GATE: shrunk=6.65, usersrated=47",439703,2001: A Space Odyssey | The Board Game,100.0
 river-dragons,River Dragons,"QUALITY_GATE: shrunk=6.49, usersrated=3819",634,River Dragons,100.0
 star-realms-command-deck-the-union,Star Realms Command Deck: The Union,"LOW_CONFIDENCE_MATCH: exact match is a BGG expansion/non-base entry, out of scope -- refusing to fall back to a fuzzy match against an unrelated base game",,,100.0
-carson-city-big-box,Carson City Big Box,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
 altiplano-the-traveler,Altiplano: The Traveler,"LOW_CONFIDENCE_MATCH: exact match is a BGG expansion/non-base entry, out of scope -- refusing to fall back to a fuzzy match against an unrelated base game",,,100.0
 cthulhu-wars-ramsey-campbell-horrors-1,Cthulhu Wars: Ramsey Campbell Horrors 1,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,59.375
 panda-monium,Panda-monium,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
@@ -1949,7 +1915,6 @@ hippocrates-deluxe-edition-kickstarter-edition,Hippocrates: Deluxe Edition - Kic
 marvel-champions-valkyrie-hero-pack,Marvel Champions: Valkyrie Hero Pack,"LOW_CONFIDENCE_MATCH: exact match is a BGG expansion/non-base entry, out of scope -- refusing to fall back to a fuzzy match against an unrelated base game",,,100.0
 pocket-pub-quiz,Pocket Pub Quiz,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,72.0
 wooden-games-workshop-backgammon,Wooden Games Workshop: Backgammon,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,61.53846153846154
-tenpenny-parks,Tenpenny Parks,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
 hey-yo,HEY YO,"QUALITY_GATE: shrunk=6.31, usersrated=456",324467,Hey Yo,100.0
 starfinder-pirates-of-skydock,Starfinder: Pirates of Skydock,"QUALITY_GATE: shrunk=6.36, usersrated=45",361064,Starfinder: Pirates of Skydock,100.0
 the-imperial-zoo-warhammer-fantasy-roleplay-wfrp4,The Imperial Zoo: Warhammer Fantasy Roleplay (WFRP4),LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,65.93406593406593
@@ -2065,7 +2030,7 @@ official-emoji-game,Official Emoji Game,LOW_CONFIDENCE_MATCH: fuzzy score below 
 cairn,Cairn,"QUALITY_GATE: shrunk=7.01, usersrated=1310",275916,Cairn,100.0
 town-builder-coevorden,Town Builder: Coevorden,"QUALITY_GATE: shrunk=6.93, usersrated=737",255633,Town Builder: Coevorden,100.0
 total-action-football-five-a-side,Total Action Football - Five A Side,"QUALITY_GATE: shrunk=6.53, usersrated=2",454037,Total Action Football 5-A-Side,100.0
-fart,Fart,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
+fart,Fart,"QUALITY_GATE: shrunk=5.34, usersrated=68",20647,Fart!,100.0
 neuroshima-hex-3-0-board-game-iron-gang-expansion,Neuroshima Hex 3.0 Board Game: Iron Gang Expansion,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,56.14035087719298
 dobble-paw-patrol,Dobble Paw Patrol,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,68.96551724137932
 a-song-of-ice-and-fire-targaryen-faction-pack-expansion,A Song Of Ice and Fire: Targaryen Faction Pack Expansion,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,60.60606060606061
@@ -2245,7 +2210,7 @@ im-a-little-crabby,I'm A Little Crabby,LOW_CONFIDENCE_MATCH: fuzzy score below t
 pictures-x-mas-expansion,Pictures X-mas Expansion,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,69.23076923076923
 mosaic,Mosaic,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
 funko-games-indiana-jones-sands-of-adventure,Funko Games: Indiana Jones - Sands Of Adventure,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,84.21052631578947
-the-shivers,The Shivers,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
+the-shivers,The Shivers,"QUALITY_GATE: shrunk=6.63, usersrated=196",287411,The Shivers,100.0
 moonrakers-starfall-micro-expansion,Moonrakers: Starfall Micro Expansion,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,62.295081967213115
 hint-pocket,HINT Pocket,"QUALITY_GATE: shrunk=6.62, usersrated=28",179864,Into the Pocket!,90.9090909090909
 roll-to-the-top,Roll to the Top,"QUALITY_GATE: shrunk=6.64, usersrated=1696",240225,Roll to the Top!,100.0
@@ -2348,7 +2313,7 @@ railroad-ink-challenge-electricity-dice-expansion-pack,Railroad Ink Challenge El
 railroad-ink-challenge-sky-dice-expansion-pack,Railroad Ink Challenge Sky Dice Expansion Pack,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,68.13186813186813
 tiny-epic-pirates-curse-of-amdiak-expansion,Tiny Epic Pirates: Curse of Amdiak Expansion,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,63.76811594202898
 whale-riders-board-game,Whale Riders Board Game,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
-tiny-epic-crimes-deluxe-edition,Tiny Epic Crimes: Deluxe Edition,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
+tiny-epic-crimes-deluxe-edition,Tiny Epic Crimes: Deluxe Edition,"QUALITY_GATE: shrunk=6.76, usersrated=63",406281,Tiny Epic Crimes: Deluxe Edition,100.0
 snap-classic-card-game,Snap - Classic Card Game,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,75.0
 trapped-escape-room-game-pack-flight-937,Trapped: Escape Room Game Pack - Flight 937,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,62.857142857142854
 monopoly-animal-crossing,Monopoly Animal Crossing,"QUALITY_GATE: shrunk=5.62, usersrated=316",348250,Monopoly: Animal Crossing – New Horizons,95.0
@@ -2415,7 +2380,7 @@ deal-with-the-devil,Deal With The Devil,"QUALITY_GATE: shrunk=7.01, usersrated=1
 lets-get-deep-uk-edition,Let's Get Deep UK Edition,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,68.08510638297872
 triss-a-grain-of-truth-the-witcher-path-of-destiny,Triss A Grain of Truth - The Witcher: Path of Destiny,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,71.23287671232876
 trailblazers-sasquatch-expansion,Trailblazers Sasquatch Expansion,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,63.1578947368421
-carson-city-the-card-game-2,Carson City - The Card Game,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
+carson-city-the-card-game-2,Carson City - The Card Game,"QUALITY_GATE: shrunk=6.78, usersrated=1033",248117,Carson City: The Card Game,100.0
 pusheen-the-stacking-game,Pusheen The Stacking Game,"QUALITY_GATE: shrunk=6.08, usersrated=69",422690,Pusheen: The Stacking Game!,100.0
 diluvium,Diluvium,"QUALITY_GATE: shrunk=6.96, usersrated=290",394451,Diluvium,100.0
 back-stories-alone-under-the-ice-2,Back Stories: Alone Under the Ice,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,83.63636363636364
@@ -2564,7 +2529,7 @@ bicycle-stargazer-new-moon,Bicycle Stargazer New Moon,LOW_CONFIDENCE_MATCH: fuzz
 a-midsummer-nights-fayre,A Midsummer Nights Fayre,"QUALITY_GATE: shrunk=6.38, usersrated=70",422329,A Midsummer Night's Fayre,97.77777777777777
 nocturne,Nocturne,"QUALITY_GATE: shrunk=6.85, usersrated=1039",393175,Nocturne,100.0
 message-in-a-bottle,Message in a Bottle,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
-bacon,Bacon,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
+bacon,Bacon,"QUALITY_GATE: shrunk=6.80, usersrated=993",365742,Bacon,100.0
 star-trek-strange-new-worlds-mary-celeste-escape-room-game,Star Trek: Strange New Worlds Mary Celeste Escape Room Game,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,82.82828282828282
 dc-forever,DC Forever,"QUALITY_GATE: shrunk=6.80, usersrated=63",425036,DC Forever,100.0
 sonic-strike-car-wars-sixth-edition,Sonic Strike: Car Wars Sixth Edition,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,77.19298245614034
@@ -2575,7 +2540,7 @@ smug-owls-poser-owls,Smug Owls: Poser Owls,"LOW_CONFIDENCE_MATCH: exact match is
 smug-owls-pompous-owls,Smug Owls: Pompous Owls,"LOW_CONFIDENCE_MATCH: exact match is a BGG expansion/non-base entry, out of scope -- refusing to fall back to a fuzzy match against an unrelated base game",,,100.0
 iq-square,IQ Square,"QUALITY_GATE: shrunk=6.50, usersrated=0",16120,IQ Squared,94.73684210526316
 top-trumps-star-wars-starships,Top Trumps: Star Wars Starships,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,76.36363636363637
-the-dwarves-big-box,The Dwarves Big Box,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
+the-dwarves-big-box,The Dwarves Big Box,"QUALITY_GATE: shrunk=7.16, usersrated=362",302882,The Dwarves: Big Box,100.0
 ascension-tactics-inferno-base-game-with-kickstarter-minis,Ascension Tactics Inferno Base Game with Kickstarter Minis,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,61.53846153846154
 deciduous-duos-an-aspens-expansion,Deciduous Duos - An Aspens Expansion,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,60.71428571428572
 iq-noodles,IQ Noodles,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,82.35294117647058
@@ -2900,7 +2865,7 @@ u-s-s-r-dice-x6-decal-x1,U.S.S.R. Dice (x6) & Decal (x1),LOW_CONFIDENCE_MATCH: f
 froggit,Froggit,"QUALITY_GATE: shrunk=6.47, usersrated=68",301442,Froggit,100.0
 2gm-tactics-board-game-germany-reinforcements-expansion,2GM Tactics Board Game: Germany Reinforcements Expansion,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,57.971014492753625
 2gm-tactics-board-game-italy-expansion,2GM Tactics Board Game: Italy Expansion,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,75.55555555555556
-polaroid-the-game,Polaroid: The Game,"QUALITY_GATE: shrunk=6.50, usersrated=3",460765,The Polaroid Game,95.0
+polaroid-the-game,Polaroid: The Game,"QUALITY_GATE: shrunk=6.50, usersrated=3",460765,The Polaroid Game,100.0
 dog-jokes,Dog Jokes,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,77.77777777777779
 quadrillion,Quadrillion,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,80.0
 grabbit-2021,Grabbit,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
@@ -3095,7 +3060,7 @@ munchkin-warhammer-40000-grudges-and-gore,Munchkin Warhammer 40000: Grudges and 
 match-my-freak,Match my Freak,"QUALITY_GATE: shrunk=6.50, usersrated=1",474204,Match My Freak,100.0
 corps-of-discovery-2nd-edition,Corps of Discovery 2nd Edition,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
 assassin-s-creed-black-flag-resynced-nine-men-s-morris,Assassin's Creed Black Flag Resynced: Nine Men's Morris,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,59.09090909090908
-colt-express-card-game,Colt Express Card Game,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this normalized title,,,
+colt-express-card-game,Colt Express Card Game,"QUALITY_GATE: shrunk=6.50, usersrated=0",462063,Colt Express Card Game,100.0
 kano,Kano,"QUALITY_GATE: shrunk=6.95, usersrated=54",470343,Kano,100.0
 judging-strangers-is-fun,Judging Strangers is Fun,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,66.66666666666667
 rising-cultures,Rising Cultures,"QUALITY_GATE: shrunk=7.14, usersrated=214",437073,Rising Cultures,100.0

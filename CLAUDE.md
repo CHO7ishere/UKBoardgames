@@ -746,3 +746,60 @@ misses**, and surfaced a real one already live.
   each verified safe against the real corpus first (checked they don't collide with any other
   real entry), the same bar this veto fix now also enforces automatically for the specific
   "extra content word names a real different product" risk class.
+
+## Philosophy check-in + light-tier exact match (2026-08-11)
+
+User's follow-up: *"We need to change the philosophy. Purpose is to find games and the list
+right now is very limited."* Also confirmed two things already in place are correct, not new
+asks: (1) any French availability at all (translated edition, or even just an English listing on
+Philibert) means "don't buy in the UK" — matches the existing `NONE`/`FAMILY_AVAILABLE_FR`/
+`FRENCH_EDITION_EXISTS` exclusions exactly; (2) an expansion-vs-base price comparison being
+"skewed" should be handled by *dropping* the comparison, not fixing it — exactly what the
+excluded-games veto above already does.
+
+- **Asked via `AskUserQuestion`** whether to loosen the two most obvious levers, with real
+  numbers attached: the discount threshold (40% -- only 8/398 "available but not cheaper enough"
+  games would flip to `CHEAPER_UK` at 25%, more at 15%/uncapped) and the BGG quality gate (7.2
+  shrunk score -- 205/404/852 more games would enter the pool at 7.0/6.8/6.5). **User kept both
+  at their current values** — neither was the actual bottleneck.
+- **Follow-up question narrowed it to the real cause**: user picked *"Matching coverage itself
+  is the bottleneck"* — only 586 of 4178 Zatu products were reaching a confident BGG match at
+  all before this session's fixes, out of proportion to the catalogue's real size.
+- **Root cause found by mining the 283-strong `AMBIGUOUS_EXACT` bucket**: `normalize_title`'s
+  own edition-noise stripping ("Big Box", "Card Game", "Deluxe Edition", etc.) is applied to
+  *both* the query and BGG's own catalogued names before the exact-match check — so real,
+  separately-priced BGG products like "Carcassonne" (id 822) and "Carcassonne Big Box" (id
+  142057) collide onto the identical stripped string "carcassonne" and become falsely
+  ambiguous, even though the query text itself (e.g. Zatu literally titling a product
+  "Carcassonne Big Box") still said exactly which one it meant. A simulation against the real
+  283-entry bucket confirmed 106 entries are only ambiguous for this reason (vs. 177 genuinely
+  identical BGG names with no textual signal to disambiguate, left alone) and that 68 of those
+  106 would cleanly resolve if the query's own un-stripped text were checked first.
+- **Fix**: `match.py` gained `normalize_title_light()` — identical to `normalize_title()` except
+  it does *not* run `_EDITION_NOISE_RE` (keeps every other step: accents, HTML entities,
+  vol./word-number/roman-numeral spelling alignment, punctuation, articles — none of those lose
+  real product-identity information). `BggIndex` now tries an exact match against this lighter
+  normalization *first*; only when it uniquely resolves to one candidate does it short-circuit
+  to a HIGH match, since anything the light tier finds ambiguous can only stay ambiguous (or
+  grow more so) once the aggressive tier's stripping merges further groups together — so falling
+  through to the existing pipeline in that case is still correct and produces a more complete
+  candidate list for the unmatched-games display. This is a strict precision improvement, not a
+  recall-for-precision tradeoff: it only ever *adds* a specific, correct identification (the
+  query's own words already said which product it meant), never introduces a new wrong guess.
+- **Real, measured result** (re-running `scripts/match_bgg.py` offline against the live corpus):
+  586 → **621 survivors, net +35, zero regressions** — confirmed via a before/after diff of
+  every survivor handle; nothing that used to match stopped matching. Real recoveries include
+  both directions of the same fix working correctly on the same query family: `Carcassonne` →
+  base game (id 822) *and* `Carcassonne Big Box` → the Big Box entry (id 142057) as two distinct,
+  now-correct matches, plus `Colt Express: Big Box`, `Istanbul Big Box`, `K2: Big Box`, `Oh My
+  Goods! Big Box`, `Port Royal Big Box`, `Nusfjord Big Box`, `Carson City Big Box`, `Dominion
+  (Second Edition) Big Box`, `Cat in the Box: Deluxe Edition`, and several more. `HeroQuest` and
+  `War of the Ring: The Card Game` — both flagged as new regressions in the earlier
+  dangling-article-fix commit — are recovered too, now correctly disambiguated from whatever
+  they'd collided with. `AMBIGUOUS_EXACT` in the unmatched-games list dropped from 283 → 213
+  accordingly. All 211 tests pass (2 new light-tier tests in `test_match.py`, including one
+  proving the fix doesn't touch cases where light and aggressive tiers agree).
+- **Not yet live**: same as the earlier matching-fix commits this session — the 35 newly
+  recovered survivors are in the refreshed `data/matched_games.json`/`data/unmatched_games.json`
+  but don't have Stage 3/4/5 data yet, so the main scored table and shortlist size are unchanged
+  until the next `lookup-philibert.yml` dispatch.

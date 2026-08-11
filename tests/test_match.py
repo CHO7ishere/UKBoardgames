@@ -100,6 +100,31 @@ def test_exact_match_distinguishes_similar_titles(index):
     assert result2.bgg_id == 3
 
 
+def test_light_tier_distinguishes_base_game_from_its_own_big_box():
+    # Real bug found by mining the unmatched-games list: normalize_title strips "Big Box" as
+    # noise from *both* sides, so "Carcassonne" and BGG's own real, separately-priced
+    # "Carcassonne Big Box" entry collided into the same normalized string -- ambiguous, both
+    # dropped, even though the plain-titled Zatu query unambiguously means the plain base game.
+    base = [_game(1, "Carcassonne"), _game(2, "Carcassonne Big Box")]
+    index_ = BggIndex(base)
+    plain = index_.match("Carcassonne")
+    assert plain.confidence == "HIGH"
+    assert plain.bgg_id == 1
+    big_box = index_.match("Carcassonne Big Box")
+    assert big_box.confidence == "HIGH"
+    assert big_box.bgg_id == 2
+
+
+def test_light_tier_falls_through_to_aggressive_tier_when_still_ambiguous(index):
+    # "Spirit Island" and "Spirit Island (Core Game)" both light-normalize to the same string
+    # here since "(Core Game)" isn't an edition-noise word the light tier would treat
+    # differently -- confirms the light tier doesn't change today's normal exact-match behavior
+    # when there's nothing edition-specific to preserve.
+    result = index.match("Spirit Island (Core Game)")
+    assert result.confidence == "HIGH"
+    assert result.bgg_id == 1
+
+
 # --- BggIndex.match: fuzzy tier and the false-positive guards --------------------------------
 
 

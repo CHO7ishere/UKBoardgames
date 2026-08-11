@@ -101,6 +101,35 @@ _TRAILING_YEAR_RE = re.compile(r"\(\s*(19|20)\d{2}\s*\)\s*$")
 _THOUSANDS_COMMA_RE = re.compile(r"(?<=\d),(?=\d)")
 
 
+def normalize_title_light(title: str) -> str:
+    """Same as `normalize_title` but *without* the edition-noise strip (spec §4.1's punctuation/
+    accent/article/roman-numeral/spelling normalization only) -- used for a first, more
+    conservative exact-match pass (see `BggIndex`). Edition-noise words like "Big Box"/"Card
+    Game"/"Deluxe Edition" aren't just retailer marketing filler; BGG frequently catalogues them
+    as their own distinct, separately-priced products (e.g. "Carcassonne" vs "Carcassonne Big
+    Box" are different real BGG entries with different ids). `normalize_title` strips those
+    words indiscriminately from *both* the query and BGG's own names, which is exactly why so
+    many exact matches come back ambiguous: "Carcassonne" and "Carcassonne Big Box" collide onto
+    the same stripped string, even though the query text itself still says which one it means.
+    This lighter pass preserves that distinction so an exact match can be tried before any
+    information is thrown away.
+    """
+    text = html.unescape(title).lower()
+    text = unicodedata.normalize("NFKD", text)
+    text = "".join(c for c in text if not unicodedata.combining(c))
+    text = _TRAILING_YEAR_RE.sub(" ", text)
+    text = _THOUSANDS_COMMA_RE.sub("", text)
+    text = text.replace("&", " and ")
+    text = _VOL_DOT_RE.sub("vol ", text)
+    text = _VOL_WORD_RE.sub("volume", text)
+    text = _V_DOT_RE.sub("vs", text)
+    text = _WORD_NUM_RE.sub(lambda m: _WORD_NUM_MAP[m.group(0)], text)
+    text = _ROMAN_RE.sub(lambda m: _ROMAN_MAP.get(m.group(0).lower(), m.group(0)), text)
+    text = _PUNCT_RE.sub(" ", text)
+    text = _ARTICLE_RE.sub(" ", text)
+    return _WS_RE.sub(" ", text).strip()
+
+
 def normalize_title(title: str) -> str:
     """Lowercase, strip accents/edition noise/punctuation/articles, normalise '&'->'and' and
     roman numerals, collapse whitespace (spec §4.1).
@@ -166,6 +195,14 @@ class BggIndex:
         for game, norm in zip(games, self.normalized_names):
             self._exact[norm].append(game)
 
+        # Lighter exact-match index, tried first (see normalize_title_light's docstring): keeps
+        # "Big Box"/"Card Game"/"Deluxe Edition"-type words instead of stripping them, so a
+        # query that includes one of these words can land on the specific real BGG entry for
+        # that product rather than colliding with a same-named plainer edition.
+        self._exact_light: dict[str, list[BggRankedGame]] = defaultdict(list)
+        for game in games:
+            self._exact_light[normalize_title_light(game.name)].append(game)
+
         # Sorted (normalized_name, game) pairs for O(log n) prefix lookups — see
         # `_prefix_matches`. Confirmed valuable against the real 4178-product harvest: 62 titles
         # like "Five Tribes" are a retailer's shortened form of a BGG title with a subtitle
@@ -200,6 +237,19 @@ class BggIndex:
     def match(
         self, title: str, fuzzy_threshold: float = 90.0, min_gap: float = 5.0
     ) -> MatchResult:
+        # Try the lighter (edition-noise-preserving) exact match first -- only when it resolves
+        # to a *single* candidate, since anything it finds ambiguous will only stay ambiguous
+        # (or grow more so) once edition-noise stripping merges further groups together; falling
+        # through to the aggressive-tier exact check below in that case still produces a
+        # correct, more complete candidate list for the ambiguous-drop result.
+        light_exact = self._exact_light.get(normalize_title_light(title))
+        if light_exact and len(light_exact) == 1:
+            bgg = light_exact[0]
+            return MatchResult(
+                title, bgg.id, bgg.name, "HIGH", 100.0,
+                "exact match preserving edition/format words (e.g. Big Box, Card Game)",
+            )
+
         norm = normalize_title(title)
 
         exact = self._exact.get(norm)
