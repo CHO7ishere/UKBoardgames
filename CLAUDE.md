@@ -965,3 +965,27 @@ uncertain gain), but scoped to a new location rather than folded into the existi
   session's matching-coverage work, zero unexplained regressions at any step. Same "not yet
   live" caveat as above — needs the next `lookup-philibert.yml` dispatch for these to reach the
   actual shortlist/report.
+
+## Live re-run bringing this session's matching work to the actual website (2026-08-11)
+
+User: *"Let's now do the work to display them in the website. I don't care which edition it
+is."* — dispatched `lookup-philibert.yml` (run 8, `0f87fd6` → `fb70bfc`, ~56 min) to carry all
+678 survivors through Stage 3 (BGG French-edition check) → Stage 4 (EAN) → Stage 5 (Philibert)
+→ Stage 6/7 (score + render), the same live pipeline documented above, just re-dispatched now
+that this session's matching fixes are on `main`.
+
+- **Real result**: 678 looked up → 479 `LISTED_IN_STOCK`, 163 `NOT_LISTED`, 36
+  `FAMILY_LISTED_FR`. Verdicts: 466 `NONE`, 107 `FRENCH_EDITION_EXISTS`, 56 `UNAVAILABLE_FR`, 36
+  `FAMILY_AVAILABLE_FR`, 13 `CHEAPER_UK`. **Shortlist: 58 → 69** (`UNAVAILABLE_FR` +
+  `CHEAPER_UK`), live in `docs/index.html`.
+- Top of the table now: **Gloomhaven 2nd Edition**, composite 80.9, `EXCELLENT` quality,
+  `UNAVAILABLE_FR` — this session's own ordinal-edition fix (`match.py`'s `_ORDINAL_RE`) is what
+  got it matched to BGG's specific "Gloomhaven (Second Edition)" entry in the first place; it
+  wasn't reachable at all before this session's matching-coverage work. Also present: Resident
+  Evil 3: The Board Game, Nusfjord Big Box, Blood Bowl: Third Season Edition, Vantage — all
+  either dominance-tiebreak or noise-stripping recoveries from this session, now showing real
+  Philibert price/availability data for the first time.
+- No manual data massaging needed — the pipeline's own caching (Stage 4/5 skip anything
+  already resolved from a prior run) meant this dispatch only paid live-network cost for the
+  genuinely new/changed survivors, consistent with the caching work from earlier in this
+  session.
