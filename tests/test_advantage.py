@@ -41,7 +41,12 @@ def test_not_listed_no_fr_edition_is_full_strength():
     assert result.needs_eyeball is False
 
 
-def test_not_listed_fr_edition_exists_is_weaker_and_flagged():
+def test_not_listed_fr_edition_exists_is_excluded_not_weaker():
+    # User's explicit instruction (2026-08-11), after a real case (Gloomhaven: Jaws of the Lion
+    # -- genuinely not on Philibert, but BGG confirms a real French edition exists): "I don't
+    # want to buy English versions if a French one exists (even if unavailable)". A known
+    # French edition is not a weaker version of UNAVAILABLE_FR -- it's excluded entirely, same
+    # as NONE/FAMILY_AVAILABLE_FR.
     result = compute_advantage(
         zatu_in_stock=True,
         zatu_price_gbp=20.0,
@@ -52,13 +57,15 @@ def test_not_listed_fr_edition_exists_is_weaker_and_flagged():
         weights=WEIGHTS,
         fr_edition_exists=True,
     )
-    assert result.verdict == "UNAVAILABLE_FR"
-    assert result.points == 28
+    assert result.verdict == "FRENCH_EDITION_EXISTS"
+    assert result.points == 0.0
     assert result.needs_eyeball is True
 
 
 def test_not_listed_unknown_fr_edition_defaults_to_weaker_and_flagged():
-    # Stage 3 (BGG enrich) isn't built yet -> fr_edition_exists is always None for now.
+    # Stage 3 hasn't checked this particular game (e.g. it was outside this run's NOT_LISTED-
+    # only scope) -- "we don't know" stays the conservative weak/uncertain UNAVAILABLE_FR, not
+    # the same as "confirmed no French edition" or "confirmed a French edition exists".
     result = compute_advantage(
         zatu_in_stock=True,
         zatu_price_gbp=20.0,

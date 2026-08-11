@@ -1,10 +1,18 @@
 """Stage 5/6 partial — UK-vs-France advantage verdict (docs/spec.md §5.2). Consumes Stage 5's
 Philibert lookup result plus Zatu's own price/stock (already in Stage 0's harvest).
 
-The FR-edition-exists cross-check (distinguishing the strong UNAVAILABLE_FR from the weaker,
-NEEDS_EYEBALL-flagged UNAVAILABLE_FR?) needs Stage 3's BGG enrich data — not yet built (blocked
-on the BGG token). Until then, `fr_edition_exists` is always None here, and NOT_LISTED always
-takes the weaker/uncertain variant rather than assuming no French edition exists at all.
+The FR-edition-exists cross-check (spec §5.2's UNAVAILABLE_FR vs UNAVAILABLE_FR?) is now real,
+via Stage 3 (`sources/bgg_versions.py`, a headless-browser check of BGG's own versions data).
+User's explicit, direct instruction (2026-08-11) after a real case (Gloomhaven: Jaws of the
+Lion — genuinely not on Philibert, but BGG confirms a real French edition exists, just not
+currently purchasable anywhere): "I don't want to buy English versions if a French one exists
+(even if unavailable)" — "everything that has a French version just needs to be removed." So
+`fr_edition_exists is True` is *not* a weaker version of UNAVAILABLE_FR, it's excluded from the
+shortlist entirely (`VERDICT_FRENCH_EDITION_EXISTS`), same treatment as `NONE`/
+`FAMILY_AVAILABLE_FR` — a known French edition, even a currently-unpurchasable one, means this
+isn't a genuine "must buy in the UK" opportunity. `fr_edition_exists is None` (Stage 3 hasn't
+checked this game, e.g. it was outside this run's NOT_LISTED-only scope) still gets the
+conservative weak/uncertain UNAVAILABLE_FR — unproven, not the same as proven-nonexistent.
 """
 
 from __future__ import annotations
@@ -26,6 +34,12 @@ VERDICT_EXCLUDED = "EXCLUDED"  # Zatu itself out of stock — spec: "not a real 
 # deliberately never fetched/compared this SKU's own price -- it would be comparing the wrong
 # product.
 VERDICT_FAMILY_AVAILABLE_FR = "FAMILY_AVAILABLE_FR"
+# A known French edition exists somewhere (BGG's own versions data, Stage 3) even though this
+# exact game isn't listed on Philibert right now. User's explicit call: treat this the same as
+# NONE/FAMILY_AVAILABLE_FR -- not a genuine UK-exclusive buy, even if the French edition itself
+# isn't currently purchasable anywhere. Distinct from the weak/uncertain UNAVAILABLE_FR (which
+# means "we don't know either way") -- this means we *do* know, and the answer excludes it.
+VERDICT_FRENCH_EDITION_EXISTS = "FRENCH_EDITION_EXISTS"
 
 
 @dataclass
@@ -73,14 +87,21 @@ def compute_advantage(
                 False,
                 "not listed on Philibert, no French edition exists at all",
             )
-        weak_reason = (
-            "not listed on Philibert, but a French edition exists elsewhere"
-            if fr_edition_exists
-            else "not listed on Philibert; French-edition-exists check unavailable "
-            "(Stage 3 not built yet)"
-        )
+        if fr_edition_exists is True:
+            return AdvantageResult(
+                VERDICT_FRENCH_EDITION_EXISTS,
+                0.0,
+                None,
+                True,
+                "not listed on Philibert, but a French edition exists (per BGG) -- not a "
+                "genuine UK-exclusive buy",
+            )
         return AdvantageResult(
-            VERDICT_UNAVAILABLE_FR, weights["unavailable_fr_weak"], None, True, weak_reason
+            VERDICT_UNAVAILABLE_FR,
+            weights["unavailable_fr_weak"],
+            None,
+            True,
+            "not listed on Philibert; French-edition-exists check unavailable for this game",
         )
 
     if philibert_status == "LISTED_OUT_OF_STOCK":

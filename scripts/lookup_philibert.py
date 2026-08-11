@@ -25,6 +25,7 @@ import yaml  # noqa: E402
 from advantage import (  # noqa: E402
     VERDICT_EXCLUDED,
     VERDICT_FAMILY_AVAILABLE_FR,
+    VERDICT_FRENCH_EDITION_EXISTS,
     VERDICT_NONE,
     compute_advantage,
 )
@@ -133,7 +134,16 @@ def main() -> int:
         "FAMILY_LISTED_FR results, always re-check NOT_LISTED survivors -- a matching fix is "
         "exactly what would change those).",
     )
+    parser.add_argument(
+        "--offline", action="store_true",
+        help="Never touch the network -- reuse every survivor's cached philibert_status from "
+        "--out as-is, including NOT_LISTED (normally always re-checked live). Only the "
+        "advantage verdict is recomputed. For applying an advantage.py/config.yaml change to "
+        "already-fetched data without a live re-run. Mutually exclusive with --refresh.",
+    )
     args = parser.parse_args()
+    if args.offline and args.refresh:
+        parser.error("--offline and --refresh are mutually exclusive")
 
     config = load_config(args.config)
     rate_limit = args.rate_limit_sec
@@ -162,7 +172,7 @@ def main() -> int:
 
     for i, survivor in enumerate(survivors, start=1):
         cached = cached_by_handle.get(survivor["zatu_handle"])
-        if cached and cached.get("philibert_status") in _CACHEABLE_STATUSES:
+        if cached and (args.offline or cached.get("philibert_status") in _CACHEABLE_STATUSES):
             cache_hits += 1
             philibert = {
                 "status": cached["philibert_status"],
@@ -212,7 +222,8 @@ def main() -> int:
     shortlist = [
         r
         for r in results
-        if r["advantage_verdict"] not in (VERDICT_NONE, VERDICT_EXCLUDED, VERDICT_FAMILY_AVAILABLE_FR)
+        if r["advantage_verdict"]
+        not in (VERDICT_NONE, VERDICT_EXCLUDED, VERDICT_FAMILY_AVAILABLE_FR, VERDICT_FRENCH_EDITION_EXISTS)
     ]
     print(f"Done: {len(results)} looked up ({cache_hits} from cache, "
           f"{len(results) - cache_hits} fetched live), {len(shortlist)} kept in the shortlist "

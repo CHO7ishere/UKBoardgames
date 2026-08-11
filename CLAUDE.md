@@ -572,3 +572,34 @@ BGG API token.
   confirmed to hang, BGG never goes fully network-idle) — roughly another ~45-60 min added to
   the live pipeline run on top of Stage 4/5's existing runtime. Not yet re-dispatched against
   real data as of this note.
+- **Live-dispatched for real (2026-08-11)**: 141 of the 142 `NOT_LISTED` survivors got a real
+  BGG check (1 had no prior Philibert record to key off, left unchecked this round) — **91 of
+  the 141 (~65%) have a real French edition somewhere per BGG**, only 50 confirmed to have none
+  at all. Real example: Gloomhaven: Jaws of the Lion's French title is "Gloomhaven: Les Mâchoires
+  du Lion".
+- **User's follow-up made the design intent explicit and changed the verdict, not just the
+  reason text**: the original plan (spec §5.2) was to keep `fr_edition_exists=True` inside
+  `UNAVAILABLE_FR` as the *weaker* variant (fewer points, `needs_eyeball`) — still shown, still
+  "buy in the UK" advice, just flagged as less certain. Real user pushback after seeing
+  Gloomhaven still on the site: *"I don't want to buy English versions if a French one exists
+  (even if unavailable)"* / *"everything that has a French version just needs to be removed."*
+  That's a stronger ask than the spec's own framing — a known French edition (even a currently-
+  unpurchasable one) means this is **not a genuine UK-exclusive buy at all**, not just a less-
+  confident one. Added `VERDICT_FRENCH_EDITION_EXISTS` to `advantage.py`, excluded from the
+  shortlist the same way `NONE`/`FAMILY_AVAILABLE_FR` are. `fr_edition_exists=None` (Stage 3
+  hasn't checked this game) still gets the old weak/uncertain `UNAVAILABLE_FR` — "we don't know"
+  is genuinely different from "we know and it exists."
+- **Applied to the just-fetched live data entirely offline** — added `lookup_philibert.py
+  --offline` (reuses every survivor's cached `philibert_status` as-is, including `NOT_LISTED`,
+  which the default cache policy always re-checks live; only the advantage verdict itself is
+  recomputed) specifically so an `advantage.py` logic change like this one doesn't need a second
+  ~2hr live re-run just to take effect. Real result: 92 games now `FRENCH_EDITION_EXISTS`
+  (excluded), shortlist dropped from **150 to 58**. All three Gloomhaven SKUs (`Jaws of the
+  Lion`, `2nd Edition`, `Buttons & Bugs`) confirmed excluded — verified both in
+  `data/philibert_results.json` and live in the rendered `docs/index.html` via Playwright (0
+  results for a "gloomhaven" title-filter search).
+- **On "cache" as a word**: user's own framing, worth keeping — BGG's French-edition-exists data
+  is BGG's own static catalogue, not a fetch result that can go stale the way Philibert stock/
+  price can. Calling `data/bgg_fr_editions.json` a "cache" undersells it; once written it's
+  functionally permanent data, only ever added to (new bgg_ids) or explicitly corrected
+  (`--refresh`), never expired on its own.

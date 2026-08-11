@@ -240,9 +240,13 @@ def test_main_passes_fr_edition_exists_into_the_advantage_verdict(tmp_path, monk
 
     assert exit_code == 0
     results = json.loads(out_file.read_text())["results"]
-    assert results[0]["advantage_verdict"] == "UNAVAILABLE_FR"
-    assert "a French edition exists elsewhere" in results[0]["advantage_reason"]
+    assert results[0]["advantage_verdict"] == "FRENCH_EDITION_EXISTS"
+    assert "a French edition exists" in results[0]["advantage_reason"]
     assert results[0]["needs_eyeball"] is True
+    # excluded from the shortlist -- user's explicit call: a known French edition, even one
+    # that's not currently purchasable, means this isn't a genuine UK-exclusive buy
+    shortlist = json.loads(shortlist_file.read_text())["shortlist"]
+    assert shortlist == []
 
 
 def test_main_reuses_cached_durable_result_without_a_live_lookup(tmp_path, monkeypatch):
@@ -324,6 +328,73 @@ def test_main_always_rechecks_not_listed_cached_survivors(tmp_path, monkeypatch)
     assert calls == ["not-listed"]  # NOT_LISTED is never trusted from cache -- always re-checked
     results = json.loads(out_file.read_text())["results"]
     assert results[0]["philibert_status"] == "LISTED_IN_STOCK"  # the fresh, corrected result
+
+
+def test_main_offline_flag_reuses_not_listed_cache_without_a_live_lookup(tmp_path, monkeypatch):
+    # For applying an advantage.py/config.yaml change to already-fetched data without a live
+    # re-run -- unlike the default cache policy, --offline also trusts a cached NOT_LISTED.
+    matched_file = tmp_path / "matched.json"
+    matched_file.write_text(json.dumps({"survivors": [SURVIVOR_NOT_LISTED]}))
+    config_file = tmp_path / "config.yaml"
+    import yaml
+    config_file.write_text(yaml.dump(TEST_CONFIG))
+    out_file = tmp_path / "results.json"
+    shortlist_file = tmp_path / "shortlist.json"
+
+    out_file.write_text(json.dumps({"results": [{
+        **SURVIVOR_NOT_LISTED,
+        "philibert_status": "NOT_LISTED",
+        "philibert_price_eur": None,
+        "philibert_language": None,
+        "philibert_url": None,
+        "philibert_stock_status_raw": None,
+        "advantage_verdict": "UNAVAILABLE_FR",
+        "advantage_points": 28,
+        "discount_pct": None,
+        "needs_eyeball": True,
+        "advantage_reason": "stale",
+    }]}))
+
+    calls = []
+    monkeypatch.setattr(
+        lookup_philibert, "lookup_one",
+        lambda session, survivor, rate_limit_sec: calls.append(survivor["zatu_handle"]) or {},
+    )
+
+    exit_code = _run_main(matched_file, config_file, out_file, shortlist_file, extra_args=["--offline"])
+
+    assert exit_code == 0
+    assert calls == []  # no live lookup at all, even though the cached status is NOT_LISTED
+    results = json.loads(out_file.read_text())["results"]
+    assert results[0]["philibert_status"] == "NOT_LISTED"
+
+
+def test_main_offline_and_refresh_are_mutually_exclusive(tmp_path, monkeypatch, capsys):
+    matched_file = tmp_path / "matched.json"
+    matched_file.write_text(json.dumps({"survivors": []}))
+    config_file = tmp_path / "config.yaml"
+    import yaml
+    config_file.write_text(yaml.dump(TEST_CONFIG))
+    out_file = tmp_path / "results.json"
+    shortlist_file = tmp_path / "shortlist.json"
+
+    monkeypatch.setattr(
+        sys, "argv",
+        [
+            "lookup_philibert.py",
+            "--matched", str(matched_file),
+            "--config", str(config_file),
+            "--out", str(out_file),
+            "--shortlist-out", str(shortlist_file),
+            "--offline", "--refresh",
+        ],
+    )
+
+    try:
+        lookup_philibert.main()
+        assert False, "expected SystemExit from argparse.error"
+    except SystemExit as exc:
+        assert exc.code == 2
 
 
 def test_main_refresh_flag_ignores_cache_entirely(tmp_path, monkeypatch):
