@@ -12,6 +12,7 @@ unlike this coding sandbox).
 
 from __future__ import annotations
 
+import re
 import sys
 
 from playwright.sync_api import sync_playwright
@@ -20,6 +21,21 @@ GAMES = [
     (285774, "Marvel Champions: The Card Game"),
     (30549, "Pandemic"),
 ]
+
+# User-suggested lead: BGG's versions page takes a `?language=<id>` filter
+# (https://boardgamegeek.com/boardgame/162886/spirit-island/versions?language=2187) -- if this
+# changes the *server* response (not just client-side JS filtering an already-fetched list), it
+# could sidestep the "versions page looks identical to the main page" problem seen in the first
+# probe round (the unfiltered /versions URL returned near-identical HTML to the main page,
+# suggesting the real version list is loaded via a later AJAX call our fixed 6s wait didn't
+# catch). Tested against Spirit Island itself (162886, the user's own example, presumably
+# because it has a known French edition) plus Marvel Champions, to see whether the filtered URL
+# surfaces real French-edition content either of these ways.
+VERSIONS_LANGUAGE_GAMES = [
+    (162886, "Spirit Island", "spirit-island"),
+    (285774, "Marvel Champions: The Card Game", "marvel-champions-the-card-game"),
+]
+FRENCH_LANGUAGE_ID = 2187
 
 LANGUAGE_POLL_MARKERS = [
     "Language Dependence",
@@ -64,6 +80,32 @@ def probe_versions(page, url: str) -> None:
         print(f"    {word!r}: {count} occurrence(s)", file=sys.stderr)
 
 
+def probe_versions_language_filtered(page, bgg_id: int, slug: str, name: str) -> None:
+    unfiltered_url = f"https://boardgamegeek.com/boardgame/{bgg_id}/{slug}/versions"
+    filtered_url = f"{unfiltered_url}?language={FRENCH_LANGUAGE_ID}"
+
+    print(f"\n-- unfiltered versions: {unfiltered_url} --", file=sys.stderr)
+    page.goto(unfiltered_url, wait_until="networkidle", timeout=45000)
+    page.wait_for_timeout(3000)
+    unfiltered_html = page.content()
+    print(f"  html length: {len(unfiltered_html)}", file=sys.stderr)
+
+    print(f"\n-- FRENCH-filtered versions: {filtered_url} --", file=sys.stderr)
+    resp = page.goto(filtered_url, wait_until="networkidle", timeout=45000)
+    page.wait_for_timeout(3000)
+    filtered_html = page.content()
+    print(f"  navigation status: {resp.status if resp else 'None'}", file=sys.stderr)
+    print(f"  html length: {len(filtered_html)}", file=sys.stderr)
+    print(f"  differs from unfiltered: {filtered_html != unfiltered_html}", file=sys.stderr)
+
+    # Look for version/edition entries -- BGG version pages typically render each edition as a
+    # link to /boardgameversion/<id>/... with the edition's own name as link text.
+    soup_links = re.findall(r'href="(/boardgameversion/\d+/[^"]+)"[^>]*>([^<]*)', filtered_html)
+    print(f"  {len(soup_links)} /boardgameversion/ link(s) found on the filtered page", file=sys.stderr)
+    for href, text in soup_links[:15]:
+        print(f"    {href}  ->  {text.strip()!r}", file=sys.stderr)
+
+
 def main() -> int:
     with sync_playwright() as p:
         browser = p.chromium.launch()
@@ -79,6 +121,10 @@ def main() -> int:
             print(f"\n{'=' * 70}\n{name} (bgg_id={bgg_id})", file=sys.stderr)
             probe(page, f"https://boardgamegeek.com/boardgame/{bgg_id}", "main page")
             probe_versions(page, f"https://boardgamegeek.com/boardgame/{bgg_id}/versions")
+
+        for bgg_id, name, slug in VERSIONS_LANGUAGE_GAMES:
+            print(f"\n{'=' * 70}\n{name} (bgg_id={bgg_id}) -- language-filtered versions", file=sys.stderr)
+            probe_versions_language_filtered(page, bgg_id, slug, name)
 
         browser.close()
     return 0
