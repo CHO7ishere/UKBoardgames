@@ -157,7 +157,9 @@ class MatchResult:
 class BggIndex:
     """Precomputed index over a bg_ranks.csv load — build once per run, match many titles."""
 
-    def __init__(self, games: list[BggRankedGame]):
+    def __init__(
+        self, games: list[BggRankedGame], excluded_games: list[BggRankedGame] | None = None
+    ):
         self.games = games
         self.normalized_names = [normalize_title(g.name) for g in games]
         self._exact: dict[str, list[BggRankedGame]] = defaultdict(list)
@@ -170,6 +172,21 @@ class BggIndex:
         # ("Five Tribes: The Djinns of Naqala") and would otherwise never match at all.
         self._sorted_pairs = sorted(zip(self.normalized_names, games), key=lambda p: p[0])
         self._sorted_names = [name for name, _ in self._sorted_pairs]
+
+        # Exact-title index over games this BggIndex was *not* built to match against --
+        # normally the corpus dropped by `filter_base_games(include_expansions=False)`. Found
+        # via a real, confirmed wrong live match: Zatu's "Terraforming Mars - Ares Expedition:
+        # Crisis" (a $17 mini-expansion) scored 90.4% fuzzy against the base game "Terraforming
+        # Mars: Ares Expedition" and was silently accepted -- comparing the wrong two products'
+        # prices. The real BGG entry for it ("Terraforming Mars: Ares Expedition – Crisis", id
+        # 358738) exists and normalizes to an *exact* match of the query -- it's excluded from
+        # `self.games` only because it's an expansion, not because it's unknown. When the query
+        # exactly names a specific excluded product like this, that's a precise identity we
+        # already know, not an ambiguous guess -- refuse to fall through to a fuzzy/prefix match
+        # against a different (base-game) product instead of silently picking the wrong one.
+        self._excluded_exact: dict[str, list[BggRankedGame]] = defaultdict(list)
+        for game in excluded_games or []:
+            self._excluded_exact[normalize_title(game.name)].append(game)
 
     def _prefix_matches(self, norm: str) -> list[BggRankedGame]:
         """BGG games whose normalized name is `norm` followed by a space and more text — i.e.
@@ -204,6 +221,19 @@ class BggIndex:
 
         if not self.normalized_names:
             return MatchResult(title, None, None, "LOW", None, "no BGG candidates loaded")
+
+        excluded = self._excluded_exact.get(norm)
+        if excluded:
+            return MatchResult(
+                title,
+                None,
+                None,
+                "LOW",
+                100.0,
+                "exact match is a BGG expansion/non-base entry, out of scope -- refusing to "
+                "fall back to a fuzzy match against an unrelated base game",
+                candidates=[(g.id, g.name) for g in excluded[:5]],
+            )
 
         fuzzy_result = self._match_fuzzy(title, norm, fuzzy_threshold, min_gap)
         if fuzzy_result.confidence != "LOW":

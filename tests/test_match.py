@@ -3,7 +3,7 @@ from pathlib import Path
 import pytest
 
 from match import BggIndex, _digits_conflict, normalize_title
-from sources.bgg import filter_base_games, load_bg_ranks
+from sources.bgg import BggRankedGame, filter_base_games, load_bg_ranks
 
 FIXTURES = Path(__file__).parent / "fixtures"
 
@@ -109,6 +109,51 @@ def test_expansion_title_does_not_falsely_match_base_game(index):
     result = index.match("Spirit Island: Branch & Claw")
     assert result.confidence == "LOW"
     assert result.bgg_id is None
+
+
+def _game(id, name, is_expansion=False):
+    return BggRankedGame(
+        id=id, name=name, year=2020, rank=None, bayesaverage=None, average=8.0,
+        usersrated=1000, is_expansion=is_expansion,
+    )
+
+
+def test_without_excluded_games_a_specific_expansion_query_wrongly_matches_the_base_game():
+    # Reproduces a real, confirmed wrong live match: Zatu's "Terraforming Mars - Ares
+    # Expedition: Crisis" (a real, separate BGG-catalogued mini-expansion, id 358738) scored
+    # 90.4% fuzzy against the base game "Terraforming Mars: Ares Expedition" and was silently
+    # accepted, comparing that mini-expansion's UK price against the wrong (much larger) base
+    # game's France price. Without passing excluded_games, BggIndex can't know the expansion
+    # exists at all, so this bug reproduces here exactly as it did for real.
+    base = [_game(1, "Terraforming Mars: Ares Expedition")]
+    index = BggIndex(base)
+    result = index.match("Terraforming Mars - Ares Expedition: Crisis")
+    assert result.confidence == "MEDIUM"
+    assert result.bgg_id == 1
+
+
+def test_excluded_games_veto_stops_the_wrong_expansion_match():
+    # Same setup as above, but now BggIndex also knows about the real excluded expansion --
+    # it must refuse the base-game fuzzy match entirely rather than silently picking the wrong
+    # product, since the query exactly names a specific, known, different BGG entry.
+    base = [_game(1, "Terraforming Mars: Ares Expedition")]
+    excluded = [_game(2, "Terraforming Mars: Ares Expedition – Crisis", is_expansion=True)]
+    index = BggIndex(base, excluded_games=excluded)
+    result = index.match("Terraforming Mars - Ares Expedition: Crisis")
+    assert result.confidence == "LOW"
+    assert result.bgg_id is None
+    assert "out of scope" in result.reason
+    assert result.candidates == [(2, "Terraforming Mars: Ares Expedition – Crisis")]
+
+
+def test_excluded_games_veto_does_not_affect_unrelated_queries(index, base_games):
+    # The veto is keyed on an *exact* normalized-title match to a specific excluded entry --
+    # it must not touch queries that have nothing to do with any excluded game.
+    excluded = [_game(999, "Some Totally Different Expansion", is_expansion=True)]
+    vetoed_index = BggIndex(base_games, excluded_games=excluded)
+    result = vetoed_index.match("Brass: Birmingham")
+    assert result.confidence == "HIGH"
+    assert result.bgg_id == 2
 
 
 def test_digit_conflict_blocks_wrong_season_match(index):

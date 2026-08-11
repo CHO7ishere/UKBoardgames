@@ -679,3 +679,70 @@ improved for the near-miss cases. Both offline, no network needed.
   skipped). The new unmatched-games list itself needed no live run at all — every field it uses
   (Zatu price/stock/tags, BGG candidate names) was already sitting in already-fetched local
   files.
+
+## Excluded-expansion exact-match veto — a real wrong live match found and fixed (2026-08-11)
+
+User's follow-up proposal: generalize matching further — treat words like "box"/"set"/
+"edition"/"standalone" as noise, or more broadly, "if one title is fully included in the other,
+say it's a match." Investigated by mining `data/unmatched_games.json`'s near-miss scores for
+real "box"/"set"/"standalone" cases and checking each candidate's `is_expansion` flag in the
+full (unfiltered) `bg_ranks.csv` — not implemented as proposed, because the evidence pointed the
+other way: **a blanket containment rule would introduce new wrong matches, not just fix
+misses**, and surfaced a real one already live.
+
+- **The concrete counter-evidence**: BGG catalogues huge expansion families under the exact
+  same words the proposal wanted treated as generic noise — `Terraforming Mars: Big Box` is
+  itself a real, separate `is_expansion=1` entry (distinct from base `Terraforming Mars`), and
+  `Nemesis`/`Summoner Wars`/`MicroMacro` each have 20-100+ real expansion/promo entries sharing
+  their base title plus one extra word. Stripping "box"/"set"/"standalone"/"expansion" as
+  generic noise, or accepting containment in the query-has-extra-words direction, would
+  routinely match a specific (often much cheaper) expansion SKU to the wrong, much larger base
+  game — a bogus price comparison, not just an imprecise one.
+- **That exact failure mode turned out to already be live**, found by checking every current
+  survivor's `bgg_id` against `bg_ranks.csv`'s full (unfiltered) expansion list: **`Terraforming
+  Mars - Ares Expedition: Crisis`** (Zatu's real handle, a £17 mini-expansion) was matched to
+  base game **`Terraforming Mars: Ares Expedition`** at 90.4% fuzzy — comparing the wrong two
+  products' prices. The real BGG entry for it (`Terraforming Mars: Ares Expedition – Crisis`,
+  id 358738, `is_expansion=1`) exists and normalizes to an *exact* match of the query; it's
+  excluded from the match corpus only because it's an expansion (`include_expansions: false`
+  in config.yaml, spec's own "you're buying playable boxes" rule), not because it's unknown.
+  Confirmed this hadn't yet reached the *published* report (checked `data/shortlist.json`/
+  `data/scored_games.json` — this handle wasn't in either), but it was sitting in
+  `data/matched_games.json` ready to be picked up by the next live Philibert dispatch.
+- **The fix** (`match.py`'s `BggIndex`): a new optional `excluded_games` parameter builds a
+  second exact-title index over whatever `filter_base_games` dropped (real BGG expansions).
+  Before falling through to fuzzy/prefix matching, `.match()` now checks this index first — if
+  the query's normalized title *exactly* matches a specific excluded entry, it refuses to match
+  the base game and returns LOW confidence instead, carrying that excluded entry as a
+  `candidates` entry for transparency. This is a precision-only change: it only fires on an
+  *exact* normalized-title hit against a real, specific, known BGG entry — never a guess, and
+  strictly narrower than a fuzzy/containment rule. `scripts/match_bgg.py` computes
+  `excluded_games` as `all_bgg_games - bgg_games` (by id, not a costly list `in` check) and
+  threads it through; a new `MATCHES_EXCLUDED_EXPANSION` category surfaces these in the
+  unmatched-games list distinctly from genuine no-BGG-match products.
+- **Real, measured result**: re-running `scripts/match_bgg.py` against the live corpus:
+  589 → **586 survivors, -3**, all three confirmed real catches by checking their excluded
+  candidate's `is_expansion` status — `Terraforming Mars - Ares Expedition: Crisis` (the bug
+  above), `Tokyo Highway: Rainbow City - Solo` (matched to base `Tokyo Highway: Rainbow City`,
+  real excluded entry is `Tokyo Highway: Rainbow City – SOLO`, id 418305, a distinct solo-mode
+  expansion), and one genuinely mixed case: `Bios: Origins 2nd Edition` used to correctly
+  fuzzy-match `Bios: Origins (Second Edition)` at 95% (a real base-game entry) — but its
+  normalized query also happens to *exactly* equal `BIOS: Origins` (id 134068), BGG's *first*
+  edition, which BGG's own data oddly flags `is_expansion=1` (relative to the second edition,
+  not a physical add-on) — so the veto fires here too and this one is arguably a recall loss,
+  not a pure win. Kept as-is deliberately: per the project's own precision-over-recall design
+  (spec P2), dropping a good-but-uncertain match is the correct failure direction for a tool
+  that recommends real purchases — and this exact case is exactly what the unmatched-games list
+  exists for: it's visible there with `BIOS: Origins` shown as the reason, so a human can
+  eyeball it and know it's actually fine, rather than trusting a silent wrong price comparison
+  elsewhere. All 209 tests pass (`tests/test_match.py`'s new veto tests reproduce the real
+  Terraforming Mars bug directly — one test with `excluded_games` omitted confirms the bug
+  reproduces, one with it passed confirms the fix; `tests/test_match_bgg_script.py`'s new test
+  uses `bg_ranks_sample.csv`'s existing real `Spirit Island: Branch & Claw` expansion fixture
+  end-to-end).
+- **On the original proposal**: not implemented as a blanket rule, but the underlying idea (find
+  more matches by tolerating small title differences) is exactly what the earlier Vol./"the
+  game"/word-number fixes in this same session already did — the difference is that those were
+  each verified safe against the real corpus first (checked they don't collide with any other
+  real entry), the same bar this veto fix now also enforces automatically for the specific
+  "extra content word names a real different product" risk class.

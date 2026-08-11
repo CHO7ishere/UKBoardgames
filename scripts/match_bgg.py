@@ -31,6 +31,7 @@ _MATCH_CATEGORY_LABELS = [
     ("ambiguous: multiple BGG entries share this normalized title", "AMBIGUOUS_EXACT"),
     ("ambiguous: multiple BGG entries share this title as a prefix", "AMBIGUOUS_PREFIX"),
     ("digit conflict", "DIGIT_CONFLICT"),
+    ("exact match is a BGG expansion/non-base entry", "MATCHES_EXCLUDED_EXPANSION"),
     ("fuzzy score below threshold", "NO_CONFIDENT_MATCH"),
     ("no BGG candidates", "NO_CONFIDENT_MATCH"),
 ]
@@ -53,9 +54,9 @@ def load_zatu_products(path: str) -> list[dict]:
 
 
 def run(
-    zatu_products: list[dict], bgg_games, config: dict
+    zatu_products: list[dict], bgg_games, config: dict, excluded_games=None
 ) -> tuple[list[dict], list[dict], list[dict]]:
-    index = BggIndex(bgg_games)
+    index = BggIndex(bgg_games, excluded_games=excluded_games)
     by_id = {g.id: g for g in bgg_games}
 
     quality_cfg = config.get("quality", {})
@@ -190,13 +191,19 @@ def main() -> int:
     print(f"Loaded {len(products)} Zatu products.", file=sys.stderr)
 
     print(f"Loading BGG ranks from {args.bgg_ranks}...", file=sys.stderr)
-    bgg_games = load_bg_ranks(args.bgg_ranks)
+    all_bgg_games = load_bg_ranks(args.bgg_ranks)
     bgg_games = filter_base_games(
-        bgg_games, include_expansions=config.get("include_expansions", False)
+        all_bgg_games, include_expansions=config.get("include_expansions", False)
     )
+    # Everything filter_base_games dropped (real BGG expansions/variants) -- not searched for a
+    # match, but still checked as an exact-title veto so a query that precisely names one of
+    # them can't silently fall through to a fuzzy match against an unrelated base game (see
+    # BggIndex's excluded_games docstring for the real Terraforming Mars miss this caught).
+    included_ids = {g.id for g in bgg_games}
+    excluded_games = [g for g in all_bgg_games if g.id not in included_ids]
     print(f"{len(bgg_games)} base games in bg_ranks.csv after dropping expansions.", file=sys.stderr)
 
-    survivors, dropped, unmatched = run(products, bgg_games, config)
+    survivors, dropped, unmatched = run(products, bgg_games, config, excluded_games=excluded_games)
     print(
         f"{len(survivors)} survivors (matched + passed quality gate), {len(dropped)} dropped "
         f"({len(unmatched)} of those never matched BGG at all, not just failed the quality "

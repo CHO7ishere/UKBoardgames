@@ -174,14 +174,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 366161,
-          "bgg_name": "Wingspan Asia"
+          "bgg_id": 300580,
+          "bgg_name": "Wingspan: Oceania Expansion"
         }
       ],
-      "match_score": 66.66666666666667
+      "match_score": 100.0
     },
     {
       "zatu_handle": "6-nimmt",
@@ -296,14 +296,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 453963,
-          "bgg_name": "Campaigns in Europe Expansion Pack"
+          "bgg_id": 290448,
+          "bgg_name": "Wingspan: European Expansion"
         }
       ],
-      "match_score": 68.85245901639344
+      "match_score": 100.0
     },
     {
       "zatu_handle": "magical-athlete",
@@ -860,14 +860,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 167791,
-          "bgg_name": "Terraforming Mars"
+          "bgg_id": 247030,
+          "bgg_name": "Terraforming Mars: Prelude"
         }
       ],
-      "match_score": 80.95238095238095
+      "match_score": 100.0
     },
     {
       "zatu_handle": "sky-team-turbulence-expansion",
@@ -1087,14 +1087,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 37844,
-          "bgg_name": "Tunnel Rat"
+          "bgg_id": 436904,
+          "bgg_name": "Heat: Tunnel Vision"
         }
       ],
-      "match_score": 64.28571428571428
+      "match_score": 100.0
     },
     {
       "zatu_handle": "king-of-tokyo",
@@ -1170,14 +1170,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 324555,
-          "bgg_name": "Robot Overload: Expansion 1"
+          "bgg_id": 241386,
+          "bgg_name": "Root: The Riverfolk Expansion"
         }
       ],
-      "match_score": 76.0
+      "match_score": 100.0
     },
     {
       "zatu_handle": "dominion-2nd-edition",
@@ -1407,14 +1407,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 283138,
-          "bgg_name": "Blades and Spirits"
+          "bgg_id": 193065,
+          "bgg_name": "Spirit Island: Branch & Claw"
         }
       ],
-      "match_score": 63.829787234042556
+      "match_score": 100.0
     },
     {
       "zatu_handle": "jagged-earth-spirit-island-expansion",
@@ -1435,14 +1435,14 @@
       ],
       "zatu_is_coop": true,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 162886,
-          "bgg_name": "Spirit Island"
+          "bgg_id": 262722,
+          "bgg_name": "Spirit Island: Jagged Earth"
         }
       ],
-      "match_score": 66.66666666666667
+      "match_score": 100.0
     },
     {
       "zatu_handle": "catan-6th-edition-2025",
@@ -2047,14 +2047,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 391163,
-          "bgg_name": "Forest Shuffle"
+          "bgg_id": 412576,
+          "bgg_name": "Forest Shuffle: Alpine"
         }
       ],
-      "match_score": 80.0
+      "match_score": 100.0
     },
     {
       "zatu_handle": "exploding-kittens",
@@ -2113,14 +2113,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 301880,
-          "bgg_name": "Raiders of Scythia"
+          "bgg_id": 199727,
+          "bgg_name": "Scythe: Invaders from Afar"
         }
       ],
-      "match_score": 65.11627906976744
+      "match_score": 100.0
     },
     {
       "zatu_handle": "happy-trails-horror-final-girl-exp",
@@ -2271,14 +2271,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 438402,
-          "bgg_name": "Forest Shuffle: Dartmoor"
+          "bgg_id": 438231,
+          "bgg_name": "Forest Shuffle: Exploration"
         }
       ],
-      "match_score": 73.46938775510203
+      "match_score": 100.0
     },
     {
       "zatu_handle": "hellas-elysium-terraforming-mars-exp",
@@ -2324,14 +2324,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 361235,
-          "bgg_name": "Compile"
+          "bgg_id": 440921,
+          "bgg_name": "Compile: Aux 2"
         }
       ],
-      "match_score": 70.0
+      "match_score": 100.0
     },
     {
       "zatu_handle": "root-the-exiles-and-partisans-deck",
@@ -2353,14 +2353,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 5248,
-          "bgg_name": "The Lord of the Rings Tarot Deck and Card Game"
+          "bgg_id": 272638,
+          "bgg_name": "Root: The Exiles and Partisans Deck"
         }
       ],
-      "match_score": 65.51724137931035
+      "match_score": 100.0
     },
     {
       "zatu_handle": "dune-imperium-bloodlines",
@@ -2378,14 +2378,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 316554,
-          "bgg_name": "Dune: Imperium"
+          "bgg_id": 426129,
+          "bgg_name": "Dune: Imperium \u2013 Bloodlines"
         }
       ],
-      "match_score": 70.27027027027026
+      "match_score": 100.0
     },
     {
       "zatu_handle": "forest-shuffle-woodland-edge",
@@ -2405,14 +2405,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 391163,
-          "bgg_name": "Forest Shuffle"
+          "bgg_id": 424129,
+          "bgg_name": "Forest Shuffle: Woodland Edge"
         }
       ],
-      "match_score": 66.66666666666667
+      "match_score": 100.0
     },
     {
       "zatu_handle": "ghost-blitz-geistes-blitz",
@@ -2619,14 +2619,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 34843,
-          "bgg_name": "Wizard's Gambit"
+          "bgg_id": 223555,
+          "bgg_name": "Scythe: The Wind Gambit"
         }
       ],
-      "match_score": 72.72727272727273
+      "match_score": 100.0
     },
     {
       "zatu_handle": "root-the-underworld-expansion",
@@ -2646,14 +2646,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 132541,
-          "bgg_name": "Crown of Underworld"
+          "bgg_id": 272637,
+          "bgg_name": "Root: The Underworld Expansion"
         }
       ],
-      "match_score": 68.18181818181819
+      "match_score": 100.0
     },
     {
       "zatu_handle": "carcassonne-big-box",
@@ -2859,14 +2859,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 167791,
-          "bgg_name": "Terraforming Mars"
+          "bgg_id": 255681,
+          "bgg_name": "Terraforming Mars: Colonies"
         }
       ],
-      "match_score": 79.06976744186046
+      "match_score": 100.0
     },
     {
       "zatu_handle": "watergate",
@@ -2959,14 +2959,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 421374,
-          "bgg_name": "Landmarks"
+          "bgg_id": 385318,
+          "bgg_name": "Cascadia: Landmarks"
         }
       ],
-      "match_score": 66.66666666666667
+      "match_score": 100.0
     },
     {
       "zatu_handle": "port-royal",
@@ -3086,14 +3086,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 103858,
-          "bgg_name": "Vagabond"
+          "bgg_id": 309977,
+          "bgg_name": "Root: The Vagabond Pack"
         }
       ],
-      "match_score": 61.53846153846154
+      "match_score": 100.0
     },
     {
       "zatu_handle": "root-the-marauder-expansion",
@@ -3110,14 +3110,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 324555,
-          "bgg_name": "Robot Overload: Expansion 1"
+          "bgg_id": 330149,
+          "bgg_name": "Root: The Marauder Expansion"
         }
       ],
-      "match_score": 73.46938775510203
+      "match_score": 100.0
     },
     {
       "zatu_handle": "my-city",
@@ -3203,14 +3203,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 277659,
-          "bgg_name": "Final Girl"
+          "bgg_id": 354775,
+          "bgg_name": "Final Girl: Into the Void"
         }
       ],
-      "match_score": 66.66666666666667
+      "match_score": 100.0
     },
     {
       "zatu_handle": "rise-empire-star-wars-empire-exp",
@@ -3231,14 +3231,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 160964,
-          "bgg_name": "Star Wars: Empire vs. Rebellion"
+          "bgg_id": 226840,
+          "bgg_name": "Star Wars: Rebellion \u2013 Rise of the Empire"
         }
       ],
-      "match_score": 82.53968253968253
+      "match_score": 100.0
     },
     {
       "zatu_handle": "arkham-horror-the-card-game-chapter-two-core-set",
@@ -3588,14 +3588,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 40996,
-          "bgg_name": "Race Cars: Tracks and Drivers"
+          "bgg_id": 419279,
+          "bgg_name": "Arcs: Leaders & Lore Pack"
         }
       ],
-      "match_score": 70.37037037037037
+      "match_score": 100.0
     },
     {
       "zatu_handle": "unlock-2",
@@ -3706,14 +3706,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 330226,
-          "bgg_name": "Champions of Shaleria: Core Deck"
+          "bgg_id": 288794,
+          "bgg_name": "Marvel Champions: The Card Game \u2013 The Green Goblin Scenario Pack"
         }
       ],
-      "match_score": 59.45945945945945
+      "match_score": 100.0
     },
     {
       "zatu_handle": "cascadia-kickstarter-edition",
@@ -3902,14 +3902,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 18479,
-          "bgg_name": "Star Encounters"
+          "bgg_id": 262151,
+          "bgg_name": "Scythe: Encounters"
         }
       ],
-      "match_score": 81.25
+      "match_score": 100.0
     },
     {
       "zatu_handle": "oh-my-pigeons-party-game",
@@ -4074,14 +4074,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 32816,
-          "bgg_name": "Champion European War Game"
+          "bgg_id": 413236,
+          "bgg_name": "Marvel Champions: The Card Game \u2013 Iceman Hero Pack"
         }
       ],
-      "match_score": 67.79661016949152
+      "match_score": 100.0
     },
     {
       "zatu_handle": "frightmare-on-maple-lane-final-girl-exp",
@@ -4158,14 +4158,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 277659,
-          "bgg_name": "Final Girl"
+          "bgg_id": 354777,
+          "bgg_name": "Final Girl: A Knock at the Door"
         }
       ],
-      "match_score": 58.82352941176471
+      "match_score": 100.0
     },
     {
       "zatu_handle": "clank-adventuring-party",
@@ -4185,14 +4185,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": true,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 377895,
-          "bgg_name": "Adventuring Letty"
+          "bgg_id": 308918,
+          "bgg_name": "Clank!: Adventuring Party"
         }
       ],
-      "match_score": 75.0
+      "match_score": 100.0
     },
     {
       "zatu_handle": "twilight-imperium-prophecy-of-kings-expansion",
@@ -4240,14 +4240,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 36939,
-          "bgg_name": "The Road to Health"
+          "bgg_id": 459763,
+          "bgg_name": "Heat: Rocky Roads"
         }
       ],
-      "match_score": 73.33333333333334
+      "match_score": 100.0
     },
     {
       "zatu_handle": "final-girl-panic-at-station-2891",
@@ -4268,14 +4268,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 186326,
-          "bgg_name": "Grand Central Station"
+          "bgg_id": 354776,
+          "bgg_name": "Final Girl: Panic at Station 2891"
         }
       ],
-      "match_score": 60.37735849056604
+      "match_score": 100.0
     },
     {
       "zatu_handle": "heroquest-board-game-expansion-wizards-of-morcar-quest-pack",
@@ -4389,14 +4389,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 240077,
-          "bgg_name": "Hero: Prepare Your Champion"
+          "bgg_id": 299049,
+          "bgg_name": "Marvel Champions: The Card Game \u2013 Black Widow Hero Pack"
         }
       ],
-      "match_score": 62.5
+      "match_score": 100.0
     },
     {
       "zatu_handle": "richard-osmans-house-of-games",
@@ -4536,14 +4536,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 254192,
-          "bgg_name": "Harry Potter: Hogwarts Battle \u2013 Defence Against the Dark Arts"
+          "bgg_id": 304297,
+          "bgg_name": "Harry Potter: Hogwarts Battle \u2013 The Charms and Potions Expansion"
         }
       ],
-      "match_score": 66.66666666666667
+      "match_score": 100.0
     },
     {
       "zatu_handle": "spirit-island-board-game-nature-incarnate-expansion",
@@ -4663,14 +4663,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 410768,
-          "bgg_name": "Final Girl: S1 Ultimate Box"
+          "bgg_id": 354779,
+          "bgg_name": "Final Girl: Madness in the Dark"
         }
       ],
-      "match_score": 61.53846153846154
+      "match_score": 100.0
     },
     {
       "zatu_handle": "monster-box-of-monsters-expansion",
@@ -4686,14 +4686,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 199042,
-          "bgg_name": "Harry Potter: Hogwarts Battle"
+          "bgg_id": 223494,
+          "bgg_name": "Harry Potter: Hogwarts Battle \u2013 The Monster Box of Monsters Expansion"
         }
       ],
-      "match_score": 62.22222222222222
+      "match_score": 100.0
     },
     {
       "zatu_handle": "grand-tour-flamme-rouge-expansion",
@@ -5110,14 +5110,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 285774,
-          "bgg_name": "Marvel Champions: The Card Game"
+          "bgg_id": 439508,
+          "bgg_name": "Marvel Champions: The Card Game \u2013 Silk Hero Pack"
         }
       ],
-      "match_score": 68.08510638297872
+      "match_score": 100.0
     },
     {
       "zatu_handle": "azul-crystal-mosaic",
@@ -5136,14 +5136,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 446636,
-          "bgg_name": "Space Crystal"
+          "bgg_id": 294345,
+          "bgg_name": "Azul: Crystal Mosaic"
         }
       ],
-      "match_score": 68.75
+      "match_score": 100.0
     },
     {
       "zatu_handle": "flamme-rouge-peloton-expansion-mlv",
@@ -5347,14 +5347,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 177736,
-          "bgg_name": "A Feast for Odin"
+          "bgg_id": 216788,
+          "bgg_name": "A Feast for Odin: The Norwegians"
         }
       ],
-      "match_score": 71.7948717948718
+      "match_score": 100.0
     },
     {
       "zatu_handle": "secrets-lies-mysterium-expansion-2",
@@ -5451,14 +5451,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 258562,
-          "bgg_name": "SEVEN: 4 Players Expansion"
+          "bgg_id": 2807,
+          "bgg_name": "Catan: 5-6 Player Expansion"
         }
       ],
-      "match_score": 76.59574468085107
+      "match_score": 100.0
     },
     {
       "zatu_handle": "beyond-threshold-mansions-madness",
@@ -5534,14 +5534,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 256872,
-          "bgg_name": "Expansion or Extinction"
+          "bgg_id": 245392,
+          "bgg_name": "Obsession: Wessex Expansion"
         }
       ],
-      "match_score": 61.224489795918366
+      "match_score": 100.0
     },
     {
       "zatu_handle": "endeavor-deep-sea",
@@ -5653,14 +5653,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 185243,
-          "bgg_name": "Rise of Man: Stone Age"
+          "bgg_id": 242277,
+          "bgg_name": "Scythe: The Rise of Fenris"
         }
       ],
-      "match_score": 66.66666666666667
+      "match_score": 100.0
     },
     {
       "zatu_handle": "bus-complete-edition",
@@ -6217,14 +6217,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 426258,
-          "bgg_name": "Hell: Legends"
+          "bgg_id": 463405,
+          "bgg_name": "Heat: Legends"
         }
       ],
-      "match_score": 83.33333333333334
+      "match_score": 100.0
     },
     {
       "zatu_handle": "7-wonders-2nd-edition-leaders-expansion",
@@ -6521,14 +6521,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 342900,
-          "bgg_name": "Earthborne Rangers"
+          "bgg_id": 400328,
+          "bgg_name": "Earthborne Rangers: Stewards of the Valley"
         }
       ],
-      "match_score": 65.45454545454545
+      "match_score": 100.0
     },
     {
       "zatu_handle": "nekojima",
@@ -6670,14 +6670,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 464920,
-          "bgg_name": "Hunt for the Final Girl"
+          "bgg_id": 354778,
+          "bgg_name": "Final Girl: Once Upon a Full Moon"
         }
       ],
-      "match_score": 61.224489795918366
+      "match_score": 100.0
     },
     {
       "zatu_handle": "ligretto-green",
@@ -6750,14 +6750,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 434858,
-          "bgg_name": "Converge: Champions of Nature"
+          "bgg_id": 446592,
+          "bgg_name": "Marvel Champions: The Card Game \u2013 Falcon Hero Pack"
         }
       ],
-      "match_score": 65.57377049180329
+      "match_score": 100.0
     },
     {
       "zatu_handle": "memoir-44",
@@ -6942,14 +6942,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 159493,
-          "bgg_name": "Marvel Comics Super-Heroes Game"
+          "bgg_id": 372718,
+          "bgg_name": "Marvel Champions: The Card Game \u2013 Gambit Hero Pack"
         }
       ],
-      "match_score": 68.75
+      "match_score": 100.0
     },
     {
       "zatu_handle": "dobble-kids",
@@ -7264,14 +7264,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 240077,
-          "bgg_name": "Hero: Prepare Your Champion"
+          "bgg_id": 357957,
+          "bgg_name": "Marvel Champions: The Card Game \u2013 Ironheart Hero Pack"
         }
       ],
-      "match_score": 64.51612903225806
+      "match_score": 100.0
     },
     {
       "zatu_handle": "meteo-flamme-rouge",
@@ -7339,14 +7339,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 167791,
-          "bgg_name": "Terraforming Mars"
+          "bgg_id": 273473,
+          "bgg_name": "Terraforming Mars: Turmoil"
         }
       ],
-      "match_score": 80.95238095238095
+      "match_score": 100.0
     },
     {
       "zatu_handle": "final-girl-terror-from-the-grave-vignette",
@@ -7389,14 +7389,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 342900,
-          "bgg_name": "Earthborne Rangers"
+          "bgg_id": 354291,
+          "bgg_name": "Earthborne Rangers: Legacy of the Ancestors"
         }
       ],
-      "match_score": 64.28571428571428
+      "match_score": 100.0
     },
     {
       "zatu_handle": "catan-seafarers-expansion-6th-edition",
@@ -7445,14 +7445,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 152436,
-          "bgg_name": "Campaign Book #7: The War of Independence in the North"
+          "bgg_id": 470890,
+          "bgg_name": "Arkham Horror: The Card Game \u2013 Children of Blood Small Campaign Expansion"
         }
       ],
-      "match_score": 58.00000000000001
+      "match_score": 100.0
     },
     {
       "zatu_handle": "deep-regrets-lamentable-tentacles-mini-expansion",
@@ -7472,14 +7472,14 @@
       ],
       "zatu_is_coop": true,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 85555,
-          "bgg_name": "Neutral Zone:  A Game of Interstellar Expansion"
+          "bgg_id": 421471,
+          "bgg_name": "Deep Regrets: Lamentable Tentacles Mini-Expansion"
         }
       ],
-      "match_score": 57.14285714285714
+      "match_score": 100.0
     },
     {
       "zatu_handle": "ticket-ride-map-collection-volume-3-heart-africa",
@@ -7757,14 +7757,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 420498,
-          "bgg_name": "Unstoppable"
+          "bgg_id": 430916,
+          "bgg_name": "Unstoppable: Tyrant's End"
         }
       ],
-      "match_score": 62.857142857142854
+      "match_score": 100.0
     },
     {
       "zatu_handle": "fugitive-2nd-edition",
@@ -7881,14 +7881,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 167791,
-          "bgg_name": "Terraforming Mars"
+          "bgg_id": 387809,
+          "bgg_name": "Terraforming Mars: Prelude 2"
         }
       ],
-      "match_score": 77.27272727272727
+      "match_score": 100.0
     },
     {
       "zatu_handle": "here-to-slay-base-game",
@@ -8079,14 +8079,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 253385,
-          "bgg_name": "Spirits of Carter Mansion"
+          "bgg_id": 397067,
+          "bgg_name": "Obsession: Characters Expansion"
         }
       ],
-      "match_score": 61.81818181818181
+      "match_score": 100.0
     },
     {
       "zatu_handle": "ligretto-blue",
@@ -8210,14 +8210,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 318977,
-          "bgg_name": "MicroMacro: Crime City"
+          "bgg_id": 400114,
+          "bgg_name": "MicroMacro: Crime City \u2013 Bonus Box"
         }
       ],
-      "match_score": 80.76923076923077
+      "match_score": 100.0
     },
     {
       "zatu_handle": "castle-combo-out-of-the-oubliette",
@@ -8241,14 +8241,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 468305,
-          "bgg_name": "The Case of the Curiously Quiet Theater"
+          "bgg_id": 448182,
+          "bgg_name": "Castle Combo: Out of the Oubliette!"
         }
       ],
-      "match_score": 60.0
+      "match_score": 100.0
     },
     {
       "zatu_handle": "downforce-wild-ride-expansion",
@@ -8328,14 +8328,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 170149,
-          "bgg_name": "BrainBites: Myths & Legends"
+          "bgg_id": 303837,
+          "bgg_name": "Destinies: Myth & Folklore"
         }
       ],
-      "match_score": 61.81818181818181
+      "match_score": 100.0
     },
     {
       "zatu_handle": "imploding-kittens-exploding-kittens-exp",
@@ -8424,14 +8424,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 23021,
-          "bgg_name": "Power, Plots and Pistols"
+          "bgg_id": 315708,
+          "bgg_name": "Tapestry: Plans and Ploys"
         }
       ],
-      "match_score": 68.08510638297872
+      "match_score": 100.0
     },
     {
       "zatu_handle": "obama-llama-2-mini",
@@ -8733,14 +8733,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 375852,
-          "bgg_name": "Welcome to Everdell"
+          "bgg_id": 332390,
+          "bgg_name": "Everdell: Newleaf"
         }
       ],
-      "match_score": 68.57142857142857
+      "match_score": 100.0
     },
     {
       "zatu_handle": "even-deeper-regrets",
@@ -8762,14 +8762,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 397931,
-          "bgg_name": "Deep Regrets"
+          "bgg_id": 440640,
+          "bgg_name": "Even Deeper Regrets"
         }
       ],
-      "match_score": 77.41935483870968
+      "match_score": 100.0
     },
     {
       "zatu_handle": "quoridor-mini-uk-ireland-only",
@@ -8949,14 +8949,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 224316,
-          "bgg_name": "Unlock!: Escape Adventures \u2013 The Elite"
+          "bgg_id": 254720,
+          "bgg_name": "Escape the Dark Castle: Adventure Pack 3 \u2013 Blight of the Plague Lord"
         }
       ],
-      "match_score": 59.77011494252873
+      "match_score": 100.0
     },
     {
       "zatu_handle": "rummikub-travel",
@@ -9089,14 +9089,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 433640,
-          "bgg_name": "Cthulhu: Death May Die \u2013 Forbidden Reaches"
+          "bgg_id": 256972,
+          "bgg_name": "Cthulhu: Death May Die \u2013 Season 2 Expansion"
         }
       ],
-      "match_score": 70.88607594936708
+      "match_score": 100.0
     },
     {
       "zatu_handle": "mycelia-game",
@@ -9325,14 +9325,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 293148,
-          "bgg_name": "Girls Night Out: The Pre-Game"
+          "bgg_id": 401763,
+          "bgg_name": "Final Girl: The North Pole Nightmare"
         }
       ],
-      "match_score": 65.45454545454545
+      "match_score": 100.0
     },
     {
       "zatu_handle": "wingspan-fan-designed-packs",
@@ -9436,14 +9436,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 407297,
-          "bgg_name": "River Valley Glassworks"
+          "bgg_id": 418124,
+          "bgg_name": "River Valley Glassworks: River Glass and Other Sundries"
         }
       ],
-      "match_score": 59.74025974025974
+      "match_score": 100.0
     },
     {
       "zatu_handle": "star-trek-captains-chair-card-game-second-contact",
@@ -9464,14 +9464,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 422541,
-          "bgg_name": "Star Trek: Captain's Chair"
+          "bgg_id": 448088,
+          "bgg_name": "Star Trek: Captain's Chair \u2013 Second Contact"
         }
       ],
-      "match_score": 76.92307692307692
+      "match_score": 100.0
     },
     {
       "zatu_handle": "zatu-mega-box",
@@ -9598,14 +9598,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 199548,
-          "bgg_name": "Flint and Feather"
+          "bgg_id": 356510,
+          "bgg_name": "Spirit Island: Feather & Flame"
         }
       ],
-      "match_score": 70.83333333333333
+      "match_score": 100.0
     },
     {
       "zatu_handle": "corks-family-party-game",
@@ -9653,14 +9653,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 365717,
-          "bgg_name": "Clank!: Catacombs"
+          "bgg_id": 447586,
+          "bgg_name": "Clank!: Catacombs \u2013 Underworld"
         }
       ],
-      "match_score": 73.17073170731707
+      "match_score": 100.0
     },
     {
       "zatu_handle": "grand-austria-hotel-lets-waltz",
@@ -9677,14 +9677,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 182874,
-          "bgg_name": "Grand Austria Hotel"
+          "bgg_id": 320780,
+          "bgg_name": "Grand Austria Hotel: Let's Waltz!"
         }
       ],
-      "match_score": 76.0
+      "match_score": 100.0
     },
     {
       "zatu_handle": "druids-of-edora-game",
@@ -9774,14 +9774,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 348406,
-          "bgg_name": "Marvel Dice Throne"
+          "bgg_id": 403511,
+          "bgg_name": "Marvel Dice Throne: Deadpool"
         }
       ],
-      "match_score": 80.0
+      "match_score": 100.0
     },
     {
       "zatu_handle": "barbecubes",
@@ -10213,14 +10213,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 203043,
-          "bgg_name": "Clockwork Empire"
+          "bgg_id": 334483,
+          "bgg_name": "Root: The Clockwork Expansion 2"
         }
       ],
-      "match_score": 66.66666666666667
+      "match_score": 100.0
     },
     {
       "zatu_handle": "expeditions-gears-of-corruption",
@@ -10241,14 +10241,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 299250,
-          "bgg_name": "Divine Corruption"
+          "bgg_id": 421689,
+          "bgg_name": "Expeditions: Gears of Corruption"
         }
       ],
-      "match_score": 66.66666666666667
+      "match_score": 100.0
     },
     {
       "zatu_handle": "root-riverfolk-hirelings-pack",
@@ -10265,14 +10265,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 8507,
-          "bgg_name": "Wo ist Jack the Ripper"
+          "bgg_id": 334485,
+          "bgg_name": "Root: Riverfolk Hirelings Pack"
         }
       ],
-      "match_score": 55.319148936170215
+      "match_score": 100.0
     },
     {
       "zatu_handle": "the-chameleon-travel",
@@ -10563,14 +10563,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 399719,
-          "bgg_name": "Stone Of Destiny"
+          "bgg_id": 303836,
+          "bgg_name": "Destinies: Sea of Sand"
         }
       ],
-      "match_score": 70.27027027027026
+      "match_score": 100.0
     },
     {
       "zatu_handle": "the-white-castle-matcha",
@@ -10594,14 +10594,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 371942,
-          "bgg_name": "The White Castle"
+          "bgg_id": 420321,
+          "bgg_name": "The White Castle: Matcha"
         }
       ],
-      "match_score": 77.41935483870968
+      "match_score": 100.0
     },
     {
       "zatu_handle": "exploding-kittens-coyote",
@@ -10676,14 +10676,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 58786,
-          "bgg_name": "Round the World in Place Value"
+          "bgg_id": 361193,
+          "bgg_name": "Root: Underworld Hirelings Pack"
         }
       ],
-      "match_score": 64.28571428571428
+      "match_score": 100.0
     },
     {
       "zatu_handle": "bbcs-the-traitors-card-game",
@@ -10729,14 +10729,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 414317,
-          "bgg_name": "Harmonies"
+          "bgg_id": 466234,
+          "bgg_name": "Harmonies: Pulse"
         }
       ],
-      "match_score": 75.0
+      "match_score": 100.0
     },
     {
       "zatu_handle": "werewords-deluxe",
@@ -11220,14 +11220,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 443657,
-          "bgg_name": "The Irregular Miniatures Pike and Shot Rule Box"
+          "bgg_id": 336276,
+          "bgg_name": "Root: Marauder Hirelings Pack & Hireling Box"
         }
       ],
-      "match_score": 56.81818181818181
+      "match_score": 100.0
     },
     {
       "zatu_handle": "king-of-tokyo-anubis-monster-pack",
@@ -11331,14 +11331,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 324555,
-          "bgg_name": "Robot Overload: Expansion 1"
+          "bgg_id": 428335,
+          "bgg_name": "Root: The Homeland Expansion"
         }
       ],
-      "match_score": 81.63265306122449
+      "match_score": 100.0
     },
     {
       "zatu_handle": "maladum-dungeons-of-enveron-starter-set",
@@ -11601,14 +11601,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 406693,
-          "bgg_name": "Temple of Deception"
+          "bgg_id": 282426,
+          "bgg_name": "Clank! Expeditions: Temple of the Ape Lords"
         }
       ],
-      "match_score": 64.28571428571428
+      "match_score": 100.0
     },
     {
       "zatu_handle": "evolution",
@@ -11731,14 +11731,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 374173,
-          "bgg_name": "Star Wars: The Deckbuilding Game"
+          "bgg_id": 453918,
+          "bgg_name": "Star Wars: The Deckbuilding Game \u2013 Mandalorian Faction Pack"
         }
       ],
-      "match_score": 68.35443037974683
+      "match_score": 100.0
     },
     {
       "zatu_handle": "bullet",
@@ -11863,14 +11863,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 40472,
-          "bgg_name": "CSI: Crime Game \u2013 Booster Pack #2"
+          "bgg_id": 388369,
+          "bgg_name": "Linkee: Booster Pack"
         }
       ],
-      "match_score": 66.66666666666667
+      "match_score": 100.0
     },
     {
       "zatu_handle": "dorfromantik-the-boad-game-wetterau-mini-expansion",
@@ -11938,14 +11938,18 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 436821,
-          "bgg_name": "Everdell Silverfrost"
+          "bgg_id": 289056,
+          "bgg_name": "Everdell: Spirecrest"
+        },
+        {
+          "bgg_id": 319419,
+          "bgg_name": "Everdell: Spirecrest \u2013 Collector's Edition"
         }
       ],
-      "match_score": 76.92307692307692
+      "match_score": 100.0
     },
     {
       "zatu_handle": "unlock-short-adventures-9-birmingham",
@@ -12108,14 +12112,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 5003,
-          "bgg_name": "Build the American Dream"
+          "bgg_id": 247720,
+          "bgg_name": "Agricola: Bubulcus Deck"
         }
       ],
-      "match_score": 57.14285714285714
+      "match_score": 100.0
     },
     {
       "zatu_handle": "everdell-silverfrost-essentials-edition",
@@ -12188,14 +12192,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 34117,
-          "bgg_name": "Winds of War"
+          "bgg_id": 252999,
+          "bgg_name": "Onitama: Way of the Wind"
         }
       ],
-      "match_score": 64.51612903225806
+      "match_score": 100.0
     },
     {
       "zatu_handle": "perlae-imperii-res-arcana-expansion",
@@ -12248,14 +12252,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 406168,
-          "bgg_name": "MONSTRYS Roll & Paint"
+          "bgg_id": 213360,
+          "bgg_name": "Roll Player: Monsters & Minions"
         }
       ],
-      "match_score": 69.0909090909091
+      "match_score": 100.0
     },
     {
       "zatu_handle": "pictures",
@@ -12335,14 +12339,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 296108,
-          "bgg_name": "Terraforming Mars: The Dice Game"
+          "bgg_id": 406001,
+          "bgg_name": "Terraforming Mars: Amazonis & Vastitas"
         }
       ],
-      "match_score": 63.63636363636363
+      "match_score": 100.0
     },
     {
       "zatu_handle": "dorfromantik-great-mill-mini-expansion",
@@ -12412,14 +12416,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 329841,
-          "bgg_name": "Ticket to Ride: Europe \u2013 15th Anniversary"
+          "bgg_id": 414268,
+          "bgg_name": "Ticket to Ride Map Collection 8: Iberia & South Korea"
         }
       ],
-      "match_score": 56.52173913043479
+      "match_score": 100.0
     },
     {
       "zatu_handle": "tokaido-new-edition",
@@ -12469,14 +12473,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 240077,
-          "bgg_name": "Hero: Prepare Your Champion"
+          "bgg_id": 347812,
+          "bgg_name": "Marvel Champions: The Card Game \u2013 The Vision Hero Pack"
         }
       ],
-      "match_score": 67.79661016949152
+      "match_score": 100.0
     },
     {
       "zatu_handle": "floristry",
@@ -12680,14 +12684,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 348467,
-          "bgg_name": "Martian Expansion"
+          "bgg_id": 202453,
+          "bgg_name": "Targi: The Expansion"
         }
       ],
-      "match_score": 81.25
+      "match_score": 100.0
     },
     {
       "zatu_handle": "exit-family-2-escape-adventures-new-avail-february",
@@ -12760,14 +12764,18 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 394106,
-          "bgg_name": "Everdell Farshore"
+          "bgg_id": 259996,
+          "bgg_name": "Everdell: Pearlbrook"
+        },
+        {
+          "bgg_id": 319420,
+          "bgg_name": "Everdell: Pearlbrook \u2013 Collector's Edition"
         }
       ],
-      "match_score": 66.66666666666667
+      "match_score": 100.0
     },
     {
       "zatu_handle": "unlock-short-3-the-flight-of-the-angel",
@@ -12807,14 +12815,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 273352,
-          "bgg_name": "Chain Mail: Adventures of Earthshine"
+          "bgg_id": 436334,
+          "bgg_name": "Maladum: Of Ale and Adventure Expansion"
         }
       ],
-      "match_score": 68.49315068493152
+      "match_score": 100.0
     },
     {
       "zatu_handle": "cthulhu-wars-the-ancients-faction-expansion",
@@ -12909,14 +12917,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 167400,
-          "bgg_name": "Ashes Reborn: Rise of the Phoenixborn"
+          "bgg_id": 455768,
+          "bgg_name": "Ashes Reborn: Red Rains \u2013 The End of Argaia"
         }
       ],
-      "match_score": 61.76470588235294
+      "match_score": 100.0
     },
     {
       "zatu_handle": "earthborne-shadow-of-the-storm",
@@ -13021,14 +13029,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 32226,
-          "bgg_name": "Liebe & Intrige"
+          "bgg_id": 204814,
+          "bgg_name": "Orl\u00e9ans: Trade & Intrigue"
         }
       ],
-      "match_score": 69.76744186046511
+      "match_score": 100.0
     },
     {
       "zatu_handle": "saboteur-2",
@@ -13104,14 +13112,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 456144,
-          "bgg_name": "Fog and Fortune"
+          "bgg_id": 437871,
+          "bgg_name": "Ahoy: Fang & Fortune"
         }
       ],
-      "match_score": 77.77777777777779
+      "match_score": 100.0
     },
     {
       "zatu_handle": "unstable-unicorns-rainbow-apocalypse-expansion-pack",
@@ -13130,14 +13138,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 287952,
-          "bgg_name": "Unstable Unicorns: NSFW Base Game"
+          "bgg_id": 243566,
+          "bgg_name": "Unstable Unicorns: Rainbow Apocalypse Expansion Pack"
         }
       ],
-      "match_score": 62.65060240963856
+      "match_score": 100.0
     },
     {
       "zatu_handle": "hell-to-pay-final-girl",
@@ -13265,14 +13273,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 191189,
-          "bgg_name": "Aeon's End"
+          "bgg_id": 223914,
+          "bgg_name": "Aeon's End: The Void"
         }
       ],
-      "match_score": 80.0
+      "match_score": 100.0
     },
     {
       "zatu_handle": "sidereal-confluence-remastered-edition",
@@ -13493,14 +13501,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 170042,
-          "bgg_name": "Raiders of the North Sea"
+          "bgg_id": 210163,
+          "bgg_name": "Raiders of the North Sea: Hall of Heroes"
         }
       ],
-      "match_score": 72.72727272727273
+      "match_score": 100.0
     },
     {
       "zatu_handle": "destinies-bound-by-fate",
@@ -13522,14 +13530,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 39158,
-          "bgg_name": "Haunted Destinies"
+          "bgg_id": 303835,
+          "bgg_name": "Destinies: Bound By Fate"
         }
       ],
-      "match_score": 65.0
+      "match_score": 100.0
     },
     {
       "zatu_handle": "bullet-star",
@@ -13780,14 +13788,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 140857,
-          "bgg_name": "Renaissance Man"
+          "bgg_id": 257673,
+          "bgg_name": "Dominion: Renaissance"
         }
       ],
-      "match_score": 80.0
+      "match_score": 100.0
     },
     {
       "zatu_handle": "fallen-land-core-game",
@@ -14268,14 +14276,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 380463,
-          "bgg_name": "Pitchfork Rebellion"
+          "bgg_id": 258003,
+          "bgg_name": "Dice Forge: Rebellion"
         }
       ],
-      "match_score": 76.92307692307692
+      "match_score": 100.0
     },
     {
       "zatu_handle": "u-boot-the-board-game",
@@ -14407,14 +14415,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 8067,
-          "bgg_name": "Royalists & Roundheads III"
+          "bgg_id": 403656,
+          "bgg_name": "Ahoy: Rivals & Renegades"
         }
       ],
-      "match_score": 62.745098039215684
+      "match_score": 100.0
     },
     {
       "zatu_handle": "core-space-galactic-corps-expansion",
@@ -14457,14 +14465,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 437919,
-          "bgg_name": "Instinkt: Duell der Tiere"
+          "bgg_id": 385269,
+          "bgg_name": "Terrorscape: Feral Instincts"
         }
       ],
-      "match_score": 62.745098039215684
+      "match_score": 100.0
     },
     {
       "zatu_handle": "catan-c2-96-explorers-pirates-6th-edition",
@@ -14487,14 +14495,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 309658,
-          "bgg_name": "Pirates & Lasers"
+          "bgg_id": 135378,
+          "bgg_name": "Catan: Explorers & Pirates"
         }
       ],
-      "match_score": 71.11111111111111
+      "match_score": 100.0
     },
     {
       "zatu_handle": "oltree-undead-alive",
@@ -14511,14 +14519,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 401395,
-          "bgg_name": "Alive or Undead"
+          "bgg_id": 352979,
+          "bgg_name": "Oltr\u00e9\u00e9: Undead & Alive"
         }
       ],
-      "match_score": 78.94736842105263
+      "match_score": 100.0
     },
     {
       "zatu_handle": "tiny-epic-cthulhu",
@@ -14570,14 +14578,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 313182,
-          "bgg_name": "Goats vs Mountain"
+          "bgg_id": 326964,
+          "bgg_name": "Mountain Goats: Expansion Pack"
         }
       ],
-      "match_score": 65.21739130434783
+      "match_score": 100.0
     },
     {
       "zatu_handle": "on-the-air-the-networks-expansion",
@@ -14990,14 +14998,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 256916,
-          "bgg_name": "Concordia Venus"
+          "bgg_id": 262711,
+          "bgg_name": "Concordia: Venus (Expansion)"
         }
       ],
-      "match_score": 75.0
+      "match_score": 100.0
     },
     {
       "zatu_handle": "sherlock-holmes-consulting-detective-bureau-of-investigation",
@@ -15041,14 +15049,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 444058,
-          "bgg_name": "Terrorscape 2"
+          "bgg_id": 385270,
+          "bgg_name": "Terrorscape: Amorphous Peril"
         }
       ],
-      "match_score": 60.0
+      "match_score": 100.0
     },
     {
       "zatu_handle": "killer-from-tomorrow-final-girl",
@@ -15114,14 +15122,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 368728,
-          "bgg_name": "Inky's Fortune"
+          "bgg_id": 287576,
+          "bgg_name": "Tiny Towns: Fortune"
         }
       ],
-      "match_score": 81.25
+      "match_score": 100.0
     },
     {
       "zatu_handle": "botanik-english-french-version",
@@ -15311,14 +15319,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 253344,
-          "bgg_name": "Cthulhu: Death May Die"
+          "bgg_id": 256985,
+          "bgg_name": "Cthulhu: Death May Die \u2013 Yog\u2013Sothoth"
         }
       ],
-      "match_score": 77.77777777777779
+      "match_score": 100.0
     },
     {
       "zatu_handle": "forgotten-lands-explorers-of-navoria-expansion",
@@ -15801,14 +15809,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 456068,
-          "bgg_name": "Heroes del huerto"
+          "bgg_id": 422344,
+          "bgg_name": "HeroQuest: Jungles of Delthrak"
         }
       ],
-      "match_score": 60.86956521739131
+      "match_score": 100.0
     },
     {
       "zatu_handle": "kites-time-to-fly",
@@ -15859,14 +15867,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 187164,
-          "bgg_name": "The Martian Investigations"
+          "bgg_id": 215942,
+          "bgg_name": "Sub Terra: Investigation"
         }
       ],
-      "match_score": 75.55555555555556
+      "match_score": 100.0
     },
     {
       "zatu_handle": "final-girl-series-3-ultimate-boxes",
@@ -15985,14 +15993,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 220308,
-          "bgg_name": "Gaia Project"
+          "bgg_id": 396802,
+          "bgg_name": "Gaia Project: The Lost Fleet"
         }
       ],
-      "match_score": 68.57142857142857
+      "match_score": 100.0
     },
     {
       "zatu_handle": "dominion-rising-sun",
@@ -16011,14 +16019,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 373994,
-          "bgg_name": "Sun Moon Rising"
+          "bgg_id": 420298,
+          "bgg_name": "Dominion: Rising Sun"
         }
       ],
-      "match_score": 82.35294117647058
+      "match_score": 100.0
     },
     {
       "zatu_handle": "cthulhu-wars-bubastis-faction-expansion",
@@ -16090,14 +16098,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 239188,
-          "bgg_name": "Chronicles of Crime"
+          "bgg_id": 249811,
+          "bgg_name": "Chronicles of Crime: Noir"
         }
       ],
-      "match_score": 88.37209302325581
+      "match_score": 100.0
     },
     {
       "zatu_handle": "heroquest",
@@ -16173,14 +16181,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 167791,
-          "bgg_name": "Terraforming Mars"
+          "bgg_id": 395612,
+          "bgg_name": "Terraforming Mars: Automa"
         }
       ],
-      "match_score": 82.92682926829268
+      "match_score": 100.0
     },
     {
       "zatu_handle": "star-wars-edge-of-the-empire-rpg-beginner-game-edge-studio-edition",
@@ -16278,14 +16286,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 436649,
-          "bgg_name": "Dominion of the Spear"
+          "bgg_id": 66690,
+          "bgg_name": "Dominion: Prosperity"
         }
       ],
-      "match_score": 77.77777777777779
+      "match_score": 100.0
     },
     {
       "zatu_handle": "unlock-short-4-doo-aranns-dungeon",
@@ -16353,14 +16361,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 337394,
-          "bgg_name": "Castle Panic: Deluxe Collection"
+          "bgg_id": 399215,
+          "bgg_name": "Cartographers: Map Pack Collection"
         }
       ],
-      "match_score": 67.85714285714286
+      "match_score": 100.0
     },
     {
       "zatu_handle": "mycelia-standard",
@@ -16408,14 +16416,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 143062,
-          "bgg_name": "Abandon Earth"
+          "bgg_id": 414734,
+          "bgg_name": "Earth: Abundance"
         }
       ],
-      "match_score": 78.57142857142857
+      "match_score": 100.0
     },
     {
       "zatu_handle": "the-sun-never-set-splendor",
@@ -16767,14 +16775,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 231151,
-          "bgg_name": "New Beeginnings"
+          "bgg_id": 342501,
+          "bgg_name": "Paleo: A New Beginning"
         }
       ],
-      "match_score": 76.47058823529412
+      "match_score": 100.0
     },
     {
       "zatu_handle": "king-of-tokyo-even-more-wicked-micro-expansion",
@@ -16948,14 +16956,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 144339,
-          "bgg_name": "Alchemy Dice"
+          "bgg_id": 66098,
+          "bgg_name": "Dominion: Alchemy"
         }
       ],
-      "match_score": 71.42857142857143
+      "match_score": 100.0
     },
     {
       "zatu_handle": "nova-marvel-champions-hero-pack",
@@ -16977,14 +16985,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 285774,
-          "bgg_name": "Marvel Champions: The Card Game"
+          "bgg_id": 356075,
+          "bgg_name": "Marvel Champions: The Card Game \u2013 Nova Hero Pack"
         }
       ],
-      "match_score": 68.08510638297872
+      "match_score": 100.0
     },
     {
       "zatu_handle": "mindbug-first-contact-new-servants-add-on",
@@ -17194,14 +17202,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 321206,
-          "bgg_name": "Battle of Adrica: Expansion"
+          "bgg_id": 342219,
+          "bgg_name": "Distilled: Africa & Middle East Expansion"
         }
       ],
-      "match_score": 61.76470588235294
+      "match_score": 100.0
     },
     {
       "zatu_handle": "catan-traders-barbarians-6th-edition",
@@ -17224,14 +17232,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 219950,
-          "bgg_name": "Barbarians & Empires"
+          "bgg_id": 27760,
+          "bgg_name": "Catan: Traders & Barbarians"
         }
       ],
-      "match_score": 72.0
+      "match_score": 100.0
     },
     {
       "zatu_handle": "push",
@@ -17364,14 +17372,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 379067,
-          "bgg_name": "Strikes & Spares"
+          "bgg_id": 468426,
+          "bgg_name": "Finspan: Sharks & Reefs"
         }
       ],
-      "match_score": 71.42857142857143
+      "match_score": 100.0
     },
     {
       "zatu_handle": "company-of-heroes-2nd-edition-core-set",
@@ -17421,14 +17429,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 191133,
-          "bgg_name": "Monopoly: Here & Now World Edition"
+          "bgg_id": 321259,
+          "bgg_name": "Here to Slay: Warriors & Druids Expansion"
         }
       ],
-      "match_score": 59.74025974025974
+      "match_score": 100.0
     },
     {
       "zatu_handle": "sly-pack-o-game",
@@ -17471,14 +17479,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 244991,
-          "bgg_name": "Ardor: Bending Time"
+          "bgg_id": 427705,
+          "bgg_name": "Apiary: Expanding the Hive"
         }
       ],
-      "match_score": 61.53846153846154
+      "match_score": 100.0
     },
     {
       "zatu_handle": "maladum-reference-cards",
@@ -17600,14 +17608,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 15034,
-          "bgg_name": "Good Neighbors: The Sharing Game"
+          "bgg_id": 400357,
+          "bgg_name": "The Night Cage: Shrieking Hollow"
         }
       ],
-      "match_score": 62.96296296296296
+      "match_score": 100.0
     },
     {
       "zatu_handle": "series-2-ultimate-boxes-final-girl",
@@ -17652,14 +17660,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 25985,
-          "bgg_name": "Stellar Annihilation"
+          "bgg_id": 215944,
+          "bgg_name": "Sub Terra: Annihilation"
         }
       ],
-      "match_score": 80.95238095238095
+      "match_score": 100.0
     },
     {
       "zatu_handle": "dobble-junior",
@@ -17726,14 +17734,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 375852,
-          "bgg_name": "Welcome to Everdell"
+          "bgg_id": 332397,
+          "bgg_name": "Everdell: Mistwood"
         }
       ],
-      "match_score": 66.66666666666667
+      "match_score": 100.0
     },
     {
       "zatu_handle": "eleven-base-game",
@@ -18194,14 +18202,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 418316,
-          "bgg_name": "Halo: Flashpoint"
+          "bgg_id": 459731,
+          "bgg_name": "Halo Flashpoint: Rise of the Banished"
         }
       ],
-      "match_score": 63.829787234042556
+      "match_score": 100.0
     },
     {
       "zatu_handle": "carcassonne-siege-defence-exp-7-2025",
@@ -18252,14 +18260,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 422732,
-          "bgg_name": "Agent Avenue"
+          "bgg_id": 450196,
+          "bgg_name": "Agent Avenue: Division M"
         }
       ],
-      "match_score": 68.57142857142857
+      "match_score": 100.0
     },
     {
       "zatu_handle": "bretwalda-artefacts",
@@ -18334,14 +18342,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 168275,
-          "bgg_name": "Monster Extermination"
+          "bgg_id": 215943,
+          "bgg_name": "Sub Terra: Extraction"
         }
       ],
-      "match_score": 68.29268292682926
+      "match_score": 100.0
     },
     {
       "zatu_handle": "sequence-classic-2",
@@ -18485,14 +18493,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 200670,
-          "bgg_name": "Immortal Warriors"
+          "bgg_id": 385271,
+          "bgg_name": "Terrorscape: Lethal Immortals"
         }
       ],
-      "match_score": 66.66666666666667
+      "match_score": 100.0
     },
     {
       "zatu_handle": "incohearent-the-spicier-edition",
@@ -18608,14 +18616,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 258563,
-          "bgg_name": "Twigs: 4 players expansion"
+          "bgg_id": 398755,
+          "bgg_name": "Wandering Towers: Mini Spell Expansion 2"
         }
       ],
-      "match_score": 62.5
+      "match_score": 100.0
     },
     {
       "zatu_handle": "yet-pack-o-game",
@@ -18662,14 +18670,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 432950,
-          "bgg_name": "20 Strong: Tanglewoods"
+          "bgg_id": 450869,
+          "bgg_name": "20 Strong: Tanglewoods Baba Yaga"
         }
       ],
-      "match_score": 80.76923076923077
+      "match_score": 100.0
     },
     {
       "zatu_handle": "catan-seafarers-5-6-player-expansion-6th-edition",
@@ -18765,14 +18773,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 223321,
-          "bgg_name": "Detective: A Modern Crime Board Game"
+          "bgg_id": 264005,
+          "bgg_name": "Detective:  L.A. Crimes"
         }
       ],
-      "match_score": 80.0
+      "match_score": 100.0
     },
     {
       "zatu_handle": "through-the-desert-board-game-bazaar-expansion",
@@ -18880,14 +18888,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 386835,
-          "bgg_name": "Final Girl: Starter Set"
+          "bgg_id": 438601,
+          "bgg_name": "Final Girl: A Rotten Harvest"
         }
       ],
-      "match_score": 72.34042553191489
+      "match_score": 100.0
     },
     {
       "zatu_handle": "limit",
@@ -19129,14 +19137,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 391827,
-          "bgg_name": "All in Flavor"
+          "bgg_id": 349725,
+          "bgg_name": "Honey Buzz: Fall Flavors"
         }
       ],
-      "match_score": 66.66666666666667
+      "match_score": 100.0
     },
     {
       "zatu_handle": "iq-gears",
@@ -19204,14 +19212,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 378136,
-          "bgg_name": "Hero Realms Dungeons"
+          "bgg_id": 265272,
+          "bgg_name": "Hero Realms: Ancestry"
         }
       ],
-      "match_score": 75.0
+      "match_score": 100.0
     },
     {
       "zatu_handle": "canvas-reflections",
@@ -19232,14 +19240,18 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 306741,
-          "bgg_name": "Canvas Falcons"
+          "bgg_id": 335172,
+          "bgg_name": "Canvas: Reflections"
+        },
+        {
+          "bgg_id": 337330,
+          "bgg_name": "Canvas: Reflections \u2013 Deluxe Edition"
         }
       ],
-      "match_score": 81.25
+      "match_score": 100.0
     },
     {
       "zatu_handle": "super-mario-guess-who",
@@ -19303,14 +19315,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 432303,
-          "bgg_name": "Terrible Influence"
+          "bgg_id": 363077,
+          "bgg_name": "Furnace: Interbellum"
         }
       ],
-      "match_score": 59.45945945945945
+      "match_score": 100.0
     },
     {
       "zatu_handle": "pagan-ancestors-content-pack",
@@ -19488,14 +19500,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 437002,
-          "bgg_name": "Shadows of Ruin"
+          "bgg_id": 438604,
+          "bgg_name": "Final Girl: A Demon in the Shadows"
         }
       ],
-      "match_score": 66.66666666666667
+      "match_score": 100.0
     },
     {
       "zatu_handle": "hit-the-silk-extra-cargo-expansion",
@@ -19571,14 +19583,18 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 466338,
-          "bgg_name": "Bullet For A Stranger"
+          "bgg_id": 334649,
+          "bgg_name": "Bullet: Orange"
+        },
+        {
+          "bgg_id": 435541,
+          "bgg_name": "Bullet: Orange+"
         }
       ],
-      "match_score": 81.25
+      "match_score": 100.0
     },
     {
       "zatu_handle": "agricola-ephipparius-deck",
@@ -19596,14 +19612,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 440149,
-          "bgg_name": "Agricola: Dead Harvest"
+          "bgg_id": 393922,
+          "bgg_name": "Agricola: Ephipparius Deck"
         }
       ],
-      "match_score": 69.56521739130434
+      "match_score": 100.0
     },
     {
       "zatu_handle": "wild-hunt-the-witcher-old-world-expansion",
@@ -19852,14 +19868,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 188293,
-          "bgg_name": "Bitwy Okretow"
+          "bgg_id": 383122,
+          "bgg_name": "Bitoku: Resutoran"
         }
       ],
-      "match_score": 62.06896551724138
+      "match_score": 100.0
     },
     {
       "zatu_handle": "eternal-empire-zombicide-white-death-expansion",
@@ -20327,14 +20343,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 170624,
-          "bgg_name": "Crusaders: Thy Will Be Done"
+          "bgg_id": 289240,
+          "bgg_name": "Crusaders: Thy Will Be Done \u2013 Divine Influence"
         }
       ],
-      "match_score": 75.36231884057972
+      "match_score": 100.0
     },
     {
       "zatu_handle": "robin-hood-friar-tuck-in-danger",
@@ -21033,14 +21049,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 465819,
-          "bgg_name": "Concordia: Special Edition"
+          "bgg_id": 380917,
+          "bgg_name": "Concordia: Roma / Sicilia"
         }
       ],
-      "match_score": 68.08510638297872
+      "match_score": 100.0
     },
     {
       "zatu_handle": "ra-pharaoh-edition",
@@ -21273,14 +21289,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 266507,
-          "bgg_name": "Clank! Legacy: Acquisitions Incorporated"
+          "bgg_id": 275532,
+          "bgg_name": "Clank! Legacy: Acquisitions Incorporated \u2013 Upper Management Pack"
         }
       ],
-      "match_score": 77.55102040816327
+      "match_score": 100.0
     },
     {
       "zatu_handle": "tokaido-crossroads-matsuri-expansions",
@@ -21380,14 +21396,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 258563,
-          "bgg_name": "Twigs: 4 players expansion"
+          "bgg_id": 402302,
+          "bgg_name": "Wandering Towers: Mini Spell Expansion 3"
         }
       ],
-      "match_score": 62.5
+      "match_score": 100.0
     },
     {
       "zatu_handle": "unlock-kids-4-irish-folklore",
@@ -21591,14 +21607,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 8801,
-          "bgg_name": "Domino Land"
+          "bgg_id": 369536,
+          "bgg_name": "Dominion: Plunder"
         }
       ],
-      "match_score": 74.07407407407408
+      "match_score": 100.0
     },
     {
       "zatu_handle": "carcassonne-circus-artists-exp-10-2025",
@@ -21806,14 +21822,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 473737,
-          "bgg_name": "The Tale of a Silver Goat"
+          "bgg_id": 434042,
+          "bgg_name": "Tiletum: Prospect for Silver"
         }
       ],
-      "match_score": 60.86956521739131
+      "match_score": 100.0
     },
     {
       "zatu_handle": "in-the-footsteps-of-darwin-correspondence-expansion",
@@ -21918,14 +21934,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 171124,
-          "bgg_name": "Hero's Journey Home"
+          "bgg_id": 265271,
+          "bgg_name": "Hero Realms: Journeys \u2013 Hunters"
         }
       ],
-      "match_score": 72.34042553191489
+      "match_score": 100.0
     },
     {
       "zatu_handle": "viticulture-moor-visitors-expansion",
@@ -21943,14 +21959,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 183394,
-          "bgg_name": "Viticulture Essential Edition"
+          "bgg_id": 193823,
+          "bgg_name": "Viticulture: Moor Visitors Expansion"
         }
       ],
-      "match_score": 59.375
+      "match_score": 100.0
     },
     {
       "zatu_handle": "the-artisans-of-naqala-five-tribes-exp",
@@ -22129,14 +22145,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 271324,
-          "bgg_name": "It's a Wonderful World"
+          "bgg_id": 298752,
+          "bgg_name": "It's a Wonderful World: War or Peace"
         }
       ],
-      "match_score": 75.47169811320755
+      "match_score": 100.0
     },
     {
       "zatu_handle": "match-count",
@@ -22277,14 +22293,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 353632,
-          "bgg_name": "Animalia: Preventing Extinction"
+          "bgg_id": 453491,
+          "bgg_name": "Maladum: Revenant Retribution Expansion"
         }
       ],
-      "match_score": 64.70588235294117
+      "match_score": 100.0
     },
     {
       "zatu_handle": "silent-falls-alice-is-missing-expansion",
@@ -22353,14 +22369,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 167400,
-          "bgg_name": "Ashes Reborn: Rise of the Phoenixborn"
+          "bgg_id": 431716,
+          "bgg_name": "Ashes Reborn: Red Rains \u2013 The Flood of Moon Cove"
         }
       ],
-      "match_score": 65.75342465753424
+      "match_score": 100.0
     },
     {
       "zatu_handle": "march-of-the-ants-evolved-edition",
@@ -22440,14 +22456,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 230791,
-          "bgg_name": "Time of Legends: Joan of Arc"
+          "bgg_id": 156318,
+          "bgg_name": "Legends of Andor: Journey to the North"
         }
       ],
-      "match_score": 70.0
+      "match_score": 100.0
     },
     {
       "zatu_handle": "red-dragon-inn-7-the-tavern-crew",
@@ -22499,14 +22515,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 407812,
-          "bgg_name": "Star Realms Academy"
+          "bgg_id": 203074,
+          "bgg_name": "Star Realms: Promo Pack I"
         }
       ],
-      "match_score": 69.76744186046511
+      "match_score": 100.0
     },
     {
       "zatu_handle": "ambition-roll-for-the-galaxy-expansion",
@@ -22582,14 +22598,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 8801,
-          "bgg_name": "Domino Land"
+          "bgg_id": 104557,
+          "bgg_name": "Dominion: Hinterlands"
         }
       ],
-      "match_score": 70.96774193548387
+      "match_score": 100.0
     },
     {
       "zatu_handle": "selas-infiltrators-star-trek-away-missions-expansion",
@@ -22866,14 +22882,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 13895,
-          "bgg_name": "Leader of the Pack"
+          "bgg_id": 255167,
+          "bgg_name": "Fluxx: Creeper Pack"
         }
       ],
-      "match_score": 62.5
+      "match_score": 100.0
     },
     {
       "zatu_handle": "tiny-epic-mechs",
@@ -22985,14 +23001,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 167400,
-          "bgg_name": "Ashes Reborn: Rise of the Phoenixborn"
+          "bgg_id": 383633,
+          "bgg_name": "Ashes Reborn: Red Rains \u2013 The Frostwild Scourge"
         }
       ],
-      "match_score": 61.111111111111114
+      "match_score": 100.0
     },
     {
       "zatu_handle": "hero-realms-watery-graves",
@@ -23090,14 +23106,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 400498,
-          "bgg_name": "Light Speed: Arena"
+          "bgg_id": 445927,
+          "bgg_name": "Light Speed: Arena \u2013 BlackHole"
         }
       ],
-      "match_score": 77.27272727272727
+      "match_score": 100.0
     },
     {
       "zatu_handle": "fire-tower-rising-flames-expansion-standard-edition",
@@ -23192,14 +23208,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 383481,
-          "bgg_name": "Catan: Starfarers Duel"
+          "bgg_id": 316229,
+          "bgg_name": "Catan: Starfarers \u2013 5-6 Player Extension"
         }
       ],
-      "match_score": 65.51724137931035
+      "match_score": 100.0
     },
     {
       "zatu_handle": "cortex-challenge-mlv",
@@ -23431,14 +23447,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 407812,
-          "bgg_name": "Star Realms Academy"
+          "bgg_id": 231373,
+          "bgg_name": "Star Realms: Command Deck \u2013 The Unity"
         }
       ],
-      "match_score": 65.3061224489796
+      "match_score": 100.0
     },
     {
       "zatu_handle": "rorys-story-cubes-eco-blister-mystery",
@@ -23502,14 +23518,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 262504,
-          "bgg_name": "So Here's the Scenario"
+          "bgg_id": 306151,
+          "bgg_name": "Frosthaven: Solo Scenarios"
         }
       ],
-      "match_score": 65.11627906976744
+      "match_score": 100.0
     },
     {
       "zatu_handle": "sub-terra-ii-typhaon-wakes",
@@ -23526,14 +23542,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 419175,
-          "bgg_name": "Bread Upon The Waters"
+          "bgg_id": 290828,
+          "bgg_name": "Sub Terra II: Typhaon Wakes"
         }
       ],
-      "match_score": 57.14285714285714
+      "match_score": 100.0
     },
     {
       "zatu_handle": "robo-rally",
@@ -23649,14 +23665,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 400498,
-          "bgg_name": "Light Speed: Arena"
+          "bgg_id": 445921,
+          "bgg_name": "Light Speed: Arena \u2013 Glyphon"
         }
       ],
-      "match_score": 80.95238095238095
+      "match_score": 100.0
     },
     {
       "zatu_handle": "similo-myths",
@@ -23750,14 +23766,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 392446,
-          "bgg_name": "Dominion At Dawn"
+          "bgg_id": 125403,
+          "bgg_name": "Dominion: Dark Ages"
         }
       ],
-      "match_score": 76.47058823529412
+      "match_score": 100.0
     },
     {
       "zatu_handle": "tokaido-deluxe-5th-anniversary-edition",
@@ -24004,14 +24020,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 332800,
-          "bgg_name": "Summoner Wars (Second Edition)"
+          "bgg_id": 113225,
+          "bgg_name": "Summoner Wars: The Filth Faction Deck"
         }
       ],
-      "match_score": 66.66666666666667
+      "match_score": 100.0
     },
     {
       "zatu_handle": "timebomb",
@@ -24596,14 +24612,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 393199,
-          "bgg_name": "Converge: Engines of Progress"
+          "bgg_id": 423519,
+          "bgg_name": "Nucleum: Court of Progress"
         }
       ],
-      "match_score": 67.9245283018868
+      "match_score": 100.0
     },
     {
       "zatu_handle": "kronologic-paris-1920-panic-at-the-opera-the-cursed-lovers",
@@ -24623,14 +24639,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 402111,
-          "bgg_name": "Kronologic: Paris 1920"
+          "bgg_id": 435421,
+          "bgg_name": "Kronologic: Paris 1920 \u2013 Panic at the Opera & The Cursed Lovers"
         }
       ],
-      "match_score": 56.00000000000001
+      "match_score": 100.0
     },
     {
       "zatu_handle": "aspens",
@@ -24789,14 +24805,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 145308,
-          "bgg_name": "Marrying Mr. Darcy"
+          "bgg_id": 180524,
+          "bgg_name": "Marrying Mr. Darcy: the Emma Expansion"
         }
       ],
-      "match_score": 69.38775510204081
+      "match_score": 100.0
     },
     {
       "zatu_handle": "lucky-numbers",
@@ -25164,14 +25180,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 215635,
-          "bgg_name": "Beyond the Pale"
+          "bgg_id": 349606,
+          "bgg_name": "Pagan: Beyond the Palisades"
         }
       ],
-      "match_score": 66.66666666666667
+      "match_score": 100.0
     },
     {
       "zatu_handle": "pagan-fate-of-roanoke-through-the-mist-content-pack",
@@ -25256,14 +25272,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 275034,
-          "bgg_name": "Judge Dredd: Helter Skelter"
+          "bgg_id": 295282,
+          "bgg_name": "Judge Dredd: Helter Skelter \u2013 Dark Judges"
         }
       ],
-      "match_score": 81.25
+      "match_score": 100.0
     },
     {
       "zatu_handle": "scream-party-game",
@@ -25426,14 +25442,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 37382,
-          "bgg_name": "Monopoly: Wonder of The World"
+          "bgg_id": 406746,
+          "bgg_name": "World Wonders: Mundo Wonders Pack"
         }
       ],
-      "match_score": 67.85714285714286
+      "match_score": 100.0
     },
     {
       "zatu_handle": "final-girl-series-3-guest-stars-box",
@@ -25596,14 +25612,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 337760,
-          "bgg_name": "Disney: Mad Tea Party"
+          "bgg_id": 233233,
+          "bgg_name": "Adrenaline: Team Play DLC"
         }
       ],
-      "match_score": 63.63636363636363
+      "match_score": 100.0
     },
     {
       "zatu_handle": "summoner-wars-thornhold-drey-faction-deck",
@@ -25731,14 +25747,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 241164,
-          "bgg_name": "Jurassic Snack"
+          "bgg_id": 247497,
+          "bgg_name": "Munchkin 9: Jurassic Snark"
         }
       ],
-      "match_score": 66.66666666666667
+      "match_score": 100.0
     },
     {
       "zatu_handle": "bus-stop",
@@ -25853,14 +25869,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 89409,
-          "bgg_name": "BattleCON: War of Indines"
+          "bgg_id": 204542,
+          "bgg_name": "Castle Panic: Engines of War"
         }
       ],
-      "match_score": 66.66666666666667
+      "match_score": 100.0
     },
     {
       "zatu_handle": "hamlet",
@@ -26431,14 +26447,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 407812,
-          "bgg_name": "Star Realms Academy"
+          "bgg_id": 231369,
+          "bgg_name": "Star Realms: Command Deck \u2013 The Alliance"
         }
       ],
-      "match_score": 65.38461538461539
+      "match_score": 100.0
     },
     {
       "zatu_handle": "avocado-smash-game",
@@ -26854,14 +26870,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 255984,
-          "bgg_name": "Sleeping Gods"
+          "bgg_id": 287670,
+          "bgg_name": "Sleeping Gods: Dungeons"
         }
       ],
-      "match_score": 74.28571428571429
+      "match_score": 100.0
     },
     {
       "zatu_handle": "dominion-allies",
@@ -26884,14 +26900,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 264170,
-          "bgg_name": "Dungeon Allies"
+          "bgg_id": 347307,
+          "bgg_name": "Dominion: Allies"
         }
       ],
-      "match_score": 75.86206896551724
+      "match_score": 100.0
     },
     {
       "zatu_handle": "casting-shadows-ice-storm-expansion",
@@ -26907,14 +26923,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 365761,
-          "bgg_name": "Casting Shadows: Exclusive Edition"
+          "bgg_id": 360484,
+          "bgg_name": "Casting Shadows: The Ice Storm Expansion"
         }
       ],
-      "match_score": 67.64705882352942
+      "match_score": 100.0
     },
     {
       "zatu_handle": "ashes-reborn-red-rains-the-corspe-of-viros",
@@ -27524,14 +27540,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 41299,
-          "bgg_name": "Cardigan and Clockwork"
+          "bgg_id": 439777,
+          "bgg_name": "Oath: Clockwork Adversaries"
         }
       ],
-      "match_score": 62.5
+      "match_score": 100.0
     },
     {
       "zatu_handle": "pylos-mini",
@@ -27686,14 +27702,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 308755,
-          "bgg_name": "Ascension: Eternal"
+          "bgg_id": 472577,
+          "bgg_name": "Mistborn: The Well of Ascension"
         }
       ],
-      "match_score": 65.11627906976744
+      "match_score": 100.0
     },
     {
       "zatu_handle": "lands-of-galzyr-dreams-and-mysteries",
@@ -27713,14 +27729,14 @@
       ],
       "zatu_is_coop": true,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 236957,
-          "bgg_name": "Heroes & Gods: The Master of Dreams"
+          "bgg_id": 423547,
+          "bgg_name": "Lands of Galzyr: Dreams and Mysteries"
         }
       ],
-      "match_score": 67.64705882352942
+      "match_score": 100.0
     },
     {
       "zatu_handle": "arctic-scavengers-and-recon",
@@ -27795,14 +27811,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 298628,
-          "bgg_name": "Star Realms: Deluxe Nova Collection"
+          "bgg_id": 231370,
+          "bgg_name": "Star Realms: Command Deck \u2013 The Coalition"
         }
       ],
-      "match_score": 72.1311475409836
+      "match_score": 100.0
     },
     {
       "zatu_handle": "jungle-snakes-ladders-mini-game",
@@ -27921,14 +27937,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 328871,
-          "bgg_name": "Terraforming Mars: Ares Expedition"
+          "bgg_id": 358739,
+          "bgg_name": "Terraforming Mars: Ares Expedition \u2013 Discovery"
         }
       ],
-      "match_score": 86.8421052631579
+      "match_score": 100.0
     },
     {
       "zatu_handle": "9-lives-2",
@@ -28157,14 +28173,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 282587,
-          "bgg_name": "(May Cause) Side Effects"
+          "bgg_id": 401235,
+          "bgg_name": "Side Effects: Booster Shot"
         }
       ],
-      "match_score": 68.08510638297872
+      "match_score": 100.0
     },
     {
       "zatu_handle": "star-realms-command-deck-the-alignment",
@@ -28182,14 +28198,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 407812,
-          "bgg_name": "Star Realms Academy"
+          "bgg_id": 231376,
+          "bgg_name": "Star Realms: Command Deck \u2013 The Alignment"
         }
       ],
-      "match_score": 64.15094339622642
+      "match_score": 100.0
     },
     {
       "zatu_handle": "rorys-story-cubes-eco-blister-voyages",
@@ -28230,14 +28246,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 248005,
-          "bgg_name": "Ganymede"
+          "bgg_id": 266181,
+          "bgg_name": "Ganymede: Moon"
         }
       ],
-      "match_score": 76.19047619047619
+      "match_score": 100.0
     },
     {
       "zatu_handle": "pac-man-the-card-game",
@@ -28424,14 +28440,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 181574,
-          "bgg_name": "The Princess Bride: I Hate to Kill You"
+          "bgg_id": 431204,
+          "bgg_name": "Purple Haze: Born to Kill"
         }
       ],
-      "match_score": 63.1578947368421
+      "match_score": 100.0
     },
     {
       "zatu_handle": "money-card-game",
@@ -28640,14 +28656,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 456277,
-          "bgg_name": "ICHI: Seasons of Japan"
+          "bgg_id": 255588,
+          "bgg_name": "Inis: Seasons of Inis"
         }
       ],
-      "match_score": 73.17073170731707
+      "match_score": 100.0
     },
     {
       "zatu_handle": "legends-of-andor-new-heroes",
@@ -28672,14 +28688,14 @@
       ],
       "zatu_is_coop": true,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 198287,
-          "bgg_name": "Legends of Andor: The Last Hope"
+          "bgg_id": 151825,
+          "bgg_name": "Legends of Andor: New Heroes"
         }
       ],
-      "match_score": 79.24528301886792
+      "match_score": 100.0
     },
     {
       "zatu_handle": "got-2017-joust-world-championship-deck",
@@ -28791,14 +28807,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 365480,
-          "bgg_name": "Marvel HeroClix: Avengers War of the Realms Fast Forces"
+          "bgg_id": 353862,
+          "bgg_name": "Cartographers: Map Pack 4 \u2013 Frozen Expanse: Realm of Frost Giants"
         }
       ],
-      "match_score": 50.45045045045045
+      "match_score": 100.0
     },
     {
       "zatu_handle": "flies-lies-supplies-critters-at-war",
@@ -28891,14 +28907,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 12310,
-          "bgg_name": "Space Dominos"
+          "bgg_id": 209357,
+          "bgg_name": "Dominion: Update Pack"
         }
       ],
-      "match_score": 66.66666666666667
+      "match_score": 100.0
     },
     {
       "zatu_handle": "the-mandalorian-adventures-sworn-to-the-creed-expansion",
@@ -28922,14 +28938,14 @@
       ],
       "zatu_is_coop": true,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 420077,
-          "bgg_name": "The Mandalorian: Adventures"
+          "bgg_id": 462401,
+          "bgg_name": "The Mandalorian: Adventures \u2013 Sworn to the Creed Expansion"
         }
       ],
-      "match_score": 63.76811594202898
+      "match_score": 100.0
     },
     {
       "zatu_handle": "nightmare-of-the-frogmire-coven-maps-monsters-expansion-dungeons-dragons-onslaught",
@@ -29706,14 +29722,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 416692,
-          "bgg_name": "The Red Dragon Inn: Adventure Is Nigh!"
+          "bgg_id": 146329,
+          "bgg_name": "The Red Dragon Inn: Allies \u2013 Cormac the Mighty"
         }
       ],
-      "match_score": 65.67164179104478
+      "match_score": 100.0
     },
     {
       "zatu_handle": "taco-cat-goat-cheese-pizza-on-the-flip-side",
@@ -29848,14 +29864,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 453888,
-          "bgg_name": "Sahipk\u0131ran: Sword & Shield"
+          "bgg_id": 421976,
+          "bgg_name": "Looot: New Longships and Shields"
         }
       ],
-      "match_score": 58.62068965517242
+      "match_score": 100.0
     },
     {
       "zatu_handle": "high-society-allplay",
@@ -30401,14 +30417,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 50381,
-          "bgg_name": "Cards Against Humanity"
+          "bgg_id": 255370,
+          "bgg_name": "Cards Against Humanity: Theatre Pack"
         }
       ],
-      "match_score": 77.19298245614034
+      "match_score": 100.0
     },
     {
       "zatu_handle": "everdell-tales-from-the-green-acorn",
@@ -30544,14 +30560,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 249578,
-          "bgg_name": "The Red Dragon Inn: Allies \u2013 Spyke and Flower"
+          "bgg_id": 168857,
+          "bgg_name": "The Red Dragon Inn: Allies \u2013 Wrench"
         }
       ],
-      "match_score": 69.6969696969697
+      "match_score": 100.0
     },
     {
       "zatu_handle": "hasbro-five-alive-card-game",
@@ -30674,14 +30690,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 155702,
-          "bgg_name": "Quarriors! Light vs. Dark"
+          "bgg_id": 360999,
+          "bgg_name": "The Dark Quarter: Lost to the Night"
         }
       ],
-      "match_score": 69.38775510204081
+      "match_score": 100.0
     },
     {
       "zatu_handle": "fable-fury-endless-misadventure-awaits",
@@ -30858,14 +30874,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 180816,
-          "bgg_name": "Munchkin: The Nightmare Before Christmas"
+          "bgg_id": 90567,
+          "bgg_name": "Munchkin 7: Cheat With Both Hands"
         }
       ],
-      "match_score": 59.70149253731343
+      "match_score": 100.0
     },
     {
       "zatu_handle": "first-times-tables",
@@ -30957,14 +30973,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 112362,
-          "bgg_name": "Squadron Commander Reheat"
+          "bgg_id": 231372,
+          "bgg_name": "Star Realms: Command Deck \u2013 The Union"
         }
       ],
-      "match_score": 65.45454545454545
+      "match_score": 100.0
     },
     {
       "zatu_handle": "carson-city-big-box",
@@ -31013,14 +31029,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 229624,
-          "bgg_name": "Alias: Travel"
+          "bgg_id": 257047,
+          "bgg_name": "Altiplano: The Traveler"
         }
       ],
-      "match_score": 73.33333333333334
+      "match_score": 100.0
     },
     {
       "zatu_handle": "cthulhu-wars-ramsey-campbell-horrors-1",
@@ -31191,14 +31207,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 469765,
-          "bgg_name": "Arnie & Barney Hypno Vision"
+          "bgg_id": 366201,
+          "bgg_name": "Carnegie: Departments and Donations Expansion"
         }
       ],
-      "match_score": 57.53424657534247
+      "match_score": 100.0
     },
     {
       "zatu_handle": "fateforge-chronicles-of-kaan-boss-miniature-set",
@@ -31388,14 +31404,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 21241,
-          "bgg_name": "Neuroshima Hex"
+          "bgg_id": 310891,
+          "bgg_name": "Neuroshima Hex! 3.0: Troglodytes"
         }
       ],
-      "match_score": 63.63636363636363
+      "match_score": 100.0
     },
     {
       "zatu_handle": "the-elder-scrolls-botse-elsweyr",
@@ -31440,14 +31456,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 249578,
-          "bgg_name": "The Red Dragon Inn: Allies \u2013 Spyke and Flower"
+          "bgg_id": 302181,
+          "bgg_name": "The Red Dragon Inn: Allies \u2013 Evil Pooky"
         }
       ],
-      "match_score": 65.71428571428571
+      "match_score": 100.0
     },
     {
       "zatu_handle": "castlescape-kickstarter-edition",
@@ -31545,14 +31561,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 249578,
-          "bgg_name": "The Red Dragon Inn: Allies \u2013 Spyke and Flower"
+          "bgg_id": 159683,
+          "bgg_name": "The Red Dragon Inn: Allies \u2013 Brother Bastian"
         }
       ],
-      "match_score": 64.0
+      "match_score": 100.0
     },
     {
       "zatu_handle": "passenger-planes-top-trumps-classics",
@@ -31608,6 +31624,30 @@
       "match_score": 61.29032258064516
     },
     {
+      "zatu_handle": "terraforming-mars-ares-expedition-crisis",
+      "zatu_title": "Terraforming Mars - Ares Expedition: Crisis",
+      "zatu_url": "https://zatu.com/products/terraforming-mars-ares-expedition-crisis",
+      "zatu_price_gbp": 17.0,
+      "zatu_in_stock": true,
+      "zatu_tags": [
+        "Board Games",
+        "Next Day Delivery",
+        "no gift wrap",
+        "Terraforming Mars",
+        "Top 5000 Board Games"
+      ],
+      "zatu_is_coop": false,
+      "zatu_is_party": false,
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
+      "bgg_candidates": [
+        {
+          "bgg_id": 358738,
+          "bgg_name": "Terraforming Mars: Ares Expedition \u2013 Crisis"
+        }
+      ],
+      "match_score": 100.0
+    },
+    {
       "zatu_handle": "atlantis-rising-monstrosities",
       "zatu_title": "Atlantis Rising Monstrosities",
       "zatu_url": "https://zatu.com/products/atlantis-rising-monstrosities",
@@ -31627,14 +31667,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 92120,
-          "bgg_name": "Atlantis Rising"
+          "bgg_id": 321302,
+          "bgg_name": "Atlantis Rising: Monstrosities"
         }
       ],
-      "match_score": 68.18181818181819
+      "match_score": 100.0
     },
     {
       "zatu_handle": "pointless-2023-edition",
@@ -31753,14 +31793,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 244254,
-          "bgg_name": "Purple People Eater"
+          "bgg_id": 431206,
+          "bgg_name": "Purple Haze: Force Recon \u2013 Keyhole"
         }
       ],
-      "match_score": 60.0
+      "match_score": 100.0
     },
     {
       "zatu_handle": "until-proven-guilty",
@@ -31914,14 +31954,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 17970,
-          "bgg_name": "Axis & Allies Miniatures"
+          "bgg_id": 455914,
+          "bgg_name": "Axis & Allies: Commanders"
         }
       ],
-      "match_score": 76.92307692307692
+      "match_score": 100.0
     },
     {
       "zatu_handle": "near-and-far-amber-mines-exp",
@@ -32061,14 +32101,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 353825,
-          "bgg_name": "For the Love of Honey"
+          "bgg_id": 345433,
+          "bgg_name": "Fog of Love: Love on Lockdown"
         }
       ],
-      "match_score": 62.22222222222222
+      "match_score": 100.0
     },
     {
       "zatu_handle": "summoner-wars-obsidian-dwarves-faction-deck",
@@ -32122,14 +32162,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 319971,
-          "bgg_name": "Monster Hunter World: The Board Game"
+          "bgg_id": 361200,
+          "bgg_name": "Monster Hunter World: The Board Game \u2013 Kushala Daora Expansion"
         }
       ],
-      "match_score": 62.5
+      "match_score": 100.0
     },
     {
       "zatu_handle": "catch-phrase-vintage-bookshelf-uk-edition",
@@ -32225,14 +32265,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 209488,
-          "bgg_name": "The Game of Things: Travel/Expansion"
+          "bgg_id": 431700,
+          "bgg_name": "Shallow Sea: Rare Fish Mini-Expansion"
         }
       ],
-      "match_score": 61.29032258064516
+      "match_score": 100.0
     },
     {
       "zatu_handle": "nature-board-game-module-3-natural-disasters",
@@ -32277,14 +32317,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 258562,
-          "bgg_name": "SEVEN: 4 Players Expansion"
+          "bgg_id": 468808,
+          "bgg_name": "Endeavor: Deep Sea \u2013 5th Player Expansion"
         }
       ],
-      "match_score": 64.40677966101696
+      "match_score": 100.0
     },
     {
       "zatu_handle": "stranger-things-cluedo",
@@ -32327,14 +32367,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 43262,
-          "bgg_name": "Neuroshima Hex! Duel"
+          "bgg_id": 386305,
+          "bgg_name": "Neuroshima Hex! 3.0: Merchants Guild"
         }
       ],
-      "match_score": 64.15094339622642
+      "match_score": 100.0
     },
     {
       "zatu_handle": "gloom-card-game-2nd-edition-unquiet-dead-expansion",
@@ -32680,14 +32720,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 460098,
-          "bgg_name": "Shattered Realities"
+          "bgg_id": 385276,
+          "bgg_name": "Beast: Shattered Isles"
         }
       ],
-      "match_score": 80.0
+      "match_score": 100.0
     },
     {
       "zatu_handle": "beast-the-great-hunt",
@@ -32708,14 +32748,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 43045,
-          "bgg_name": "The Great Bug Hunt"
+          "bgg_id": 399046,
+          "bgg_name": "Beast: The Great Hunt"
         }
       ],
-      "match_score": 80.0
+      "match_score": 100.0
     },
     {
       "zatu_handle": "zariah-the-summoner-the-red-dragon-inn",
@@ -32733,14 +32773,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 380868,
-          "bgg_name": "The Red Dragon Inn 9: The Undercity"
+          "bgg_id": 173959,
+          "bgg_name": "The Red Dragon Inn: Allies \u2013 Zariah the Summoner"
         }
       ],
-      "match_score": 66.66666666666667
+      "match_score": 100.0
     },
     {
       "zatu_handle": "neuroshima-hex-3-0",
@@ -32812,14 +32852,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 194142,
-          "bgg_name": "Ancient Sands"
+          "bgg_id": 295284,
+          "bgg_name": "Wildlands: The Ancients"
         }
       ],
-      "match_score": 77.41935483870968
+      "match_score": 100.0
     },
     {
       "zatu_handle": "escape-room-the-game-3-3-thrilling-escape-rooms",
@@ -32862,14 +32902,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 387592,
-          "bgg_name": "Sadie Cat and Mao: Robot Gophers"
+          "bgg_id": 353864,
+          "bgg_name": "Cartographers: Map Pack 5 \u2013 Kethra's Steppe: Redtooth & Goldbelly"
         }
       ],
-      "match_score": 51.06382978723405
+      "match_score": 100.0
     },
     {
       "zatu_handle": "hidden-games-crime-scene-case-1-the-little-gomersal-case",
@@ -33346,14 +33386,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 24310,
-          "bgg_name": "The Red Dragon Inn"
+          "bgg_id": 273240,
+          "bgg_name": "The Red Dragon Inn Smorgasbox"
         }
       ],
-      "match_score": 71.7948717948718
+      "match_score": 100.0
     },
     {
       "zatu_handle": "dobble-disney-princess-55-card-version",
@@ -34022,14 +34062,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 425796,
-          "bgg_name": "Tomb Raider: The Crypt of Chronos"
+          "bgg_id": 472550,
+          "bgg_name": "Tomb Raider: The Crypt of Chronos \u2013 Croft Manor"
         }
       ],
-      "match_score": 82.35294117647058
+      "match_score": 100.0
     },
     {
       "zatu_handle": "munchkin-batman",
@@ -34157,14 +34197,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 12194,
-          "bgg_name": "Munchkin Bites!"
+          "bgg_id": 181273,
+          "bgg_name": "Munchkin Kittens"
         }
       ],
-      "match_score": 86.66666666666667
+      "match_score": 100.0
     },
     {
       "zatu_handle": "witchdoctor-natyli-the-red-dragon-inn",
@@ -34182,14 +34222,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 402491,
-          "bgg_name": "War with the Allies to Berlin"
+          "bgg_id": 146330,
+          "bgg_name": "The Red Dragon Inn: Allies \u2013 Witchdoctor Natyli"
         }
       ],
-      "match_score": 58.46153846153845
+      "match_score": 100.0
     },
     {
       "zatu_handle": "subbuteo-balls",
@@ -34257,14 +34297,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 240077,
-          "bgg_name": "Hero: Prepare Your Champion"
+          "bgg_id": 345587,
+          "bgg_name": "Marvel Champions: The Card Game \u2013 Valkyrie Hero Pack"
         }
       ],
-      "match_score": 68.85245901639344
+      "match_score": 100.0
     },
     {
       "zatu_handle": "pocket-pub-quiz",
@@ -34467,14 +34507,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 228685,
-          "bgg_name": "Fools and Prospectors"
+          "bgg_id": 394083,
+          "bgg_name": "Bonsai: Vigorous Growth and Specialists"
         }
       ],
-      "match_score": 57.6271186440678
+      "match_score": 100.0
     },
     {
       "zatu_handle": "spidey-friends-top-trumps-junior",
@@ -34684,14 +34724,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 19749,
-          "bgg_name": "Insieme"
+          "bgg_id": 418217,
+          "bgg_name": "Inis: Nemed"
         }
       ],
-      "match_score": 70.58823529411764
+      "match_score": 100.0
     },
     {
       "zatu_handle": "the-chrysanthemum-throne-expansion-pack-l5r-lcg",
@@ -34805,14 +34845,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 416692,
-          "bgg_name": "The Red Dragon Inn: Adventure Is Nigh!"
+          "bgg_id": 158222,
+          "bgg_name": "The Red Dragon Inn: Allies \u2013 Ozrik the Adept"
         }
       ],
-      "match_score": 67.6923076923077
+      "match_score": 100.0
     },
     {
       "zatu_handle": "mini-rogue-depths-of-damnation",
@@ -34829,14 +34869,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 25989,
-          "bgg_name": "Truth, Dare or Damnation!"
+          "bgg_id": 311719,
+          "bgg_name": "Mini Rogue: Depths of Damnation"
         }
       ],
-      "match_score": 64.15094339622642
+      "match_score": 100.0
     },
     {
       "zatu_handle": "monumental-african-empires-classic",
@@ -34876,14 +34916,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 315767,
-          "bgg_name": "Cartographers Heroes"
+          "bgg_id": 353865,
+          "bgg_name": "Cartographers: Map Pack 6 \u2013 Hornhelm: Wasteland Market"
         }
       ],
-      "match_score": 54.28571428571429
+      "match_score": 100.0
     },
     {
       "zatu_handle": "top-trumps-limited-edition-iron-maiden",
@@ -35177,14 +35217,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 382700,
-          "bgg_name": "Paragons: Age of Champions"
+          "bgg_id": 473963,
+          "bgg_name": "Marvel Champions: The Card Game \u2013 Luke Cage Hero Pack"
         }
       ],
-      "match_score": 62.295081967213115
+      "match_score": 100.0
     },
     {
       "zatu_handle": "bretwalda-hnefatafl",
@@ -35260,14 +35300,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 27434,
-          "bgg_name": "Animal Kingdom"
+          "bgg_id": 442298,
+          "bgg_name": "Earth: Animal Kingdom"
         }
       ],
-      "match_score": 82.35294117647058
+      "match_score": 100.0
     },
     {
       "zatu_handle": "herd-mentality-travel-tin",
@@ -35444,14 +35484,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 270844,
-          "bgg_name": "Imperial Settlers: Empires of the North"
+          "bgg_id": 299277,
+          "bgg_name": "Imperial Settlers: Rise of the Empire"
         }
       ],
-      "match_score": 81.81818181818181
+      "match_score": 100.0
     },
     {
       "zatu_handle": "neuroshima-hex-3-0-board-game-neojungle",
@@ -35467,14 +35507,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 21241,
-          "bgg_name": "Neuroshima Hex"
+          "bgg_id": 151648,
+          "bgg_name": "Neuroshima Hex! 3.0: Neojungle"
         }
       ],
-      "match_score": 66.66666666666667
+      "match_score": 100.0
     },
     {
       "zatu_handle": "london-game-travel-edition",
@@ -35593,14 +35633,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 79127,
-          "bgg_name": "Star Trek: Fleet Captains"
+          "bgg_id": 350497,
+          "bgg_name": "Star Trek Fluxx: Archer Expansion"
         }
       ],
-      "match_score": 64.28571428571428
+      "match_score": 100.0
     },
     {
       "zatu_handle": "dogfight-board-game",
@@ -35683,14 +35723,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 13345,
-          "bgg_name": "Barnard's Star: The First Interstellar War"
+          "bgg_id": 381095,
+          "bgg_name": "Unreliable Wizard and the Unstable Spirit Towers"
         }
       ],
-      "match_score": 56.790123456790134
+      "match_score": 100.0
     },
     {
       "zatu_handle": "ice-cool-wizards",
@@ -35895,14 +35935,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 50381,
-          "bgg_name": "Cards Against Humanity"
+          "bgg_id": 344346,
+          "bgg_name": "Cards Against Humanity: Everything Box"
         }
       ],
-      "match_score": 74.57627118644068
+      "match_score": 100.0
     },
     {
       "zatu_handle": "power-rangers-heroes-of-the-grid-allies-pack-4",
@@ -35920,14 +35960,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 258148,
-          "bgg_name": "Power Rangers: Heroes of the Grid"
+          "bgg_id": 427371,
+          "bgg_name": "Power Rangers: Heroes of the Grid \u2013 Allies Pack #4"
         }
       ],
-      "match_score": 80.0
+      "match_score": 100.0
     },
     {
       "zatu_handle": "chess-magnetic-travel-game",
@@ -36195,14 +36235,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 249578,
-          "bgg_name": "The Red Dragon Inn: Allies \u2013 Spyke and Flower"
+          "bgg_id": 174922,
+          "bgg_name": "The Red Dragon Inn: Allies \u2013 Halden the Unhinged"
         }
       ],
-      "match_score": 69.33333333333334
+      "match_score": 100.0
     },
     {
       "zatu_handle": "psycho-killer-crimetime-expansion",
@@ -36768,14 +36808,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 210626,
-          "bgg_name": "Stak Bots: Red Expansion"
+          "bgg_id": 374851,
+          "bgg_name": "Beat That!: Household Objects Expansion"
         }
       ],
-      "match_score": 63.33333333333333
+      "match_score": 100.0
     },
     {
       "zatu_handle": "shallow-sea-nesting-season-expansion",
@@ -37030,14 +37070,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 258036,
-          "bgg_name": "Between Two Castles of Mad King Ludwig"
+          "bgg_id": 336872,
+          "bgg_name": "Between Two Castles of Mad King Ludwig: Secrets & Soirees Expansion"
         }
       ],
-      "match_score": 70.58823529411764
+      "match_score": 100.0
     },
     {
       "zatu_handle": "star-trek-fluxx-porthos-expansion",
@@ -37057,14 +37097,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 473859,
-          "bgg_name": "Star Trek: Lower Decks Fluxx"
+          "bgg_id": 350504,
+          "bgg_name": "Star Trek Fluxx: Porthos Expansion"
         }
       ],
-      "match_score": 70.0
+      "match_score": 100.0
     },
     {
       "zatu_handle": "smart-games-iq-mini-assorted-one-supplied",
@@ -37129,14 +37169,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 312346,
-          "bgg_name": "Munchkin Disney"
+          "bgg_id": 388608,
+          "bgg_name": "Munchkin Druids"
         }
       ],
-      "match_score": 80.0
+      "match_score": 100.0
     },
     {
       "zatu_handle": "specialists-expansion-circadians-first-light",
@@ -37206,14 +37246,14 @@
       ],
       "zatu_is_coop": true,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 247,
-          "bgg_name": "Gloria Picktoria"
+          "bgg_id": 422039,
+          "bgg_name": "Nekojima: Torii Pack"
         }
       ],
-      "match_score": 62.857142857142854
+      "match_score": 100.0
     },
     {
       "zatu_handle": "one-percent-the-card-game",
@@ -38151,14 +38191,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 263895,
-          "bgg_name": "City of the Great Machine"
+          "bgg_id": 366259,
+          "bgg_name": "City of the Great Machine: Stand-In Heroes"
         }
       ],
-      "match_score": 72.41379310344827
+      "match_score": 100.0
     },
     {
       "zatu_handle": "tiny-epic-crimes-kingpins-expansion",
@@ -38358,14 +38398,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 219950,
-          "bgg_name": "Barbarians & Empires"
+          "bgg_id": 34691,
+          "bgg_name": "Catan: Traders & Barbarians \u2013 5-6 Player Expansion"
         }
       ],
-      "match_score": 59.154929577464785
+      "match_score": 100.0
     },
     {
       "zatu_handle": "mastermind-classic",
@@ -38940,14 +38980,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 249578,
-          "bgg_name": "The Red Dragon Inn: Allies \u2013 Spyke and Flower"
+          "bgg_id": 196213,
+          "bgg_name": "The Red Dragon Inn: Allies \u2013 Keet and Nitrel"
         }
       ],
-      "match_score": 69.33333333333334
+      "match_score": 100.0
     },
     {
       "zatu_handle": "paris-deluxe-big-box-including-letoile-expansion-kickstarter-edition",
@@ -39407,14 +39447,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 15658,
-          "bgg_name": "Monopoly: Bayern"
+          "bgg_id": 436805,
+          "bgg_name": "Monopoly: Buy Everything"
         }
       ],
-      "match_score": 73.6842105263158
+      "match_score": 100.0
     },
     {
       "zatu_handle": "noxious-weeds-cruel-summers-expansions-vicious-gardens",
@@ -39567,14 +39607,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 24051,
-          "bgg_name": "Fowl Play!"
+          "bgg_id": 388568,
+          "bgg_name": "Cubitos: Fowl Play"
         }
       ],
-      "match_score": 69.23076923076923
+      "match_score": 100.0
     },
     {
       "zatu_handle": "teburu-led-ring",
@@ -39919,6 +39959,29 @@
       "match_score": null
     },
     {
+      "zatu_handle": "bios-origins-2nd-edition",
+      "zatu_title": "Bios: Origins 2nd Edition",
+      "zatu_url": "https://zatu.com/products/bios-origins-2nd-edition",
+      "zatu_price_gbp": 67.95,
+      "zatu_in_stock": true,
+      "zatu_tags": [
+        "Board Games",
+        "Next Day Delivery",
+        "no gift wrap",
+        "Top 5000 Board Games"
+      ],
+      "zatu_is_coop": false,
+      "zatu_is_party": false,
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
+      "bgg_candidates": [
+        {
+          "bgg_id": 134068,
+          "bgg_name": "BIOS: Origins"
+        }
+      ],
+      "match_score": 100.0
+    },
+    {
       "zatu_handle": "imperial-settlers-empires-of-the-north-wrath-of-the-lighthouse",
       "zatu_title": "Imperial Settlers: Empires of the North: Wrath of the Lighthouse",
       "zatu_url": "https://zatu.com/products/imperial-settlers-empires-of-the-north-wrath-of-the-lighthouse",
@@ -39932,14 +39995,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 270844,
-          "bgg_name": "Imperial Settlers: Empires of the North"
+          "bgg_id": 330655,
+          "bgg_name": "Imperial Settlers: Empires of the North \u2013 Wrath of the Lighthouse"
         }
       ],
-      "match_score": 77.27272727272727
+      "match_score": 100.0
     },
     {
       "zatu_handle": "canvas-reflections-deluxe",
@@ -39956,14 +40019,18 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 306741,
-          "bgg_name": "Canvas Falcons"
+          "bgg_id": 335172,
+          "bgg_name": "Canvas: Reflections"
+        },
+        {
+          "bgg_id": 337330,
+          "bgg_name": "Canvas: Reflections \u2013 Deluxe Edition"
         }
       ],
-      "match_score": 81.25
+      "match_score": 100.0
     },
     {
       "zatu_handle": "tulip-bubble-2022-slim-edition",
@@ -41063,14 +41130,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 41569,
-          "bgg_name": "The Great Fire of London 1666"
+          "bgg_id": 298374,
+          "bgg_name": "The Great Fire of London 1666: 2-Player Expansion"
         }
       ],
-      "match_score": 72.46376811594203
+      "match_score": 100.0
     },
     {
       "zatu_handle": "fortune-hotel",
@@ -41132,14 +41199,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 161562,
-          "bgg_name": "Siege: Heart of Darkness"
+          "bgg_id": 446966,
+          "bgg_name": "HeroQuest: The Crypt of Perpetual Darkness"
         }
       ],
-      "match_score": 63.33333333333333
+      "match_score": 100.0
     },
     {
       "zatu_handle": "altay-seafarers",
@@ -41185,14 +41252,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 212295,
-          "bgg_name": "Parakeet"
+          "bgg_id": 291436,
+          "bgg_name": "Karak: Regent"
         }
       ],
-      "match_score": 70.0
+      "match_score": 100.0
     },
     {
       "zatu_handle": "dreamescape-plateau-of-leng-expansion",
@@ -41262,14 +41329,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 81079,
-          "bgg_name": "Margin Of Error: A Presidential Election Game"
+          "bgg_id": 268374,
+          "bgg_name": "Resident Evil 2: The Board Game \u2013 Malformations of G B-Files"
         }
       ],
-      "match_score": 57.14285714285714
+      "match_score": 100.0
     },
     {
       "zatu_handle": "warfighter-wwii-castle-frankenstein-expansion",
@@ -41312,14 +41379,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 331979,
-          "bgg_name": "Quartermaster General WW2: 2nd Edition"
+          "bgg_id": 249522,
+          "bgg_name": "Quartermaster General WW2: Prelude"
         }
       ],
-      "match_score": 86.20689655172413
+      "match_score": 100.0
     },
     {
       "zatu_handle": "go-ahead-punk-deluxe-version",
@@ -41396,14 +41463,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 37908,
-          "bgg_name": "Uncharted Lands"
+          "bgg_id": 428385,
+          "bgg_name": "Land vs Sea: Uncharted"
         }
       ],
-      "match_score": 83.33333333333334
+      "match_score": 100.0
     },
     {
       "zatu_handle": "warfighter-wwii-rlyeh-expansion",
@@ -41802,14 +41869,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 163664,
-          "bgg_name": "Prestige Dice Building Game"
+          "bgg_id": 435640,
+          "bgg_name": "Mega Empires: The Special Buildings"
         }
       ],
-      "match_score": 63.1578947368421
+      "match_score": 100.0
     },
     {
       "zatu_handle": "spot-the-intro-1980s-edition",
@@ -41980,14 +42047,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 460891,
-          "bgg_name": "Esquiss\u00e9 ?: \u00c9dition Adultes"
+          "bgg_id": 435755,
+          "bgg_name": "Vestige: Map Region Module"
         }
       ],
-      "match_score": 61.224489795918366
+      "match_score": 100.0
     },
     {
       "zatu_handle": "cryptic-killers-peaky-blinders-case-file",
@@ -42058,14 +42125,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 463890,
-          "bgg_name": "Escape Game: L'\u00c9vasion d'Alcatraz"
+          "bgg_id": 460294,
+          "bgg_name": "DreamEscape: Black Galleys Expansion"
         }
       ],
-      "match_score": 62.68656716417911
+      "match_score": 100.0
     },
     {
       "zatu_handle": "bugs-top-trumps-classics",
@@ -42147,14 +42214,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 12298,
-          "bgg_name": "Privilege"
+          "bgg_id": 385760,
+          "bgg_name": "Faiyum: Privileges"
         }
       ],
-      "match_score": 69.23076923076923
+      "match_score": 100.0
     },
     {
       "zatu_handle": "eos-island-of-angels-base-games",
@@ -42247,14 +42314,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 249578,
-          "bgg_name": "The Red Dragon Inn: Allies \u2013 Spyke and Flower"
+          "bgg_id": 125053,
+          "bgg_name": "The Red Dragon Inn: Allies \u2013 Erin the Ever-Changing"
         }
       ],
-      "match_score": 69.23076923076923
+      "match_score": 100.0
     },
     {
       "zatu_handle": "disney-classics-top-trumps-specials",
@@ -42628,14 +42695,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 241266,
-          "bgg_name": "Little Town"
+          "bgg_id": 359133,
+          "bgg_name": "Little Town: Artisans"
         }
       ],
-      "match_score": 70.96774193548387
+      "match_score": 100.0
     },
     {
       "zatu_handle": "funko-games-jurassic-world-the-legacy-of-isla-nublar",
@@ -42779,14 +42846,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 302244,
-          "bgg_name": "Munchkin Tails"
+          "bgg_id": 413709,
+          "bgg_name": "Munchkin Rats"
         }
       ],
-      "match_score": 81.4814814814815
+      "match_score": 100.0
     },
     {
       "zatu_handle": "dungeon-saga-origins-glimmer-of-greed",
@@ -42877,14 +42944,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 397685,
-          "bgg_name": "EVE: War for New Eden"
+          "bgg_id": 454336,
+          "bgg_name": "EVE: War for New Eden \u2013 Succession Expansion"
         }
       ],
-      "match_score": 65.57377049180329
+      "match_score": 100.0
     },
     {
       "zatu_handle": "battle-for-the-deep-axis-allies",
@@ -43108,14 +43175,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 214903,
-          "bgg_name": "Doggy Go! (includes expansion)"
+          "bgg_id": 436368,
+          "bgg_name": "Ichor: Reinforcements & Gates Expansion"
         }
       ],
-      "match_score": 59.70149253731343
+      "match_score": 100.0
     },
     {
       "zatu_handle": "smug-owls-smut-owls",
@@ -43137,14 +43204,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": true,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 393343,
-          "bgg_name": "Smug Owls"
+          "bgg_id": 440927,
+          "bgg_name": "Smug Owls: Smut Owls"
         }
       ],
-      "match_score": 64.28571428571428
+      "match_score": 100.0
     },
     {
       "zatu_handle": "red-dragon-inn-card-game-adventure-is-nigh-expansion-extras-pack",
@@ -43192,14 +43259,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 386425,
-          "bgg_name": "Peacemakers: Horrors of War"
+          "bgg_id": 401866,
+          "bgg_name": "Peacemakers: Horrors of War \u2013 Shared Nightmares"
         }
       ],
-      "match_score": 74.28571428571429
+      "match_score": 100.0
     },
     {
       "zatu_handle": "worlds-most-difficult-dalmatian-puzzle",
@@ -43998,14 +44065,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 29678,
-          "bgg_name": "Munchkin Quest"
+          "bgg_id": 390305,
+          "bgg_name": "Munchkin: Squids"
         }
       ],
-      "match_score": 82.75862068965517
+      "match_score": 100.0
     },
     {
       "zatu_handle": "ecosfera-expansion-rewilding-the-world",
@@ -44267,14 +44334,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": true,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 347805,
-          "bgg_name": "Green Team Wins"
+          "bgg_id": 419456,
+          "bgg_name": "Green Team Wins: Holiday Party"
         }
       ],
-      "match_score": 68.18181818181819
+      "match_score": 100.0
     },
     {
       "zatu_handle": "cranium-classic",
@@ -44351,14 +44418,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": true,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 80621,
-          "bgg_name": "Fool's Poker"
+          "bgg_id": 440928,
+          "bgg_name": "Smug Owls: Poser Owls"
         }
       ],
-      "match_score": 62.5
+      "match_score": 100.0
     },
     {
       "zatu_handle": "smug-owls-pompous-owls",
@@ -44380,14 +44447,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": true,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 393343,
-          "bgg_name": "Smug Owls"
+          "bgg_id": 440929,
+          "bgg_name": "Smug Owls: Pompous Owls"
         }
       ],
-      "match_score": 58.06451612903225
+      "match_score": 100.0
     },
     {
       "zatu_handle": "top-trumps-star-wars-starships",
@@ -44539,14 +44606,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 210626,
-          "bgg_name": "Stak Bots: Red Expansion"
+          "bgg_id": 367809,
+          "bgg_name": "RWBY: Combat Ready \u2013 Team JNPR Expansion"
         }
       ],
-      "match_score": 63.33333333333333
+      "match_score": 100.0
     },
     {
       "zatu_handle": "vestige-chop-box-module",
@@ -44566,14 +44633,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 29063,
-          "bgg_name": "Le compte est bon!"
+          "bgg_id": 435895,
+          "bgg_name": "Vestige: Chop Box Module"
         }
       ],
-      "match_score": 60.0
+      "match_score": 100.0
     },
     {
       "zatu_handle": "gruntz-supplies-expansion",
@@ -44622,14 +44689,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 205428,
-          "bgg_name": "Secret Agents"
+          "bgg_id": 453941,
+          "bgg_name": "Zenith: Secret Agents"
         }
       ],
-      "match_score": 78.78787878787878
+      "match_score": 100.0
     },
     {
       "zatu_handle": "war-chest-shock-tactics",
@@ -44647,14 +44714,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 363633,
-          "bgg_name": "Shu's Tactics"
+          "bgg_id": 452783,
+          "bgg_name": "War Chest: Shock Tactics"
         }
       ],
-      "match_score": 66.66666666666667
+      "match_score": 100.0
     },
     {
       "zatu_handle": "codenames-cute-critters-expansion",
@@ -44754,14 +44821,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 176640,
-          "bgg_name": "Duel Bots Duel Pack: Crimson Spear"
+          "bgg_id": 361605,
+          "bgg_name": "Cuba Libre: Calixto Bot Update Pack"
         }
       ],
-      "match_score": 56.71641791044777
+      "match_score": 100.0
     },
     {
       "zatu_handle": "brazil-imperial-automa",
@@ -45143,14 +45210,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 337117,
-          "bgg_name": "RATS: High Tea at Sea"
+          "bgg_id": 323209,
+          "bgg_name": "High Rise: Extra Tenants"
         }
       ],
-      "match_score": 65.11627906976744
+      "match_score": 100.0
     },
     {
       "zatu_handle": "viva-topo",
@@ -45268,14 +45335,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 342894,
-          "bgg_name": "Mythic Mischief"
+          "bgg_id": 402247,
+          "bgg_name": "Mythic Mischief: Appendix A"
         }
       ],
-      "match_score": 76.92307692307692
+      "match_score": 100.0
     },
     {
       "zatu_handle": "that-sound-game-x-tension-pack-18",
@@ -45321,14 +45388,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 17508,
-          "bgg_name": "United Kingdom Trivia Game"
+          "bgg_id": 207359,
+          "bgg_name": "2GM Tactics: United Kingdom Expansion"
         }
       ],
-      "match_score": 67.74193548387098
+      "match_score": 100.0
     },
     {
       "zatu_handle": "horses-ponies-and-unicorns-top-trumps",
@@ -45594,14 +45661,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 329939,
-          "bgg_name": "Keystone: North America"
+          "bgg_id": 420622,
+          "bgg_name": "Keystone: North America \u2013 Coastal Expansion"
         }
       ],
-      "match_score": 70.96774193548387
+      "match_score": 100.0
     },
     {
       "zatu_handle": "return-to-dark-tower-base-game-1st-printing",
@@ -45754,14 +45821,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 317526,
-          "bgg_name": "Masters of The Universe: Fields of Eternia The Board Game"
+          "bgg_id": 384105,
+          "bgg_name": "Masters of The Universe: Fields of Eternia The Board Game \u2013 Rise of the Snake Men"
         }
       ],
-      "match_score": 80.43478260869566
+      "match_score": 100.0
     },
     {
       "zatu_handle": "catan-cities-knights-replacement-cards-pack-6th-edition",
@@ -45927,14 +45994,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 70172,
-          "bgg_name": "MERCENARY: Battle for City"
+          "bgg_id": 440643,
+          "bgg_name": "BattleTech: Force Manual Mercenaries"
         }
       ],
-      "match_score": 66.66666666666667
+      "match_score": 100.0
     },
     {
       "zatu_handle": "pirate-king",
@@ -46065,14 +46132,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 419645,
-          "bgg_name": "Mindbug: Battlefruit Galaxy"
+          "bgg_id": 422800,
+          "bgg_name": "Mindbug: Battlefruits Add-on Pack"
         }
       ],
-      "match_score": 65.51724137931035
+      "match_score": 100.0
     },
     {
       "zatu_handle": "high-frontier-4-all-economy-expansion",
@@ -46147,14 +46214,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 299431,
-          "bgg_name": "Command Combat: Civil War \u2013 The Battle of Shiloh"
+          "bgg_id": 383035,
+          "bgg_name": "Combat Commander: Battle Pack #8 \u2013 Minor Nations"
         }
       ],
-      "match_score": 65.88235294117646
+      "match_score": 100.0
     },
     {
       "zatu_handle": "pacific-rails-inc-upgraded-edition",
@@ -46592,14 +46659,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 386311,
-          "bgg_name": "Made Up Movies + Deluxe Expansion"
+          "bgg_id": 462001,
+          "bgg_name": "Veiled Fate: Providence Micro-expansion"
         }
       ],
-      "match_score": 61.29032258064516
+      "match_score": 100.0
     },
     {
       "zatu_handle": "100-pics-dog-breeds",
@@ -46763,14 +46830,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 107638,
-          "bgg_name": "Master Merchant"
+          "bgg_id": 364640,
+          "bgg_name": "Merchants Cove: Master Craft"
         }
       ],
-      "match_score": 71.42857142857143
+      "match_score": 100.0
     },
     {
       "zatu_handle": "pantheum-monsters-mandates-expansion",
@@ -47162,14 +47229,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 257380,
-          "bgg_name": "Counterfeiters"
+          "bgg_id": 462460,
+          "bgg_name": "Splendor Duel: The Counterfeiters"
         }
       ],
-      "match_score": 66.66666666666667
+      "match_score": 100.0
     },
     {
       "zatu_handle": "tenpenny-parks-collector-edition",
@@ -47232,6 +47299,34 @@
         }
       ],
       "match_score": 61.224489795918366
+    },
+    {
+      "zatu_handle": "war-chest-nightfall",
+      "zatu_title": "War Chest: Nightfall",
+      "zatu_url": "https://zatu.com/products/war-chest-nightfall",
+      "zatu_price_gbp": 22.59,
+      "zatu_in_stock": true,
+      "zatu_tags": [
+        "1-4 Players",
+        "45-60 Minutes",
+        "Board Games",
+        "Drafting",
+        "Expansions",
+        "Manual Release Date",
+        "Pre-Order",
+        "Solo",
+        "Top 5000 Board Games"
+      ],
+      "zatu_is_coop": false,
+      "zatu_is_party": false,
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
+      "bgg_candidates": [
+        {
+          "bgg_id": 388565,
+          "bgg_name": "War Chest: Nightfall"
+        }
+      ],
+      "match_score": 100.0
     },
     {
       "zatu_handle": "forage-card-game",
@@ -47382,14 +47477,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 447589,
-          "bgg_name": "Jackpot: Set the Reel"
+          "bgg_id": 452132,
+          "bgg_name": "Jackpot: Set the Reel \u2013 Expansions"
         }
       ],
-      "match_score": 74.4186046511628
+      "match_score": 100.0
     },
     {
       "zatu_handle": "ascension-dreams-nightmares-7th-collector-s-edition",
@@ -47438,14 +47533,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 322400,
-          "bgg_name": "D-Day and Beyond"
+          "bgg_id": 412457,
+          "bgg_name": "Mindbug: Beyond \u2013 Add-On Pack"
         }
       ],
-      "match_score": 61.904761904761905
+      "match_score": 100.0
     },
     {
       "zatu_handle": "karnak",
@@ -47553,14 +47648,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 277700,
-          "bgg_name": "Merchants Cove"
+          "bgg_id": 444762,
+          "bgg_name": "Merchants Cove: Loot Pack"
         }
       ],
-      "match_score": 73.6842105263158
+      "match_score": 100.0
     },
     {
       "zatu_handle": "secrets-castles-of-mad-king-ludwig-exp",
@@ -47701,14 +47796,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 9302,
-          "bgg_name": "The Lost Mountain of God"
+          "bgg_id": 370755,
+          "bgg_name": "Among Cultists: Mountains of Chaos"
         }
       ],
-      "match_score": 67.9245283018868
+      "match_score": 100.0
     },
     {
       "zatu_handle": "among-cultists-down-into-the-abyss",
@@ -47725,14 +47820,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 319959,
-          "bgg_name": "The Boys: This Is Going to Hurt"
+          "bgg_id": 370754,
+          "bgg_name": "Among Cultists: Down into the Abyss"
         }
       ],
-      "match_score": 60.71428571428572
+      "match_score": 100.0
     },
     {
       "zatu_handle": "final-girl-series-3-bonus-features-box",
@@ -47750,14 +47845,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 463814,
-          "bgg_name": "Girl's Box: Soir\u00e9e Entre Filles"
+          "bgg_id": 438833,
+          "bgg_name": "Final Girl: Series 3 Bonus Features Box"
         }
       ],
-      "match_score": 61.76470588235294
+      "match_score": 100.0
     },
     {
       "zatu_handle": "dc-deck-building-game-party-starter-edition",
@@ -48394,14 +48489,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 424220,
-          "bgg_name": "Dice Raiders: Secrets of Aztecs"
+          "bgg_id": 413269,
+          "bgg_name": "Imperial Miners: Aztecs vs Weirdlings"
         }
       ],
-      "match_score": 60.60606060606061
+      "match_score": 100.0
     },
     {
       "zatu_handle": "gods-of-rome-solo",
@@ -48547,14 +48642,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 303265,
-          "bgg_name": "Expansionist"
+          "bgg_id": 345449,
+          "bgg_name": "For the Girls: First Expansion"
         }
       ],
-      "match_score": 64.86486486486487
+      "match_score": 100.0
     },
     {
       "zatu_handle": "mm-case-files-murder-noir",
@@ -48598,14 +48693,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 174399,
-          "bgg_name": "The Space Base Race"
+          "bgg_id": 388569,
+          "bgg_name": "Space Base: Genesis"
         }
       ],
-      "match_score": 72.72727272727273
+      "match_score": 100.0
     },
     {
       "zatu_handle": "nemesis-retaliation-core-box",
@@ -48722,14 +48817,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 320136,
-          "bgg_name": "Naruto: Ninja Arena"
+          "bgg_id": 347567,
+          "bgg_name": "Naruto: Ninja Arena \u2013 Sensei Pack"
         }
       ],
-      "match_score": 75.0
+      "match_score": 100.0
     },
     {
       "zatu_handle": "xscape-the-evolving-game-of-survival",
@@ -48799,14 +48894,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 157834,
-          "bgg_name": "Rising Empires"
+          "bgg_id": 403267,
+          "bgg_name": "Unrest: Uprising Expansion"
         }
       ],
-      "match_score": 66.66666666666667
+      "match_score": 100.0
     },
     {
       "zatu_handle": "a-grade-river-dragons",
@@ -50104,14 +50199,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 323156,
-          "bgg_name": "Stroganov"
+          "bgg_id": 387401,
+          "bgg_name": "Stroganov: Turukhan"
         }
       ],
-      "match_score": 66.66666666666667
+      "match_score": 100.0
     },
     {
       "zatu_handle": "raccoon-tycoon-premium-edition",
@@ -50580,14 +50675,14 @@
       ],
       "zatu_is_coop": true,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 264021,
-          "bgg_name": "Journey Into The Beyond"
+          "bgg_id": 420356,
+          "bgg_name": "Mini Rogue: Beyond the Portal"
         }
       ],
-      "match_score": 65.11627906976744
+      "match_score": 100.0
     },
     {
       "zatu_handle": "super-auto-pets-card-battle-coin-trophy-upgrade-set",
@@ -50797,14 +50892,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 146763,
-          "bgg_name": "Dragon Chess: Arcane Battles"
+          "bgg_id": 441341,
+          "bgg_name": "Trickerion: Arcane Arts"
         }
       ],
-      "match_score": 65.3061224489796
+      "match_score": 100.0
     },
     {
       "zatu_handle": "magenta-i-m-out",
@@ -51301,14 +51396,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 299963,
-          "bgg_name": "Picture Perfect"
+          "bgg_id": 340285,
+          "bgg_name": "Picture Perfect: The Pickpocket Expansion"
         }
       ],
-      "match_score": 58.82352941176471
+      "match_score": 100.0
     },
     {
       "zatu_handle": "prehistories-evolutions",
@@ -51326,14 +51421,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 318183,
-          "bgg_name": "Prehistories"
+          "bgg_id": 358595,
+          "bgg_name": "Prehistories: Evolutions"
         }
       ],
-      "match_score": 68.57142857142857
+      "match_score": 100.0
     },
     {
       "zatu_handle": "everyday-heroes-total-recall-cinematic-adventure",
@@ -51374,14 +51469,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 256509,
-          "bgg_name": "The One Hundred Torii"
+          "bgg_id": 322621,
+          "bgg_name": "The One Hundred Torii: Diverging Paths"
         }
       ],
-      "match_score": 65.21739130434783
+      "match_score": 100.0
     },
     {
       "zatu_handle": "hidden-games",
@@ -52160,6 +52255,30 @@
       "match_score": null
     },
     {
+      "zatu_handle": "tokyo-highway-rainbow-city-solo",
+      "zatu_title": "Tokyo Highway: Rainbow City - Solo",
+      "zatu_url": "https://zatu.com/products/tokyo-highway-rainbow-city-solo",
+      "zatu_price_gbp": 9.99,
+      "zatu_in_stock": true,
+      "zatu_tags": [
+        "1-10+ Players",
+        "20-30 Minutes",
+        "Board Games",
+        "Next Day Delivery",
+        "Top 5000 Board Games"
+      ],
+      "zatu_is_coop": false,
+      "zatu_is_party": false,
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
+      "bgg_candidates": [
+        {
+          "bgg_id": 418305,
+          "bgg_name": "Tokyo Highway: Rainbow City \u2013 SOLO"
+        }
+      ],
+      "match_score": 100.0
+    },
+    {
       "zatu_handle": "plotters-inc-old",
       "zatu_title": "Plotters, Inc (Old)",
       "zatu_url": "https://zatu.com/products/plotters-inc-old",
@@ -52417,14 +52536,14 @@
       ],
       "zatu_is_coop": true,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 257700,
-          "bgg_name": "Munchkin Warhammer 40,000"
+          "bgg_id": 472266,
+          "bgg_name": "Munchkin Warhammer 40,000: Grudges And Gore"
         }
       ],
-      "match_score": 73.84615384615385
+      "match_score": 100.0
     },
     {
       "zatu_handle": "corps-of-discovery-2nd-edition",
@@ -52712,14 +52831,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 287783,
-          "bgg_name": "The Last Hundred Yards: Volume 2 \u2013 Airborne Over Europe"
+          "bgg_id": 403228,
+          "bgg_name": "The Last Hundred Yards: Volume 5 \u2013 For King & Country"
         }
       ],
-      "match_score": 68.75
+      "match_score": 100.0
     },
     {
       "zatu_handle": "coalitions-fortresses-expansion",
@@ -52764,14 +52883,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 17615,
-          "bgg_name": "1792: La Patrie en Danger"
+          "bgg_id": 345110,
+          "bgg_name": "Coalitions: La Patrie en Danger!"
         }
       ],
-      "match_score": 74.07407407407408
+      "match_score": 100.0
     },
     {
       "zatu_handle": "a-grade-katamino-family",
@@ -52920,14 +53039,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 21441,
-          "bgg_name": "Mykerinos"
+          "bgg_id": 30762,
+          "bgg_name": "Mykerinos: The Nile"
         }
       ],
-      "match_score": 78.26086956521739
+      "match_score": 100.0
     },
     {
       "zatu_handle": "flip4",
@@ -53563,14 +53682,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 2404,
-          "bgg_name": "Sorcerer King"
+          "bgg_id": 313272,
+          "bgg_name": "Sorcerer: Endbringer"
         }
       ],
-      "match_score": 75.0
+      "match_score": 100.0
     },
     {
       "zatu_handle": "reload-team-sponsor-pack",
@@ -53695,14 +53814,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 272599,
-          "bgg_name": "Deadly Doodles"
+          "bgg_id": 288816,
+          "bgg_name": "Deadly Doodles 2"
         }
       ],
-      "match_score": 93.33333333333333
+      "match_score": 100.0
     },
     {
       "zatu_handle": "hm-queen-elizabeth-ii-single-image-puzzle-1000-pieces",
@@ -53744,14 +53863,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 102876,
-          "bgg_name": "Mercenaries and Rebels"
+          "bgg_id": 287201,
+          "bgg_name": "Claim: Reinforcements \u2013 Mercenaries"
         }
       ],
-      "match_score": 66.66666666666667
+      "match_score": 100.0
     },
     {
       "zatu_handle": "whitstable-and-herne-bay-monopoly",
@@ -54069,14 +54188,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 19238,
-          "bgg_name": "The Guess Picture Trivia: Movie Edition"
+          "bgg_id": 324333,
+          "bgg_name": "Picture Perfect: The Movie Star Expansion"
         }
       ],
-      "match_score": 60.0
+      "match_score": 100.0
     },
     {
       "zatu_handle": "deck-chairs-on-the-titanic",
@@ -55533,14 +55652,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 142079,
-          "bgg_name": "Space Cadets: Dice Duel"
+          "bgg_id": 155072,
+          "bgg_name": "Space Cadets: Dice Duel \u2013 Die Fighter"
         }
       ],
-      "match_score": 78.57142857142857
+      "match_score": 100.0
     },
     {
       "zatu_handle": "tenpenny-parks-fairview-challenges",
@@ -56112,14 +56231,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 455363,
-          "bgg_name": "Secret Societies"
+          "bgg_id": 455365,
+          "bgg_name": "Secret Societies: Lycans"
         }
       ],
-      "match_score": 82.05128205128204
+      "match_score": 100.0
     },
     {
       "zatu_handle": "living-planet-collector",
@@ -56266,14 +56385,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 332890,
-          "bgg_name": "Bounce Bunny Bounce"
+          "bgg_id": 467595,
+          "bgg_name": "Amoebunnies: Bunny Buddies"
         }
       ],
-      "match_score": 63.63636363636363
+      "match_score": 100.0
     },
     {
       "zatu_handle": "tantrix-strategy",
@@ -57046,14 +57165,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 369387,
-          "bgg_name": "Soldiers Of Fortune"
+          "bgg_id": 345107,
+          "bgg_name": "Coalitions: Soldiers of Fortune"
         }
       ],
-      "match_score": 77.55102040816327
+      "match_score": 100.0
     },
     {
       "zatu_handle": "diplomacy-bundle",
@@ -57892,14 +58011,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 23451,
-          "bgg_name": "Space Dealer"
+          "bgg_id": 32342,
+          "bgg_name": "Space Dealer: All-Zeit"
         }
       ],
-      "match_score": 72.72727272727273
+      "match_score": 100.0
     },
     {
       "zatu_handle": "ark-extra-mix-expansion",
@@ -58202,14 +58321,14 @@
       ],
       "zatu_is_coop": true,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 364478,
-          "bgg_name": "Mini Crimes: The Strange Cup"
+          "bgg_id": 404232,
+          "bgg_name": "Drop Drive: Strange Signals"
         }
       ],
-      "match_score": 65.3061224489796
+      "match_score": 100.0
     },
     {
       "zatu_handle": "knee-deep-in-hexes-big-box-with-expansions-no-base-game",
@@ -59022,14 +59141,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 367752,
-          "bgg_name": "Heists in Hyperspace"
+          "bgg_id": 457609,
+          "bgg_name": "Hyperspace: Nova Expansion"
         }
       ],
-      "match_score": 66.66666666666667
+      "match_score": 100.0
     },
     {
       "zatu_handle": "blood-rage-valhalla-road-to-helheim-expansion",
@@ -59050,14 +59169,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 449472,
-          "bgg_name": "Blood Rage: Valhalla"
+          "bgg_id": 452687,
+          "bgg_name": "Blood Rage: Valhalla \u2013 Road to Helheim Expansion"
         }
       ],
-      "match_score": 59.375
+      "match_score": 100.0
     },
     {
       "zatu_handle": "naruto-shippuden-ninja-arena",
@@ -59729,14 +59848,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 12734,
-          "bgg_name": "The Battle of Chickamauga"
+          "bgg_id": 284228,
+          "bgg_name": "Kamigami Battles: Children of Danu"
         }
       ],
-      "match_score": 66.66666666666667
+      "match_score": 100.0
     },
     {
       "zatu_handle": "urban-art-banksy-girl-on-a-stool",

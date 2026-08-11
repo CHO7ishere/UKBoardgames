@@ -17318,34 +17318,6 @@
       "quality_label": "UNLABELED"
     },
     {
-      "zatu_handle": "terraforming-mars-ares-expedition-crisis",
-      "zatu_title": "Terraforming Mars - Ares Expedition: Crisis",
-      "zatu_url": "https://zatu.com/products/terraforming-mars-ares-expedition-crisis",
-      "zatu_price_gbp": 17.0,
-      "zatu_in_stock": true,
-      "zatu_ean": null,
-      "zatu_tags": [
-        "Board Games",
-        "Next Day Delivery",
-        "no gift wrap",
-        "Terraforming Mars",
-        "Top 5000 Board Games"
-      ],
-      "zatu_is_coop": false,
-      "zatu_is_party": false,
-      "bgg_id": 328871,
-      "bgg_name": "Terraforming Mars: Ares Expedition",
-      "bgg_year": 2021,
-      "bgg_rank": 194,
-      "bgg_average": 7.63023,
-      "bgg_usersrated": 21401,
-      "match_confidence": "MEDIUM",
-      "match_score": 90.41095890410959,
-      "quality_shrunk": 7.625,
-      "quality_pts": 13.66,
-      "quality_label": "STRONG"
-    },
-    {
       "zatu_handle": "papyria",
       "zatu_title": "Papyria",
       "zatu_url": "https://zatu.com/products/papyria",
@@ -18348,33 +18320,6 @@
       "match_score": 91.76470588235294,
       "quality_shrunk": 7.592,
       "quality_pts": 12.59,
-      "quality_label": "STRONG"
-    },
-    {
-      "zatu_handle": "bios-origins-2nd-edition",
-      "zatu_title": "Bios: Origins 2nd Edition",
-      "zatu_url": "https://zatu.com/products/bios-origins-2nd-edition",
-      "zatu_price_gbp": 67.95,
-      "zatu_in_stock": true,
-      "zatu_ean": null,
-      "zatu_tags": [
-        "Board Games",
-        "Next Day Delivery",
-        "no gift wrap",
-        "Top 5000 Board Games"
-      ],
-      "zatu_is_coop": false,
-      "zatu_is_party": false,
-      "bgg_id": 235555,
-      "bgg_name": "Bios: Origins (Second Edition)",
-      "bgg_year": 2019,
-      "bgg_rank": 1931,
-      "bgg_average": 7.72339,
-      "bgg_usersrated": 1371,
-      "match_confidence": "MEDIUM",
-      "match_score": 95.0,
-      "quality_shrunk": 7.64,
-      "quality_pts": 14.15,
       "quality_label": "STRONG"
     },
     {
@@ -19558,34 +19503,6 @@
       "match_score": 100.0,
       "quality_shrunk": 7.221,
       "quality_pts": 0.68,
-      "quality_label": "UNLABELED"
-    },
-    {
-      "zatu_handle": "tokyo-highway-rainbow-city-solo",
-      "zatu_title": "Tokyo Highway: Rainbow City - Solo",
-      "zatu_url": "https://zatu.com/products/tokyo-highway-rainbow-city-solo",
-      "zatu_price_gbp": 9.99,
-      "zatu_in_stock": true,
-      "zatu_ean": null,
-      "zatu_tags": [
-        "1-10+ Players",
-        "20-30 Minutes",
-        "Board Games",
-        "Next Day Delivery",
-        "Top 5000 Board Games"
-      ],
-      "zatu_is_coop": false,
-      "zatu_is_party": false,
-      "bgg_id": 404513,
-      "bgg_name": "Tokyo Highway: Rainbow City",
-      "bgg_year": 2023,
-      "bgg_rank": 3692,
-      "bgg_average": 7.4136,
-      "bgg_usersrated": 696,
-      "match_confidence": "MEDIUM",
-      "match_score": 91.22807017543859,
-      "quality_shrunk": 7.299,
-      "quality_pts": 3.18,
       "quality_label": "UNLABELED"
     },
     {

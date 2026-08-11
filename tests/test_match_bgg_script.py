@@ -86,6 +86,33 @@ def test_run_derives_coop_from_tags_even_without_is_coop_dict_keys():
     assert survivors[0]["zatu_is_party"] is False
 
 
+def test_run_excluded_games_veto_categorized_as_matches_excluded_expansion():
+    # bg_ranks_sample.csv's "Spirit Island: Branch & Claw" (id 6) is a real is_expansion=1
+    # entry filtered out of _bgg_games() -- querying it by its exact title must be vetoed and
+    # categorized distinctly, not lumped in with genuine no-BGG-match products.
+    all_games = load_bg_ranks(FIXTURES / "bg_ranks_sample.csv")
+    base_games = _bgg_games()
+    included_ids = {g.id for g in base_games}
+    excluded_games = [g for g in all_games if g.id not in included_ids]
+
+    products = _zatu_products() + [
+        {
+            "handle": "spirit-island-branch-and-claw",
+            "title": "Spirit Island: Branch & Claw",
+            "url": "https://zatu.com/products/spirit-island-branch-and-claw",
+            "product_type": "Board Games",
+            "tags": [],
+            "min_price_gbp": 29.99,
+            "in_stock": True,
+            "ean": None,
+        }
+    ]
+    _, _, unmatched = match_bgg.run(products, base_games, TEST_CONFIG, excluded_games=excluded_games)
+    entry = next(u for u in unmatched if u["zatu_handle"] == "spirit-island-branch-and-claw")
+    assert entry["match_category"] == "MATCHES_EXCLUDED_EXPANSION"
+    assert entry["bgg_candidates"] == [{"bgg_id": 6, "bgg_name": "Spirit Island: Branch & Claw"}]
+
+
 def test_run_drop_reason_distinguishes_match_vs_quality_failure():
     _, dropped, _ = match_bgg.run(_zatu_products(), _bgg_games(), TEST_CONFIG)
     by_handle = {d["zatu_handle"]: d for d in dropped}
