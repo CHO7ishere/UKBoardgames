@@ -188,3 +188,135 @@ def test_main_survives_a_lookup_error(tmp_path, monkeypatch, capsys):
     results = json.loads(out_file.read_text())["results"]
     assert results[0]["philibert_status"] == "NOT_LISTED"  # safe fallback, not a crash
     assert "ERROR cheap-in-uk" in capsys.readouterr().err
+
+
+def _run_main(matched_file, config_file, out_file, shortlist_file, extra_args=None):
+    sys.argv = [
+        "lookup_philibert.py",
+        "--matched", str(matched_file),
+        "--config", str(config_file),
+        "--out", str(out_file),
+        "--shortlist-out", str(shortlist_file),
+        *(extra_args or []),
+    ]
+    return lookup_philibert.main()
+
+
+def test_main_reuses_cached_durable_result_without_a_live_lookup(tmp_path, monkeypatch):
+    matched_file = tmp_path / "matched.json"
+    matched_file.write_text(json.dumps({"survivors": [SURVIVOR_LISTED_CHEAPER]}))
+    config_file = tmp_path / "config.yaml"
+    import yaml
+    config_file.write_text(yaml.dump(TEST_CONFIG))
+    out_file = tmp_path / "results.json"
+    shortlist_file = tmp_path / "shortlist.json"
+
+    # Pre-seed a prior run's output with a durable LISTED_IN_STOCK result for this survivor.
+    out_file.write_text(json.dumps({"results": [{
+        **SURVIVOR_LISTED_CHEAPER,
+        "philibert_status": "LISTED_IN_STOCK",
+        "philibert_price_eur": 100.0,
+        "philibert_language": "Français",
+        "philibert_url": "https://www.philibertnet.com/fr/pub/1-cheap.html",
+        "philibert_stock_status_raw": "IN_STOCK",
+        "advantage_verdict": "CHEAPER_UK",
+        "advantage_points": 25.0,
+        "discount_pct": 0.8,
+        "needs_eyeball": False,
+        "advantage_reason": "stale",
+    }]}))
+
+    calls = []
+    monkeypatch.setattr(
+        lookup_philibert, "lookup_one",
+        lambda session, survivor, rate_limit_sec: calls.append(survivor["zatu_handle"]) or {},
+    )
+
+    exit_code = _run_main(matched_file, config_file, out_file, shortlist_file)
+
+    assert exit_code == 0
+    assert calls == []  # no live lookup at all -- reused the cached durable result
+    results = json.loads(out_file.read_text())["results"]
+    assert results[0]["philibert_status"] == "LISTED_IN_STOCK"
+    assert results[0]["philibert_price_eur"] == 100.0
+    # advantage is recomputed fresh from current survivor data, not blindly copied from cache
+    assert results[0]["advantage_verdict"] == "CHEAPER_UK"
+    assert results[0]["advantage_reason"] != "stale"
+
+
+def test_main_always_rechecks_not_listed_cached_survivors(tmp_path, monkeypatch):
+    matched_file = tmp_path / "matched.json"
+    matched_file.write_text(json.dumps({"survivors": [SURVIVOR_NOT_LISTED]}))
+    config_file = tmp_path / "config.yaml"
+    import yaml
+    config_file.write_text(yaml.dump(TEST_CONFIG))
+    out_file = tmp_path / "results.json"
+    shortlist_file = tmp_path / "shortlist.json"
+
+    out_file.write_text(json.dumps({"results": [{
+        **SURVIVOR_NOT_LISTED,
+        "philibert_status": "NOT_LISTED",
+        "philibert_price_eur": None,
+        "philibert_language": None,
+        "philibert_url": None,
+        "philibert_stock_status_raw": None,
+        "advantage_verdict": "UNAVAILABLE_FR",
+        "advantage_points": 28,
+        "discount_pct": None,
+        "needs_eyeball": True,
+        "advantage_reason": "stale",
+    }]}))
+
+    calls = []
+
+    def tracking_lookup(session, survivor, rate_limit_sec):
+        calls.append(survivor["zatu_handle"])
+        return {"status": "LISTED_IN_STOCK", "price_eur": 50.0, "language": "Français", "url": "u1"}
+
+    monkeypatch.setattr(lookup_philibert, "lookup_one", tracking_lookup)
+
+    exit_code = _run_main(matched_file, config_file, out_file, shortlist_file)
+
+    assert exit_code == 0
+    assert calls == ["not-listed"]  # NOT_LISTED is never trusted from cache -- always re-checked
+    results = json.loads(out_file.read_text())["results"]
+    assert results[0]["philibert_status"] == "LISTED_IN_STOCK"  # the fresh, corrected result
+
+
+def test_main_refresh_flag_ignores_cache_entirely(tmp_path, monkeypatch):
+    matched_file = tmp_path / "matched.json"
+    matched_file.write_text(json.dumps({"survivors": [SURVIVOR_LISTED_CHEAPER]}))
+    config_file = tmp_path / "config.yaml"
+    import yaml
+    config_file.write_text(yaml.dump(TEST_CONFIG))
+    out_file = tmp_path / "results.json"
+    shortlist_file = tmp_path / "shortlist.json"
+
+    out_file.write_text(json.dumps({"results": [{
+        **SURVIVOR_LISTED_CHEAPER,
+        "philibert_status": "LISTED_IN_STOCK",
+        "philibert_price_eur": 100.0,
+        "philibert_language": "Français",
+        "philibert_url": "https://www.philibertnet.com/fr/pub/1-cheap.html",
+        "philibert_stock_status_raw": "IN_STOCK",
+        "advantage_verdict": "CHEAPER_UK",
+        "advantage_points": 25.0,
+        "discount_pct": 0.8,
+        "needs_eyeball": False,
+        "advantage_reason": "stale",
+    }]}))
+
+    calls = []
+
+    def tracking_lookup(session, survivor, rate_limit_sec):
+        calls.append(survivor["zatu_handle"])
+        return {"status": "LISTED_IN_STOCK", "price_eur": 999.0, "language": "Français", "url": "u2"}
+
+    monkeypatch.setattr(lookup_philibert, "lookup_one", tracking_lookup)
+
+    exit_code = _run_main(matched_file, config_file, out_file, shortlist_file, extra_args=["--refresh"])
+
+    assert exit_code == 0
+    assert calls == ["cheap-in-uk"]  # --refresh forces a live lookup despite the durable cache
+    results = json.loads(out_file.read_text())["results"]
+    assert results[0]["philibert_price_eur"] == 999.0

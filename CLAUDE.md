@@ -449,3 +449,77 @@ filter UI verified live with Playwright against the real `docs/index.html`.
   blast radius (3/582 ≈ 0.5%) — per user's explicit choice, this was pushed as a code+test fix
   without spending another ~hour-long GitHub Actions round-trip just for these 3 games; the next
   live Philibert re-run (whenever one happens for other reasons) will pick it up.
+- **Marvel Champions: The Card Game, another real miss (user-confirmed live)**: the exact-title
+  and bare base-title ("Marvel Champions") searches both correctly found nothing/refused to
+  guess — Marvel Champions has 15+ expansion/hero-pack SKUs on Philibert sharing that prefix.
+  Publishers translate a literal "The X Game" suffix into French "Le Jeu de X" — confirmed as a
+  real recurring pattern across two independently-found games now (Slay the Spire's "Board
+  Game", this one's "Card Game"). Added `_translated_title_candidate()` to
+  `sources/philibert.py`, tried first in `_base_title_candidates()`: the translated candidate
+  ("Marvel Champions: Le Jeu de Cartes") is an exact normalized match for the real base box and
+  wins the ordinary fuzzy tier outright (100.0 vs 89.19 for the closest real expansion, verified
+  against real captured Philibert search data before shipping).
+- **A second accessory false-positive class, found the same way as the insert bug above**: the
+  accessory-token fix (`_has_accessory_token`) also silently fixed Orloj: The Prague Astronomical
+  Clock and Minos: Dawn of the Bronze Age, which were matching accessory listings before.
+- **Live re-run confirming both fixes** (`lookup-philibert.yml` re-dispatched 2026-08-11 05:08,
+  ~58 min, commit `f23158d`) against the real 582-survivor set: Marvel Champions: The Card Game
+  → `FAMILY_LISTED_FR`/`FAMILY_AVAILABLE_FR` at the real base-box URL; Gloomhaven: Jaws of the
+  Lion and Minos: Dawn of the Bronze Age → correctly `NOT_LISTED` (no longer matched to
+  accessories); Orloj → `FAMILY_LISTED_FR` at a real listing. Verdicts: 398 `NONE`, 142
+  `UNAVAILABLE_FR`, 34 `FAMILY_AVAILABLE_FR`, 8 `CHEAPER_UK`.
+- **Real process bug found and fixed the same day**: this exact live run *initially* failed
+  silently — Stages 4-7 all completed for real, but the final `git push` was rejected
+  (non-fast-forward) because several more code-only commits landed on `main` during the ~1hr
+  run, discarding the entire run's output (it only existed in the ephemeral runner's local
+  checkout). Fixed `lookup-philibert.yml`'s commit step to `git fetch` + `git rebase
+  origin/main` before pushing, with a few retries — then re-dispatched, which is the run whose
+  results are recorded above.
+- **BGG's public game page is Cloudflare-protected** (confirmed live via
+  `scripts/probe_bgg_page.py`): every plain `requests` call returns a 403 "Just a moment..."
+  challenge page, main page and `/versions` alike — no header trick gets around it. A **real
+  headless browser does**, though (confirmed via `scripts/probe_bgg_playwright.py`, Playwright +
+  Chromium in GitHub Actions): loads the real page, no challenge, `Language Dependence` poll text
+  present and extractable. The plain `/versions` page render looks nearly identical to the main
+  page (real version data loads via a later client-side call our fixed wait didn't catch) — but
+  BGG's versions page takes a `?language=<id>` filter (user-supplied lead), and that DOES change
+  the *server* response: confirmed live against Spirit Island (`?language=2187` → 4 real French
+  printings, `/boardgameversion/.../french-edition-{first,second,third,fourth}-printing`) and
+  Marvel Champions (→ exactly 1 French edition, titled **"Marvel Champions: Le Jeu De Cartes"** —
+  an exact match to the real Philibert listing, extracted directly from BGG with zero translation
+  guessing). This is a real, generalizable Stage 3 foundation — solves both the `fr_edition_exists`
+  gap (spec §5.2) and gives an authoritative localized title, better than the Wikidata partial-
+  coverage approach (`scripts/probe_wikidata.py`: BGG-ID cross-reference via P2339 found a usable
+  French label for only 2/5 test games — Gloomhaven and the original Sherlock Holmes Consulting
+  Detective, no labels for Marvel Champions or Everdell). Not yet built into the pipeline — a
+  headless-browser scrape is slow (~7-8s/page observed, ~582 games x ~1-2 requests would be a
+  ~1-2hr run) and, per the user's explicit ask (2026-08-11), needs a real caching layer first so
+  re-runs don't re-fetch already-known data from scratch every time.
+- **Real caching added for Stage 4/5, prompted by a real wasted run**: `docs/spec.md`/this
+  file's own "Tech" section always intended a cache ("SQLite cache keyed by source+id,
+  incremental re-runs, resumable") but it was never actually built — confirmed by re-reading
+  `scripts/enrich_zatu_ean.py`/`scripts/lookup_philibert.py`: both unconditionally re-fetched
+  every survivor on every dispatch, even ones already resolved in a prior run's committed
+  output. This session alone re-ran the full 582-game Philibert lookup twice (once lost entirely
+  to the git-push race documented above) — real, wasted load on Philibert's servers and ~50-60
+  min of GitHub Actions time each time, for data that mostly hadn't changed. Fixed by reusing the
+  existing committed JSON files as the cache (no new SQLite/binary artifact, consistent with the
+  project's existing plain-JSON-everywhere shape):
+  - `enrich_zatu_ean.py` skips any survivor that already has a `zatu_ean` value (Zatu barcodes
+    are static per-product data, essentially never change) — `--refresh` forces a full re-fetch
+    when genuinely needed.
+  - `lookup_philibert.py` loads its own `--out` file (`data/philibert_results.json`) from the
+    *previous* run before overwriting it, and reuses any survivor whose cached
+    `philibert_status` is durable (`LISTED_IN_STOCK`/`LISTED_OUT_OF_STOCK`/`FAMILY_LISTED_FR` —
+    once genuinely found, a matching-precision fix can only ever find *more* real listings, never
+    un-find a confirmed one). `NOT_LISTED` is deliberately **never** cached/trusted — that's
+    exactly the state a matching fix is meant to change, so it's always re-checked live. The
+    `advantage` verdict itself is always recomputed fresh from current survivor/config data even
+    for cache hits (cheap, pure computation, no network) rather than trusted stale from the
+    cache. `--refresh` bypasses the cache entirely.
+  - Net effect: a re-run after a matching-precision fix now only pays live-network cost for the
+    ~24% of survivors that were `NOT_LISTED` (exactly the ones a fix could plausibly change) plus
+    any brand-new survivors, not all 582 every time.
+  - GitHub Actions workflows need no changes — `lookup-philibert.yml` already runs Stage 4 then
+    Stage 5 against the same committed files, so caching kicks in automatically on the next
+    dispatch.

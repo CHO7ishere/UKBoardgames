@@ -26,6 +26,12 @@ def main() -> int:
     parser.add_argument("--matched", default="data/matched_games.json")
     parser.add_argument("--out", default="data/matched_games.json")
     parser.add_argument("--rate-limit-sec", type=float, default=1.0)
+    parser.add_argument(
+        "--refresh", action="store_true",
+        help="Re-fetch every survivor's EAN even if one is already cached from a prior run "
+        "(default: skip survivors that already have a real EAN -- Zatu barcodes are static "
+        "data, essentially never change, so re-fetching them on every run is pure waste).",
+    )
     args = parser.parse_args()
 
     payload = json.loads(Path(args.matched).read_text())
@@ -35,7 +41,11 @@ def main() -> int:
     session = make_session()
     found = 0
     errors = 0
+    cached = 0
     for i, survivor in enumerate(survivors, start=1):
+        if not args.refresh and survivor.get("zatu_ean"):
+            cached += 1
+            continue
         try:
             ean = fetch_product_ean(session, survivor["zatu_handle"])
         except Exception as exc:  # noqa: BLE001 — one bad product must not kill the whole run
@@ -49,7 +59,11 @@ def main() -> int:
             print(f"  [{i}/{len(survivors)}] {found} EANs found so far, {errors} errors", file=sys.stderr)
         time.sleep(args.rate_limit_sec)
 
-    print(f"Done: {found}/{len(survivors)} survivors got a real EAN ({errors} errors).", file=sys.stderr)
+    print(
+        f"Done: {found} new EANs found, {cached} already cached (skipped), {errors} errors, "
+        f"out of {len(survivors)} survivors.",
+        file=sys.stderr,
+    )
 
     out_path = Path(args.out)
     out_path.write_text(json.dumps(payload, indent=2))
