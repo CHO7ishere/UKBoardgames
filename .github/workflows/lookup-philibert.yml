@@ -31,9 +31,22 @@ jobs:
       - name: Stage 7 - render static HTML report
         run: python scripts/render_html.py
       - name: Commit results
+        # Stage 4/5 run for ~an hour -- main can easily move (code/doc commits from an active
+        # session) before this push runs. A plain `git push` would silently lose the whole run's
+        # output on a non-fast-forward rejection (confirmed happened for real 2026-08-10: Stages
+        # 4-7 all succeeded but the push was rejected, discarding an hour of live Philibert
+        # data). Rebase onto the latest main first, with a few retries in case of another race
+        # during the rebase/push window itself.
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/matched_games.json data/philibert_results.json data/shortlist.json data/scored_games.json docs/index.html
-          git diff --cached --quiet || git commit -m "Update Philibert lookup + shortlist + report [skip ci]"
-          git push
+          git diff --cached --quiet && { echo "Nothing to commit."; exit 0; }
+          git commit -m "Update Philibert lookup + shortlist + report [skip ci]"
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git rebase origin/main && git push origin HEAD:main && break
+            echo "Push attempt $attempt failed, retrying after rebase..."
+            git rebase --abort || true
+            sleep 10
+          done
