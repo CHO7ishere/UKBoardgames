@@ -803,3 +803,109 @@ excluded-games veto above already does.
   recovered survivors are in the refreshed `data/matched_games.json`/`data/unmatched_games.json`
   but don't have Stage 3/4/5 data yet, so the main scored table and shortlist size are unchanged
   until the next `lookup-philibert.yml` dispatch.
+
+## "Widen the net" round — three more real fixes, mined from the actual dropped/unmatched data
+(2026-08-11)
+
+User's follow-up, after seeing 621/4178: *"621 out of 4178 Zatu products still seems a very low
+ratio."* Investigated by quantifying every drop reason first rather than guessing at fixes —
+`data/dropped.csv` at the time: 1352 `QUALITY_GATE` (already-decided philosophy, not touched),
+2191 `LOW_CONFIDENCE_MATCH`, further split via `data/unmatched_games.json`'s `match_category`
+into 1537 `NO_CONFIDENT_MATCH`, 338 `MATCHES_EXCLUDED_EXPANSION` (real BGG expansions, correctly
+out of scope per `include_expansions: false` — a scope question, not a bug), 213
+`AMBIGUOUS_EXACT`, 21 `AMBIGUOUS_PREFIX`, 5 `DIGIT_CONFLICT`.
+
+- **Ruled out lowering the fuzzy threshold globally, with real evidence, before touching
+  anything**: sampled the real near-miss score bands. 85-90% is mostly genuine (Chicken Out!,
+  EXIT titles), but below ~85% the false-positive rate climbs fast and is systemic, not
+  occasional — many unrelated games share a generic suffix ("Kickstarter Edition", "Deluxe")
+  that inflates `token_sort_ratio` with no real title similarity underneath (e.g. Zatu's "Calico
+  Kickstarter Edition" was fuzzy-scoring 81.5% against BGG's completely unrelated "Autobahn:
+  Kickstarter Edition" purely off the shared suffix). Confirms the existing 90 threshold is
+  correctly calibrated, not overly conservative — the real opportunity was elsewhere.
+- **Extended the targeted noise-stripping list** (`match.py`'s `_EDITION_NOISE_RE`), each word
+  checked against the full real corpus first for collision risk before adding: "Kickstarter
+  Edition", "Special Edition", "Base Game" (every real BGG title containing it pairs it with a
+  distinguishing prefix, e.g. "Battlecrest: Fellwoods Base Game" — confirmed via the full
+  9-entry real list, so stripping it can't merge two different products), and bare "Refresh"/
+  "Refreshed" (a UK-retailer restocking/reprint term — confirmed via all 26 real Zatu titles
+  containing it that it's never part of a game's actual name).
+- **Added spelled-out ordinal edition handling** ("Second Edition" → the same abbreviated
+  digit-ordinal form Zatu's own titles use, "2nd Edition") via a new `_ORDINAL_MAP`/`_ORDINAL_RE`
+  conversion step run before both normalization tiers — the pre-existing edition-noise pattern
+  only ever matched the digit form, so 1044 real BGG titles using spelled ordinals (17 real Zatu
+  titles too) were previously untouched by it.
+- **Caught and fixed a real regression from that ordinal change before it shipped**, same
+  evidence-first method as every other fix this session: converting spelled ordinals initially
+  broke `Gloomhaven 2nd Edition` — BGG catalogues `Gloomhaven` (id 174430) and `Gloomhaven
+  (Second Edition)` (id 390478) as two separate, distinctly-priced entries (identical pattern to
+  the earlier Carcassonne/Big Box bug), and bare-stripping "second edition" as noise at the
+  aggressive tier collapsed that real distinction into a false ambiguity — while the light tier
+  couldn't rescue it either, since it never converted BGG's spelled "Second Edition" to match
+  Zatu's digit "2nd Edition" in the first place. Fixed by converting instead of stripping:
+  ordinal conversion runs *before* either normalization tier, so the light tier can now exact-
+  match "Gloomhaven 2nd Edition" to the *specific* Second Edition id — more precise than even
+  the pre-regression behaviour, which would have fallen through to the base game's id.
+- **A second, narrower regression from the same change, also caught before shipping**: a
+  handful of real BGG titles use a *compound* ordinal for a single catalogued entry —
+  `Mission: Red Planet (Second/Third Edition)`, `Fury of Dracula (Third/Fourth Edition)`, 5 total
+  in `bg_ranks.csv`. Stripping only a single trailing ordinal left a stray leading ordinal token
+  on the BGG side ("mission red planet 2nd") while the query's simple "Third Edition" stripped
+  clean to "mission red planet" — an asymmetric strip that silently exact-matched the *wrong*,
+  separate, lower-quality base-game BGG entry (id 18258, `usersrated`=4369, fails the quality
+  gate) instead of the correct compound-edition entry (id 176920, `usersrated`=12477, passes).
+  Fixed by extending the edition-noise regex to consume any number of slash-joined leading
+  ordinals before the final one, so `"(Second/Third Edition)"` strips as a single unit on both
+  sides — this specific game now correctly falls to the ambiguous-exact bucket (safe drop, per
+  spec P2) rather than silently picking the wrong id.
+- **Real, measured result of the noise-stripping + ordinal fixes together** (re-running
+  `scripts/match_bgg.py` offline against the live corpus, before/after diffed by survivor
+  handle+id, not just count): 621 → **635 survivors, net +14**. 16 real additions (Dominion:
+  Second Edition, Eclipse: Second Dawn for the Galaxy, Twilight Imperium: Fourth Edition, War of
+  the Ring: Second Edition, Camel Up (Second Edition), Fugitive (Second Edition), Parks (Second
+  Edition), Calico/Cascadia Kickstarter Edition, Marvel United, Memoir '44, and others — all
+  spot-checked as real, correct matches to specific BGG entries), 3 precision *improvements* on
+  already-surviving handles (7 Wonders/Gloomhaven/Great Western Trail's "2nd Edition" SKUs now
+  resolve to their specific BGG edition id instead of the base game's), 1 correct *removal*
+  (Mission: Red Planet — the regression fix above, now safely ambiguous instead of wrongly
+  matched), 0 unexplained regressions.
+- **Ambiguous-exact dominance tiebreak — a deliberate, user-confirmed departure from spec P2**:
+  mined the real 213-entry `AMBIGUOUS_EXACT` bucket against `bg_ranks.csv`'s own `usersrated`
+  column and found most "ties" aren't real ties — e.g. "Coup" exact-matches 3 BGG entries (a
+  1975 wargame, a 1991 wargame, and the actual 2012 game everyone means), `usersrated` 90 / 161 /
+  52,695. A same-named entry with near-zero ratings was always going to fail the quality gate's
+  own `min_votes` floor downstream anyway, so refusing the whole match over its mere existence is
+  precision theatre, not real caution. Presented the real numbers to the user via
+  `AskUserQuestion` rather than deciding unilaterally, since this is a genuine philosophy
+  departure from spec P2's "ambiguous matches are dropped, never guessed" — **user confirmed
+  "yes, add the dominance tiebreak."** Implemented as `BggIndex._dominant_by_rating_count`
+  (`match.py`): when an exact-title match ties on 2+ BGG entries, pick the one with
+  `usersrated` >= `_DOMINANCE_RATIO` (10x, chosen conservatively — 145/213 real cases clear it,
+  and every spot-checked case at that bar had an obviously-dominant candidate, not a genuine
+  coin-flip) times every other candidate's, returned as **MEDIUM** confidence (a picked answer,
+  not a proven identity) rather than HIGH. A companion question about the 338
+  `MATCHES_EXCLUDED_EXPANSION` products (real BGG-catalogued expansions, e.g. Wingspan: Oceania,
+  Root: Riverfolk — correctly out of scope per `include_expansions: false`) was also asked;
+  **user chose to keep expansions excluded, no change** — confirmed as a scope decision, not a
+  bug, so left untouched.
+- **Real, measured result of the dominance tiebreak**: 635 → **672 survivors, net +37** (40 real
+  ambiguous ties resolved by dominance, 3 of those 40 then filtered back out by the pre-existing
+  quality gate — expected, the tiebreak only decides *which* BGG entry a title means, it doesn't
+  bypass the quality bar). Spot-checked a broad sample of the resolved ties: Sagrada, Watergate,
+  Star Realms, Space Base, Tapestry, Cryptid, Akropolis, Paleo — all genuine, well-known,
+  correctly-identified games that were previously being dropped purely because BGG happens to
+  also catalogue an obscure, near-zero-rated same-named entry somewhere in its 179,794-row
+  history. The one pre-existing `AMBIGUOUS_EXACT` case that does *not* auto-resolve even now
+  (Mission: Red Planet, ratio ~2.85x, below the 10x bar) is correctly left as a genuine close
+  call rather than guessed.
+- **Session total: 621 → 672 survivors, net +51, zero unexplained regressions** across all three
+  fixes (noise-stripping/ordinals, then the dominance tiebreak), each verified via a full
+  before/after survivor-handle+id diff against the real 4178-product corpus, not just a raw
+  count. All 220 tests pass (9 new: 6 `normalize_title` parametrize cases for the new noise
+  words/ordinals, 1 light-tier ordinal-edition disambiguation test, 2 dominance-tiebreak tests
+  covering both the resolves-clearly and still-drops-on-a-real-tie paths).
+- **Not yet live**: same pattern as every matching-only fix this session — the net-new/
+  id-changed survivors are in the refreshed `data/matched_games.json`/`data/unmatched_games.json`
+  but don't have Stage 3/4/5 data (BGG French-edition check, EAN, Philibert lookup) yet, so the
+  main scored table and shortlist size are unchanged until the next `lookup-philibert.yml`
+  dispatch.

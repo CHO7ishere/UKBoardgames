@@ -53,6 +53,24 @@ _WORD_NUM_MAP = {
 }
 _WORD_NUM_RE = re.compile(r"\b(one|two|three|four|five|six|seven|eight|nine|ten)\b")
 
+# Spelled-out ordinals ("Second Edition") -> the abbreviated digit-ordinal form Zatu actually
+# uses ("2nd Edition"), applied *before* the edition-noise strip below so both sides land on the
+# same token instead of just one. Found as a real regression while widening the noise list to
+# also strip spelled-out ordinal editions: BGG catalogues "Gloomhaven" and "Gloomhaven (Second
+# Edition)" as two separate, distinctly-priced entries (same pattern as Carcassonne/Big Box) --
+# stripping "second edition" as bare noise collapsed that real distinction into a false
+# ambiguity, and the light tier couldn't rescue it either since it never converted BGG's spelled
+# "second edition" to match Zatu's digit "2nd edition" in the first place. Converting instead of
+# stripping fixes both: aggressive tier no longer conflates the two entries, and light tier can
+# now exact-match Zatu's "Gloomhaven 2nd Edition" to the specific BGG "Gloomhaven (Second
+# Edition)" id -- more precise than the pre-regression behaviour, which fell through to the base
+# game's id instead.
+_ORDINAL_MAP = {
+    "first": "1st", "second": "2nd", "third": "3rd",
+    "fourth": "4th", "fifth": "5th", "sixth": "6th",
+}
+_ORDINAL_RE = re.compile(r"\b(first|second|third|fourth|fifth|sixth)\b")
+
 # "v." as a bare "versus" abbreviation (all 23 real occurrences in bg_ranks.csv are Dice Throne
 # matchup titles, e.g. "Dice Throne: ... Pyromancer v. Shadow Thief") was being silently
 # misread by the roman-numeral regex below as "V" = 5 -- found via a real regression the vol/
@@ -76,10 +94,33 @@ _V_DOT_RE = re.compile(r"\bv\.(?=\s)")
 # titles at 85-90% fuzzy, just under/too close-to-threshold. Safe even in the worst case: if two
 # genuinely different BGG entries only differ by "the game", stripping it just makes them collide
 # into the ambiguous-exact-match branch (correctly dropped), never a wrong silent match.
+#
+# "kickstarter edition"/"special edition"/"base game"/spelled-out ordinal editions
+# ("second edition" etc, the existing digit-only "\d+(st|nd|rd|th) edition" branch never
+# caught these) and bare "refresh" (a UK-retailer term for a reprinted/restocked SKU, 26 real
+# Zatu titles, never part of a real game's own name) added the same way, each checked against
+# the full corpus first: every real BGG title carrying "base game" pairs it with a distinguishing
+# prefix (e.g. "Battlecrest: Fellwoods Base Game"), so stripping it can't merge two different
+# products; "kickstarter edition"/"special edition" turned out to be actively harmful *unstripped*
+# — matched to real wrong-game near-misses in the corpus (e.g. Zatu's "Calico Kickstarter
+# Edition" fuzzy-scoring against BGG's unrelated "Autobahn: Kickstarter Edition" purely off the
+# shared suffix) before this fix, not just missed real matches.
+# Real regression found and fixed here: a handful of BGG titles use a compound ordinal
+# ("Mission: Red Planet (Second/Third Edition)", "Fury of Dracula (Third/Fourth Edition)" --
+# 5 total in bg_ranks.csv) for an edition that folds two BGG-catalogued printings into one
+# entry. Stripping only a single trailing ordinal ("\d+(st|nd|rd|th)\s+edition") left a stray
+# leading ordinal token behind on the BGG side ("mission red planet 2nd") while the query's own
+# simple "Third Edition" stripped clean to "mission red planet" -- an asymmetric strip that
+# silently exact-matched the *wrong*, separate, lower-quality base-game BGG entry (a real
+# distinct id that exists for exactly this reason) instead of correctly falling through to
+# ambiguous. `(\d+(st|nd|rd|th)\s*/\s*)*` consumes any number of slash-joined leading ordinals
+# before the final one, so the whole compound phrase strips as a single unit on both sides.
 _EDITION_NOISE_RE = re.compile(
-    r"\b(board game|card game|the game|\d+(st|nd|rd|th)\s+edition|deluxe edition|deluxe|"
+    r"\b(board game|card game|the game|(\d+(st|nd|rd|th)\s*/\s*)*\d+(st|nd|rd|th)\s+edition|"
+    r"deluxe edition|deluxe|"
     r"big box|retail edition|english edition|english|core game|standard edition|"
-    r"anniversary edition|collector'?s edition)\b"
+    r"anniversary edition|collector'?s edition|kickstarter edition|special edition|"
+    r"base game|refresh(ed)?)\b"
 )
 _ARTICLE_RE = re.compile(r"\b(a|an|the)\b")
 _PUNCT_RE = re.compile(r"[^\w\s]")
@@ -123,6 +164,7 @@ def normalize_title_light(title: str) -> str:
     text = _VOL_DOT_RE.sub("vol ", text)
     text = _VOL_WORD_RE.sub("volume", text)
     text = _V_DOT_RE.sub("vs", text)
+    text = _ORDINAL_RE.sub(lambda m: _ORDINAL_MAP[m.group(0)], text)
     text = _WORD_NUM_RE.sub(lambda m: _WORD_NUM_MAP[m.group(0)], text)
     text = _ROMAN_RE.sub(lambda m: _ROMAN_MAP.get(m.group(0).lower(), m.group(0)), text)
     text = _PUNCT_RE.sub(" ", text)
@@ -148,6 +190,7 @@ def normalize_title(title: str) -> str:
     text = _VOL_DOT_RE.sub("vol ", text)
     text = _VOL_WORD_RE.sub("volume", text)
     text = _V_DOT_RE.sub("vs", text)
+    text = _ORDINAL_RE.sub(lambda m: _ORDINAL_MAP[m.group(0)], text)
     text = _EDITION_NOISE_RE.sub(" ", text)
     text = _WORD_NUM_RE.sub(lambda m: _WORD_NUM_MAP[m.group(0)], text)
     text = _ROMAN_RE.sub(lambda m: _ROMAN_MAP.get(m.group(0).lower(), m.group(0)), text)
@@ -181,6 +224,18 @@ class MatchResult:
     # separate from bgg_id/bgg_name, which stay None on LOW so nothing downstream can mistake
     # this for an actual match.
     candidates: list[tuple[int, str]] = field(default_factory=list)
+
+
+# Ambiguous-exact tiebreak threshold (user-confirmed 2026-08-11, after reviewing real numbers):
+# mining the real 213-entry AMBIGUOUS_EXACT bucket found that most "ties" aren't real ties at
+# all -- e.g. "Coup" exact-matches 3 BGG entries (a 1975 wargame, a 1991 wargame, and the actual
+# 2012 game everyone means), with usersrated 90 / 161 / 52,695. A same-named BGG entry with
+# usersrated below the quality gate's own min_votes floor was always going to be filtered out
+# downstream anyway, so refusing the match over it is precision theatre, not real caution. 10x
+# was picked as comfortably conservative against the real data: 145/213 real cases clear it, and
+# every spot-checked case at that bar had an unambiguous "obviously the popular one" candidate,
+# not a genuine coin-flip between two legitimately similar-sized games.
+_DOMINANCE_RATIO = 10
 
 
 class BggIndex:
@@ -225,6 +280,17 @@ class BggIndex:
         for game in excluded_games or []:
             self._excluded_exact[normalize_title(game.name)].append(game)
 
+    @staticmethod
+    def _dominant_by_rating_count(candidates: list[BggRankedGame]) -> BggRankedGame | None:
+        """Among title-tied candidates, return the one with >= _DOMINANCE_RATIO times the
+        usersrated of every other candidate -- or None if no candidate dominates that clearly
+        (a genuine tie, left for the caller to drop as ambiguous)."""
+        by_rating = sorted(candidates, key=lambda g: g.usersrated, reverse=True)
+        top, runner_up = by_rating[0], by_rating[1]
+        if top.usersrated >= _DOMINANCE_RATIO * max(runner_up.usersrated, 1):
+            return top
+        return None
+
     def _prefix_matches(self, norm: str) -> list[BggRankedGame]:
         """BGG games whose normalized name is `norm` followed by a space and more text — i.e.
         `norm` is a shortened, word-boundary-safe prefix of the full title."""
@@ -258,6 +324,19 @@ class BggIndex:
                 bgg = exact[0]
                 return MatchResult(
                     title, bgg.id, bgg.name, "HIGH", 100.0, "exact normalized title match"
+                )
+            dominant = self._dominant_by_rating_count(exact)
+            if dominant is not None:
+                return MatchResult(
+                    title,
+                    dominant.id,
+                    dominant.name,
+                    "MEDIUM",
+                    100.0,
+                    "ambiguous exact title, but one BGG entry has "
+                    f"{_DOMINANCE_RATIO}x+ the ratings of every other candidate -- picked as "
+                    "the game Zatu almost certainly means",
+                    candidates=[(g.id, g.name) for g in exact[:5]],
                 )
             return MatchResult(
                 title,

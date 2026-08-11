@@ -44,6 +44,22 @@ def index(base_games):
         # Real miss: stripping the noise phrase "board game" out of "...: The Board Game" used
         # to leave a dangling "the" behind that a leading-only article strip couldn't reach.
         ("Slay the Spire: The Board Game", "slay spire"),
+        # Real misses found while widening matching coverage: "Kickstarter Edition"/"Special
+        # Edition"/"Base Game" are generic retailer/BGG suffixes, not part of a game's identity
+        # -- and were actively harmful unstripped (fuzzy-scoring two unrelated games together
+        # purely off the shared suffix, e.g. "Calico Kickstarter Edition" vs BGG's unrelated
+        # "Autobahn: Kickstarter Edition").
+        ("Calico Kickstarter Edition", "calico"),
+        ("Battlecrest: Fellwoods Base Game", "battlecrest fellwoods"),
+        # "Refresh" is a UK-retailer restocking/reprint term, confirmed never part of a real
+        # game's own name across the full real Zatu catalogue.
+        ("Guess Who Refresh", "guess who"),
+        ("Memoir '44 Refresh", "memoir 44"),
+        # Spelled-out ordinal editions ("Second Edition") -> the same abbreviated digit-ordinal
+        # form ("2nd Edition") Zatu's own titles use, so the existing digit-edition noise strip
+        # catches both -- the pre-existing pattern only matched the digit form.
+        ("Gloomhaven (Second Edition)", "gloomhaven"),
+        ("Nexus Ops Board Game: Third Edition", "nexus ops"),
     ],
 )
 def test_normalize_title(title, expected):
@@ -113,6 +129,25 @@ def test_light_tier_distinguishes_base_game_from_its_own_big_box():
     big_box = index_.match("Carcassonne Big Box")
     assert big_box.confidence == "HIGH"
     assert big_box.bgg_id == 2
+
+
+def test_light_tier_distinguishes_base_game_from_its_spelled_ordinal_edition():
+    # Real regression found while widening the edition-noise strip to also cover spelled-out
+    # ordinal editions ("Second Edition"): BGG catalogues "Gloomhaven" and "Gloomhaven (Second
+    # Edition)" as two separate, distinctly-priced entries (same pattern as Carcassonne/Big
+    # Box) -- stripping "second edition" as bare noise at the aggressive tier collapsed that
+    # real distinction into a false ambiguity. Fixed by converting spelled ordinals to their
+    # abbreviated digit form ("second" -> "2nd") before either tier runs, so Zatu's own "2nd
+    # Edition" phrasing and BGG's spelled "Second Edition" land on the same light-tier string
+    # and resolve to the *specific* edition's id, not just the base game's.
+    base = [_game(1, "Gloomhaven"), _game(2, "Gloomhaven (Second Edition)")]
+    index_ = BggIndex(base)
+    plain = index_.match("Gloomhaven")
+    assert plain.confidence == "HIGH"
+    assert plain.bgg_id == 1
+    second_ed = index_.match("Gloomhaven 2nd Edition")
+    assert second_ed.confidence == "HIGH"
+    assert second_ed.bgg_id == 2
 
 
 def test_light_tier_falls_through_to_aggressive_tier_when_still_ambiguous(index):
@@ -217,6 +252,40 @@ def test_ambiguous_exact_match_is_dropped():
     result = idx.match("Aftermath")
     assert result.confidence == "LOW"
     assert "ambiguous" in result.reason
+
+
+def test_ambiguous_exact_match_resolves_to_the_dominant_candidate():
+    # Real pattern found mining the AMBIGUOUS_EXACT bucket: "Coup" exact-matches 3 BGG entries
+    # (a 1975 wargame, a 1991 wargame, and the actual popular 2012 game), usersrated 90/161/
+    # 52695 -- the real one is >=10x every other candidate, a strong enough signal to accept as
+    # a MEDIUM-confidence match (a picked answer, not a proven identity) rather than drop.
+    from sources.bgg import BggRankedGame
+
+    homonyms = [
+        BggRankedGame(1653, "Coup", 1991, 28591, 6.0, 6.0, 90, False),
+        BggRankedGame(2088, "Coup", 1975, 13654, 6.0, 6.0, 161, False),
+        BggRankedGame(131357, "Coup", 2012, 720, 7.5, 7.5, 52695, False),
+    ]
+    idx = BggIndex(homonyms)
+    result = idx.match("Coup")
+    assert result.confidence == "MEDIUM"
+    assert result.bgg_id == 131357
+    assert "ratings" in result.reason
+
+
+def test_ambiguous_exact_match_still_drops_when_no_candidate_dominates():
+    # A genuine near-tie (2.5x, below the 10x bar) must still be dropped, not guessed --
+    # this is the same fixture test_ambiguous_exact_match_is_dropped uses, just asserting the
+    # dominance tiebreak doesn't fire on it.
+    from sources.bgg import BggRankedGame
+
+    dupes = [
+        BggRankedGame(101, "Aftermath", 2020, 100, 7.0, 7.0, 500, False),
+        BggRankedGame(102, "AFTERMATH!", 1998, 5000, 6.0, 6.0, 200, False),
+    ]
+    idx = BggIndex(dupes)
+    result = idx.match("Aftermath")
+    assert result.confidence == "LOW"
 
 
 def test_empty_index_returns_low():
