@@ -58,7 +58,7 @@ SURVIVOR_FAMILY_LISTED = {
 }
 
 
-def fake_lookup_one(session, survivor, rate_limit_sec):
+def fake_lookup_one(session, survivor, rate_limit_sec, override_title=None):
     if survivor["zatu_handle"] == "cheap-in-uk":
         return {"status": "LISTED_IN_STOCK", "price_eur": 100.0, "language": "Français", "url": "u1"}
     if survivor["zatu_handle"] == "similar-price":
@@ -95,6 +95,101 @@ def test_lookup_one_uses_family_fallback_when_exact_title_not_listed(monkeypatch
 
     assert result["status"] == "FAMILY_LISTED_FR"
     assert result["url"] == "https://www.philibertnet.com/fr/pub/1-base-game.html"
+
+
+def test_lookup_one_tries_override_title_before_the_zatu_title(monkeypatch):
+    # Real case that prompted this: "EXIT: The Venice Conspiracy" is sold in France under a
+    # genuine translation, "EXIT - Intrigue à Venise" -- no automatic heuristic bridges "Venice"
+    # to "Venise" or "Conspiracy" to "Intrigue", so a human-confirmed override title is tried
+    # first, before the (doomed) ordinary title search ever runs.
+    import lookup_philibert as mod
+
+    calls = []
+
+    def fake_search_by_title(session, title, **kw):
+        calls.append(title)
+        if title == "EXIT - Intrigue à Venise":
+            return "https://www.philibertnet.com/fr/iello/157939-exit-intrigue-a-venise.html"
+        return None
+
+    monkeypatch.setattr(mod, "search_by_ean", lambda session, ean: None)
+    monkeypatch.setattr(mod, "search_by_title", fake_search_by_title)
+    monkeypatch.setattr(mod, "search_family_title", lambda session, title, **kw: None)
+    monkeypatch.setattr(
+        mod,
+        "fetch_product_page",
+        lambda session, url: {
+            "ean": "3701551704795",
+            "language": "Français",
+            "publisher": "iello",
+            "price_eur": 13.90,
+            "stock_status": "IN_STOCK",
+        },
+    )
+
+    survivor = {
+        "zatu_handle": "exit-the-venice-conspiracy",
+        "zatu_title": "EXIT: The Venice Conspiracy",
+        "zatu_ean": "0810172680012",
+        "zatu_price_gbp": 12.45,
+        "zatu_in_stock": True,
+    }
+    result = mod.lookup_one(
+        session=None, survivor=survivor, rate_limit_sec=0,
+        override_title="EXIT - Intrigue à Venise",
+    )
+
+    assert result["status"] == "LISTED_IN_STOCK"
+    assert result["url"] == "https://www.philibertnet.com/fr/iello/157939-exit-intrigue-a-venise.html"
+    # the override was tried before the real zatu_title -- confirmed by call order, not just
+    # the end result, since a title search that happened to match either title would look the
+    # same from the result alone
+    assert calls[0] == "EXIT - Intrigue à Venise"
+    assert "EXIT: The Venice Conspiracy" not in calls  # short-circuited, never even tried
+
+
+def test_main_wires_title_overrides_through_by_handle(tmp_path, monkeypatch):
+    survivor = {
+        "zatu_handle": "exit-the-venice-conspiracy",
+        "zatu_title": "EXIT: The Venice Conspiracy",
+        "zatu_ean": None,
+        "zatu_price_gbp": 12.45,
+        "zatu_in_stock": True,
+    }
+    matched_file = tmp_path / "matched.json"
+    matched_file.write_text(json.dumps({"survivors": [survivor]}))
+    config_file = tmp_path / "config.yaml"
+    import yaml
+    config_file.write_text(yaml.dump(TEST_CONFIG))
+    out_file = tmp_path / "results.json"
+    shortlist_file = tmp_path / "shortlist.json"
+    overrides_file = tmp_path / "overrides.json"
+    overrides_file.write_text(json.dumps({"exit-the-venice-conspiracy": "EXIT - Intrigue à Venise"}))
+
+    seen_overrides = []
+
+    def fake_lookup_one(session, survivor, rate_limit_sec, override_title=None):
+        seen_overrides.append(override_title)
+        return {"status": "LISTED_IN_STOCK", "price_eur": 13.90, "language": "Français", "url": "u1"}
+
+    monkeypatch.setattr(lookup_philibert, "lookup_one", fake_lookup_one)
+    monkeypatch.setattr(
+        sys,
+        "argv",
+        [
+            "lookup_philibert.py",
+            "--matched", str(matched_file),
+            "--config", str(config_file),
+            "--out", str(out_file),
+            "--shortlist-out", str(shortlist_file),
+            "--title-overrides", str(overrides_file),
+        ],
+    )
+
+    exit_code = lookup_philibert.main()
+
+    assert exit_code == 0
+    assert seen_overrides == ["EXIT - Intrigue à Venise"]
 
 
 def test_main_removes_similar_price_games_keeps_cheaper_and_not_listed(tmp_path, monkeypatch):
@@ -162,7 +257,7 @@ def test_main_survives_a_lookup_error(tmp_path, monkeypatch, capsys):
     out_file = tmp_path / "results.json"
     shortlist_file = tmp_path / "shortlist.json"
 
-    def flaky_lookup(session, survivor, rate_limit_sec):
+    def flaky_lookup(session, survivor, rate_limit_sec, override_title=None):
         raise RuntimeError("simulated network error")
 
     monkeypatch.setattr(lookup_philibert, "lookup_one", flaky_lookup)
@@ -221,7 +316,7 @@ def test_main_passes_fr_edition_exists_into_the_advantage_verdict(tmp_path, monk
 
     monkeypatch.setattr(
         lookup_philibert, "lookup_one",
-        lambda session, survivor, rate_limit_sec: {"status": "NOT_LISTED", "price_eur": None, "language": None, "url": None},
+        lambda session, survivor, rate_limit_sec, override_title=None: {"status": "NOT_LISTED", "price_eur": None, "language": None, "url": None},
     )
     monkeypatch.setattr(
         sys,
@@ -276,7 +371,7 @@ def test_main_reuses_cached_durable_result_without_a_live_lookup(tmp_path, monke
     calls = []
     monkeypatch.setattr(
         lookup_philibert, "lookup_one",
-        lambda session, survivor, rate_limit_sec: calls.append(survivor["zatu_handle"]) or {},
+        lambda session, survivor, rate_limit_sec, override_title=None: calls.append(survivor["zatu_handle"]) or {},
     )
 
     exit_code = _run_main(matched_file, config_file, out_file, shortlist_file)
@@ -316,7 +411,7 @@ def test_main_always_rechecks_not_listed_cached_survivors(tmp_path, monkeypatch)
 
     calls = []
 
-    def tracking_lookup(session, survivor, rate_limit_sec):
+    def tracking_lookup(session, survivor, rate_limit_sec, override_title=None):
         calls.append(survivor["zatu_handle"])
         return {"status": "LISTED_IN_STOCK", "price_eur": 50.0, "language": "Français", "url": "u1"}
 
@@ -358,7 +453,7 @@ def test_main_offline_flag_reuses_not_listed_cache_without_a_live_lookup(tmp_pat
     calls = []
     monkeypatch.setattr(
         lookup_philibert, "lookup_one",
-        lambda session, survivor, rate_limit_sec: calls.append(survivor["zatu_handle"]) or {},
+        lambda session, survivor, rate_limit_sec, override_title=None: calls.append(survivor["zatu_handle"]) or {},
     )
 
     exit_code = _run_main(matched_file, config_file, out_file, shortlist_file, extra_args=["--offline"])
@@ -422,7 +517,7 @@ def test_main_refresh_flag_ignores_cache_entirely(tmp_path, monkeypatch):
 
     calls = []
 
-    def tracking_lookup(session, survivor, rate_limit_sec):
+    def tracking_lookup(session, survivor, rate_limit_sec, override_title=None):
         calls.append(survivor["zatu_handle"])
         return {"status": "LISTED_IN_STOCK", "price_eur": 999.0, "language": "Français", "url": "u2"}
 

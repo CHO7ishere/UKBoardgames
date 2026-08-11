@@ -1099,3 +1099,50 @@ that this session's matching fixes are on `main`.
   already resolved from a prior run) meant this dispatch only paid live-network cost for the
   genuinely new/changed survivors, consistent with the caching work from earlier in this
   session.
+
+## Manual Philibert title-override file, for real translations no heuristic can derive
+(2026-08-11)
+
+User-reported real miss: **EXIT: The Venice Conspiracy**
+(`https://zatu.com/products/exit-the-venice-conspiracy`) is sold in France as **EXIT - Intrigue
+à Venise** (`https://www.philibertnet.com/fr/iello/157939-exit-intrigue-a-venise-3701551704795.html`)
+but was showing as `UNAVAILABLE_FR`/`NOT_LISTED` in `data/philibert_results.json`/
+`docs/index.html`.
+
+- **Root-caused, not just re-fixed the same way as prior title misses**: unlike the earlier
+  Slay the Spire ("The Board Game" → "Le Jeu de Plateau") and Marvel Champions ("The Card Game"
+  → "Le Jeu de Cartes") fixes, this isn't a fixed trailing-descriptor pattern — "The Venice
+  Conspiracy" → "Intrigue à Venise" is a genuine, unpredictable subtitle translation ("Venice"/
+  "Venise" aren't even spelled the same, "Conspiracy"/"Intrigue" share no characters at all).
+  `_base_title_candidates()`'s fallback for this title is just "EXIT" (the part before the first
+  colon), which correctly refuses to guess — the Philibert EXIT franchise has 12+ titles sharing
+  that prefix, genuinely ambiguous.
+- **Checked whether Stage 3's BGG French-edition data (`data/bgg_fr_editions.json`) already had
+  the real title** (it did for Gloomhaven/Marvel Champions/Sherlock Holmes, extracted
+  authoritatively from BGG's own versions page — see the Stage 3 section above) — it didn't:
+  `bgg_id` 406312's entry is `{"fr_edition_exists": false, "fr_edition_titles": []}`. Likely a
+  BGG catalogue-completeness gap for a 2024-released game rather than a bug in our scraper (BGG's
+  own data is the limit here, not something this codebase can fix) — not verifiable further in
+  this sandbox (BGG is network-blocked here, live-fetching only happens via GitHub Actions).
+- **Chose a manually-maintained override file over a broader translation heuristic**: a blanket
+  "try searching for just the franchise word" approach was considered and rejected — genuinely
+  ambiguous (12+ EXIT titles alone) and unverifiable offline (no real Philibert search-result
+  fixture data for the EXIT catalogue exists in this sandbox to test a heuristic against, per
+  this project's own evidence-first standard for shipping matching logic). Instead, added
+  `data/philibert_title_overrides.json` (new, `zatu_handle` → a human-confirmed real French
+  title) — same plain-JSON, manually-maintained, never-auto-regenerated pattern as
+  `data/excluded_games.json`/`data/bgg_fr_editions.json`. Directly fixes the reported case and
+  gives a place to add more as the user finds them, without guessing.
+- **`scripts/lookup_philibert.py`**: `lookup_one()` gained an `override_title` parameter, tried
+  right after EAN search and ahead of the ordinary `zatu_title` search — a confirmed answer, not
+  another guess to fall back to. `main()` loads the override file (`--title-overrides`, default
+  `data/philibert_title_overrides.json`) and passes each survivor's override by `zatu_handle`.
+  No workflow change needed — `.github/workflows/lookup-philibert.yml` invokes the script with
+  defaults, so the new flag's default path is picked up automatically on the next dispatch.
+- Added `data/philibert_title_overrides.json`'s first real entry: `"exit-the-venice-conspiracy":
+  "EXIT - Intrigue à Venise"`. 2 new tests (`tests/test_lookup_philibert_script.py`): confirms
+  `lookup_one()` tries the override title before the doomed real `zatu_title` search, and that
+  `main()` wires the override file through by handle. 229 tests pass.
+- **Not yet live** — same pattern as every Philibert-side fix this session: needs the next
+  `lookup-philibert.yml` dispatch to confirm the override title actually resolves to the real
+  listing on Philibert's live search (this sandbox can't reach philibertnet.com to verify).
