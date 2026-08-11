@@ -233,6 +233,34 @@ def test_fuzzy_match_accepts_close_typo(index):
     assert result.bgg_id == 5
 
 
+def test_fuzzy_tier_downweights_bare_edition_word_to_recover_a_real_near_miss():
+    # Real corpus gap: 128 real Zatu titles still carry a bare "edition" after the existing
+    # phrase-based noise strip (_EDITION_NOISE_RE only catches specific curated phrases like
+    # "kickstarter edition"), each paired with a one-off adjective too specific to hand-list
+    # ("Citadels Revised Edition", "Mage Knight Boardgame Ultimate Edition", ...). Down-weighting
+    # the bare words for fuzzy scoring only (never at either exact tier) lets titles like this
+    # clear the threshold on their substantive words -- "citadels revised edition" vs "citadels"
+    # scores 50.0 on raw token_sort_ratio (well below threshold) but 100.0 once "revised"/
+    # "edition" are down-weighted on both sides.
+    base = [_game(1, "Citadels")]
+    idx = BggIndex(base)
+    result = idx.match("Citadels Revised Edition")
+    assert result.confidence == "MEDIUM"
+    assert result.bgg_id == 1
+
+
+def test_fuzzy_tier_does_not_let_a_shared_generic_word_alone_create_a_false_match():
+    # The other side of the same fix: two genuinely unrelated games that happen to share a
+    # generic suffix must not fuzzy-match just because that word inflates token_sort_ratio --
+    # confirmed via a real live miss this session (Zatu's "Calico Kickstarter Edition" was
+    # fuzzy-scoring against BGG's unrelated "Autobahn: Kickstarter Edition"). Down-weighting the
+    # shared word here should *lower* the score of an otherwise-unrelated pair, not raise it.
+    base = [_game(1, "Autobahn Kickstarter Edition")]
+    idx = BggIndex(base)
+    result = idx.match("Calico Kickstarter Edition")
+    assert result.confidence == "LOW"
+
+
 def test_no_match_for_unrelated_title(index):
     result = index.match("Completely Unrelated Game Title")
     assert result.confidence == "LOW"

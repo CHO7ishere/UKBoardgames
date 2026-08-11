@@ -909,3 +909,59 @@ out of scope per `include_expansions: false` — a scope question, not a bug), 2
   but don't have Stage 3/4/5 data (BGG French-edition check, EAN, Philibert lookup) yet, so the
   main scored table and shortlist size are unchanged until the next `lookup-philibert.yml`
   dispatch.
+
+## Fuzzy-only down-weighting of generic marketing/edition words (2026-08-11)
+
+User's direct follow-up: *"Let's remove or at least unweight some generic words like
+kickstarter, edition, etc."* `_EDITION_NOISE_RE` already strips specific curated *phrases*
+("kickstarter edition", "special edition") but a real corpus check found 128 real Zatu titles
+still carry a bare "edition" after that — each paired with a one-off adjective too specific to
+hand-list forever ("Citadels Revised Edition", "Mage Knight Boardgame Ultimate Edition",
+"Sidereal Confluence: Remastered Edition"). Chose "unweight" over "remove" for *where* it
+applies, not *whether* it strips: implemented as the same strip-to-noise mechanism already used
+everywhere else in `match.py` (simplest, most testable, consistent with the rest of the
+codebase — true fractional per-token weighting would need a custom rapidfuzz scorer for
+uncertain gain), but scoped to a new location rather than folded into the existing
+`normalize_title`/`_EDITION_NOISE_RE`.
+
+- **Why a separate scope, not just extending `_EDITION_NOISE_RE`**: both exact-match tiers
+  (light and aggressive) genuinely need words like "Big Box"/"Second Edition" in some cases —
+  confirmed repeatedly this session that BGG catalogues real, separately-priced entries
+  distinguished *only* by exactly these words (Carcassonne vs Carcassonne Big Box, Gloomhaven vs
+  Gloomhaven Second Edition). Stripping a broader, more generic word list at that layer would
+  reintroduce the same false-collision risk the light tier was built to prevent. The fuzzy tier
+  is different: it only ever runs *after* both exact tiers already failed to find a specific id,
+  so down-weighting words there to expose the substantive words underneath can't cause a wrong
+  *identity* pick — worst case is a fuzzy score, still gated by the existing threshold/gap/
+  digit-conflict checks exactly as before.
+- **`match.py`**: new `_FUZZY_EXTRA_NOISE_RE` (kickstarter, edition, version, retail, special,
+  standard, collector(s), anniversary, remastered, revised, definitive, ultimate, exclusive,
+  complete, premium, essential(s), limited — each checked for corpus frequency first via the
+  same `grep`-the-real-data method as every other word this session) and `_fuzzy_score_text()`
+  applying it on top of the already aggressively-normalized string. `BggIndex.__init__`
+  precomputes `self._fuzzy_names` (index-aligned 1:1 with `self.games`, so a fuzzy match found
+  against the down-weighted string still looks up the correct game by position); `_match_fuzzy`
+  scores `_fuzzy_score_text(norm)` against `self._fuzzy_names`, while the digit-conflict veto
+  still checks the *original* `norm`/`best_norm` (down-weighting a word can never mask a real
+  digit disagreement, since none of these words carry digits). Deliberately excluded "core"/
+  "master"/"legacy" even from this broader list — all three are real, meaningful genre/product-
+  line terms in this corpus (Pandemic *Legacy*, Marvel Champions *Core* Set, Summoner Wars
+  *Master* Set), confirmed via the same corpus check, not marketing filler.
+- **Real, measured result**: 672 → **678 survivors, net +6, zero regressions** (verified via the
+  same full before/after survivor-handle+id diff against the real corpus as every prior fix).
+  Smaller than the raw 128-title count because most of those 128 have some other complicating
+  factor (a genuinely distinct themed variant, a name the base game doesn't share, etc.) — the 6
+  recovered are exactly the ones that really were just marketing-word noise on top of an
+  otherwise-exact title: `Compile Card Game: Main 1 Edition` → `Compile: Main 1`, `Everdell
+  Farshore: Essential Edition` → `Everdell Farshore`, `Everdell Silverfrost: Essentials Edition`
+  → `Everdell Silverfrost`, `Sidereal Confluence: Remastered Edition` → `Sidereal Confluence`,
+  `Core Game (Deluxe Version) - The Witcher: Path of Destiny` → `The Witcher: Path of Destiny`,
+  `Aspens` → `Aspens`. 2 new tests (`test_fuzzy_tier_downweights_bare_edition_word_to_recover_a_
+  real_near_miss`, `test_fuzzy_tier_does_not_let_a_shared_generic_word_alone_create_a_false_
+  match` — the latter reproducing the real Calico/Autobahn Kickstarter-Edition false-match risk
+  directly, confirming the down-weighting doesn't *create* a false positive from a shared
+  generic word either). 222 tests total pass.
+- **Session-wide total after this round: 621 → 678 survivors, net +57** across all of this
+  session's matching-coverage work, zero unexplained regressions at any step. Same "not yet
+  live" caveat as above — needs the next `lookup-philibert.yml` dispatch for these to reach the
+  actual shortlist/report.

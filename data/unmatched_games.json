@@ -245,36 +245,6 @@
       "match_score": 62.96296296296296
     },
     {
-      "zatu_handle": "compile-card-game-main-1-edition",
-      "zatu_title": "Compile Card Game: Main 1 Edition",
-      "zatu_url": "https://zatu.com/products/compile-card-game-main-1-edition",
-      "zatu_price_gbp": 14.35,
-      "zatu_in_stock": true,
-      "zatu_tags": [
-        "Best Sellers",
-        "Board Games",
-        "Card Games",
-        "Father's Day",
-        "Greater Than Games",
-        "Next Day Delivery",
-        "no gift wrap",
-        "Science Fiction",
-        "Strategy",
-        "Top 5000 Board Games",
-        "Zatu Platinum Award"
-      ],
-      "zatu_is_coop": false,
-      "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
-      "bgg_candidates": [
-        {
-          "bgg_id": 315252,
-          "bgg_name": "Murano: Complete Edition"
-        }
-      ],
-      "match_score": 80.0
-    },
-    {
       "zatu_handle": "dobble",
       "zatu_title": "Dobble",
       "zatu_url": "https://zatu.com/products/dobble",
@@ -477,11 +447,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 277659,
-          "bgg_name": "Final Girl"
+          "bgg_id": 410768,
+          "bgg_name": "Final Girl: S1 Ultimate Box"
         }
       ],
-      "match_score": 68.96551724137932
+      "match_score": 77.77777777777779
     },
     {
       "zatu_handle": "heat-tunnel-vision",
@@ -850,11 +820,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 342117,
-          "bgg_name": "Ophelia: Histories Collide Expansion \u2013 Atlantis"
+          "bgg_id": 359609,
+          "bgg_name": "Arkham Horror: The Card Game (Revised Core Set)"
         }
       ],
-      "match_score": 55.91397849462365
+      "match_score": 56.33802816901409
     },
     {
       "zatu_handle": "pandemic-legacy-season-zero",
@@ -1058,11 +1028,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 232988,
-          "bgg_name": "The Castles of Burgundy: The Dice Game"
+          "bgg_id": 84876,
+          "bgg_name": "The Castles of Burgundy"
         }
       ],
-      "match_score": 80.0
+      "match_score": 90.47619047619048
     },
     {
       "zatu_handle": "ark-nova-card-game-marine-worlds-expansion",
@@ -1316,11 +1286,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 27603,
-          "bgg_name": "Rukshuk: Edition 2"
+          "bgg_id": 92415,
+          "bgg_name": "Skull"
         }
       ],
-      "match_score": 68.57142857142857
+      "match_score": 66.66666666666667
     },
     {
       "zatu_handle": "forest-shuffle-exploration",
@@ -1535,11 +1505,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 338697,
-          "bgg_name": "Catan: 3D Edition"
+          "bgg_id": 15512,
+          "bgg_name": "Diamant"
         }
       ],
-      "match_score": 66.66666666666667
+      "match_score": 73.6842105263158
     },
     {
       "zatu_handle": "wyrmspan-dragon-academy-expansion",
@@ -1774,11 +1744,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 246398,
-          "bgg_name": "Exploding Kittens: Newbie Edition"
+          "bgg_id": 476128,
+          "bgg_name": "Exploding Kittens: Rage Mode"
         }
       ],
-      "match_score": 67.53246753246754
+      "match_score": 63.888888888888886
     },
     {
       "zatu_handle": "horrified",
@@ -2118,7 +2088,7 @@
           "bgg_name": "Arkham Horror: The Card Game (Revised Core Set)"
         }
       ],
-      "match_score": 70.96774193548387
+      "match_score": 81.4814814814815
     },
     {
       "zatu_handle": "ticket-to-ride-japan-italy-map-collection-volume-7",
@@ -2169,11 +2139,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 38754,
-          "bgg_name": "Fare p\u00e5 ferde"
+          "bgg_id": 474116,
+          "bgg_name": "Kernel Panic: Exfiltrate Edition"
         }
       ],
-      "match_score": 58.53658536585367
+      "match_score": 58.82352941176471
     },
     {
       "zatu_handle": "scrawl-green-box-edition",
@@ -2193,11 +2163,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 114217,
-          "bgg_name": "Scrabble: Gardening Edition"
+          "bgg_id": 124550,
+          "bgg_name": "RTL Boxen"
         }
       ],
-      "match_score": 72.0
+      "match_score": 64.0
     },
     {
       "zatu_handle": "cosmic-encounter",
@@ -3115,11 +3085,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 386848,
-          "bgg_name": "Gemeinsame Sache: Block Edition"
+          "bgg_id": 41754,
+          "bgg_name": "Destination: Thee Bible game"
         }
       ],
-      "match_score": 63.1578947368421
+      "match_score": 62.96296296296296
     },
     {
       "zatu_handle": "obsession-board-game-upstairs-downstairs-expansion",
@@ -3435,11 +3405,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 200680,
-          "bgg_name": "Agricola (Revised Edition)"
+          "bgg_id": 205398,
+          "bgg_name": "Citadels"
         }
       ],
-      "match_score": 75.0
+      "match_score": 100.0
     },
     {
       "zatu_handle": "the-bloody-inn-the-carnies-expansion",
@@ -3489,11 +3459,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 285773,
-          "bgg_name": "Arkham Horror: Final Hour"
+          "bgg_id": 359609,
+          "bgg_name": "Arkham Horror: The Card Game (Revised Core Set)"
         }
       ],
-      "match_score": 56.71641791044777
+      "match_score": 58.46153846153845
     },
     {
       "zatu_handle": "marvel-champions-the-card-game-silk-hero-pack",
@@ -3670,11 +3640,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 248562,
-          "bgg_name": "Mage Knight: Ultimate Edition"
+          "bgg_id": 2876,
+          "bgg_name": "Mage Knight Dungeons"
         }
       ],
-      "match_score": 84.84848484848484
+      "match_score": 73.17073170731707
     },
     {
       "zatu_handle": "carcassonne-dragon-fairy-exp-3-2025",
@@ -3850,11 +3820,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 467342,
-          "bgg_name": "Astatos: Complete Edition"
+          "bgg_id": 552,
+          "bgg_name": "Bus"
         }
       ],
-      "match_score": 81.81818181818181
+      "match_score": 100.0
     },
     {
       "zatu_handle": "blood-on-the-clocktower-the-carousel",
@@ -4369,11 +4339,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 943,
-          "bgg_name": "Ligretto"
+          "bgg_id": 292831,
+          "bgg_name": "Ligretto Probe-Version"
         }
       ],
-      "match_score": 80.0
+      "match_score": 84.61538461538461
     },
     {
       "zatu_handle": "power-king-tokyo-expansion",
@@ -4395,11 +4365,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 293141,
-          "bgg_name": "King of Tokyo: Dark Edition"
+          "bgg_id": 403240,
+          "bgg_name": "King of Tokyo: Origins"
         }
       ],
-      "match_score": 62.06896551724138
+      "match_score": 60.37735849056604
     },
     {
       "zatu_handle": "paris-la-cite-de-la-lumiere-city-of-light",
@@ -4642,11 +4612,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 275984,
-          "bgg_name": "What Are The Odds? Family Edition"
+          "bgg_id": 417547,
+          "bgg_name": "Sorry What?!"
         }
       ],
-      "match_score": 79.24528301886792
+      "match_score": 74.07407407407408
     },
     {
       "zatu_handle": "marvel-champions-the-card-game-falcon-hero-pack",
@@ -4756,11 +4726,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 452493,
-          "bgg_name": "Ascension: 15th Anniversary Collector's Edition"
+          "bgg_id": 153318,
+          "bgg_name": "Dimension"
         }
       ],
-      "match_score": 67.9245283018868
+      "match_score": 66.66666666666667
     },
     {
       "zatu_handle": "marvel-champions-gambit-hero-pack",
@@ -4807,11 +4777,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 125048,
-          "bgg_name": "Dobble: Free Demo Version"
+          "bgg_id": 117986,
+          "bgg_name": "Card Goblins"
         }
       ],
-      "match_score": 66.66666666666667
+      "match_score": 64.51612903225806
     },
     {
       "zatu_handle": "dobble-beach",
@@ -4963,11 +4933,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 120522,
-          "bgg_name": "Original Edition Delta: Book of War"
+          "bgg_id": 183405,
+          "bgg_name": "Ember: The Magical Card Game"
         }
       ],
-      "match_score": 65.67164179104478
+      "match_score": 57.89473684210527
     },
     {
       "zatu_handle": "the-traitors-uk-the-official-board-game",
@@ -5547,11 +5517,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 67545,
-          "bgg_name": "Consensus Music Edition"
+          "bgg_id": 251726,
+          "bgg_name": "Confident?"
         }
       ],
-      "match_score": 69.76744186046511
+      "match_score": 85.71428571428572
     },
     {
       "zatu_handle": "iliad",
@@ -6133,11 +6103,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 147931,
-          "bgg_name": "End of Atlantis: Revised Edition"
+          "bgg_id": 247367,
+          "bgg_name": "Air, Land, & Sea"
         }
       ],
-      "match_score": 69.84126984126983
+      "match_score": 100.0
     },
     {
       "zatu_handle": "saboteur-20-years-jubilee-edition",
@@ -6160,11 +6130,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 343743,
-          "bgg_name": "5 Pillars: Junior Edition"
+          "bgg_id": 155577,
+          "bgg_name": "Jungle Speed: 20 Years"
         }
       ],
-      "match_score": 63.1578947368421
+      "match_score": 69.56521739130434
     },
     {
       "zatu_handle": "everdell-newleaf",
@@ -6483,11 +6453,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 325179,
-          "bgg_name": "What Do You Meme?: TikTok Edition"
+          "bgg_id": 363183,
+          "bgg_name": "Tokaido Duo"
         }
       ],
-      "match_score": 65.57377049180329
+      "match_score": 66.66666666666667
     },
     {
       "zatu_handle": "cthulu-death-may-die-season-2-expansion",
@@ -7023,11 +6993,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 315747,
-          "bgg_name": "Persona non Grata"
+          "bgg_id": 284435,
+          "bgg_name": "Nova Luna"
         }
       ],
-      "match_score": 63.41463414634146
+      "match_score": 72.0
     },
     {
       "zatu_handle": "pass-the-pugs",
@@ -7177,11 +7147,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 4759,
-          "bgg_name": "The War to End All Wars: Box Set Edition"
+          "bgg_id": 252663,
+          "bgg_name": "Arena of the Elders: Starter Set"
         }
       ],
-      "match_score": 66.66666666666667
+      "match_score": 64.51612903225806
     },
     {
       "zatu_handle": "arkham-horror-the-card-game-winifred-habbamock-investigator-starter-pack",
@@ -7434,11 +7404,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 212487,
-          "bgg_name": "AFFLICTION: Salem 1692"
+          "bgg_id": 175549,
+          "bgg_name": "Salem 1692"
         }
       ],
-      "match_score": 74.4186046511628
+      "match_score": 83.33333333333334
     },
     {
       "zatu_handle": "final-girl-terror-from-above-vignette",
@@ -7497,11 +7467,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 422433,
-          "bgg_name": "Foundations of Rome (Emperor Edition)"
+          "bgg_id": 434367,
+          "bgg_name": "Nippon: Zaibatsu"
         }
       ],
-      "match_score": 64.70588235294117
+      "match_score": 75.0
     },
     {
       "zatu_handle": "destinies-sea-of-sand",
@@ -7743,11 +7713,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 287938,
-          "bgg_name": "Kitchen Rush (Revised Edition)"
+          "bgg_id": 341160,
+          "bgg_name": "Reinforcements"
         }
       ],
-      "match_score": 64.70588235294117
+      "match_score": 73.6842105263158
     },
     {
       "zatu_handle": "heroes-of-barcadia-party-pack-expansion",
@@ -8148,11 +8118,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 343743,
-          "bgg_name": "5 Pillars: Junior Edition"
+          "bgg_id": 322198,
+          "bgg_name": "Silent War 2.0"
         }
       ],
-      "match_score": 60.71428571428572
+      "match_score": 57.89473684210527
     },
     {
       "zatu_handle": "rebel-princess-card-game-deluxe-edition",
@@ -8385,11 +8355,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 156455,
-          "bgg_name": "Viticulture: Complete Collector's Edition"
+          "bgg_id": 366674,
+          "bgg_name": "Home from Oz: Expanded Starter Set"
         }
       ],
-      "match_score": 57.6271186440678
+      "match_score": 52.77777777777778
     },
     {
       "zatu_handle": "the-isle-of-cats-expansion-late-arrivals",
@@ -8661,31 +8631,6 @@
       "match_score": 100.0
     },
     {
-      "zatu_handle": "everdell-silverfrost-essentials-edition",
-      "zatu_title": "Everdell: Silverfrost Essentials Edition",
-      "zatu_url": "https://zatu.com/products/everdell-silverfrost-essentials-edition",
-      "zatu_price_gbp": 39.95,
-      "zatu_in_stock": true,
-      "zatu_tags": [
-        "Board Games",
-        "Everdell",
-        "Next Day Delivery",
-        "no gift wrap",
-        "Starling Games",
-        "Top 5000 Board Games"
-      ],
-      "zatu_is_coop": false,
-      "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
-      "bgg_candidates": [
-        {
-          "bgg_id": 436821,
-          "bgg_name": "Everdell Silverfrost"
-        }
-      ],
-      "match_score": 67.79661016949152
-    },
-    {
       "zatu_handle": "bretwalda-2",
       "zatu_title": "Bretwalda",
       "zatu_url": "https://zatu.com/products/bretwalda-2",
@@ -8867,11 +8812,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 124563,
-          "bgg_name": "bodyIQ: Premium"
+          "bgg_id": 176589,
+          "bgg_name": "Cat Box"
         }
       ],
-      "match_score": 66.66666666666667
+      "match_score": 80.0
     },
     {
       "zatu_handle": "ticket-to-ride-map-collection-8-iberica-south-korea",
@@ -8925,11 +8870,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 469388,
-          "bgg_name": "Ostia: Mariner Edition"
+          "bgg_id": 363183,
+          "bgg_name": "Tokaido Duo"
         }
       ],
-      "match_score": 68.08510638297872
+      "match_score": 62.06896551724138
     },
     {
       "zatu_handle": "marvel-champions-vision-hero-pack",
@@ -9372,38 +9317,6 @@
       "match_score": 66.66666666666667
     },
     {
-      "zatu_handle": "struggle-for-catan-new-edition",
-      "zatu_title": "The Struggle for Catan (New Edition)",
-      "zatu_url": "https://zatu.com/products/struggle-for-catan-new-edition",
-      "zatu_price_gbp": 11.95,
-      "zatu_in_stock": true,
-      "zatu_tags": [
-        "2-4 Players",
-        "20-30 Minutes",
-        "Board Games",
-        "Catan",
-        "City Building",
-        "Hand Management",
-        "Manual Release Date",
-        "Negotiation",
-        "Next Day Delivery",
-        "no gift wrap",
-        "Podcast Approved",
-        "Top 5000 Board Games",
-        "Zatu Gold Award"
-      ],
-      "zatu_is_coop": false,
-      "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
-      "bgg_candidates": [
-        {
-          "bgg_id": 91534,
-          "bgg_name": "Struggle for Catan"
-        }
-      ],
-      "match_score": 75.0
-    },
-    {
       "zatu_handle": "aegyptus-creta-concordia-exp",
       "zatu_title": "Concordia: Aegyptus/Creta Expansion",
       "zatu_url": "https://zatu.com/products/aegyptus-creta-concordia-exp",
@@ -9641,7 +9554,7 @@
           "bgg_name": "Cockroach Poker Royal"
         }
       ],
-      "match_score": 60.86956521739131
+      "match_score": 68.85245901639344
     },
     {
       "zatu_handle": "unlock-short-adventures-10-in-the-head-of-sherlock-holmes",
@@ -9695,31 +9608,6 @@
         }
       ],
       "match_score": 100.0
-    },
-    {
-      "zatu_handle": "sidereal-confluence-remastered-edition",
-      "zatu_title": "Sidereal Confluence: Remastered Edition",
-      "zatu_url": "https://zatu.com/products/sidereal-confluence-remastered-edition",
-      "zatu_price_gbp": 57.5,
-      "zatu_in_stock": true,
-      "zatu_tags": [
-        "Back-Order",
-        "Board Games",
-        "no gift wrap",
-        "Restock Item",
-        "Top 5000 Board Games",
-        "WizKids"
-      ],
-      "zatu_is_coop": false,
-      "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
-      "bgg_candidates": [
-        {
-          "bgg_id": 202426,
-          "bgg_name": "Sidereal Confluence"
-        }
-      ],
-      "match_score": 66.66666666666667
     },
     {
       "zatu_handle": "the-falconwood-files-final-girl",
@@ -10108,7 +9996,7 @@
           "bgg_name": "Final Girl: S1 Ultimate Box"
         }
       ],
-      "match_score": 65.51724137931035
+      "match_score": 65.3061224489796
     },
     {
       "zatu_handle": "dominion-renaissance",
@@ -10884,11 +10772,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 382601,
-          "bgg_name": "Halloween Never Ends"
+          "bgg_id": 429456,
+          "bgg_name": "Halloween II"
         }
       ],
-      "match_score": 63.63636363636363
+      "match_score": 74.07407407407408
     },
     {
       "zatu_handle": "koi-2",
@@ -11278,11 +11166,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 1618,
-          "bgg_name": "French Foreign Legion"
+          "bgg_id": 249537,
+          "bgg_name": "Contact French"
         }
       ],
-      "match_score": 65.11627906976744
+      "match_score": 71.42857142857143
     },
     {
       "zatu_handle": "star-realms-colony-wars-stand-alone",
@@ -11391,11 +11279,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 200680,
-          "bgg_name": "Agricola (Revised Edition)"
+          "bgg_id": 4176,
+          "bgg_name": "Armies of Arcana"
         }
       ],
-      "match_score": 75.0
+      "match_score": 65.0
     },
     {
       "zatu_handle": "cthulu-death-may-die-yog-sothoth",
@@ -11931,7 +11819,7 @@
           "bgg_name": "Final Girl: S1 Ultimate Box"
         }
       ],
-      "match_score": 83.33333333333334
+      "match_score": 76.19047619047619
     },
     {
       "zatu_handle": "gutter-head-the-fiendishly-filthy-drawing-game",
@@ -11974,11 +11862,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 67148,
-          "bgg_name": "Ultimate Werewolf: Compact Edition"
+          "bgg_id": 207059,
+          "bgg_name": "Werewolf the Party Game"
         }
       ],
-      "match_score": 68.42105263157895
+      "match_score": 71.69811320754718
     },
     {
       "zatu_handle": "tapestry-fantasies-futures-exp",
@@ -12209,11 +12097,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 422332,
-          "bgg_name": "Star Wars: The Deckbuilding Game \u2013 Clone Wars Edition"
+          "bgg_id": 6122,
+          "bgg_name": "Star Wars: Escape the Death Star Action Figure Game"
         }
       ],
-      "match_score": 59.25925925925925
+      "match_score": 60.0
     },
     {
       "zatu_handle": "air-land-sea-critters-at-war",
@@ -12337,11 +12225,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 163209,
-          "bgg_name": "Standard Action: The Card Game"
+          "bgg_id": 392023,
+          "bgg_name": "Mycelia"
         }
       ],
-      "match_score": 70.96774193548387
+      "match_score": 100.0
     },
     {
       "zatu_handle": "earth-abundance",
@@ -12442,11 +12330,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 276922,
-          "bgg_name": "Dark Ages: II Edition \u2013 Britannia & France"
+          "bgg_id": 1209,
+          "bgg_name": "Pax Britannica: The Colonial Era 1880 to the Great War"
         }
       ],
-      "match_score": 58.13953488372092
+      "match_score": 57.14285714285714
     },
     {
       "zatu_handle": "concordia-solitaria-expansion",
@@ -12968,11 +12856,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 422805,
-          "bgg_name": "Unstable Unicorns: Diamond Edition"
+          "bgg_id": 260785,
+          "bgg_name": "Unstable Unicorns: Control"
         }
       ],
-      "match_score": 71.42857142857143
+      "match_score": 70.96774193548387
     },
     {
       "zatu_handle": "viticulture-world-expansion",
@@ -13344,7 +13232,7 @@
           "bgg_name": "Final Girl: S1 Ultimate Box"
         }
       ],
-      "match_score": 83.33333333333334
+      "match_score": 76.19047619047619
     },
     {
       "zatu_handle": "vaesen-nordic-horror-roleplaying-starter-set",
@@ -13366,11 +13254,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 280634,
-          "bgg_name": "Bushido: Risen Sun \u2013 Two Player Starter Set"
+          "bgg_id": 259970,
+          "bgg_name": "The Lord of the Rings: The Card Game \u2013 Two-Player Limited Edition Starter"
         }
       ],
-      "match_score": 58.53658536585367
+      "match_score": 59.45945945945945
     },
     {
       "zatu_handle": "the-night-cage-shrieking-hollow-retail-edition",
@@ -13422,7 +13310,7 @@
           "bgg_name": "Final Girl: S1 Ultimate Box"
         }
       ],
-      "match_score": 83.33333333333334
+      "match_score": 76.19047619047619
     },
     {
       "zatu_handle": "sub-terra-annihilation",
@@ -13967,11 +13855,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 381985,
-          "bgg_name": "Retail Rejects"
+          "bgg_id": 387747,
+          "bgg_name": "Village War: The Artefacts"
         }
       ],
-      "match_score": 66.66666666666667
+      "match_score": 65.0
     },
     {
       "zatu_handle": "bolt-action-starter-set",
@@ -14171,11 +14059,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 334988,
-          "bgg_name": "Incohearent: Family Edition"
+          "bgg_id": 289020,
+          "bgg_name": "Incohearent"
         }
       ],
-      "match_score": 71.69811320754718
+      "match_score": 73.33333333333334
     },
     {
       "zatu_handle": "mad-pack-o-game",
@@ -14566,7 +14454,7 @@
           "bgg_name": "Chess-a-tete, Classic Edition"
         }
       ],
-      "match_score": 69.56521739130434
+      "match_score": 78.94736842105263
     },
     {
       "zatu_handle": "smart-10",
@@ -14616,11 +14504,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 290549,
-          "bgg_name": "Movie Clich\u00e9s: Action Edition"
+          "bgg_id": 27710,
+          "bgg_name": "Catan Dice Game"
         }
       ],
-      "match_score": 65.57377049180329
+      "match_score": 75.0
     },
     {
       "zatu_handle": "unlock-short-6-the-secrets-of-the-octopus",
@@ -14717,11 +14605,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 339582,
-          "bgg_name": "Stadt Land Unseri\u00f6s: SOMMER-Spezial"
+          "bgg_id": 459285,
+          "bgg_name": "Crack & Stack"
         }
       ],
-      "match_score": 57.971014492753625
+      "match_score": 66.66666666666667
     },
     {
       "zatu_handle": "hero-realms-the-ancestry",
@@ -15002,11 +14890,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 318293,
-          "bgg_name": "Connect 4 (Revised Second Edition)"
+          "bgg_id": 375160,
+          "bgg_name": "Connect 4: Spin"
         }
       ],
-      "match_score": 83.87096774193549
+      "match_score": 78.57142857142857
     },
     {
       "zatu_handle": "final-girl-a-demon-in-the-shadows",
@@ -15173,33 +15061,6 @@
       "match_score": 62.96296296296296
     },
     {
-      "zatu_handle": "forests-of-pangaea-premium",
-      "zatu_title": "Forests of Pangaea Premium",
-      "zatu_url": "https://zatu.com/products/forests-of-pangaea-premium",
-      "zatu_price_gbp": 44.99,
-      "zatu_in_stock": true,
-      "zatu_tags": [
-        "Board Games",
-        "Fantasy",
-        "Kickstarters",
-        "Next Day Delivery",
-        "no gift wrap",
-        "Sale",
-        "Strategy",
-        "Top 5000 Board Games"
-      ],
-      "zatu_is_coop": false,
-      "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
-      "bgg_candidates": [
-        {
-          "bgg_id": 317859,
-          "bgg_name": "Forests of Pangaia"
-        }
-      ],
-      "match_score": 77.27272727272727
-    },
-    {
       "zatu_handle": "summoner-wars-chosen-grove-faction-deck",
       "zatu_title": "Summoner Wars: Chosen Grove - Faction Deck",
       "zatu_url": "https://zatu.com/products/summoner-wars-chosen-grove-faction-deck",
@@ -15244,11 +15105,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 422332,
-          "bgg_name": "Star Wars: The Deckbuilding Game \u2013 Clone Wars Edition"
+          "bgg_id": 169555,
+          "bgg_name": "Emergents: Genesis \u2013 The Deckbuilding Game"
         }
       ],
-      "match_score": 60.86956521739131
+      "match_score": 57.692307692307686
     },
     {
       "zatu_handle": "robinson-crusoe-mystery-tales-expansion",
@@ -15444,11 +15305,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 465785,
-          "bgg_name": "Newfoundlandia II: Travel Version"
+          "bgg_id": 359893,
+          "bgg_name": "Sounds Fishy"
         }
       ],
-      "match_score": 68.96551724137932
+      "match_score": 77.41935483870968
     },
     {
       "zatu_handle": "hail-caesar-epic-battles-punic-wars-hannibal-battle-set",
@@ -15546,11 +15407,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 470036,
-          "bgg_name": "Game Changer: Home Edition"
+          "bgg_id": 220308,
+          "bgg_name": "Gaia Project"
         }
       ],
-      "match_score": 66.66666666666667
+      "match_score": 72.72727272727273
     },
     {
       "zatu_handle": "cthulhu-wars-high-priests-expansion-2",
@@ -15596,11 +15457,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 429608,
-          "bgg_name": "M\u00fc & more: Revised Edition"
+          "bgg_id": 345971,
+          "bgg_name": "Med andra ord: Pocket"
         }
       ],
-      "match_score": 73.07692307692308
+      "match_score": 75.67567567567568
     },
     {
       "zatu_handle": "flower-power-pixies-expansion",
@@ -15650,11 +15511,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 231787,
-          "bgg_name": "Canon: The Card Game \u2013 New Testament Edition"
+          "bgg_id": 22489,
+          "bgg_name": "The New Teen Choices"
         }
       ],
-      "match_score": 64.51612903225806
+      "match_score": 60.46511627906976
     },
     {
       "zatu_handle": "rise-and-fall-3d",
@@ -15925,11 +15786,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 123828,
-          "bgg_name": "Battleship Movie Edition"
+          "bgg_id": 32296,
+          "bgg_name": "UNO: Betty Boop Vintage"
         }
       ],
-      "match_score": 69.84126984126983
+      "match_score": 64.15094339622642
     },
     {
       "zatu_handle": "ticket-to-ride-ghost-train-first-journey",
@@ -15980,11 +15841,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 410768,
-          "bgg_name": "Final Girl: S1 Ultimate Box"
+          "bgg_id": 277659,
+          "bgg_name": "Final Girl"
         }
       ],
-      "match_score": 58.82352941176471
+      "match_score": 57.14285714285714
     },
     {
       "zatu_handle": "mindbug-expansion-beyond-eternity",
@@ -16128,11 +15989,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 456096,
-          "bgg_name": "The Oregon Trail: Ultimate Trek Card Game \u2013 You Are All Going to Die"
+          "bgg_id": 60228,
+          "bgg_name": "Race for Berlin: The Final Struggle"
         }
       ],
-      "match_score": 52.94117647058824
+      "match_score": 51.85185185185186
     },
     {
       "zatu_handle": "ashes-ascendancy-starter-set",
@@ -16241,7 +16102,7 @@
           "bgg_name": "Selfish: Space Edition"
         }
       ],
-      "match_score": 89.36170212765957
+      "match_score": 83.87096774193549
     },
     {
       "zatu_handle": "similo-fables",
@@ -16363,11 +16224,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 35940,
-          "bgg_name": "Pharaoh's Heir"
+          "bgg_id": 88521,
+          "bgg_name": "Pharaoh"
         }
       ],
-      "match_score": 68.75
+      "match_score": 82.35294117647058
     },
     {
       "zatu_handle": "konflikt-47-starter-set",
@@ -16736,11 +16597,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 428500,
-          "bgg_name": "15 Minute Cold War: Expansion Edition"
+          "bgg_id": 331433,
+          "bgg_name": "Pitch&Plakks: Battle Mode expansion"
         }
       ],
-      "match_score": 65.11627906976744
+      "match_score": 65.0
     },
     {
       "zatu_handle": "paolo-moris-blitzkrieg-includes-nippon-expansion",
@@ -16891,11 +16752,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 63052,
-          "bgg_name": "Pass the Bomb: Party Edition"
+          "bgg_id": 137,
+          "bgg_name": "Pass the Bomb"
         }
       ],
-      "match_score": 75.55555555555556
+      "match_score": 78.26086956521739
     },
     {
       "zatu_handle": "guild-dwarves-summoner-wars",
@@ -17204,11 +17065,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 3972,
-          "bgg_name": "Catan: Portable Edition"
+          "bgg_id": 464443,
+          "bgg_name": "The Cats of New Orleans"
         }
       ],
-      "match_score": 73.91304347826086
+      "match_score": 74.28571428571429
     },
     {
       "zatu_handle": "the-spacing-guild-dune-war-for-arrakis-expansion",
@@ -17233,30 +17094,6 @@
         }
       ],
       "match_score": 62.5
-    },
-    {
-      "zatu_handle": "chameleon-pictures",
-      "zatu_title": "Chameleon Pictures",
-      "zatu_url": "https://zatu.com/products/chameleon-pictures",
-      "zatu_price_gbp": 19.43,
-      "zatu_in_stock": true,
-      "zatu_tags": [
-        "Big Potato",
-        "Board Games",
-        "Next Day Delivery",
-        "no gift wrap",
-        "Top 5000 Board Games"
-      ],
-      "zatu_is_coop": false,
-      "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
-      "bgg_candidates": [
-        {
-          "bgg_id": 398059,
-          "bgg_name": "The Chameleon: Picture Edition"
-        }
-      ],
-      "match_score": 79.06976744186046
     },
     {
       "zatu_handle": "its-a-wonderful-world-war-or-peace",
@@ -17374,11 +17211,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 457227,
-          "bgg_name": "Packing Party: Moving Day"
+          "bgg_id": 385721,
+          "bgg_name": "Monopoly: Roblox 2022 Edition"
         }
       ],
-      "match_score": 55.319148936170215
+      "match_score": 55.81395348837209
     },
     {
       "zatu_handle": "the-walking-dead-universe-rpg-starter-set",
@@ -18082,11 +17919,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 16955,
-          "bgg_name": "Orient Expedition"
+          "bgg_id": 164928,
+          "bgg_name": "Orl\u00e9ans"
         }
       ],
-      "match_score": 75.0
+      "match_score": 100.0
     },
     {
       "zatu_handle": "light-speed-arena-blackhole",
@@ -18309,7 +18146,7 @@
           "bgg_name": "Trailblazers"
         }
       ],
-      "match_score": 72.72727272727273
+      "match_score": 100.0
     },
     {
       "zatu_handle": "terra-mystica-merchants-of-the-sea",
@@ -18371,7 +18208,7 @@
           "bgg_name": "The Binding of Isaac: Four Souls"
         }
       ],
-      "match_score": 73.84615384615385
+      "match_score": 90.56603773584906
     },
     {
       "zatu_handle": "star-realms-command-deck-the-unity",
@@ -18540,11 +18377,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 62126,
-          "bgg_name": "bOOLeO N-Edition"
+          "bgg_id": 32296,
+          "bgg_name": "UNO: Betty Boop Vintage"
         }
       ],
-      "match_score": 62.745098039215684
+      "match_score": 57.14285714285714
     },
     {
       "zatu_handle": "light-speed-arena-glyphon",
@@ -18624,7 +18461,7 @@
           "bgg_name": "15 Minute Cold War: Expansion Edition"
         }
       ],
-      "match_score": 61.53846153846154
+      "match_score": 63.1578947368421
     },
     {
       "zatu_handle": "qwirkle-bonus-pack",
@@ -18871,11 +18708,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 9310,
-          "bgg_name": "Dr. Livingstone, I Presume? African Adventure!"
+          "bgg_id": 25036,
+          "bgg_name": "Amazing Africa: A Cultural Adventure"
         }
       ],
-      "match_score": 55.769230769230774
+      "match_score": 59.77011494252873
     },
     {
       "zatu_handle": "summoner-wars-the-filth-faction-deck",
@@ -19239,11 +19076,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 23010,
-          "bgg_name": "Risk: 40th Anniversary Collector's Edition"
+          "bgg_id": 4928,
+          "bgg_name": "Clue: 50th Anniversary Edition"
         }
       ],
-      "match_score": 78.26086956521739
+      "match_score": 63.63636363636363
     },
     {
       "zatu_handle": "summoner-wars-moonsteppe-wolves-faction-deck",
@@ -19364,11 +19201,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 410768,
-          "bgg_name": "Final Girl: S1 Ultimate Box"
+          "bgg_id": 277659,
+          "bgg_name": "Final Girl"
         }
       ],
-      "match_score": 58.82352941176471
+      "match_score": 57.14285714285714
     },
     {
       "zatu_handle": "crossfire-pack-zombicide-white-death-expansion",
@@ -19469,31 +19306,6 @@
       "match_score": 100.0
     },
     {
-      "zatu_handle": "aspens",
-      "zatu_title": "Aspens - Kickstarter Standard Edition",
-      "zatu_url": "https://zatu.com/products/aspens",
-      "zatu_price_gbp": 39.99,
-      "zatu_in_stock": true,
-      "zatu_tags": [
-        "Board Games",
-        "Distribution",
-        "Next Day Delivery",
-        "no gift wrap",
-        "Strategy",
-        "Top 5000 Board Games"
-      ],
-      "zatu_is_coop": false,
-      "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
-      "bgg_candidates": [
-        {
-          "bgg_id": 153310,
-          "bgg_name": "Senkrecht-Starter"
-        }
-      ],
-      "match_score": 68.57142857142857
-    },
-    {
       "zatu_handle": "world-order-the-ultimate-geopolitical-simulator",
       "zatu_title": "World Order: The Ultimate Geopolitical Simulator",
       "zatu_url": "https://zatu.com/products/world-order-the-ultimate-geopolitical-simulator",
@@ -19516,11 +19328,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 254195,
-          "bgg_name": "Trivial Pursuit: World of Harry Potter \u2013 Ultimate Edition"
+          "bgg_id": 127353,
+          "bgg_name": "Panzer World Galient: Simulation Game"
         }
       ],
-      "match_score": 59.79381443298969
+      "match_score": 65.71428571428571
     },
     {
       "zatu_handle": "aliens-sulaco-survivors",
@@ -19540,11 +19352,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 383197,
-          "bgg_name": "Alien Frontiers: Edition X"
+          "bgg_id": 4925,
+          "bgg_name": "Survivor: The Australian Outback Card Game"
         }
       ],
-      "match_score": 64.51612903225806
+      "match_score": 61.81818181818181
     },
     {
       "zatu_handle": "high-score-2",
@@ -20052,11 +19864,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 461052,
-          "bgg_name": "5 Second Rule Mini: Family Edition"
+          "bgg_id": 459028,
+          "bgg_name": "Clans: The Farmers Family"
         }
       ],
-      "match_score": 76.36363636363637
+      "match_score": 75.67567567567568
     },
     {
       "zatu_handle": "sherlock-holmes-the-case-of-the-treasury-safe",
@@ -20201,11 +20013,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 419148,
-          "bgg_name": "The Corporate Anniversary"
+          "bgg_id": 154825,
+          "bgg_name": "Arkwright"
         }
       ],
-      "match_score": 71.42857142857143
+      "match_score": 100.0
     },
     {
       "zatu_handle": "the-binding-of-isaac-four-souls-community-booster",
@@ -20585,7 +20397,7 @@
           "bgg_name": "Kingdom Builder: Family & Friends Compact Edition"
         }
       ],
-      "match_score": 66.66666666666667
+      "match_score": 65.82278481012658
     },
     {
       "zatu_handle": "katamino-family",
@@ -20898,11 +20710,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 130641,
-          "bgg_name": "Monopoly: Alan Turing Edition"
+          "bgg_id": 19616,
+          "bgg_name": "Monopoly: Vintage Game Collection"
         }
       ],
-      "match_score": 70.76923076923076
+      "match_score": 65.57377049180329
     },
     {
       "zatu_handle": "cockroach-salad-game-multi-lingual-edition",
@@ -20923,11 +20735,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 386848,
-          "bgg_name": "Gemeinsame Sache: Block Edition"
+          "bgg_id": 319957,
+          "bgg_name": "Fruit Salad: The Multiple Games in One Game"
         }
       ],
-      "match_score": 61.111111111111114
+      "match_score": 62.857142857142854
     },
     {
       "zatu_handle": "star-realms-command-deck-the-alliance",
@@ -20998,7 +20810,7 @@
           "bgg_name": "Dead Men Tell No Tales"
         }
       ],
-      "match_score": 65.67164179104478
+      "match_score": 74.57627118644068
     },
     {
       "zatu_handle": "similo-spookies",
@@ -21153,11 +20965,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 390576,
-          "bgg_name": "The Game of Life: Target Edition"
+          "bgg_id": 164463,
+          "bgg_name": "True to Life Baseball"
         }
       ],
-      "match_score": 68.96551724137932
+      "match_score": 57.14285714285714
     },
     {
       "zatu_handle": "diplomacy-dominance-expansion-for-world-order",
@@ -21543,11 +21355,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 210626,
-          "bgg_name": "Stak Bots: Red Expansion"
+          "bgg_id": 362826,
+          "bgg_name": "Tension: Foodies Edition"
         }
       ],
-      "match_score": 63.829787234042556
+      "match_score": 66.66666666666667
     },
     {
       "zatu_handle": "life-of-the-amazonia-upgraded-base-components",
@@ -21856,60 +21668,6 @@
         }
       ],
       "match_score": 57.425742574257434
-    },
-    {
-      "zatu_handle": "core-game-deluxe-version-the-witcher-path-of-destiny",
-      "zatu_title": "Core Game (Deluxe Version) - The Witcher: Path of Destiny",
-      "zatu_url": "https://zatu.com/products/core-game-deluxe-version-the-witcher-path-of-destiny",
-      "zatu_price_gbp": 59.35,
-      "zatu_in_stock": true,
-      "zatu_tags": [
-        "1-5 Players",
-        "Board Games",
-        "Card Games",
-        "Drafting",
-        "Next Day Delivery",
-        "no gift wrap",
-        "The Witcher",
-        "Top 5000 Board Games"
-      ],
-      "zatu_is_coop": false,
-      "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
-      "bgg_candidates": [
-        {
-          "bgg_id": 405135,
-          "bgg_name": "The Witcher: Path of Destiny \u2013 Ronin"
-        }
-      ],
-      "match_score": 90.0
-    },
-    {
-      "zatu_handle": "21x-limited-edition",
-      "zatu_title": "21X Limited Edition",
-      "zatu_url": "https://zatu.com/products/21x-limited-edition",
-      "zatu_price_gbp": 17.49,
-      "zatu_in_stock": true,
-      "zatu_tags": [
-        "1-6 Players",
-        "10-20 Minutes",
-        "Board Games",
-        "Card Games",
-        "Naylor Games",
-        "Next Day Delivery",
-        "no gift wrap",
-        "Top 5000 Board Games"
-      ],
-      "zatu_is_coop": false,
-      "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
-      "bgg_candidates": [
-        {
-          "bgg_id": 19908,
-          "bgg_name": "Clue:  Limited Gift Edition"
-        }
-      ],
-      "match_score": 72.72727272727273
     },
     {
       "zatu_handle": "washed-ashore",
@@ -22326,38 +22084,6 @@
       "match_score": 78.04878048780488
     },
     {
-      "zatu_handle": "everdell-farshore-essential-edition",
-      "zatu_title": "Everdell Farshore: Essential Edition",
-      "zatu_url": "https://zatu.com/products/everdell-farshore-essential-edition",
-      "zatu_price_gbp": 39.9,
-      "zatu_in_stock": true,
-      "zatu_tags": [
-        "1-4 Players",
-        "45-60 Minutes",
-        "Board Games",
-        "Card Games",
-        "City Building",
-        "Drafting",
-        "Everdell",
-        "Hand Management",
-        "Next Day Delivery",
-        "no gift wrap",
-        "Starling Games",
-        "Top 5000 Board Games",
-        "Worker Placement"
-      ],
-      "zatu_is_coop": false,
-      "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
-      "bgg_candidates": [
-        {
-          "bgg_id": 468926,
-          "bgg_name": "Euphoria Essential Edition"
-        }
-      ],
-      "match_score": 72.1311475409836
-    },
-    {
       "zatu_handle": "guess-who-vintage-bookshelf-edition",
       "zatu_title": "Guess Who Vintage Bookshelf Edition",
       "zatu_url": "https://zatu.com/products/guess-who-vintage-bookshelf-edition",
@@ -22380,11 +22106,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 386848,
-          "bgg_name": "Gemeinsame Sache: Block Edition"
+          "bgg_id": 29664,
+          "bgg_name": "The New Games Book"
         }
       ],
-      "match_score": 61.53846153846154
+      "match_score": 58.53658536585367
     },
     {
       "zatu_handle": "star-trek-ascendancy-the-final-frontier-expansion",
@@ -22602,11 +22328,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 324941,
-          "bgg_name": "Happy Little Dinosaurs: Exclusive Edition"
+          "bgg_id": 325414,
+          "bgg_name": "Happy Little Dinosaurs"
         }
       ],
-      "match_score": 69.6629213483146
+      "match_score": 61.9718309859155
     },
     {
       "zatu_handle": "triqueta-2nd-edition-deep-print-games",
@@ -22899,11 +22625,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 291434,
-          "bgg_name": "Axis Empires: Ultimate Edition"
+          "bgg_id": 255583,
+          "bgg_name": "Olive et Tom Classico"
         }
       ],
-      "match_score": 59.154929577464785
+      "match_score": 62.96296296296296
     },
     {
       "zatu_handle": "concordia-venus-board-game-balearica-and-italia-map-expansion",
@@ -23050,6 +22776,31 @@
         }
       ],
       "match_score": 62.33766233766234
+    },
+    {
+      "zatu_handle": "sequence-tour-edition-tin",
+      "zatu_title": "Sequence Tour Edition Tin",
+      "zatu_url": "https://zatu.com/products/sequence-tour-edition-tin",
+      "zatu_price_gbp": 9.9,
+      "zatu_in_stock": true,
+      "zatu_tags": [
+        "10-20 Minutes",
+        "2-10 Players",
+        "Board Games",
+        "Next Day Delivery",
+        "no gift wrap",
+        "Top 5000 Board Games"
+      ],
+      "zatu_is_coop": false,
+      "zatu_is_party": false,
+      "match_category": "NO_CONFIDENT_MATCH",
+      "bgg_candidates": [
+        {
+          "bgg_id": 457524,
+          "bgg_name": "Sequence: Tour Edition"
+        }
+      ],
+      "match_score": 86.66666666666667
     },
     {
       "zatu_handle": "dominion-2nd-edition-update-pack",
@@ -23337,7 +23088,7 @@
           "bgg_name": "Power Hungry Pets"
         }
       ],
-      "match_score": 73.91304347826086
+      "match_score": 89.47368421052632
     },
     {
       "zatu_handle": "sumo",
@@ -23508,11 +23259,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 25601,
-          "bgg_name": "Grand Fleet Actions in the Age of Sail Edition 2.0"
+          "bgg_id": 413526,
+          "bgg_name": "Anne Bonny's Malediction"
         }
       ],
-      "match_score": 56.84210526315789
+      "match_score": 59.375
     },
     {
       "zatu_handle": "the-kings-golem-alchemists-expansion",
@@ -23886,11 +23637,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 293141,
-          "bgg_name": "King of Tokyo: Dark Edition"
+          "bgg_id": 465735,
+          "bgg_name": "King of Tokyo: Duel \u2013 Tokyo Bay"
         }
       ],
-      "match_score": 57.971014492753625
+      "match_score": 56.33802816901409
     },
     {
       "zatu_handle": "trails-of-tucana-ferry-extension-included",
@@ -24411,11 +24162,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 198707,
-          "bgg_name": "Hostage Negotiator: Crime Wave"
+          "bgg_id": 436158,
+          "bgg_name": "Hostage Negotiator: Ultimate Box"
         }
       ],
-      "match_score": 73.01587301587303
+      "match_score": 75.0
     },
     {
       "zatu_handle": "red-dragon-inn-piper-vs-ripsnarl",
@@ -24540,11 +24291,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 387647,
-          "bgg_name": "Battletech: Essentials"
+          "bgg_id": 467600,
+          "bgg_name": "BattleTech: Core Box"
         }
       ],
-      "match_score": 80.76923076923077
+      "match_score": 82.05128205128204
     },
     {
       "zatu_handle": "allies-wrenchthe-red-dragon-inn",
@@ -24803,11 +24554,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 245941,
-          "bgg_name": "Yahtzee Duels: Star Wars Edition"
+          "bgg_id": 105104,
+          "bgg_name": "Yahtzee Bowling"
         }
       ],
-      "match_score": 62.68656716417911
+      "match_score": 65.11627906976744
     },
     {
       "zatu_handle": "munchkin-7-cheat-with-both-hands",
@@ -24878,35 +24629,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 317367,
-          "bgg_name": "Cards Against Humanity: Family Edition"
+          "bgg_id": 50381,
+          "bgg_name": "Cards Against Humanity"
         }
       ],
-      "match_score": 74.07407407407408
-    },
-    {
-      "zatu_handle": "the-mind-soulmates-uk-edition",
-      "zatu_title": "The Mind Soulmates (UK Edition)",
-      "zatu_url": "https://zatu.com/products/the-mind-soulmates-uk-edition",
-      "zatu_price_gbp": 9.29,
-      "zatu_in_stock": true,
-      "zatu_tags": [
-        "Board Games",
-        "Next Day Delivery",
-        "no gift wrap",
-        "Nurnberger-Spielkarten-Verlag",
-        "Top 5000 Board Games"
-      ],
-      "zatu_is_coop": false,
-      "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
-      "bgg_candidates": [
-        {
-          "bgg_id": 378851,
-          "bgg_name": "The Mind: Soulmates"
-        }
-      ],
-      "match_score": 71.7948717948718
+      "match_score": 75.86206896551724
     },
     {
       "zatu_handle": "star-realms-command-deck-the-union",
@@ -25170,11 +24897,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 176790,
-          "bgg_name": "Brains, Grains & Trains"
+          "bgg_id": 127648,
+          "bgg_name": "Black Stories: Sex and Crime Edition"
         }
       ],
-      "match_score": 59.01639344262295
+      "match_score": 59.375
     },
     {
       "zatu_handle": "world-football-stars-guess-who-2",
@@ -25400,11 +25127,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 21875,
-          "bgg_name": "Friendzee: Close Connections Edition"
+          "bgg_id": 248207,
+          "bgg_name": "Machinations: A Game of Devious Schemes"
         }
       ],
-      "match_score": 57.47126436781609
+      "match_score": 58.22784810126582
     },
     {
       "zatu_handle": "brother-bastian-the-red-dragon-inn",
@@ -25555,11 +25282,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 252970,
-          "bgg_name": "Empires: D10 Edition"
+          "bgg_id": 92094,
+          "bgg_name": "Pointless: The Board Game"
         }
       ],
-      "match_score": 68.29268292682926
+      "match_score": 78.26086956521739
     },
     {
       "zatu_handle": "middara-act-1-base-game",
@@ -25763,11 +25490,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 25464,
-          "bgg_name": "Battlestandard Ancient Rules"
+          "bgg_id": 164047,
+          "bgg_name": "Super Blue and Gray"
         }
       ],
-      "match_score": 54.794520547945204
+      "match_score": 58.18181818181818
     },
     {
       "zatu_handle": "axis-allies-commanders",
@@ -25813,11 +25540,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 401322,
-          "bgg_name": "Oudenaarde (fan expansion for Carcassonne)"
+          "bgg_id": 428500,
+          "bgg_name": "15 Minute Cold War: Expansion Edition"
         }
       ],
-      "match_score": 62.16216216216216
+      "match_score": 64.51612903225806
     },
     {
       "zatu_handle": "african-wildlife-top-trumps",
@@ -26020,11 +25747,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 33239,
-          "bgg_name": "Trivial Pursuit: Chocolate Edition"
+          "bgg_id": 242186,
+          "bgg_name": "Catch Phrase: Uncensored"
         }
       ],
-      "match_score": 59.45945945945945
+      "match_score": 57.14285714285714
     },
     {
       "zatu_handle": "nucleum-metal-coins",
@@ -26530,7 +26257,7 @@
           "bgg_name": "15 Minute Cold War: Expansion Edition"
         }
       ],
-      "match_score": 68.18181818181819
+      "match_score": 61.111111111111114
     },
     {
       "zatu_handle": "beast-shattered-isles",
@@ -26661,11 +26388,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 137244,
-          "bgg_name": "Monopoly Hotels"
+          "bgg_id": 249098,
+          "bgg_name": "Monopoly: The Materials Edition"
         }
       ],
-      "match_score": 81.25
+      "match_score": 85.71428571428572
     },
     {
       "zatu_handle": "wildlands-the-ancients",
@@ -26886,11 +26613,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 34792,
-          "bgg_name": "Righteous! Book of Mormon Edition"
+          "bgg_id": 32296,
+          "bgg_name": "UNO: Betty Boop Vintage"
         }
       ],
-      "match_score": 60.60606060606061
+      "match_score": 58.33333333333333
     },
     {
       "zatu_handle": "deal-or-no-deal-board-game",
@@ -26942,8 +26669,8 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 230262,
-          "bgg_name": "Time's Up! Party Edition"
+          "bgg_id": 429895,
+          "bgg_name": "Vestige"
         }
       ],
       "match_score": 66.66666666666667
@@ -27018,11 +26745,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 15866,
-          "bgg_name": "Junior Articulate"
+          "bgg_id": 227118,
+          "bgg_name": "Grand Tundra: Arctic Circle Edition Board Game"
         }
       ],
-      "match_score": 60.86956521739131
+      "match_score": 65.45454545454545
     },
     {
       "zatu_handle": "final-girl-series-3-miniatures-box",
@@ -27187,11 +26914,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 367945,
-          "bgg_name": "Disney Princess: Home Sprint"
+          "bgg_id": 228027,
+          "bgg_name": "Monopoly: Disney Princess Edition"
         }
       ],
-      "match_score": 67.6923076923077
+      "match_score": 66.66666666666667
     },
     {
       "zatu_handle": "maple-valley-board-game-roaming-raven-and-feathered-friends-mini-expansion",
@@ -27243,11 +26970,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 416079,
-          "bgg_name": "March of the Ants: Evolved Edition"
+          "bgg_id": 342117,
+          "bgg_name": "Ophelia: Histories Collide Expansion \u2013 Atlantis"
         }
       ],
-      "match_score": 66.66666666666667
+      "match_score": 59.57446808510638
     },
     {
       "zatu_handle": "dead-by-daylight-deluxe-edition-upgrade",
@@ -27509,11 +27236,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 65262,
-          "bgg_name": "Connect 4 (Revised Edition)"
+          "bgg_id": 67629,
+          "bgg_name": "U-Build Connect 4"
         }
       ],
-      "match_score": 66.66666666666667
+      "match_score": 59.57446808510638
     },
     {
       "zatu_handle": "gnome-hollow-deluxe-upgrade-kit",
@@ -27593,11 +27320,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 472964,
-          "bgg_name": "Spin the Bottle: Friends Edition"
+          "bgg_id": 274053,
+          "bgg_name": "Vintage Racers"
         }
       ],
-      "match_score": 63.1578947368421
+      "match_score": 61.111111111111114
     },
     {
       "zatu_handle": "nature-board-game-module-2-jurassic-module",
@@ -27801,11 +27528,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 318472,
-          "bgg_name": "Blood Bowl: Second Season Edition"
+          "bgg_id": 293779,
+          "bgg_name": "Frozen 2: Seasons"
         }
       ],
-      "match_score": 62.06896551724138
+      "match_score": 59.45945945945945
     },
     {
       "zatu_handle": "darkroot-basin-iron-keep-tile-set-dark-souls-the-board-game",
@@ -28056,7 +27783,7 @@
           "bgg_name": "Joking Hazard"
         }
       ],
-      "match_score": 63.41463414634146
+      "match_score": 78.78787878787878
     },
     {
       "zatu_handle": "explorers-of-the-north-sea-collector-c2-92s-box",
@@ -28079,7 +27806,7 @@
           "bgg_name": "Explorers of the North Sea"
         }
       ],
-      "match_score": 73.33333333333334
+      "match_score": 88.0
     },
     {
       "zatu_handle": "bonsai-vigorous-growth-specialists",
@@ -28537,11 +28264,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 195850,
-          "bgg_name": "Mombasa (Limited Edition)"
+          "bgg_id": 271516,
+          "bgg_name": "Top Trumps Match"
         }
       ],
-      "match_score": 65.57377049180329
+      "match_score": 68.42105263157895
     },
     {
       "zatu_handle": "high-frontier-4-all-board-game-colonization-expansion",
@@ -28672,11 +28399,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 22819,
-          "bgg_name": "Double Action"
+          "bgg_id": 3972,
+          "bgg_name": "Catan: Portable Edition"
         }
       ],
-      "match_score": 72.0
+      "match_score": 76.92307692307692
     },
     {
       "zatu_handle": "waddle-orcas-ice-floes-expansion",
@@ -29066,11 +28793,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 386300,
-          "bgg_name": "Thorgal: The Board Game (Gamefound Edition)"
+          "bgg_id": 2866,
+          "bgg_name": "The London Game"
         }
       ],
-      "match_score": 78.43137254901961
+      "match_score": 75.86206896551724
     },
     {
       "zatu_handle": "why-cant-we-be-friends-imperial-settlers-exp",
@@ -29187,29 +28914,6 @@
         }
       ],
       "match_score": null
-    },
-    {
-      "zatu_handle": "werewolves-big-box-limited-edition",
-      "zatu_title": "Werewolves Big Box (Limited Edition)",
-      "zatu_url": "https://zatu.com/products/werewolves-big-box-limited-edition",
-      "zatu_price_gbp": 16.95,
-      "zatu_in_stock": true,
-      "zatu_tags": [
-        "Board Games",
-        "Manual Release Date",
-        "no gift wrap",
-        "Top 5000 Board Games"
-      ],
-      "zatu_is_coop": false,
-      "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
-      "bgg_candidates": [
-        {
-          "bgg_id": 195850,
-          "bgg_name": "Mombasa (Limited Edition)"
-        }
-      ],
-      "match_score": 73.46938775510203
     },
     {
       "zatu_handle": "unreliable-wizard-and-the-unstable-spirit-towers",
@@ -29858,11 +29562,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 359065,
-          "bgg_name": "Blitz Bowl: Ultimate Edition"
+          "bgg_id": 32296,
+          "bgg_name": "UNO: Betty Boop Vintage"
         }
       ],
-      "match_score": 61.29032258064516
+      "match_score": 65.3061224489796
     },
     {
       "zatu_handle": "chromino-small-box",
@@ -29910,7 +29614,7 @@
           "bgg_name": "Tiny Epic Game of Thrones"
         }
       ],
-      "match_score": 58.46153846153845
+      "match_score": 62.06896551724138
     },
     {
       "zatu_handle": "red-dragon-inn-card-game-allies-melvyn-vs-marah-expansion",
@@ -30096,11 +29800,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 24978,
-          "bgg_name": "Roanoke The Star City Game"
+          "bgg_id": 427942,
+          "bgg_name": "Stack O' Cats"
         }
       ],
-      "match_score": 66.66666666666667
+      "match_score": 82.75862068965517
     },
     {
       "zatu_handle": "chutes-and-ladders-vintage-bookshelf-edition",
@@ -30120,11 +29824,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 317289,
-          "bgg_name": "Baseball Wars: Hangin' Curves and Heaters edition"
+          "bgg_id": 13672,
+          "bgg_name": "Chutes and Ladders VCR"
         }
       ],
-      "match_score": 61.53846153846154
+      "match_score": 68.96551724137932
     },
     {
       "zatu_handle": "codenames-xxl-2",
@@ -30635,37 +30339,6 @@
       "match_score": 75.0
     },
     {
-      "zatu_handle": "disney-chronicles-of-light-darkness-falls-game",
-      "zatu_title": "Disney Chronicles of Light - Darkness Falls Game",
-      "zatu_url": "https://zatu.com/products/disney-chronicles-of-light-darkness-falls-game",
-      "zatu_price_gbp": 16.89,
-      "zatu_in_stock": true,
-      "zatu_tags": [
-        "2 Players",
-        "Board Games",
-        "Dexterity",
-        "Disney",
-        "Fantasy",
-        "Manual Release Date",
-        "Next Day Delivery",
-        "no gift wrap",
-        "Ravensburger",
-        "Sale",
-        "Top 5000 Board Games",
-        "Under 10 Minutes"
-      ],
-      "zatu_is_coop": false,
-      "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
-      "bgg_candidates": [
-        {
-          "bgg_id": 411369,
-          "bgg_name": "Chronicles of Light: Darkness Falls \u2013 Disney Edition"
-        }
-      ],
-      "match_score": 86.31578947368422
-    },
-    {
       "zatu_handle": "how-to-train-your-dragon-top-trumps",
       "zatu_title": "How to Train Your Dragon Top Trumps",
       "zatu_url": "https://zatu.com/products/how-to-train-your-dragon-top-trumps",
@@ -30688,11 +30361,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 348062,
-          "bgg_name": "How to Train Your Dragon: Terror of the Sea"
+          "bgg_id": 461251,
+          "bgg_name": "Monopoly: How to Train Your Dragon Edition"
         }
       ],
-      "match_score": 73.97260273972603
+      "match_score": 76.47058823529412
     },
     {
       "zatu_handle": "root-ruins-and-rolls-ruins-expeditions-book-kickstarter",
@@ -30714,11 +30387,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 340374,
-          "bgg_name": "Trickerion: Legends of Illusion \u2013 Kickstarter Exclusive Legend Box"
+          "bgg_id": 359743,
+          "bgg_name": "Dan Dare Mountains of Mars Expedition"
         }
       ],
-      "match_score": 55.73770491803278
+      "match_score": 59.523809523809526
     },
     {
       "zatu_handle": "pathfinder-npc-core-pawn-box-p2",
@@ -30900,11 +30573,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 468926,
-          "bgg_name": "Euphoria Essential Edition"
+          "bgg_id": 394106,
+          "bgg_name": "Everdell Farshore"
         }
       ],
-      "match_score": 70.76923076923076
+      "match_score": 63.1578947368421
     },
     {
       "zatu_handle": "magenta-figment",
@@ -31499,11 +31172,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 391288,
-          "bgg_name": "Firefly: The Game \u2013 10th Anniversary Collector's Edition"
+          "bgg_id": 335855,
+          "bgg_name": "Das Labyrinth"
         }
       ],
-      "match_score": 72.41379310344827
+      "match_score": 68.57142857142857
     },
     {
       "zatu_handle": "everdell-big-ol-box-of-storage",
@@ -31604,11 +31277,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 138518,
-          "bgg_name": "King of Crime: Bootleg Edition"
+          "bgg_id": 25147,
+          "bgg_name": "Integer Chess"
         }
       ],
-      "match_score": 63.49206349206349
+      "match_score": 56.41025641025641
     },
     {
       "zatu_handle": "on-the-underground-board-game-london-and-berlin-underground-challenge-solo-expansion",
@@ -31684,8 +31357,8 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 2392,
-          "bgg_name": "Mastermind"
+          "bgg_id": 3874,
+          "bgg_name": "Ultimate Mastermind"
         }
       ],
       "match_score": 71.42857142857143
@@ -31853,11 +31526,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 32489,
-          "bgg_name": "Scrabble Golf Edition"
+          "bgg_id": 404551,
+          "bgg_name": "Scribble Me This!"
         }
       ],
-      "match_score": 76.59574468085107
+      "match_score": 70.58823529411764
     },
     {
       "zatu_handle": "final-girl-series-3-vehicle-pack-3",
@@ -31968,30 +31641,6 @@
       "match_score": 63.1578947368421
     },
     {
-      "zatu_handle": "outsmarted-ultimate",
-      "zatu_title": "Outsmarted - Ultimate",
-      "zatu_url": "https://zatu.com/products/outsmarted-ultimate",
-      "zatu_price_gbp": 27.85,
-      "zatu_in_stock": true,
-      "zatu_tags": [
-        "20-30 Minutes",
-        "8+",
-        "Board Games",
-        "Next Day Delivery",
-        "Top 5000 Board Games"
-      ],
-      "zatu_is_coop": false,
-      "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
-      "bgg_candidates": [
-        {
-          "bgg_id": 5529,
-          "bgg_name": "The Ultimate Route"
-        }
-      ],
-      "match_score": 78.78787878787878
-    },
-    {
       "zatu_handle": "fog-of-love-male-couple-cover",
       "zatu_title": "Fog of Love (Male Couple Cover)",
       "zatu_url": "https://zatu.com/products/fog-of-love-male-couple-cover",
@@ -32011,8 +31660,8 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 328437,
-          "bgg_name": "The Ultimate Game For Couples"
+          "bgg_id": 355489,
+          "bgg_name": "Le croque-couleurs de POP"
         }
       ],
       "match_score": 59.25925925925925
@@ -32084,38 +31733,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 355129,
-          "bgg_name": "Eternal Palace (Kickstarter Deluxe edition)"
+          "bgg_id": 348602,
+          "bgg_name": "Illiterati"
         }
       ],
-      "match_score": 66.66666666666667
-    },
-    {
-      "zatu_handle": "drags-2-riches-the-exclusive-edition",
-      "zatu_title": "Drags 2 Riches - The Exclusive Edition",
-      "zatu_url": "https://zatu.com/products/drags-2-riches-the-exclusive-edition",
-      "zatu_price_gbp": 36.99,
-      "zatu_in_stock": true,
-      "zatu_tags": [
-        "2-5 Players",
-        "30-45 Minutes",
-        "Board Games",
-        "Drafting",
-        "Next Day Delivery",
-        "no gift wrap",
-        "Push Your Luck",
-        "Top 5000 Board Games"
-      ],
-      "zatu_is_coop": false,
-      "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
-      "bgg_candidates": [
-        {
-          "bgg_id": 365761,
-          "bgg_name": "Casting Shadows: Exclusive Edition"
-        }
-      ],
-      "match_score": 70.76923076923076
+      "match_score": 100.0
     },
     {
       "zatu_handle": "high-frontier-4-module-3-conflict",
@@ -32162,7 +31784,7 @@
           "bgg_name": "Railroad Ink Challenge: Lush Green Edition"
         }
       ],
-      "match_score": 64.44444444444444
+      "match_score": 65.85365853658536
     },
     {
       "zatu_handle": "allies-keet-nitrel-red-dragon-inn",
@@ -32487,66 +32109,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 459986,
-          "bgg_name": "Games of John Gilpin, Rainbow backgammon and Bewildered travellers"
+          "bgg_id": 64376,
+          "bgg_name": "Heckle & Jeckle's Ski Trail Game"
         }
       ],
       "match_score": 56.41025641025641
-    },
-    {
-      "zatu_handle": "heroes-of-the-shire-fire-ice-edition",
-      "zatu_title": "Heroes of the Shire Fire & Ice Edition",
-      "zatu_url": "https://zatu.com/products/heroes-of-the-shire-fire-ice-edition",
-      "zatu_price_gbp": 47.49,
-      "zatu_in_stock": true,
-      "zatu_tags": [
-        "1-6 Players",
-        "150-180 Minutes",
-        "Board Games",
-        "Cooperative",
-        "Fighting",
-        "Math",
-        "Next Day Delivery",
-        "no gift wrap",
-        "Sale",
-        "Tile Placement",
-        "Top 5000 Board Games"
-      ],
-      "zatu_is_coop": true,
-      "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
-      "bgg_candidates": [
-        {
-          "bgg_id": 448703,
-          "bgg_name": "Heroes of the Shire: Fire & Ice"
-        }
-      ],
-      "match_score": 87.5
-    },
-    {
-      "zatu_handle": "sparta-standard-retail-edition",
-      "zatu_title": "Sparta Standard Retail Edition",
-      "zatu_url": "https://zatu.com/products/sparta-standard-retail-edition",
-      "zatu_price_gbp": 39.99,
-      "zatu_in_stock": true,
-      "zatu_tags": [
-        "2 Players",
-        "Board Games",
-        "Next Day Delivery",
-        "no gift wrap",
-        "Sale",
-        "Top 5000 Board Games"
-      ],
-      "zatu_is_coop": false,
-      "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
-      "bgg_candidates": [
-        {
-          "bgg_id": 163209,
-          "bgg_name": "Standard Action: The Card Game"
-        }
-      ],
-      "match_score": 73.33333333333334
     },
     {
       "zatu_handle": "tabriz-premiere-edition",
@@ -32566,11 +32133,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 37198,
-          "bgg_name": "Risk (Revised Edition)"
+          "bgg_id": 40032,
+          "bgg_name": "Star Empire"
         }
       ],
-      "match_score": 69.76744186046511
+      "match_score": 69.23076923076923
     },
     {
       "zatu_handle": "monopoly-buy-everything",
@@ -32645,7 +32212,7 @@
           "bgg_name": "Jenga: Book Lovers Edition"
         }
       ],
-      "match_score": 75.0
+      "match_score": 65.0
     },
     {
       "zatu_handle": "majestic-marvels-an-aspens-mini-expansion",
@@ -33040,33 +32607,6 @@
       "match_score": 82.05128205128204
     },
     {
-      "zatu_handle": "last-friday-revised-edition",
-      "zatu_title": "Last Friday Revised Edition",
-      "zatu_url": "https://zatu.com/products/last-friday-revised-edition",
-      "zatu_price_gbp": 42.15,
-      "zatu_in_stock": true,
-      "zatu_tags": [
-        "2-6 Players",
-        "Ares Games",
-        "Board Games",
-        "Deduction",
-        "Horror",
-        "Next Day Delivery",
-        "no gift wrap",
-        "Top 5000 Board Games"
-      ],
-      "zatu_is_coop": false,
-      "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
-      "bgg_candidates": [
-        {
-          "bgg_id": 169328,
-          "bgg_name": "Falling (Revised Edition)"
-        }
-      ],
-      "match_score": 76.0
-    },
-    {
       "zatu_handle": "imperial-settlers-empires-of-the-north-wrath-of-the-lighthouse",
       "zatu_title": "Imperial Settlers: Empires of the North: Wrath of the Lighthouse",
       "zatu_url": "https://zatu.com/products/imperial-settlers-empires-of-the-north-wrath-of-the-lighthouse",
@@ -33134,11 +32674,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 57660,
-          "bgg_name": "Time's Up! Edici\u00f3n Azul"
+          "bgg_id": 229414,
+          "bgg_name": "Tulip Bubble"
         }
       ],
-      "match_score": 61.53846153846154
+      "match_score": 70.58823529411764
     },
     {
       "zatu_handle": "star-wars-force-and-destiny-rpg-keeping-the-peace",
@@ -33212,32 +32752,6 @@
         }
       ],
       "match_score": 85.71428571428572
-    },
-    {
-      "zatu_handle": "forests-of-pangaea-standard",
-      "zatu_title": "Forests of Pangaea Standard",
-      "zatu_url": "https://zatu.com/products/forests-of-pangaea-standard",
-      "zatu_price_gbp": 37.99,
-      "zatu_in_stock": true,
-      "zatu_tags": [
-        "Board Games",
-        "Fantasy",
-        "Next Day Delivery",
-        "no gift wrap",
-        "Sale",
-        "Strategy",
-        "Top 5000 Board Games"
-      ],
-      "zatu_is_coop": false,
-      "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
-      "bgg_candidates": [
-        {
-          "bgg_id": 317859,
-          "bgg_name": "Forests of Pangaia"
-        }
-      ],
-      "match_score": 75.55555555555556
     },
     {
       "zatu_handle": "similo-jurassic-world",
@@ -33705,7 +33219,7 @@
           "bgg_name": "Railroad Ink Challenge: Lush Green Edition"
         }
       ],
-      "match_score": 65.26315789473685
+      "match_score": 62.06896551724138
     },
     {
       "zatu_handle": "railroad-ink-challenge-sky-dice-expansion-pack",
@@ -33725,11 +33239,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 306882,
-          "bgg_name": "Railroad Ink Challenge: Shining Yellow Edition"
+          "bgg_id": 306881,
+          "bgg_name": "Railroad Ink Challenge: Lush Green Edition"
         }
       ],
-      "match_score": 68.13186813186813
+      "match_score": 68.35443037974683
     },
     {
       "zatu_handle": "tiny-epic-pirates-curse-of-amdiak-expansion",
@@ -33974,30 +33488,6 @@
       "match_score": 70.83333333333333
     },
     {
-      "zatu_handle": "so-youve-been-cursed-standard",
-      "zatu_title": "So, You've Been Cursed - Standard",
-      "zatu_url": "https://zatu.com/products/so-youve-been-cursed-standard",
-      "zatu_price_gbp": 14.69,
-      "zatu_in_stock": true,
-      "zatu_tags": [
-        "Board Games",
-        "Next Day Delivery",
-        "no gift wrap",
-        "Top 5000 Board Games",
-        "UK Only"
-      ],
-      "zatu_is_coop": false,
-      "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
-      "bgg_candidates": [
-        {
-          "bgg_id": 424125,
-          "bgg_name": "So, You've Been Cursed."
-        }
-      ],
-      "match_score": 82.35294117647058
-    },
-    {
       "zatu_handle": "bicycle-disney-stitch",
       "zatu_title": "Bicycle Disney Stitch",
       "zatu_url": "https://zatu.com/products/bicycle-disney-stitch",
@@ -34071,11 +33561,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 41321,
-          "bgg_name": "I Spy Memory Game: Travel Edition"
+          "bgg_id": 346623,
+          "bgg_name": "Suspect Game"
         }
       ],
-      "match_score": 65.57377049180329
+      "match_score": 72.72727272727273
     },
     {
       "zatu_handle": "age-of-rome-emperor-kickstarter-edition",
@@ -34170,11 +33660,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 192265,
-          "bgg_name": "Disturbed Friends: Mini Game & Expansion"
+          "bgg_id": 173075,
+          "bgg_name": "Disturbed Friends"
         }
       ],
-      "match_score": 62.7906976744186
+      "match_score": 62.96296296296296
     },
     {
       "zatu_handle": "heroquest-crypt-of-perpetual-darkness",
@@ -34351,7 +33841,7 @@
           "bgg_name": "Warfighter: The WWII Eastern Front Special Forces Card Game"
         }
       ],
-      "match_score": 67.41573033707866
+      "match_score": 69.1358024691358
     },
     {
       "zatu_handle": "quartermaster-general-ww2-prelude",
@@ -34379,35 +33869,6 @@
       "match_score": 100.0
     },
     {
-      "zatu_handle": "go-ahead-punk-deluxe-version",
-      "zatu_title": "Go Ahead Punk! Deluxe Version",
-      "zatu_url": "https://zatu.com/products/go-ahead-punk-deluxe-version",
-      "zatu_price_gbp": 66.5,
-      "zatu_in_stock": true,
-      "zatu_tags": [
-        "1-4 Players",
-        "60-90 Minutes",
-        "Asymmetric",
-        "Board Games",
-        "Deduction",
-        "Murder Mystery",
-        "Next Day Delivery",
-        "no gift wrap",
-        "Pop Culture",
-        "Top 5000 Board Games"
-      ],
-      "zatu_is_coop": false,
-      "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
-      "bgg_candidates": [
-        {
-          "bgg_id": 364048,
-          "bgg_name": "Go Ahead Punk!"
-        }
-      ],
-      "match_score": 76.47058823529412
-    },
-    {
       "zatu_handle": "trouble-vintage-bookshelf-edition",
       "zatu_title": "Trouble Vintage Bookshelf Edition",
       "zatu_url": "https://zatu.com/products/trouble-vintage-bookshelf-edition",
@@ -34429,11 +33890,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 342097,
-          "bgg_name": "Blokus Shuffle: UNO Edition"
+          "bgg_id": 112614,
+          "bgg_name": "The Trouble with Rose"
         }
       ],
-      "match_score": 61.01694915254237
+      "match_score": 66.66666666666667
     },
     {
       "zatu_handle": "land-vs-sea-uncharted",
@@ -34482,11 +33943,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 337513,
-          "bgg_name": "Warfighter: The WWII North African Combat Card Game"
+          "bgg_id": 474451,
+          "bgg_name": "Warfighter: The WWII Eastern Front Special Forces Card Game"
         }
       ],
-      "match_score": 64.70588235294117
+      "match_score": 70.58823529411764
     },
     {
       "zatu_handle": "warfighter-wwii-enigma-machine-expansion",
@@ -34625,11 +34086,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 368376,
-          "bgg_name": "Deception: A Game of Lies"
+          "bgg_id": 67796,
+          "bgg_name": "Let's Get Dressed"
         }
       ],
-      "match_score": 68.08510638297872
+      "match_score": 76.47058823529412
     },
     {
       "zatu_handle": "triss-a-grain-of-truth-the-witcher-path-of-destiny",
@@ -34860,7 +34321,7 @@
           "bgg_name": "Spot the Intro: Board Game Edition"
         }
       ],
-      "match_score": 83.72093023255813
+      "match_score": 74.07407407407408
     },
     {
       "zatu_handle": "iq-hexagon",
@@ -34906,11 +34367,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 7163,
-          "bgg_name": "Omega Expedition"
+          "bgg_id": 90777,
+          "bgg_name": "Kampen om Ume\u00e5"
         }
       ],
-      "match_score": 71.7948717948718
+      "match_score": 68.96551724137932
     },
     {
       "zatu_handle": "think-words-travel-game",
@@ -35360,11 +34821,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 306882,
-          "bgg_name": "Railroad Ink Challenge: Shining Yellow Edition"
+          "bgg_id": 306881,
+          "bgg_name": "Railroad Ink Challenge: Lush Green Edition"
         }
       ],
-      "match_score": 64.64646464646464
+      "match_score": 62.06896551724138
     },
     {
       "zatu_handle": "warfighter-modern-fallujah-expansion",
@@ -35778,11 +35239,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 299104,
-          "bgg_name": "Apex Theropod Deck Building Game: Collected Edition"
+          "bgg_id": 146652,
+          "bgg_name": "Legendary Encounters: An Alien Deck Building Game"
         }
       ],
-      "match_score": 58.82352941176471
+      "match_score": 56.14035087719298
     },
     {
       "zatu_handle": "sonic-monopoly",
@@ -35979,11 +35440,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 176254,
-          "bgg_name": "Monopoly: Take-Edition"
+          "bgg_id": 39240,
+          "bgg_name": "Monopoly: Detroit"
         }
       ],
-      "match_score": 74.4186046511628
+      "match_score": 73.6842105263158
     },
     {
       "zatu_handle": "legions",
@@ -36434,40 +35895,6 @@
       "match_score": 66.66666666666667
     },
     {
-      "zatu_handle": "fame-and-fable-standard",
-      "zatu_title": "Fame and Fable Standard",
-      "zatu_url": "https://zatu.com/products/fame-and-fable-standard",
-      "zatu_price_gbp": 35.0,
-      "zatu_in_stock": true,
-      "zatu_tags": [
-        "1-4 Players",
-        "60-90 Minutes",
-        "Board Games",
-        "Card Games",
-        "Fantasy",
-        "Hand Management",
-        "Kickstarters",
-        "Manual Release Date",
-        "Negotiation",
-        "no gift wrap",
-        "Pre-Order",
-        "Push Your Luck",
-        "Solo",
-        "Take That!",
-        "Top 5000 Board Games"
-      ],
-      "zatu_is_coop": false,
-      "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
-      "bgg_candidates": [
-        {
-          "bgg_id": 421254,
-          "bgg_name": "Fame & Fable"
-        }
-      ],
-      "match_score": 75.67567567567568
-    },
-    {
       "zatu_handle": "cryptic-killers-murder-at-the-magic-mirror-casino",
       "zatu_title": "Cryptic Killers - Murder at the Magic Mirror Casino",
       "zatu_url": "https://zatu.com/products/cryptic-killers-murder-at-the-magic-mirror-casino",
@@ -36564,7 +35991,7 @@
           "bgg_name": "Railroad Ink Challenge: Lush Green Edition"
         }
       ],
-      "match_score": 71.11111111111111
+      "match_score": 65.85365853658536
     },
     {
       "zatu_handle": "warfighter-wwii-iwo-jima-warfighter-pacific-expansion",
@@ -36782,11 +36209,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 5759,
-          "bgg_name": "Monopoly: Star Trek Limited Edition"
+          "bgg_id": 422893,
+          "bgg_name": "UNO: Star Wars \u2013 The Mandalorian"
         }
       ],
-      "match_score": 65.85365853658536
+      "match_score": 80.70175438596492
     },
     {
       "zatu_handle": "brainbox-english-refresh-2022",
@@ -36855,11 +36282,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 301518,
-          "bgg_name": "RECALLATI Compact Edition"
+          "bgg_id": 448903,
+          "bgg_name": "Cat Fluxx"
         }
       ],
-      "match_score": 73.91304347826086
+      "match_score": 81.81818181818181
     },
     {
       "zatu_handle": "munchkin-squids",
@@ -36928,11 +36355,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 475325,
-          "bgg_name": "Scrawl: Family Edition"
+          "bgg_id": 8142,
+          "bgg_name": "The Family Game"
         }
       ],
-      "match_score": 82.05128205128204
+      "match_score": 85.71428571428572
     },
     {
       "zatu_handle": "5-little-birds",
@@ -37225,7 +36652,7 @@
           "bgg_name": "Ascension Tactics: Inferno"
         }
       ],
-      "match_score": 68.49315068493152
+      "match_score": 81.9672131147541
     },
     {
       "zatu_handle": "deciduous-duos-an-aspens-expansion",
@@ -37614,11 +37041,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 109037,
-          "bgg_name": "Word Scramble"
+          "bgg_id": 130207,
+          "bgg_name": "Scrabble: Limited Too \u2013 Collector's Edition"
         }
       ],
-      "match_score": 84.61538461538461
+      "match_score": 88.0
     },
     {
       "zatu_handle": "europa-universalis-the-price-of-power-extended-edition",
@@ -37646,7 +37073,7 @@
           "bgg_name": "Europa Universalis: The Price of Power"
         }
       ],
-      "match_score": 79.51807228915662
+      "match_score": 88.0
     },
     {
       "zatu_handle": "grimsby-monopoly",
@@ -37667,11 +37094,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 11862,
-          "bgg_name": "Gay Monopoly"
+          "bgg_id": 155848,
+          "bgg_name": "Monopoly: Islay Edition"
         }
       ],
-      "match_score": 78.57142857142857
+      "match_score": 80.0
     },
     {
       "zatu_handle": "nine-to-five",
@@ -37790,7 +37217,7 @@
           "bgg_name": "Railroad Ink Challenge: Lush Green Edition"
         }
       ],
-      "match_score": 63.73626373626373
+      "match_score": 65.06024096385542
     },
     {
       "zatu_handle": "warfighter-modern-modern-daytime-shadow-war-medals-expansion",
@@ -38109,11 +37536,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 114159,
-          "bgg_name": "Celebrations Activity Mini Edition"
+          "bgg_id": 230277,
+          "bgg_name": "Celebration of the Senses"
         }
       ],
-      "match_score": 66.66666666666667
+      "match_score": 70.83333333333333
     },
     {
       "zatu_handle": "double-9-dominoes-x-55-tiles-in-tin",
@@ -38233,11 +37660,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 32743,
-          "bgg_name": "Black Stories: Mystery Edition"
+          "bgg_id": 257488,
+          "bgg_name": "Parker Brothers Mystery Game"
         }
       ],
-      "match_score": 65.67164179104478
+      "match_score": 62.06896551724138
     },
     {
       "zatu_handle": "dungeon-crawl-classics-dark-tower-3-volume-slipcased-set",
@@ -38397,37 +37824,6 @@
         }
       ],
       "match_score": 62.745098039215684
-    },
-    {
-      "zatu_handle": "trailblazer-the-arizona-trail-standard-version",
-      "zatu_title": "Trailblazer: The Arizona Trail Standard Version",
-      "zatu_url": "https://zatu.com/products/trailblazer-the-arizona-trail-standard-version",
-      "zatu_price_gbp": 22.59,
-      "zatu_in_stock": true,
-      "zatu_tags": [
-        "1-4 Players",
-        "120-150 Minutes",
-        "Action/Adventure",
-        "Board Games",
-        "Next Day Delivery",
-        "no gift wrap",
-        "Set Collection",
-        "Solo",
-        "Top 5000 Board Games",
-        "Travel",
-        "Western",
-        "Worker Placement"
-      ],
-      "zatu_is_coop": false,
-      "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
-      "bgg_candidates": [
-        {
-          "bgg_id": 372967,
-          "bgg_name": "Trailblazer: The Arizona Trail"
-        }
-      ],
-      "match_score": 74.62686567164178
     },
     {
       "zatu_handle": "masters-of-the-universe-fields-of-eternia-rise-of-the-snake-men",
@@ -38762,34 +38158,6 @@
       "match_score": 67.85714285714286
     },
     {
-      "zatu_handle": "nottingham-monopoly",
-      "zatu_title": "Nottingham Monopoly",
-      "zatu_url": "https://zatu.com/products/nottingham-monopoly",
-      "zatu_price_gbp": 22.59,
-      "zatu_in_stock": true,
-      "zatu_tags": [
-        "2-8 Players",
-        "60-90 Minutes",
-        "Board Games",
-        "Economic",
-        "Family",
-        "Monopoly",
-        "Next Day Delivery",
-        "no gift wrap",
-        "Top 5000 Board Games"
-      ],
-      "zatu_is_coop": false,
-      "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
-      "bgg_candidates": [
-        {
-          "bgg_id": 28355,
-          "bgg_name": "Monopoly: Nottingham Edition"
-        }
-      ],
-      "match_score": 82.6086956521739
-    },
-    {
       "zatu_handle": "combat-commander-battle-pack-8-minor-nations",
       "zatu_title": "Combat Commander Battle Pack 8: Minor Nations",
       "zatu_url": "https://zatu.com/products/combat-commander-battle-pack-8-minor-nations",
@@ -38838,7 +38206,7 @@
           "bgg_name": "Pacific Rails Inc."
         }
       ],
-      "match_score": 66.66666666666667
+      "match_score": 79.06976744186046
     },
     {
       "zatu_handle": "cartographers-heroes-map-pack-2-affril-cartographers-expansion",
@@ -39669,11 +39037,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 298474,
-          "bgg_name": "Revolution!  Politics during the French Revolution 1789-96"
+          "bgg_id": 375311,
+          "bgg_name": "1793: Patriots & Traitors"
         }
       ],
-      "match_score": 63.06306306306306
+      "match_score": 67.53246753246754
     },
     {
       "zatu_handle": "hello-kitty-waddingtons-number-1-playing-cards",
@@ -39723,7 +39091,7 @@
           "bgg_name": "Spot the Intro: Board Game Edition"
         }
       ],
-      "match_score": 83.72093023255813
+      "match_score": 74.07407407407408
     },
     {
       "zatu_handle": "le-roy-des-ribauds-micro-game-edition",
@@ -39748,7 +39116,7 @@
           "bgg_name": "Le Roy des Ribauds"
         }
       ],
-      "match_score": 65.45454545454545
+      "match_score": 76.59574468085107
     },
     {
       "zatu_handle": "splendor-duel-the-counterfeiters",
@@ -39800,11 +39168,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 475733,
-          "bgg_name": "Inferno: Collector\u2019s Edition"
+          "bgg_id": 294702,
+          "bgg_name": "Tenpenny Parks"
         }
       ],
-      "match_score": 71.1864406779661
+      "match_score": 100.0
     },
     {
       "zatu_handle": "vntypl8s-aka-vanity-plates",
@@ -39889,11 +39257,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 204496,
-          "bgg_name": "Villannex (2nd Edition + expansions)"
+          "bgg_id": 453339,
+          "bgg_name": "What Do You Meme?: Family Edition \u2013 Holiday Expansion Pack"
         }
       ],
-      "match_score": 61.224489795918366
+      "match_score": 61.33333333333333
     },
     {
       "zatu_handle": "honeypot",
@@ -40319,7 +39687,7 @@
           "bgg_name": "DC Deck-Building Game: Rebirth"
         }
       ],
-      "match_score": 69.44444444444444
+      "match_score": 78.125
     },
     {
       "zatu_handle": "warfighter-multi-era-exp-2-gear-and-skills",
@@ -40518,11 +39886,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 40290,
-          "bgg_name": "Monopoly: Lille"
+          "bgg_id": 34258,
+          "bgg_name": "Monopoly: Cat Lovers Edition"
         }
       ],
-      "match_score": 72.22222222222221
+      "match_score": 78.04878048780488
     },
     {
       "zatu_handle": "drink-is-the-answer",
@@ -41002,11 +40370,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 470036,
-          "bgg_name": "Game Changer: Home Edition"
+          "bgg_id": 338086,
+          "bgg_name": "Dancing Queen"
         }
       ],
-      "match_score": 66.66666666666667
+      "match_score": 70.27027027027026
     },
     {
       "zatu_handle": "deadlands-the-weird-west-rpg-night-train-25th-anniversary-boxed-set-swade",
@@ -41028,11 +40396,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 26291,
-          "bgg_name": "Scene It? Warner Brothers 50th Anniversary"
+          "bgg_id": 466204,
+          "bgg_name": "Something Wild!: Five Nights At Freddy's \u2013 Security Breach"
         }
       ],
-      "match_score": 60.0
+      "match_score": 55.55555555555556
     },
     {
       "zatu_handle": "for-the-girls-first-expansion",
@@ -41280,7 +40648,7 @@
           "bgg_name": "Murder Mystery: Casino Edition"
         }
       ],
-      "match_score": 77.19298245614034
+      "match_score": 77.55102040816327
     },
     {
       "zatu_handle": "unrest-uprising-expansion",
@@ -41543,11 +40911,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 469018,
-          "bgg_name": "Gelt Galore: Pocket Edition"
+          "bgg_id": 371438,
+          "bgg_name": "Elevenses: The Guilty Party"
         }
       ],
-      "match_score": 69.0909090909091
+      "match_score": 65.11627906976744
     },
     {
       "zatu_handle": "question-of-sport-mystery-guest",
@@ -41704,11 +41072,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 372250,
-          "bgg_name": "Watch Ya' Mouth:  Ultimate Edition"
+          "bgg_id": 453339,
+          "bgg_name": "What Do You Meme?: Family Edition \u2013 Holiday Expansion Pack"
         }
       ],
-      "match_score": 62.68656716417911
+      "match_score": 60.97560975609756
     },
     {
       "zatu_handle": "snap-and-pairs-farmyard",
@@ -42082,11 +41450,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 14016,
-          "bgg_name": "The Curse of Tutankhamun"
+          "bgg_id": 286667,
+          "bgg_name": "Tutankhamun"
         }
       ],
-      "match_score": 63.829787234042556
+      "match_score": 73.33333333333334
     },
     {
       "zatu_handle": "stitch-top-trumps-specials",
@@ -42155,11 +41523,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 329946,
-          "bgg_name": "Metro: City Edition"
+          "bgg_id": 332560,
+          "bgg_name": "City of Winter"
         }
       ],
-      "match_score": 74.4186046511628
+      "match_score": 77.41935483870968
     },
     {
       "zatu_handle": "iq-waves",
@@ -42327,11 +41695,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 4439,
-          "bgg_name": "Roll and Score Tic Tac Dice"
+          "bgg_id": 8769,
+          "bgg_name": "The Rise and Fall of the Galactic Empire"
         }
       ],
-      "match_score": 56.790123456790134
+      "match_score": 59.45945945945945
     },
     {
       "zatu_handle": "marvel-cinematic-universe-volume-1-top-trumps",
@@ -42514,7 +41882,7 @@
           "bgg_name": "Raccoon Tycoon"
         }
       ],
-      "match_score": 63.63636363636363
+      "match_score": 100.0
     },
     {
       "zatu_handle": "harry-potter-wizard-challenge",
@@ -42731,11 +42099,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 467752,
-          "bgg_name": "Stadt Land Vollpfosten: Mallorca Edition"
+          "bgg_id": 454724,
+          "bgg_name": "Mystic Lands"
         }
       ],
-      "match_score": 64.70588235294117
+      "match_score": 72.72727272727273
     },
     {
       "zatu_handle": "dobble-kpop-demon-hunters",
@@ -42810,11 +42178,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 468541,
-          "bgg_name": "3 in-car travel games"
+          "bgg_id": 349084,
+          "bgg_name": "Creationary: Travel Edition"
         }
       ],
-      "match_score": 68.18181818181819
+      "match_score": 68.29268292682926
     },
     {
       "zatu_handle": "cosmere-rpg-mistborn-starter-set",
@@ -43452,11 +42820,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 380619,
-          "bgg_name": "Cyclades: Legendary Edition"
+          "bgg_id": 430554,
+          "bgg_name": "Legend Academy: Deluxe Bundle"
         }
       ],
-      "match_score": 75.47169811320755
+      "match_score": 85.0
     },
     {
       "zatu_handle": "welcome-to-everdell-upgrade-pack",
@@ -43956,33 +43324,6 @@
       "match_score": 72.5
     },
     {
-      "zatu_handle": "murder-mystery-tube-murder-at-the-tower-of-london",
-      "zatu_title": "Murder Mystery Tube - Murder at the Tower of London",
-      "zatu_url": "https://zatu.com/products/murder-mystery-tube-murder-at-the-tower-of-london",
-      "zatu_price_gbp": 10.95,
-      "zatu_in_stock": true,
-      "zatu_tags": [
-        "150-180 Minutes",
-        "Board Games",
-        "Deduction",
-        "Murder Mystery",
-        "Next Day Delivery",
-        "no gift wrap",
-        "Top 5000 Board Games",
-        "University Games"
-      ],
-      "zatu_is_coop": false,
-      "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
-      "bgg_candidates": [
-        {
-          "bgg_id": 360254,
-          "bgg_name": "Complete Murder Mystery: Murder at the Tower of London"
-        }
-      ],
-      "match_score": 85.1063829787234
-    },
-    {
       "zatu_handle": "kazoo-that-party-tune",
       "zatu_title": "Kazoo That Party Tune",
       "zatu_url": "https://zatu.com/products/kazoo-that-party-tune",
@@ -44097,11 +43438,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 172225,
-          "bgg_name": "Exploding Kittens"
+          "bgg_id": 356226,
+          "bgg_name": "Exploding Kittens: 2-Player Edition"
         }
       ],
-      "match_score": 80.95238095238095
+      "match_score": 82.35294117647058
     },
     {
       "zatu_handle": "a-grade-lumicora",
@@ -44892,7 +44233,7 @@
           "bgg_name": "Monopoly: The Super Mario Bros. Movie Edition"
         }
       ],
-      "match_score": 75.0
+      "match_score": 84.375
     },
     {
       "zatu_handle": "the-last-hundred-yards-volume-5-for-king-country",
@@ -45303,11 +44644,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 31965,
-          "bgg_name": "Bicycle Race"
+          "bgg_id": 277017,
+          "bgg_name": "Color Brain: Disney Edition"
         }
       ],
-      "match_score": 64.51612903225806
+      "match_score": 70.27027027027026
     },
     {
       "zatu_handle": "iq-busters-brain-trainers",
@@ -45384,34 +44725,6 @@
         }
       ],
       "match_score": 84.0
-    },
-    {
-      "zatu_handle": "soul-raiders-standard",
-      "zatu_title": "Soul Raiders Standard",
-      "zatu_url": "https://zatu.com/products/soul-raiders-standard",
-      "zatu_price_gbp": 57.0,
-      "zatu_in_stock": true,
-      "zatu_tags": [
-        "1-4 Players",
-        "150-180 Minutes",
-        "board games",
-        "Cooperative",
-        "Fantasy",
-        "Hand Management",
-        "Naylor Games",
-        "Next Day Delivery",
-        "Top 5000 Board Games"
-      ],
-      "zatu_is_coop": true,
-      "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
-      "bgg_candidates": [
-        {
-          "bgg_id": 274525,
-          "bgg_name": "Soul Raiders"
-        }
-      ],
-      "match_score": 72.72727272727273
     },
     {
       "zatu_handle": "spooky-goose",
@@ -45822,7 +45135,7 @@
           "bgg_name": "Are You the Cultist? Party Edition"
         }
       ],
-      "match_score": 75.40983606557377
+      "match_score": 71.69811320754718
     },
     {
       "zatu_handle": "battles-of-napoleon-volume-ii-quatre-bras-1815-wartenburg-1813-ltd-edition-in-wooden-box",
@@ -45855,7 +45168,7 @@
           "bgg_name": "Battles of Napoleon: Volume II \u2013 QUATRE BRAS 1815"
         }
       ],
-      "match_score": 68.18181818181819
+      "match_score": 72.58064516129032
     },
     {
       "zatu_handle": "dungeons-and-dragons-rpg-fools-gold-into-the-bellowing-wilds-box-set",
@@ -46364,11 +45677,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 23987,
-          "bgg_name": "Special Forces"
+          "bgg_id": 323711,
+          "bgg_name": "Ecliptic Travelers"
         }
       ],
-      "match_score": 68.29268292682926
+      "match_score": 62.22222222222222
     },
     {
       "zatu_handle": "whack-slash-hack-slash-2",
@@ -46597,7 +45910,7 @@
           "bgg_name": "Everything is in butter, boss!"
         }
       ],
-      "match_score": 65.625
+      "match_score": 69.23076923076923
     },
     {
       "zatu_handle": "dinosaurs-matching-game",
@@ -46700,11 +46013,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 431370,
-          "bgg_name": "Demonslayer: Solo Adventure Game"
+          "bgg_id": 93835,
+          "bgg_name": "BOZ's BIG World Adventure Game"
         }
       ],
-      "match_score": 63.29113924050633
+      "match_score": 65.71428571428571
     },
     {
       "zatu_handle": "picante",
@@ -46753,11 +46066,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 436469,
-          "bgg_name": "How The Grinch Stole Christmas: Memory Master"
+          "bgg_id": 405871,
+          "bgg_name": "Merry Christmas"
         }
       ],
-      "match_score": 67.64705882352942
+      "match_score": 84.84848484848484
     },
     {
       "zatu_handle": "guess-that-noise-travel",
@@ -47340,11 +46653,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 200680,
-          "bgg_name": "Agricola (Revised Edition)"
+          "bgg_id": 31260,
+          "bgg_name": "Agricola"
         }
       ],
-      "match_score": 76.59574468085107
+      "match_score": 69.56521739130434
     },
     {
       "zatu_handle": "berry-cherry-parrot-punch",
@@ -47395,11 +46708,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 397433,
-          "bgg_name": "Game of Drone: Expansion"
+          "bgg_id": 428500,
+          "bgg_name": "15 Minute Cold War: Expansion Edition"
         }
       ],
-      "match_score": 62.5
+      "match_score": 64.15094339622642
     },
     {
       "zatu_handle": "stereo-mind-blue",
@@ -47554,11 +46867,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 303672,
-          "bgg_name": "Trek 12: Himalaya"
+          "bgg_id": 56942,
+          "bgg_name": "Arctic Meltdown: 2 Player Mini Version"
         }
       ],
-      "match_score": 61.111111111111114
+      "match_score": 61.224489795918366
     },
     {
       "zatu_handle": "playte-rack-6",
@@ -47852,11 +47165,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 400816,
-          "bgg_name": "Lupus in Tabula: Edizione Luna Piena"
+          "bgg_id": 63539,
+          "bgg_name": "Lupus in Tabula"
         }
       ],
-      "match_score": 77.41935483870968
+      "match_score": 88.23529411764706
     },
     {
       "zatu_handle": "power-hungry-pets-small",
@@ -48173,7 +47486,7 @@
           "bgg_name": "Living Planet"
         }
       ],
-      "match_score": 72.22222222222221
+      "match_score": 100.0
     },
     {
       "zatu_handle": "living-planet-all-in",
@@ -48250,7 +47563,7 @@
           "bgg_name": "Living Planet"
         }
       ],
-      "match_score": 74.28571428571429
+      "match_score": 100.0
     },
     {
       "zatu_handle": "a-grade-black-stories-1",
@@ -48550,11 +47863,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 462062,
-          "bgg_name": "Colt Express: The Complete Collection"
+          "bgg_id": 337394,
+          "bgg_name": "Castle Panic: Deluxe Collection"
         }
       ],
-      "match_score": 67.53246753246754
+      "match_score": 64.40677966101696
     },
     {
       "zatu_handle": "blue-lock-striker",
@@ -48609,7 +47922,7 @@
           "bgg_name": "Vampire: The Masquerade \u2013 Blood Feud"
         }
       ],
-      "match_score": 60.24096385542168
+      "match_score": 64.0
     },
     {
       "zatu_handle": "cretaceous-rails-miniature-edition",
@@ -48634,11 +47947,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 459301,
-          "bgg_name": "Ransom Notes: Couples Edition"
+          "bgg_id": 363547,
+          "bgg_name": "Cretaceous Rails"
         }
       ],
-      "match_score": 64.51612903225806
+      "match_score": 76.19047619047619
     },
     {
       "zatu_handle": "food-truck-race-two-many-trucks-expansion",
@@ -48798,11 +48111,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 39787,
-          "bgg_name": "Bindle Rails"
+          "bgg_id": 337824,
+          "bgg_name": "UNO Bundle Collector Tin"
         }
       ],
-      "match_score": 66.66666666666667
+      "match_score": 69.23076923076923
     },
     {
       "zatu_handle": "nacho-pile-small-form",
@@ -49024,11 +48337,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 382463,
-          "bgg_name": "Sorry!: Giant Edition"
+          "bgg_id": 466908,
+          "bgg_name": "Golden Goal"
         }
       ],
-      "match_score": 71.7948717948718
+      "match_score": 69.56521739130434
     },
     {
       "zatu_handle": "goa-merchant-edition",
@@ -49055,11 +48368,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 443092,
-          "bgg_name": "Ra: Sun God Edition"
+          "bgg_id": 423976,
+          "bgg_name": "The Merchant"
         }
       ],
-      "match_score": 73.6842105263158
+      "match_score": 80.0
     },
     {
       "zatu_handle": "who-wants-to-be-a-millionaire-brands-products-travel-tin",
@@ -49268,11 +48581,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 357487,
-          "bgg_name": "En la Punta de la Lengua!: Versi\u00f3n Dif\u00edcil"
+          "bgg_id": 451059,
+          "bgg_name": "Heading Into Language Land"
         }
       ],
-      "match_score": 54.54545454545454
+      "match_score": 57.57575757575757
     },
     {
       "zatu_handle": "panzer-expansion-4-france-1940-2nd-print",
@@ -49632,7 +48945,7 @@
           "bgg_name": "Get Wet Family Edition"
         }
       ],
-      "match_score": 88.0
+      "match_score": 82.35294117647058
     },
     {
       "zatu_handle": "a-grade-more-cards-against-humanity-600-card-expansion",
@@ -49873,7 +49186,7 @@
           "bgg_name": "Railroad Ink Challenge: Lush Green Edition"
         }
       ],
-      "match_score": 67.3913043478261
+      "match_score": 64.28571428571428
     },
     {
       "zatu_handle": "monopoly-prime-prizm-fifa-world-cup-core",
@@ -49945,11 +49258,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 166101,
-          "bgg_name": "The Dream Collectors"
+          "bgg_id": 1215,
+          "bgg_name": "Monkey Memory"
         }
       ],
-      "match_score": 68.29268292682926
+      "match_score": 74.07407407407408
     },
     {
       "zatu_handle": "hidden-games-professor-charlie-s-world-tour",
@@ -50320,7 +49633,7 @@
           "bgg_name": "Ascendia: Seasons of Thargos"
         }
       ],
-      "match_score": 77.14285714285715
+      "match_score": 87.09677419354838
     },
     {
       "zatu_handle": "ankh-foundations-upgrade-pack-1st-edition",
@@ -50481,11 +49794,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 244038,
-          "bgg_name": "Teaser: A Game for Guides"
+          "bgg_id": 430996,
+          "bgg_name": "The Ultimate 2 Player Game"
         }
       ],
-      "match_score": 71.11111111111111
+      "match_score": 72.22222222222221
     },
     {
       "zatu_handle": "vine-base-and-pumpkins-and-beetles-expansion",
@@ -51166,7 +50479,7 @@
           "bgg_name": "Rory's Story Cubes Collector Box"
         }
       ],
-      "match_score": 61.29032258064516
+      "match_score": 61.53846153846154
     },
     {
       "zatu_handle": "gargle",
@@ -51359,11 +50672,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 17242,
-          "bgg_name": "Star Corps: Call to Battle"
+          "bgg_id": 312529,
+          "bgg_name": "Charty Party: All Ages Edition"
         }
       ],
-      "match_score": 65.11627906976744
+      "match_score": 71.7948717948718
     },
     {
       "zatu_handle": "star-wars-9-top-trumps",
@@ -51462,11 +50775,11 @@
       "match_category": "NO_CONFIDENT_MATCH",
       "bgg_candidates": [
         {
-          "bgg_id": 382463,
-          "bgg_name": "Sorry!: Giant Edition"
+          "bgg_id": 218460,
+          "bgg_name": "Giant UNO"
         }
       ],
-      "match_score": 76.92307692307692
+      "match_score": 76.19047619047619
     },
     {
       "zatu_handle": "horrid-henry",
@@ -52031,31 +51344,6 @@
         }
       ],
       "match_score": 55.55555555555556
-    },
-    {
-      "zatu_handle": "sport-trivia",
-      "zatu_title": "Sport Trivia",
-      "zatu_url": "https://zatu.com/products/sport-trivia",
-      "zatu_price_gbp": 4.99,
-      "zatu_in_stock": true,
-      "zatu_tags": [
-        "Board Games",
-        "Card Games",
-        "Next Day Delivery",
-        "no gift wrap",
-        "Top 5000 Board Games",
-        "Trivia"
-      ],
-      "zatu_is_coop": false,
-      "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
-      "bgg_candidates": [
-        {
-          "bgg_id": 440171,
-          "bgg_name": "Super Trivia"
-        }
-      ],
-      "match_score": 83.33333333333334
     }
   ]
 }

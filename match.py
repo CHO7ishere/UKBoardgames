@@ -122,10 +122,37 @@ _EDITION_NOISE_RE = re.compile(
     r"anniversary edition|collector'?s edition|kickstarter edition|special edition|"
     r"base game|refresh(ed)?)\b"
 )
+# Broader generic-descriptor list, applied *only* inside the fuzzy tier's own scoring (see
+# `_fuzzy_score_text`), never at either exact-match tier. _EDITION_NOISE_RE above only strips
+# specific curated *phrases* ("kickstarter edition", "special edition") -- real corpus check
+# (2026-08-11) found 128 real Zatu titles still carry a bare "edition" after that (e.g. "Cyclades
+# Legendary Edition", "Citadels Revised Edition", "Mage Knight Boardgame Ultimate Edition") that
+# the phrase list can't catch without an ever-growing whitelist of every adjective BGG/Zatu might
+# pair it with. Deliberately NOT folded into `normalize_title`/_EDITION_NOISE_RE itself: exact-
+# tier identity resolution (both light and aggressive) genuinely needs these words in some cases
+# -- "Big Box"/"Second Edition"-style qualifiers are how BGG distinguishes real, separately-priced
+# catalogue entries (confirmed repeatedly this session: Carcassonne vs Carcassonne Big Box,
+# Gloomhaven vs Gloomhaven Second Edition). The fuzzy tier is different: it only ever runs *after*
+# both exact tiers already failed to find a specific id, so down-weighting these words there to
+# find the substantive words underneath can't cause the exact-identity mistakes stripping them
+# earlier in the pipeline would -- worst case it's a fuzzy score that's still gated by the
+# existing threshold/gap/digit-conflict checks. "core"/"master"/"legacy" are deliberately excluded
+# even here -- all three are real, meaningful genre/product-line terms in this corpus (Pandemic
+# *Legacy*, Marvel Champions *Core* Set, Summoner Wars *Master* Set), not marketing filler.
+_FUZZY_EXTRA_NOISE_RE = re.compile(
+    r"\b(kickstarter|edition|version|retail|special|standard|collectors?|anniversary|"
+    r"remastered|revised|definitive|ultimate|exclusive|complete|premium|essentials?|limited)\b"
+)
 _ARTICLE_RE = re.compile(r"\b(a|an|the)\b")
 _PUNCT_RE = re.compile(r"[^\w\s]")
 _WS_RE = re.compile(r"\s+")
 _DIGIT_RE = re.compile(r"\d+")
+
+
+def _fuzzy_score_text(normalized: str) -> str:
+    """Further down-weights generic marketing/edition-status words for fuzzy comparison only --
+    see `_FUZZY_EXTRA_NOISE_RE`'s docstring for why this doesn't touch either exact-match tier."""
+    return _WS_RE.sub(" ", _FUZZY_EXTRA_NOISE_RE.sub(" ", normalized)).strip()
 
 # A trailing "(2013)"-style reprint/release-year annotation — confirmed present on 18 real
 # Zatu titles (e.g. "Pandemic (2013)", "CATAN 6th Edition (2025)") with no BGG counterpart
@@ -246,6 +273,11 @@ class BggIndex:
     ):
         self.games = games
         self.normalized_names = [normalize_title(g.name) for g in games]
+        # Fuzzy-only further down-weighting of generic marketing/edition words -- see
+        # `_fuzzy_score_text`'s docstring. Precomputed once here (not per-query) since it's used
+        # for every fuzzy comparison; index-aligned 1:1 with `self.games`/`normalized_names`, so
+        # a match found here still looks up the right game by position.
+        self._fuzzy_names = [_fuzzy_score_text(n) for n in self.normalized_names]
         self._exact: dict[str, list[BggRankedGame]] = defaultdict(list)
         for game, norm in zip(games, self.normalized_names):
             self._exact[norm].append(game)
@@ -399,8 +431,13 @@ class BggIndex:
     def _match_fuzzy(
         self, title: str, norm: str, fuzzy_threshold: float, min_gap: float
     ) -> MatchResult:
+        # Scored against `_fuzzy_names` (generic marketing/edition words further down-weighted --
+        # see `_fuzzy_score_text`), not `normalized_names` -- but `norm`/`best_norm` (the plain
+        # aggressive normalization) are still what the digit-conflict veto checks below, so a
+        # down-weighted word can never mask a real digit disagreement.
+        query_fuzzy = _fuzzy_score_text(norm)
         results = process.extract(
-            norm, self.normalized_names, scorer=fuzz.token_sort_ratio, limit=2
+            query_fuzzy, self._fuzzy_names, scorer=fuzz.token_sort_ratio, limit=2
         )
         if not results:
             return MatchResult(title, None, None, "LOW", None, "no BGG candidates")
