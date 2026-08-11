@@ -108,12 +108,23 @@ def _load_cached_results(path: str) -> dict[str, dict]:
     return {r["zatu_handle"]: r for r in payload.get("results", [])}
 
 
+def _load_fr_editions(path: str) -> dict[str, dict]:
+    file = Path(path)
+    if not file.exists():
+        return {}
+    try:
+        return json.loads(file.read_text())
+    except (json.JSONDecodeError, OSError):
+        return {}
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--matched", default="data/matched_games.json")
     parser.add_argument("--config", default="config.yaml")
     parser.add_argument("--out", default="data/philibert_results.json")
     parser.add_argument("--shortlist-out", default="data/shortlist.json")
+    parser.add_argument("--fr-editions", default="data/bgg_fr_editions.json")
     parser.add_argument("--rate-limit-sec", type=float, default=None)
     parser.add_argument(
         "--refresh", action="store_true",
@@ -132,9 +143,11 @@ def main() -> int:
     payload = json.loads(Path(args.matched).read_text())
     survivors = payload["survivors"]
     cached_by_handle = {} if args.refresh else _load_cached_results(args.out)
+    fr_editions = _load_fr_editions(args.fr_editions)
     print(
         f"Looking up {len(survivors)} survivors on Philibert "
-        f"({len(cached_by_handle)} cached results available)...",
+        f"({len(cached_by_handle)} cached results available, "
+        f"{len(fr_editions)} BGG French-edition checks available)...",
         file=sys.stderr,
     )
 
@@ -165,6 +178,7 @@ def main() -> int:
                 print(f"  [{i}/{len(survivors)}] ERROR {survivor['zatu_handle']}: {exc}", file=sys.stderr)
                 philibert = {"status": "NOT_LISTED", "price_eur": None, "language": None, "url": None}
 
+        fr_edition_info = fr_editions.get(str(survivor.get("bgg_id")))
         advantage = compute_advantage(
             zatu_in_stock=bool(survivor.get("zatu_in_stock")),
             zatu_price_gbp=survivor.get("zatu_price_gbp"),
@@ -173,6 +187,7 @@ def main() -> int:
             fx_gbp_eur=fx,
             discount_threshold=threshold,
             weights=weights,
+            fr_edition_exists=fr_edition_info.get("fr_edition_exists") if fr_edition_info else None,
         )
 
         record = {

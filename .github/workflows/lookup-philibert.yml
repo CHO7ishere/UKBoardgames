@@ -1,10 +1,12 @@
-name: Philibert lookup (Stage 4 + Stage 5)
+name: Philibert lookup (Stage 3 + Stage 4 + Stage 5)
 
-# Stage 4 (real per-product Zatu EANs) then Stage 5 (Philibert lookup + advantage filter) for
-# the Stage 2 survivors. Both need real network access this coding sandbox doesn't have.
-# ~576 survivors x up to ~4 requests each (1 Zatu EAN fetch + up to 3 Philibert calls) at a
-# 1s/request courtesy rate limit -> comfortably under an hour, but this is genuinely slow, so
-# it's manual-dispatch only, not on every push.
+# Stage 3 (BGG French-edition-exists, headless browser -- BGG is Cloudflare-protected, plain
+# requests can't reach it), Stage 4 (real per-product Zatu EANs), then Stage 5 (Philibert lookup
+# + advantage filter) for the Stage 2 survivors. All three need real network access this coding
+# sandbox doesn't have. Both Stage 4/5 and Stage 3 are cached against their own prior committed
+# output (see enrich_zatu_ean.py/lookup_philibert.py/enrich_bgg_fr_edition.py's --refresh flags),
+# so a typical re-run is much cheaper than the first full pass -- still genuinely slow overall,
+# so this is manual-dispatch only, not on every push.
 
 on:
   workflow_dispatch: {}
@@ -15,13 +17,16 @@ permissions:
 jobs:
   lookup:
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 180
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
       - run: pip install -r requirements.txt
+      - run: playwright install --with-deps chromium
+      - name: Stage 3 - BGG French-edition-exists (headless browser)
+        run: python scripts/enrich_bgg_fr_edition.py --matched data/matched_games.json --philibert-results data/philibert_results.json
       - name: Stage 4 - enrich survivors with real EANs
         run: python scripts/enrich_zatu_ean.py --matched data/matched_games.json --out data/matched_games.json
       - name: Stage 5 - Philibert lookup + advantage filter
@@ -31,16 +36,16 @@ jobs:
       - name: Stage 7 - render static HTML report
         run: python scripts/render_html.py
       - name: Commit results
-        # Stage 4/5 run for ~an hour -- main can easily move (code/doc commits from an active
-        # session) before this push runs. A plain `git push` would silently lose the whole run's
-        # output on a non-fast-forward rejection (confirmed happened for real 2026-08-10: Stages
-        # 4-7 all succeeded but the push was rejected, discarding an hour of live Philibert
-        # data). Rebase onto the latest main first, with a few retries in case of another race
-        # during the rebase/push window itself.
+        # Stages 3-5 can run for well over an hour -- main can easily move (code/doc commits
+        # from an active session) before this push runs. A plain `git push` would silently lose
+        # the whole run's output on a non-fast-forward rejection (confirmed happened for real
+        # 2026-08-10: Stages 4-7 all succeeded but the push was rejected, discarding an hour of
+        # live Philibert data). Rebase onto the latest main first, with a few retries in case of
+        # another race during the rebase/push window itself.
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/matched_games.json data/philibert_results.json data/shortlist.json data/scored_games.json docs/index.html
+          git add data/matched_games.json data/bgg_fr_editions.json data/philibert_results.json data/shortlist.json data/scored_games.json docs/index.html
           git diff --cached --quiet && { echo "Nothing to commit."; exit 0; }
           git commit -m "Update Philibert lookup + shortlist + report [skip ci]"
           for attempt in 1 2 3 4 5; do

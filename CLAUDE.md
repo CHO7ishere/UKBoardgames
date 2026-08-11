@@ -523,3 +523,52 @@ filter UI verified live with Playwright against the real `docs/index.html`.
   - GitHub Actions workflows need no changes — `lookup-philibert.yml` already runs Stage 4 then
     Stage 5 against the same committed files, so caching kicks in automatically on the next
     dispatch.
+
+## Stage 3 built for real — BGG French-edition-exists via headless browser (2026-08-11)
+
+Prompted by a real user-reported case: the site correctly started showing Gloomhaven: Jaws of
+the Lion as `UNAVAILABLE_FR` after the accessory-insert fix (git blame: it's genuinely not on
+Philibert), but the user pointed out BGG's own versions data
+(`boardgamegeek.com/boardgame/291457/gloomhaven-jaws-of-the-lion/versions?pageid=1&language=2187`)
+confirms a real French edition exists — just not currently purchasable anywhere. Stated intent:
+*"I don't want to buy English versions if a French one exists (even if unavailable)"* — exactly
+the `fr_edition_exists` gap `advantage.py` was always designed for (spec §5.2's `UNAVAILABLE_FR`
+vs the weaker `UNAVAILABLE_FR?`) but never had real data behind, since Stage 3 was blocked on the
+BGG API token.
+
+- **`sources/bgg_versions.py`** (new): `fetch_french_edition_info(page, bgg_id)` takes a real
+  Playwright `page` object (not `requests` — BGG blocks plain HTTP with a Cloudflare challenge,
+  confirmed via `scripts/probe_bgg_page.py`; a real headless browser gets through untouched,
+  confirmed via `scripts/probe_bgg_playwright.py`). Uses the `?language=<id>` filter on BGG's
+  versions page (user-supplied lead) — confirmed live this changes the *server* response, not
+  just client-side JS: Spirit Island → 4 real French printings, Marvel Champions → exactly 1
+  French edition titled **"Marvel Champions: Le Jeu De Cartes"**, an exact match for the real
+  Philibert listing extracted with zero translation guessing.
+- **Needs the real BGG slug, not just the numeric id** — confirmed live a slug-less
+  `/boardgame/<id>/versions?language=<id>` request gets silently redirected to the plain game
+  page (dropping `/versions` and the query entirely, 0 results, not an error) rather than
+  filling in the slug itself. Resolved with an extra page load: visit the bare `/boardgame/<id>`
+  page first (BGG's own redirect fills in the canonical slug), read the final URL, then build
+  the real versions URL from that — 2 navigations per game, not 1.
+- **`scripts/enrich_bgg_fr_edition.py`** (new, Stage 3 driver): scoped to survivors that are
+  either brand new or were `NOT_LISTED` on Philibert in the last run (per
+  `data/philibert_results.json`) — `fr_edition_exists` is only ever read by
+  `compute_advantage`'s `NOT_LISTED` branch, so checking games Philibert already found live
+  would be wasted browser time. Writes `data/bgg_fr_editions.json` (keyed by `bgg_id`), reusing
+  the same cache-by-committed-JSON pattern as Stage 4/5: once a `bgg_id` is checked, it's cached
+  indefinitely (this is BGG's own catalogued version data, essentially static) — `--refresh`
+  forces a full re-check.
+- **Wired into `scripts/lookup_philibert.py`**: loads `data/bgg_fr_editions.json` and passes
+  `fr_edition_exists` into `compute_advantage` by `bgg_id` — no changes needed to `advantage.py`
+  itself, it was already written generically against this exact parameter.
+- **`.github/workflows/lookup-philibert.yml`** renamed to reflect Stage 3+4+5, gained a
+  `playwright install --with-deps chromium` step and a new "Stage 3" step before Stage 4,
+  running before Stage 5 so the fresh `data/bgg_fr_editions.json` is available when advantage
+  verdicts are computed. `requirements.txt` gained `playwright` (needed for `tests.yml`'s
+  offline unit tests to even import the module, not just for the live browser run).
+- **Cost**: scoped to ~142 `NOT_LISTED` survivors (not all 582) since that's the only branch
+  that reads this data, but each one is 2 real browser page loads at ~13s apiece (navigation +
+  a 6s settle wait, the same wait strategy already proven reliable — `networkidle` was tried and
+  confirmed to hang, BGG never goes fully network-idle) — roughly another ~45-60 min added to
+  the live pipeline run on top of Stage 4/5's existing runtime. Not yet re-dispatched against
+  real data as of this note.

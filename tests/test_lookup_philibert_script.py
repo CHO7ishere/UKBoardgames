@@ -202,6 +202,49 @@ def _run_main(matched_file, config_file, out_file, shortlist_file, extra_args=No
     return lookup_philibert.main()
 
 
+def test_main_passes_fr_edition_exists_into_the_advantage_verdict(tmp_path, monkeypatch):
+    # Real case that prompted this: Gloomhaven: Jaws of the Lion (bgg_id=291457) is NOT_LISTED
+    # on Philibert, but BGG's own versions data confirms a real French edition exists -- the
+    # user doesn't want that treated the same as "no French edition anywhere".
+    survivor = {**SURVIVOR_NOT_LISTED, "bgg_id": 291457}
+    matched_file = tmp_path / "matched.json"
+    matched_file.write_text(json.dumps({"survivors": [survivor]}))
+    config_file = tmp_path / "config.yaml"
+    import yaml
+    config_file.write_text(yaml.dump(TEST_CONFIG))
+    out_file = tmp_path / "results.json"
+    shortlist_file = tmp_path / "shortlist.json"
+    fr_editions_file = tmp_path / "fr_editions.json"
+    fr_editions_file.write_text(json.dumps({
+        "291457": {"fr_edition_exists": True, "fr_edition_titles": ["Gloomhaven: Aventures a Havrenuit"]},
+    }))
+
+    monkeypatch.setattr(
+        lookup_philibert, "lookup_one",
+        lambda session, survivor, rate_limit_sec: {"status": "NOT_LISTED", "price_eur": None, "language": None, "url": None},
+    )
+    monkeypatch.setattr(
+        sys,
+        "argv",
+        [
+            "lookup_philibert.py",
+            "--matched", str(matched_file),
+            "--config", str(config_file),
+            "--out", str(out_file),
+            "--shortlist-out", str(shortlist_file),
+            "--fr-editions", str(fr_editions_file),
+        ],
+    )
+
+    exit_code = lookup_philibert.main()
+
+    assert exit_code == 0
+    results = json.loads(out_file.read_text())["results"]
+    assert results[0]["advantage_verdict"] == "UNAVAILABLE_FR"
+    assert "a French edition exists elsewhere" in results[0]["advantage_reason"]
+    assert results[0]["needs_eyeball"] is True
+
+
 def test_main_reuses_cached_durable_result_without_a_live_lookup(tmp_path, monkeypatch):
     matched_file = tmp_path / "matched.json"
     matched_file.write_text(json.dumps({"survivors": [SURVIVOR_LISTED_CHEAPER]}))
