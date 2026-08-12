@@ -1,0 +1,22 @@
+name: Probe BGG XML API2 (diagnostic)
+
+# One-off diagnostic: now that a real BGG API token exists (BGG_TOKEN secret), check what the
+# real thing/search endpoints actually return -- with and without the Authorization: Bearer
+# header -- before building any real Stage 3 code against assumed schema. Read results in the
+# job log; nothing is committed.
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - run: python scripts/probe_bgg_api.py
+        env:
+          BGG_TOKEN: ${{ secrets.BGG_TOKEN }}
