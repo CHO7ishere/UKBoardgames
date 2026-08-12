@@ -830,7 +830,7 @@ dixit-expansion-2-quest,Dixit Expansion 2: Quest,LOW_CONFIDENCE_MATCH: fuzzy sco
 ticket-to-ride-berlin,Ticket To Ride: Berlin,"QUALITY_GATE: shrunk=7.13, usersrated=740",388036,Ticket To Ride: Berlin,100.0
 traitors-aboard,Traitors Aboard,"QUALITY_GATE: shrunk=6.77, usersrated=678",403000,Traitors Aboard,100.0
 series-1-ultimate-boxes-final-girl,Series 1 Ultimate Boxes: Final Girl,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,76.19047619047619
-vaesen-nordic-horror-roleplaying-starter-set,Vaesen: Nordic Horror Roleplaying Starter Set,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,59.45945945945945
+vaesen-nordic-horror-roleplaying-starter-set,Vaesen: Nordic Horror Roleplaying Starter Set,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,60.273972602739725
 the-night-cage-shrieking-hollow-retail-edition,The Night Cage: Shrieking Hollow - Retail Edition,"LOW_CONFIDENCE_MATCH: exact match is a BGG expansion/non-base entry, out of scope -- refusing to fall back to a fuzzy match against an unrelated base game",,,100.0
 series-2-ultimate-boxes-final-girl,Series 2 Ultimate Boxes: Final Girl,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,76.19047619047619
 canal-houses,Canal Houses,"QUALITY_GATE: shrunk=6.90, usersrated=565",404845,Canal Houses,100.0
@@ -2208,7 +2208,7 @@ adventure-party-the-role-playing-party-game,Adventure Party: The Role-Playing Pa
 yaxha,Yaxha,"QUALITY_GATE: shrunk=6.43, usersrated=345",420061,Yaxha,100.0
 similo-jurassic-world,Similo: Jurassic World,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,82.05128205128204
 gangs-of-kyoto,Gangs of Kyoto,"QUALITY_GATE: shrunk=6.48, usersrated=242",427464,Gangs of Kyoto,100.0
-eldfall-chronicles-two-player-starter-set-coalition-of-thenion-vs-sand-kingdoms,Eldfall Chronicles Two-Player Starter Set: Coalition of Thenion vs Sand Kingdoms,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,64.66165413533835
+eldfall-chronicles-two-player-starter-set-coalition-of-thenion-vs-sand-kingdoms,Eldfall Chronicles Two-Player Starter Set: Coalition of Thenion vs Sand Kingdoms,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,63.41463414634146
 guilty-monaco-1955,Guilty: Monaco 1955,"QUALITY_GATE: shrunk=6.81, usersrated=94",415079,Guilty: Monaco 1955,100.0
 curses-covens,Curses & Covens,"QUALITY_GATE: shrunk=6.82, usersrated=112",370837,Curses & Covens,100.0
 magenta-fives,Magenta: Fives,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,72.0
@@ -2729,7 +2729,7 @@ mm-case-files-murder-noir,MM Case Files: Murder Noir,LOW_CONFIDENCE_MATCH: fuzzy
 space-base-genesis,Space Base: Genesis,"LOW_CONFIDENCE_MATCH: exact match is a BGG expansion/non-base entry, out of scope -- refusing to fall back to a fuzzy match against an unrelated base game",,,100.0
 nemesis-retaliation-core-box,Nemesis Retaliation Core Box,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,80.85106382978724
 forest-shuffle-smoky-mountains,Forest Shuffle - Smoky Mountains,"QUALITY_GATE: shrunk=7.00, usersrated=61",463296,Forest Shuffle: Smoky Mountains,100.0
-liars-dice,Liars Dice,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,84.21052631578947
+liars-dice,Liars Dice,"QUALITY_GATE: shrunk=6.49, usersrated=9",319310,Two Player Liars Dice,100.0
 cortex-plus-mlv,Cortex Plus MLV,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,68.57142857142857
 sonic-the-hedgehog-whot,Sonic the Hedgehog WHOT!,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,86.48648648648648
 naruto-ninja-arena-sensei-pack,Naruto Ninja Arena: Sensei Pack,"LOW_CONFIDENCE_MATCH: exact match is a BGG expansion/non-base entry, out of scope -- refusing to fall back to a fuzzy match against an unrelated base game",,,100.0
@@ -2865,7 +2865,7 @@ the-secrets-of-warden-keene,The Secrets of Warden Keene,"QUALITY_GATE: shrunk=7.
 dobble-kpop-demon-hunters,Dobble KPOP Demon Hunters,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,76.59574468085107
 b-grade-go-f-k-yourself,*B Grade* Go F**k Yourself,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,78.94736842105263
 picture-slam-travel-tin,Picture Slam (Travel Tin),LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,68.29268292682926
-cosmere-rpg-mistborn-starter-set,Cosmere RPG: Mistborn Starter Set,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,64.51612903225806
+cosmere-rpg-mistborn-starter-set,Cosmere RPG: Mistborn Starter Set,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,64.15094339622642
 mini-rogue-beyond-the-portal,Mini Rogue: Beyond the Portal,"LOW_CONFIDENCE_MATCH: exact match is a BGG expansion/non-base entry, out of scope -- refusing to fall back to a fuzzy match against an unrelated base game",,,100.0
 super-auto-pets-card-battle-coin-trophy-upgrade-set,Super Auto Pets Card Battle: Coin & Trophy Upgrade Set,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,63.829787234042556
 the-trial-of-the-forest,The Trial of the Forest,"QUALITY_GATE: shrunk=6.81, usersrated=14",449725,The Trial of the Forest,100.0
@@ -3142,7 +3142,7 @@ epic-encounters-warband-box-forest-of-the-damned-rpg,Epic Encounters - Warband B
 epic-encounters-boss-box-glade-of-the-evil-oak-rpg,Epic Encounters - Boss Box - Glade of the Evil Oak RPG,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,56.75675675675676
 epic-encounters-boss-box-nest-of-the-dinosaur,Epic Encounters - Boss Box - Nest of the Dinosaur,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,57.971014492753625
 epic-encounters-warband-box-steppe-of-the-lizard-thane,Epic Encounters - Warband Box - Steppe of the Lizard Thane,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,54.117647058823536
-invincible-superhero-roleplaying-starter-set,Invincible – Superhero Roleplaying Starter Set,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,59.77011494252873
+invincible-superhero-roleplaying-starter-set,Invincible – Superhero Roleplaying Starter Set,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,59.74025974025974
 kpop-demon-hunters-battle-for-the-spotlight,KPop Demon Hunters Battle for the Spotlight,"QUALITY_GATE: shrunk=6.54, usersrated=5",472581,KPop Demon Hunters: Battle for the Spotlight,100.0
 mimir-s-challenge,Mimir's Challenge,"QUALITY_GATE: shrunk=6.63, usersrated=28",412006,Mimir's Challenge,100.0
 the-witcher-path-of-destiny-ronin,The Witcher: Path of Destiny - Ronin,"QUALITY_GATE: shrunk=6.93, usersrated=100",405135,The Witcher: Path of Destiny – Ronin,100.0
@@ -3422,7 +3422,7 @@ rapscallion-strange-pirate-roleplaying-on-the-great-sea-officer-pledge,Rapscalli
 moesteiro-solo,Moesteiro Solo,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,78.26086956521739
 peacock-large-print-playing-cards,Peacock Large Print Playing Cards,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,73.6842105263158
 ultra-deluxe-2d-arcade-mega-fighter,Ultra Deluxe 2D Arcade Mega Fighter,"QUALITY_GATE: shrunk=6.47, usersrated=33",298396,Ultra Deluxe 2D Arcade Mega Fighter,100.0
-the-oracle-story-generator-box-set,The Oracle Story Generator Box Set,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,61.53846153846154
+the-oracle-story-generator-box-set,The Oracle Story Generator Box Set,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,64.15094339622642
 grand-central-skyport,Grand Central Skyport,"QUALITY_GATE: shrunk=6.83, usersrated=206",379546,Grand Central Skyport,100.0
 down-the-chimney,Down The Chimney,"QUALITY_GATE: shrunk=6.49, usersrated=5",391666,Down the Chimney Dice & Card Game,95.0
 starleap,StarLeap,"QUALITY_GATE: shrunk=6.57, usersrated=11",442987,Starleap,100.0
