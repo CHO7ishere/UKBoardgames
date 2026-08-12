@@ -2729,7 +2729,7 @@ mm-case-files-murder-noir,MM Case Files: Murder Noir,LOW_CONFIDENCE_MATCH: fuzzy
 space-base-genesis,Space Base: Genesis,"LOW_CONFIDENCE_MATCH: exact match is a BGG expansion/non-base entry, out of scope -- refusing to fall back to a fuzzy match against an unrelated base game",,,100.0
 nemesis-retaliation-core-box,Nemesis Retaliation Core Box,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,80.85106382978724
 forest-shuffle-smoky-mountains,Forest Shuffle - Smoky Mountains,"QUALITY_GATE: shrunk=7.00, usersrated=61",463296,Forest Shuffle: Smoky Mountains,100.0
-liars-dice,Liars Dice,"QUALITY_GATE: shrunk=6.49, usersrated=9",319310,Two Player Liars Dice,100.0
+liars-dice,Liars Dice,"QUALITY_GATE: shrunk=6.93, usersrated=17044",45,Perudo,100.0
 cortex-plus-mlv,Cortex Plus MLV,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,68.57142857142857
 sonic-the-hedgehog-whot,Sonic the Hedgehog WHOT!,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,86.48648648648648
 naruto-ninja-arena-sensei-pack,Naruto Ninja Arena: Sensei Pack,"LOW_CONFIDENCE_MATCH: exact match is a BGG expansion/non-base entry, out of scope -- refusing to fall back to a fuzzy match against an unrelated base game",,,100.0
