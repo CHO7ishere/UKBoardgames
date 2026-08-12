@@ -58,11 +58,25 @@ def probe_thing(session: requests.Session, ids: list[int], token: str | None, la
         body = resp.text
         print(f"  retry body length: {len(body)}", file=sys.stderr)
     # Print the raw body (truncated) so the real XML schema is visible in the job log.
-    print("  --- body (first 4000 chars) ---", file=sys.stderr)
-    print(body[:4000], file=sys.stderr)
-    print("  --- language_dependence poll marker check ---", file=sys.stderr)
-    for marker in ["language_dependence", "<mechanics", "mechanic", "polldaddy", "<link"]:
-        print(f"    {marker!r}: {'FOUND' if marker in body else 'not found'}", file=sys.stderr)
+    print("  --- body (first 2000 chars) ---", file=sys.stderr)
+    print(body[:2000], file=sys.stderr)
+    print("  --- language_dependence poll block (exact real structure) ---", file=sys.stderr)
+    idx = body.find('poll name="language_dependence"')
+    if idx != -1:
+        start = body.rfind("<poll", 0, idx)
+        end = body.find("</poll>", idx)
+        print(body[start:end + len("</poll>")], file=sys.stderr)
+    else:
+        print("  NOT FOUND in this response", file=sys.stderr)
+    print("  --- boardgamemechanic / boardgamecategory link tags (first item only) ---", file=sys.stderr)
+    first_item_end = body.find("</item>")
+    first_item = body[:first_item_end]
+    import re as _re
+    for m in _re.finditer(r'<link type="(boardgamemechanic|boardgamecategory)"[^/]*/>', first_item):
+        print("   ", m.group(0), file=sys.stderr)
+    print("  --- alternate (localized) names, first item only ---", file=sys.stderr)
+    for m in _re.finditer(r'<name type="alternate"[^/]*/>', first_item):
+        print("   ", m.group(0), file=sys.stderr)
 
 
 def probe_search(session: requests.Session, query: str, token: str | None, label: str) -> None:
