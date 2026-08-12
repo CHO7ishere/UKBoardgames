@@ -165,7 +165,7 @@ _RECENCY_SIGNAL_RE = re.compile(r"\b(revised|anniversary|renewed|remastered|repr
 # ambiguous. `(\d+(st|nd|rd|th)\s*/\s*)*` consumes any number of slash-joined leading ordinals
 # before the final one, so the whole compound phrase strips as a single unit on both sides.
 _EDITION_NOISE_RE = re.compile(
-    r"\b(board game|card game|the game|two player starter set|(\d+(st|nd|rd|th)\s*/\s*)*\d+(st|nd|rd|th)\s+edition|"
+    r"\b(board game|card game|the game|(\d+(st|nd|rd|th)\s*/\s*)*\d+(st|nd|rd|th)\s+edition|"
     r"deluxe edition|deluxe|big box edition|"
     r"big box|retail edition|english edition|english|core game|standard edition|"
     r"anniversary edition|collector edition|kickstarter edition|special edition|"
