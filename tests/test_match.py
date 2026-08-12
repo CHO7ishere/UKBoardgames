@@ -237,15 +237,30 @@ def test_fuzzy_tier_downweights_bare_edition_word_to_recover_a_real_near_miss():
     # Real corpus gap: 128 real Zatu titles still carry a bare "edition" after the existing
     # phrase-based noise strip (_EDITION_NOISE_RE only catches specific curated phrases like
     # "kickstarter edition"), each paired with a one-off adjective too specific to hand-list
-    # ("Citadels Revised Edition", "Mage Knight Boardgame Ultimate Edition", ...). Down-weighting
-    # the bare words for fuzzy scoring only (never at either exact tier) lets titles like this
-    # clear the threshold on their substantive words -- "citadels revised edition" vs "citadels"
-    # scores 50.0 on raw token_sort_ratio (well below threshold) but 100.0 once "revised"/
-    # "edition" are down-weighted on both sides.
+    # ("Mage Knight Boardgame Ultimate Edition", ...). Down-weighting the bare words for fuzzy
+    # scoring only (never at either exact tier) lets titles like this clear the threshold on
+    # their substantive words -- "mage knight boardgame ultimate edition" vs "mage knight
+    # boardgame" scores well below threshold on raw token_sort_ratio but clears it once
+    # "ultimate"/"edition" are down-weighted on both sides. ("Ultimate" is deliberately not in
+    # `_LIGHT_SAFE_FILLER_RE`'s corpus-checked exact-tier list, so this still exercises the
+    # fuzzy-only path -- unlike "Citadels Revised Edition", which now resolves earlier and more
+    # precisely via the light exact tier itself, see test_match_bgg.py's real-corpus fixes.)
+    base = [_game(1, "Mage Knight Boardgame")]
+    idx = BggIndex(base)
+    result = idx.match("Mage Knight Boardgame Ultimate Edition")
+    assert result.confidence == "MEDIUM"
+    assert result.bgg_id == 1
+
+
+def test_light_tier_resolves_revised_edition_to_the_sole_real_candidate():
+    # A real user-reported miss (2026-08-12): "Citadels Revised Edition" has no distinguishing
+    # word to strip on BGG's own side when there's only one real "Citadels" entry -- the light
+    # tier now strips "revised"/"edition" itself (corpus-checked: see _LIGHT_SAFE_FILLER_RE),
+    # resolving this as a clean single-candidate HIGH match rather than falling through to fuzzy.
     base = [_game(1, "Citadels")]
     idx = BggIndex(base)
     result = idx.match("Citadels Revised Edition")
-    assert result.confidence == "MEDIUM"
+    assert result.confidence == "HIGH"
     assert result.bgg_id == 1
 
 

@@ -83,6 +83,55 @@ _ORDINAL_RE = re.compile(r"\b(first|second|third|fourth|fifth|sixth)\b")
 # dot in these titles).
 _V_DOT_RE = re.compile(r"\bv\.(?=\s)")
 
+# "Collector's"/"Collectors" -> "Collector": a real cross-check of 10 user-reported "should have
+# matched" misses (2026-08-12) found Tenpenny Parks: BGG's own real distinct entry is literally
+# titled "Tenpenny Parks: Collector's Edition" (apostrophe-s), but Zatu's product is "Tenpenny
+# Parks: Collector Edition" (no apostrophe-s) -- punctuation stripping alone still leaves
+# "collectors" vs "collector" as different tokens. Narrow, targeted word-pair alignment (same
+# pattern as the Vol./ordinal fixes above), not a general plural/possessive-stripping rule that
+# could conflate unrelated words.
+_COLLECTOR_RE = re.compile(r"\bcollector'?s\b")
+
+# Words safe to strip even at the light tier -- a real cross-check of 10 user-reported "should
+# have matched" misses (2026-08-12), each verified against the full 140,261-base-game corpus
+# before being added here (same method as every other noise word in this file): does stripping
+# it, on *both* the query and every BGG name, ever merge two BGG entries that weren't already
+# colliding? A light-tier collision is always safe regardless (it just falls through to the
+# aggressive tier exactly like today, since light tier only auto-resolves a *single* candidate --
+# never a wrong silent match), but a word that collides real, meaningfully-different products
+# still isn't worth adding blind, since it destroys the light tier's ability to disambiguate them
+# via the recency-tiebreak below or a future, more specific fix.
+#
+# "the game" -- 0 new collisions, matches the existing aggressive-tier reasoning (EXIT franchise).
+# Bare "edition" -- 16 new collisions, all BGG-side near-duplicate listings for the literal same
+# real product (e.g. "Time's Up! Party" id 38713 vs "Time's Up! Party Edition" id 230262) --
+# never two genuinely different games.
+# "complete"/"standard"/"anniversary"/"revised" -- 4/0/3/1 new collisions respectively, all either
+# near-zero-rated noise or (Stone Age vs Stone Age: Anniversary, Talisman variants) real distinct
+# editions -- but since light-tier collisions can't produce a wrong match, these still can only
+# help (e.g. Arkwright: Anniversary -> Arkwright, Trailblazers Standard -> Trailblazers,
+# Air, Land & Sea: Revised Edition -> Air, Land, & Sea, Tenpenny Parks: Collector Edition ->
+# Tenpenny Parks: Collector's Edition once paired with _COLLECTOR_RE above).
+#
+# Deliberately EXCLUDES "board game"/"card game" despite being pure category filler in most
+# cases (e.g. Slay the Spire: The Board Game) -- real corpus check found these strip real,
+# separately-catalogued spin-off products too: "Arkwright: The Card Game" (a genuinely different
+# game, not an edition of base Arkwright) is one of 455 real "card game" collisions, "board game"
+# has 123. Confirmed via a real miss this would have broken (Arkwright: The Card Game light-
+# matching itself correctly today) before it was excluded. Zatu's "Orleans Board Game: Big Box
+# Edition" -> BGG's "Orléans: Big Box" needs exactly this word to resolve and is NOT fixed by
+# this round -- flagged separately rather than risking the Arkwright-class regression.
+_LIGHT_SAFE_FILLER_RE = re.compile(r"\b(the game|edition|complete|standard|anniversary|revised)\b")
+
+# Recency-signal words: when a query's own wording says "this is a newer printing" and it ties
+# with another BGG entry sharing the exact identical bare name (e.g. BGG catalogues "Citadels"
+# twice -- id 478, 2000, and id 205398, 2016's Revised Edition, with no distinguishing word in
+# either BGG name itself), prefer the tied candidate with the latest yearpublished. Deliberately
+# narrow: only the words that actually mean "newer than before" (not "standard"/"premium"/
+# "collector"/"complete", which say nothing about timing) and only when there's a single, clearly
+# latest year among the *already-tied* candidates -- never a broader guess.
+_RECENCY_SIGNAL_RE = re.compile(r"\b(revised|anniversary|renewed|remastered|reprint(ed)?)\b", re.IGNORECASE)
+
 # Marketing/edition noise stripped before comparison (spec §4.1). Matched as whole phrases so
 # "2nd edition"/"deluxe edition" disappear together rather than leaving a stray "2"/"deluxe".
 # NOTE: "core" is deliberately NOT stripped as a bare word (only the "core game" phrase) —
@@ -119,7 +168,7 @@ _EDITION_NOISE_RE = re.compile(
     r"\b(board game|card game|the game|(\d+(st|nd|rd|th)\s*/\s*)*\d+(st|nd|rd|th)\s+edition|"
     r"deluxe edition|deluxe|"
     r"big box|retail edition|english edition|english|core game|standard edition|"
-    r"anniversary edition|collector'?s edition|kickstarter edition|special edition|"
+    r"anniversary edition|collector edition|kickstarter edition|special edition|"
     r"base game|refresh(ed)?)\b"
 )
 # Broader generic-descriptor list, applied *only* inside the fuzzy tier's own scoring (see
@@ -192,6 +241,8 @@ def normalize_title_light(title: str) -> str:
     text = _VOL_WORD_RE.sub("volume", text)
     text = _V_DOT_RE.sub("vs", text)
     text = _ORDINAL_RE.sub(lambda m: _ORDINAL_MAP[m.group(0)], text)
+    text = _COLLECTOR_RE.sub("collector", text)
+    text = _LIGHT_SAFE_FILLER_RE.sub(" ", text)
     text = _WORD_NUM_RE.sub(lambda m: _WORD_NUM_MAP[m.group(0)], text)
     text = _ROMAN_RE.sub(lambda m: _ROMAN_MAP.get(m.group(0).lower(), m.group(0)), text)
     text = _PUNCT_RE.sub(" ", text)
@@ -218,6 +269,7 @@ def normalize_title(title: str) -> str:
     text = _VOL_WORD_RE.sub("volume", text)
     text = _V_DOT_RE.sub("vs", text)
     text = _ORDINAL_RE.sub(lambda m: _ORDINAL_MAP[m.group(0)], text)
+    text = _COLLECTOR_RE.sub("collector", text)
     text = _EDITION_NOISE_RE.sub(" ", text)
     text = _WORD_NUM_RE.sub(lambda m: _WORD_NUM_MAP[m.group(0)], text)
     text = _ROMAN_RE.sub(lambda m: _ROMAN_MAP.get(m.group(0).lower(), m.group(0)), text)
@@ -323,6 +375,25 @@ class BggIndex:
             return top
         return None
 
+    @staticmethod
+    def _recency_pick(candidates: list[BggRankedGame], raw_title: str) -> BggRankedGame | None:
+        """Among title-tied candidates that share the *identical* bare name (e.g. BGG catalogues
+        "Citadels" twice -- the 2000 original and 2016's Revised Edition, with no distinguishing
+        word in either BGG name itself), pick the latest `yearpublished` one, but *only* when the
+        query's own raw text says this is a newer printing (see `_RECENCY_SIGNAL_RE`) and exactly
+        one candidate has the clearly-latest year. Real case that prompted this (2026-08-12):
+        Zatu's "Citadels Revised Edition" -- usersrated dominance alone picks the *wrong* one here
+        (the 2000 original has more cumulative ratings simply from being older, 57379 vs 17553,
+        neither reaching the 10x bar anyway), so this tiebreak is tried as a distinct fallback,
+        not a replacement for it."""
+        if not _RECENCY_SIGNAL_RE.search(raw_title):
+            return None
+        by_year = sorted(candidates, key=lambda g: g.year or 0, reverse=True)
+        top, runner_up = by_year[0], by_year[1]
+        if top.year and (runner_up.year or 0) < top.year:
+            return top
+        return None
+
     def _prefix_matches(self, norm: str) -> list[BggRankedGame]:
         """BGG games whose normalized name is `norm` followed by a space and more text — i.e.
         `norm` is a shortened, word-boundary-safe prefix of the full title."""
@@ -341,12 +412,35 @@ class BggIndex:
         # through to the aggressive-tier exact check below in that case still produces a
         # correct, more complete candidate list for the ambiguous-drop result.
         light_exact = self._exact_light.get(normalize_title_light(title))
-        if light_exact and len(light_exact) == 1:
-            bgg = light_exact[0]
-            return MatchResult(
-                title, bgg.id, bgg.name, "HIGH", 100.0,
-                "exact match preserving edition/format words (e.g. Big Box, Card Game)",
-            )
+        if light_exact:
+            if len(light_exact) == 1:
+                bgg = light_exact[0]
+                return MatchResult(
+                    title, bgg.id, bgg.name, "HIGH", 100.0,
+                    "exact match preserving edition/format words (e.g. Big Box, Card Game)",
+                )
+            # _LIGHT_SAFE_FILLER_RE can turn a query that used to resolve at this tier alone into
+            # a tie against a real BGG variant (e.g. "X: Anniversary Edition") -- try the same two
+            # proven-safe tiebreaks the aggressive tier already uses (dominance first, matching
+            # its own order) before falling through, rather than only the recency one.
+            dominant = self._dominant_by_rating_count(light_exact)
+            if dominant is not None:
+                return MatchResult(
+                    title, dominant.id, dominant.name, "MEDIUM", 100.0,
+                    "ambiguous exact title, but one BGG entry has "
+                    f"{_DOMINANCE_RATIO}x+ the ratings of every other candidate -- picked as "
+                    "the game Zatu almost certainly means",
+                    candidates=[(g.id, g.name) for g in light_exact[:5]],
+                )
+            recent = self._recency_pick(light_exact, title)
+            if recent is not None:
+                return MatchResult(
+                    title, recent.id, recent.name, "MEDIUM", 100.0,
+                    "ambiguous exact title (multiple BGG entries share this bare name), but the "
+                    "query's own wording signals a newer printing -- picked the candidate with "
+                    "the latest yearpublished among the tied entries",
+                    candidates=[(g.id, g.name) for g in light_exact[:5]],
+                )
 
         norm = normalize_title(title)
 
@@ -368,6 +462,15 @@ class BggIndex:
                     "ambiguous exact title, but one BGG entry has "
                     f"{_DOMINANCE_RATIO}x+ the ratings of every other candidate -- picked as "
                     "the game Zatu almost certainly means",
+                    candidates=[(g.id, g.name) for g in exact[:5]],
+                )
+            recent = self._recency_pick(exact, title)
+            if recent is not None:
+                return MatchResult(
+                    title, recent.id, recent.name, "MEDIUM", 100.0,
+                    "ambiguous exact title (multiple BGG entries share this bare name), but the "
+                    "query's own wording signals a newer printing -- picked the candidate with "
+                    "the latest yearpublished among the tied entries",
                     candidates=[(g.id, g.name) for g in exact[:5]],
                 )
             return MatchResult(

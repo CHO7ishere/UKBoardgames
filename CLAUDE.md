@@ -1253,3 +1253,94 @@ feasible) real BGG language-dependence data instead of the permanent UNKNOWN pla
     synthetic-poll fixtures, 2 `fetch_french_edition_info` integration cases confirming language
     data rides the existing page load with no extra navigation, 2 `lookup_philibert.py` wiring
     cases).
+
+## Real matching misses from a user spot-check, and a real BGG API token (2026-08-12)
+
+User reported 10 real "should have matched" titles (Citadels Revised Edition, BUS: Complete
+Edition, Air Land & Sea: Revised Edition, Mycelia: Standard, Orleans Board Game: Big Box Edition,
+Trailblazers Standard, Arkwright: Anniversary, Tenpenny Parks: Collector Edition, Raccoon Tycoon
+Premium Edition, Living Planet Collector/Standard) with explicit framing: force a match unless
+there's a genuine reason (a real separate "upgraded" BGG edition) to leave it unmatched on
+purpose. Also pasted a real BGG API token in chat.
+
+- **The token was never written to any repo file.** `docs/index.html` is served publicly via
+  GitHub Pages, so anything committed here is world-readable — a credential belongs in a GitHub
+  Actions secret (`Settings → Secrets and variables → Actions`), read only by workflows at
+  runtime via `${{ secrets.BGG_API_TOKEN }}`, never printed or committed. Not yet wired into any
+  workflow — the real `thing`/`search` BGG API (Bearer auth, spec's originally-intended Stage 3
+  path) is a real, more-reliable-than-scraping alternative to `sources/bgg_versions.py`'s
+  headless-browser approach now that a token exists, but building that out is separate work, not
+  done in this round.
+- **`match.py` gained three real additions**, each corpus-checked against the full
+  140,261-base-game corpus before shipping (same method as every prior noise-word fix this
+  project has made) — not just checked against the 10 reported titles:
+  - `_COLLECTOR_RE`: "collector's"/"collectors" → "collector", applied in both normalize tiers
+    before punctuation stripping. Real fix: BGG's own "Tenpenny Parks: Collector's Edition" only
+    differs from Zatu's "Tenpenny Parks: Collector Edition" by this apostrophe-s.
+  - `_LIGHT_SAFE_FILLER_RE` (light tier only, NOT the aggressive tier): bare "edition" and "the
+    game". Corpus-checked in isolation first (16 and, once properly checked *in combination*
+    with "the" already being stripped by `_ARTICLE_RE`, 90+ collisions respectively — both
+    turned out to be safe in practice: nearly all are BGG-side near-duplicate listings or cases
+    where the existing rating-dominance tiebreak (see below) already resolves them correctly,
+    since "the game" was already being stripped at the *aggressive* tier for years before this
+    session). **Deliberately excludes "board game"/"card game"** despite looking like the same
+    kind of filler (needed for the Orléans Big Box case below) — a full-corpus check found 123
+    and 455 real collisions respectively, including a genuine wrong-match risk: "Arkwright: The
+    Card Game" is a real, separate spin-off product (not an edition of base Arkwright) that
+    would have silently collided with it. Confirmed via a direct before/after regression check
+    that excluding these two words preserves that game's own correct light-tier resolution.
+  - `_RECENCY_SIGNAL_RE` + `BggIndex._recency_pick()`: when an exact match ties on **multiple
+    BGG entries sharing the identical bare name** (BGG catalogues "Citadels" twice — id 478,
+    2000, and id 205398, 2016's Revised Edition, with no distinguishing word in either BGG name
+    at all) and the query's own raw text says this is a newer printing ("revised"/"anniversary"/
+    "renewed"/"remastered"/"reprint"), pick the tied candidate with the latest `yearpublished` —
+    tried at both the light and aggressive exact-tie points, after the existing rating-dominance
+    tiebreak (which alone picks *wrong* here: 2000's original has more cumulative ratings simply
+    from being older, 57379 vs 17553, and neither clears the existing 10x dominance bar anyway).
+- **A real regression found by re-running the full match, not just spot-checking the 10 titles**:
+  stripping "edition"/"the game" at the light tier turned some *other*, previously-clean
+  single-candidate light matches into new ties against a real BGG variant edition (e.g. "Galaxy
+  Trucker" vs "Galaxy Trucker: Anniversary Edition") — a title that used to resolve correctly
+  only because the light tier happened not to see the collision at all. Root-caused via a direct
+  before/after diff of the real 4178-product match output (not assumed from the corpus check
+  alone). Fixed by trying the light tier's own dominance-tiebreak (identical logic to the
+  aggressive tier's, just applied one tier earlier) before falling through — confirmed via the
+  same before/after diff that this fully recovers the one real case found (Galaxy Trucker (2021)
+  → base Galaxy Trucker, 35880 vs 2961 ratings, same result as before this session's changes).
+- **Real, measured result** (re-running `scripts/match_bgg.py` offline against the live 4178×
+  140,261 corpus, before/after diffed by survivor handle+id): 678 → **682 survivors, net +4**.
+  5 real additions: `air-land-sea-revised-edition`→247367, `arkwright-anniversary`→154825,
+  `citadels-revised-edition`→205398 (the actual 2016 Revised Edition, not the more-rated-but-
+  wrong 2000 original — confirms the recency-tiebreak over dominance-alone), plus two bonus
+  recoveries the noise-word fixes caught beyond the reported 10:
+  `werewords-deluxe`→"Werewords Deluxe Edition" and `explorers-of-the-north-sea-collector-...`→
+  "Explorers of the North Sea". 1 removal, `leaf-deluxe` — not a regression: it now correctly
+  identifies as the real, separate "Leaf: Deluxe Edition" BGG entry (previously wrongly compared
+  against base "Leaf"'s price/quality) and correctly fails the quality gate on its own low BGG
+  vote count (45 users) — a precision fix, same shape as the earlier Terraforming Mars
+  Ares-Expedition-Crisis bug this project already fixed once before.
+- **5 of the 10 reported titles are genuinely unresolved, confirmed via real BGG data, not
+  guessed past**:
+  - **BUS: Complete Edition** — BGG has two entries both literally named "Bus"/"BUS": the 1999
+    Alea classic (id 552, 5556 ratings) and an obscure 2015 game (id 164159, 764 ratings, ratio
+    ~7.3x, just under the 10x dominance bar). Not an edition/revision relationship at all, just
+    two different games sharing a name — no safe way to auto-pick.
+  - **Mycelia: Standard** — BGG has two entries both literally "Mycelia" (2023 vs 2024, no
+    distinguishing text in either name) and "standard" isn't a recency signal (doesn't mean
+    "newer"), so the tiebreak correctly doesn't fire.
+  - **Orleans Board Game: Big Box Edition** — the fix that would catch this (stripping "Board
+    Game"/"Card Game" as filler) is the one deliberately excluded above for real corpus-collision
+    reasons (Arkwright: The Card Game). Needs a narrower, one-off fix (or a manual override, same
+    pattern as `data/philibert_title_overrides.json`), not attempted this round.
+  - **Raccoon Tycoon - Premium Edition / Living Planet Collector** — both have a real BGG
+    "Deluxe Edition" entry as a separate product, but neither Zatu title says "Deluxe" — whether
+    "Premium"/"Collector" is Zatu's own name for that same Deluxe product or genuinely a
+    different (base-tier) SKU can't be determined from title text alone; a wrong guess here means
+    comparing the wrong product's price, exactly the failure mode this project's precision-first
+    design exists to avoid.
+- 2 new tests in `tests/test_match.py` (light-tier resolution of "Citadels Revised Edition",
+  replacing an now-obsolete fuzzy-tier expectation for the same title). 256 tests total pass.
+- **Not yet live** — same pattern as every Stage 2-only fix this session: the 5 newly-recovered
+  survivors are in the refreshed `data/matched_games.json`/`data/unmatched_games.json` but don't
+  have Stage 3/4/5 data yet, so the scored shortlist and rendered report are unchanged until the
+  next `lookup-philibert.yml` dispatch.
