@@ -88178,5 +88178,1377 @@
     "fr_edition_titles": [
       "Les Charlatans de Belcastel"
     ]
+  },
+  "454103": {
+    "bgg_id": 454103,
+    "name": "Magical Athlete",
+    "alternate_names": [
+      "Athlètes de Compète",
+      "Kerge futam",
+      "Magične Atlete",
+      "Magiczni Atleci",
+      "Turbo-Flitzpiepen 2000",
+      "Магічні атлети",
+      "胡闹运动会",
+      "야단법석 달리기"
+    ],
+    "description": "Magical Athlete is a racing game of pure chaos! Roll a die and move your racer that many spaces &mdash; but all the racers have wacky, game-breaking abilities. Race four times, then whoever has the most points wins!\n\nBefore the racing begins, players will draft the four racers they will have in the game and choose before each race which to use. Races alternate between the \"mild\" side of the board and the \"wild\" side of the board. A race ends once two racers have crossed the finish line &mdash; with, generally, only these two players receiving points.\n\n&mdash;description from the publisher\n\n",
+    "yearpublished": 2025,
+    "minplayers": 2,
+    "maxplayers": 6,
+    "playingtime": 30,
+    "mechanics": [
+      {
+        "id": "2041",
+        "value": "Open Drafting"
+      },
+      {
+        "id": "2876",
+        "value": "Race"
+      },
+      {
+        "id": "2035",
+        "value": "Roll / Spin and Move"
+      },
+      {
+        "id": "2939",
+        "value": "Track Movement"
+      },
+      {
+        "id": "2015",
+        "value": "Variable Player Powers"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1089",
+        "value": "Animals"
+      },
+      {
+        "id": "1017",
+        "value": "Dice"
+      },
+      {
+        "id": "1079",
+        "value": "Humor"
+      },
+      {
+        "id": "1031",
+        "value": "Racing"
+      }
+    ],
+    "designers": [
+      {
+        "id": "14",
+        "value": "Richard Garfield"
+      },
+      {
+        "id": "7404",
+        "value": "Takashi Ishida"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "46474",
+        "value": "CMYK"
+      },
+      {
+        "id": "58739",
+        "value": "Geekach LLC"
+      },
+      {
+        "id": "8820",
+        "value": "Gémklub"
+      },
+      {
+        "id": "8923",
+        "value": "IELLO"
+      },
+      {
+        "id": "8291",
+        "value": "Korea Boardgames"
+      },
+      {
+        "id": "51614",
+        "value": "MIPL"
+      }
+    ],
+    "artists": [
+      {
+        "id": "164818",
+        "value": "Angela Kirkwood"
+      }
+    ],
+    "statistics": {
+      "average": 7.80381,
+      "usersrated": 7184,
+      "bayesaverage": 7.15945
+    },
+    "language_level": "MED",
+    "language_votes": {
+      "2": 1,
+      "3": 6
+    },
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Athlètes de Compète"
+    ]
+  },
+  "39463": {
+    "bgg_id": 39463,
+    "name": "Cosmic Encounter",
+    "alternate_names": [
+      "Kosmiczne spotkania",
+      "Rencontre Cosmique",
+      "コズミック・エンカウンター"
+    ],
+    "description": "Build a galactic empire...\n\nIn the depths of space, the alien races of the Cosmos vie with each other for control of the universe. Alliances form and shift from moment to moment, while cataclysmic battles send starships screaming into the warp.\n\nThis classic game of alien politics returns from the warp once more!\n\nIn Cosmic Encounter, each player becomes the leader of one of dozens of alien races, each with its own unique power. On a player's turn, he or she becomes the offense. The offense encounters another player on a planet by moving a group of his or her ships through the hyperspace gate to that planet. Both sides can invite allies and play cards to try and tip the encounter in their favor.\n\nThe object of the game is for players to establish colonies in other players' planetary systems by landing their ships on the other players' planets. The winner(s) are the first player(s) to have five colonies on planets outside his or her home system. The players must use force, cunning, and diplomacy to ensure their victory. And, because alliances are a key part of the game, multiple players can win together!\n\n",
+    "yearpublished": 2008,
+    "minplayers": 3,
+    "maxplayers": 5,
+    "playingtime": 120,
+    "mechanics": [
+      {
+        "id": "2916",
+        "value": "Alliances"
+      },
+      {
+        "id": "2857",
+        "value": "Card Play Conflict Resolution"
+      },
+      {
+        "id": "2040",
+        "value": "Hand Management"
+      },
+      {
+        "id": "2837",
+        "value": "Interrupts"
+      },
+      {
+        "id": "2915",
+        "value": "Negotiation"
+      },
+      {
+        "id": "2858",
+        "value": "Prisoner's Dilemma"
+      },
+      {
+        "id": "2876",
+        "value": "Race"
+      },
+      {
+        "id": "2020",
+        "value": "Simultaneous Action Selection"
+      },
+      {
+        "id": "2686",
+        "value": "Take That"
+      },
+      {
+        "id": "2008",
+        "value": "Trading"
+      },
+      {
+        "id": "2015",
+        "value": "Variable Player Powers"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1023",
+        "value": "Bluffing"
+      },
+      {
+        "id": "1026",
+        "value": "Negotiation"
+      },
+      {
+        "id": "1016",
+        "value": "Science Fiction"
+      },
+      {
+        "id": "1113",
+        "value": "Space Exploration"
+      }
+    ],
+    "designers": [
+      {
+        "id": "34",
+        "value": "Bill Eberle"
+      },
+      {
+        "id": "35",
+        "value": "Jack Kittredge"
+      },
+      {
+        "id": "10774",
+        "value": "Bill Norton"
+      },
+      {
+        "id": "36",
+        "value": "Peter Olotka"
+      },
+      {
+        "id": "2336",
+        "value": "Kevin Wilson"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "17",
+        "value": "Fantasy Flight Games"
+      },
+      {
+        "id": "3475",
+        "value": "Arclight Games"
+      },
+      {
+        "id": "15889",
+        "value": "Asterion Press"
+      },
+      {
+        "id": "2973",
+        "value": "Edge Entertainment"
+      },
+      {
+        "id": "4617",
+        "value": "Galakta"
+      },
+      {
+        "id": "264",
+        "value": "Heidelberger Spieleverlag"
+      },
+      {
+        "id": "31099",
+        "value": "House of Monks"
+      }
+    ],
+    "artists": [
+      {
+        "id": "12018",
+        "value": "Andrew Navaro"
+      },
+      {
+        "id": "12438",
+        "value": "Ryan Barger"
+      },
+      {
+        "id": "12437",
+        "value": "Felicia Cano"
+      },
+      {
+        "id": "12435",
+        "value": "Sabe Lewellyn"
+      },
+      {
+        "id": "11989",
+        "value": "Brian Schomburg"
+      },
+      {
+        "id": "12436",
+        "value": "WiL Springer"
+      }
+    ],
+    "statistics": {
+      "average": 7.5058,
+      "usersrated": 35113,
+      "bayesaverage": 7.31299
+    },
+    "language_level": "HIGH",
+    "language_votes": {
+      "2": 2,
+      "3": 18,
+      "4": 81,
+      "5": 8
+    },
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Rencontre Cosmique"
+    ]
+  },
+  "552": {
+    "bgg_id": 552,
+    "name": "Bus",
+    "alternate_names": [
+      "Bus: Anniversary Edition",
+      "Bus: Complete Edition"
+    ],
+    "description": "Prior to Essen 1999, a group of students created Splotter Spellen to sell some of their own game designs.  This game is regarded as one of the highlights of that group.  The object of the game is to deliver as many people to their destinations as you can.  To accomplish this, players place route markers on the board to connect passengers to their destinations.  However, the destination types (work, bar, home) vary from turn to turn, so you can follow certain passengers as they make their way through the daily grind.\n\nPlayers may buy more buses (they start off with one), build onto their bus route, bring new passengers to the city (via the trains), expand the city by adding more buildings, and run their buses. There is another option, the clock. The action board has one other clever feature. On some actions, route expansion and building, the first player to choose that action actually gets to execute the action last! Which leads to some interesting games of chicken and some painful decisions.\n\nBuying more buses allows a player to carry one more passenger every time they run their buses - hence scoring, in the best case, one more point. Depending on how the city gets built, however, finding lots of passengers on the street can be tricky.\n\nBus routes extend from either end of a Settlers-style initial placement. Extensions are appended to either end. Routes may only run parallel if there are no empty streets at one of the ends or the line ends on the crossing as another player's end. All new passengers will arrive at one of two train stations so that is one concern when route building. One must also be careful to run by a nice mix of building types. And, when building, one must always have an eye towards spoiling other players' routes by placing a mix of building types at each of their intersection so that all of their passengers just walk! Finally, when carrying passengers, one wants to be careful to set up to carry the same passenger next turn.\n\n",
+    "yearpublished": 1999,
+    "minplayers": 3,
+    "maxplayers": 5,
+    "playingtime": 120,
+    "mechanics": [
+      {
+        "id": "2001",
+        "value": "Action Points"
+      },
+      {
+        "id": "2689",
+        "value": "Action Queue"
+      },
+      {
+        "id": "2081",
+        "value": "Network and Route Building"
+      },
+      {
+        "id": "2007",
+        "value": "Pick-up and Deliver"
+      },
+      {
+        "id": "2829",
+        "value": "Turn Order: Claim Action"
+      },
+      {
+        "id": "2828",
+        "value": "Turn Order: Progressive"
+      },
+      {
+        "id": "2082",
+        "value": "Worker Placement"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1011",
+        "value": "Transportation"
+      }
+    ],
+    "designers": [
+      {
+        "id": "270",
+        "value": "Jeroen Doumen"
+      },
+      {
+        "id": "407",
+        "value": "Joris Wiersinga"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "140",
+        "value": "Splotter Spellen"
+      },
+      {
+        "id": "30958",
+        "value": "Capstone Games"
+      }
+    ],
+    "artists": [
+      {
+        "id": "408",
+        "value": "Herman Haverkort"
+      },
+      {
+        "id": "7246",
+        "value": "Tamara Jannink"
+      },
+      {
+        "id": "70041",
+        "value": "Daan van Paridon"
+      },
+      {
+        "id": "108409",
+        "value": "Thijs van Paridon"
+      },
+      {
+        "id": "407",
+        "value": "Joris Wiersinga"
+      }
+    ],
+    "statistics": {
+      "average": 7.70795,
+      "usersrated": 5561,
+      "bayesaverage": 7.04876
+    },
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 13,
+      "2": 1
+    },
+    "fr_edition_exists": false,
+    "fr_edition_titles": []
+  },
+  "383499": {
+    "bgg_id": 383499,
+    "name": "Witchcraft!",
+    "alternate_names": [
+      "¡Brujería!",
+      "Čarodějnice!",
+      "Hexenwerk!",
+      "Sorcellerie !",
+      "Ведьмы",
+      "巫术！"
+    ],
+    "description": "A midnight bell tolls on the streets of Wildegrens as the villagers shutter their windows against the darkness.  Something moves through the night&ndash;in the forest, through the fields, across the old battlefield.  The isolated village is in danger.  Crops are failing, animals are dying, and villagers are disappearing.  Townsfolk are scared.  Some of the women are fighting back, but the villagers suspect that these women may be dealing with the devil himself.  From behind the old school a shadow crosses to the town well.  A feeble light reveals two witches who nod to one another, shutter the lantern, and make their way towards the dark woods.\n\nWitchcraft! is a fast-playing, card-driven solitaire game where you lead a coven of witches in a  fantasy world where magic is real&ndash;and so are the monsters.  Building on the hidden / revealed mechanism of Resist! you will decide when to use magic to defeat the challenges you face&ndash;revealing yourself to your fellow villagers and being imprisoned for witchcraft.  As you complete missions and defeat enemies you will try to prove to the villagers that magic is not evil, and convince a jury that you are protecting the village.  Three jurors will decide your fate and their conviction is strong.  Can you persuade them?  Or will evil overcome you and the village?\n\nAt the beginning of the game you assemble a coven of witches from families of women represented by a deck of cards.  Selecting multiple witches from a family makes that family more powerful.  Each family is focused on different tasks in the game&ndash;revealing challenges, increasing attack power, uncovering the conviction of the jurors, or capturing familiars to help you in your fight. The fight is real and each of the eight jurors face a different villain.  Is it the Headless Horseman, Baba Yaga, the Scarecrow, or some other fiend?  On setup you choose three jurors, their missions, and their unique challenges&ndash;providing 56 possible combinations with great variety in the types of challenges and monsters you will face.  If you fail two missions or lose five villagers, you lose the game.  Even if you defeat the missions you still face the trial, and you are only sure of your fate when you reveal the conviction of the jurors and see if you have done enough to persuade them.\n\n&mdash;description from the publisher\n\n",
+    "yearpublished": 2023,
+    "minplayers": 1,
+    "maxplayers": 1,
+    "playingtime": 40,
+    "mechanics": [
+      {
+        "id": "2857",
+        "value": "Card Play Conflict Resolution"
+      },
+      {
+        "id": "2664",
+        "value": "Deck, Bag, and Pool Building"
+      },
+      {
+        "id": "2040",
+        "value": "Hand Management"
+      },
+      {
+        "id": "2041",
+        "value": "Open Drafting"
+      },
+      {
+        "id": "2822",
+        "value": "Scenario / Mission / Campaign Game"
+      },
+      {
+        "id": "2819",
+        "value": "Solo / Solitaire Game"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1002",
+        "value": "Card Game"
+      }
+    ],
+    "designers": [
+      {
+        "id": "90410",
+        "value": "Trevor Benjamin"
+      },
+      {
+        "id": "122511",
+        "value": "Roger Tankersley"
+      },
+      {
+        "id": "67071",
+        "value": "David Thompson (I)"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "40599",
+        "value": "Salt & Pepper Games"
+      },
+      {
+        "id": "28620",
+        "value": "25th Century Games"
+      },
+      {
+        "id": "35928",
+        "value": "Banana Games"
+      },
+      {
+        "id": "33710",
+        "value": "Fox in the Box"
+      },
+      {
+        "id": "29194",
+        "value": "GaGa Games"
+      },
+      {
+        "id": "15906",
+        "value": "Nuts! Publishing"
+      },
+      {
+        "id": "24844",
+        "value": "Schwerkraft-Verlag"
+      }
+    ],
+    "artists": [
+      {
+        "id": "34140",
+        "value": "Albert Monteys"
+      }
+    ],
+    "statistics": {
+      "average": 7.60911,
+      "usersrated": 2574,
+      "bayesaverage": 6.56995
+    },
+    "language_level": "MED",
+    "language_votes": {
+      "3": 5
+    },
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Sorcellerie !"
+    ]
+  },
+  "402676": {
+    "bgg_id": 402676,
+    "name": "Cities",
+    "alternate_names": [
+      "Města",
+      "Miasta marzeń",
+      "Világvárosok",
+      "Города",
+      "シティーズ",
+      "璀璨都市",
+      "시티즈"
+    ],
+    "description": "You've been tasked by the city council to put together a plan to transform a whole neighborhood in the city. You have the opportunity to build new housing, office buildings, parks, and leisure areas near the waterfront. It is in your hands to make the city a better place.\n\nCities is a city-building game in which you draft the best projects and arrange them in your own playing area. With action and resource draft mechanisms, it will give you the opportunity to visit the cities of Sydney, Venice, New York, Barcelona, Rio de Janeiro, Lisbon, Mexico City, and Buenos Aires. Can you design the most magnificent neighborhood?\n\nThe game is played over eight rounds (or four rounds in a two-player game). Each round, players use their workers to collect 1 scoring card, 1 city tile, 1-2 feature tiles, and 2-4 building pieces. City tiles are made up of park spaces, water spaces, and building spaces. Building pieces are placed on building spaces of the same color to form buildings, which can be 1-4 stories high. Whenever a player fulfills an achievement, they place one of their discs on the achievement board. At the end of the game, players add up the points they have gained from all of their scoring cards and achievements.\n\n&mdash;description from the publisher\n\n",
+    "yearpublished": 2024,
+    "minplayers": 2,
+    "maxplayers": 4,
+    "playingtime": 45,
+    "mechanics": [
+      {
+        "id": "2984",
+        "value": "Closed Drafting"
+      },
+      {
+        "id": "2912",
+        "value": "Contracts"
+      },
+      {
+        "id": "2041",
+        "value": "Open Drafting"
+      },
+      {
+        "id": "2048",
+        "value": "Pattern Building"
+      },
+      {
+        "id": "2004",
+        "value": "Set Collection"
+      },
+      {
+        "id": "2002",
+        "value": "Tile Placement"
+      },
+      {
+        "id": "2829",
+        "value": "Turn Order: Claim Action"
+      },
+      {
+        "id": "2897",
+        "value": "Variable Set-up"
+      },
+      {
+        "id": "2082",
+        "value": "Worker Placement"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1009",
+        "value": "Abstract Strategy"
+      },
+      {
+        "id": "1029",
+        "value": "City Building"
+      }
+    ],
+    "designers": [
+      {
+        "id": "10060",
+        "value": "Steve Finn"
+      },
+      {
+        "id": "8347",
+        "value": "Phil Walker-Harding"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "2366",
+        "value": "Devir"
+      },
+      {
+        "id": "267",
+        "value": "999 Games"
+      },
+      {
+        "id": "3475",
+        "value": "Arclight Games"
+      },
+      {
+        "id": "157",
+        "value": "asmodee"
+      },
+      {
+        "id": "29194",
+        "value": "GaGa Games"
+      },
+      {
+        "id": "12540",
+        "value": "Game Harbor"
+      },
+      {
+        "id": "8923",
+        "value": "IELLO"
+      },
+      {
+        "id": "37",
+        "value": "KOSMOS"
+      },
+      {
+        "id": "7992",
+        "value": "MINDOK"
+      },
+      {
+        "id": "34627",
+        "value": "Nasza Księgarnia"
+      },
+      {
+        "id": "27947",
+        "value": "Vagabund"
+      }
+    ],
+    "artists": [
+      {
+        "id": "148029",
+        "value": "Jorge Tabanera Redondo"
+      }
+    ],
+    "statistics": {
+      "average": 7.27382,
+      "usersrated": 5135,
+      "bayesaverage": 6.67192
+    },
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 9,
+      "3": 3
+    },
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Cities"
+    ]
+  },
+  "392023": {
+    "bgg_id": 392023,
+    "name": "Mycelia",
+    "alternate_names": [],
+    "description": "Each player starts with the same set of cards in Mycelia, improving their deck with better cards over the course of play as they race to clear their playing field of dewdrops first.\n\nIn this deck-building game, you need the support of mysterious forest dwellers to improve your deck, develop new and better skills, and bring the sacred dewdrops from your forest to the Shrine of Life in order to receive the forest goddess' support.\n\nThe game includes double-sided player boards for increased variability.\n\n",
+    "yearpublished": 2023,
+    "minplayers": 1,
+    "maxplayers": 4,
+    "playingtime": 45,
+    "mechanics": [
+      {
+        "id": "2664",
+        "value": "Deck, Bag, and Pool Building"
+      },
+      {
+        "id": "2676",
+        "value": "Grid Movement"
+      },
+      {
+        "id": "2876",
+        "value": "Race"
+      },
+      {
+        "id": "2819",
+        "value": "Solo / Solitaire Game"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1002",
+        "value": "Card Game"
+      }
+    ],
+    "designers": [
+      {
+        "id": "154402",
+        "value": "Daniel Greiner"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "34",
+        "value": "Ravensburger AG"
+      }
+    ],
+    "artists": [
+      {
+        "id": "75800",
+        "value": "Justin Chan"
+      },
+      {
+        "id": "89490",
+        "value": "Matt Paquette & Co."
+      }
+    ],
+    "statistics": {
+      "average": 7.36123,
+      "usersrated": 2989,
+      "bayesaverage": 6.48145
+    },
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 9,
+      "2": 3
+    },
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Mycelia",
+      "Mycelia"
+    ]
+  },
+  "84876": {
+    "bgg_id": 84876,
+    "name": "The Castles of Burgundy",
+    "alternate_names": [
+      "Die Burgen von Burgund",
+      "I Castelli della Borgogna",
+      "Los Castillos de Borgoña",
+      "Les Châteaux de Bourgogne",
+      "Zamki Burgundii",
+      "Замки Бургундии",
+      "ブルゴーニュ",
+      "ブルゴーニュの城",
+      "勃根地城堡",
+      "버건디의 성"
+    ],
+    "description": "The game is set in the Burgundy region of High Medieval France. Each player takes on the role of an aristocrat, originally controlling a small princedom. While playing they aim to build settlements and powerful castles, practice trade along the river, exploit silver mines, and use the knowledge of travelers. The game is about players taking settlement tiles from the game board and placing them into their princedom which is represented by the player board. Every tile has a function that starts when the tile is placed in the princedom. The princedom itself consists of several regions, each of which demands its own type of settlement tile.\n\nThe game is played in five phases, each consisting of five rounds.  Each phase begins with the game board stocked with settlement tiles and goods tiles.  At the beginning of each round all players roll their two dice, and the player who is currently first in turn order rolls a goods placement die.  A goods tile is made available on the game board according to the roll of the goods die.\n\nDuring each round, a player may perform any two of the four possible types of actions:\n\n    take a settlement tile and place it in the staging area on their player board\n    take a settlement tile from the staging area and place in the corresponding region for the type of tile and adjacent to a previously placed settlement tile, \n    deliver goods with a number matching one of their dice\n    take worker tokens which allow the player to adjust the roll of their dice.  \n\n\nIn addition to these actions a player may buy a settlement tile and place it in the staging area on their player board.\n\nThe game ends after the fifth phase is played to completion.  Victory points are awarded for unused money and workers, and undelivered goods.  Bonus victory points from certain settlement tiles are awarded at the end of the game. The player with the most victory points wins.\n\nThe rules include basic and advanced versions.\n\n",
+    "yearpublished": 2011,
+    "minplayers": 2,
+    "maxplayers": 4,
+    "playingtime": 90,
+    "mechanics": [
+      {
+        "id": "2901",
+        "value": "Delayed Purchase"
+      },
+      {
+        "id": "2072",
+        "value": "Dice Rolling"
+      },
+      {
+        "id": "2875",
+        "value": "End Game Bonuses"
+      },
+      {
+        "id": "2978",
+        "value": "Grid Coverage"
+      },
+      {
+        "id": "2026",
+        "value": "Hexagon Grid"
+      },
+      {
+        "id": "2041",
+        "value": "Open Drafting"
+      },
+      {
+        "id": "2048",
+        "value": "Pattern Building"
+      },
+      {
+        "id": "2002",
+        "value": "Tile Placement"
+      },
+      {
+        "id": "2939",
+        "value": "Track Movement"
+      },
+      {
+        "id": "2826",
+        "value": "Turn Order: Stat-Based"
+      },
+      {
+        "id": "2897",
+        "value": "Variable Set-up"
+      },
+      {
+        "id": "2935",
+        "value": "Worker Placement with Dice Workers"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1089",
+        "value": "Animals"
+      },
+      {
+        "id": "1035",
+        "value": "Medieval"
+      },
+      {
+        "id": "1086",
+        "value": "Territory Building"
+      }
+    ],
+    "designers": [
+      {
+        "id": "4958",
+        "value": "Stefan Feld"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "9",
+        "value": "alea"
+      },
+      {
+        "id": "34",
+        "value": "Ravensburger AG"
+      },
+      {
+        "id": "9068",
+        "value": "Broadway Toys LTD"
+      },
+      {
+        "id": "5530",
+        "value": "Giochi Uniti"
+      },
+      {
+        "id": "858",
+        "value": "Grow Jogos e Brinquedos"
+      },
+      {
+        "id": "18852",
+        "value": "Hobby World"
+      },
+      {
+        "id": "30677",
+        "value": "Maldito Games"
+      },
+      {
+        "id": "7466",
+        "value": "Rebel Sp. z o.o."
+      }
+    ],
+    "artists": [
+      {
+        "id": "11886",
+        "value": "Julien Delval"
+      },
+      {
+        "id": "4959",
+        "value": "Harald Lieske"
+      }
+    ],
+    "statistics": {
+      "average": 8.16292,
+      "usersrated": 70219,
+      "bayesaverage": 8.03304
+    },
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 140,
+      "2": 17,
+      "3": 3
+    },
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "The Castles of Burgundy",
+      "Die Burgen von Burgund",
+      "Die Burgen von Burgund"
+    ]
+  },
+  "393165": {
+    "bgg_id": 393165,
+    "name": "Inferno",
+    "alternate_names": [
+      "Inferno: Deluxe",
+      "Inferno: Deluxe Edition"
+    ],
+    "description": "In the Divine Comedy, the poet Dante Alighieri enters Hell in search of his beloved Beatrice. Guided by Virgil, he descends through the nine circles, witnessing how each sinner is eternally punished in a manner as horrifying as the sin they committed in life.\n\nInferno is a soul management game where each player must guide sinners to their respective circles in Hell. The central board consists of two parts: one displaying all 9 circles and the soul registry, while the other represents Florence in the early 14th century, where Dante lived, with its power games and palace intrigues.\n\nEach turn consists of two phases:\n\n\n     Inferno Phase: The player advances a soul through Hell, earning Infamy Points if they successfully guide it to its corresponding circle.\n     Florence Phase: The player must choose between:\n         Playing an action at a city location (adopting a street urchin, building a new level of the family tower, or inviting home an illustrious character, among others).\n         Exposing a sinner, who is executed, and their soul is led to Hell. By doing so, the player advances on the Hell registry, which keeps track of everyone&rsquo;s supplied souls.\n    \n\n\nWith each death, Dante takes a step closer to his descent. When he reaches the gate that will lead him to Purgatory, the game ends.\n\nThe player with the most Infamy Points is declared the winner and deemed untrustworthy.\n\n",
+    "yearpublished": 2024,
+    "minplayers": 1,
+    "maxplayers": 4,
+    "playingtime": 120,
+    "mechanics": [
+      {
+        "id": "2875",
+        "value": "End Game Bonuses"
+      },
+      {
+        "id": "2676",
+        "value": "Grid Movement"
+      },
+      {
+        "id": "2904",
+        "value": "Loans"
+      },
+      {
+        "id": "2900",
+        "value": "Market"
+      },
+      {
+        "id": "3007",
+        "value": "Matching"
+      },
+      {
+        "id": "2947",
+        "value": "Movement Points"
+      },
+      {
+        "id": "3099",
+        "value": "Multi-Use Cards"
+      },
+      {
+        "id": "3103",
+        "value": "Resource Queue"
+      },
+      {
+        "id": "2897",
+        "value": "Variable Set-up"
+      },
+      {
+        "id": "2082",
+        "value": "Worker Placement"
+      },
+      {
+        "id": "2933",
+        "value": "Worker Placement, Different Worker Types"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1021",
+        "value": "Economic"
+      },
+      {
+        "id": "1010",
+        "value": "Fantasy"
+      },
+      {
+        "id": "1024",
+        "value": "Horror"
+      },
+      {
+        "id": "1035",
+        "value": "Medieval"
+      },
+      {
+        "id": "1082",
+        "value": "Mythology"
+      },
+      {
+        "id": "1093",
+        "value": "Novel-based"
+      }
+    ],
+    "designers": [
+      {
+        "id": "143103",
+        "value": "Fernando Eduardo Sánchez"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "46382",
+        "value": "Red Mojo"
+      },
+      {
+        "id": "10768",
+        "value": "Cranio Creations"
+      },
+      {
+        "id": "50643",
+        "value": "Fruhling-Honpo"
+      },
+      {
+        "id": "33845",
+        "value": "Grand Gamers Guild"
+      },
+      {
+        "id": "30677",
+        "value": "Maldito Games"
+      },
+      {
+        "id": "44349",
+        "value": "Mosaico Jogos"
+      },
+      {
+        "id": "29487",
+        "value": "Ogry Games"
+      },
+      {
+        "id": "45845",
+        "value": "Strohmann Games"
+      },
+      {
+        "id": "41423",
+        "value": "TLAMA games"
+      },
+      {
+        "id": "27947",
+        "value": "Vagabund"
+      },
+      {
+        "id": "51190",
+        "value": "Zatu Games"
+      }
+    ],
+    "artists": [
+      {
+        "id": "84354",
+        "value": "David Benzal"
+      },
+      {
+        "id": "102939",
+        "value": "Cristian Casado Otazu"
+      }
+    ],
+    "statistics": {
+      "average": 7.83893,
+      "usersrated": 2536,
+      "bayesaverage": 6.61446
+    },
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 12
+    },
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Inferno: Deluxe Edition"
+    ]
+  },
+  "164928": {
+    "bgg_id": 164928,
+    "name": "Orléans",
+    "alternate_names": [
+      "Orlean",
+      "Орлеан",
+      "オルレアン",
+      "奥尔良",
+      "奧爾良",
+      "오를레앙"
+    ],
+    "description": "During the medieval goings-on around Orl&eacute;ans, you must assemble a following of farmers, merchants, knights, monks, etc. to gain supremacy through trade, construction and science in medieval France.\n\nIn Orl&eacute;ans, you will recruit followers and put them to work to make use of their abilities. Farmers and Boatmen supply you with money and goods; Knights expand your scope of action and secure your mercantile expeditions; Craftsmen build trading stations and tools to facilitate work; Scholars make progress in science; Traders open up new locations for you to use your followers; and last but not least, it cannot hurt to get active in monasteries since with Monks on your side you are much less likely to fall prey to fate.\n\nYou will always want to take more actions than possible, and there are many paths to victory. The challenge is to combine all elements as best as possible with regard to your strategy.\n\n",
+    "yearpublished": 2014,
+    "minplayers": 2,
+    "maxplayers": 5,
+    "playingtime": 90,
+    "mechanics": [
+      {
+        "id": "2912",
+        "value": "Contracts"
+      },
+      {
+        "id": "2664",
+        "value": "Deck, Bag, and Pool Building"
+      },
+      {
+        "id": "2875",
+        "value": "End Game Bonuses"
+      },
+      {
+        "id": "2850",
+        "value": "Events"
+      },
+      {
+        "id": "2871",
+        "value": "Kill Steal"
+      },
+      {
+        "id": "2078",
+        "value": "Point to Point Movement"
+      },
+      {
+        "id": "2020",
+        "value": "Simultaneous Action Selection"
+      },
+      {
+        "id": "2849",
+        "value": "Tech Trees / Tech Tracks"
+      },
+      {
+        "id": "2828",
+        "value": "Turn Order: Progressive"
+      },
+      {
+        "id": "2897",
+        "value": "Variable Set-up"
+      },
+      {
+        "id": "2933",
+        "value": "Worker Placement, Different Worker Types"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1035",
+        "value": "Medieval"
+      },
+      {
+        "id": "1115",
+        "value": "Religious"
+      },
+      {
+        "id": "1097",
+        "value": "Travel"
+      }
+    ],
+    "designers": [
+      {
+        "id": "158",
+        "value": "Reiner Stockhausen"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "10848",
+        "value": "dlp games"
+      },
+      {
+        "id": "3475",
+        "value": "Arclight Games"
+      },
+      {
+        "id": "36401",
+        "value": "Arrakis Games"
+      },
+      {
+        "id": "30383",
+        "value": "Baldar"
+      },
+      {
+        "id": "51066",
+        "value": "BGA Plus"
+      },
+      {
+        "id": "30958",
+        "value": "Capstone Games"
+      },
+      {
+        "id": "10768",
+        "value": "Cranio Creations"
+      },
+      {
+        "id": "39390",
+        "value": "Engames"
+      },
+      {
+        "id": "29194",
+        "value": "GaGa Games"
+      },
+      {
+        "id": "48438",
+        "value": "Games7Days"
+      },
+      {
+        "id": "8291",
+        "value": "Korea Boardgames"
+      },
+      {
+        "id": "5400",
+        "value": "Matagot"
+      },
+      {
+        "id": "49615",
+        "value": "Meeple"
+      },
+      {
+        "id": "32591",
+        "value": "MeepleBR"
+      },
+      {
+        "id": "36763",
+        "value": "Surfin' Meeple China"
+      },
+      {
+        "id": "9234",
+        "value": "Swan Panasia Co., Ltd."
+      },
+      {
+        "id": "9499",
+        "value": "Tasty Minstrel Games"
+      },
+      {
+        "id": "4932",
+        "value": "White Goblin Games"
+      }
+    ],
+    "artists": [
+      {
+        "id": "11507",
+        "value": "Klemens Franz"
+      }
+    ],
+    "statistics": {
+      "average": 8.04662,
+      "usersrated": 35969,
+      "bayesaverage": 7.85875
+    },
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 43,
+      "2": 5
+    },
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Orléans",
+      "Orléans"
+    ]
+  },
+  "316287": {
+    "bgg_id": 316287,
+    "name": "Quest",
+    "alternate_names": [
+      "Výprava",
+      "Остання місія",
+      "Тайный Грааль",
+      "クエスト：永遠の王の物語",
+      "亞瑟傳奇",
+      "퀘스트"
+    ],
+    "description": "In Quest, all will show their true colors as Good and Evil struggle for the future of civilization. Hidden amongst King Arthur&rsquo;s loyal servants are Mordred&rsquo;s unscrupulous minions. These forces of Evil are few in number, but if they go unknown, they can sabotage Arthur&rsquo;s great quests.\n\nPlayers are secretly dealt roles that determine if their allegiance is to Good or to Evil. Then, players debate, reason, and lie as they decide who to send on Quests&mdash;knowing that if just one minion of Mordred joins, the Quest could fail. Quest includes 25 different characters and many different ways to play the base game.\n\nQuest also includes the Director's Cut, a personal recommendation from the designer about the preferred way to play Quest.\n\n\nErrata:Page 7 of the rulebook should say: (for non-Director's Cut version)\n\nThree successful Quests&mdash;Good wins! The game is over.\n\nNote: When using the optional Blind Hunter, the Blind Hunter reveals themself and a Hunt occurs (see page8). There is no discussion, nor Good's Last Chance.\n\nWhile the Blind Hunter is listed as optional, that role should always be included when including any named Good roles to provide a penalty for claiming.\n\nThe above Errata rule does not apply to the Director's Cut.\n\n",
+    "yearpublished": 2021,
+    "minplayers": 4,
+    "maxplayers": 10,
+    "playingtime": 30,
+    "mechanics": [
+      {
+        "id": "3002",
+        "value": "Deduction"
+      },
+      {
+        "id": "2891",
+        "value": "Hidden Roles"
+      },
+      {
+        "id": "2047",
+        "value": "Memory"
+      },
+      {
+        "id": "2892",
+        "value": "Roles with Asymmetric Information"
+      },
+      {
+        "id": "2020",
+        "value": "Simultaneous Action Selection"
+      },
+      {
+        "id": "2019",
+        "value": "Team-Based Game"
+      },
+      {
+        "id": "2814",
+        "value": "Traitor Game"
+      },
+      {
+        "id": "2015",
+        "value": "Variable Player Powers"
+      },
+      {
+        "id": "2017",
+        "value": "Voting"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1023",
+        "value": "Bluffing"
+      },
+      {
+        "id": "1002",
+        "value": "Card Game"
+      },
+      {
+        "id": "1039",
+        "value": "Deduction"
+      },
+      {
+        "id": "1010",
+        "value": "Fantasy"
+      },
+      {
+        "id": "1035",
+        "value": "Medieval"
+      },
+      {
+        "id": "1026",
+        "value": "Negotiation"
+      },
+      {
+        "id": "1030",
+        "value": "Party Game"
+      },
+      {
+        "id": "1081",
+        "value": "Spies / Secret Agents"
+      }
+    ],
+    "designers": [
+      {
+        "id": "11906",
+        "value": "Don Eskridge"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "10290",
+        "value": "Indie Boards & Cards"
+      },
+      {
+        "id": "9068",
+        "value": "Broadway Toys LTD"
+      },
+      {
+        "id": "2366",
+        "value": "Devir"
+      },
+      {
+        "id": "54932",
+        "value": "Elznir Games"
+      },
+      {
+        "id": "15605",
+        "value": "Galápagos Jogos"
+      },
+      {
+        "id": "58739",
+        "value": "Geekach LLC"
+      },
+      {
+        "id": "38505",
+        "value": "HeidelBÄR Games"
+      },
+      {
+        "id": "1391",
+        "value": "Hobby Japan"
+      },
+      {
+        "id": "18852",
+        "value": "Hobby World"
+      },
+      {
+        "id": "8291",
+        "value": "Korea Boardgames"
+      },
+      {
+        "id": "21053",
+        "value": "Rexhry"
+      },
+      {
+        "id": "9215",
+        "value": "TWOPLUS Games"
+      }
+    ],
+    "artists": [
+      {
+        "id": "14650",
+        "value": "Luis Francisco"
+      },
+      {
+        "id": "72369",
+        "value": "Weberson Santiago"
+      }
+    ],
+    "statistics": {
+      "average": 7.26345,
+      "usersrated": 1488,
+      "bayesaverage": 6.14868
+    },
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 2,
+      "3": 1
+    },
+    "fr_edition_exists": false,
+    "fr_edition_titles": []
   }
 }

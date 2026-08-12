@@ -7199,5 +7199,116 @@
       "2": 10,
       "3": 35
     }
+  },
+  "454103": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Athl\u00e8tes de Comp\u00e8te"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 1,
+      "3": 6
+    }
+  },
+  "39463": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Rencontre Cosmique"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "2": 2,
+      "3": 18,
+      "4": 81,
+      "5": 8
+    }
+  },
+  "552": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 13,
+      "2": 1
+    }
+  },
+  "383499": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Sorcellerie !"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 5
+    }
+  },
+  "402676": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Cities"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 9,
+      "3": 3
+    }
+  },
+  "392023": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Mycelia",
+      "Mycelia"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 9,
+      "2": 3
+    }
+  },
+  "84876": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "The Castles of Burgundy",
+      "Die Burgen von Burgund",
+      "Die Burgen von Burgund"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 140,
+      "2": 17,
+      "3": 3
+    }
+  },
+  "393165": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Inferno: Deluxe Edition"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 12
+    }
+  },
+  "164928": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Orl\u00e9ans",
+      "Orl\u00e9ans"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 43,
+      "2": 5
+    }
+  },
+  "316287": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 2,
+      "3": 1
+    }
   }
 }
