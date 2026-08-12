@@ -20,14 +20,15 @@ SURVIVOR_C = {"zatu_handle": "game-c", "zatu_title": "Game C", "bgg_id": 3}
 
 
 def test_selects_brand_new_survivors_with_no_prior_cache_entry():
-    to_check = enrich_bgg_fr_edition.select_survivors_to_check(
+    to_check, unmatched_ids = enrich_bgg_fr_edition.select_survivors_to_check(
         survivors=[SURVIVOR_A], philibert_results=[], cache={}, refresh=False
     )
     assert to_check == [SURVIVOR_A]
+    assert unmatched_ids == []
 
 
 def test_skips_survivors_whose_bgg_id_is_fully_cached():
-    to_check = enrich_bgg_fr_edition.select_survivors_to_check(
+    to_check, _ = enrich_bgg_fr_edition.select_survivors_to_check(
         survivors=[SURVIVOR_A], philibert_results=[],
         cache={"1": {"fr_edition_exists": True, "language_level": "LOW"}}, refresh=False,
     )
@@ -38,7 +39,7 @@ def test_rechecks_a_cached_bgg_id_missing_language_level():
     # An entry cached before language-dependence scraping landed (or one that hasn't been
     # backfilled yet) has fr_edition_exists but no language_level key at all -- still needs a
     # visit, even though fr_edition_exists is already known.
-    to_check = enrich_bgg_fr_edition.select_survivors_to_check(
+    to_check, _ = enrich_bgg_fr_edition.select_survivors_to_check(
         survivors=[SURVIVOR_A], philibert_results=[],
         cache={"1": {"fr_edition_exists": True, "fr_edition_titles": []}}, refresh=False,
     )
@@ -46,7 +47,7 @@ def test_rechecks_a_cached_bgg_id_missing_language_level():
 
 
 def test_refresh_flag_rechecks_even_fully_cached_survivors():
-    to_check = enrich_bgg_fr_edition.select_survivors_to_check(
+    to_check, _ = enrich_bgg_fr_edition.select_survivors_to_check(
         survivors=[SURVIVOR_A], philibert_results=[],
         cache={"1": {"fr_edition_exists": True, "language_level": "LOW"}}, refresh=True,
     )
@@ -55,14 +56,14 @@ def test_refresh_flag_rechecks_even_fully_cached_survivors():
 
 def test_dedupes_multiple_zatu_skus_sharing_the_same_bgg_id():
     survivor_a2 = {"zatu_handle": "game-a-deluxe", "zatu_title": "Game A Deluxe", "bgg_id": 1}
-    to_check = enrich_bgg_fr_edition.select_survivors_to_check(
+    to_check, _ = enrich_bgg_fr_edition.select_survivors_to_check(
         survivors=[SURVIVOR_A, survivor_a2], philibert_results=[], cache={}, refresh=False
     )
     assert len(to_check) == 1  # only checked once per bgg_id, not once per Zatu SKU
 
 
 def test_mixed_selection_across_survivors():
-    to_check = enrich_bgg_fr_edition.select_survivors_to_check(
+    to_check, _ = enrich_bgg_fr_edition.select_survivors_to_check(
         survivors=[SURVIVOR_A, SURVIVOR_B, SURVIVOR_C],
         philibert_results=[],
         cache={"1": {"fr_edition_exists": True, "language_level": "LOW"}},  # fully cached, skip
@@ -214,6 +215,9 @@ def test_main_preserves_existing_cache_entries_not_rechecked(tmp_path, monkeypat
 
     monkeypatch.setenv("BGG_TOKEN", "fake-token")
     monkeypatch.setattr(enrich_bgg_fr_edition, "fetch_things", fake_fetch_things)
+    unmatched_file = tmp_path / "unmatched_bgg_ids.json"
+    unmatched_file.write_text(json.dumps({"unmatched_mappings": {}}))  # Empty, no unmatched games
+
     monkeypatch.setattr(
         sys,
         "argv",
@@ -223,6 +227,7 @@ def test_main_preserves_existing_cache_entries_not_rechecked(tmp_path, monkeypat
             "--philibert-results", str(philibert_file),
             "--out", str(out_file),
             "--details-out", str(details_file),
+            "--unmatched-bgg-ids", str(unmatched_file),
             "--rate-limit-sec", "0",
         ],
     )
@@ -254,6 +259,9 @@ def test_main_refresh_flag_rechecks_everything(tmp_path, monkeypatch):
         items = [_item(1, fr_exists=False, language_level="LOW")]
         return items, _fake_stats(items_returned=1)
 
+    unmatched_file = tmp_path / "unmatched_bgg_ids.json"
+    unmatched_file.write_text(json.dumps({"unmatched_mappings": {}}))  # Empty, no unmatched games
+
     monkeypatch.setenv("BGG_TOKEN", "fake-token")
     monkeypatch.setattr(enrich_bgg_fr_edition, "fetch_things", fake_fetch_things)
     monkeypatch.setattr(
@@ -265,6 +273,7 @@ def test_main_refresh_flag_rechecks_everything(tmp_path, monkeypatch):
             "--philibert-results", str(philibert_file),
             "--out", str(out_file),
             "--details-out", str(details_file),
+            "--unmatched-bgg-ids", str(unmatched_file),
             "--rate-limit-sec", "0",
             "--refresh",
         ],
