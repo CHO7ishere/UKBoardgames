@@ -1,17 +1,33 @@
 {
   "326869": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 1,
+      "3": 1
+    }
   },
   "430765": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": "HIGH",
+    "language_votes": {
+      "5": 1
+    }
   },
   "291457": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Gloomhaven: Les M\u00e2choires du lion"
-    ]
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "1": 1,
+      "3": 3,
+      "4": 25,
+      "5": 10
+    }
   },
   "169786": {
     "fr_edition_exists": true,
@@ -19,114 +35,205 @@
       "Scythe",
       "Scythe",
       "Scythe"
-    ]
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "1": 1,
+      "2": 14,
+      "3": 53,
+      "4": 4,
+      "5": 1
+    }
   },
   "2511": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
-      "Sherlock Holmes D\u00e9tective Conseil: Les meurtres de la Tamise et autres enqu\u00eates",
+      "D\u00e9tective Conseil",
       "Sherlock  Holmes D\u00e9tective Conseil",
-      "D\u00e9tective Conseil"
-    ]
+      "Sherlock Holmes D\u00e9tective Conseil: Les meurtres de la Tamise et autres enqu\u00eates"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 8,
+      "5": 76
+    }
   },
   "226522": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
-      "EXIT: Le Jeu \u2013 Le Cadavre de l'Orient-Express"
-    ]
+      "EXIT: Le Jeu \u2013 Le Cadavre de l\\'Orient-Express"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 1,
+      "5": 6
+    }
   },
   "416851": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Ch\u00e2teau Combo"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 2,
+      "2": 18,
+      "3": 2
+    }
   },
   "356314": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
-      "EXIT: Calendrier de l'Avent \u2013 La Temp\u00eate Silencieuse"
-    ]
+      "EXIT: Calendrier de l\\'Avent \u2013 La Temp\u00eate Silencieuse"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 1,
+      "5": 2
+    }
   },
   "363247": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Azul: Ma\u00eetre Chocolatier",
       "Azul: Ma\u00eetre Chocolatier"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 11
+    }
   },
   "281259": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
-      "L'\u00cele des Chats"
-    ]
+      "L\\'\u00cele des Chats"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 16,
+      "4": 4
+    }
   },
   "407180": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Tr\u00e8s Fut\u00e9 ! Deluxe"
-    ]
+    ],
+    "language_level": null,
+    "language_votes": {}
   },
   "394735": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
-      "EXIT: Calendrier de l'Avent \u2013 Disparition \u00e0 Hollywood"
-    ]
+      "EXIT: Calendrier de l\\'Avent \u2013 Disparition \u00e0 Hollywood"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 1
+    }
   },
   "393672": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
-      "Gloomhaven: Boutons &amp; Bestioles"
-    ]
+      "Gloomhaven: Boutons & Bestioles"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "3": 1,
+      "4": 5,
+      "5": 3
+    }
   },
   "269207": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Les Tavernes de la Vall\u00e9e Profonde"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 29
+    }
   },
   "280748": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Escape the Dark Sector"
-    ]
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 2
+    }
   },
   "156546": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": "HIGH",
+    "language_votes": {
+      "3": 1,
+      "4": 4,
+      "5": 1
+    }
   },
   "437261": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Micro Macro: Kids \u2013 Le Parc Zinzin"
-    ]
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 1
+    }
   },
   "296345": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Sherlock Holmes: D\u00e9tective Conseil \u2013 Les Francs-tireurs de Baker Street"
-    ]
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 1,
+      "5": 5
+    }
   },
   "266121": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Unlock!: Heroic Adventures"
-    ]
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 4,
+      "5": 2
+    }
   },
   "271601": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
-      "L'Ombre du Kraken"
-    ]
+      "L\\'Ombre du Kraken"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 6,
+      "3": 2
+    }
   },
   "409496": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Les Charlatans de Belcastel: le Duel"
-    ]
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 2
+    }
   },
   "341027": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 1
+    }
   },
   "174430": {
     "fr_edition_exists": true,
@@ -138,77 +245,139 @@
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Unlock!: Timeless Adventures"
-    ]
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 3,
+      "5": 1
+    }
   },
   "334590": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Les Fiefs de Norbois",
       "Les Fiefs de Norbois"
-    ]
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 11
+    }
   },
   "177736": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
-      "\u00c0 la gloire d'Odin",
-      "\u00c0 la gloire d'Odin",
-      "\u00c0 la gloire d'Odin"
-    ]
+      "\u00c0 la gloire d\\'Odin",
+      "\u00c0 la gloire d\\'Odin",
+      "\u00c0 la gloire d\\'Odin"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "1": 1,
+      "2": 7,
+      "3": 25,
+      "4": 1
+    }
   },
   "294612": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Unlock!: Epic Adventures"
-    ]
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 1,
+      "5": 3
+    }
   },
   "255675": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
-      "EXIT: Les Catacombes de l'Effroi"
-    ]
+      "EXIT: Les Catacombes de l\\'Effroi"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 1,
+      "5": 2
+    }
   },
   "266722": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Sengoku: Provinces en Guerre",
       "Rumble Nation"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 7,
+      "3": 1
+    }
   },
   "202670": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
-      "Ticket to Ride: Rails &amp; Sails",
+      "Ticket to Ride: Rails & Sails",
       "Les Aventuriers du Rail: Autour du Monde"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 5
+    }
   },
   "380226": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 1,
+      "3": 1
+    }
   },
   "118048": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Targui",
       "Targui"
-    ]
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 12,
+      "3": 41,
+      "4": 2
+    }
   },
   "310448": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Zombie Teenz Evolution"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 2,
+      "3": 1
+    }
   },
   "190082": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Le myst\u00e8re de Whitehall"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 2,
+      "2": 9,
+      "3": 1
+    }
   },
   "364766": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "MicroMacro: Crime City \u2013 Tricks Town"
-    ]
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 2,
+      "4": 1
+    }
   },
   "171131": {
     "fr_edition_exists": true,
@@ -217,452 +386,840 @@
       "Captain Sonar",
       "Captain Sonar",
       "Captain Sonar"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 17,
+      "2": 3
+    }
   },
   "415945": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Unmatched: Coup de Th\u00e9\u00e2tre"
-    ]
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 1
+    }
   },
   "447174": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "A Wild Venture: Sur des sentiers sauvages"
-    ]
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "2": 1,
+      "4": 7,
+      "5": 2
+    }
   },
   "317372": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "EXIT: Le Jeu \u2013 La Porte Entre Les Mondes"
-    ]
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 2
+    }
   },
   "431718": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 1
+    }
   },
   "82222": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 3,
+      "3": 19,
+      "4": 5,
+      "5": 1
+    }
   },
   "204305": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
-      "Sherlock Holmes: D\u00e9tective Conseil \u2013 Jack l'Eventreur et Aventures \u00e0 West End"
-    ]
+      "Sherlock Holmes: D\u00e9tective Conseil \u2013 Jack l\\'Eventreur et Aventures \u00e0 West End"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 2,
+      "5": 8
+    }
   },
   "319966": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Le Roi est Mort"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 7,
+      "2": 6
+    }
   },
   "256680": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Return to Dark Tower"
-    ]
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 1,
+      "5": 1
+    }
   },
   "177478": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "IKI"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 23
+    }
   },
   "386835": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Final Girl: Kit de D\u00e9marrage"
-    ]
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 1
+    }
   },
   "324853": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "EXIT: Le Jeu \u2013 Le Bandit de Fortune City"
-    ]
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 1,
+      "5": 1
+    }
   },
   "365104": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 1,
+      "2": 2
+    }
   },
   "233312": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Histoires de Peluches"
-    ]
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 8,
+      "5": 7
+    }
   },
   "255984": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Sleeping Gods"
-    ]
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "3": 1,
+      "4": 9,
+      "5": 11
+    }
   },
   "223931": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
-      "Sherlock Holmes D\u00e9tective Conseil: Carlton House &amp; Queen's Park"
-    ]
+      "Sherlock Holmes D\u00e9tective Conseil: Carlton House & Queen\\'s Park"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 1,
+      "5": 2
+    }
   },
   "318184": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Imperium: Antique"
-    ]
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "2": 1,
+      "3": 1,
+      "4": 22,
+      "5": 4
+    }
   },
   "415550": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Talisman: Le Jeu des Qu\u00eates Magiques \u2013 5e \u00e9dition"
-    ]
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 1
+    }
   },
   "341583": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "EXIT: Le Jeu \u2013 Le retour \u00e0 la cabane abandon\u00e9e"
-    ]
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "5": 2
+    }
   },
   "436446": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": null,
+    "language_votes": {}
   },
   "284742": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Honey Buzz"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 8,
+      "3": 3
+    }
   },
   "132531": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Roll for the Galaxy"
-    ]
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 14,
+      "3": 35,
+      "4": 6,
+      "5": 2
+    }
   },
   "447298": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Disney Villainous: Larmes de fond"
-    ]
+    ],
+    "language_level": null,
+    "language_votes": {}
   },
   "457587": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": null,
+    "language_votes": {}
   },
   "271055": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Dwellings of Eldervale"
-    ]
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 8,
+      "4": 2
+    }
   },
   "272533": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Kingdom Rush: Rift in Time"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 6,
+      "3": 1
+    }
   },
   "252526": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": "HIGH",
+    "language_votes": {
+      "3": 1,
+      "4": 2,
+      "5": 2
+    }
   },
   "380607": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Great Western Trail: New Zealand",
       "Great Western Trail: Nouvelle-Z\u00e9lande"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 13
+    }
   },
   "406305": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 3
+    }
   },
   "413252": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Mayor of Chicago"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 1
+    }
   },
   "253499": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "A War of Whispers"
-    ]
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 1,
+      "3": 7
+    }
   },
   "233896": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 1,
+      "3": 2
+    }
   },
   "220517": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 2,
+      "3": 4,
+      "4": 2
+    }
   },
   "128882": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
-      "Avalon",
-      "The Resistance: Avalon"
-    ]
+      "The Resistance: Avalon",
+      "Avalon"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 21,
+      "2": 47
+    }
   },
   "413248": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "R.A.V.E.L."
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 3
+    }
   },
   "311193": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Anno 1800: The Board Game"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 10,
+      "2": 7,
+      "3": 1
+    }
   },
   "161970": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Alchimistes",
       "Alchimistes"
-    ]
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 23,
+      "3": 36,
+      "4": 2
+    }
   },
   "318084": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Les Hauts Fourneaux"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 3,
+      "2": 17
+    }
   },
   "354886": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Le grand prix de Belcastel"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 3
+    }
   },
   "333516": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": "HIGH",
+    "language_votes": {
+      "5": 4
+    }
   },
   "315727": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 2
+    }
   },
   "376683": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Sur les Traces de Darwin"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 8
+    }
   },
   "340466": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
-      "L'Insondable"
-    ]
+      "L\\'Insondable"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 8
+    }
   },
   "304051": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Creature Comforts"
-    ]
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 14,
+      "4": 1
+    }
   },
   "322563": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
-      "Dice Throne: Pyromancienne vs Voleur de l'Ombre",
-      "Dice Throne: Saison 1 Remasteris\u00e9e \u2013 Pyromancienne vs Voleur de l'Ombre"
-    ]
+      "Dice Throne: Saison 1 Remasteris\u00e9e \u2013 Pyromancienne vs Voleur de l\\'Ombre",
+      "Dice Throne: Pyromancienne vs Voleur de l\\'Ombre"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 2,
+      "4": 1,
+      "5": 2
+    }
   },
   "366162": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Tr\u00e8s fut\u00e9 4 ever"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 5
+    }
   },
   "198830": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": "HIGH",
+    "language_votes": {
+      "3": 2,
+      "4": 7
+    }
   },
   "266810": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
-      "Paladins du Royaume de l'Ouest"
-    ]
+      "Paladins du Royaume de l\\'Ouest"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 1,
+      "2": 23,
+      "3": 3,
+      "4": 1
+    }
   },
   "360152": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": null,
+    "language_votes": {}
   },
   "98527": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
-      "L'Ombre de Kilforth"
-    ]
+      "L\\'Ombre de Kilforth"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "3": 4,
+      "4": 5,
+      "5": 1
+    }
   },
   "359124": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Les animaux de Baker Street"
-    ]
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 3,
+      "5": 2
+    }
   },
   "142402": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": "HIGH",
+    "language_votes": {
+      "3": 1,
+      "4": 3
+    }
   },
   "411402": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 2
+    }
   },
   "188920": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "This War of Mine: le jeu de plateau"
-    ]
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "3": 1,
+      "4": 7,
+      "5": 26
+    }
   },
   "316546": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Tr\u00e8s fut\u00e9 \u00e0 la puissance trois"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 8
+    }
   },
   "345266": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 1
+    }
   },
   "404462": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": null,
+    "language_votes": {}
   },
   "425765": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": "HIGH",
+    "language_votes": {
+      "5": 1
+    }
   },
   "212662": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": null,
+    "language_votes": {}
   },
   "173634": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": "HIGH",
+    "language_votes": {
+      "3": 1,
+      "4": 2
+    }
   },
   "328908": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Le Projet"
-    ]
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 1,
+      "5": 4
+    }
   },
   "294230": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Souviens-toi..."
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 2
+    }
   },
   "425796": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": null,
+    "language_votes": {}
   },
   "325494": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "ISS Vanguard"
-    ]
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 3,
+      "5": 9
+    }
   },
   "249746": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Nanty Narking",
       "Nanty Narking"
-    ]
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "3": 2,
+      "4": 4,
+      "5": 1
+    }
   },
   "293207": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
-      "Eila et l'Eclat de la Montagne"
-    ]
+      "Eila et l\\'Eclat de la Montagne"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 3,
+      "4": 3
+    }
   },
   "405923": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 2
+    }
   },
   "232361": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": "HIGH",
+    "language_votes": {
+      "2": 1,
+      "3": 1,
+      "4": 6
+    }
   },
   "272682": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Exp\u00e9dition \u00e0 Newdale"
-    ]
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 1,
+      "3": 2,
+      "4": 1
+    }
   },
   "225482": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 6
+    }
   },
   "66589": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Navegador"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 34,
+      "2": 18
+    }
   },
   "350948": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Familiar Tales"
-    ]
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 1,
+      "5": 1
+    }
   },
   "198287": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Andor: Le Dernier Espoir"
-    ]
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 1
+    }
   },
   "167400": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Ashes: Les H\u00e9ritiers du Ph\u00e9nix"
-    ]
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "3": 1,
+      "4": 21
+    }
   },
   "210232": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 3
+    }
   },
   "423401": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
-      "Minos: L'Aube de l'\u00c2ge de Bronze"
-    ]
+      "Minos: L\\'Aube de l\\'\u00c2ge de Bronze"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 6
+    }
   },
   "371539": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": null,
+    "language_votes": {}
   },
   "144797": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 2,
+      "3": 7,
+      "4": 5
+    }
   },
   "181796": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "The Prodigals Club"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 5
+    }
   },
   "419199": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 4
+    }
   },
   "306637": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 1
+    }
   },
   "347601": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 1
+    }
   },
   "374895": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Dragons des Mers"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 4
+    }
   },
   "350992": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 1
+    }
   },
   "330097": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 1
+    }
   },
   "400137": {
     "fr_edition_exists": true,
@@ -670,27 +1227,48 @@
       "Siberian Manhunt",
       "Siberian Manhunt",
       "Siberian Manhunt"
-    ]
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 1,
+      "4": 1
+    }
   },
   "366251": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 3
+    }
   },
   "340237": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Wonder Book"
-    ]
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 3
+    }
   },
   "329121": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 1
+    }
   },
   "309917": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
-      "Hidden Games Sc\u00e8ne du crime: Le diad\u00e8me d'Amaryllis"
-    ]
+      "Hidden Games Sc\u00e8ne du crime: Le diad\u00e8me d\\'Amaryllis"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 2
+    }
   },
   "2346": {
     "fr_edition_exists": true,
@@ -700,75 +1278,126 @@
       "DVONN",
       "DVONN",
       "DVONN"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 25
+    }
   },
   "378574": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": null,
+    "language_votes": {}
   },
   "374266": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": null,
+    "language_votes": {}
   },
   "458221": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Feudum: Septennial Edition"
-    ]
+    ],
+    "language_level": null,
+    "language_votes": {}
   },
   "400617": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": null,
+    "language_votes": {}
   },
   "419170": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": null,
+    "language_votes": {}
   },
   "370581": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 3,
+      "3": 1
+    }
   },
   "412731": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 1
+    }
   },
   "424507": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 3
+    }
   },
   "372197": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 1
+    }
   },
   "419645": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Mindbug: Bataille de Fruits Galactique"
-    ]
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 1
+    }
   },
   "387780": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Les rats de Wistar"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 8
+    }
   },
   "445785": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 1
+    }
   },
   "419642": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Mindbug: Bataille de Fruits Royale"
-    ]
+    ],
+    "language_level": null,
+    "language_votes": {}
   },
   "422742": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": "HIGH",
+    "language_votes": {
+      "5": 1
+    }
   },
   "211693": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": null,
+    "language_votes": {}
   },
   "822": {
     "fr_edition_exists": true,
@@ -776,28 +1405,52 @@
       "Carcassonne",
       "Carcassonne",
       "Carcassonne",
+      "Carcassonne",
       "Carcassonne de voyage",
-      "Reise-Carcassonne",
-      "Carcassonne"
-    ]
+      "Reise-Carcassonne"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 490,
+      "2": 7,
+      "3": 1,
+      "5": 1
+    }
   },
   "420033": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Vantage"
-    ]
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 8,
+      "5": 5
+    }
   },
   "406652": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Compile"
-    ]
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 1,
+      "3": 5,
+      "4": 3
+    }
   },
   "199792": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Everdell"
-    ]
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "3": 11,
+      "4": 42,
+      "5": 2
+    }
   },
   "291453": {
     "fr_edition_exists": true,
@@ -812,7 +1465,12 @@
       "SCOUT",
       "SCOUT",
       "SCOUT"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 29,
+      "2": 1
+    }
   },
   "260605": {
     "fr_edition_exists": true,
@@ -820,7 +1478,11 @@
       "\u0633\u0628\u0627\u0642 \u0627\u0644\u062c\u0645\u0627\u0644",
       "Camel Up (Second Edition)",
       "Camel Up (Second Edition)"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 21
+    }
   },
   "199561": {
     "fr_edition_exists": true,
@@ -829,114 +1491,223 @@
       "Sagrada",
       "Sagrada",
       "Sagrada"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 4,
+      "2": 41,
+      "3": 5
+    }
   },
   "444481": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Star Wars: La Bataille de Hoth"
-    ]
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 3,
+      "4": 3,
+      "5": 1
+    }
   },
   "359871": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Arcs"
-    ]
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "3": 5,
+      "4": 20,
+      "5": 1
+    }
   },
   "209418": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Dominion: Seconde \u00c9dition"
-    ]
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 1,
+      "3": 7,
+      "4": 4
+    }
   },
   "411567": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "The Gang"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 2,
+      "2": 14,
+      "3": 5
+    }
   },
   "50": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
+      "Les Cit\u00e9s Perdues",
       "Lost Cities Duel",
       "Lost Cities: Le Duel",
-      "Les Cit\u00e9s Perdues",
       "Les Cit\u00e9s Perdues"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 134
+    }
   },
   "446497": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Hot Streak"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 9
+    }
   },
   "231733": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Obsession"
-    ]
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 7,
+      "3": 17,
+      "4": 4,
+      "5": 1
+    }
   },
   "225694": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Decrypto: 5th Anniversary Edition",
       "Decrypto"
-    ]
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "2": 5,
+      "4": 5,
+      "5": 24
+    }
   },
   "203420": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "EXIT: Le Jeu \u2013 La Cabane Abandonn\u00e9e"
-    ]
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 2,
+      "5": 6
+    }
   },
   "142057": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 2
+    }
   },
   "274364": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Watergate"
-    ]
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "3": 6,
+      "4": 12,
+      "5": 1
+    }
   },
   "246900": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Eclipse: Second Dawn for the Galaxy"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 8,
+      "2": 10
+    }
   },
   "295486": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "My City"
-    ]
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "1": 3,
+      "2": 3,
+      "3": 7,
+      "4": 1
+    }
   },
   "147020": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Star Realms"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 58,
+      "3": 40,
+      "4": 3,
+      "5": 1
+    }
   },
   "341504": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Colt Express: Big Box",
       "Colt Express: Big Box"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 2
+    }
   },
   "242302": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Space Base"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 12,
+      "3": 6,
+      "5": 2
+    }
   },
   "295947": {
-    "fr_edition_exists": null,
-    "fr_edition_titles": []
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Cascadia"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 9,
+      "2": 41,
+      "3": 3
+    }
   },
   "437306": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 2,
+      "2": 5,
+      "3": 1
+    }
   },
   "385761": {
     "fr_edition_exists": true,
@@ -946,27 +1717,46 @@
       "Faraway",
       "Faraway",
       "Faraway"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 29
+    }
   },
   "406312": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": null,
+    "language_votes": {}
   },
   "390478": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 1,
+      "5": 1
+    }
   },
   "439765": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Unmatched: Combats de l\u00e9gendes \u2013 Volume 3"
-    ]
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 1
+    }
   },
   "264241": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Mandala"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 17
+    }
   },
   "194655": {
     "fr_edition_exists": true,
@@ -974,105 +1764,204 @@
       "Santorini",
       "Santorini",
       "Santorini"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 37,
+      "2": 16,
+      "3": 1
+    }
   },
   "163967": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Tiny Epic Galaxies"
-    ]
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 3,
+      "3": 24,
+      "4": 5,
+      "5": 1
+    }
   },
   "378979": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": "HIGH",
+    "language_votes": {
+      "3": 1,
+      "4": 2
+    }
   },
   "274637": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Unmatched: Combats de l\u00e9gende, volume 1"
-    ]
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 8,
+      "4": 1,
+      "5": 1
+    }
   },
   "345972": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Cat in the Box: Deluxe Edition",
       "Cat in the Box"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 22
+    }
   },
   "246784": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Cryptide"
-    ]
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 4,
+      "3": 20,
+      "4": 2
+    }
   },
   "291508": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Tiny Epic Dinosaurs"
-    ]
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 4
+    }
   },
   "286096": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Tapestry"
-    ]
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 1,
+      "3": 19,
+      "4": 6,
+      "5": 1
+    }
   },
   "393429": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Critter Kitchen"
-    ]
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 1,
+      "3": 4,
+      "4": 1
+    }
   },
   "233078": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Twilight Imperium: Quatri\u00e8me \u00c9dition"
-    ]
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "3": 2,
+      "4": 20,
+      "5": 6
+    }
   },
   "118": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
-      "Modern Art",
       "Art Moderne",
+      "Modern Art",
       "Modern Art"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 67,
+      "2": 7
+    }
   },
   "367966": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Endeavor: Eaux profondes"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 11,
+      "3": 6,
+      "4": 2
+    }
   },
   "93": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "El Grande",
       "El Grande"
-    ]
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "1": 4,
+      "2": 23,
+      "3": 90,
+      "4": 12
+    }
   },
   "115746": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
-      "La Guerre de l'anneau"
-    ]
+      "La Guerre de l\\'anneau"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "1": 1,
+      "3": 5,
+      "4": 52,
+      "5": 8
+    }
   },
   "331787": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Tiny Epic Dungeons"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 4,
+      "2": 3,
+      "3": 1
+    }
   },
   "357563": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Akropolis"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 16,
+      "2": 4
+    }
   },
   "204472": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Sub Terra"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 6,
+      "2": 8,
+      "3": 1
+    }
   },
   "352515": {
     "fr_edition_exists": true,
@@ -1080,239 +1969,448 @@
       "Trio",
       "Trio",
       "Trio"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 33
+    }
   },
   "335764": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Unmatched: Combats de l\u00e9gende Vol. 2"
-    ]
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 2
+    }
   },
   "10630": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "M\u00e9moire 44",
       "M\u00e9moire 44"
-    ]
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "1": 1,
+      "2": 29,
+      "3": 82,
+      "4": 12,
+      "5": 2
+    }
   },
   "216849": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 1
+    }
   },
   "159675": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
-      "Terres d'Arle"
-    ]
+      "Terres d\\'Arle"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 26,
+      "3": 10,
+      "4": 1
+    }
   },
   "370597": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Fugitif"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 1
+    }
   },
   "251219": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Istanbul: Big Box"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 3,
+      "2": 5,
+      "3": 2
+    }
   },
   "300531": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Paleo"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 20,
+      "3": 15
+    }
   },
   "331265": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Port Royal: Big Box"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 1,
+      "2": 4,
+      "3": 2
+    }
   },
   "31481": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Galaxy Trucker",
       "Galaxy Trucker"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 19,
+      "2": 86,
+      "3": 9
+    }
   },
   "283155": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Calico"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 30
+    }
   },
   "385331": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 1
+    }
   },
   "175914": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 19,
+      "3": 16
+    }
   },
   "429863": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Covenant"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 4
+    }
   },
   "362944": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
-      "La Guerre de l'Anneau: Le jeu de cartes"
-    ]
+      "La Guerre de l\\'Anneau: Le jeu de cartes"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "3": 1,
+      "4": 11
+    }
   },
   "315767": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Cartographers Heroes"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 6,
+      "3": 1
+    }
   },
   "298047": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Marvel United"
-    ]
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 4,
+      "3": 9
+    }
   },
   "93260": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Summoner Wars: Master Set"
-    ]
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 2,
+      "3": 15,
+      "4": 14
+    }
   },
   "359402": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Ahoy"
-    ]
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 4,
+      "4": 1
+    }
   },
   "417268": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 1
+    }
   },
   "436821": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Everdell Silverfrost"
-    ]
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 1
+    }
   },
   "284108": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Pictures",
       "Pictures"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 8
+    }
   },
   "202426": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Confluence Sid\u00e9rale: Edition Remasterisee"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 8,
+      "3": 5
+    }
   },
   "408637": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "The Anarchy"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 6,
+      "3": 1,
+      "4": 1
+    }
   },
   "331106": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
-      "The Witcher: L'Ancien Monde",
-      "The Witcher: L'Ancien Monde"
-    ]
+      "The Witcher: L\\'Ancien Monde",
+      "The Witcher: L\\'Ancien Monde"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "1": 1,
+      "3": 1,
+      "4": 9,
+      "5": 4
+    }
   },
   "322561": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
-      "Dice Throne: Barbare vs Elfe Lunaire",
-      "Dice Throne: Saison 1 Remasteris\u00e9e \u2013 Combat 1: Barbare v. Elfe lunaire"
-    ]
+      "Dice Throne: Saison 1 Remasteris\u00e9e \u2013 Combat 1: Barbare v. Elfe lunaire",
+      "Dice Throne: Barbare vs Elfe Lunaire"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 1,
+      "5": 2
+    }
   },
   "699": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "HeroQuest",
       "HeroQuest"
-    ]
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "2": 3,
+      "3": 15,
+      "4": 35,
+      "5": 2
+    }
   },
   "360896": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Tiny Epic Vikings"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 1
+    }
   },
   "420805": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Black Forest"
-    ]
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 3,
+      "4": 2
+    }
   },
   "356313": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
-      "EXIT: Le Jeu \u2013 L'H\u00e9ritage du Voyageur"
-    ]
+      "EXIT: Le Jeu \u2013 L\\'H\u00e9ritage du Voyageur"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 1,
+      "5": 1
+    }
   },
   "155426": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Castles of Mad King Ludwig: Les extravagants ch\u00e2teaux de Bavi\u00e8re"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 15,
+      "2": 42,
+      "3": 3,
+      "4": 1
+    }
   },
   "409978": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": "HIGH",
+    "language_votes": {
+      "3": 1,
+      "4": 2
+    }
   },
   "429767": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 3
+    }
   },
   "416079": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": "HIGH",
+    "language_votes": {
+      "3": 1,
+      "4": 4
+    }
   },
   "244258": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 1
+    }
   },
   "307621": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 2
+    }
   },
   "203993": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Lorenzo le Magnifique"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 18
+    }
   },
   "368676": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
-      "Leaf: Berceau d'Automne"
-    ]
+      "Leaf: Berceau d\\'Automne"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 2,
+      "2": 2
+    }
   },
   "70149": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
-      "Ora &amp; Labora"
-    ]
+      "Ora & Labora"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 1,
+      "2": 33,
+      "3": 14
+    }
   },
   "401325": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "The Witcher: La Voie Du Destin"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 2,
+      "4": 1
+    }
   },
   "394106": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Everdell Farshore"
-    ]
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 5
+    }
   },
   "312859": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 4
+    }
   },
   "177352": {
     "fr_edition_exists": true,
@@ -1320,36 +2418,4775 @@
       "Carson City: Big Box",
       "Carson City: Big Box",
       "Carson City: Big Box"
-    ]
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 9,
+      "2": 2
+    }
   },
   "155821": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Inis",
       "Inis"
-    ]
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "3": 5,
+      "4": 23
+    }
   },
   "295681": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 2
+    }
   },
   "294702": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 1,
+      "2": 4
+    }
   },
   "415078": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": null,
+    "language_votes": {}
   },
   "15363": {
     "fr_edition_exists": false,
-    "fr_edition_titles": []
+    "fr_edition_titles": [],
+    "language_level": "MED",
+    "language_votes": {
+      "1": 1,
+      "2": 2,
+      "3": 30,
+      "4": 2
+    }
   },
   "48726": {
     "fr_edition_exists": true,
     "fr_edition_titles": [
       "Alien Frontiers: Aurora",
       "Alien Frontiers: Aurora"
-    ]
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 10,
+      "3": 36,
+      "4": 3
+    }
+  },
+  "30549": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Pandemic: Edition 10\u00e8me anniversaire",
+      "Pand\u00e9mie",
+      "Pand\u00e9mie",
+      "Pand\u00e9mie",
+      "Pandemic"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 10,
+      "2": 282,
+      "3": 48,
+      "4": 3,
+      "5": 1
+    }
+  },
+  "266192": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Wingspan",
+      "Wingspan"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "3": 30,
+      "4": 81,
+      "5": 4
+    }
+  },
+  "420087": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Flip 7",
+      "Flip 7"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 7,
+      "2": 25
+    }
+  },
+  "14996": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Les Aventuriers du Rail: Europe",
+      "Les Aventuriers du Rail: Europe",
+      "Les Aventuriers du Rail: Europe",
+      "Les Aventuriers du Rail: Europe",
+      "Les Aventuriers du Rail: Europe",
+      "Les Aventuriers du Rail: Europe"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 171,
+      "2": 10
+    }
+  },
+  "230802": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Azul Mini",
+      "Azul",
+      "Azul",
+      "Azul",
+      "Azul",
+      "Azul",
+      "Azul Mini",
+      "Azul",
+      "Azul"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 105
+    }
+  },
+  "173346": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "7 Wonders Duel",
+      "7 Wonders Duel",
+      "7 Wonders Duel",
+      "7 Wonders Duel",
+      "7 Wonders Duel",
+      "7 Wonders Duel"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 121,
+      "2": 9
+    }
+  },
+  "148228": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Splendor",
+      "Splendor",
+      "Splendor",
+      "Splendor",
+      "Splendor",
+      "Splendor",
+      "Splendor",
+      "Splendor",
+      "Splendor",
+      "Splendor",
+      "Splendor",
+      "Splendor",
+      "Splendor",
+      "Splendor",
+      "Splendor"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 175,
+      "2": 1,
+      "5": 2
+    }
+  },
+  "54043": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Jaipur",
+      "Jaipur",
+      "Jaipur",
+      "Jaipur",
+      "Jaipur",
+      "Jaipur",
+      "Jaipur",
+      "Jaipur",
+      "Jaipur",
+      "Jaipur",
+      "Jaipur",
+      "Jaipur",
+      "Jaipur",
+      "Jaipur",
+      "Jaipur",
+      "Jaipur",
+      "Jaipur",
+      "Jaipur"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 103
+    }
+  },
+  "163412": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Patchwork: Edition 10\u00e8me Anniversaire",
+      "Patchwork",
+      "Patchwork",
+      "Patchwork"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 101,
+      "2": 1
+    }
+  },
+  "373106": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Sky Team"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 25,
+      "2": 50,
+      "3": 7
+    }
+  },
+  "367220": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Sea Salt & Paper",
+      "Sea Salt & Paper",
+      "Sea Salt & Paper"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 37
+    }
+  },
+  "237182": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "HIGH",
+    "language_votes": {
+      "2": 1,
+      "3": 23,
+      "4": 53,
+      "5": 5
+    }
+  },
+  "204583": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Kingdomino: Expo 2020",
+      "Kingdomino",
+      "Kingdomino",
+      "Kingdomino",
+      "Kingdomino",
+      "K-Domino\\'Z",
+      "Kingdomino",
+      "Kingdomino",
+      "Kingdomino",
+      "Kingdomino XXL",
+      "Kingdomino",
+      "Kingdomino",
+      "Kingdomino",
+      "Kingdomino",
+      "Kingdomino",
+      "Kingdomino",
+      "Kingdomino",
+      "Kingdomino",
+      "Kingdomino",
+      "Kingdomino",
+      "Kingdomino",
+      "Kingdomino",
+      "Kingdomino",
+      "Kingdomino",
+      "Kingdomino",
+      "Kingdomino"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 63
+    }
+  },
+  "167791": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Terraforming Mars",
+      "Terraforming Mars",
+      "Terraforming Mars",
+      "Terraforming Mars"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "1": 1,
+      "2": 12,
+      "3": 51,
+      "4": 64,
+      "5": 6
+    }
+  },
+  "436217": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Le Seigneur des Anneaux: Le Destin de la Communaut\u00e9"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 2,
+      "3": 8,
+      "4": 1,
+      "5": 2
+    }
+  },
+  "413246": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Bomb Busters"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 5,
+      "3": 12,
+      "4": 3
+    }
+  },
+  "410201": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Wyrmspan"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 1,
+      "3": 14,
+      "4": 3
+    }
+  },
+  "224517": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Brass: Birmingham",
+      "Brass: Birmingham"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 58,
+      "2": 3
+    }
+  },
+  "316377": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "7 Wonders (Second Edition)"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 16,
+      "2": 1
+    }
+  },
+  "414317": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Harmonies",
+      "Harmonies",
+      "Harmonies"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 52
+    }
+  },
+  "192291": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Sushi Go Party!"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 4,
+      "2": 37,
+      "3": 2
+    }
+  },
+  "421006": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Le Seigneur des Anneaux: Duel pour la Terre du Milieu"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 21,
+      "3": 1
+    }
+  },
+  "342942": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Ark Nova"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "3": 25,
+      "4": 53,
+      "5": 5
+    }
+  },
+  "391163": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "For\u00eat Mixte"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 3,
+      "3": 22,
+      "4": 5,
+      "5": 1
+    }
+  },
+  "436126": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Finspan"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 1,
+      "2": 6,
+      "3": 2,
+      "4": 2
+    }
+  },
+  "239188": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Chronicles of Crime",
+      "Chronicles of Crime",
+      "Chronicles of Crime"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "2": 4,
+      "3": 1,
+      "4": 14,
+      "5": 8
+    }
+  },
+  "285774": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Marvel Champions: Le Jeu De Cartes"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "3": 2,
+      "4": 17,
+      "5": 11
+    }
+  },
+  "370591": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Dorfromantik: Le Jeu de Soci\u00e9t\u00e9",
+      "Dorfromantik: Das Brettspiel"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 10,
+      "3": 5,
+      "4": 2
+    }
+  },
+  "402283": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Courtisans"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 1,
+      "2": 7,
+      "3": 1
+    }
+  },
+  "199478": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Flamme Rouge",
+      "Flamme Rouge"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 34,
+      "3": 1
+    }
+  },
+  "140934": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Arboretum",
+      "Arboretum"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 35
+    }
+  },
+  "338960": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Slay the Spire: The Board Game"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "2": 1,
+      "3": 1,
+      "4": 12,
+      "5": 2
+    }
+  },
+  "269385": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Le Seigneur des Anneaux: Voyages en Terre du Milieu"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 9,
+      "5": 5
+    }
+  },
+  "318977": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "MicroMacro: Crime City"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 15,
+      "4": 4
+    }
+  },
+  "219513": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "B\u00e4renpark"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 30
+    }
+  },
+  "364073": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Splendor Duel",
+      "Splendor Duel",
+      "Splendor Duel"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 26,
+      "2": 1
+    }
+  },
+  "287954": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Azul: Zomerpaviljoen",
+      "Azul: Zomerpaviljoen mini",
+      "Azul: Summer Pavilion",
+      "Azul: Pavillon d\\'\u00e9t\u00e9",
+      "Azul: Pavillon d\\'\u00e9t\u00e9 Mini"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 26
+    }
+  },
+  "332290": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 1,
+      "3": 3
+    }
+  },
+  "334011": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 3
+    }
+  },
+  "162886": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Spirit Island",
+      "Spirit Island",
+      "Spirit Island",
+      "Spirit Island"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "3": 10,
+      "4": 62,
+      "5": 15
+    }
+  },
+  "324856": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "The Crew: Mission Sous-Marine",
+      "The Crew: Mission Sous-Marine"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "1": 4,
+      "2": 5,
+      "3": 13,
+      "4": 2
+    }
+  },
+  "437705": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Horrified: Dungeons & Dragons"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 1
+    }
+  },
+  "434222": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Gwent: Le Jeu de Cartes L\u00e9gendaire"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 2,
+      "3": 1,
+      "4": 1
+    }
+  },
+  "336986": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Flamecraft",
+      "Flamecraft"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 19,
+      "4": 1
+    }
+  },
+  "397598": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Dune: Imperium \u2013 Insurrection"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 16,
+      "4": 2
+    }
+  },
+  "165722": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "KLASK",
+      "KLASK",
+      "KLASK",
+      "KLASK",
+      "KLASK"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 22
+    }
+  },
+  "240980": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Blood on the Clocktower"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 3,
+      "3": 11,
+      "4": 2,
+      "5": 2
+    }
+  },
+  "418059": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "SETI: Recherche d\\'intelligence extraterrestre"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "1": 1,
+      "2": 2,
+      "3": 20,
+      "4": 7,
+      "5": 1
+    }
+  },
+  "342900": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Earthborne Rangers"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 6,
+      "5": 8
+    }
+  },
+  "365717": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Clank!: Catacombes"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 9,
+      "4": 6,
+      "5": 1
+    }
+  },
+  "316554": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Dune: Imperium"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 12,
+      "3": 38,
+      "4": 8,
+      "5": 1
+    }
+  },
+  "338834": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "MicroMacro: Crime City \u2013 Full House"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 4,
+      "4": 1
+    }
+  },
+  "440606": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 1,
+      "3": 3
+    }
+  },
+  "227456": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Escape the Dark Castle"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "3": 1,
+      "4": 9,
+      "5": 1
+    }
+  },
+  "256952": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Zombie Kidz \u00c9volution"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 2,
+      "2": 11,
+      "3": 2
+    }
+  },
+  "158600": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Hanamikoji"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 45
+    }
+  },
+  "205059": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Les Demeures de l\\'\u00c9pouvante: Seconde \u00c9dition"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "1": 1,
+      "3": 2,
+      "4": 20,
+      "5": 13
+    }
+  },
+  "312484": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Les Ruines Perdues de Narak"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "1": 2,
+      "2": 6,
+      "3": 31,
+      "4": 6,
+      "5": 4
+    }
+  },
+  "371942": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Le Ch\u00e2teau Blanc"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 40,
+      "2": 1
+    }
+  },
+  "329839": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "So Clover!"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 6,
+      "5": 9
+    }
+  },
+  "187645": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Star Wars: R\u00e9bellion"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "3": 6,
+      "4": 36,
+      "5": 1
+    }
+  },
+  "213460": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Unlock!: Escape Adventures"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "2": 1,
+      "4": 11,
+      "5": 4
+    }
+  },
+  "386937": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Lacuna"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 6
+    }
+  },
+  "285192": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Destinies"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "2": 1,
+      "3": 1,
+      "4": 8,
+      "5": 4
+    }
+  },
+  "456440": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Cozy Stickerville"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 2,
+      "5": 2
+    }
+  },
+  "150145": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Piraten Bridge",
+      "Skull King",
+      "Skull King",
+      "Skull King",
+      "Skull King"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 26,
+      "2": 2
+    }
+  },
+  "434906": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Tag Team"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 5
+    }
+  },
+  "183394": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Viticulture Edition Essentielle",
+      "Viticulture Edition Essentielle",
+      "Viticulture Edition Essentielle"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 2,
+      "3": 37,
+      "4": 11,
+      "5": 1
+    }
+  },
+  "397931": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 3,
+      "3": 7,
+      "4": 1
+    }
+  },
+  "374595": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Kelp: Requin vs Pieuvre"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 2,
+      "4": 2
+    }
+  },
+  "434654": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Toy Battle"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 8,
+      "2": 3
+    }
+  },
+  "424774": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Dorfromantik: Sakura"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 1
+    }
+  },
+  "355483": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Les Tours Ambulantes"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 13
+    }
+  },
+  "356123": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Turing Machine"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 1,
+      "2": 10,
+      "3": 5
+    }
+  },
+  "390092": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Les Aventuriers du Rail Legacy: L\u00e9gendes de L\\'Ouest"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 1,
+      "3": 7,
+      "4": 2
+    }
+  },
+  "124361": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Concordia",
+      "Concordia"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 28,
+      "3": 56,
+      "4": 1
+    }
+  },
+  "438402": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "For\u00eat mixte: Dartmoor"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 8,
+      "4": 1
+    }
+  },
+  "31260": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Agricola",
+      "Agricola",
+      "Agricola"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "1": 1,
+      "2": 10,
+      "3": 59,
+      "4": 518,
+      "5": 96
+    }
+  },
+  "306735": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Under Falling Skies"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 4,
+      "3": 9
+    }
+  },
+  "262712": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Res Arcana"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 1,
+      "2": 26,
+      "3": 6,
+      "4": 1
+    }
+  },
+  "372": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Schotten-Totten",
+      "Schotten Totten",
+      "Schotten-Totten",
+      "Schotten-Totten"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 38,
+      "2": 1,
+      "3": 1
+    }
+  },
+  "294484": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Unmatched: Cobble & Fog"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 9,
+      "5": 1
+    }
+  },
+  "377470": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Sail"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 6
+    }
+  },
+  "447243": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Duel pour Cardia"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 2,
+      "3": 8,
+      "4": 1
+    }
+  },
+  "350184": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Earth"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 3,
+      "3": 16,
+      "4": 8,
+      "5": 1
+    }
+  },
+  "268864": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Inflexibles: Normandie"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 1,
+      "2": 21,
+      "3": 5
+    }
+  },
+  "182874": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Grand Austria Hotel"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 33,
+      "2": 3
+    }
+  },
+  "35677": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Le Havre",
+      "Le Havre"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "1": 1,
+      "2": 36,
+      "3": 71,
+      "4": 13,
+      "5": 1
+    }
+  },
+  "398162": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "MicroMacro: Crime City \u2013 Showdown"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 1
+    }
+  },
+  "256226": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Azul: De ramen van Sintra / Les vitraux de Sintra",
+      "Azul: Stained Glass of Sintra",
+      "Azul: Stained glass of Sintra / Les vitraux de Sintra",
+      "Azul: Les Vitraux de Sintra"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 20
+    }
+  },
+  "431481": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 4,
+      "4": 1
+    }
+  },
+  "380619": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Cyclades: Legendary Edition"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 1,
+      "3": 7
+    }
+  },
+  "146021": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Les Contr\u00e9es de l\\'horreur"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "3": 3,
+      "4": 118,
+      "5": 29
+    }
+  },
+  "341169": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Great Western Trail: Second Edition",
+      "Great Western Trail: Second Edition"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 11,
+      "3": 2
+    }
+  },
+  "274638": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Unmatched: Robin Hood vs. Bigfoot"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 6
+    }
+  },
+  "440540": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Take Time",
+      "Take Time",
+      "Take Time"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 11,
+      "2": 1,
+      "3": 4
+    }
+  },
+  "448271": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Les Deux Tours, le jeu de plis coop\u00e9ratif"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 1
+    }
+  },
+  "12": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Ra"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 86,
+      "2": 7
+    }
+  },
+  "425276": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Unmatched Adventures: Teenage Mutant Ninja Turtles"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 1
+    }
+  },
+  "425549": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Moon Colony Bloodbath"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 13,
+      "4": 1
+    }
+  },
+  "391795": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Kinfire Delve: Vainglory\\'s Grotto"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 4,
+      "5": 1
+    }
+  },
+  "411860": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Unmatched: The Witcher \u2013 D\\'argent et d\\'acier"
+    ],
+    "language_level": null,
+    "language_votes": {}
+  },
+  "432456": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "dnup",
+      "dnup",
+      "dnup"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 5
+    }
+  },
+  "205398": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Citadelles",
+      "Citadelles"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 2,
+      "3": 7
+    }
+  },
+  "334986": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Daybreak"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 7,
+      "4": 6,
+      "5": 2
+    }
+  },
+  "417197": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Rebirth"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 5,
+      "3": 7
+    }
+  },
+  "28720": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Brass",
+      "Brass",
+      "Brass",
+      "Brass: Lancashire",
+      "Brass: Lancashire"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 94,
+      "2": 9,
+      "3": 1
+    }
+  },
+  "339789": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Welcome to the Moon",
+      "Welcome to the Moon"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 17,
+      "2": 1
+    }
+  },
+  "381297": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Unmatched Aventures: Chroniques Inou\u00efes"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "3": 3,
+      "4": 5,
+      "5": 1
+    }
+  },
+  "295374": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Long Shot: Le Jeu de D\u00e9s"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 6,
+      "4": 1
+    }
+  },
+  "425428": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Survive The Island"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 3,
+      "2": 6
+    }
+  },
+  "391137": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Galactic Cruise"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "1": 1,
+      "3": 12,
+      "4": 1
+    }
+  },
+  "321608": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "HIGH",
+    "language_votes": {
+      "3": 3,
+      "4": 17,
+      "5": 1
+    }
+  },
+  "425005": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "HIGH",
+    "language_votes": {
+      "3": 1,
+      "4": 1,
+      "5": 2
+    }
+  },
+  "271896": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Star Wars: Bordure Ext\u00e9rieure"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "3": 1,
+      "4": 9,
+      "5": 6
+    }
+  },
+  "327778": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "ito"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "1": 2,
+      "2": 1,
+      "3": 7
+    }
+  },
+  "407297": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "River Valley Glassworks"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 3,
+      "3": 2
+    }
+  },
+  "368061": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 1,
+      "2": 7
+    }
+  },
+  "384213": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Fromage"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 9,
+      "3": 5
+    }
+  },
+  "293296": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Splendor: Marvel",
+      "Splendor: Marvel"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 12
+    }
+  },
+  "449185": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "FlipToons"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 3,
+      "4": 1
+    }
+  },
+  "385529": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "The Vale of Eternity"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 2,
+      "3": 11,
+      "4": 5,
+      "5": 2
+    }
+  },
+  "257499": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Horreur \u00e0 Arkham (3\u00e8me Edition)"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 10,
+      "5": 5
+    }
+  },
+  "176189": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Zombicide: Black Plague"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 15,
+      "3": 10
+    }
+  },
+  "399941": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "La Rivi\u00e8re de l\\'Or"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 9,
+      "3": 4
+    }
+  },
+  "266507": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Clank! Legacy: Acquisitions Incorporated"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "3": 1,
+      "4": 6,
+      "5": 2
+    }
+  },
+  "368173": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Let\\'s Go! To Japan"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 1,
+      "2": 10,
+      "3": 1,
+      "4": 1
+    }
+  },
+  "342070": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Thunder Road: Vendetta"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 6,
+      "3": 7
+    }
+  },
+  "424784": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Arkham Horror: Lovecraft Letter"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 1
+    }
+  },
+  "406174": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 2,
+      "5": 2
+    }
+  },
+  "397897": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Horrified: Monstres Grecs"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 1
+    }
+  },
+  "420498": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Unstoppable"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "3": 1,
+      "4": 2
+    }
+  },
+  "408180": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Shackleton Base: A Journey to the Moon"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 5,
+      "3": 3
+    }
+  },
+  "236457": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Architectes du Royaume de l\\'Ouest"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 19,
+      "2": 29
+    }
+  },
+  "422541": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 2,
+      "4": 1
+    }
+  },
+  "191189": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Aeon\\'s End",
+      "Aeon\\'s End"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "3": 2,
+      "4": 23,
+      "5": 4
+    }
+  },
+  "377704": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "HIGH",
+    "language_votes": {
+      "3": 1,
+      "4": 2
+    }
+  },
+  "170216": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Blood Rage"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 1,
+      "3": 47,
+      "4": 8,
+      "5": 1
+    }
+  },
+  "163166": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Loup-garou pour un cr\u00e9puscule"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 3,
+      "2": 5
+    }
+  },
+  "411861": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Unmatched: The Witcher \u2013 La Chute des royaumes"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 1
+    }
+  },
+  "169426": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Roll Player"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "2": 1,
+      "3": 6,
+      "4": 17
+    }
+  },
+  "424573": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Pergola",
+      "Pergola"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 8
+    }
+  },
+  "371140": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Les Aventuriers du Rail: Aurores Bor\u00e9ales"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 2
+    }
+  },
+  "188866": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Invit\u00e9s \u00e0 \u00c9viter"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "2": 3,
+      "3": 4,
+      "4": 13
+    }
+  },
+  "296237": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Warp\\'s Edge"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 1,
+      "3": 7,
+      "4": 1,
+      "5": 1
+    }
+  },
+  "349067": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Le Seigneur des Anneaux: Le Jeu de Cartes \u2013 Edition r\u00e9vis\u00e9e"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 3,
+      "5": 2
+    }
+  },
+  "400602": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Civolution"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 7
+    }
+  },
+  "436215": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Le Hobbit: Histoire d\\'un Aller et Retour"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "2": 1,
+      "3": 2,
+      "4": 5
+    }
+  },
+  "285826": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 2
+    }
+  },
+  "429861": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Ace of Spades"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 2
+    }
+  },
+  "347112": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Secret Identity",
+      "Secret Identity"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 3,
+      "2": 3
+    }
+  },
+  "225244": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Les aventuriers du Rail: Allemagne",
+      "Ticket to Ride: Germany"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 5
+    }
+  },
+  "345584": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Mindbug",
+      "Mindbug: First Contact"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 9,
+      "4": 3,
+      "5": 1
+    }
+  },
+  "373600": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Cthulhu: Death May Die \u2013 La Peur de l\\'Inconnu"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 2,
+      "4": 1
+    }
+  },
+  "215311": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Downforce"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 18,
+      "3": 3
+    }
+  },
+  "295262": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 2,
+      "3": 1
+    }
+  },
+  "346965": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Azul: Tuin van de koningin",
+      "Azul: Le Jardin de la Reine",
+      "Azul: Le Jardin de la Reine"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 9
+    }
+  },
+  "296151": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Vicomtes du Royaume de l\\'Ouest"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 11
+    }
+  },
+  "371433": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Terrorscape",
+      "Terrorscape"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 1,
+      "3": 6
+    }
+  },
+  "353545": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Next Station: London",
+      "Next Station: London",
+      "Next Station: London"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 12
+    }
+  },
+  "371183": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 1
+    }
+  },
+  "424975": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "La Fabrique"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 2,
+      "3": 2
+    }
+  },
+  "194594": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Dice Forge",
+      "Dice Forge"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 25,
+      "2": 3,
+      "4": 1
+    }
+  },
+  "121921": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Robinson Cruso\u00e9: Aventures sur l\\'\u00eele Maudite \u2013 Edition Collector",
+      "Robinson Cruso\u00e9: Aventures sur l\\'\u00eele maudite",
+      "Robinson Cruso\u00e9: Aventures sur l\\'\u00eele maudite"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "2": 3,
+      "3": 7,
+      "4": 137,
+      "5": 22
+    }
+  },
+  "336755": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "King of Tokyo: Monster Box"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 2,
+      "5": 1
+    }
+  },
+  "354544": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Unmatched: Houdini vs. Le G\u00e9nie"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 4,
+      "4": 1
+    }
+  },
+  "379629": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Knarr",
+      "Knarr"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 17
+    }
+  },
+  "196526": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 6,
+      "3": 1
+    }
+  },
+  "386405": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Come Sail Away!"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 3
+    }
+  },
+  "401978": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 1,
+      "3": 1
+    }
+  },
+  "247367": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Air, Land & Sea: Bestioles en Guerre"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 6,
+      "3": 6
+    }
+  },
+  "232405": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Western Legends"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 14,
+      "4": 6,
+      "5": 1
+    }
+  },
+  "233371": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Clank! Dans l\\'espace!: Les Aventuriers du Deck-Building"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 11
+    }
+  },
+  "402111": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Kronologic: Paris 1920"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 7,
+      "2": 4,
+      "3": 1,
+      "4": 2
+    }
+  },
+  "404538": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Kinfire Delve: Scorn\\'s Stockade"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 2
+    }
+  },
+  "367518": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 2
+    }
+  },
+  "314503": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Codex Naturalis",
+      "Codex Naturalis"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 10
+    }
+  },
+  "295488": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Andor Junior"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 4,
+      "4": 1
+    }
+  },
+  "426912": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 1,
+      "3": 1
+    }
+  },
+  "184921": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Bunny Kingdom"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 7,
+      "3": 12
+    }
+  },
+  "271319": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Las Vegas Royale"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 4,
+      "2": 1
+    }
+  },
+  "283393": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Atlantes"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 3,
+      "3": 5
+    }
+  },
+  "325635": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Unmatched: Petit Chaperon Rouge vs Beowulf"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 4,
+      "4": 1
+    }
+  },
+  "178900": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Codenames XXL",
+      "Codenames",
+      "Codenames",
+      "Codenames",
+      "Codenames",
+      "Codenames Qu\u00e9bec"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "1": 1,
+      "3": 7,
+      "4": 26,
+      "5": 142
+    }
+  },
+  "351040": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Ready Set Bet"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 6,
+      "3": 2
+    }
+  },
+  "383469": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Unmatched: Soleil Levant"
+    ],
+    "language_level": null,
+    "language_votes": {}
+  },
+  "369880": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "D\\'Orge et de Bl\u00e9"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 2,
+      "3": 8,
+      "4": 1,
+      "5": 1
+    }
+  },
+  "407233": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 3,
+      "2": 2
+    }
+  },
+  "188834": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Secret Hitler"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 8,
+      "2": 32,
+      "3": 1
+    }
+  },
+  "371932": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Navoria"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 10
+    }
+  },
+  "356033": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Libertalia: Les Vents de Galecrest"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 1,
+      "3": 4,
+      "4": 2
+    }
+  },
+  "388367": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Innovation Ultimate"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 3
+    }
+  },
+  "359394": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "My Island"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 1,
+      "3": 1
+    }
+  },
+  "430809": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": null,
+    "language_votes": {}
+  },
+  "350636": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Unlock!: Game Adventures"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 1,
+      "5": 4
+    }
+  },
+  "379078": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Expeditions",
+      "Expeditions"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 12,
+      "4": 6,
+      "5": 2
+    }
+  },
+  "245655": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Le Dilemme du Roi"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "3": 1,
+      "4": 11,
+      "5": 3
+    }
+  },
+  "374173": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Star Wars: The Deckbuilding Game"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "2": 1,
+      "3": 6,
+      "4": 7,
+      "5": 3
+    }
+  },
+  "157354": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Five Tribes: Les Djinns de Naqala",
+      "Five Tribes: The Djinns of Naqala"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 65,
+      "2": 22,
+      "3": 3
+    }
+  },
+  "218417": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Aeon\\'s End: Guerre \u00c9ternelle"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "3": 2,
+      "4": 5,
+      "5": 1
+    }
+  },
+  "387515": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Kavango"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 3
+    }
+  },
+  "40834": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Dominion: L\\'Intrigue"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 7,
+      "3": 45,
+      "4": 26,
+      "5": 4
+    }
+  },
+  "349750": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 3,
+      "3": 1
+    }
+  },
+  "400498": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Light Speed: Arena"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 9
+    }
+  },
+  "354934": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Legacy of Yu"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 3,
+      "5": 1
+    }
+  },
+  "366495": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Inflexibles: Bataille d\\'Angleterre"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 3,
+      "3": 2
+    }
+  },
+  "245422": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 3,
+      "4": 1,
+      "5": 1
+    }
+  },
+  "408381": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 2
+    }
+  },
+  "349051": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 3
+    }
+  },
+  "402679": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Rock Hard: 1977"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "3": 2,
+      "4": 7
+    }
+  },
+  "443306": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Deckers"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 3,
+      "4": 1,
+      "5": 1
+    }
+  },
+  "343562": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 3
+    }
+  },
+  "249259": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Champ d\\'Honneur"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 19,
+      "3": 2,
+      "4": 1
+    }
+  },
+  "295293": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "The Thing: The Boardgame"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 1,
+      "2": 5,
+      "3": 1
+    }
+  },
+  "318243": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Hitster",
+      "Hitster",
+      "Hitster"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 10
+    }
+  },
+  "383010": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Clank! Legacy 2: Acquisitions Incorporated \u2013 Darkest Magic"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 2
+    }
+  },
+  "306881": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Railroad Ink Challenge: \u00c9dition Vert Luxuriant"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 4,
+      "2": 2
+    }
+  },
+  "281258": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Sub Terra II: Au bord de l\\'enfer"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 1,
+      "2": 2
+    }
+  },
+  "427345": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Res Arcana Duo"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 4
+    }
+  },
+  "34635": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "L\\'\u00c2ge de Pierre",
+      "L\\'\u00c2ge de Pierre",
+      "L\\'\u00c2ge de Pierre: Un avenir radieux"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 249,
+      "2": 4
+    }
+  },
+  "315610": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Massive Darkness 2: Hellscape"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 2,
+      "3": 3,
+      "4": 1,
+      "5": 1
+    }
+  },
+  "298069": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Cubitos"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 4,
+      "3": 12,
+      "4": 1
+    }
+  },
+  "28143": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Race for the Galaxy",
+      "Race for the Galaxy"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 11,
+      "2": 187,
+      "3": 93,
+      "4": 7,
+      "5": 3
+    }
+  },
+  "323612": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Bitoku"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 24
+    }
+  },
+  "395375": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Art Society"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 5
+    }
+  },
+  "437245": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Kingdom Crossing"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 6
+    }
+  },
+  "381308": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Dixit: Disney Edition",
+      "Dixit: Disney Edition"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 3
+    }
+  },
+  "182028": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Through the Ages: L\\'Histoire vous appartient"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "3": 7,
+      "4": 51,
+      "5": 9
+    }
+  },
+  "318182": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Imperium: L\u00e9gendes"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "2": 2,
+      "4": 9,
+      "5": 3
+    }
+  },
+  "454672": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 3,
+      "5": 1
+    }
+  },
+  "438442": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Feya\\'s Swamp"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 6
+    }
+  },
+  "439742": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Dewan",
+      "Dewan"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 6,
+      "5": 1
+    }
+  },
+  "330084": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Unlock!: Legendary Adventures"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "5": 2
+    }
+  },
+  "381278": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Dracula vs Van Helsing",
+      "Dracula vs Van Helsing"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 9
+    }
+  },
+  "301880": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Pillards de Scythie"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 3,
+      "3": 11
+    }
+  },
+  "397385": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Pirates de Maracaibo"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 8
+    }
+  },
+  "371688": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Huang"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 6
+    }
+  },
+  "433283": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Daydream"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 2
+    }
+  },
+  "319910": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Pagan: Le Destin de Roanoke"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "2": 1,
+      "3": 2,
+      "4": 4,
+      "5": 2
+    }
+  },
+  "126163": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Tzolk\\'in: le calendrier maya"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 106,
+      "2": 1,
+      "3": 1
+    }
+  },
+  "344554": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 3,
+      "4": 1
+    }
+  },
+  "356080": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "The Elder Scrolls: La trahison de la seconde \u00e8re"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 2
+    }
+  },
+  "438936": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Le Ch\u00e2teau Blanc Duel"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 2
+    }
+  },
+  "367150": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Dune: Guerre sur Arrakis"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 1,
+      "4": 1,
+      "5": 1
+    }
+  },
+  "365258": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "World Wonders"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 14
+    }
+  },
+  "354570": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 1,
+      "3": 3,
+      "4": 1
+    }
+  },
+  "293678": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Stellar"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 3
+    }
+  },
+  "396251": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 1
+    }
+  },
+  "227224": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "La Cath\u00e9drale Rouge"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 32
+    }
+  },
+  "400314": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Apiary"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 1,
+      "3": 10,
+      "4": 3
+    }
+  },
+  "311988": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Frostpunk: The Board Game"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 8,
+      "5": 3
+    }
+  },
+  "415147": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Spectacular"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 5
+    }
+  },
+  "317582": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Mythwind"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 2
+    }
+  },
+  "410209": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Hitster: Summer Party",
+      "Hitster: Summer Party"
+    ],
+    "language_level": null,
+    "language_votes": {}
+  },
+  "358981": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Bestioles En Guerre: Bobards, P\u00e9tards & Mouchards"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "3": 2,
+      "4": 4
+    }
+  },
+  "284653": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Mind MGMT: The Psychic Espionage \u201cGame.\u201d"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 7,
+      "3": 2,
+      "4": 1
+    }
+  },
+  "434425": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 1
+    }
+  },
+  "272380": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 5
+    }
+  },
+  "310100": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Nemesis: Lockdown",
+      "Nemesis: Lockdown",
+      "Nemesis: Lockdown"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 10,
+      "5": 1
+    }
+  },
+  "341870": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Le Dilemme de la Reine"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "5": 1
+    }
+  },
+  "338376": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "HIGH",
+    "language_votes": {
+      "3": 1,
+      "4": 4
+    }
+  },
+  "426513": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 1,
+      "3": 2,
+      "4": 2
+    }
+  },
+  "304783": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Mur d\\'Hadrien",
+      "Mur d\\'Hadrien"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 7,
+      "2": 14,
+      "3": 2
+    }
+  },
+  "332772": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Revive"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 7,
+      "2": 20,
+      "3": 3
+    }
+  },
+  "423561": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "HeroQuest: Premi\u00e8res Lueurs"
+    ],
+    "language_level": null,
+    "language_votes": {}
+  },
+  "433384": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Les Cit\u00e9s Rivales"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 2
+    }
+  },
+  "244654": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 7
+    }
+  },
+  "230253": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Star Realms: Fronti\u00e8res"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 4,
+      "4": 2
+    }
+  },
+  "446249": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 3
+    }
+  },
+  "395875": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": null,
+    "language_votes": {}
+  },
+  "407343": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Ironwood"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 3
+    }
+  },
+  "403116": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Next Station: Paris"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 6
+    }
+  },
+  "318546": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "CoraQuest"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 4
+    }
+  },
+  "363625": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Fateforge: Les Chroniques de Kaan"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 1,
+      "5": 1
+    }
+  },
+  "341519": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "HIGH",
+    "language_votes": {
+      "5": 4
+    }
+  },
+  "332398": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 2
+    }
+  },
+  "358320": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Sleeping Gods: Distant Skies"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 3
+    }
+  },
+  "54998": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Cyclades",
+      "Cyclades",
+      "Cyclades",
+      "Cyclades",
+      "Cyclades",
+      "Cyclades",
+      "Cyclades",
+      "Cyclades",
+      "Cyclades",
+      "Cyclades"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 70,
+      "2": 6,
+      "3": 3
+    }
+  },
+  "387514": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Stonespine Architects"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 4,
+      "3": 1,
+      "4": 1
+    }
+  },
+  "334065": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Verdant"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 2,
+      "2": 8,
+      "3": 3
+    }
+  },
+  "393333": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Galileo Galilei"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 5
+    }
+  },
+  "400080": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Marvel: Crisis Protocol \u2013 Earth\\'s Mightiest Core Set"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 1
+    }
+  },
+  "382518": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Sankor\u00e9: La fiert\u00e9 de Mansa Musa"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 2
+    }
+  },
+  "370210": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": null,
+    "language_votes": {}
+  },
+  "360061": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": null,
+    "language_votes": {}
+  },
+  "374400": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Unlock!: Extraordinary Adventures"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 1,
+      "5": 2
+    }
+  },
+  "218074": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Enqu\u00eates \u00e0 Los Angeles"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 6,
+      "5": 4
+    }
+  },
+  "232414": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Oceans",
+      "Oceans"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 8,
+      "4": 4,
+      "5": 2
+    }
+  },
+  "383496": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Zombicide: White Death"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 1,
+      "5": 1
+    }
+  },
+  "163068": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Trickerion: L\u00e9gende de l\\'illusion"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "1": 6,
+      "3": 20,
+      "4": 1
+    }
+  },
+  "311715": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Mini Rogue"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 1,
+      "2": 5,
+      "3": 1,
+      "4": 1
+    }
+  },
+  "377969": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 1
+    }
+  },
+  "404431": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Men-Nefer"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 11
+    }
+  },
+  "429405": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Orloj"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 9
+    }
+  },
+  "411894": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 1
+    }
+  },
+  "396790": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Nucleum"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 19,
+      "2": 3
+    }
+  },
+  "404509": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Cthulhu: Sombre Providence"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "2": 1,
+      "4": 2
+    }
+  },
+  "254708": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Roll Player Adventures"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 2,
+      "5": 4
+    }
+  },
+  "408636": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Skara Brae"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 2,
+      "2": 2
+    }
+  },
+  "299317": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Aeon\\'s End: Les Parias"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 1
+    }
+  },
+  "359152": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Marvel: Remix"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 2,
+      "3": 5,
+      "4": 1
+    }
+  },
+  "422674": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Saltfjord"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 7
+    }
+  },
+  "244608": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Menara",
+      "Menara",
+      "Menara"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 16
+    }
+  },
+  "193949": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 7
+    }
+  },
+  "287938": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "MED",
+    "language_votes": {
+      "1": 1,
+      "3": 3
+    }
+  },
+  "310632": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 3
+    }
+  },
+  "347703": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "First Rat",
+      "First Rat"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 12
+    }
+  },
+  "409693": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Flatiron"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 4
+    }
+  },
+  "445044": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Wispwood"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 2,
+      "2": 5
+    }
+  },
+  "392492": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Stupor Mundi"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 7
+    }
+  },
+  "393892": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Rolling Realms Redux"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 1
+    }
+  },
+  "386368": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Esdras et N\u00e9h\u00e9mie"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 5,
+      "2": 1
+    }
+  },
+  "172818": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Above and Below: Les royaumes du dessous"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "1": 2,
+      "3": 3,
+      "4": 21,
+      "5": 11
+    }
+  },
+  "449853": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Frosted Blooms"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 3
+    }
+  },
+  "176371": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Explorateurs de la Mer du Nord"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 5
+    }
+  },
+  "383206": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "HIGH",
+    "language_votes": {
+      "5": 2
+    }
+  },
+  "38453": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Space Alert",
+      "Space Alert"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "1": 1,
+      "2": 13,
+      "3": 53,
+      "4": 11,
+      "5": 6
+    }
+  },
+  "97786": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Small World Underground"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "1": 5,
+      "2": 8,
+      "3": 16,
+      "4": 1
+    }
+  },
+  "383158": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Nunatak: Le Temple de Glace"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 3
+    }
+  },
+  "200853": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Habitats",
+      "Habitats",
+      "Habitats"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 6,
+      "2": 2
+    }
+  },
+  "361958": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Maple Valley"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 1,
+      "3": 2
+    }
+  },
+  "402663": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Salton Sea"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 8
+    }
+  },
+  "151347": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 13,
+      "5": 2
+    }
+  },
+  "410103": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 3,
+      "4": 1
+    }
+  },
+  "258242": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 1
+    }
+  },
+  "198487": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Smash Up: Ressemblances fortuites"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 2
+    }
+  },
+  "378654": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "HIGH",
+    "language_votes": {
+      "5": 1
+    }
+  },
+  "381435": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 4
+    }
+  },
+  "281655": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "High Frontier 4 All"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "2": 1,
+      "3": 3,
+      "4": 4
+    }
+  },
+  "262114": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 4,
+      "3": 2
+    }
+  },
+  "378387": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Inventeurs du Tigre du Sud"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 5
+    }
+  },
+  "432716": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Leaders"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 1
+    }
+  },
+  "419074": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Fairy Ring"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 4
+    }
+  },
+  "172220": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 11
+    }
+  },
+  "399987": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "HIGH",
+    "language_votes": {
+      "2": 1,
+      "3": 2,
+      "5": 3
+    }
+  },
+  "310873": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Carnegie",
+      "Carnegie"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 17,
+      "2": 1
+    }
+  },
+  "440509": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 2
+    }
+  },
+  "352179": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Astro Knights"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "3": 1,
+      "4": 3
+    }
+  },
+  "358557": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "\u00c0 la Recherche des Esp\u00e8ces Disparues"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "2": 1,
+      "3": 2,
+      "4": 6
+    }
+  },
+  "423648": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Naishi"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 4
+    }
+  },
+  "352574": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "R\u00e9dac\\' Chef"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 1,
+      "2": 8
+    }
+  },
+  "350185": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 6,
+      "2": 1
+    }
+  },
+  "386366": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Charpentiers de la Mer du Nord: Seconde Vague"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 1
+    }
+  },
+  "304668": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 1
+    }
+  },
+  "401216": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 3
+    }
+  },
+  "385610": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Kutn\u00e1 Hora: La cit\u00e9 de l\\'argent"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 2,
+      "2": 11
+    }
+  },
+  "422042": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Tea Garden"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 8
+    }
+  },
+  "449353": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Mindbug: King of Tokyo"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 1
+    }
+  },
+  "369751": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Sagrada Artisans"
+    ],
+    "language_level": null,
+    "language_votes": {}
+  },
+  "154825": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 11
+    }
+  },
+  "431493": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 4
+    }
+  },
+  "415465": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 2
+    }
+  },
+  "196340": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Yokohama",
+      "Yokohama",
+      "Yokohama"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 1,
+      "2": 12,
+      "3": 5
+    }
+  },
+  "287515": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 1,
+      "4": 1
+    }
+  },
+  "455843": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Everdell Emerland"
+    ],
+    "language_level": null,
+    "language_votes": {}
+  },
+  "297562": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Kemet: Blood and Sand",
+      "Kemet: Blood and Sand"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 6,
+      "2": 2,
+      "3": 1,
+      "5": 1
+    }
+  },
+  "339958": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Gutenberg"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 14,
+      "2": 1
+    }
+  },
+  "351594": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Amalfi: Renaissance"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 4,
+      "4": 1
+    }
+  },
+  "402677": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Daitoshi"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 5
+    }
+  },
+  "340325": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Vagrantsong"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 3
+    }
+  },
+  "421165": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 1
+    }
+  },
+  "453526": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Got Five!",
+      "Got Five!",
+      "Got Five!"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 5
+    }
+  },
+  "396989": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Evenfall"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 5,
+      "5": 2
+    }
+  },
+  "360641": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Maladum: Dungeons of Enveron"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 1
+    }
+  },
+  "355093": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Woodcraft"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 15
+    }
+  },
+  "339300": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Army of the Dead: Un jeu Zombicide"
+    ],
+    "language_level": null,
+    "language_votes": {}
+  },
+  "368432": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 1,
+      "3": 1,
+      "4": 1
+    }
+  },
+  "311900": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 4
+    }
+  },
+  "402024": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Conservas"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 6
+    }
+  },
+  "296108": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Terraforming Mars: Le Jeu de d\u00e9s"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 4,
+      "2": 8,
+      "3": 3,
+      "4": 2
+    }
+  },
+  "439685": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 1
+    }
+  },
+  "419384": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 2
+    }
+  },
+  "263895": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 3
+    }
+  },
+  "188547": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Maximum Apocalypse"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "2": 1,
+      "4": 5,
+      "5": 2
+    }
+  },
+  "406619": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Kronologic: Cuzco 1450"
+    ],
+    "language_level": null,
+    "language_votes": {}
+  },
+  "254683": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Dodos Riding Dinos"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 1,
+      "3": 7
+    }
+  },
+  "369635": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 1
+    }
+  },
+  "419704": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 5
+    }
+  },
+  "350316": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Voyageurs du Tigre du Sud"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 13
+    }
+  },
+  "440023": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 2
+    }
+  },
+  "312959": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Rallyman: DIRT",
+      "Rallyman: DIRT"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 8,
+      "2": 2
+    }
+  },
+  "438534": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Papyria"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 1
+    }
+  },
+  "283642": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Cowboy Bebop: Space Serenade"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 2,
+      "5": 1
+    }
+  },
+  "328871": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Terraforming Mars: Exp\u00e9dition Ar\u00e8s"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 3,
+      "3": 17,
+      "4": 6
+    }
+  },
+  "363278": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": null,
+    "language_votes": {}
+  },
+  "368557": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 1,
+      "5": 1
+    }
+  },
+  "381117": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Doggerland"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 2,
+      "2": 1,
+      "3": 1
+    }
+  },
+  "368305": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Life of the Amazonia"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 3,
+      "3": 4,
+      "5": 1
+    }
+  },
+  "342032": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Wild Tiled West"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 1,
+      "2": 2,
+      "3": 1
+    }
+  },
+  "273910": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 1
+    }
+  },
+  "240855": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Lock Up: Une \u00c9pop\u00e9e dans l\\'Univers de Roll Player"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 1,
+      "3": 4
+    }
+  },
+  "407812": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Star Realms Academy"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 3
+    }
+  },
+  "439305": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 1,
+      "2": 1
+    }
+  },
+  "284616": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 4
+    }
+  },
+  "24181": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 20,
+      "2": 52
+    }
+  },
+  "376469": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Battles of Napoleon: Volume I \u2013 EYLAU 1807"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 3
+    }
+  },
+  "416118": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 1
+    }
+  },
+  "332070": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 4
+    }
+  },
+  "252752": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Genotype: A Mendelian Genetics Game"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 5,
+      "2": 2
+    }
+  },
+  "314745": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Now or Never: Les Royaumes du Pass\u00e9"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 2
+    }
+  },
+  "318553": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Rajas of the Ganges: The Dice Charmers",
+      "Rajas of the Ganges: The Dice Charmers",
+      "Rajas of the Ganges: The Dice Charmers"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 7
+    }
+  },
+  "218509": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 3
+    }
+  },
+  "299684": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Kh\u00f4ra: L\\'apog\u00e9e d\\'un empire"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 7
+    }
+  },
+  "430726": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "The Peak Team",
+      "The Peak Team"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 1,
+      "2": 1
+    }
+  },
+  "447746": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Tianxia"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 3
+    }
+  },
+  "235555": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 2,
+      "3": 1
+    }
+  },
+  "350064": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 1
+    }
+  },
+  "391549": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 1
+    }
+  },
+  "1": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Die Macher"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 38,
+      "2": 5,
+      "3": 7
+    }
+  },
+  "428284": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": null,
+    "language_votes": {}
+  },
+  "7104": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 1,
+      "2": 1
+    }
+  },
+  "331820": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 5,
+      "4": 2
+    }
+  },
+  "423553": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": null,
+    "language_votes": {}
+  },
+  "217083": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "LYNGK"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 4
+    }
+  },
+  "31999": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "TZAAR",
+      "TZAAR",
+      "TZAAR",
+      "TZAAR",
+      "TZAAR"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 22
+    }
+  },
+  "418858": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Resafa"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 4
+    }
+  },
+  "367833": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": null,
+    "language_votes": {}
+  },
+  "382924": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 2
+    }
+  },
+  "393530": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Karak II",
+      "Karak II"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 1
+    }
+  },
+  "31291": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 4,
+      "3": 7,
+      "4": 7
+    }
+  },
+  "379959": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "La Bataille de Versailles"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 3
+    }
+  },
+  "351735": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Newton & Great Discoveries"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 2
+    }
+  },
+  "428099": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Revenant"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 2
+    }
+  },
+  "394127": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Yokai Pagoda"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 5
+    }
+  },
+  "10642": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 1
+    }
+  },
+  "378827": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 1
+    }
+  },
+  "423649": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Skytear Horde: Campaigns"
+    ],
+    "language_level": null,
+    "language_votes": {}
+  },
+  "440136": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Labyrinth: Chronicles"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 1
+    }
+  },
+  "425676": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": null,
+    "language_votes": {}
+  },
+  "379876": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 3
+    }
+  },
+  "68076": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Conflict of Heroes: Guadalcanal \u2013 Pacifique 1942"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 1,
+      "3": 1,
+      "4": 1
+    }
   }
 }

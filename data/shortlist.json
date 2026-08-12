@@ -44,6 +44,7 @@
       "quality_shrunk": 7.772,
       "quality_pts": 18.38,
       "quality_label": "STRONG",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/TCS-QUACK_FRONT.jpg?v=1760984110",
       "philibert_status": "NOT_LISTED",
       "philibert_price_eur": null,
       "philibert_language": null,
@@ -53,7 +54,8 @@
       "advantage_points": 40,
       "discount_pct": null,
       "needs_eyeball": false,
-      "advantage_reason": "not listed on Philibert, no French edition exists at all"
+      "advantage_reason": "not listed on Philibert, no French edition exists at all",
+      "bgg_language_level": "LOW"
     },
     {
       "zatu_handle": "exit-advent-calendar-the-intergalactic-race",
@@ -94,6 +96,7 @@
       "quality_shrunk": 7.363,
       "quality_pts": 5.24,
       "quality_label": "STRONG",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/EXIT-CALENDAR.png?v=1760973287",
       "philibert_status": "NOT_LISTED",
       "philibert_price_eur": null,
       "philibert_language": null,
@@ -103,7 +106,8 @@
       "advantage_points": 40,
       "discount_pct": null,
       "needs_eyeball": false,
-      "advantage_reason": "not listed on Philibert, no French edition exists at all"
+      "advantage_reason": "not listed on Philibert, no French edition exists at all",
+      "bgg_language_level": "HIGH"
     },
     {
       "zatu_handle": "vantage",
@@ -141,6 +145,7 @@
       "quality_shrunk": 8.158,
       "quality_pts": 30.78,
       "quality_label": "EXCELLENT",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/ZPH-VANTAGE.jpg?v=1760972550",
       "philibert_status": "LISTED_IN_STOCK",
       "philibert_price_eur": 99.95,
       "philibert_language": "Anglais",
@@ -150,7 +155,8 @@
       "advantage_points": 15.663256628314157,
       "discount_pct": 0.4265302651325663,
       "needs_eyeball": false,
-      "advantage_reason": "in stock both sides, UK is 43% cheaper"
+      "advantage_reason": "in stock both sides, UK is 43% cheaper",
+      "bgg_language_level": "HIGH"
     },
     {
       "zatu_handle": "horrified-dungeons-dragons",
@@ -183,6 +189,7 @@
       "quality_shrunk": 7.258,
       "quality_pts": 1.88,
       "quality_label": "UNLABELED",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/HORRIFIED-2.png?v=1760973212",
       "philibert_status": "LISTED_IN_STOCK",
       "philibert_price_eur": 44.95,
       "philibert_language": "Anglais",
@@ -192,7 +199,8 @@
       "advantage_points": 15.521412680756397,
       "discount_pct": 0.4208565072302559,
       "needs_eyeball": false,
-      "advantage_reason": "in stock both sides, UK is 42% cheaper"
+      "advantage_reason": "in stock both sides, UK is 42% cheaper",
+      "bgg_language_level": "MED"
     },
     {
       "zatu_handle": "monikers",
@@ -226,6 +234,7 @@
       "quality_shrunk": 7.736,
       "quality_pts": 17.23,
       "quality_label": "STRONG",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/Monikers.jpg?v=1760982931",
       "philibert_status": "NOT_LISTED",
       "philibert_price_eur": null,
       "philibert_language": null,
@@ -235,7 +244,8 @@
       "advantage_points": 40,
       "discount_pct": null,
       "needs_eyeball": false,
-      "advantage_reason": "not listed on Philibert, no French edition exists at all"
+      "advantage_reason": "not listed on Philibert, no French edition exists at all",
+      "bgg_language_level": "HIGH"
     },
     {
       "zatu_handle": "heroes-of-barcadia",
@@ -271,6 +281,7 @@
       "quality_shrunk": 7.205,
       "quality_pts": 0.16,
       "quality_label": "UNLABELED",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/ZBG-RCHOBBRDBGRESTD.jpg?v=1760976589",
       "philibert_status": "NOT_LISTED",
       "philibert_price_eur": null,
       "philibert_language": null,
@@ -280,7 +291,8 @@
       "advantage_points": 40,
       "discount_pct": null,
       "needs_eyeball": false,
-      "advantage_reason": "not listed on Philibert, no French edition exists at all"
+      "advantage_reason": "not listed on Philibert, no French edition exists at all",
+      "bgg_language_level": "MED"
     },
     {
       "zatu_handle": "micro-macro-crime-city-4-showdown",
@@ -311,6 +323,7 @@
       "quality_shrunk": 7.703,
       "quality_pts": 16.17,
       "quality_label": "STRONG",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/ZPG-59064E.jpg?v=1768835796",
       "philibert_status": "LISTED_IN_STOCK",
       "philibert_price_eur": 24.5,
       "philibert_language": "Fran\u00e7ais",
@@ -320,55 +333,8 @@
       "advantage_points": 18.192551020408164,
       "discount_pct": 0.5277020408163265,
       "needs_eyeball": false,
-      "advantage_reason": "in stock both sides, UK is 53% cheaper"
-    },
-    {
-      "zatu_handle": "exit-the-venice-conspiracy",
-      "zatu_title": "EXIT: The Venice Conspiracy",
-      "zatu_url": "https://zatu.com/products/exit-the-venice-conspiracy",
-      "zatu_price_gbp": 12.45,
-      "zatu_in_stock": true,
-      "zatu_ean": "0810172680012",
-      "zatu_tags": [
-        "1-4 Players",
-        "60-90 Minutes",
-        "Action/Adventure",
-        "Adventure",
-        "Best Sellers",
-        "Board Games",
-        "Companion App",
-        "Cooperative",
-        "Deduction",
-        "EXIT",
-        "Fun for Kids",
-        "Next Day Delivery",
-        "no gift wrap",
-        "Thames & Kosmos",
-        "Top 5000 Board Games"
-      ],
-      "zatu_is_coop": true,
-      "zatu_is_party": false,
-      "bgg_id": 406312,
-      "bgg_name": "EXIT: The Game \u2013 The Venice Conspiracy",
-      "bgg_year": 2024,
-      "bgg_rank": 5452,
-      "bgg_average": 7.7894,
-      "bgg_usersrated": 305,
-      "match_confidence": "HIGH",
-      "match_score": 100.0,
-      "quality_shrunk": 7.471,
-      "quality_pts": 8.71,
-      "quality_label": "STRONG",
-      "philibert_status": "NOT_LISTED",
-      "philibert_price_eur": null,
-      "philibert_language": null,
-      "philibert_url": null,
-      "philibert_stock_status_raw": null,
-      "advantage_verdict": "UNAVAILABLE_FR",
-      "advantage_points": 40,
-      "discount_pct": null,
-      "needs_eyeball": false,
-      "advantage_reason": "not listed on Philibert, no French edition exists at all"
+      "advantage_reason": "in stock both sides, UK is 53% cheaper",
+      "bgg_language_level": "HIGH"
     },
     {
       "zatu_handle": "gloomhaven-2nd-edition",
@@ -408,6 +374,7 @@
       "quality_shrunk": 8.192,
       "quality_pts": 31.87,
       "quality_label": "EXCELLENT",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/GLOOMHAVEN-1.png?v=1760973134",
       "philibert_status": "NOT_LISTED",
       "philibert_price_eur": null,
       "philibert_language": null,
@@ -417,7 +384,8 @@
       "advantage_points": 40,
       "discount_pct": null,
       "needs_eyeball": false,
-      "advantage_reason": "not listed on Philibert, no French edition exists at all"
+      "advantage_reason": "not listed on Philibert, no French edition exists at all",
+      "bgg_language_level": "HIGH"
     },
     {
       "zatu_handle": "santorini-board-game-2nd-edition",
@@ -449,6 +417,7 @@
       "quality_shrunk": 7.327,
       "quality_pts": 4.09,
       "quality_label": "UNLABELED",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/Santorini-Board-Game-2nd-Edition.jpg?v=1760972911",
       "philibert_status": "LISTED_IN_STOCK",
       "philibert_price_eur": 89.95,
       "philibert_language": "Anglais",
@@ -458,7 +427,8 @@
       "advantage_points": 17.451278488048914,
       "discount_pct": 0.4980511395219566,
       "needs_eyeball": false,
-      "advantage_reason": "in stock both sides, UK is 50% cheaper"
+      "advantage_reason": "in stock both sides, UK is 50% cheaper",
+      "bgg_language_level": "LOW"
     },
     {
       "zatu_handle": "forbidden-jungle",
@@ -498,6 +468,7 @@
       "quality_shrunk": 7.232,
       "quality_pts": 1.04,
       "quality_label": "UNLABELED",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/Forbidden-Jungle.jpg?v=1760977588",
       "philibert_status": "NOT_LISTED",
       "philibert_price_eur": null,
       "philibert_language": null,
@@ -507,7 +478,8 @@
       "advantage_points": 40,
       "discount_pct": null,
       "needs_eyeball": false,
-      "advantage_reason": "not listed on Philibert, no French edition exists at all"
+      "advantage_reason": "not listed on Philibert, no French edition exists at all",
+      "bgg_language_level": "LOW"
     },
     {
       "zatu_handle": "nusfjord-big-box",
@@ -539,6 +511,7 @@
       "quality_shrunk": 8.15,
       "quality_pts": 30.55,
       "quality_label": "EXCELLENT",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/ZBG-LOG0169.jpg?v=1760976250",
       "philibert_status": "NOT_LISTED",
       "philibert_price_eur": null,
       "philibert_language": null,
@@ -548,7 +521,8 @@
       "advantage_points": 40,
       "discount_pct": null,
       "needs_eyeball": false,
-      "advantage_reason": "not listed on Philibert, no French edition exists at all"
+      "advantage_reason": "not listed on Philibert, no French edition exists at all",
+      "bgg_language_level": "HIGH"
     },
     {
       "zatu_handle": "modern-art",
@@ -581,6 +555,7 @@
       "quality_shrunk": 7.52,
       "quality_pts": 10.28,
       "quality_label": "STRONG",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/Modern-Art.jpg?v=1760980803",
       "philibert_status": "LISTED_IN_STOCK",
       "philibert_price_eur": 68.95,
       "philibert_language": "Anglais , Allemand",
@@ -590,7 +565,8 @@
       "advantage_points": 20.035061638868747,
       "discount_pct": 0.6014024655547499,
       "needs_eyeball": false,
-      "advantage_reason": "in stock both sides, UK is 60% cheaper"
+      "advantage_reason": "in stock both sides, UK is 60% cheaper",
+      "bgg_language_level": "LOW"
     },
     {
       "zatu_handle": "the-isle-of-cats-duel",
@@ -623,6 +599,7 @@
       "quality_shrunk": 7.339,
       "quality_pts": 4.46,
       "quality_label": "UNLABELED",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/isle-of-cats-product-image.jpg?v=1760973453",
       "philibert_status": "NOT_LISTED",
       "philibert_price_eur": null,
       "philibert_language": null,
@@ -632,7 +609,8 @@
       "advantage_points": 40,
       "discount_pct": null,
       "needs_eyeball": false,
-      "advantage_reason": "not listed on Philibert, no French edition exists at all"
+      "advantage_reason": "not listed on Philibert, no French edition exists at all",
+      "bgg_language_level": "LOW"
     },
     {
       "zatu_handle": "xia-legend-of-a-drift-system",
@@ -663,6 +641,7 @@
       "quality_shrunk": 7.84,
       "quality_pts": 20.58,
       "quality_label": "STRONG",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/Xia-Legend-Of-A-Drift-System.jpg?v=1760984259",
       "philibert_status": "NOT_LISTED",
       "philibert_price_eur": null,
       "philibert_language": null,
@@ -672,7 +651,8 @@
       "advantage_points": 40,
       "discount_pct": null,
       "needs_eyeball": false,
-      "advantage_reason": "not listed on Philibert, no French edition exists at all"
+      "advantage_reason": "not listed on Philibert, no French edition exists at all",
+      "bgg_language_level": "MED"
     },
     {
       "zatu_handle": "planted",
@@ -701,6 +681,7 @@
       "quality_shrunk": 7.203,
       "quality_pts": 0.11,
       "quality_label": "UNLABELED",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/Planted.jpg?v=1760977803",
       "philibert_status": "NOT_LISTED",
       "philibert_price_eur": null,
       "philibert_language": null,
@@ -710,7 +691,8 @@
       "advantage_points": 40,
       "discount_pct": null,
       "needs_eyeball": false,
-      "advantage_reason": "not listed on Philibert, no French edition exists at all"
+      "advantage_reason": "not listed on Philibert, no French edition exists at all",
+      "bgg_language_level": "LOW"
     },
     {
       "zatu_handle": "terrorscape",
@@ -745,6 +727,7 @@
       "quality_shrunk": 8.028,
       "quality_pts": 26.62,
       "quality_label": "EXCELLENT",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/Terrorscape.jpg?v=1760972559",
       "philibert_status": "LISTED_IN_STOCK",
       "philibert_price_eur": 132.95,
       "philibert_language": "Anglais",
@@ -754,7 +737,8 @@
       "advantage_points": 16.370534035351636,
       "discount_pct": 0.45482136141406543,
       "needs_eyeball": false,
-      "advantage_reason": "in stock both sides, UK is 45% cheaper"
+      "advantage_reason": "in stock both sides, UK is 45% cheaper",
+      "bgg_language_level": "MED"
     },
     {
       "zatu_handle": "dc-super-heroes-united-batman-hush",
@@ -787,6 +771,7 @@
       "quality_shrunk": 7.95,
       "quality_pts": 24.12,
       "quality_label": "EXCELLENT",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/ZBG-CMNDCU001.jpg?v=1784879327",
       "philibert_status": "NOT_LISTED",
       "philibert_price_eur": null,
       "philibert_language": null,
@@ -796,7 +781,49 @@
       "advantage_points": 40,
       "discount_pct": null,
       "needs_eyeball": false,
-      "advantage_reason": "not listed on Philibert, no French edition exists at all"
+      "advantage_reason": "not listed on Philibert, no French edition exists at all",
+      "bgg_language_level": null
+    },
+    {
+      "zatu_handle": "werewords-deluxe",
+      "zatu_title": "Werewords Deluxe",
+      "zatu_url": "https://zatu.com/products/werewords-deluxe",
+      "zatu_price_gbp": 22.95,
+      "zatu_in_stock": true,
+      "zatu_ean": "0689070018339",
+      "zatu_tags": [
+        "Bezier Games",
+        "Board Games",
+        "Companion App",
+        "Next Day Delivery",
+        "no gift wrap",
+        "Top 5000 Board Games"
+      ],
+      "zatu_is_coop": false,
+      "zatu_is_party": false,
+      "bgg_id": 245422,
+      "bgg_name": "Werewords Deluxe Edition",
+      "bgg_year": 2018,
+      "bgg_rank": 1287,
+      "bgg_average": 7.5519,
+      "bgg_usersrated": 2425,
+      "match_confidence": "HIGH",
+      "match_score": 100.0,
+      "quality_shrunk": 7.51,
+      "quality_pts": 9.97,
+      "quality_label": "STRONG",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/Werewords-Deluxe.jpg?v=1760984747",
+      "philibert_status": "NOT_LISTED",
+      "philibert_price_eur": null,
+      "philibert_language": null,
+      "philibert_url": null,
+      "philibert_stock_status_raw": null,
+      "advantage_verdict": "UNAVAILABLE_FR",
+      "advantage_points": 40,
+      "discount_pct": null,
+      "needs_eyeball": false,
+      "advantage_reason": "not listed on Philibert, no French edition exists at all",
+      "bgg_language_level": "LOW"
     },
     {
       "zatu_handle": "blood-bowl-third-season-edition",
@@ -827,6 +854,7 @@
       "quality_shrunk": 8.147,
       "quality_pts": 30.44,
       "quality_label": "EXCELLENT",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/GWS-60010999014.jpg?v=1763029329",
       "philibert_status": "NOT_LISTED",
       "philibert_price_eur": null,
       "philibert_language": null,
@@ -836,7 +864,8 @@
       "advantage_points": 40,
       "discount_pct": null,
       "needs_eyeball": false,
-      "advantage_reason": "not listed on Philibert, no French edition exists at all"
+      "advantage_reason": "not listed on Philibert, no French edition exists at all",
+      "bgg_language_level": null
     },
     {
       "zatu_handle": "horrified-american-monsters",
@@ -872,6 +901,7 @@
       "quality_shrunk": 7.392,
       "quality_pts": 6.16,
       "quality_label": "UNLABELED",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/TRV-27363.jpg?v=1760979442",
       "philibert_status": "LISTED_IN_STOCK",
       "philibert_price_eur": 63.5,
       "philibert_language": "Anglais",
@@ -881,7 +911,8 @@
       "advantage_points": 15.264448818897641,
       "discount_pct": 0.41057795275590564,
       "needs_eyeball": false,
-      "advantage_reason": "in stock both sides, UK is 41% cheaper"
+      "advantage_reason": "in stock both sides, UK is 41% cheaper",
+      "bgg_language_level": "MED"
     },
     {
       "zatu_handle": "pictomania-second-edition",
@@ -914,6 +945,7 @@
       "quality_shrunk": 7.526,
       "quality_pts": 10.49,
       "quality_label": "STRONG",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/Pictomania-second-edition.jpg?v=1760984337",
       "philibert_status": "NOT_LISTED",
       "philibert_price_eur": null,
       "philibert_language": null,
@@ -923,7 +955,8 @@
       "advantage_points": 40,
       "discount_pct": null,
       "needs_eyeball": false,
-      "advantage_reason": "not listed on Philibert, no French edition exists at all"
+      "advantage_reason": "not listed on Philibert, no French edition exists at all",
+      "bgg_language_level": "HIGH"
     },
     {
       "zatu_handle": "ingenious-3d",
@@ -957,6 +990,7 @@
       "quality_shrunk": 7.382,
       "quality_pts": 5.85,
       "quality_label": "STRONG",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/Ingenious-3D.jpg?v=1760973225",
       "philibert_status": "NOT_LISTED",
       "philibert_price_eur": null,
       "philibert_language": null,
@@ -966,7 +1000,8 @@
       "advantage_points": 40,
       "discount_pct": null,
       "needs_eyeball": false,
-      "advantage_reason": "not listed on Philibert, no French edition exists at all"
+      "advantage_reason": "not listed on Philibert, no French edition exists at all",
+      "bgg_language_level": "LOW"
     },
     {
       "zatu_handle": "resident-evil-2-the-board-game",
@@ -1001,6 +1036,7 @@
       "quality_shrunk": 7.325,
       "quality_pts": 4.02,
       "quality_label": "UNLABELED",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/Resident-Evil-2Resident-Evil-2-InsideResident-Evil-2-Back.jpg?v=1760984558",
       "philibert_status": "NOT_LISTED",
       "philibert_price_eur": null,
       "philibert_language": null,
@@ -1010,7 +1046,8 @@
       "advantage_points": 40,
       "discount_pct": null,
       "needs_eyeball": false,
-      "advantage_reason": "not listed on Philibert, no French edition exists at all"
+      "advantage_reason": "not listed on Philibert, no French edition exists at all",
+      "bgg_language_level": "MED"
     },
     {
       "zatu_handle": "the-shipwreck-arcana",
@@ -1042,6 +1079,7 @@
       "quality_shrunk": 7.387,
       "quality_pts": 6.0,
       "quality_label": "UNLABELED",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/The-Shipwreck-Arcana.jpg?v=1760976056",
       "philibert_status": "NOT_LISTED",
       "philibert_price_eur": null,
       "philibert_language": null,
@@ -1051,7 +1089,8 @@
       "advantage_points": 40,
       "discount_pct": null,
       "needs_eyeball": false,
-      "advantage_reason": "not listed on Philibert, no French edition exists at all"
+      "advantage_reason": "not listed on Philibert, no French edition exists at all",
+      "bgg_language_level": "MED"
     },
     {
       "zatu_handle": "exit-puzzle-nightfall-manor",
@@ -1083,6 +1122,7 @@
       "quality_shrunk": 7.205,
       "quality_pts": 0.17,
       "quality_label": "UNLABELED",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/Z-THKO-692880.jpg?v=1760979948",
       "philibert_status": "NOT_LISTED",
       "philibert_price_eur": null,
       "philibert_language": null,
@@ -1092,7 +1132,8 @@
       "advantage_points": 40,
       "discount_pct": null,
       "needs_eyeball": false,
-      "advantage_reason": "not listed on Philibert, no French edition exists at all"
+      "advantage_reason": "not listed on Philibert, no French edition exists at all",
+      "bgg_language_level": "HIGH"
     },
     {
       "zatu_handle": "last-light",
@@ -1132,6 +1173,7 @@
       "quality_shrunk": 7.29,
       "quality_pts": 2.88,
       "quality_label": "UNLABELED",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/Last-Light.jpg?v=1760977463",
       "philibert_status": "NOT_LISTED",
       "philibert_price_eur": null,
       "philibert_language": null,
@@ -1141,7 +1183,8 @@
       "advantage_points": 40,
       "discount_pct": null,
       "needs_eyeball": false,
-      "advantage_reason": "not listed on Philibert, no French edition exists at all"
+      "advantage_reason": "not listed on Philibert, no French edition exists at all",
+      "bgg_language_level": "HIGH"
     },
     {
       "zatu_handle": "kinfire-council",
@@ -1173,6 +1216,7 @@
       "quality_shrunk": 7.589,
       "quality_pts": 12.5,
       "quality_label": "STRONG",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/Kinfire-Council.jpg?v=1760973515",
       "philibert_status": "LISTED_IN_STOCK",
       "philibert_price_eur": 149.95,
       "philibert_language": "Anglais",
@@ -1182,7 +1226,8 @@
       "advantage_points": 18.29609869956652,
       "discount_pct": 0.5318439479826609,
       "needs_eyeball": false,
-      "advantage_reason": "in stock both sides, UK is 53% cheaper"
+      "advantage_reason": "in stock both sides, UK is 53% cheaper",
+      "bgg_language_level": "MED"
     },
     {
       "zatu_handle": "heroes-land-air-sea",
@@ -1212,6 +1257,7 @@
       "quality_shrunk": 7.515,
       "quality_pts": 10.14,
       "quality_label": "STRONG",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/Heroes-of-Land-Air-Sea.jpg?v=1760984996",
       "philibert_status": "NOT_LISTED",
       "philibert_price_eur": null,
       "philibert_language": null,
@@ -1221,7 +1267,8 @@
       "advantage_points": 40,
       "discount_pct": null,
       "needs_eyeball": false,
-      "advantage_reason": "not listed on Philibert, no French edition exists at all"
+      "advantage_reason": "not listed on Philibert, no French edition exists at all",
+      "bgg_language_level": "HIGH"
     },
     {
       "zatu_handle": "marvel-dice-throne-black-widow-vs-doctor-strange",
@@ -1253,6 +1300,7 @@
       "quality_shrunk": 7.677,
       "quality_pts": 15.32,
       "quality_label": "STRONG",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/ZBG-USODT011753.jpg?v=1760980323",
       "philibert_status": "NOT_LISTED",
       "philibert_price_eur": null,
       "philibert_language": null,
@@ -1262,7 +1310,8 @@
       "advantage_points": 40,
       "discount_pct": null,
       "needs_eyeball": false,
-      "advantage_reason": "not listed on Philibert, no French edition exists at all"
+      "advantage_reason": "not listed on Philibert, no French edition exists at all",
+      "bgg_language_level": null
     },
     {
       "zatu_handle": "red-dragon-inn-4",
@@ -1302,6 +1351,7 @@
       "quality_shrunk": 7.255,
       "quality_pts": 1.77,
       "quality_label": "UNLABELED",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/Red-Dragon-Inn-4.jpg?v=1760985088",
       "philibert_status": "NOT_LISTED",
       "philibert_price_eur": null,
       "philibert_language": null,
@@ -1311,7 +1361,8 @@
       "advantage_points": 40,
       "discount_pct": null,
       "needs_eyeball": false,
-      "advantage_reason": "not listed on Philibert, no French edition exists at all"
+      "advantage_reason": "not listed on Philibert, no French edition exists at all",
+      "bgg_language_level": "HIGH"
     },
     {
       "zatu_handle": "whispering-woods",
@@ -1342,6 +1393,7 @@
       "quality_shrunk": 7.511,
       "quality_pts": 9.99,
       "quality_label": "STRONG",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/Whispering-Woods.jpg?v=1760972896",
       "philibert_status": "NOT_LISTED",
       "philibert_price_eur": null,
       "philibert_language": null,
@@ -1351,7 +1403,8 @@
       "advantage_points": 40,
       "discount_pct": null,
       "needs_eyeball": false,
-      "advantage_reason": "not listed on Philibert, no French edition exists at all"
+      "advantage_reason": "not listed on Philibert, no French edition exists at all",
+      "bgg_language_level": "LOW"
     },
     {
       "zatu_handle": "tales-from-the-red-dragon-inn-board-game",
@@ -1385,6 +1438,7 @@
       "quality_shrunk": 8.158,
       "quality_pts": 30.79,
       "quality_label": "EXCELLENT",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/Tales-From-The-Red-Dragon-Inn-Board-Game.jpg?v=1760972370",
       "philibert_status": "NOT_LISTED",
       "philibert_price_eur": null,
       "philibert_language": null,
@@ -1394,7 +1448,8 @@
       "advantage_points": 40,
       "discount_pct": null,
       "needs_eyeball": false,
-      "advantage_reason": "not listed on Philibert, no French edition exists at all"
+      "advantage_reason": "not listed on Philibert, no French edition exists at all",
+      "bgg_language_level": "HIGH"
     },
     {
       "zatu_handle": "monikers-monikers-er",
@@ -1425,6 +1480,7 @@
       "quality_shrunk": 7.69,
       "quality_pts": 15.74,
       "quality_label": "EXCELLENT",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/Monikers-Monikers-er.jpg?v=1760977453",
       "philibert_status": "NOT_LISTED",
       "philibert_price_eur": null,
       "philibert_language": null,
@@ -1434,7 +1490,8 @@
       "advantage_points": 40,
       "discount_pct": null,
       "needs_eyeball": false,
-      "advantage_reason": "not listed on Philibert, no French edition exists at all"
+      "advantage_reason": "not listed on Philibert, no French edition exists at all",
+      "bgg_language_level": null
     },
     {
       "zatu_handle": "ministry-of-lost-things-case-1-lint-collection",
@@ -1468,6 +1525,7 @@
       "quality_shrunk": 7.542,
       "quality_pts": 10.98,
       "quality_label": "STRONG",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/Ministry-of-Lost-Things-Case-1-Lint-Collection.jpg?v=1760972290",
       "philibert_status": "NOT_LISTED",
       "philibert_price_eur": null,
       "philibert_language": null,
@@ -1477,7 +1535,8 @@
       "advantage_points": 40,
       "discount_pct": null,
       "needs_eyeball": false,
-      "advantage_reason": "not listed on Philibert, no French edition exists at all"
+      "advantage_reason": "not listed on Philibert, no French edition exists at all",
+      "bgg_language_level": "HIGH"
     },
     {
       "zatu_handle": "red-dragon-inn-6-villains",
@@ -1513,6 +1572,7 @@
       "quality_shrunk": 7.629,
       "quality_pts": 13.78,
       "quality_label": "STRONG",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/Red-Dragon-Inn-6-Villains.jpg?v=1760984742",
       "philibert_status": "NOT_LISTED",
       "philibert_price_eur": null,
       "philibert_language": null,
@@ -1522,7 +1582,8 @@
       "advantage_points": 40,
       "discount_pct": null,
       "needs_eyeball": false,
-      "advantage_reason": "not listed on Philibert, no French edition exists at all"
+      "advantage_reason": "not listed on Philibert, no French edition exists at all",
+      "bgg_language_level": null
     },
     {
       "zatu_handle": "magnate-the-first-city-promo",
@@ -1559,6 +1620,7 @@
       "quality_shrunk": 7.322,
       "quality_pts": 3.92,
       "quality_label": "UNLABELED",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/Magnate-The-First-City-Promo.jpg?v=1760982936",
       "philibert_status": "LISTED_IN_STOCK",
       "philibert_price_eur": 84.95,
       "philibert_language": "Anglais",
@@ -1568,7 +1630,8 @@
       "advantage_points": 17.38066509711595,
       "discount_pct": 0.4952266038846381,
       "needs_eyeball": false,
-      "advantage_reason": "in stock both sides, UK is 50% cheaper"
+      "advantage_reason": "in stock both sides, UK is 50% cheaper",
+      "bgg_language_level": "MED"
     },
     {
       "zatu_handle": "march-of-the-ants-evolved-edition",
@@ -1601,6 +1664,7 @@
       "quality_shrunk": 7.511,
       "quality_pts": 10.0,
       "quality_label": "STRONG",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/March-of-the-Ants-Evolved-Edition.jpg?v=1760972293",
       "philibert_status": "LISTED_IN_STOCK",
       "philibert_price_eur": 104.95,
       "philibert_language": "Anglais",
@@ -1610,7 +1674,8 @@
       "advantage_points": 17.486183897093856,
       "discount_pct": 0.4994473558837542,
       "needs_eyeball": false,
-      "advantage_reason": "in stock both sides, UK is 50% cheaper"
+      "advantage_reason": "in stock both sides, UK is 50% cheaper",
+      "bgg_language_level": "HIGH"
     },
     {
       "zatu_handle": "red-dragon-inn-5-the-character-trove-red-dragon-inn-exp",
@@ -1650,6 +1715,7 @@
       "quality_shrunk": 7.5,
       "quality_pts": 9.63,
       "quality_label": "STRONG",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/Red-Dragon-Inn-5-The-Character-Trove-Red-Dragon-Inn-Exp.jpg?v=1760985080",
       "philibert_status": "NOT_LISTED",
       "philibert_price_eur": null,
       "philibert_language": null,
@@ -1659,7 +1725,8 @@
       "advantage_points": 40,
       "discount_pct": null,
       "needs_eyeball": false,
-      "advantage_reason": "not listed on Philibert, no French edition exists at all"
+      "advantage_reason": "not listed on Philibert, no French edition exists at all",
+      "bgg_language_level": "HIGH"
     },
     {
       "zatu_handle": "red-dragon-inn-7-the-tavern-crew",
@@ -1695,6 +1762,7 @@
       "quality_shrunk": 7.572,
       "quality_pts": 11.96,
       "quality_label": "STRONG",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/Red-Dragon-Inn-7-The-Tavern-Crew.jpg?v=1760984302",
       "philibert_status": "NOT_LISTED",
       "philibert_price_eur": null,
       "philibert_language": null,
@@ -1704,7 +1772,8 @@
       "advantage_points": 40,
       "discount_pct": null,
       "needs_eyeball": false,
-      "advantage_reason": "not listed on Philibert, no French edition exists at all"
+      "advantage_reason": "not listed on Philibert, no French edition exists at all",
+      "bgg_language_level": "HIGH"
     },
     {
       "zatu_handle": "tomb-raider-the-crypt-of-chronos",
@@ -1733,6 +1802,7 @@
       "quality_shrunk": 7.462,
       "quality_pts": 8.42,
       "quality_label": "UNPROVEN",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/tomb_raider_5.jpg?v=1781178298",
       "philibert_status": "NOT_LISTED",
       "philibert_price_eur": null,
       "philibert_language": null,
@@ -1742,7 +1812,8 @@
       "advantage_points": 40,
       "discount_pct": null,
       "needs_eyeball": false,
-      "advantage_reason": "not listed on Philibert, no French edition exists at all"
+      "advantage_reason": "not listed on Philibert, no French edition exists at all",
+      "bgg_language_level": null
     },
     {
       "zatu_handle": "aspens",
@@ -1772,6 +1843,7 @@
       "quality_shrunk": 7.445,
       "quality_pts": 7.87,
       "quality_label": "STRONG",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/A_2.png?v=1781625818",
       "philibert_status": "NOT_LISTED",
       "philibert_price_eur": null,
       "philibert_language": null,
@@ -1781,7 +1853,8 @@
       "advantage_points": 40,
       "discount_pct": null,
       "needs_eyeball": false,
-      "advantage_reason": "not listed on Philibert, no French edition exists at all"
+      "advantage_reason": "not listed on Philibert, no French edition exists at all",
+      "bgg_language_level": "LOW"
     },
     {
       "zatu_handle": "moonrollers-standard-edition",
@@ -1817,6 +1890,7 @@
       "quality_shrunk": 7.315,
       "quality_pts": 3.7,
       "quality_label": "UNLABELED",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/Moonrollers-Standard-Edition.jpg?v=1760972297",
       "philibert_status": "NOT_LISTED",
       "philibert_price_eur": null,
       "philibert_language": null,
@@ -1826,7 +1900,8 @@
       "advantage_points": 40,
       "discount_pct": null,
       "needs_eyeball": false,
-      "advantage_reason": "not listed on Philibert, no French edition exists at all"
+      "advantage_reason": "not listed on Philibert, no French edition exists at all",
+      "bgg_language_level": "MED"
     },
     {
       "zatu_handle": "after-the-virus",
@@ -1854,6 +1929,7 @@
       "quality_shrunk": 7.274,
       "quality_pts": 2.38,
       "quality_label": "UNLABELED",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/After-the-Virus_709cd7ed-e26b-4e77-9a84-4fab1d589ea4.jpg?v=1760984816",
       "philibert_status": "NOT_LISTED",
       "philibert_price_eur": null,
       "philibert_language": null,
@@ -1863,7 +1939,8 @@
       "advantage_points": 40,
       "discount_pct": null,
       "needs_eyeball": false,
-      "advantage_reason": "not listed on Philibert, no French edition exists at all"
+      "advantage_reason": "not listed on Philibert, no French edition exists at all",
+      "bgg_language_level": "HIGH"
     },
     {
       "zatu_handle": "seas-of-strife",
@@ -1897,6 +1974,7 @@
       "quality_shrunk": 7.326,
       "quality_pts": 4.06,
       "quality_label": "UNLABELED",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/Seas-of-Strife.jpg?v=1760977799",
       "philibert_status": "NOT_LISTED",
       "philibert_price_eur": null,
       "philibert_language": null,
@@ -1906,7 +1984,8 @@
       "advantage_points": 40,
       "discount_pct": null,
       "needs_eyeball": false,
-      "advantage_reason": "not listed on Philibert, no French edition exists at all"
+      "advantage_reason": "not listed on Philibert, no French edition exists at all",
+      "bgg_language_level": "LOW"
     },
     {
       "zatu_handle": "gutenberg",
@@ -1940,6 +2019,7 @@
       "quality_shrunk": 7.236,
       "quality_pts": 1.16,
       "quality_label": "UNLABELED",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/Gutenberg.jpg?v=1760979972",
       "philibert_status": "LISTED_IN_STOCK",
       "philibert_price_eur": 65.99,
       "philibert_language": "Anglais",
@@ -1949,7 +2029,8 @@
       "advantage_points": 16.618313380815273,
       "discount_pct": 0.464732535232611,
       "needs_eyeball": false,
-      "advantage_reason": "in stock both sides, UK is 46% cheaper"
+      "advantage_reason": "in stock both sides, UK is 46% cheaper",
+      "bgg_language_level": "LOW"
     },
     {
       "zatu_handle": "dungeon-degenerates",
@@ -1978,6 +2059,7 @@
       "quality_shrunk": 7.95,
       "quality_pts": 24.12,
       "quality_label": "EXCELLENT",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/Dungeon-Degenerates.jpg?v=1760978223",
       "philibert_status": "NOT_LISTED",
       "philibert_price_eur": null,
       "philibert_language": null,
@@ -1987,7 +2069,8 @@
       "advantage_points": 40,
       "discount_pct": null,
       "needs_eyeball": false,
-      "advantage_reason": "not listed on Philibert, no French edition exists at all"
+      "advantage_reason": "not listed on Philibert, no French edition exists at all",
+      "bgg_language_level": "HIGH"
     },
     {
       "zatu_handle": "masters-of-crime-shadows",
@@ -2024,6 +2107,7 @@
       "quality_shrunk": 7.227,
       "quality_pts": 0.88,
       "quality_label": "STRONG",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/Masters-of-Crime-Shadows.jpg?v=1760976847",
       "philibert_status": "NOT_LISTED",
       "philibert_price_eur": null,
       "philibert_language": null,
@@ -2033,7 +2117,8 @@
       "advantage_points": 40,
       "discount_pct": null,
       "needs_eyeball": false,
-      "advantage_reason": "not listed on Philibert, no French edition exists at all"
+      "advantage_reason": "not listed on Philibert, no French edition exists at all",
+      "bgg_language_level": null
     },
     {
       "zatu_handle": "argent-the-consortium-board-game",
@@ -2061,6 +2146,7 @@
       "quality_shrunk": 7.58,
       "quality_pts": 12.2,
       "quality_label": "STRONG",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/Argent-The-Consortium-Board-Game.jpg?v=1760983451",
       "philibert_status": "NOT_LISTED",
       "philibert_price_eur": null,
       "philibert_language": null,
@@ -2070,7 +2156,8 @@
       "advantage_points": 40,
       "discount_pct": null,
       "needs_eyeball": false,
-      "advantage_reason": "not listed on Philibert, no French edition exists at all"
+      "advantage_reason": "not listed on Philibert, no French edition exists at all",
+      "bgg_language_level": "MED"
     },
     {
       "zatu_handle": "reef-project",
@@ -2105,6 +2192,7 @@
       "quality_shrunk": 7.381,
       "quality_pts": 5.81,
       "quality_label": "UNLABELED",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/REEF_PROJECT.jpg?v=1776414000",
       "philibert_status": "NOT_LISTED",
       "philibert_price_eur": null,
       "philibert_language": null,
@@ -2114,7 +2202,8 @@
       "advantage_points": 40,
       "discount_pct": null,
       "needs_eyeball": false,
-      "advantage_reason": "not listed on Philibert, no French edition exists at all"
+      "advantage_reason": "not listed on Philibert, no French edition exists at all",
+      "bgg_language_level": "LOW"
     },
     {
       "zatu_handle": "resident-evil-3-the-board-game",
@@ -2148,6 +2237,7 @@
       "quality_shrunk": 7.788,
       "quality_pts": 18.89,
       "quality_label": "EXCELLENT",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/Resident-Evil_E2_84_A2-3-The-Board-Game.jpg?v=1760980659",
       "philibert_status": "NOT_LISTED",
       "philibert_price_eur": null,
       "philibert_language": null,
@@ -2157,7 +2247,8 @@
       "advantage_points": 40,
       "discount_pct": null,
       "needs_eyeball": false,
-      "advantage_reason": "not listed on Philibert, no French edition exists at all"
+      "advantage_reason": "not listed on Philibert, no French edition exists at all",
+      "bgg_language_level": "MED"
     },
     {
       "zatu_handle": "cross-bronx-expressway",
@@ -2189,6 +2280,7 @@
       "quality_shrunk": 7.337,
       "quality_pts": 4.41,
       "quality_label": "STRONG",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/Cross-Bronx-Expressway.jpg?v=1763029323",
       "philibert_status": "NOT_LISTED",
       "philibert_price_eur": null,
       "philibert_language": null,
@@ -2198,7 +2290,8 @@
       "advantage_points": 40,
       "discount_pct": null,
       "needs_eyeball": false,
-      "advantage_reason": "not listed on Philibert, no French edition exists at all"
+      "advantage_reason": "not listed on Philibert, no French edition exists at all",
+      "bgg_language_level": "MED"
     },
     {
       "zatu_handle": "neuroriders",
@@ -2232,6 +2325,7 @@
       "quality_shrunk": 7.373,
       "quality_pts": 5.57,
       "quality_label": "STRONG",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/Neuroriders.jpg?v=1760975687",
       "philibert_status": "NOT_LISTED",
       "philibert_price_eur": null,
       "philibert_language": null,
@@ -2241,7 +2335,8 @@
       "advantage_points": 40,
       "discount_pct": null,
       "needs_eyeball": false,
-      "advantage_reason": "not listed on Philibert, no French edition exists at all"
+      "advantage_reason": "not listed on Philibert, no French edition exists at all",
+      "bgg_language_level": "LOW"
     },
     {
       "zatu_handle": "townsfolk-tussle-2nd-edition-base-game",
@@ -2270,6 +2365,7 @@
       "quality_shrunk": 7.625,
       "quality_pts": 13.66,
       "quality_label": "STRONG",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/Townsfolk-Tussle-2nd-Edition-Base-Game.jpg?v=1760976328",
       "philibert_status": "NOT_LISTED",
       "philibert_price_eur": null,
       "philibert_language": null,
@@ -2279,7 +2375,8 @@
       "advantage_points": 40,
       "discount_pct": null,
       "needs_eyeball": false,
-      "advantage_reason": "not listed on Philibert, no French edition exists at all"
+      "advantage_reason": "not listed on Philibert, no French edition exists at all",
+      "bgg_language_level": "HIGH"
     },
     {
       "zatu_handle": "in-too-deep-2",
@@ -2307,6 +2404,7 @@
       "quality_shrunk": 7.222,
       "quality_pts": 0.7,
       "quality_label": "UNLABELED",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/In-Too-Deep.jpg?v=1760977007",
       "philibert_status": "LISTED_IN_STOCK",
       "philibert_price_eur": 14.95,
       "philibert_language": "Anglais , N\u00e9erlandais",
@@ -2316,7 +2414,8 @@
       "advantage_points": 17.497826086956522,
       "discount_pct": 0.4999130434782609,
       "needs_eyeball": false,
-      "advantage_reason": "in stock both sides, UK is 50% cheaper"
+      "advantage_reason": "in stock both sides, UK is 50% cheaper",
+      "bgg_language_level": "MED"
     },
     {
       "zatu_handle": "red-dragon-inn-8-the-pub-crawl",
@@ -2344,6 +2443,7 @@
       "quality_shrunk": 7.443,
       "quality_pts": 7.81,
       "quality_label": "STRONG",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/Red-Dragon-Inn-8-The-Pub-Crawl.jpg?v=1760981025",
       "philibert_status": "NOT_LISTED",
       "philibert_price_eur": null,
       "philibert_language": null,
@@ -2353,7 +2453,8 @@
       "advantage_points": 40,
       "discount_pct": null,
       "needs_eyeball": false,
-      "advantage_reason": "not listed on Philibert, no French edition exists at all"
+      "advantage_reason": "not listed on Philibert, no French edition exists at all",
+      "bgg_language_level": "HIGH"
     },
     {
       "zatu_handle": "mistwind",
@@ -2388,6 +2489,7 @@
       "quality_shrunk": 7.56,
       "quality_pts": 11.56,
       "quality_label": "STRONG",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/Mistwind.jpg?v=1760972295",
       "philibert_status": "NOT_LISTED",
       "philibert_price_eur": null,
       "philibert_language": null,
@@ -2397,7 +2499,8 @@
       "advantage_points": 40,
       "discount_pct": null,
       "needs_eyeball": false,
-      "advantage_reason": "not listed on Philibert, no French edition exists at all"
+      "advantage_reason": "not listed on Philibert, no French edition exists at all",
+      "bgg_language_level": "LOW"
     },
     {
       "zatu_handle": "call-of-kilforth",
@@ -2425,6 +2528,7 @@
       "quality_shrunk": 7.424,
       "quality_pts": 7.2,
       "quality_label": "STRONG",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/Call-of-Kilforth.jpg?v=1760978286",
       "philibert_status": "NOT_LISTED",
       "philibert_price_eur": null,
       "philibert_language": null,
@@ -2434,7 +2538,8 @@
       "advantage_points": 40,
       "discount_pct": null,
       "needs_eyeball": false,
-      "advantage_reason": "not listed on Philibert, no French edition exists at all"
+      "advantage_reason": "not listed on Philibert, no French edition exists at all",
+      "bgg_language_level": "HIGH"
     },
     {
       "zatu_handle": "ascension-tactics-inferno",
@@ -2467,6 +2572,7 @@
       "quality_shrunk": 7.451,
       "quality_pts": 8.07,
       "quality_label": "STRONG",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/Ascension-Tactics-Inferno.jpg?v=1760976243",
       "philibert_status": "NOT_LISTED",
       "philibert_price_eur": null,
       "philibert_language": null,
@@ -2476,7 +2582,8 @@
       "advantage_points": 40,
       "discount_pct": null,
       "needs_eyeball": false,
-      "advantage_reason": "not listed on Philibert, no French edition exists at all"
+      "advantage_reason": "not listed on Philibert, no French edition exists at all",
+      "bgg_language_level": null
     },
     {
       "zatu_handle": "tragedy-looper-new-tragedies",
@@ -2512,6 +2619,7 @@
       "quality_shrunk": 7.231,
       "quality_pts": 0.99,
       "quality_label": "STRONG",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/Tragedy-Looper-New-Tragedies.jpg?v=1760978530",
       "philibert_status": "NOT_LISTED",
       "philibert_price_eur": null,
       "philibert_language": null,
@@ -2521,7 +2629,8 @@
       "advantage_points": 40,
       "discount_pct": null,
       "needs_eyeball": false,
-      "advantage_reason": "not listed on Philibert, no French edition exists at all"
+      "advantage_reason": "not listed on Philibert, no French edition exists at all",
+      "bgg_language_level": null
     },
     {
       "zatu_handle": "mythic-mischief-vol-ii",
@@ -2552,6 +2661,7 @@
       "quality_shrunk": 7.53,
       "quality_pts": 10.62,
       "quality_label": "STRONG",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/Mythic-Mischief-VOL-II.jpg?v=1760972446",
       "philibert_status": "NOT_LISTED",
       "philibert_price_eur": null,
       "philibert_language": null,
@@ -2561,7 +2671,8 @@
       "advantage_points": 40,
       "discount_pct": null,
       "needs_eyeball": false,
-      "advantage_reason": "not listed on Philibert, no French edition exists at all"
+      "advantage_reason": "not listed on Philibert, no French edition exists at all",
+      "bgg_language_level": null
     },
     {
       "zatu_handle": "wicked-cribbage",
@@ -2596,6 +2707,7 @@
       "quality_shrunk": 7.414,
       "quality_pts": 6.86,
       "quality_label": "UNPROVEN",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/ZKS-WICKED-CRIBBAGE.jpg?v=1773424382",
       "philibert_status": "NOT_LISTED",
       "philibert_price_eur": null,
       "philibert_language": null,
@@ -2605,7 +2717,8 @@
       "advantage_points": 40,
       "discount_pct": null,
       "needs_eyeball": false,
-      "advantage_reason": "not listed on Philibert, no French edition exists at all"
+      "advantage_reason": "not listed on Philibert, no French edition exists at all",
+      "bgg_language_level": null
     },
     {
       "zatu_handle": "fractured-sky-deluxe",
@@ -2635,6 +2748,7 @@
       "quality_shrunk": 7.4,
       "quality_pts": 6.44,
       "quality_label": "UNLABELED",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/Fractured-Sky-Deluxe.jpg?v=1760977032",
       "philibert_status": "NOT_LISTED",
       "philibert_price_eur": null,
       "philibert_language": null,
@@ -2644,7 +2758,8 @@
       "advantage_points": 40,
       "discount_pct": null,
       "needs_eyeball": false,
-      "advantage_reason": "not listed on Philibert, no French edition exists at all"
+      "advantage_reason": "not listed on Philibert, no French edition exists at all",
+      "bgg_language_level": "LOW"
     },
     {
       "zatu_handle": "forges-of-ravenshire-board-game",
@@ -2681,6 +2796,7 @@
       "quality_shrunk": 7.421,
       "quality_pts": 7.11,
       "quality_label": "STRONG",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/Forges-Of-Ravenshire-Board-Game.jpg?v=1760973949",
       "philibert_status": "LISTED_IN_STOCK",
       "philibert_price_eur": 299.95,
       "philibert_language": "Anglais",
@@ -2690,7 +2806,8 @@
       "advantage_points": 25.0,
       "discount_pct": 0.844403067177863,
       "needs_eyeball": false,
-      "advantage_reason": "in stock both sides, UK is 84% cheaper"
+      "advantage_reason": "in stock both sides, UK is 84% cheaper",
+      "bgg_language_level": null
     },
     {
       "zatu_handle": "one-hit-heroes",
@@ -2722,6 +2839,7 @@
       "quality_shrunk": 7.234,
       "quality_pts": 1.1,
       "quality_label": "UNLABELED",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/ZCG-W3D-70001.jpg?v=1773424380",
       "philibert_status": "NOT_LISTED",
       "philibert_price_eur": null,
       "philibert_language": null,
@@ -2731,7 +2849,8 @@
       "advantage_points": 40,
       "discount_pct": null,
       "needs_eyeball": false,
-      "advantage_reason": "not listed on Philibert, no French edition exists at all"
+      "advantage_reason": "not listed on Philibert, no French edition exists at all",
+      "bgg_language_level": "MED"
     },
     {
       "zatu_handle": "aspens-deluxe-edition",
@@ -2761,6 +2880,7 @@
       "quality_shrunk": 7.445,
       "quality_pts": 7.87,
       "quality_label": "STRONG",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/Aspens-Deluxe-Edition.jpg?v=1760973144",
       "philibert_status": "NOT_LISTED",
       "philibert_price_eur": null,
       "philibert_language": null,
@@ -2770,7 +2890,8 @@
       "advantage_points": 40,
       "discount_pct": null,
       "needs_eyeball": false,
-      "advantage_reason": "not listed on Philibert, no French edition exists at all"
+      "advantage_reason": "not listed on Philibert, no French edition exists at all",
+      "bgg_language_level": "LOW"
     },
     {
       "zatu_handle": "snakes-of-wrath",
@@ -2801,6 +2922,7 @@
       "quality_shrunk": 7.248,
       "quality_pts": 1.54,
       "quality_label": "STRONG",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/ZBG-CSGSNAKES.jpg?v=1784919266",
       "philibert_status": "NOT_LISTED",
       "philibert_price_eur": null,
       "philibert_language": null,
@@ -2810,7 +2932,8 @@
       "advantage_points": 40,
       "discount_pct": null,
       "needs_eyeball": false,
-      "advantage_reason": "not listed on Philibert, no French edition exists at all"
+      "advantage_reason": "not listed on Philibert, no French edition exists at all",
+      "bgg_language_level": "LOW"
     },
     {
       "zatu_handle": "club-of-cthulhu",
@@ -2841,6 +2964,7 @@
       "quality_shrunk": 7.63,
       "quality_pts": 13.81,
       "quality_label": "EXCELLENT",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/ZINDIE-PWU-001.jpg?v=1780919224",
       "philibert_status": "NOT_LISTED",
       "philibert_price_eur": null,
       "philibert_language": null,
@@ -2850,7 +2974,8 @@
       "advantage_points": 40,
       "discount_pct": null,
       "needs_eyeball": false,
-      "advantage_reason": "not listed on Philibert, no French edition exists at all"
+      "advantage_reason": "not listed on Philibert, no French edition exists at all",
+      "bgg_language_level": "LOW"
     },
     {
       "zatu_handle": "legacy-of-eastbrook-hills",
@@ -2884,6 +3009,7 @@
       "quality_shrunk": 7.554,
       "quality_pts": 11.38,
       "quality_label": "EXCELLENT",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/ZBG-MATKOLLEG001678.jpg?v=1777028767",
       "philibert_status": "NOT_LISTED",
       "philibert_price_eur": null,
       "philibert_language": null,
@@ -2893,7 +3019,8 @@
       "advantage_points": 40,
       "discount_pct": null,
       "needs_eyeball": false,
-      "advantage_reason": "not listed on Philibert, no French edition exists at all"
+      "advantage_reason": "not listed on Philibert, no French edition exists at all",
+      "bgg_language_level": "HIGH"
     },
     {
       "zatu_handle": "thug-life-the-board-game",
@@ -2921,6 +3048,7 @@
       "quality_shrunk": 7.359,
       "quality_pts": 5.12,
       "quality_label": "UNPROVEN",
+      "zatu_image_url": "https://cdn.shopify.com/s/files/1/0916/9970/8282/files/Thug-Life-The-Board-Game.jpg?v=1760978768",
       "philibert_status": "NOT_LISTED",
       "philibert_price_eur": null,
       "philibert_language": null,
@@ -2930,7 +3058,8 @@
       "advantage_points": 40,
       "discount_pct": null,
       "needs_eyeball": false,
-      "advantage_reason": "not listed on Philibert, no French edition exists at all"
+      "advantage_reason": "not listed on Philibert, no French edition exists at all",
+      "bgg_language_level": null
     }
   ]
 }
