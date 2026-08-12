@@ -310,11 +310,10 @@ class MatchResult:
 # all -- e.g. "Coup" exact-matches 3 BGG entries (a 1975 wargame, a 1991 wargame, and the actual
 # 2012 game everyone means), with usersrated 90 / 161 / 52,695. A same-named BGG entry with
 # usersrated below the quality gate's own min_votes floor was always going to be filtered out
-# downstream anyway, so refusing the match over it is precision theatre, not real caution. 10x
-# was picked as comfortably conservative against the real data: 145/213 real cases clear it, and
-# every spot-checked case at that bar had an unambiguous "obviously the popular one" candidate,
-# not a genuine coin-flip between two legitimately similar-sized games.
-_DOMINANCE_RATIO = 10
+# downstream anyway, so refusing the match over it is precision theatre, not real caution. 4x
+# is more permissive: allows cases like BUS (1999: 5556 ratings, 2015: 764 ratings, ~7.3x ratio)
+# to be auto-picked rather than dropped as ambiguous.
+_DOMINANCE_RATIO = 4
 
 
 class BggIndex:
