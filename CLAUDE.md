@@ -1429,3 +1429,54 @@ workflow YAML — never hardcoded, never logged, never written to a data file.
   data: mechanics, categories, designers, publishers, stats — available for future use, e.g. a
   real BGG-mechanics-based genre bonus). `docs/index.html` now shows real `language_level`
   badges/clauses for the first time (previously permanently `UNKNOWN` on every row).
+
+## Real wrong-match bug: Quacks of Quedlinburg matched to Big Box, manual override added
+(2026-08-12)
+
+User-reported: `zatu.com/products/quacks-of-quedlinburg` (the plain base game) was showing
+`UNAVAILABLE_FR` even though the normal edition is on Philibert — traced to a real Stage 2
+mismatch: it had matched BGG id 326869, "The Quacks of Quedlinburg: Big Box" (702 ratings), not
+the actual base game.
+
+- **Root cause, confirmed by direct reproduction, not guessed**: BGG's real catalogued title for
+  the massively popular base game (rank 80, 59,851 ratings) is the short **"Quacks"** (id
+  244521) — nothing like Zatu's retail title "The Quacks of Quedlinburg" at all. Since the real
+  base game never collapses to the same normalized string as the query, the aggressive tier's
+  `_EDITION_NOISE_RE` stripping of "Big Box" from the *candidate* side produces a **lone,
+  uncontested exact match** to Big Box (no genuine tie occurs for the dominance/recency tiebreak
+  to catch, unlike the earlier Carcassonne/Gloomhaven cases where the real base game *does*
+  collapse into the same tie). Confirmed via direct rapidfuzz testing that falling through to
+  the fuzzy tier wouldn't have helped either — fuzzy scores the *same* aggressively-normalized
+  text, so Big Box still scores 100 against the query vs. only 44 for the real "Quacks" (fuzzy
+  has the identical blind spot, not an independent check).
+- **Why not a broader heuristic fix**: this isn't a stripping-rule bug (Big Box legitimately
+  needs to be strippable for other real cases, e.g. Carcassonne Big Box's own dominance-tiebreak
+  resolution). It's a BGG catalogue-naming quirk — a retailer's descriptive/subtitle-style title
+  bearing no resemblance to BGG's own short official name — and `bg_ranks.csv` carries no
+  alternate-name data to recognize the alias offline. Genuinely unpredictable and unverifiable
+  without per-game BGG lookup, same shape as the earlier EXIT: Venice Conspiracy Philibert-side
+  translation miss.
+- **Fix**: `data/bgg_match_overrides.json` (new) — `zatu_handle` → the correct `bgg_id`, same
+  manually-maintained, never-auto-regenerated pattern as `data/philibert_title_overrides.json`,
+  applied one stage earlier (Stage 2, not Stage 5). `scripts/match_bgg.py`'s `run()` checks this
+  override map first, before calling `BggIndex.match()`, and short-circuits straight to the
+  override's `bgg_id` at HIGH confidence when present — bypassing the normal matcher entirely
+  rather than trying to make the automated heuristic handle it. First entry:
+  `"quacks-of-quedlinburg": 244521`.
+- **Real, measured result** (re-running `scripts/match_bgg.py` offline against the live 4178×
+  140,261 corpus, before/after diffed by survivor handle+id): 682 → **682 survivors, zero
+  change in count**, exactly one bgg_id changed (`quacks-of-quedlinburg`: 326869 "Big Box" →
+  244521 "Quacks", quality label unchanged at `STRONG` but now backed by 59,851 real ratings
+  instead of 702) — confirms the fix is precisely scoped, no side effects on any other survivor.
+  3 new tests (`tests/test_match_bgg_script.py`): override short-circuits the normal matcher,
+  `load_match_overrides` reads a real file, and returns `{}` for a missing one. 277 tests pass.
+- **Re-running Stage 2 wipes `zatu_ean`/`zatu_image_url` for every survivor** (expected,
+  documented pattern from every prior Stage 2 re-run this project has done — `match_bgg.py`
+  always regenerates `data/matched_games.json` from scratch, it doesn't merge with the
+  previous run's Stage 4 enrichment) — the next live dispatch pays the full Stage 4 EAN/image
+  cost again for all 682 survivors (not just the one changed), same ~13 min as any prior run.
+- **Not yet live** — same pattern as every Stage 2-only fix this session: needs a
+  `lookup-philibert.yml` dispatch to get real Stage 3 (French-edition/language data for the new
+  bgg_id 244521, which was never checked before) and Stage 5 (Philibert lookup — the cached
+  `NOT_LISTED` result under the old wrong bgg_id is never trusted anyway, so this was always
+  going to be re-checked live) before the corrected match reaches the actual shortlist/report.

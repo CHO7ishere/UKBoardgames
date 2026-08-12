@@ -17,7 +17,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 import yaml  # noqa: E402
 
 from filters import is_probably_accessory_fields  # noqa: E402
-from match import BggIndex  # noqa: E402
+from match import BggIndex, MatchResult  # noqa: E402
 from score import evaluate_quality  # noqa: E402
 from sources.bgg import filter_base_games, load_bg_ranks  # noqa: E402
 from sources.zatu import is_coop_tag, is_party_tag  # noqa: E402
@@ -53,11 +53,38 @@ def load_zatu_products(path: str) -> list[dict]:
     return payload["products"]
 
 
+def load_match_overrides(path: str) -> dict[str, int]:
+    """`zatu_handle` -> the correct `bgg_id`, for cases no automated heuristic can safely
+    resolve. Real case that prompted this (2026-08-12, user-reported): Zatu's "The Quacks of
+    Quedlinburg" (the plain base game) was matching BGG id 326869, "The Quacks of Quedlinburg:
+    Big Box" -- not a title-noise-stripping bug in the usual sense, but a genuine BGG catalogue
+    quirk: the real base game's *official* BGG title is the short "Quacks" (id 244521, rank 80,
+    59851 ratings), not "The Quacks of Quedlinburg" at all, so it never appears as a competing
+    candidate for the aggressive tier's edition-noise-stripped exact match to disambiguate
+    against (no tie occurs -- Big Box is the *only* candidate that collapses to "quacks of
+    quedlinburg" once "Big Box" is stripped, so it's accepted as a confident unique match).
+    Confirmed via rapidfuzz directly that fuzzy scoring has the same blind spot (Big Box scores
+    100 against the query's aggressively-normalized text purely by coincidence of the stripped
+    string, vs. 44 for the real "Quacks" base game) -- so this isn't fixable by tuning either
+    exact tier or the fuzzy fallback, since bg_ranks.csv carries no alternate-name data to
+    recognize "The Quacks of Quedlinburg" as a known alias of "Quacks" offline. Same
+    manually-maintained, never-auto-regenerated pattern as
+    data/philibert_title_overrides.json, applied one stage earlier, for the same reason: a
+    genuine, unpredictable identity fact no heuristic can safely derive, not a pattern to
+    generalize from a single sample."""
+    file = Path(path)
+    if not file.exists():
+        return {}
+    return json.loads(file.read_text())
+
+
 def run(
-    zatu_products: list[dict], bgg_games, config: dict, excluded_games=None
+    zatu_products: list[dict], bgg_games, config: dict, excluded_games=None,
+    match_overrides: dict[str, int] | None = None,
 ) -> tuple[list[dict], list[dict], list[dict]]:
     index = BggIndex(bgg_games, excluded_games=excluded_games)
     by_id = {g.id: g for g in bgg_games}
+    match_overrides = match_overrides or {}
 
     quality_cfg = config.get("quality", {})
     shrink_m = quality_cfg.get("shrink_M", 100)
@@ -74,7 +101,18 @@ def run(
     unmatched = []
 
     for product in zatu_products:
-        result = index.match(product["title"], fuzzy_threshold=fuzzy_threshold, min_gap=min_gap)
+        override_id = match_overrides.get(product["handle"])
+        if override_id is not None:
+            override_game = by_id[override_id]
+            result = MatchResult(
+                product["title"], override_game.id, override_game.name, "HIGH", 100.0,
+                "manual override: BGG's official title differs too much from the retailer's "
+                "title for automated matching to find safely",
+            )
+        else:
+            result = index.match(
+                product["title"], fuzzy_threshold=fuzzy_threshold, min_gap=min_gap
+            )
 
         if result.confidence == "LOW":
             dropped.append(
@@ -175,6 +213,7 @@ def main() -> int:
     parser.add_argument("--out", default="data/matched_games.json")
     parser.add_argument("--dropped-out", default="data/dropped.csv")
     parser.add_argument("--unmatched-out", default="data/unmatched_games.json")
+    parser.add_argument("--match-overrides", default="data/bgg_match_overrides.json")
     args = parser.parse_args()
 
     if not Path(args.bgg_ranks).exists():
@@ -203,7 +242,11 @@ def main() -> int:
     excluded_games = [g for g in all_bgg_games if g.id not in included_ids]
     print(f"{len(bgg_games)} base games in bg_ranks.csv after dropping expansions.", file=sys.stderr)
 
-    survivors, dropped, unmatched = run(products, bgg_games, config, excluded_games=excluded_games)
+    match_overrides = load_match_overrides(args.match_overrides)
+    survivors, dropped, unmatched = run(
+        products, bgg_games, config, excluded_games=excluded_games,
+        match_overrides=match_overrides,
+    )
     print(
         f"{len(survivors)} survivors (matched + passed quality gate), {len(dropped)} dropped "
         f"({len(unmatched)} of those never matched BGG at all, not just failed the quality "

@@ -51,6 +51,35 @@ def test_run_produces_expected_survivors_and_drops():
     assert unmatched_handles == set()
 
 
+def test_run_applies_a_manual_match_override_bypassing_the_normal_matcher():
+    # Real case (2026-08-12): "The Quacks of Quedlinburg" was matching BGG's "...: Big Box"
+    # entry instead of the real base game, because the real base game's official BGG title
+    # ("Quacks") is nothing like the retailer's title -- no automated heuristic can safely
+    # derive this, so a manual override should short-circuit straight to the right bgg_id
+    # (here: overriding brass-birmingham to bgg_id 3, "Brass: Lancashire", to prove the override
+    # wins over whatever the normal matcher would have found on its own -- brass-birmingham
+    # would otherwise match bgg_id 2, "Brass: Birmingham", exactly).
+    survivors, _, _ = match_bgg.run(
+        _zatu_products(), _bgg_games(), TEST_CONFIG,
+        match_overrides={"brass-birmingham": 3},
+    )
+    brass = next(s for s in survivors if s["zatu_handle"] == "brass-birmingham")
+    assert brass["bgg_id"] == 3
+    assert brass["bgg_name"] == "Brass: Lancashire"
+    assert brass["match_confidence"] == "HIGH"
+    assert brass["match_score"] == 100.0
+
+
+def test_load_match_overrides_reads_handle_to_bgg_id_map(tmp_path):
+    path = tmp_path / "overrides.json"
+    path.write_text(json.dumps({"some-handle": 12345}))
+    assert match_bgg.load_match_overrides(str(path)) == {"some-handle": 12345}
+
+
+def test_load_match_overrides_missing_file_returns_empty_dict(tmp_path):
+    assert match_bgg.load_match_overrides(str(tmp_path / "nope.json")) == {}
+
+
 def test_run_survivor_carries_zatu_and_bgg_fields():
     survivors, _, _ = match_bgg.run(_zatu_products(), _bgg_games(), TEST_CONFIG)
     brass = next(s for s in survivors if s["zatu_handle"] == "brass-birmingham")
