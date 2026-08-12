@@ -7188,5 +7188,16 @@
       "3": 1,
       "4": 1
     }
+  },
+  "244521": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Les Charlatans de Belcastel"
+    ],
+    "language_level": "MED",
+    "language_votes": {
+      "2": 10,
+      "3": 35
+    }
   }
 }
