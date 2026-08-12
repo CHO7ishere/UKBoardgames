@@ -1475,8 +1475,12 @@ the actual base game.
   always regenerates `data/matched_games.json` from scratch, it doesn't merge with the
   previous run's Stage 4 enrichment) — the next live dispatch pays the full Stage 4 EAN/image
   cost again for all 682 survivors (not just the one changed), same ~13 min as any prior run.
-- **Not yet live** — same pattern as every Stage 2-only fix this session: needs a
-  `lookup-philibert.yml` dispatch to get real Stage 3 (French-edition/language data for the new
-  bgg_id 244521, which was never checked before) and Stage 5 (Philibert lookup — the cached
-  `NOT_LISTED` result under the old wrong bgg_id is never trusted anyway, so this was always
-  going to be re-checked live) before the corrected match reaches the actual shortlist/report.
+- **Dispatched live for real (2026-08-12, run 10, commit `7210a94` → same, ~28 min)**: Stage 3
+  took 1 second (only the single new bgg_id 244521 needed checking, everything else already
+  cached), Stage 4 ~14 min (full 682-survivor EAN re-fetch, expected per the cache-wipe note
+  above), Stage 5 ~14 min. **Confirmed fixed**: `quacks-of-quedlinburg` is no longer in
+  `data/shortlist.json` at all — real BGG data for the corrected id 244521 shows a genuine
+  French edition exists (`fr_edition_exists: true`), so it now resolves to the
+  `FRENCH_EDITION_EXISTS` verdict (excluded from the shortlist, matching the user's explicit
+  "don't buy English if a French edition exists" design intent from earlier this session) rather
+  than the old wrong `UNAVAILABLE_FR`. `docs/index.html` reflects this live.
