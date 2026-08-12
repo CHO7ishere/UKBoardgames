@@ -120,6 +120,25 @@ def probe_versions(session: requests.Session, ids: list[int], token: str) -> Non
         print(v[:1500], file=sys.stderr)
 
 
+def probe_combined_stats_and_versions(session: requests.Session, bgg_id: int, token: str) -> None:
+    """Does stats=1 and versions=1 work together in one request (one call per batch instead of
+    two)? Both were only probed separately so far."""
+    headers = {"User-Agent": USER_AGENT, "Authorization": f"Bearer {token}"}
+    url = f"{BASE_URL}/thing"
+    params = {"id": bgg_id, "stats": 1, "versions": 1}
+    print(f"\n-- thing stats=1&versions=1 combined: {url} id={bgg_id} --", file=sys.stderr)
+    resp = session.get(url, params=params, headers=headers, timeout=30)
+    print(f"  status: {resp.status_code}", file=sys.stderr)
+    body = resp.text
+    print(f"  body length: {len(body)}", file=sys.stderr)
+    has_lang_dep = "language_dependence" in body
+    has_versions = 'type="boardgameversion"' in body
+    has_french_link = 'type="language" id="2187"' in body
+    print(f"  has language_dependence poll: {has_lang_dep}", file=sys.stderr)
+    print(f"  has boardgameversion items: {has_versions}", file=sys.stderr)
+    print(f"  has language link (French): {has_french_link}", file=sys.stderr)
+
+
 def probe_search(session: requests.Session, query: str, token: str | None, label: str) -> None:
     headers = {"User-Agent": USER_AGENT}
     if token:
@@ -154,6 +173,8 @@ def main() -> int:
         # Spirit Island (162886) and Marvel Champions (285774) -- real French-edition ground
         # truth already confirmed via the headless-browser scraper (4 printings / exactly 1).
         probe_versions(session, [162886, 285774], token=token)
+        time.sleep(5)
+        probe_combined_stats_and_versions(session, 285774, token=token)
     else:
         print("\nNo BGG_TOKEN in environment -- skipping authenticated rounds.", file=sys.stderr)
 
