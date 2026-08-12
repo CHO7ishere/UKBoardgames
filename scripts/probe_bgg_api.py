@@ -79,6 +79,47 @@ def probe_thing(session: requests.Session, ids: list[int], token: str | None, la
         print("   ", m.group(0), file=sys.stderr)
 
 
+def probe_versions(session: requests.Session, ids: list[int], token: str) -> None:
+    """Real French-edition-exists needs actual *version* data with a language tag, not the
+    `thing` response's plain `<name type="alternate">` list (confirmed via round 1: those
+    alternate names carry no language attribute at all -- Cyrillic/Japanese/Korean/French names
+    all mixed together with no way to tell which is which). The classic API's `versions=1` param
+    is the documented way to get real `<item type="boardgameversion">` entries, each with
+    `<link type="language" value="...">` -- this checks the *real* shape before assuming it.
+    Uses ids already cross-checked against the existing headless-browser scraper's real findings
+    (Spirit Island: 4 French printings; Marvel Champions: exactly 1, "Marvel Champions: Le Jeu De
+    Cartes") so the API result can be directly compared against already-confirmed truth.
+    """
+    headers = {"User-Agent": USER_AGENT, "Authorization": f"Bearer {token}"}
+    url = f"{BASE_URL}/thing"
+    params = {"id": ",".join(str(i) for i in ids), "versions": 1}
+    print(f"\n-- thing versions=1: {url} ids={ids} --", file=sys.stderr)
+    resp = session.get(url, params=params, headers=headers, timeout=30)
+    print(f"  status: {resp.status_code}", file=sys.stderr)
+    body = resp.text
+    if resp.status_code == 202:
+        print("  202 -- retrying after 5s...", file=sys.stderr)
+        time.sleep(5)
+        resp = session.get(url, params=params, headers=headers, timeout=30)
+        print(f"  retry status: {resp.status_code}", file=sys.stderr)
+        body = resp.text
+    print(f"  body length: {len(body)}", file=sys.stderr)
+
+    import re as _re
+
+    # Print each <item type="boardgameversion"> block in full, but only ones that actually
+    # mention French, to keep the log readable against a potentially huge versions list.
+    version_items = _re.findall(
+        r'<item type="boardgameversion"[^>]*>.*?</item>', body, flags=_re.DOTALL
+    )
+    print(f"  {len(version_items)} total boardgameversion items found", file=sys.stderr)
+    french_items = [v for v in version_items if "French" in v or "Français" in v]
+    print(f"  {len(french_items)} mention French/Français anywhere in the block", file=sys.stderr)
+    for v in french_items[:6]:
+        print("  ---", file=sys.stderr)
+        print(v[:1500], file=sys.stderr)
+
+
 def probe_search(session: requests.Session, query: str, token: str | None, label: str) -> None:
     headers = {"User-Agent": USER_AGENT}
     if token:
@@ -109,6 +150,10 @@ def main() -> int:
         probe_thing(session, THING_IDS, token=token, label="with Bearer token")
         time.sleep(5)
         probe_search(session, "Gloomhaven", token=token, label="with Bearer token")
+        time.sleep(5)
+        # Spirit Island (162886) and Marvel Champions (285774) -- real French-edition ground
+        # truth already confirmed via the headless-browser scraper (4 printings / exactly 1).
+        probe_versions(session, [162886, 285774], token=token)
     else:
         print("\nNo BGG_TOKEN in environment -- skipping authenticated rounds.", file=sys.stderr)
 
