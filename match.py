@@ -12,10 +12,12 @@ from __future__ import annotations
 
 import bisect
 import html
+import json
 import re
 import unicodedata
 from collections import defaultdict
 from dataclasses import dataclass, field
+from pathlib import Path
 
 from rapidfuzz import fuzz, process
 
@@ -363,6 +365,14 @@ class BggIndex:
         for game in excluded_games or []:
             self._excluded_exact[normalize_title(game.name)].append(game)
 
+        # Alternate-names index from Stage 3's BGG API fetch (data/bgg_details.json) -- folk game
+        # names like "Liars Dice" that don't match commercial names like "Perudo" (id 45). Maps
+        # normalized alternate name → list of (bgg_id, game) tuples. Loaded optionally: if
+        # bgg_details.json doesn't exist (first run, before Stage 3), matching still works but
+        # skips the alternate-name tier.
+        self._alternate_names_index: dict[str, list[tuple[int, BggRankedGame]]] = defaultdict(list)
+        self._load_alternate_names_index(games)
+
     @staticmethod
     def _dominant_by_rating_count(candidates: list[BggRankedGame]) -> BggRankedGame | None:
         """Among title-tied candidates, return the one with >= _DOMINANCE_RATIO times the
@@ -401,6 +411,41 @@ class BggIndex:
         upper_bound = prefix[:-1] + chr(ord(" ") + 1)  # next char after space
         hi = bisect.bisect_left(self._sorted_names, upper_bound)
         return [self._sorted_pairs[i][1] for i in range(lo, hi)]
+
+    def _load_alternate_names_index(self, games: list[BggRankedGame]) -> None:
+        """Load BGG alternate names from Stage 3's bgg_details.json if it exists. Maps
+        normalized alternate name → list of (bgg_id, game) tuples. Gracefully degrades if
+        the file doesn't exist (e.g. first run, before Stage 3 completes)."""
+        details_path = Path("data/bgg_details.json")
+        if not details_path.exists():
+            return
+
+        try:
+            details = json.loads(details_path.read_text())
+            game_by_id = {g.id: g for g in games}
+            for item in details:
+                bgg_id = item.get("bgg_id")
+                game = game_by_id.get(bgg_id)
+                if not game:
+                    continue
+                for alt_name in item.get("alternate_names", []):
+                    if alt_name:
+                        norm = normalize_title(alt_name)
+                        self._alternate_names_index[norm].append((bgg_id, game))
+        except (json.JSONDecodeError, KeyError, TypeError):
+            # If bgg_details.json is malformed or missing expected fields, silently degrade
+            pass
+
+    def _alternate_name_match(self, norm: str) -> BggRankedGame | None:
+        """Check if normalized query matches any alternate name in bgg_details.json.
+        Returns the matched game if exactly one match exists, None otherwise."""
+        matches = self._alternate_names_index.get(norm)
+        if not matches:
+            return None
+        if len(matches) == 1:
+            return matches[0][1]
+        # Multiple games share this alternate name -- ambiguous, don't guess
+        return None
 
     def match(
         self, title: str, fuzzy_threshold: float = 90.0, min_gap: float = 5.0
@@ -480,6 +525,17 @@ class BggIndex:
                 None,
                 "ambiguous: multiple BGG entries share this normalized title",
                 candidates=[(g.id, g.name) for g in exact[:5]],
+            )
+
+        # Try matching against BGG's alternate names (Stage 3's bgg_details.json): folk game
+        # names like "Liars Dice" that don't match commercial names like "Perudo" (id 45).
+        # Only tried if exact tiers found nothing, and only returns a match if exactly one
+        # game has this name as an alternate (no ambiguity).
+        alt_match = self._alternate_name_match(norm)
+        if alt_match is not None:
+            return MatchResult(
+                title, alt_match.id, alt_match.name, "HIGH", 100.0,
+                "exact match against BGG alternate/folk name (from Stage 3 BGG API data)",
             )
 
         if not self.normalized_names:
