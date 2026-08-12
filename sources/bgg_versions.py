@@ -14,6 +14,16 @@ Needs the real BGG title slug, not just the numeric id — confirmed live that a
 not an error). Resolved with an extra page load: visit the bare `/boardgame/<id>` page first
 (BGG's own redirect fills in the canonical slug), read the final URL, then build the real
 versions URL from that slug.
+
+**SUPERSEDED in production (2026-08-12), kept as a documented fallback, not deleted.** Once a
+real BGG API token existed, `sources/bgg_api.py`'s `thing?id=...&stats=1&versions=1` (plain
+`requests`, `Authorization: Bearer <token>`, no browser needed) turned out to return the exact
+same real data faster and batched (up to 20 ids per call vs. 2 page loads per game here) --
+cross-validated directly against this module's own prior finding: the API's Marvel Champions
+French edition is character-for-character the same title *and* the same version id (468045) this
+module found independently via the versions page. `scripts/enrich_bgg_fr_edition.py` calls
+`bgg_api.py` now, not this module. Left in place (module + its tests) in case token/API access
+ever changes and the headless-browser path is needed again.
 """
 
 from __future__ import annotations

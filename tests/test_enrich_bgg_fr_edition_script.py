@@ -10,13 +10,13 @@ SURVIVOR_B = {"zatu_handle": "game-b", "zatu_title": "Game B", "bgg_id": 2}
 SURVIVOR_C = {"zatu_handle": "game-c", "zatu_title": "Game C", "bgg_id": 3}
 
 
-# --- select_survivors_to_check (pure, no browser needed) --------------------------------------
+# --- select_survivors_to_check (pure, no network needed) --------------------------------------
 #
 # language_level is read for every scored row (unlike fr_edition_exists, only read for
 # NOT_LISTED-on-Philibert survivors) -- 2026-08-11: selection scope widened from "NOT_LISTED or
 # brand new" to "any bgg_id not yet fully cached" (i.e. missing language_level), since both
-# fields come from the same two page loads and there's no longer a cost reason to gate on
-# Philibert status.
+# fields come from the same batched API request and there's no cost reason to gate on Philibert
+# status.
 
 
 def test_selects_brand_new_survivors_with_no_prior_cache_entry():
@@ -71,56 +71,62 @@ def test_mixed_selection_across_survivors():
     assert to_check == [SURVIVOR_B, SURVIVOR_C]
 
 
-# --- main() end-to-end, browser mocked out -----------------------------------------------------
+# --- main() end-to-end, sources.bgg_api.fetch_things mocked out -------------------------------
 
 
-class _FakeChromium:
-    def launch(self):
-        return _FakeBrowser()
+def _item(bgg_id, fr_exists=False, fr_titles=None, language_level=None, language_votes=None, **extra):
+    return {
+        "bgg_id": bgg_id,
+        "name": f"Game {bgg_id}",
+        "fr_edition_exists": fr_exists,
+        "fr_edition_titles": fr_titles or [],
+        "language_level": language_level,
+        "language_votes": language_votes or {},
+        **extra,
+    }
 
 
-class _FakeBrowser:
-    def new_context(self, **kwargs):
-        return _FakeContext()
+def _fake_stats(batches=1, items_returned=0, retries_202=0, errors=None):
+    from sources.bgg_api import FetchStats
 
-    def close(self):
-        pass
-
-
-class _FakeContext:
-    def new_page(self):
-        return object()  # never touched -- fetch_french_edition_info is monkeypatched
+    return FetchStats(
+        batches=batches, items_returned=items_returned, retries_202=retries_202,
+        errors=errors or [],
+    )
 
 
-class _FakePlaywright:
-    def __enter__(self):
-        return self
+def test_main_requires_bgg_token(tmp_path, monkeypatch):
+    matched_file = tmp_path / "matched.json"
+    matched_file.write_text(json.dumps({"survivors": []}))
+    monkeypatch.delenv("BGG_TOKEN", raising=False)
+    monkeypatch.setattr(
+        sys, "argv",
+        ["enrich_bgg_fr_edition.py", "--matched", str(matched_file), "--rate-limit-sec", "0"],
+    )
 
-    def __exit__(self, *exc):
-        return False
+    exit_code = enrich_bgg_fr_edition.main()
 
-    @property
-    def chromium(self):
-        return _FakeChromium()
+    assert exit_code == 1
 
 
-def test_main_writes_fr_edition_cache(tmp_path, monkeypatch):
+def test_main_writes_fr_edition_cache_and_full_details(tmp_path, monkeypatch):
     matched_file = tmp_path / "matched.json"
     matched_file.write_text(json.dumps({"survivors": [SURVIVOR_A, SURVIVOR_B]}))
     philibert_file = tmp_path / "philibert_results.json"
     philibert_file.write_text(json.dumps({"results": []}))
     out_file = tmp_path / "bgg_fr_editions.json"
+    details_file = tmp_path / "bgg_details.json"
 
-    def fake_fetch(page, bgg_id):
-        return {
-            "fr_edition_exists": bgg_id == 1,
-            "fr_edition_titles": ["Le Jeu"] if bgg_id == 1 else [],
-            "language_level": "LOW" if bgg_id == 1 else None,
-            "language_votes": {},
-        }
+    def fake_fetch_things(session, ids, token, rate_limit_sec=5.0, **kw):
+        assert token == "fake-token"
+        items = [
+            _item(1, fr_exists=True, fr_titles=["Le Jeu"], language_level="LOW", mechanics=["X"]),
+            _item(2, fr_exists=False),
+        ]
+        return items, _fake_stats(items_returned=len(items))
 
-    monkeypatch.setattr(enrich_bgg_fr_edition, "sync_playwright", lambda: _FakePlaywright())
-    monkeypatch.setattr(enrich_bgg_fr_edition, "fetch_french_edition_info", fake_fetch)
+    monkeypatch.setenv("BGG_TOKEN", "fake-token")
+    monkeypatch.setattr(enrich_bgg_fr_edition, "fetch_things", fake_fetch_things)
     monkeypatch.setattr(
         sys,
         "argv",
@@ -129,6 +135,7 @@ def test_main_writes_fr_edition_cache(tmp_path, monkeypatch):
             "--matched", str(matched_file),
             "--philibert-results", str(philibert_file),
             "--out", str(out_file),
+            "--details-out", str(details_file),
             "--rate-limit-sec", "0",
         ],
     )
@@ -140,20 +147,29 @@ def test_main_writes_fr_edition_cache(tmp_path, monkeypatch):
     assert cache["1"]["fr_edition_exists"] is True
     assert cache["1"]["language_level"] == "LOW"
     assert cache["2"]["fr_edition_exists"] is False
+    # the narrow cache only carries the four fields lookup_philibert.py/score_games.py read
+    assert set(cache["1"].keys()) == {
+        "fr_edition_exists", "fr_edition_titles", "language_level", "language_votes",
+    }
+
+    details = json.loads(details_file.read_text())
+    assert details["1"]["name"] == "Game 1"
+    assert details["1"]["mechanics"] == ["X"]  # the "full answer" survives, not just the narrow fields
 
 
-def test_main_survives_a_fetch_error(tmp_path, monkeypatch, capsys):
+def test_main_survives_errors_reported_by_fetch_things(tmp_path, monkeypatch, capsys):
     matched_file = tmp_path / "matched.json"
     matched_file.write_text(json.dumps({"survivors": [SURVIVOR_A]}))
     philibert_file = tmp_path / "philibert_results.json"
     philibert_file.write_text(json.dumps({"results": []}))
     out_file = tmp_path / "bgg_fr_editions.json"
+    details_file = tmp_path / "bgg_details.json"
 
-    def flaky_fetch(page, bgg_id):
-        raise RuntimeError("simulated navigation error")
+    def fake_fetch_things(session, ids, token, rate_limit_sec=5.0, **kw):
+        return [], _fake_stats(items_returned=0, errors=["ids=[1]: simulated network error"])
 
-    monkeypatch.setattr(enrich_bgg_fr_edition, "sync_playwright", lambda: _FakePlaywright())
-    monkeypatch.setattr(enrich_bgg_fr_edition, "fetch_french_edition_info", flaky_fetch)
+    monkeypatch.setenv("BGG_TOKEN", "fake-token")
+    monkeypatch.setattr(enrich_bgg_fr_edition, "fetch_things", fake_fetch_things)
     monkeypatch.setattr(
         sys,
         "argv",
@@ -162,16 +178,17 @@ def test_main_survives_a_fetch_error(tmp_path, monkeypatch, capsys):
             "--matched", str(matched_file),
             "--philibert-results", str(philibert_file),
             "--out", str(out_file),
+            "--details-out", str(details_file),
             "--rate-limit-sec", "0",
         ],
     )
 
     exit_code = enrich_bgg_fr_edition.main()
 
-    assert exit_code == 0  # one bad page must not kill the run
+    assert exit_code == 0  # one bad batch must not kill the run
     cache = json.loads(out_file.read_text())
     assert cache == {}
-    assert "ERROR bgg_id=1" in capsys.readouterr().err
+    assert "simulated network error" in capsys.readouterr().err
 
 
 def test_main_preserves_existing_cache_entries_not_rechecked(tmp_path, monkeypatch):
@@ -186,15 +203,17 @@ def test_main_preserves_existing_cache_entries_not_rechecked(tmp_path, monkeypat
     out_file.write_text(json.dumps({
         "1": {"fr_edition_exists": True, "fr_edition_titles": ["Cached"], "language_level": "MED", "language_votes": {}},
     }))
+    details_file = tmp_path / "bgg_details.json"
 
     calls = []
 
-    def tracking_fetch(page, bgg_id):
-        calls.append(bgg_id)
-        return {"fr_edition_exists": False, "fr_edition_titles": [], "language_level": None, "language_votes": {}}
+    def fake_fetch_things(session, ids, token, rate_limit_sec=5.0, **kw):
+        calls.extend(ids)
+        items = [_item(bgg_id, fr_exists=False) for bgg_id in ids]
+        return items, _fake_stats(items_returned=len(items))
 
-    monkeypatch.setattr(enrich_bgg_fr_edition, "sync_playwright", lambda: _FakePlaywright())
-    monkeypatch.setattr(enrich_bgg_fr_edition, "fetch_french_edition_info", tracking_fetch)
+    monkeypatch.setenv("BGG_TOKEN", "fake-token")
+    monkeypatch.setattr(enrich_bgg_fr_edition, "fetch_things", fake_fetch_things)
     monkeypatch.setattr(
         sys,
         "argv",
@@ -203,6 +222,7 @@ def test_main_preserves_existing_cache_entries_not_rechecked(tmp_path, monkeypat
             "--matched", str(matched_file),
             "--philibert-results", str(philibert_file),
             "--out", str(out_file),
+            "--details-out", str(details_file),
             "--rate-limit-sec", "0",
         ],
     )
@@ -214,3 +234,45 @@ def test_main_preserves_existing_cache_entries_not_rechecked(tmp_path, monkeypat
     cache = json.loads(out_file.read_text())
     assert cache["1"] == {"fr_edition_exists": True, "fr_edition_titles": ["Cached"], "language_level": "MED", "language_votes": {}}
     assert cache["2"]["fr_edition_exists"] is False
+
+
+def test_main_refresh_flag_rechecks_everything(tmp_path, monkeypatch):
+    matched_file = tmp_path / "matched.json"
+    matched_file.write_text(json.dumps({"survivors": [SURVIVOR_A]}))
+    philibert_file = tmp_path / "philibert_results.json"
+    philibert_file.write_text(json.dumps({"results": []}))
+    out_file = tmp_path / "bgg_fr_editions.json"
+    out_file.write_text(json.dumps({
+        "1": {"fr_edition_exists": True, "fr_edition_titles": ["Stale"], "language_level": "MED", "language_votes": {}},
+    }))
+    details_file = tmp_path / "bgg_details.json"
+
+    calls = []
+
+    def fake_fetch_things(session, ids, token, rate_limit_sec=5.0, **kw):
+        calls.extend(ids)
+        items = [_item(1, fr_exists=False, language_level="LOW")]
+        return items, _fake_stats(items_returned=1)
+
+    monkeypatch.setenv("BGG_TOKEN", "fake-token")
+    monkeypatch.setattr(enrich_bgg_fr_edition, "fetch_things", fake_fetch_things)
+    monkeypatch.setattr(
+        sys,
+        "argv",
+        [
+            "enrich_bgg_fr_edition.py",
+            "--matched", str(matched_file),
+            "--philibert-results", str(philibert_file),
+            "--out", str(out_file),
+            "--details-out", str(details_file),
+            "--rate-limit-sec", "0",
+            "--refresh",
+        ],
+    )
+
+    exit_code = enrich_bgg_fr_edition.main()
+
+    assert exit_code == 0
+    assert calls == [1]  # --refresh forces a re-check despite the existing cache entry
+    cache = json.loads(out_file.read_text())
+    assert cache["1"]["fr_edition_exists"] is False  # fresh value, not the stale cached one

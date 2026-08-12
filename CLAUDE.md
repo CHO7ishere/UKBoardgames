@@ -1344,3 +1344,80 @@ purpose. Also pasted a real BGG API token in chat.
   survivors are in the refreshed `data/matched_games.json`/`data/unmatched_games.json` but don't
   have Stage 3/4/5 data yet, so the scored shortlist and rendered report are unchanged until the
   next `lookup-philibert.yml` dispatch.
+
+## Stage 3 rebuilt on the real BGG XML API2 — token now exists (2026-08-12)
+
+User pasted a live BGG API token directly in chat. **Never written to any repo file** — this
+repo's `docs/index.html` is served publicly via GitHub Pages, so anything committed here is
+world-readable; a credential belongs in a GitHub Actions secret instead. User confirmed they
+created a `BGG_TOKEN` repository secret. Every place this codebase touches the token reads it
+from `os.environ.get("BGG_TOKEN")` at runtime or references `${{ secrets.BGG_TOKEN }}` in
+workflow YAML — never hardcoded, never logged, never written to a data file.
+
+- **Probed live first, 4 rounds, before writing any production code**
+  (`scripts/probe_bgg_api.py`, `.github/workflows/probe-bgg-api.yml`, `workflow_dispatch`-only):
+  confirmed 401 without the token / 200 with it; `stats=1` (language-dependence poll) and
+  `versions=1` (per-edition data incl. `<link type="language">`) combine into one `thing`
+  request; the real XML shapes for the language-dependence poll and the boardgameversion/
+  canonicalname/language-link block; cross-validated against `sources/bgg_versions.py`'s
+  earlier headless-browser finding for Marvel Champions — the API's French edition
+  (`"Marvel Champions: Le Jeu De Cartes"`, version id 468045) is character-for-character the
+  same title and id the browser scraper found independently.
+- **`sources/bgg_api.py`** (new): `make_session()`, `fetch_things(session, ids, token,
+  rate_limit_sec=5.0, max_retries=5, backoff_sec=5.0)` — batches up to `MAX_IDS_PER_CALL` (20,
+  BGG's documented limit) ids per call, retries on HTTP 202 (BGG queuing) with backoff, survives
+  request exceptions and records them in a `FetchStats` rather than raising. `parse_thing_item()`
+  parses one `<item>` into the *full* set of fields BGG returns (name, alternate names,
+  description, year/min/max players, playing time, mechanics, categories, designers,
+  publishers, artists, statistics, language_level/language_votes, fr_edition_exists/
+  fr_edition_titles) — not just the two narrow fields the pipeline reads today, per the user's
+  explicit ask below. `xml.etree.ElementTree` (stdlib) for parsing, including attribute-predicate
+  lookups (`'poll[@name="language_dependence"]'`, `'link[@type="boardgamemechanic"]'`).
+  `<name type="alternate">` confirmed to carry no language attribute at all (every language
+  mixed together) — not used for French-edition detection; only `versions=1`'s per-version
+  `<link type="language">` is reliable for that.
+- **User's follow-up mid-build**: *"And maybe we should store the full answers from bgg?"* —
+  since a single batched call now returns everything for free, no reason to throw the rest away
+  and have to re-fetch later if it becomes useful (e.g. a real BGG-mechanics-based genre bonus
+  instead of Zatu's own tags). `scripts/enrich_bgg_fr_edition.py` (rewritten, no more Playwright)
+  now writes **two** files: `data/bgg_fr_editions.json` (unchanged narrow schema —
+  `fr_edition_exists`/`fr_edition_titles`/`language_level`/`language_votes` — so
+  `lookup_philibert.py`/`score_games.py` need zero changes) and new `data/bgg_details.json`
+  (the full parsed item per bgg_id, `--details-out` flag). Both cached indefinitely by bgg_id
+  (BGG's own catalogued data, essentially static) — `--refresh` forces a full re-check.
+  `select_survivors_to_check()` treats a cache entry as complete once it has `language_level`.
+- **`sources/bgg_versions.py` (the old headless-browser scraper) is superseded, not deleted** —
+  module docstring updated to say so, kept as a documented fallback in case token/API access
+  ever changes. Nothing calls it anymore.
+- **`.github/workflows/lookup-philibert.yml`**: Stage 3 step now runs
+  `scripts/enrich_bgg_fr_edition.py` with `env: BGG_TOKEN: ${{ secrets.BGG_TOKEN }}`, no more
+  `playwright install --with-deps chromium` step. Commit step's `git add` list gained
+  `data/bgg_details.json`.
+- **Real fixture data, not synthetic**: `tests/fixtures/bgg_api_thing_gloomhaven_marvel_
+  champions.xml` is reconstructed from real captured output of a live `probe-bgg-api.yml`
+  dispatch (Gloomhaven id 174430, Marvel Champions id 285774) — structure, tag names, and the
+  values every test actually asserts on are real (Gloomhaven's language-dependence poll:
+  totalvotes 72, level 4 "Extensive use of text" wins plurality with 48 votes → `HIGH`; Marvel
+  Champions' real French edition). Statistics numeric values not captured in the log's truncated
+  output are placeholders, not asserted on by any test. 16 new tests in `tests/test_bgg_api.py`.
+- **Real bug found and fixed while writing the fixture**: an XML comment in the fixture's header
+  used "--" as a prose separator, which is invalid inside XML comments per spec (`--` can't
+  appear anywhere in a comment body) — `ET.fromstring()` raised `ParseError: not well-formed`.
+  Fixed by moving the provenance note into the Python test file as regular comments instead of
+  an XML comment.
+- **Real test-isolation bug self-caught before shipping**: three tests in
+  `tests/test_enrich_bgg_fr_edition_script.py` (`test_main_survives_errors_reported_by_
+  fetch_things`, `test_main_preserves_existing_cache_entries_not_rechecked`, `test_main_
+  refresh_flag_rechecks_everything`) called `main()` without passing `--details-out`, so it fell
+  back to its real default (`data/bgg_details.json`) and wrote test fixture data into the actual
+  repo directory on every test run. Caught by noticing an unexpected untracked file after running
+  the suite (`git status --short` showed `?? data/bgg_details.json`), not by a failing test —
+  confirmed harmless (never committed) and deleted, then fixed by adding `--details-out` pointing
+  at `tmp_path` to all three tests, matching the one test that already did this correctly. 274
+  tests pass; `git status` after a full suite run confirmed clean, no stray files.
+- **Not yet dispatched live** — the whole point of this rebuild is to replace the old
+  ~2-3 hour, ~682-page-load headless-browser Stage 3 run with a batched API version estimated at
+  minutes (roughly 35 requests of 20 ids each, 5s rate-limited ≈ 3 min) covering every survivor's
+  `language_level`, not just the narrow `NOT_LISTED` subset the old approach was scoped to. Needs
+  a real `lookup-philibert.yml` dispatch to populate `data/bgg_fr_editions.json`/`data/
+  bgg_details.json` with real data and regenerate `docs/index.html` before this is actually live.

@@ -1,12 +1,14 @@
 name: Philibert lookup (Stage 3 + Stage 4 + Stage 5)
 
-# Stage 3 (BGG French-edition-exists, headless browser -- BGG is Cloudflare-protected, plain
-# requests can't reach it), Stage 4 (real per-product Zatu EANs), then Stage 5 (Philibert lookup
-# + advantage filter) for the Stage 2 survivors. All three need real network access this coding
-# sandbox doesn't have. Both Stage 4/5 and Stage 3 are cached against their own prior committed
-# output (see enrich_zatu_ean.py/lookup_philibert.py/enrich_bgg_fr_edition.py's --refresh flags),
-# so a typical re-run is much cheaper than the first full pass -- still genuinely slow overall,
-# so this is manual-dispatch only, not on every push.
+# Stage 3 (BGG data via the real XML API2, Authorization: Bearer <token> -- see
+# sources/bgg_api.py; supersedes the earlier headless-browser scraper now that a real BGG API
+# token exists, no browser needed anymore), Stage 4 (real per-product Zatu EANs), then Stage 5
+# (Philibert lookup + advantage filter) for the Stage 2 survivors. All three need real network
+# access this coding sandbox doesn't have. All three stages are cached against their own prior
+# committed output (see enrich_zatu_ean.py/lookup_philibert.py/enrich_bgg_fr_edition.py's
+# --refresh flags), so a typical re-run is much cheaper than the first full pass -- still
+# genuinely slow overall (Stage 4/5 remain per-product HTTP calls), so this is manual-dispatch
+# only, not on every push.
 
 on:
   workflow_dispatch: {}
@@ -24,9 +26,10 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install -r requirements.txt
-      - run: playwright install --with-deps chromium
-      - name: Stage 3 - BGG French-edition-exists (headless browser)
+      - name: Stage 3 - BGG data via the real API (French editions, language dependence, full details)
         run: python scripts/enrich_bgg_fr_edition.py --matched data/matched_games.json --philibert-results data/philibert_results.json
+        env:
+          BGG_TOKEN: ${{ secrets.BGG_TOKEN }}
       - name: Stage 4 - enrich survivors with real EANs
         run: python scripts/enrich_zatu_ean.py --matched data/matched_games.json --out data/matched_games.json
       - name: Stage 5 - Philibert lookup + advantage filter
@@ -45,7 +48,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/matched_games.json data/unmatched_games.json data/bgg_fr_editions.json data/philibert_results.json data/shortlist.json data/scored_games.json docs/index.html
+          git add data/matched_games.json data/unmatched_games.json data/bgg_fr_editions.json data/bgg_details.json data/philibert_results.json data/shortlist.json data/scored_games.json docs/index.html
           git diff --cached --quiet && { echo "Nothing to commit."; exit 0; }
           git commit -m "Update Philibert lookup + shortlist + report [skip ci]"
           for attempt in 1 2 3 4 5; do

@@ -1,45 +1,49 @@
 #!/usr/bin/env python3
-"""Stage 3: for each Stage 2 survivor, check BGG's own data (via a real headless browser -- BGG
-is Cloudflare-protected, see sources/bgg_versions.py) for (a) whether a French edition exists at
-all, even if it's not currently purchasable anywhere, and (b) BGG's community language-dependence
-poll result -- both come from the same two page loads per bgg_id, no extra requests either way.
+"""Stage 3: for each Stage 2 survivor, fetch BGG's own data via the real XML API2
+(sources/bgg_api.py, `thing?id=...&stats=1&versions=1`, `Authorization: Bearer <token>`) --
+supersedes the earlier headless-browser scraper (sources/bgg_versions.py, kept as a documented
+fallback, not called here anymore) now that a real BGG API token exists (2026-08-12).
+
+Confirmed live via scripts/probe_bgg_api.py before this was written (see sources/bgg_api.py's
+own module docstring for the full probe trail): 401 without the token, 200 with it; stats=1 and
+versions=1 combine into one request; the real language_dependence poll and per-version language
+link schema, cross-validated against the headless-browser scraper's own prior findings (Marvel
+Champions' French edition: same title, same version id, found independently both ways).
+
+Two outputs:
+- data/bgg_fr_editions.json -- the narrow fields Stage 5/6 actually read (fr_edition_exists,
+  fr_edition_titles, language_level, language_votes), same schema as before this script's
+  rewrite, so lookup_philibert.py/score_games.py need zero changes.
+- data/bgg_details.json -- the *full* parsed answer for every bgg_id checked (name, alternate
+  names, description, mechanics, categories, designers, publishers, artists, statistics), not
+  just the two narrow fields above. User's explicit ask (2026-08-12): now that a single batched
+  API call returns all of this for free, there's no reason to throw the rest away and have to
+  re-fetch it later if it becomes useful (e.g. a real BGG-mechanics-based genre bonus instead of
+  Zatu's own tags).
 
 fr_edition_exists feeds Stage 5's advantage verdict (spec §5.2's UNAVAILABLE_FR vs the weaker
 UNAVAILABLE_FR? distinction) -- user's explicit ask (2026-08-11): "I don't want to buy English
-versions if a French one exists (even if unavailable)". Real case that prompted this: Gloomhaven:
-Jaws of the Lion (bgg_id=291457) is NOT_LISTED on Philibert, but BGG's own versions data confirms
-a real French edition exists.
+versions if a French one exists (even if unavailable)".
 
-language_level feeds every scored row's composite score (score.py's language_points(), spec
-§5.4) -- unlike fr_edition_exists, this is read for EVERY row, not just NOT_LISTED-on-Philibert
-ones, so (2026-08-11) the survivor-selection scope widened from "NOT_LISTED or brand new" to
-"any bgg_id not yet fully cached" -- see select_survivors_to_check. NOT YET CONFIRMED against a
-real captured BGG page: this sandbox can't reach boardgamegeek.com (network-blocked), so
-parse_language_dependence (sources/bgg_versions.py) is only tested against a synthetic
-reconstruction of BGG's poll markup. Needs a live GitHub Actions dispatch to confirm the parser
-actually extracts the right data from the real rendered page -- treat language_level as
-unverified until that run's output has been spot-checked against a few real BGG pages by hand.
+Both files are essentially static (BGG's own catalogued versions / crowd poll / metadata), so
+once a bgg_id is checked it's cached indefinitely; --refresh forces a full re-check.
 
-Both fields are essentially static (BGG's own catalogued versions / crowd poll), so once a
-bgg_id is checked it's cached indefinitely; --refresh forces a full re-check.
-
-Needs real network access to boardgamegeek.com and a headless Chromium -- run via GitHub
-Actions, not this coding sandbox.
+Needs real network access to boardgamegeek.com and a BGG_TOKEN env var -- run via GitHub
+Actions, not this coding sandbox. No headless browser needed anymore (plain `requests`), so the
+workflow no longer installs Playwright/Chromium for this stage.
 """
 
 from __future__ import annotations
 
 import argparse
 import json
+import os
 import sys
-import time
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from playwright.sync_api import sync_playwright  # noqa: E402
-
-from sources.bgg_versions import fetch_french_edition_info  # noqa: E402
+from sources.bgg_api import fetch_things, make_session  # noqa: E402
 
 
 def _load_json_list(path: str, key: str) -> list[dict]:
@@ -64,10 +68,8 @@ def select_survivors_to_check(
 ) -> list[dict]:
     """A bgg_id needs a (re-)check when its cache entry is missing `language_level` entirely --
     that field is read for every scored row (unlike fr_edition_exists, only read for NOT_LISTED
-    survivors), so a bgg_id is only "fully cached" once both fields are known. Both come from
-    the same two page loads, so there's no reason to gate on Philibert status anymore -- a
-    bgg_id either needs a visit or it doesn't. `philibert_results` is accepted for backward-
-    compatible call signatures but is no longer read."""
+    survivors), so a bgg_id is only "fully cached" once both fields are known. `philibert_results`
+    is accepted for backward-compatible call signatures but is no longer read."""
     to_check = []
     seen_bgg_ids = set()
     for survivor in survivors:
@@ -87,57 +89,60 @@ def main() -> int:
     parser.add_argument("--matched", default="data/matched_games.json")
     parser.add_argument("--philibert-results", default="data/philibert_results.json")
     parser.add_argument("--out", default="data/bgg_fr_editions.json")
+    parser.add_argument("--details-out", default="data/bgg_details.json")
     parser.add_argument("--refresh", action="store_true")
-    parser.add_argument("--rate-limit-sec", type=float, default=1.0)
+    parser.add_argument("--rate-limit-sec", type=float, default=5.0)
     args = parser.parse_args()
+
+    token = os.environ.get("BGG_TOKEN")
+    if not token:
+        print("ERROR: BGG_TOKEN environment variable is not set.", file=sys.stderr)
+        return 1
 
     survivors = _load_json_list(args.matched, "survivors")
     philibert_results = _load_json_list(args.philibert_results, "results")
-    cache = {} if args.refresh else _load_cache(args.out)
+    fr_editions_cache = {} if args.refresh else _load_cache(args.out)
+    details_cache = {} if args.refresh else _load_cache(args.details_out)
 
-    to_check = select_survivors_to_check(survivors, philibert_results, cache, args.refresh)
+    to_check = select_survivors_to_check(survivors, philibert_results, fr_editions_cache, args.refresh)
+    bgg_ids = [s["bgg_id"] for s in to_check]
     print(
-        f"{len(to_check)} survivor(s) need a BGG French-edition check "
-        f"({len(cache)} bgg_id(s) already cached).",
+        f"{len(bgg_ids)} bgg_id(s) need a BGG check "
+        f"({len(fr_editions_cache)} already cached).",
         file=sys.stderr,
     )
 
-    checked = 0
-    errors = 0
+    session = make_session()
+    items, stats = fetch_things(session, bgg_ids, token, rate_limit_sec=args.rate_limit_sec)
 
-    with sync_playwright() as p:
-        browser = p.chromium.launch()
-        context = browser.new_context(
-            user_agent=(
-                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-                "(KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
-            )
-        )
-        page = context.new_page()
+    for item in items:
+        bgg_id_str = str(item["bgg_id"])
+        fr_editions_cache[bgg_id_str] = {
+            "fr_edition_exists": item["fr_edition_exists"],
+            "fr_edition_titles": item["fr_edition_titles"],
+            "language_level": item["language_level"],
+            "language_votes": item["language_votes"],
+        }
+        details_cache[bgg_id_str] = item
 
-        for i, survivor in enumerate(to_check, start=1):
-            bgg_id = survivor["bgg_id"]
-            try:
-                info = fetch_french_edition_info(page, bgg_id)
-            except Exception as exc:  # noqa: BLE001 -- one bad page must not kill the whole run
-                print(f"  [{i}/{len(to_check)}] ERROR bgg_id={bgg_id}: {exc}", file=sys.stderr)
-                errors += 1
-                time.sleep(args.rate_limit_sec)
-                continue
-            cache[str(bgg_id)] = info
-            checked += 1
-            if i % 20 == 0 or i == len(to_check):
-                print(f"  [{i}/{len(to_check)}] {checked} checked, {errors} errors", file=sys.stderr)
-            time.sleep(args.rate_limit_sec)
-
-        browser.close()
-
-    print(f"Done: {checked} new checks, {errors} errors.", file=sys.stderr)
+    print(
+        f"Done: {stats.batches} batch(es), {stats.items_returned} item(s) returned, "
+        f"{stats.retries_202} HTTP 202 retries, {len(stats.errors)} error(s).",
+        file=sys.stderr,
+    )
+    for error in stats.errors:
+        print(f"  ERROR {error}", file=sys.stderr)
 
     out_path = Path(args.out)
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    out_path.write_text(json.dumps(cache, indent=2))
+    out_path.write_text(json.dumps(fr_editions_cache, indent=2))
     print(f"Wrote {out_path}", file=sys.stderr)
+
+    details_path = Path(args.details_out)
+    details_path.parent.mkdir(parents=True, exist_ok=True)
+    details_path.write_text(json.dumps(details_cache, indent=2, ensure_ascii=False))
+    print(f"Wrote {details_path}", file=sys.stderr)
+
     return 0
 
 
