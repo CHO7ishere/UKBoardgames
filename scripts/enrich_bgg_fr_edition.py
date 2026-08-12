@@ -64,12 +64,18 @@ def _load_cache(path: str) -> dict[str, dict]:
 
 
 def select_survivors_to_check(
-    survivors: list[dict], philibert_results: list[dict], cache: dict[str, dict], refresh: bool
-) -> list[dict]:
+    survivors: list[dict], philibert_results: list[dict], cache: dict[str, dict], refresh: bool,
+    unmatched_mappings: dict[str, int] | None = None
+) -> tuple[list[dict], list[int]]:
     """A bgg_id needs a (re-)check when its cache entry is missing `language_level` entirely --
     that field is read for every scored row (unlike fr_edition_exists, only read for NOT_LISTED
     survivors), so a bgg_id is only "fully cached" once both fields are known. `philibert_results`
-    is accepted for backward-compatible call signatures but is no longer read."""
+    is accepted for backward-compatible call signatures but is no longer read.
+
+    Returns (survivors_to_check, unmatched_bgg_ids_to_check) where unmatched_bgg_ids come from
+    data/unmatched_game_bgg_ids.json -- manually-confirmed mappings for folk-game names that
+    failed automatic matching but have a known BGG id (e.g. "Quickstop" → Slingz id 419421).
+    """
     to_check = []
     seen_bgg_ids = set()
     for survivor in survivors:
@@ -81,7 +87,19 @@ def select_survivors_to_check(
             continue
         to_check.append(survivor)
         seen_bgg_ids.add(bgg_id)
-    return to_check
+
+    # Also check unmatched games with manually-confirmed BGG ids (folk-game names like Quickstop→Slingz)
+    unmatched_ids_to_check = []
+    if unmatched_mappings:
+        for bgg_id in unmatched_mappings.values():
+            bgg_id_str = str(bgg_id)
+            if bgg_id_str not in seen_bgg_ids:
+                cached = None if refresh else cache.get(bgg_id_str)
+                if cached is None or "language_level" not in cached:
+                    unmatched_ids_to_check.append(bgg_id)
+                    seen_bgg_ids.add(bgg_id_str)
+
+    return to_check, unmatched_ids_to_check
 
 
 def main() -> int:
@@ -90,6 +108,7 @@ def main() -> int:
     parser.add_argument("--philibert-results", default="data/philibert_results.json")
     parser.add_argument("--out", default="data/bgg_fr_editions.json")
     parser.add_argument("--details-out", default="data/bgg_details.json")
+    parser.add_argument("--unmatched-bgg-ids", default="data/unmatched_game_bgg_ids.json")
     parser.add_argument("--refresh", action="store_true")
     parser.add_argument("--rate-limit-sec", type=float, default=5.0)
     args = parser.parse_args()
@@ -104,11 +123,24 @@ def main() -> int:
     fr_editions_cache = {} if args.refresh else _load_cache(args.out)
     details_cache = {} if args.refresh else _load_cache(args.details_out)
 
-    to_check = select_survivors_to_check(survivors, philibert_results, fr_editions_cache, args.refresh)
-    bgg_ids = [s["bgg_id"] for s in to_check]
+    # Load manually-confirmed BGG ids for unmatched games (folk-game names, etc.)
+    unmatched_mappings_file = Path(args.unmatched_bgg_ids)
+    unmatched_mappings = {}
+    if unmatched_mappings_file.exists():
+        try:
+            unmatched_data = json.loads(unmatched_mappings_file.read_text())
+            unmatched_mappings = unmatched_data.get("unmatched_mappings", {})
+        except json.JSONDecodeError:
+            pass
+
+    to_check, unmatched_ids_to_check = select_survivors_to_check(
+        survivors, philibert_results, fr_editions_cache, args.refresh, unmatched_mappings
+    )
+    bgg_ids = [s["bgg_id"] for s in to_check] + unmatched_ids_to_check
     print(
         f"{len(bgg_ids)} bgg_id(s) need a BGG check "
-        f"({len(fr_editions_cache)} already cached).",
+        f"({len(fr_editions_cache)} already cached, "
+        f"{len(unmatched_ids_to_check)} from unmatched game mappings).",
         file=sys.stderr,
     )
 
