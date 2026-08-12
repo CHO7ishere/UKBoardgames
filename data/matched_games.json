@@ -14887,6 +14887,35 @@
       "quality_label": "UNLABELED"
     },
     {
+      "zatu_handle": "mycelia-standard",
+      "zatu_title": "Mycelia: Standard",
+      "zatu_url": "https://zatu.com/products/mycelia-standard",
+      "zatu_price_gbp": 40.29,
+      "zatu_in_stock": true,
+      "zatu_ean": null,
+      "zatu_tags": [
+        "Board Games",
+        "Manual Release Date",
+        "Next Day Delivery",
+        "no gift wrap",
+        "Restock Item",
+        "Top 5000 Board Games"
+      ],
+      "zatu_is_coop": false,
+      "zatu_is_party": false,
+      "bgg_id": 392023,
+      "bgg_name": "Mycelia",
+      "bgg_year": 2023,
+      "bgg_rank": 1383,
+      "bgg_average": 7.36056,
+      "bgg_usersrated": 2982,
+      "match_confidence": "HIGH",
+      "match_score": 100.0,
+      "quality_shrunk": 7.333,
+      "quality_pts": 4.26,
+      "quality_label": "UNLABELED"
+    },
+    {
       "zatu_handle": "oranges-and-lemons",
       "zatu_title": "Oranges and Lemons",
       "zatu_url": "https://zatu.com/products/oranges-and-lemons",
@@ -17938,6 +17967,36 @@
       "quality_shrunk": 7.258,
       "quality_pts": 1.86,
       "quality_label": "UNLABELED"
+    },
+    {
+      "zatu_handle": "orleans-board-game-big-box-edition",
+      "zatu_title": "Orleans Board Game: Big Box Edition",
+      "zatu_url": "https://zatu.com/products/orleans-board-game-big-box-edition",
+      "zatu_price_gbp": 145.25,
+      "zatu_in_stock": true,
+      "zatu_ean": null,
+      "zatu_tags": [
+        "2-5 Players",
+        "60-90 Minutes",
+        "Board Games",
+        "Capstone Games",
+        "Next Day Delivery",
+        "no gift wrap",
+        "Top 5000 Board Games"
+      ],
+      "zatu_is_coop": false,
+      "zatu_is_party": false,
+      "bgg_id": 164928,
+      "bgg_name": "Orl\u00e9ans",
+      "bgg_year": 2014,
+      "bgg_rank": 35,
+      "bgg_average": 8.04671,
+      "bgg_usersrated": 35950,
+      "match_confidence": "MEDIUM",
+      "match_score": 100.0,
+      "quality_shrunk": 8.042,
+      "quality_pts": 27.08,
+      "quality_label": "EXCELLENT"
     },
     {
       "zatu_handle": "tomb-raider-the-crypt-of-chronos",
