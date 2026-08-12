@@ -1415,9 +1415,17 @@ workflow YAML — never hardcoded, never logged, never written to a data file.
   confirmed harmless (never committed) and deleted, then fixed by adding `--details-out` pointing
   at `tmp_path` to all three tests, matching the one test that already did this correctly. 274
   tests pass; `git status` after a full suite run confirmed clean, no stray files.
-- **Not yet dispatched live** — the whole point of this rebuild is to replace the old
-  ~2-3 hour, ~682-page-load headless-browser Stage 3 run with a batched API version estimated at
-  minutes (roughly 35 requests of 20 ids each, 5s rate-limited ≈ 3 min) covering every survivor's
-  `language_level`, not just the narrow `NOT_LISTED` subset the old approach was scoped to. Needs
-  a real `lookup-philibert.yml` dispatch to populate `data/bgg_fr_editions.json`/`data/
-  bgg_details.json` with real data and regenerate `docs/index.html` before this is actually live.
+- **Dispatched live for real (2026-08-12, run 9, commit `0521484` → `452131a`)**, confirming the
+  speedup estimate: Stage 3 (BGG API) — 667 bgg_ids checked (237 already cached), 34 batches, 0
+  errors, **3 minutes flat**, vs. the old headless-browser approach's ~45-60 min for a much
+  narrower subset. Full run (Stage 3-7) completed in ~32 minutes total (Stage 4 EAN ~13 min,
+  Stage 5 Philibert ~15 min — both per-product HTTP, the real remaining bottleneck, unaffected by
+  this rebuild). Real verdict counts across all 682 survivors: 467 `NONE`, 108
+  `FRENCH_EDITION_EXISTS` (up from 92 in the last run — this is now checked for every survivor,
+  not just the old approach's narrow `NOT_LISTED` subset), 56 `UNAVAILABLE_FR`, 38
+  `FAMILY_AVAILABLE_FR`, 13 `CHEAPER_UK`. **Shortlist: 69 games** (56 + 13), same size as before
+  but a different, more accurate composition now that French-edition-exists data is complete
+  rather than partial. `data/bgg_details.json` committed for the first time (full per-game BGG
+  data: mechanics, categories, designers, publishers, stats — available for future use, e.g. a
+  real BGG-mechanics-based genre bonus). `docs/index.html` now shows real `language_level`
+  badges/clauses for the first time (previously permanently `UNKNOWN` on every row).
