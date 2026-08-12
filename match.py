@@ -423,8 +423,9 @@ class BggIndex:
         try:
             details = json.loads(details_path.read_text())
             game_by_id = {g.id: g for g in games}
-            for item in details:
-                bgg_id = item.get("bgg_id")
+            # details is keyed by bgg_id (string); iterate over items
+            for bgg_id_str, item in details.items():
+                bgg_id = int(bgg_id_str) if isinstance(bgg_id_str, str) else bgg_id_str
                 game = game_by_id.get(bgg_id)
                 if not game:
                     continue
@@ -432,7 +433,7 @@ class BggIndex:
                     if alt_name:
                         norm = normalize_title(alt_name)
                         self._alternate_names_index[norm].append((bgg_id, game))
-        except (json.JSONDecodeError, KeyError, TypeError):
+        except (json.JSONDecodeError, KeyError, TypeError, ValueError):
             # If bgg_details.json is malformed or missing expected fields, silently degrade
             pass
 
