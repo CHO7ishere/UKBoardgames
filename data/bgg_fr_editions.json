@@ -7310,5 +7310,106 @@
       "2": 2,
       "3": 1
     }
+  },
+  "349955": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Les Charlatans de Belcastel: M\u00e9gabox"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 2
+    }
+  },
+  "217372": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "The Quest for El Dorado",
+      "La Course vers El Dorado"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 2,
+      "2": 35,
+      "3": 7
+    }
+  },
+  "251661": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 3,
+      "5": 6
+    }
+  },
+  "440007": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "The Druids of Edora"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 9
+    }
+  },
+  "427087": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Perspectives (Bo\u00eete Bleue)"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 2
+    }
+  },
+  "326934": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 1,
+      "4": 1
+    }
+  },
+  "383037": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 3
+    }
+  },
+  "329204": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "MED",
+    "language_votes": {
+      "3": 3
+    }
+  },
+  "21241": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Neuroshima Hex!",
+      "Neuroshima Hex! 3.0"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 69,
+      "2": 7,
+      "3": 4
+    }
+  },
+  "419421": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Speed Bac",
+      "Speed Bac"
+    ],
+    "language_level": "HIGH",
+    "language_votes": {
+      "5": 1
+    }
   }
 }

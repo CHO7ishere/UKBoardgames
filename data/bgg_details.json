@@ -89550,5 +89550,1234 @@
     },
     "fr_edition_exists": false,
     "fr_edition_titles": []
+  },
+  "349955": {
+    "bgg_id": 349955,
+    "name": "The Quacks of Quedlinburg: MegaBox",
+    "alternate_names": [
+      "Les Charlatans de Belcastel: Mégabox",
+      "De Kwakzalvers van Kakelenburg: Mega Box",
+      "Die Quacksalber von Quedlinburg: MegaBox",
+      "郎中闖江湖大盒版"
+    ],
+    "description": "This Mega Box includes the original The Quacks of Quedlinburg, The Herb Witches expansion and The Alchemists expansion, all in one box!\n\nIn The Quacks of Quedlinburg, players are charlatans &mdash; or quack doctors &mdash; each making their own secret brew by adding ingredients one at a time. Take care with what you add, though, for a pinch too much of this or that will spoil the whole mixture!\n\nEach player has their own bag of ingredient chips. During each round, they simultaneously draw chips and add them to their pot. The higher the face value of the drawn chip, the further it is placed in the swirling pattern, increasing how much your potion is worth. Push your luck as far as you can, but if you add too many cherry bombs, your pot explodes!\n\nAt the end of each round, players gain victory points and coins to spend on new ingredients to add to their bags, depending on the strength of the ingredients in their pots. But players with exploded pots must choose points or coins &mdash; not both! The player with the most victory points at the end of nine rounds wins the game.\n\nIncluded in this box are:\n\n\n     Quacks: the base game\n     The Quacks of Quedlinburg: The Herb Witches: the first expansion, adding Witches that grant powers once per game as well as more ingredient books.\n     The Quacks of Quedlinburg: The Alchemists: the second expansion introduces nightmares, obsession, hysteria and a new laboratory player board.\n\n\n",
+    "yearpublished": 2021,
+    "minplayers": 2,
+    "maxplayers": 5,
+    "playingtime": 60,
+    "mechanics": [
+      {
+        "id": "2887",
+        "value": "Catch the Leader"
+      },
+      {
+        "id": "2664",
+        "value": "Deck, Bag, and Pool Building"
+      },
+      {
+        "id": "2072",
+        "value": "Dice Rolling"
+      },
+      {
+        "id": "2661",
+        "value": "Push Your Luck"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1035",
+        "value": "Medieval"
+      }
+    ],
+    "designers": [
+      {
+        "id": "80162",
+        "value": "Wolfgang Warsch"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "267",
+        "value": "999 Games"
+      },
+      {
+        "id": "46474",
+        "value": "CMYK"
+      },
+      {
+        "id": "38",
+        "value": "Schmidt Spiele"
+      },
+      {
+        "id": "9234",
+        "value": "Swan Panasia Co., Ltd."
+      }
+    ],
+    "artists": [
+      {
+        "id": "12484",
+        "value": "Dennis Lohausen"
+      },
+      {
+        "id": "34863",
+        "value": "Oliver Schlemmer"
+      }
+    ],
+    "statistics": {
+      "average": 8.23262,
+      "usersrated": 1843,
+      "bayesaverage": 6.64504
+    },
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 2
+    },
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Les Charlatans de Belcastel: Mégabox"
+    ]
+  },
+  "217372": {
+    "bgg_id": 217372,
+    "name": "The Quest for El Dorado",
+    "alternate_names": [
+      "La Course vers El Dorado",
+      "El Dorado",
+      "Eldorádó legendája",
+      "Hledání Eldoráda",
+      "The Legendary El Dorado",
+      "Wettlauf nach El Dorado",
+      "Wyprawa do El Dorado",
+      "De Zoektocht naar El Dorado",
+      "Αναζητώντας το Ελ Ντοράντο",
+      "В поисках Эльдорадо",
+      "У пошуках Ельдорадо",
+      "ล่าขุมทรัพย์นครทองคำ",
+      "エルドラドを探して　新版",
+      "大梦归唐",
+      "衝向黃金城：秘境歷險",
+      "황금의 땅 엘도라도"
+    ],
+    "description": "In The Quest for El Dorado, players take the roles of expedition leaders who have embarked on a search for the legendary land of gold in the dense jungles of South America.\n\nEach player assembles and equips their own team, hiring various helpers from the scout to the scientist to the aborigine. All of them have one goal in mind: Reaching the golden border first and winning all of the riches for themselves. Whoever chooses the best tactics will be rewarded!\n\nEach player starts with a face-down deck of 8 cards&mdash; his or her expedition &mdash;to draw from. You start each turn with 4 cards in your hand. Use expedition cards to move through the jungle or hire more people for your expedition. Each card in your hand can only be used once per turn - to  move or to buy 1 new card.\n\nWhen a player reaches one of the 3 finishing spaces, he moves to El Dorado and this triggers the final round. The other players will now play their final turn. Once the round is completed, the game is over. If the final round ends up with multiple players reaching El Dorado, the player who has collected the most blockades wins the game.\n\n",
+    "yearpublished": 2017,
+    "minplayers": 2,
+    "maxplayers": 4,
+    "playingtime": 60,
+    "mechanics": [
+      {
+        "id": "2664",
+        "value": "Deck, Bag, and Pool Building"
+      },
+      {
+        "id": "2901",
+        "value": "Delayed Purchase"
+      },
+      {
+        "id": "2676",
+        "value": "Grid Movement"
+      },
+      {
+        "id": "2040",
+        "value": "Hand Management"
+      },
+      {
+        "id": "2026",
+        "value": "Hexagon Grid"
+      },
+      {
+        "id": "2011",
+        "value": "Modular Board"
+      },
+      {
+        "id": "3099",
+        "value": "Multi-Use Cards"
+      },
+      {
+        "id": "2846",
+        "value": "Once-Per-Game Abilities"
+      },
+      {
+        "id": "2041",
+        "value": "Open Drafting"
+      },
+      {
+        "id": "2876",
+        "value": "Race"
+      },
+      {
+        "id": "2948",
+        "value": "Resource to Move"
+      },
+      {
+        "id": "2897",
+        "value": "Variable Set-up"
+      },
+      {
+        "id": "2974",
+        "value": "Zone of Control"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1022",
+        "value": "Adventure"
+      },
+      {
+        "id": "1020",
+        "value": "Exploration"
+      }
+    ],
+    "designers": [
+      {
+        "id": "2",
+        "value": "Reiner Knizia"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "34",
+        "value": "Ravensburger AG"
+      },
+      {
+        "id": "267",
+        "value": "999 Games"
+      },
+      {
+        "id": "3475",
+        "value": "Arclight Games"
+      },
+      {
+        "id": "7162",
+        "value": "Brain Games"
+      },
+      {
+        "id": "15605",
+        "value": "Galápagos Jogos"
+      },
+      {
+        "id": "48438",
+        "value": "Games7Days"
+      },
+      {
+        "id": "6214",
+        "value": "Kaissa Chess & Games"
+      },
+      {
+        "id": "8291",
+        "value": "Korea Boardgames"
+      },
+      {
+        "id": "3218",
+        "value": "Lautapelit.fi"
+      },
+      {
+        "id": "34801",
+        "value": "Lavka Games"
+      },
+      {
+        "id": "49615",
+        "value": "Meeple"
+      },
+      {
+        "id": "34627",
+        "value": "Nasza Księgarnia"
+      },
+      {
+        "id": "36563",
+        "value": "Reflexshop"
+      },
+      {
+        "id": "36763",
+        "value": "Surfin' Meeple China"
+      },
+      {
+        "id": "53618",
+        "value": "Well Designed Game"
+      },
+      {
+        "id": "54519",
+        "value": "Yaofish Games"
+      }
+    ],
+    "artists": [
+      {
+        "id": "12130",
+        "value": "Vincent Dutrait"
+      },
+      {
+        "id": "11883",
+        "value": "Franz Vohwinkel"
+      }
+    ],
+    "statistics": {
+      "average": 7.72105,
+      "usersrated": 33394,
+      "bayesaverage": 7.54136
+    },
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 2,
+      "2": 35,
+      "3": 7
+    },
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "The Quest for El Dorado",
+      "La Course vers El Dorado"
+    ]
+  },
+  "251661": {
+    "bgg_id": 251661,
+    "name": "Oathsworn: Into the Deepwood",
+    "alternate_names": [
+      "Oathsworn: Верные клятве – Тайны Темнолесья",
+      "守誓者：深入密林"
+    ],
+    "description": "Oathsworn is a Twisting Tales Game for 1-4 players where play is focused on narrative choices and rich miniature combat encounters. The game is set in the Deepwood where a Free company (the Oathsworn) fights for humanity's survival against unnatural horrors and the Deepwood itself.\n\nEach gaming session sees the players participate in a multi path game book where the story unfolds to an inevitable encounter. The encounters are multi phase scripted boss fights on the encounter board where players have to outwit and outplay the AI driven monsters and enemies. As the sessions unfold the group is taken into a deep legacy campaign where they gain levels, loot and new allies to join them in their journey.\n\nOathsworn boasts a unique push your luck combat system of exploding dice where players are always having to decide between hitting harder and potentially missing the attack. This coupled with a euro style cooldown system called 'Battleflow' makes for a vibrant and engaging play session.\n\n&mdash;description from the publisher\n\n",
+    "yearpublished": 2022,
+    "minplayers": 1,
+    "maxplayers": 4,
+    "playingtime": 90,
+    "mechanics": [
+      {
+        "id": "2001",
+        "value": "Action Points"
+      },
+      {
+        "id": "2857",
+        "value": "Card Play Conflict Resolution"
+      },
+      {
+        "id": "2023",
+        "value": "Cooperative Game"
+      },
+      {
+        "id": "2664",
+        "value": "Deck, Bag, and Pool Building"
+      },
+      {
+        "id": "2072",
+        "value": "Dice Rolling"
+      },
+      {
+        "id": "2040",
+        "value": "Hand Management"
+      },
+      {
+        "id": "2026",
+        "value": "Hexagon Grid"
+      },
+      {
+        "id": "2824",
+        "value": "Legacy Game"
+      },
+      {
+        "id": "2011",
+        "value": "Modular Board"
+      },
+      {
+        "id": "2060",
+        "value": "Pattern Recognition"
+      },
+      {
+        "id": "2661",
+        "value": "Push Your Luck"
+      },
+      {
+        "id": "2028",
+        "value": "Role Playing"
+      },
+      {
+        "id": "2822",
+        "value": "Scenario / Mission / Campaign Game"
+      },
+      {
+        "id": "2027",
+        "value": "Storytelling"
+      },
+      {
+        "id": "2015",
+        "value": "Variable Player Powers"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1022",
+        "value": "Adventure"
+      },
+      {
+        "id": "1002",
+        "value": "Card Game"
+      },
+      {
+        "id": "1017",
+        "value": "Dice"
+      },
+      {
+        "id": "1020",
+        "value": "Exploration"
+      },
+      {
+        "id": "1010",
+        "value": "Fantasy"
+      },
+      {
+        "id": "1046",
+        "value": "Fighting"
+      },
+      {
+        "id": "1047",
+        "value": "Miniatures"
+      },
+      {
+        "id": "1082",
+        "value": "Mythology"
+      },
+      {
+        "id": "1028",
+        "value": "Puzzle"
+      }
+    ],
+    "designers": [
+      {
+        "id": "99777",
+        "value": "Jamie Jolly"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "39195",
+        "value": "Shadowborne Games"
+      },
+      {
+        "id": "18852",
+        "value": "Hobby World"
+      },
+      {
+        "id": "45510",
+        "value": "Rawstone"
+      }
+    ],
+    "artists": [
+      {
+        "id": "79079",
+        "value": "Francesca Baerald"
+      },
+      {
+        "id": "135288",
+        "value": "Vladimir Buchyk"
+      },
+      {
+        "id": "135295",
+        "value": "Sean Jackson"
+      },
+      {
+        "id": "108336",
+        "value": "Dongjun Lu"
+      },
+      {
+        "id": "135287",
+        "value": "Dongbiao Lu"
+      }
+    ],
+    "statistics": {
+      "average": 8.75148,
+      "usersrated": 6980,
+      "bayesaverage": 7.72531
+    },
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 3,
+      "5": 6
+    },
+    "fr_edition_exists": false,
+    "fr_edition_titles": []
+  },
+  "440007": {
+    "bgg_id": 440007,
+    "name": "The Druids of Edora",
+    "alternate_names": [],
+    "description": "The Druids of Edora is a game of strategic dice placement. Walk through ancient forests in the footsteps of fairy folk, past monolithic menhirs, and under strands of mistletoe. As druids you will place dice to take actions to gather provisions, gain knowledge, brew potions, and gain bonuses. Build stone structures, collect herbs, and leave your mark in the sacred wood.\n\nEach turn is a few simple steps that with the right strategy will earn you prestige points and bring you closer to victory.\n\nDive into this fantastic new strategy game from the team behind The Castles of Burgundy.\n\nProve yourself worthy of the ancient ones and bring glory to your forest.\n\n",
+    "yearpublished": 2025,
+    "minplayers": 2,
+    "maxplayers": 4,
+    "playingtime": 90,
+    "mechanics": [
+      {
+        "id": "2080",
+        "value": "Area Majority / Influence"
+      },
+      {
+        "id": "2912",
+        "value": "Contracts"
+      },
+      {
+        "id": "2072",
+        "value": "Dice Rolling"
+      },
+      {
+        "id": "2935",
+        "value": "Worker Placement with Dice Workers"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1017",
+        "value": "Dice"
+      },
+      {
+        "id": "1010",
+        "value": "Fantasy"
+      }
+    ],
+    "designers": [
+      {
+        "id": "4958",
+        "value": "Stefan Feld"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "9",
+        "value": "alea"
+      },
+      {
+        "id": "34",
+        "value": "Ravensburger AG"
+      }
+    ],
+    "artists": [
+      {
+        "id": "144343",
+        "value": "Fred Gissubel"
+      }
+    ],
+    "statistics": {
+      "average": 7.83661,
+      "usersrated": 2172,
+      "bayesaverage": 6.58125
+    },
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 9
+    },
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "The Druids of Edora"
+    ]
+  },
+  "427087": {
+    "bgg_id": 427087,
+    "name": "Perspectives Blue",
+    "alternate_names": [
+      "Perspectives (Blaue Box)",
+      "Perspectives (Boîte Bleue)",
+      "Perspectives Azul",
+      "Перспективы (голубая коробка)"
+    ],
+    "description": "Dive back into investigation with the new standalone box of Perspectives, the cooperative investigation and shared information game, and discover three new investigations that will take you through history. In Perspectives, each player holds key information in the form of photographs, reports and other clues. \nWork together, share your information and solve the three investigations that are waiting for you to solve.\n\n&mdash;description from the publisher\n\n",
+    "yearpublished": 2024,
+    "minplayers": 2,
+    "maxplayers": 6,
+    "playingtime": 90,
+    "mechanics": [
+      {
+        "id": "2893",
+        "value": "Communication Limits"
+      },
+      {
+        "id": "2023",
+        "value": "Cooperative Game"
+      },
+      {
+        "id": "3002",
+        "value": "Deduction"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1055",
+        "value": "American West"
+      },
+      {
+        "id": "1050",
+        "value": "Ancient"
+      },
+      {
+        "id": "1039",
+        "value": "Deduction"
+      },
+      {
+        "id": "1035",
+        "value": "Medieval"
+      },
+      {
+        "id": "1040",
+        "value": "Murder / Mystery"
+      },
+      {
+        "id": "1028",
+        "value": "Puzzle"
+      }
+    ],
+    "designers": [
+      {
+        "id": "69007",
+        "value": "Matthew Dunstan"
+      },
+      {
+        "id": "108002",
+        "value": "Dave Neale"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "25842",
+        "value": "Space Cowboys"
+      },
+      {
+        "id": "49480",
+        "value": "Choo Choo Games"
+      }
+    ],
+    "artists": [
+      {
+        "id": "93999",
+        "value": "Marina Coudray"
+      },
+      {
+        "id": "116777",
+        "value": "Janos Orban"
+      },
+      {
+        "id": "157677",
+        "value": "Julien Rico"
+      },
+      {
+        "id": "84185",
+        "value": "Bruno Tatti"
+      }
+    ],
+    "statistics": {
+      "average": 7.61011,
+      "usersrated": 370,
+      "bayesaverage": 5.78032
+    },
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 2
+    },
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Perspectives (Boîte Bleue)"
+    ]
+  },
+  "326934": {
+    "bgg_id": 326934,
+    "name": "Unmatched: Hell's Kitchen",
+    "alternate_names": [],
+    "description": "Unmatched is a highly asymmetrical miniature fighting game for two or four players. Each hero is represented by a unique deck designed to evoke their style and legend. Tactical movement and no-luck combat resolution create a unique play experience that rewards expertise, but just when you've mastered one set, new heroes arrive to provide all new match-ups.\n\nUnmatched: Hell's Kitchen features three characters from the Marvel comics universe: Daredevil, Elektra, and Bullseye.\n\n",
+    "yearpublished": 2022,
+    "minplayers": 2,
+    "maxplayers": 3,
+    "playingtime": 40,
+    "mechanics": [
+      {
+        "id": "2001",
+        "value": "Action Points"
+      },
+      {
+        "id": "2857",
+        "value": "Card Play Conflict Resolution"
+      },
+      {
+        "id": "2040",
+        "value": "Hand Management"
+      },
+      {
+        "id": "2975",
+        "value": "Line of Sight"
+      },
+      {
+        "id": "2078",
+        "value": "Point to Point Movement"
+      },
+      {
+        "id": "2686",
+        "value": "Take That"
+      },
+      {
+        "id": "2019",
+        "value": "Team-Based Game"
+      },
+      {
+        "id": "2015",
+        "value": "Variable Player Powers"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1002",
+        "value": "Card Game"
+      },
+      {
+        "id": "1116",
+        "value": "Comic Book / Strip"
+      },
+      {
+        "id": "1010",
+        "value": "Fantasy"
+      },
+      {
+        "id": "1046",
+        "value": "Fighting"
+      },
+      {
+        "id": "1064",
+        "value": "Movies / TV / Radio theme"
+      }
+    ],
+    "designers": [
+      {
+        "id": "74189",
+        "value": "Brad Andres"
+      },
+      {
+        "id": "75911",
+        "value": "Noah Cohen"
+      },
+      {
+        "id": "442",
+        "value": "Rob Daviau"
+      },
+      {
+        "id": "4083",
+        "value": "Justin D. Jacobson"
+      },
+      {
+        "id": "80920",
+        "value": "Brian Neff"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "36274",
+        "value": "Mondo Games"
+      },
+      {
+        "id": "34846",
+        "value": "Restoration Games"
+      }
+    ],
+    "artists": [
+      {
+        "id": "116039",
+        "value": "Oliver Barrett"
+      },
+      {
+        "id": "64844",
+        "value": "Ian O'Toole"
+      }
+    ],
+    "statistics": {
+      "average": 8.19139,
+      "usersrated": 1480,
+      "bayesaverage": 6.4669
+    },
+    "language_level": "MED",
+    "language_votes": {
+      "3": 1,
+      "4": 1
+    },
+    "fr_edition_exists": false,
+    "fr_edition_titles": []
+  },
+  "383037": {
+    "bgg_id": 383037,
+    "name": "Combat Commander: Europe/Med. – 20th Anniversary Edition",
+    "alternate_names": [],
+    "description": "This Master Edition combines both CC: Europe and CC: Mediterranean into one package and includes the new Minor Nations Battle Pack material as well. This version is how the game was originally conceived and designed.\n\nCombat Commander is a card-driven board game covering tactical infantry combat in the European Theater of World War II. One player takes the role of the Axis forces while another player commands the Allied forces. These two players will take turns playing one or more &ldquo;Fate&rdquo; cards from their hands in order to activate his units on the mapboard for various military functions.\n\nPlayers attempt to achieve victory by moving their combat units across the game map to attack their opponent&rsquo;s combat units and occupy as many objectives as possible. The degree to which a player succeeds or fails is measured by a scenario&rsquo;s specific &ldquo;Objective&rdquo; chits, the destruction of enemy units, and the exiting of friendly units off the opponent&rsquo;s board edge.\n\nA game of Combat Commander is divided into several measures of Game Time. There is no sequence of play to follow, however: each Time segment is divided into a variable number of Player Turns, each of which may consist of one or more Fate Card \"Orders\" conducted by the active player. Fate Card \"Actions\" may generally be conducted by either player at any time. \"Events\" &mdash; both good and bad &mdash; will occur at random intervals to add a bit of chaos and uncertainty to each player&rsquo;s perfect plan.\n\nSCALE: Each hex of a Combat Commander map is roughly 100 feet of distance (about 30 meters). Each complete Player Phase abstractly represents several seconds of real time. Each complete measure of Game Time abstractly represents several minutes of real time.\n\nEach unit in the game is approximated as either a single Leader, a 5-man Team, or a 10-man Squad. Radios &mdash; and individual weapons larger than a pistol, rifle or BAR &mdash; are represented by their own counters.\n\nComponents:\n    6&frac12; countersheets\n    One 24-page Rulebook\n    One 52-page Playbook\n    Eight PAC sheets (6 two-sided nationality cards, one Terrain chart, one misc. play aids chart)\n    439 Cards (6 decks of 72 cards each, 1 Fate card, 6 nationality reference cards)\n    24 Maps on 12 double-sided 17\" x 22\" sheets\n    One 8&frac12;\" x 22\" Track Display\n\n",
+    "yearpublished": 2025,
+    "minplayers": 2,
+    "maxplayers": 2,
+    "playingtime": 180,
+    "mechanics": [
+      {
+        "id": "2847",
+        "value": "Advantage Token"
+      },
+      {
+        "id": "2018",
+        "value": "Campaign / Battle Card Driven"
+      },
+      {
+        "id": "2676",
+        "value": "Grid Movement"
+      },
+      {
+        "id": "2026",
+        "value": "Hexagon Grid"
+      },
+      {
+        "id": "2975",
+        "value": "Line of Sight"
+      },
+      {
+        "id": "2070",
+        "value": "Simulation"
+      },
+      {
+        "id": "2079",
+        "value": "Variable Phase Order"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1019",
+        "value": "Wargame"
+      },
+      {
+        "id": "1049",
+        "value": "World War II"
+      }
+    ],
+    "designers": [
+      {
+        "id": "6331",
+        "value": "Chad Jensen"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "52",
+        "value": "GMT Games"
+      }
+    ],
+    "artists": [
+      {
+        "id": "2370",
+        "value": "Lee Brimmicombe-Wood"
+      },
+      {
+        "id": "6331",
+        "value": "Chad Jensen"
+      },
+      {
+        "id": "60498",
+        "value": "Kai Jensen"
+      },
+      {
+        "id": "71",
+        "value": "Rodger B. MacGowan"
+      },
+      {
+        "id": "84380",
+        "value": "Scott Mansfield"
+      },
+      {
+        "id": "11929",
+        "value": "Leland Myrick"
+      },
+      {
+        "id": "140",
+        "value": "Mark Simonitch"
+      }
+    ],
+    "statistics": {
+      "average": 8.90746,
+      "usersrated": 114,
+      "bayesaverage": 5.64044
+    },
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 3
+    },
+    "fr_edition_exists": false,
+    "fr_edition_titles": []
+  },
+  "329204": {
+    "bgg_id": 329204,
+    "name": "Escape from Stalingrad Z",
+    "alternate_names": [
+      "Escape from Stalingrad Z: Reloaded"
+    ],
+    "description": "Escape from Stalingrad Z is a solo/coop campaign game of tactical combat which is set in the horrific zombie plague of World War Two. The year is 1942 and the city is Stalingrad. Your survivors are veteran soldiers fighting to stave off the zombie hordes in a war-torn wasteland while finding a way to escape from the decimated city. They must work together to find the best path, each scenario giving them options on which way to go next. The player's choices determine the fate of their heroes.\n\nThe game plays out over a series of linked scenarios that form a campaign. Each previous scenario in the Campaign will affect the start of the next, creating an ongoing story.\n\n",
+    "yearpublished": 2023,
+    "minplayers": 1,
+    "maxplayers": 3,
+    "playingtime": 40,
+    "mechanics": [
+      {
+        "id": "2023",
+        "value": "Cooperative Game"
+      },
+      {
+        "id": "2072",
+        "value": "Dice Rolling"
+      },
+      {
+        "id": "2851",
+        "value": "Narrative Choice / Paragraph"
+      },
+      {
+        "id": "2822",
+        "value": "Scenario / Mission / Campaign Game"
+      },
+      {
+        "id": "2940",
+        "value": "Square Grid"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1047",
+        "value": "Miniatures"
+      },
+      {
+        "id": "1019",
+        "value": "Wargame"
+      },
+      {
+        "id": "1049",
+        "value": "World War II"
+      },
+      {
+        "id": "2481",
+        "value": "Zombies"
+      }
+    ],
+    "designers": [
+      {
+        "id": "1079",
+        "value": "Marco Pecota"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "46586",
+        "value": "RAYBOX Games"
+      }
+    ],
+    "artists": [
+      {
+        "id": "128154",
+        "value": "Riccardo Federici"
+      },
+      {
+        "id": "96341",
+        "value": "Julián Tunni"
+      }
+    ],
+    "statistics": {
+      "average": 8.02368,
+      "usersrated": 288,
+      "bayesaverage": 5.68483
+    },
+    "language_level": "MED",
+    "language_votes": {
+      "3": 3
+    },
+    "fr_edition_exists": false,
+    "fr_edition_titles": []
+  },
+  "21241": {
+    "bgg_id": 21241,
+    "name": "Neuroshima Hex",
+    "alternate_names": [
+      "Neuroshima Hex!",
+      "Neuroshima Hex! 3.0",
+      "Neuroshima Hex!: Jahr des Molochs",
+      "Neuroshima Hex!: Rok Molocha",
+      "Neuroshima Hex!: The Year of Moloch",
+      "Нейрошима-6"
+    ],
+    "description": "Neuroshima Hex! is a strategy game set in the post-apocalyptic world of Neuroshima, a Polish role-playing game. Each player leads one of four armies: Borgo, Hegemonia (Hegemony), Moloch, and Posterunek (Outpost). Each army deck consists of 34 tiles: soldiers, support tiles, and special actions. You win when all enemy headquarters are destroyed or when your headquarters is the least damaged at the end of the game.\n\n\n     In 2007 and 2013, the game had graphical facelifts, somewhat modifying the iconography. Note: each army (whether base game or expansion) is compatible with every version (1.0, 2.x, 3.0). Only the art styles and icon graphics differ mildly.\n     The game had different editions with different components/bonuses alongside the 4 base armies (big board, bonus army, puzzles, etc.). See different editions for details.\n     Tile width and thickness strongly varied depending on edition, and even on a same editor slightly varied over the years. This does not affect play, but may affect some storage solutions.\n\n\n Due to multiple versions and expansions, see the Neuroshima Hex! english FAQ\n The game is also expanded by Unofficial Neuroshima Hex! expansions, available here on BGG.\n\nNote:  There is no solitaire bot/AI/system to compete against. The only options for \"solo\" play are soloing multiple factions yourself, or solving puzzles (like Chess checkmate problems) available in some editions and expansions.\n\n",
+    "yearpublished": 2006,
+    "minplayers": 2,
+    "maxplayers": 4,
+    "playingtime": 30,
+    "mechanics": [
+      {
+        "id": "2080",
+        "value": "Area Majority / Influence"
+      },
+      {
+        "id": "2883",
+        "value": "Connections"
+      },
+      {
+        "id": "2676",
+        "value": "Grid Movement"
+      },
+      {
+        "id": "2040",
+        "value": "Hand Management"
+      },
+      {
+        "id": "2026",
+        "value": "Hexagon Grid"
+      },
+      {
+        "id": "2975",
+        "value": "Line of Sight"
+      },
+      {
+        "id": "2685",
+        "value": "Player Elimination"
+      },
+      {
+        "id": "2819",
+        "value": "Solo / Solitaire Game"
+      },
+      {
+        "id": "2019",
+        "value": "Team-Based Game"
+      },
+      {
+        "id": "2002",
+        "value": "Tile Placement"
+      },
+      {
+        "id": "2015",
+        "value": "Variable Player Powers"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1044",
+        "value": "Collectible Components"
+      },
+      {
+        "id": "1046",
+        "value": "Fighting"
+      },
+      {
+        "id": "1028",
+        "value": "Puzzle"
+      },
+      {
+        "id": "1016",
+        "value": "Science Fiction"
+      }
+    ],
+    "designers": [
+      {
+        "id": "5143",
+        "value": "Michał Oracz"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "2726",
+        "value": "Portal Games"
+      },
+      {
+        "id": "24298",
+        "value": "FunBox Jogos"
+      },
+      {
+        "id": "58739",
+        "value": "Geekach LLC"
+      },
+      {
+        "id": "264",
+        "value": "Heidelberger Spieleverlag"
+      },
+      {
+        "id": "6275",
+        "value": "HomoLudicus"
+      },
+      {
+        "id": "8923",
+        "value": "IELLO"
+      },
+      {
+        "id": "23031",
+        "value": "Magellan"
+      },
+      {
+        "id": "15522",
+        "value": "Rocks Games"
+      },
+      {
+        "id": "3888",
+        "value": "Stratelibri"
+      },
+      {
+        "id": "538",
+        "value": "Z-Man Games"
+      }
+    ],
+    "artists": [
+      {
+        "id": "38917",
+        "value": "Mateusz Bielski"
+      },
+      {
+        "id": "40929",
+        "value": "Piotr Cieśliński"
+      },
+      {
+        "id": "39040",
+        "value": "Piotr Foksowicz"
+      },
+      {
+        "id": "18700",
+        "value": "Mariusz Gandzel"
+      },
+      {
+        "id": "12050",
+        "value": "Jakub Jabłoński"
+      },
+      {
+        "id": "66674",
+        "value": "Maciej Janik"
+      },
+      {
+        "id": "12019",
+        "value": "Tomasz Jedruszek"
+      },
+      {
+        "id": "80457",
+        "value": "Mateusz Kopacz"
+      },
+      {
+        "id": "139273",
+        "value": "Hanna Kuik"
+      },
+      {
+        "id": "71178",
+        "value": "Łukasz Lalko"
+      },
+      {
+        "id": "124355",
+        "value": "M81 Studio"
+      },
+      {
+        "id": "151101",
+        "value": "Michael Michera"
+      },
+      {
+        "id": "137549",
+        "value": "Maciej Simiński"
+      },
+      {
+        "id": "47017",
+        "value": "Michał Sztuka"
+      }
+    ],
+    "statistics": {
+      "average": 7.38294,
+      "usersrated": 15834,
+      "bayesaverage": 7.07156
+    },
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 69,
+      "2": 7,
+      "3": 4
+    },
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Neuroshima Hex!",
+      "Neuroshima Hex! 3.0"
+    ]
+  },
+  "419421": {
+    "bgg_id": 419421,
+    "name": "Slingz",
+    "alternate_names": [
+      "Quick Stop",
+      "Quick Stop: Das Buchstabenduell",
+      "Quick stop: Pojedynek na litery",
+      "Quick Stop: Weihnachts-Edition",
+      "Speed Bac",
+      "Stutt stopp",
+      "퀵 스탑"
+    ],
+    "description": "Slingz is a dynamic card game in which you're trying to shout out answers faster than ever before.\n\nEach player starts with a hand of five letter cards, then you reveal a theme. Think of a word that fits the theme and starts with one of your letters, then sling that card on the table, yelling out the word. As soon as three words have been given, reveal a new theme and switch your brainwaves to the new challenge.\n\nThe first player to ditch their five letters wins the round.\n\n",
+    "yearpublished": 2022,
+    "minplayers": 2,
+    "maxplayers": 7,
+    "playingtime": 15,
+    "mechanics": [
+      {
+        "id": "2831",
+        "value": "Real-Time"
+      },
+      {
+        "id": "2991",
+        "value": "Speed Matching"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1002",
+        "value": "Card Game"
+      },
+      {
+        "id": "1118",
+        "value": "Mature / Adult"
+      },
+      {
+        "id": "1030",
+        "value": "Party Game"
+      },
+      {
+        "id": "1037",
+        "value": "Real-time"
+      },
+      {
+        "id": "1025",
+        "value": "Word Game"
+      }
+    ],
+    "designers": [
+      {
+        "id": "155295",
+        "value": "Rémy Wannerbroucq"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "46153",
+        "value": "ATM Gaming"
+      },
+      {
+        "id": "491",
+        "value": "Blue Orange Games"
+      },
+      {
+        "id": "44144",
+        "value": "Buró"
+      },
+      {
+        "id": "55730",
+        "value": "Fjórir Ásar"
+      },
+      {
+        "id": "41167",
+        "value": "Popcorn Games"
+      },
+      {
+        "id": "7466",
+        "value": "Rebel Sp. z o.o."
+      }
+    ],
+    "artists": [],
+    "statistics": {
+      "average": 6.4331,
+      "usersrated": 603,
+      "bayesaverage": 5.67339
+    },
+    "language_level": "HIGH",
+    "language_votes": {
+      "5": 1
+    },
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Speed Bac",
+      "Speed Bac"
+    ]
   }
 }
