@@ -44257,46 +44257,6 @@
       "match_score": 68.75
     },
     {
-      "zatu_handle": "chick-n-out",
-      "zatu_title": "Chick'n out",
-      "zatu_url": "https://zatu.com/products/chick-n-out",
-      "zatu_price_gbp": 23.49,
-      "zatu_in_stock": true,
-      "zatu_tags": [
-        "2-4 Players",
-        "Board Games",
-        "Manual Release Date",
-        "Pre-Order",
-        "Top 5000 Board Games"
-      ],
-      "zatu_is_coop": false,
-      "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
-      "bgg_candidates": [
-        {
-          "bgg_id": 219374,
-          "bgg_name": "Chicken Out!"
-        },
-        {
-          "bgg_id": 4885,
-          "bgg_name": "Chicken Out"
-        },
-        {
-          "bgg_id": 5634,
-          "bgg_name": "Chicken Out"
-        },
-        {
-          "bgg_id": 35117,
-          "bgg_name": "Chicken Out"
-        },
-        {
-          "bgg_id": 82635,
-          "bgg_name": "Chicken out!"
-        }
-      ],
-      "match_score": 90.9090909090909
-    },
-    {
       "zatu_handle": "alien-frontiers-complete-expansion-collection",
       "zatu_title": "Alien Frontiers Complete Expansion Collection",
       "zatu_url": "https://zatu.com/products/alien-frontiers-complete-expansion-collection",

@@ -3237,7 +3237,7 @@ living-stories-pulse,Living Stories: Pulse,LOW_CONFIDENCE_MATCH: fuzzy score bel
 machu-pichu,Machu Pichu,"QUALITY_GATE: shrunk=6.39, usersrated=16",464310,Machu Pichu,100.0
 living-stories-the-void,Living Stories: The Void,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,68.75
 devious,Devious,"QUALITY_GATE: shrunk=6.69, usersrated=45",431478,Devious,100.0
-chick-n-out,Chick'n out,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,90.9090909090909
+chick-n-out,Chick'n out,"QUALITY_GATE: shrunk=6.62, usersrated=5",461380,Pouss' Ta Poule,100.0
 if-then,If Then,"QUALITY_GATE: shrunk=6.56, usersrated=120",423465,If Then,100.0
 amarok,Amarok,"QUALITY_GATE: shrunk=6.84, usersrated=112",451980,Amarok,100.0
 assemble,Assemble!,"QUALITY_GATE: shrunk=6.41, usersrated=27",468063,Assemble!,100.0
