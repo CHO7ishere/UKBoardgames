@@ -17,7 +17,7 @@ quality:
 # separates them. See match.py's digit-conflict veto for the other false-positive class this
 # threshold alone doesn't catch (numbered sequels/seasons).
 matching:
-  fuzzy_threshold: 90
+  fuzzy_threshold: 85
   min_score_gap: 5
 
 weights:
