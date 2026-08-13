@@ -91112,5 +91112,5590 @@
     },
     "fr_edition_exists": false,
     "fr_edition_titles": []
+  },
+  "199042": {
+    "bgg_id": 199042,
+    "name": "Harry Potter: Hogwarts Battle",
+    "alternate_names": [
+      "Harry Potter: Bataille à Poudlard",
+      "Harry Potter: Batalha de Hogwarts",
+      "Harry Potter: Bătălia de la Hogwarts",
+      "Harry Potter: Boj o Bradavice",
+      "Harry Potter: Boj o Rokfort",
+      "Harry Potter: Kampf um Hogwarts",
+      "Harry Potter: Roxforti Csata",
+      "Гарри Поттер: Битва за Хогвартс"
+    ],
+    "description": "The forces of evil are threatening to overrun Hogwarts castle in Harry Potter: Hogwarts Battle, a cooperative deck-building game, and it's up to four students to ensure the safety of the school by defeating villains and consolidating their defenses. In the game, players take on the role of a Hogwarts student: Harry, Ron, Hermione or Neville, each with their own personal deck of cards that's used to acquire resources.\n\nBy gaining influence, players add more cards to their deck in the form of iconic characters, spells, and magical items. Other cards allow them to regain health or fight against villains, keeping them from gaining power. The villains set back players with their attacks and Dark Arts. Only by working together will players be able to defeat all of the villains, securing the castle from the forces of evil.\n\n&mdash;description from the publisher\n\n",
+    "yearpublished": 2016,
+    "minplayers": 2,
+    "maxplayers": 4,
+    "playingtime": 60,
+    "mechanics": [
+      {
+        "id": "2023",
+        "value": "Cooperative Game"
+      },
+      {
+        "id": "2664",
+        "value": "Deck, Bag, and Pool Building"
+      },
+      {
+        "id": "2822",
+        "value": "Scenario / Mission / Campaign Game"
+      },
+      {
+        "id": "2015",
+        "value": "Variable Player Powers"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1002",
+        "value": "Card Game"
+      },
+      {
+        "id": "1010",
+        "value": "Fantasy"
+      },
+      {
+        "id": "1064",
+        "value": "Movies / TV / Radio theme"
+      },
+      {
+        "id": "1093",
+        "value": "Novel-based"
+      }
+    ],
+    "designers": [
+      {
+        "id": "12444",
+        "value": "Sean Fletcher"
+      },
+      {
+        "id": "96212",
+        "value": "Forrest-Pruzan Creative"
+      },
+      {
+        "id": "97486",
+        "value": "Kami Mandell"
+      },
+      {
+        "id": "49208",
+        "value": "Andrew Wolf"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "634",
+        "value": "The Op Games"
+      },
+      {
+        "id": "15605",
+        "value": "Galápagos Jogos"
+      },
+      {
+        "id": "47851",
+        "value": "Gameology (Gameology Romania)"
+      },
+      {
+        "id": "51397",
+        "value": "iHRYsko"
+      },
+      {
+        "id": "37",
+        "value": "KOSMOS"
+      },
+      {
+        "id": "34801",
+        "value": "Lavka Games"
+      },
+      {
+        "id": "7466",
+        "value": "Rebel Sp. z o.o."
+      },
+      {
+        "id": "36563",
+        "value": "Reflexshop"
+      },
+      {
+        "id": "21053",
+        "value": "Rexhry"
+      },
+      {
+        "id": "55404",
+        "value": "Tabletop KZ"
+      }
+    ],
+    "artists": [
+      {
+        "id": "98899",
+        "value": "Joe Van Wetering"
+      }
+    ],
+    "statistics": {
+      "average": 7.32971,
+      "usersrated": 22224,
+      "bayesaverage": 7.04368
+    },
+    "language_level": "MED",
+    "language_votes": {
+      "3": 13,
+      "4": 6
+    },
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Harry Potter: Hogwarts Battle",
+      "Harry Potter: Bataille à Poudlard"
+    ]
+  },
+  "161936": {
+    "bgg_id": 161936,
+    "name": "Pandemic Legacy: Season 1",
+    "alternate_names": [
+      "Pandemic Legacy:  Saison 1",
+      "Pandemic Legacy: 1. Évad",
+      "Pandemic Legacy: 1a. Temporada",
+      "Pandemic Legacy: Rok 1",
+      "Pandemic Legacy: Seizoen 1",
+      "Pandemic Legacy: Sezon 1",
+      "Пандемия: Наследие",
+      "Пандемія Спадщина. Сезон 1",
+      "パンデミック：レガシー シーズン1",
+      "瘟疫危機︰承傳",
+      "팬데믹 레거시: 시즌 1"
+    ],
+    "description": "Pandemic Legacy is a co-operative campaign game, with an overarching story arc played through 12-24 sessions, depending on how well your group does at the game. At the beginning, the game starts in a very similar fashion as basic Pandemic, in which your team of disease-fighting specialists races against the clock to travel around the world, treating disease hot spots while researching cures for each of four plagues before they get out of hand.\n\nDuring a player's turn, they have four actions available, with which they may travel around in the world in various ways (sometimes needing to discard a card), build structures like research stations, treat diseases (removing one cube from the board; if all cubes of a color have been removed, the disease has been eradicated), trade cards with other players, or find a cure for a disease (requiring five cards of the same color to be discarded while at a research station). Each player has a unique role with special abilities to help them at these actions.\n\nAfter a player has taken their actions, they draw two cards. These cards can include epidemic cards, which will place new disease cubes on the board, and can lead to an outbreak, spreading disease cubes even further. Outbreaks additionally increase the panic level of a city, making that city more expensive to travel to.\n\nEach month in the game, you have two chances to achieve that month's objectives. If you succeed, you win and immediately move on to the next month. If you fail, you have a second chance, with more funding for beneficial event cards.\n\nDuring the campaign, new rules and components will be introduced. These will sometimes require you to permanently alter the components of the game; this includes writing on cards, ripping up cards, and placing permanent stickers on components. Your characters can gain new skills, or detrimental effects. A character can even be lost entirely, at which point it's no longer available for play.\n\nPart of the Pandemic series\n\n",
+    "yearpublished": 2015,
+    "minplayers": 2,
+    "maxplayers": 4,
+    "playingtime": 60,
+    "mechanics": [
+      {
+        "id": "2001",
+        "value": "Action Points"
+      },
+      {
+        "id": "2023",
+        "value": "Cooperative Game"
+      },
+      {
+        "id": "2040",
+        "value": "Hand Management"
+      },
+      {
+        "id": "2824",
+        "value": "Legacy Game"
+      },
+      {
+        "id": "3099",
+        "value": "Multi-Use Cards"
+      },
+      {
+        "id": "2078",
+        "value": "Point to Point Movement"
+      },
+      {
+        "id": "2822",
+        "value": "Scenario / Mission / Campaign Game"
+      },
+      {
+        "id": "2004",
+        "value": "Set Collection"
+      },
+      {
+        "id": "3100",
+        "value": "Tags"
+      },
+      {
+        "id": "2008",
+        "value": "Trading"
+      },
+      {
+        "id": "2015",
+        "value": "Variable Player Powers"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1084",
+        "value": "Environmental"
+      },
+      {
+        "id": "2145",
+        "value": "Medical"
+      }
+    ],
+    "designers": [
+      {
+        "id": "442",
+        "value": "Rob Daviau"
+      },
+      {
+        "id": "378",
+        "value": "Matt Leacock"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "538",
+        "value": "Z-Man Games"
+      },
+      {
+        "id": "15889",
+        "value": "Asterion Press"
+      },
+      {
+        "id": "2366",
+        "value": "Devir"
+      },
+      {
+        "id": "5657",
+        "value": "Filosofia Éditions"
+      },
+      {
+        "id": "8820",
+        "value": "Gémklub"
+      },
+      {
+        "id": "1391",
+        "value": "Hobby Japan"
+      },
+      {
+        "id": "15983",
+        "value": "Jolly Thinkers"
+      },
+      {
+        "id": "8291",
+        "value": "Korea Boardgames"
+      },
+      {
+        "id": "5812",
+        "value": "Lacerta"
+      },
+      {
+        "id": "9325",
+        "value": "Lifestyle Boardgames Ltd"
+      },
+      {
+        "id": "7992",
+        "value": "MINDOK"
+      },
+      {
+        "id": "44209",
+        "value": "Ігромаг"
+      }
+    ],
+    "artists": [
+      {
+        "id": "14057",
+        "value": "Chris Quilliams"
+      }
+    ],
+    "statistics": {
+      "average": 8.50133,
+      "usersrated": 57689,
+      "bayesaverage": 8.34441
+    },
+    "language_level": "HIGH",
+    "language_votes": {
+      "1": 1,
+      "3": 9,
+      "4": 65,
+      "5": 21
+    },
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Pandemic Legacy:  Saison 1",
+      "Pandemic Legacy:  Saison 1",
+      "Pandemic Legacy:  Saison 1",
+      "Pandemic Legacy:  Saison 1"
+    ]
+  },
+  "277659": {
+    "bgg_id": 277659,
+    "name": "Final Girl",
+    "alternate_names": [
+      "Poslední holka: Přehrávač",
+      "绝命少女：基础盒",
+      "파이널 걸"
+    ],
+    "description": "Playing on a famous horror movie trope, Final Girl is a solitaire-only game that puts the player in the shoes of a female protagonist who must kill the slasher if she wants to survive.\n\nThe Core Box, when combined with one of our Feature Film Boxes, has everything you need to play the game. Each Feature Film Box features a unique Killer and an iconic Location, and the more Feature Films you have, the more killer/location combinations you can experience!\n\nIn game terms, Final Girl shares similarities with Hostage Negotiator, but with some key differences that change it up, including a game board to track locations and character movement. You can choose from multiple characters when picking someone to play and multiple killers when picking someone to play against. Killers and locations each have their own specific terror cards that will be shuffled together to create a unique experience with various combinations of scenarios for you to play!\n\nNOTE: The 2022 Kickstarter for Final Girl: Season 2 included a 13 card Final Girl: First Printing Correction Pack of corrected cards for the first printing of Final Girl: Series 1. The cards mostly fix typos and are not required to play the game. The cards were corrected for the second printing of Final Girl: Series 1.\n\n&mdash;description from the publisher\n\n",
+    "yearpublished": 2021,
+    "minplayers": 1,
+    "maxplayers": 1,
+    "playingtime": 60,
+    "mechanics": [
+      {
+        "id": "2072",
+        "value": "Dice Rolling"
+      },
+      {
+        "id": "2040",
+        "value": "Hand Management"
+      },
+      {
+        "id": "2007",
+        "value": "Pick-up and Deliver"
+      },
+      {
+        "id": "2661",
+        "value": "Push Your Luck"
+      },
+      {
+        "id": "2819",
+        "value": "Solo / Solitaire Game"
+      },
+      {
+        "id": "2015",
+        "value": "Variable Player Powers"
+      },
+      {
+        "id": "2897",
+        "value": "Variable Set-up"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1002",
+        "value": "Card Game"
+      },
+      {
+        "id": "1010",
+        "value": "Fantasy"
+      },
+      {
+        "id": "1024",
+        "value": "Horror"
+      }
+    ],
+    "designers": [
+      {
+        "id": "53303",
+        "value": "Evan Derrick"
+      },
+      {
+        "id": "48981",
+        "value": "A. J. Porfirio"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "17028",
+        "value": "Van Ryder Games"
+      },
+      {
+        "id": "27389",
+        "value": "Don't Panic Games"
+      },
+      {
+        "id": "33710",
+        "value": "Fox in the Box"
+      },
+      {
+        "id": "8351",
+        "value": "Gen-X Games (GenX)"
+      },
+      {
+        "id": "49472",
+        "value": "Heidelbear Korea"
+      },
+      {
+        "id": "33626",
+        "value": "Lucky Duck Games"
+      },
+      {
+        "id": "50478",
+        "value": "Ludofun"
+      },
+      {
+        "id": "3242",
+        "value": "Raven Distribution"
+      },
+      {
+        "id": "21053",
+        "value": "Rexhry"
+      }
+    ],
+    "artists": [
+      {
+        "id": "145383",
+        "value": "Scott Beavers"
+      },
+      {
+        "id": "53303",
+        "value": "Evan Derrick"
+      },
+      {
+        "id": "85335",
+        "value": "Tyler Johnson"
+      },
+      {
+        "id": "126403",
+        "value": "Vladyslava Ladkova"
+      },
+      {
+        "id": "51039",
+        "value": "Roland MacDonald"
+      },
+      {
+        "id": "126404",
+        "value": "Tumo Mere"
+      }
+    ],
+    "statistics": {
+      "average": 8.21056,
+      "usersrated": 11698,
+      "bayesaverage": 7.60888
+    },
+    "language_level": "MED",
+    "language_votes": {
+      "2": 1,
+      "3": 9,
+      "4": 2,
+      "5": 1
+    },
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Final Girl"
+    ]
+  },
+  "366013": {
+    "bgg_id": 366013,
+    "name": "Heat: Pedal to the Metal",
+    "alternate_names": [
+      "Heat",
+      "Heat: Padlógáz",
+      "Turbo",
+      "Гонка: Жара на трассе",
+      "Турбо: Спека на треку",
+      "ヒート",
+      "火爆狂飙：全速前进",
+      "熱力狂飆",
+      "히트: 질주의 열기"
+    ],
+    "description": "Based on simple and intuitive hand management, Heat: Pedal to the Metal puts players in the driver's seat of intense car races, jockeying for position to cross the finish line first, while managing their car's speed if they don't want to overheat. Selecting the right upgrades for their car will help them hug the curves and keep their engine cool enough to maintain top speeds. Ultimately, their driving skills will be the key to victory!\n\nDrivers can compete in a single race or use the \"Championship System\" to play a whole season in one game night, customizing their car before each race to claim the top spot of the podium. They have to be careful as the weather, road conditions, and events will change every race to spice up their championship. Players can also enjoy a solo mode with the Legends Module or add automated drivers as additional opponents in multiplayer games.\n\n&mdash;description from the publisher\n\n",
+    "yearpublished": 2022,
+    "minplayers": 1,
+    "maxplayers": 6,
+    "playingtime": 60,
+    "mechanics": [
+      {
+        "id": "2887",
+        "value": "Catch the Leader"
+      },
+      {
+        "id": "2664",
+        "value": "Deck, Bag, and Pool Building"
+      },
+      {
+        "id": "2040",
+        "value": "Hand Management"
+      },
+      {
+        "id": "2953",
+        "value": "Programmed Movement"
+      },
+      {
+        "id": "2661",
+        "value": "Push Your Luck"
+      },
+      {
+        "id": "2876",
+        "value": "Race"
+      },
+      {
+        "id": "2070",
+        "value": "Simulation"
+      },
+      {
+        "id": "2020",
+        "value": "Simultaneous Action Selection"
+      },
+      {
+        "id": "2819",
+        "value": "Solo / Solitaire Game"
+      },
+      {
+        "id": "2939",
+        "value": "Track Movement"
+      },
+      {
+        "id": "2897",
+        "value": "Variable Set-up"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1031",
+        "value": "Racing"
+      },
+      {
+        "id": "1038",
+        "value": "Sports"
+      }
+    ],
+    "designers": [
+      {
+        "id": "80520",
+        "value": "Asger Aleksandrov Granerud"
+      },
+      {
+        "id": "80521",
+        "value": "Daniel Skjold Pedersen"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "1027",
+        "value": "Days of Wonder"
+      },
+      {
+        "id": "23043",
+        "value": "ADC Blackfire Entertainment"
+      },
+      {
+        "id": "50696",
+        "value": "CoolPlay"
+      },
+      {
+        "id": "15605",
+        "value": "Galápagos Jogos"
+      },
+      {
+        "id": "8820",
+        "value": "Gémklub"
+      },
+      {
+        "id": "28415",
+        "value": "GoKids 玩樂小子"
+      },
+      {
+        "id": "18852",
+        "value": "Hobby World"
+      },
+      {
+        "id": "6214",
+        "value": "Kaissa Chess & Games"
+      },
+      {
+        "id": "8291",
+        "value": "Korea Boardgames"
+      },
+      {
+        "id": "46500",
+        "value": "Lord of Boards"
+      }
+    ],
+    "artists": [
+      {
+        "id": "12130",
+        "value": "Vincent Dutrait"
+      }
+    ],
+    "statistics": {
+      "average": 7.99285,
+      "usersrated": 42525,
+      "bayesaverage": 7.79477
+    },
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 38,
+      "2": 17,
+      "3": 2
+    },
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Heat"
+    ]
+  },
+  "422780": {
+    "bgg_id": 422780,
+    "name": "Mistborn: The Deckbuilding Game",
+    "alternate_names": [
+      "Fills de la Boira: el joc de construcció de piles",
+      "Ködszerzet: A pakliépítő játék",
+      "Maglorodni kartična igra",
+      "Mistborn: Das Deckbauspiel",
+      "Mistborn: Il Gioco di Carte",
+      "Mistborn: Z mgły zrodzony",
+      "Mistoborn: O Jogo de Construção de Baralho",
+      "Nacidos de la Bruma: El juego de construcción de mazos",
+      "迷雾之子：牌库构筑游戏",
+      "미스트본: 덱빌딩 게임"
+    ],
+    "description": "Based on the hit Mistborn novel series by Brandon Sanderson, Mistborn: The Deckbuilding Game takes players into the world of Scadrial! From designer John D Clair, players get to control iconic characters from the series and \"burn\" metals to unlock Allomantic powers in fast-paced battles.\n\nMistborn is a standalone deck-building game in which you \"purchase\" cards as you play to build and improve your deck. \"Burn\" metals to activate cards. Each metal has its own strengths: damaging opponents, earning mission points, and manipulating allies. There are multiple ways to win! Defeat your opponents in furious allomantic battles or complete a series of perilous missions before your enemies do.\n\nPlay head-to-head against your friends, or take on the The Lord Ruler in solo or co-op play!\n\n&mdash;description from the publisher\n\n",
+    "yearpublished": 2024,
+    "minplayers": 1,
+    "maxplayers": 4,
+    "playingtime": 60,
+    "mechanics": [
+      {
+        "id": "2023",
+        "value": "Cooperative Game"
+      },
+      {
+        "id": "2664",
+        "value": "Deck, Bag, and Pool Building"
+      },
+      {
+        "id": "2900",
+        "value": "Market"
+      },
+      {
+        "id": "2685",
+        "value": "Player Elimination"
+      },
+      {
+        "id": "2876",
+        "value": "Race"
+      },
+      {
+        "id": "2819",
+        "value": "Solo / Solitaire Game"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1002",
+        "value": "Card Game"
+      },
+      {
+        "id": "1010",
+        "value": "Fantasy"
+      },
+      {
+        "id": "1093",
+        "value": "Novel-based"
+      }
+    ],
+    "designers": [
+      {
+        "id": "57723",
+        "value": "John D. Clair"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "23664",
+        "value": "Brotherwise Games"
+      },
+      {
+        "id": "9068",
+        "value": "Broadway Toys LTD"
+      },
+      {
+        "id": "2366",
+        "value": "Devir"
+      },
+      {
+        "id": "8820",
+        "value": "Gémklub"
+      },
+      {
+        "id": "55324",
+        "value": "HIT Games"
+      },
+      {
+        "id": "33626",
+        "value": "Lucky Duck Games"
+      },
+      {
+        "id": "51614",
+        "value": "MIPL"
+      }
+    ],
+    "artists": [
+      {
+        "id": "90156",
+        "value": "David Álvarez Astruga"
+      },
+      {
+        "id": "156428",
+        "value": "Valeria Casale"
+      },
+      {
+        "id": "95117",
+        "value": "Logan Feliciano"
+      },
+      {
+        "id": "120740",
+        "value": "Antti Hakosaari"
+      },
+      {
+        "id": "152950",
+        "value": "Austin Hartell"
+      },
+      {
+        "id": "163447",
+        "value": "Amirul Hhf"
+      },
+      {
+        "id": "110284",
+        "value": "Joel Holtzman"
+      },
+      {
+        "id": "135715",
+        "value": "Ari Ibarra"
+      },
+      {
+        "id": "115973",
+        "value": "Vladimir Ishelin"
+      },
+      {
+        "id": "115016",
+        "value": "Satoshi Kamanaka"
+      },
+      {
+        "id": "137173",
+        "value": "Svetlana Kostina"
+      },
+      {
+        "id": "90945",
+        "value": "Irina Kuzmina"
+      },
+      {
+        "id": "115573",
+        "value": "Linda Lithén"
+      },
+      {
+        "id": "145744",
+        "value": "Alexander Ngo"
+      },
+      {
+        "id": "37437",
+        "value": "Kevin O'Neill (I)"
+      },
+      {
+        "id": "117463",
+        "value": "Gal Or"
+      },
+      {
+        "id": "156748",
+        "value": "Elizabeth Peiró"
+      },
+      {
+        "id": "75569",
+        "value": "Kiki Moch Rizky"
+      },
+      {
+        "id": "163448",
+        "value": "Sami Rytkönen"
+      },
+      {
+        "id": "163449",
+        "value": "Deandra Scicluna"
+      },
+      {
+        "id": "135969",
+        "value": "Steven Shan"
+      },
+      {
+        "id": "108655",
+        "value": "Darko Stojanovic"
+      },
+      {
+        "id": "18258",
+        "value": "Raymond Swanland"
+      }
+    ],
+    "statistics": {
+      "average": 7.63547,
+      "usersrated": 3505,
+      "bayesaverage": 6.66763
+    },
+    "language_level": "HIGH",
+    "language_votes": {
+      "3": 1,
+      "4": 4
+    },
+    "fr_edition_exists": false,
+    "fr_edition_titles": []
+  },
+  "358124": {
+    "bgg_id": 358124,
+    "name": "Mists over Carcassonne",
+    "alternate_names": [
+      "Carcassonne De Mist",
+      "Carcassonne: A ködbe zárt Carcassonne",
+      "Carcassonne: Ombres et Brouillard",
+      "Carcassonne: Sumujen Sankarit",
+      "Ceață peste Carcassonne",
+      "Duchové Carcassonne",
+      "Mgła nad Carcassonne",
+      "Nebbie su Carcassonne",
+      "Nebel über Carcassonne",
+      "Nevoeiro em Carcassonne",
+      "Nevoeiro em Carcassonne",
+      "Niebla en Carcassonne",
+      "Ομίχλη πάνω από το Carcassonne",
+      "Каркассон: Туманы и призраки",
+      "Мъгли над Каркасон",
+      "Тумани над Carcassonne",
+      "卡卡頌 霧中情誼",
+      "안갯속의 카르카손"
+    ],
+    "description": "Mists over Carcassonne is a co-operative version of the well-known tile-laying game Carcassonne. Working together, you place tiles and score points while trying to stop the spread of ghosts, contain haunted ground in cemeteries, and use haunted castles to your advantage. If too many ghosts are loose on the ground or you've collected too few points when the tiles run out, you lose the game. If you do manage to survive three days, you can adjust the difficulty level of the game to increase the challenge.\n\nMists over Carcassonne includes 45 meeples in two new types and 60 tiles that match the graphics of the 2021 edition of Carcassonne, and this game includes rules for how to incorporate material in a regular competitive game of Carcassonne.\n\n",
+    "yearpublished": 2022,
+    "minplayers": 1,
+    "maxplayers": 5,
+    "playingtime": 35,
+    "mechanics": [
+      {
+        "id": "2023",
+        "value": "Cooperative Game"
+      },
+      {
+        "id": "2002",
+        "value": "Tile Placement"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1035",
+        "value": "Medieval"
+      }
+    ],
+    "designers": [
+      {
+        "id": "398",
+        "value": "Klaus-Jürgen Wrede"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "133",
+        "value": "Hans im Glück"
+      },
+      {
+        "id": "267",
+        "value": "999 Games"
+      },
+      {
+        "id": "9074",
+        "value": "Bard Centrum Gier"
+      },
+      {
+        "id": "2366",
+        "value": "Devir"
+      },
+      {
+        "id": "22560",
+        "value": "Fantasmagoria"
+      },
+      {
+        "id": "36981",
+        "value": "Feelindigo"
+      },
+      {
+        "id": "5530",
+        "value": "Giochi Uniti"
+      },
+      {
+        "id": "18852",
+        "value": "Hobby World"
+      },
+      {
+        "id": "6214",
+        "value": "Kaissa Chess & Games"
+      },
+      {
+        "id": "8291",
+        "value": "Korea Boardgames"
+      },
+      {
+        "id": "3218",
+        "value": "Lautapelit.fi"
+      },
+      {
+        "id": "7992",
+        "value": "MINDOK"
+      },
+      {
+        "id": "62145",
+        "value": "Piatnik Distribution"
+      },
+      {
+        "id": "9234",
+        "value": "Swan Panasia Co., Ltd."
+      },
+      {
+        "id": "538",
+        "value": "Z-Man Games"
+      }
+    ],
+    "artists": [
+      {
+        "id": "127899",
+        "value": "Marcel Gröber"
+      },
+      {
+        "id": "43873",
+        "value": "Anne Pätzke"
+      }
+    ],
+    "statistics": {
+      "average": 7.27243,
+      "usersrated": 2888,
+      "bayesaverage": 6.4388
+    },
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 8
+    },
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Carcassonne: Ombres et Brouillard"
+    ]
+  },
+  "240196": {
+    "bgg_id": 240196,
+    "name": "Betrayal Legacy",
+    "alternate_names": [],
+    "description": "Betrayal Legacy marries the concept of Betrayal at House on the Hill &mdash; exploring a haunted mansion &mdash; with the permanency and multi-game storytelling exhibited by Daviau's Risk Legacy and other legacy games that followed. Betrayal Legacy consists of a prologue and a thirteen-chapter story that takes place over decades. Players represent families, with specific members of a family participating in one story, then perhaps an older version of those characters (assuming they lived) or their descendants showing up in later stories.\n\nWhy would people keep exploring a haunted mansion for decade after decade, especially when horrible things happen there? Curiosity, I suppose, or perhaps an ignorant boldness that comes from the belief that we know better than those who have come before. Look at all that we've learned, marvel at the tools we have at hand! Surely we'll all exit safely this time...\n\nAs with other Betrayal titles, the game is narratively-driven, with elements that record the history of your specific games. The tools mentioned earlier, for example, become attached to specific families. This isn't just a bucket; it's my bucket, the one my grandpappy used to feed his family's pigs when he was a boy, and while you can certainly use that bucket, I know how to wield it best from the time he spent teaching me how to slop. Yes, it's an heirloom bucket, and when kept in the family, I get a bonus for using it.\n\n",
+    "yearpublished": 2018,
+    "minplayers": 3,
+    "maxplayers": 5,
+    "playingtime": 90,
+    "mechanics": [
+      {
+        "id": "2023",
+        "value": "Cooperative Game"
+      },
+      {
+        "id": "2072",
+        "value": "Dice Rolling"
+      },
+      {
+        "id": "2850",
+        "value": "Events"
+      },
+      {
+        "id": "2676",
+        "value": "Grid Movement"
+      },
+      {
+        "id": "2824",
+        "value": "Legacy Game"
+      },
+      {
+        "id": "2975",
+        "value": "Line of Sight"
+      },
+      {
+        "id": "2959",
+        "value": "Map Addition"
+      },
+      {
+        "id": "2011",
+        "value": "Modular Board"
+      },
+      {
+        "id": "2685",
+        "value": "Player Elimination"
+      },
+      {
+        "id": "2028",
+        "value": "Role Playing"
+      },
+      {
+        "id": "2892",
+        "value": "Roles with Asymmetric Information"
+      },
+      {
+        "id": "2822",
+        "value": "Scenario / Mission / Campaign Game"
+      },
+      {
+        "id": "2853",
+        "value": "Stat Check Resolution"
+      },
+      {
+        "id": "2027",
+        "value": "Storytelling"
+      },
+      {
+        "id": "2019",
+        "value": "Team-Based Game"
+      },
+      {
+        "id": "2002",
+        "value": "Tile Placement"
+      },
+      {
+        "id": "2814",
+        "value": "Traitor Game"
+      },
+      {
+        "id": "2015",
+        "value": "Variable Player Powers"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1022",
+        "value": "Adventure"
+      },
+      {
+        "id": "1020",
+        "value": "Exploration"
+      },
+      {
+        "id": "1024",
+        "value": "Horror"
+      },
+      {
+        "id": "1047",
+        "value": "Miniatures"
+      }
+    ],
+    "designers": [
+      {
+        "id": "442",
+        "value": "Rob Daviau"
+      },
+      {
+        "id": "75911",
+        "value": "Noah Cohen"
+      },
+      {
+        "id": "80624",
+        "value": "JR Honeycutt"
+      },
+      {
+        "id": "2276",
+        "value": "Ryan Miller"
+      },
+      {
+        "id": "80920",
+        "value": "Brian Neff"
+      },
+      {
+        "id": "27343",
+        "value": "Andrew Veen"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "4871",
+        "value": "Avalon Hill"
+      }
+    ],
+    "artists": [
+      {
+        "id": "12658",
+        "value": "Scott Okumura"
+      },
+      {
+        "id": "90054",
+        "value": "Ben Oliver"
+      }
+    ],
+    "statistics": {
+      "average": 7.64114,
+      "usersrated": 5422,
+      "bayesaverage": 6.89732
+    },
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 2,
+      "5": 1
+    },
+    "fr_edition_exists": false,
+    "fr_edition_titles": []
+  },
+  "9209": {
+    "bgg_id": 9209,
+    "name": "Ticket to Ride",
+    "alternate_names": [
+      "¡Aventureros al Tren!",
+      "Les Aventuriers du Rail",
+      "Jízdenky, prosím!",
+      "Menolippu",
+      "Ticket to Ride سكة سفر",
+      "Wsiąść do Pociągu",
+      "Zug um Zug",
+      "Τρενάκια",
+      "เกมต่อรถไฟ",
+      "チケット・トゥ・ライド・アメリカ",
+      "チケット・トゥ・ライド：アメリカ",
+      "乗車券",
+      "鐵道任務",
+      "铁路环游",
+      "티켓 투 라이드"
+    ],
+    "description": "With elegantly simple gameplay, Ticket to Ride can be learned in under 15 minutes. Players collect cards of various types of train cars they then use to claim railway routes in North America. The longer the routes, the more points they earn. Additional points come to those who fulfill Destination Tickets &ndash; goal cards that connect distant cities; and to the player who builds the longest continuous route.\n\n\"The rules are simple enough to write on a train ticket &ndash; each turn you either draw more cards, claim a route, or get additional Destination Tickets,\" says Ticket to Ride author, Alan R. Moon. \"The tension comes from being forced to balance greed &ndash; adding more cards to your hand, and fear &ndash; losing a critical route to a competitor.\"\n\nTicket to Ride continues in the tradition of Days of Wonder's big format board games featuring high-quality illustrations and components including: an oversize board map of North America, 225 custom-molded train cars, 144 illustrated cards, and wooden scoring markers.\n\nSince its introduction and numerous subsequent awards, Ticket to Ride has become the BoardGameGeek epitome of a \"gateway game\" -- simple enough to be taught in a few minutes, and with enough action and tension to keep new players involved and in the game for the duration.\n\nPart of the Ticket to Ride series.\n\n",
+    "yearpublished": 2004,
+    "minplayers": 2,
+    "maxplayers": 5,
+    "playingtime": 60,
+    "mechanics": [
+      {
+        "id": "2883",
+        "value": "Connections"
+      },
+      {
+        "id": "2912",
+        "value": "Contracts"
+      },
+      {
+        "id": "2875",
+        "value": "End Game Bonuses"
+      },
+      {
+        "id": "2040",
+        "value": "Hand Management"
+      },
+      {
+        "id": "2081",
+        "value": "Network and Route Building"
+      },
+      {
+        "id": "2041",
+        "value": "Open Drafting"
+      },
+      {
+        "id": "2661",
+        "value": "Push Your Luck"
+      },
+      {
+        "id": "2004",
+        "value": "Set Collection"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1034",
+        "value": "Trains"
+      }
+    ],
+    "designers": [
+      {
+        "id": "9",
+        "value": "Alan R. Moon"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "1027",
+        "value": "Days of Wonder"
+      },
+      {
+        "id": "23043",
+        "value": "ADC Blackfire Entertainment"
+      },
+      {
+        "id": "157",
+        "value": "asmodee"
+      },
+      {
+        "id": "15889",
+        "value": "Asterion Press"
+      },
+      {
+        "id": "934",
+        "value": "Bandai Co., Ltd."
+      },
+      {
+        "id": "34501",
+        "value": "Boardgame Space"
+      },
+      {
+        "id": "2973",
+        "value": "Edge Entertainment"
+      },
+      {
+        "id": "6784",
+        "value": "Enigma (Bergsala Enigma)"
+      },
+      {
+        "id": "15605",
+        "value": "Galápagos Jogos"
+      },
+      {
+        "id": "5530",
+        "value": "Giochi Uniti"
+      },
+      {
+        "id": "8439",
+        "value": "Happy Baobab"
+      },
+      {
+        "id": "1391",
+        "value": "Hobby Japan"
+      },
+      {
+        "id": "18852",
+        "value": "Hobby World"
+      },
+      {
+        "id": "6214",
+        "value": "Kaissa Chess & Games"
+      },
+      {
+        "id": "8291",
+        "value": "Korea Boardgames"
+      },
+      {
+        "id": "3218",
+        "value": "Lautapelit.fi"
+      },
+      {
+        "id": "7466",
+        "value": "Rebel Sp. z o.o."
+      },
+      {
+        "id": "33998",
+        "value": "Siam Board Games"
+      },
+      {
+        "id": "9234",
+        "value": "Swan Panasia Co., Ltd."
+      }
+    ],
+    "artists": [
+      {
+        "id": "12519",
+        "value": "Cyrille Daujean"
+      },
+      {
+        "id": "11886",
+        "value": "Julien Delval"
+      },
+      {
+        "id": "113129",
+        "value": "Fajareka Setiawan"
+      },
+      {
+        "id": "76496",
+        "value": "Régis Torres"
+      }
+    ],
+    "statistics": {
+      "average": 7.38458,
+      "usersrated": 99145,
+      "bayesaverage": 7.2598
+    },
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 195,
+      "2": 28,
+      "3": 1,
+      "5": 1
+    },
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Les Aventuriers du Rail",
+      "Les Aventuriers du Rail",
+      "Les Aventuriers du Rail",
+      "Les Aventuriers du Rail"
+    ]
+  },
+  "96848": {
+    "bgg_id": 96848,
+    "name": "Mage Knight Board Game",
+    "alternate_names": [
+      "Mage Knight: Das Brettspiel",
+      "Mage Knight: Desková hra",
+      "Mage Knight: Gra Planszowa",
+      "Mage Knight: Il Gioco Da Tavolo",
+      "Mage Knight: Jeu de Plateau",
+      "魔法騎士"
+    ],
+    "description": "In Mage Knight Board Game you become one of four powerful Mage Knights who explore and subdue an important peninsula of the Atlantean Empire. Learn skills, gather an army, pack your deck with powerful spells and abilities as you conquer castles, battle dragons, and clear out dungeons, swelling with power until you're ready to assault the mighty heartland cities of the Atlanteans. Work with other Mage Knights--or bash them aside--as you wrestle your way into power. Play competitively, play cooperatively, play solo--only be sure to win.\n\nSo come, slip through the portal into a standalone game rich in role-playing, deck-building, and map exploration. Immerse yourself in the lush tapestry of the Mage Knight universe as you race toward danger, making the most of each choice, each card, each clash.\n\n",
+    "yearpublished": 2011,
+    "minplayers": 1,
+    "maxplayers": 4,
+    "playingtime": 240,
+    "mechanics": [
+      {
+        "id": "2857",
+        "value": "Card Play Conflict Resolution"
+      },
+      {
+        "id": "2023",
+        "value": "Cooperative Game"
+      },
+      {
+        "id": "2664",
+        "value": "Deck, Bag, and Pool Building"
+      },
+      {
+        "id": "2072",
+        "value": "Dice Rolling"
+      },
+      {
+        "id": "2676",
+        "value": "Grid Movement"
+      },
+      {
+        "id": "2040",
+        "value": "Hand Management"
+      },
+      {
+        "id": "2026",
+        "value": "Hexagon Grid"
+      },
+      {
+        "id": "2959",
+        "value": "Map Addition"
+      },
+      {
+        "id": "2011",
+        "value": "Modular Board"
+      },
+      {
+        "id": "3099",
+        "value": "Multi-Use Cards"
+      },
+      {
+        "id": "2041",
+        "value": "Open Drafting"
+      },
+      {
+        "id": "2028",
+        "value": "Role Playing"
+      },
+      {
+        "id": "2822",
+        "value": "Scenario / Mission / Campaign Game"
+      },
+      {
+        "id": "2819",
+        "value": "Solo / Solitaire Game"
+      },
+      {
+        "id": "3100",
+        "value": "Tags"
+      },
+      {
+        "id": "2829",
+        "value": "Turn Order: Claim Action"
+      },
+      {
+        "id": "2015",
+        "value": "Variable Player Powers"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1022",
+        "value": "Adventure"
+      },
+      {
+        "id": "1020",
+        "value": "Exploration"
+      },
+      {
+        "id": "1010",
+        "value": "Fantasy"
+      },
+      {
+        "id": "1046",
+        "value": "Fighting"
+      }
+    ],
+    "designers": [
+      {
+        "id": "789",
+        "value": "Vlaada Chvátil"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "221",
+        "value": "WizKids (I)"
+      },
+      {
+        "id": "157",
+        "value": "asmodee"
+      },
+      {
+        "id": "5530",
+        "value": "Giochi Uniti"
+      },
+      {
+        "id": "5380",
+        "value": "Intrafin Games"
+      },
+      {
+        "id": "5812",
+        "value": "Lacerta"
+      },
+      {
+        "id": "3023",
+        "value": "NECA"
+      },
+      {
+        "id": "39",
+        "value": "Pegasus Spiele"
+      },
+      {
+        "id": "21053",
+        "value": "Rexhry"
+      }
+    ],
+    "artists": [
+      {
+        "id": "49771",
+        "value": "J. Lonnee"
+      },
+      {
+        "id": "50792",
+        "value": "Chris Raimo"
+      },
+      {
+        "id": "11961",
+        "value": "Milan Vavroň"
+      }
+    ],
+    "statistics": {
+      "average": 8.08164,
+      "usersrated": 35333,
+      "bayesaverage": 7.83655
+    },
+    "language_level": "HIGH",
+    "language_votes": {
+      "2": 3,
+      "3": 27,
+      "4": 169,
+      "5": 8
+    },
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Mage Knight: Jeu de Plateau"
+    ]
+  },
+  "302723": {
+    "bgg_id": 302723,
+    "name": "Forgotten Waters",
+    "alternate_names": [
+      "Na vlnách neznáma",
+      "Zapomniane morza",
+      "Забытые моря",
+      "Утрачені моря",
+      "忘海传记",
+      "포가튼 워터스"
+    ],
+    "description": "Forgotten Waters is a Crossroads Game set in a world of fantastical pirate adventure. In it, players take on the role of pirates sailing together on a ship, attempting to further their own personal stories as well as a common goal.\n\nThe world of Forgotten Waters is silly and magical, with stories designed to encourage players to explore and laugh in delight as they interact with the world around them. It's a game in which every choice can leave a lasting impact on the story, and players will want turn over every rock just to see what they find.\n\nForgotten Waters features five scenarios and a massive location book that provides players with tons of choices wherever they go.\n\n&mdash;description from the publisher\n\n",
+    "yearpublished": 2020,
+    "minplayers": 3,
+    "maxplayers": 7,
+    "playingtime": 240,
+    "mechanics": [
+      {
+        "id": "2072",
+        "value": "Dice Rolling"
+      },
+      {
+        "id": "2850",
+        "value": "Events"
+      },
+      {
+        "id": "2851",
+        "value": "Narrative Choice / Paragraph"
+      },
+      {
+        "id": "2822",
+        "value": "Scenario / Mission / Campaign Game"
+      },
+      {
+        "id": "2820",
+        "value": "Semi-Cooperative Game"
+      },
+      {
+        "id": "2853",
+        "value": "Stat Check Resolution"
+      },
+      {
+        "id": "2027",
+        "value": "Storytelling"
+      },
+      {
+        "id": "2082",
+        "value": "Worker Placement"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1022",
+        "value": "Adventure"
+      },
+      {
+        "id": "1020",
+        "value": "Exploration"
+      },
+      {
+        "id": "1010",
+        "value": "Fantasy"
+      },
+      {
+        "id": "1008",
+        "value": "Nautical"
+      },
+      {
+        "id": "1090",
+        "value": "Pirates"
+      },
+      {
+        "id": "1097",
+        "value": "Travel"
+      }
+    ],
+    "designers": [
+      {
+        "id": "30291",
+        "value": "Mr. Bistro"
+      },
+      {
+        "id": "101244",
+        "value": "J. Arthur Ellis"
+      },
+      {
+        "id": "65023",
+        "value": "Isaac Vega"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "10754",
+        "value": "Plaid Hat Games"
+      },
+      {
+        "id": "34522",
+        "value": "CrowD Games"
+      },
+      {
+        "id": "15605",
+        "value": "Galápagos Jogos"
+      },
+      {
+        "id": "58739",
+        "value": "Geekach LLC"
+      },
+      {
+        "id": "7992",
+        "value": "MINDOK"
+      },
+      {
+        "id": "23756",
+        "value": "MYBG Co., Ltd."
+      },
+      {
+        "id": "2726",
+        "value": "Portal Games"
+      },
+      {
+        "id": "39249",
+        "value": "sternenschimmermeer"
+      }
+    ],
+    "artists": [
+      {
+        "id": "116178",
+        "value": "Anton Fadeev"
+      },
+      {
+        "id": "127575",
+        "value": "Nadezhda Tikhomirova"
+      }
+    ],
+    "statistics": {
+      "average": 7.72137,
+      "usersrated": 7147,
+      "bayesaverage": 7.12408
+    },
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 8,
+      "5": 4
+    },
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Forgotten Waters"
+    ]
+  },
+  "268201": {
+    "bgg_id": 268201,
+    "name": "Dice Throne",
+    "alternate_names": [],
+    "description": "\n\n\n    \n        GAME SYSTEM\n\n    \n    \n         This entry is to allow for discussion/rating of the game system as a whole. It is not for a specific product or release. Versions will appear on the individual item pages.\n\n    \n\n\n\n Dice Throne is a fast-paced 2-6 player combat game, whether 1v1, 2v2, 3v3, 2v2v2, or free-for-all. Select from a variety of heroes that play and feel completely distinct from one another. Attack opponents and activate abilities by rolling your hero's unique set of five dice. Accumulate combat points and spend them on cards that have a large range of effects, such as granting permanent hero upgrades, applying status effects, and manipulating dice directly whether yours, your teammate's, or even your opponent's.\n\nEach player needs their own hero to play Dice Throne, and all heroes are cross-compatible.\n\nThe very first release, Season One, was a single box that contained components for six heroes and basic art and components. When Season Two was released, it overhauled the component and card design into what is now the standard, and following that, Season One - Rerolled was released to update and rebalance the original six heroes into the new standard format, as well as adding two additional heroes. These releases are available as 8 character \"Battle Chests\" or as two character \"Battle Boxes\". Dice Throne than released several major Marvel-themed sets (Marvel Dice Throne, Marvel Dice Throne: X-Men, and Deadpool), as well as smaller themed sets (Santa vs. Krampus, Outcasts, and Vanguard).\n\nIn 2026, Dice Throne announced a pivot to offering single characters for sale, which will mostly replace the \"Battle Chest\" and \"Battle Box\" releases. The first stand-alone character in this new packaging is the Alchemist, but all non-Marvel characters are planned to be released in the single character format.\n\nCooperative expansions have also been released. Dice Throne Adventures was the first, a dungeon crawl/boss battler campaign game for 1-4 heroes through 8 scenarios, allowing players to upgrade their decks throughout the campaign using loot cards. An expansion, Dice Throne Adventures: Unchained, offered a new boss and the ability to run \"One-Shot Adventures\" using the same loot card system but without the campaign element. Marvel Dice Throne: Missions was also released alongside the Marvel Dice Throne: X-Men set, allowing 1-4 players to battle villains from the Marvel universe in one-shot missions.\n\nLinked entries in the BGG database:\n\nCharacters and Character Sets:\n\n    Dice Throne: Season One\n    Dice Throne: Season One ReRolled\n        Dice Throne: Season One Rerolled – Battle 1:  Barbarian v. Moon Elf\n        Dice Throne: Season One ReRolled – Monk v. Paladin\n        Dice Throne: Season One ReRolled – Pyromancer v. Shadow Thief\n        Dice Throne: Season One ReRolled – Treant v. Ninja\n    \n    Dice Throne: Season Two – Battle Chest\n        Dice Throne: Season Two – Seraph v. Vampire Lord\n        Dice Throne: Season Two – Tactician v. Huntress\n        Dice Throne: Season Two – Gunslinger v. Samurai\n        Dice Throne: Season Two – Cursed Pirate v. Artificer\n    \n    Dice Throne: Santa v. Krampus\n    Marvel Dice Throne\n        Marvel Dice Throne: Black Widow v. Doctor Strange\n        Marvel Dice Throne: Captain Marvel v. Black Panther\n        Marvel Dice Throne: Scarlet Witch v. Thor v. Loki v. Spider-Man\n    \n    Marvel Dice Throne: X-Men\n        Marvel Dice Throne: X-Men – Cyclops v. Gambit v. Rogue v. Jean Grey\n        Marvel Dice Throne: X-Men – Iceman v. Psylocke v. Storm v. Wolverine\n    \n    Marvel Dice Throne: Deadpool\n    Dice Throne: Outcasts\n    Dice Throne: Vanguard\n    Dice Throne: Alchemist\n\n\nCooperative Expansions\n\n    Dice Throne: Adventures\n        Dice Throne: Adventures – Unchained\n    \n    Marvel Dice Throne: Missions\n\n\n",
+    "yearpublished": 2018,
+    "minplayers": 2,
+    "maxplayers": 6,
+    "playingtime": 40,
+    "mechanics": [
+      {
+        "id": "2072",
+        "value": "Dice Rolling"
+      },
+      {
+        "id": "2856",
+        "value": "Die Icon Resolution"
+      },
+      {
+        "id": "2870",
+        "value": "Re-rolling and Locking"
+      },
+      {
+        "id": "2686",
+        "value": "Take That"
+      },
+      {
+        "id": "2015",
+        "value": "Variable Player Powers"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1002",
+        "value": "Card Game"
+      },
+      {
+        "id": "1017",
+        "value": "Dice"
+      },
+      {
+        "id": "1010",
+        "value": "Fantasy"
+      },
+      {
+        "id": "1046",
+        "value": "Fighting"
+      }
+    ],
+    "designers": [
+      {
+        "id": "97955",
+        "value": "Nate Chatellier"
+      },
+      {
+        "id": "160194",
+        "value": "Aaron Hein"
+      },
+      {
+        "id": "63023",
+        "value": "Manny Trembley"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "58083",
+        "value": "Dice Throne, Inc."
+      },
+      {
+        "id": "21765",
+        "value": "Roxley"
+      }
+    ],
+    "artists": [
+      {
+        "id": "32887",
+        "value": "Gavan Brown"
+      },
+      {
+        "id": "63023",
+        "value": "Manny Trembley"
+      }
+    ],
+    "statistics": {
+      "average": 7.59239,
+      "usersrated": 3513,
+      "bayesaverage": 6.64879
+    },
+    "language_level": "MED",
+    "language_votes": {
+      "3": 4,
+      "4": 1,
+      "5": 3
+    },
+    "fr_edition_exists": false,
+    "fr_edition_titles": []
+  },
+  "253344": {
+    "bgg_id": 253344,
+    "name": "Cthulhu: Death May Die",
+    "alternate_names": [
+      "Cthulhu: A halandó halál",
+      "Cthulhu: I smrt může zemřít",
+      "Ктулху: Смерть может умереть",
+      "Ктулху. Смерть може вмерти",
+      "クトゥルフ ～死もまた死すべし～",
+      "克苏鲁：死亡湮灭",
+      "크툴루: 죽음마저 죽으리니"
+    ],
+    "description": "In Cthulhu: Death May Die, inspired by the writings of H.P. Lovecraft, you and your fellow players represent investigators in the 1920s who instead of trying to stop the coming of Elder Gods, want to summon those otherworldly beings so that you can put a stop to them permanently. You start the game insane, and while your long-term goal is to shoot Cthulhu in the face, so to speak, at some point during the game you'll probably fail to mitigate your dice rolls properly and your insanity will cause you to do something terrible &mdash; or maybe advantageous. Hard to know for sure.\n\nThe game has multiple episodes, and each of them has a similar structure of two acts, those being before and after you summon whatever it is you happen to be summoning. If any character dies prior to the summoning, then the game ends and you lose; once the Elder One is on the board, as long as one of you is still alive, you still have a chance to win.\n\nThe episodes are all standalone and not contingent on being played in a certain order or with the same players.\n\n",
+    "yearpublished": 2019,
+    "minplayers": 1,
+    "maxplayers": 5,
+    "playingtime": 120,
+    "mechanics": [
+      {
+        "id": "2001",
+        "value": "Action Points"
+      },
+      {
+        "id": "2046",
+        "value": "Area Movement"
+      },
+      {
+        "id": "2023",
+        "value": "Cooperative Game"
+      },
+      {
+        "id": "2072",
+        "value": "Dice Rolling"
+      },
+      {
+        "id": "2028",
+        "value": "Role Playing"
+      },
+      {
+        "id": "2822",
+        "value": "Scenario / Mission / Campaign Game"
+      },
+      {
+        "id": "2819",
+        "value": "Solo / Solitaire Game"
+      },
+      {
+        "id": "2015",
+        "value": "Variable Player Powers"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1010",
+        "value": "Fantasy"
+      },
+      {
+        "id": "1046",
+        "value": "Fighting"
+      },
+      {
+        "id": "1024",
+        "value": "Horror"
+      },
+      {
+        "id": "1047",
+        "value": "Miniatures"
+      },
+      {
+        "id": "1093",
+        "value": "Novel-based"
+      }
+    ],
+    "designers": [
+      {
+        "id": "442",
+        "value": "Rob Daviau"
+      },
+      {
+        "id": "1533",
+        "value": "Eric M. Lang"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "21608",
+        "value": "CMON Global Limited"
+      },
+      {
+        "id": "21020",
+        "value": "Guillotine Games"
+      },
+      {
+        "id": "3475",
+        "value": "Arclight Games"
+      },
+      {
+        "id": "157",
+        "value": "asmodee"
+      },
+      {
+        "id": "25074",
+        "value": "BoardM Factory"
+      },
+      {
+        "id": "6194",
+        "value": "Delta Vision Publishing"
+      },
+      {
+        "id": "2973",
+        "value": "Edge Entertainment"
+      },
+      {
+        "id": "15605",
+        "value": "Galápagos Jogos"
+      },
+      {
+        "id": "12540",
+        "value": "Game Harbor"
+      },
+      {
+        "id": "18852",
+        "value": "Hobby World"
+      },
+      {
+        "id": "2726",
+        "value": "Portal Games"
+      },
+      {
+        "id": "21053",
+        "value": "Rexhry"
+      },
+      {
+        "id": "44209",
+        "value": "Ігромаг"
+      }
+    ],
+    "artists": [
+      {
+        "id": "12935",
+        "value": "Nicolas Fructus"
+      },
+      {
+        "id": "14792",
+        "value": "Karl Kopinski"
+      },
+      {
+        "id": "12317",
+        "value": "Thierry Masson"
+      },
+      {
+        "id": "12495",
+        "value": "Adrian Smith"
+      },
+      {
+        "id": "2582",
+        "value": "Richard Wright"
+      }
+    ],
+    "statistics": {
+      "average": 8.17965,
+      "usersrated": 17273,
+      "bayesaverage": 7.76249
+    },
+    "language_level": "MED",
+    "language_votes": {
+      "2": 1,
+      "3": 9,
+      "4": 7
+    },
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Cthulhu: Death May Die"
+    ]
+  },
+  "367086": {
+    "bgg_id": 367086,
+    "name": "Dragons of Etchinstone",
+    "alternate_names": [
+      "Drachen von Runenstein",
+      "Felines of Fetchin' Bone",
+      "Katzen von Kratzebaum",
+      "Драконы Этчинстоуна",
+      "Кошки Шерстинстоуна"
+    ],
+    "description": "Etchinstone, the last great nation under the wide reaches of Valorfall, is under grave threat of a kind no one saw coming. Four ancient dragons have seized control of pivotal strongholds in every direction--North, South, East and West. It's up to you, the strongest of the rare Ether Mages, to make the perilous quest to each of these strongholds, defeat the dragons, and bring peace back to Etchinstone.\n\nIn Dragons of Etchinstone, you, the brave Ether Mage, must work your way through four Regions and a challenging final encounter against one of the four dragons. You'll use your Action cards to manage dangerous Journeys and formidable Enemies. Defeat them, and your reward is XP, which you can use to upgrade your action cards. Defeat or narrow victories against Journeys results in losing time, which may force you to face the dragon before you feel ready. Defeat or narrow victories against Enemies results in taking damage, which forces you to downgrade your Action cards and weakens your power.\n\n&mdash;description from the designer\n\n",
+    "yearpublished": 2022,
+    "minplayers": 1,
+    "maxplayers": 1,
+    "playingtime": 30,
+    "mechanics": [
+      {
+        "id": "2664",
+        "value": "Deck, Bag, and Pool Building"
+      },
+      {
+        "id": "2819",
+        "value": "Solo / Solitaire Game"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1022",
+        "value": "Adventure"
+      },
+      {
+        "id": "1010",
+        "value": "Fantasy"
+      },
+      {
+        "id": "1120",
+        "value": "Print & Play"
+      }
+    ],
+    "designers": [
+      {
+        "id": "135009",
+        "value": "Joe Klipfel"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "48288",
+        "value": "Mythfield Games"
+      },
+      {
+        "id": "22593",
+        "value": "Chip Theory Games"
+      },
+      {
+        "id": "29895",
+        "value": "Frosted Games"
+      },
+      {
+        "id": "34801",
+        "value": "Lavka Games"
+      },
+      {
+        "id": "33626",
+        "value": "Lucky Duck Games"
+      }
+    ],
+    "artists": [
+      {
+        "id": "121599",
+        "value": "Bree Lindsoe"
+      },
+      {
+        "id": "143602",
+        "value": "Federico Pompili"
+      }
+    ],
+    "statistics": {
+      "average": 7.91749,
+      "usersrated": 955,
+      "bayesaverage": 6.13899
+    },
+    "language_level": null,
+    "language_votes": {},
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Dragons of Etchinstone"
+    ]
+  },
+  "420077": {
+    "bgg_id": 420077,
+    "name": "The Mandalorian: Adventures",
+    "alternate_names": [
+      "A Mandalóri: Kalandok",
+      "The Mandalorian: Przygody",
+      "Mandalorian: Výpravy",
+      "The Mandalorian: Пригоди"
+    ],
+    "description": "When offered a lucrative job, a lone bounty hunter begins a journey that will put his skills to the test and redefine his world.\n\nThe Mandalorian: Adventures allows players to experience a new part of the Star Wars universe on their tabletops. Navigating unique maps and missions, players must co-operate to accomplish their goals and avoid defeat. Play as one of eight unique characters, each with their own deck of cards and strategies that will help you fight enemies and solve dilemmas to complete mission objectives. All of the action takes place in an illustrated map book as players recreate iconic moments from season 1 of the hit Disney+ series. With an intuitive system that's easy to teach, the game grows with new rules, components, and mission types added over time &ndash; some even featuring a hidden traitor mechanism...\n\nA Cooperative Game of Daring Missions: Re-live some of the most iconic moments from The Mandalorian Disney+ series! You and up to three friends must work together, relying on each other&rsquo;s skills and wits to overcome dangerous challenges. Plan your moves carefully and strive to avoid crises!\n\nBe the Hero: Play as The Mandalorian and 7 of his most recognizable allies, each with a personalized set of skills. Take advantage of Greef Karga&rsquo;s underworld connections, deploy emergency repairs as IG-11, or unleash The Mandalorian&rsquo;s lethal arsenal. Discover exciting synergies between characters and utilize each other&rsquo;s strengths to complete your objectives!\n\nLive the Adventure: Cooperation is key as swarms of enemies will hinder your progress through unique missions. Employ clever card play to traverse distinct maps, deal devastating blows to enemies, gather valuable intel, and plan out your next moves. Beware! Bombastic gambits will draw the attention of your foes, and may trigger even greater perils.\n\nExpand Your Horizons: Each play will reward you with tantalizing new content that enhances your game in novel ways. Some will grant new skill cards for your characters, increasing their power and unleashing new combinations of abilities. Others will unlock additional ways to play, including a Hidden Motives mode that will make you wary of your once-trusted teammates. The game grows with your expertise, delivering enough variable content to keep you coming back for more.\n\n",
+    "yearpublished": 2024,
+    "minplayers": 1,
+    "maxplayers": 4,
+    "playingtime": 60,
+    "mechanics": [
+      {
+        "id": "2023",
+        "value": "Cooperative Game"
+      },
+      {
+        "id": "2040",
+        "value": "Hand Management"
+      },
+      {
+        "id": "2891",
+        "value": "Hidden Roles"
+      },
+      {
+        "id": "2965",
+        "value": "Multiple Maps"
+      },
+      {
+        "id": "2822",
+        "value": "Scenario / Mission / Campaign Game"
+      },
+      {
+        "id": "2814",
+        "value": "Traitor Game"
+      },
+      {
+        "id": "2897",
+        "value": "Variable Set-up"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1022",
+        "value": "Adventure"
+      },
+      {
+        "id": "1064",
+        "value": "Movies / TV / Radio theme"
+      },
+      {
+        "id": "1016",
+        "value": "Science Fiction"
+      }
+    ],
+    "designers": [
+      {
+        "id": "6651",
+        "value": "Corey Konieczka"
+      },
+      {
+        "id": "161110",
+        "value": "Josh Beppler"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "47671",
+        "value": "Unexpected Games"
+      },
+      {
+        "id": "6194",
+        "value": "Delta Vision Publishing"
+      },
+      {
+        "id": "58739",
+        "value": "Geekach LLC"
+      },
+      {
+        "id": "41423",
+        "value": "TLAMA games"
+      }
+    ],
+    "artists": [
+      {
+        "id": "32122",
+        "value": "David Ardila"
+      },
+      {
+        "id": "124891",
+        "value": "Chris Bjors"
+      },
+      {
+        "id": "21426",
+        "value": "Matt Bradbury"
+      },
+      {
+        "id": "65000",
+        "value": "Mark Bulahao"
+      },
+      {
+        "id": "67030",
+        "value": "J. B. Casacop"
+      },
+      {
+        "id": "81788",
+        "value": "Graey Erb"
+      },
+      {
+        "id": "43532",
+        "value": "Tony Foti"
+      },
+      {
+        "id": "18700",
+        "value": "Mariusz Gandzel"
+      },
+      {
+        "id": "95118",
+        "value": "Sergey Glushakov"
+      },
+      {
+        "id": "95008",
+        "value": "Nasrul Hakim"
+      },
+      {
+        "id": "75151",
+        "value": "Audrey Hotte"
+      },
+      {
+        "id": "161112",
+        "value": "Ben Judd"
+      },
+      {
+        "id": "80022",
+        "value": "Atha Kanaani"
+      },
+      {
+        "id": "105737",
+        "value": "Alex Kim"
+      },
+      {
+        "id": "107117",
+        "value": "Robert Laskey"
+      },
+      {
+        "id": "24858",
+        "value": "Henning Ludvigsen"
+      },
+      {
+        "id": "78035",
+        "value": "Alyssa McCarthy"
+      },
+      {
+        "id": "142354",
+        "value": "Francisco Miyara"
+      },
+      {
+        "id": "98101",
+        "value": "Monztre"
+      },
+      {
+        "id": "59607",
+        "value": "Jacob Murray"
+      },
+      {
+        "id": "161111",
+        "value": "Richard Philpott"
+      },
+      {
+        "id": "60218",
+        "value": "Paolo Puggioni"
+      },
+      {
+        "id": "69091",
+        "value": "Darren Tan"
+      },
+      {
+        "id": "39226",
+        "value": "Francisco Rico Torres"
+      },
+      {
+        "id": "68942",
+        "value": "Ryan Valle"
+      },
+      {
+        "id": "68133",
+        "value": "Andreas Zafiratos"
+      }
+    ],
+    "statistics": {
+      "average": 7.48572,
+      "usersrated": 1763,
+      "bayesaverage": 6.30424
+    },
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 3,
+      "5": 1
+    },
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "The Mandalorian: Adventures"
+    ]
+  },
+  "381249": {
+    "bgg_id": 381249,
+    "name": "Rebel Princess",
+    "alternate_names": [
+      "Rebelles Princesses",
+      "Принцеса Бунтарка",
+      "เจ้าหญิงจอมแก่น",
+      "叛逆公主",
+      "프린세스의 반란"
+    ],
+    "description": "Snow White, The Little Mermaid, Cinderella, and many other fairy tale princesses are celebrating a five-day party. The prince charmings, who have not been invited, will try to infiltrate the ball to propose marriage to the girls. As a princess, you have to avoid marriage proposals and remain single and independent after the celebrations.\n\nRebel Princess takes place over five rounds, representing the five days of a party, and each round has a special rule that makes each game totally different. The general mechanisms are those of trick-taking games, in which each player plays a numbered card into each trick, following one of the four suits in the game. The player with the highest number of the suit that started the trick takes all the cards of that trick &mdash; but that's not necessarily good as players want to avoid taking cards with prince charmings, who each bring one marriage proposal, aside from the enchanted frog who brings five proposals. The player with the fewest marriage proposals after five rounds wins.\n\nImportantly, each player assumes the role of a different fairy tale princess and has a special ability that they can use once per round.\n\n&mdash;description from the publisher\n\n",
+    "yearpublished": 2023,
+    "minplayers": 3,
+    "maxplayers": 6,
+    "playingtime": 40,
+    "mechanics": [
+      {
+        "id": "2850",
+        "value": "Events"
+      },
+      {
+        "id": "2009",
+        "value": "Trick-taking"
+      },
+      {
+        "id": "2015",
+        "value": "Variable Player Powers"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1002",
+        "value": "Card Game"
+      }
+    ],
+    "designers": [
+      {
+        "id": "151681",
+        "value": "Daniel Byrne"
+      },
+      {
+        "id": "151683",
+        "value": "José Gerardo Guerrero"
+      },
+      {
+        "id": "151684",
+        "value": "Kevin Peláez"
+      },
+      {
+        "id": "151682",
+        "value": "Tirso Virgós"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "39547",
+        "value": "Zombi Paella"
+      },
+      {
+        "id": "41633",
+        "value": "Circoctel"
+      },
+      {
+        "id": "29998",
+        "value": "Emperor Penguin Games"
+      },
+      {
+        "id": "36981",
+        "value": "Feelindigo"
+      },
+      {
+        "id": "155",
+        "value": "Gigamic"
+      },
+      {
+        "id": "42325",
+        "value": "Grok Games"
+      },
+      {
+        "id": "58244",
+        "value": "NK Board Game"
+      },
+      {
+        "id": "41167",
+        "value": "Popcorn Games"
+      },
+      {
+        "id": "49697",
+        "value": "Wonderbow Games"
+      }
+    ],
+    "artists": [
+      {
+        "id": "145212",
+        "value": "Alfredo Cáceres"
+      }
+    ],
+    "statistics": {
+      "average": 7.40252,
+      "usersrated": 3767,
+      "bayesaverage": 6.62897
+    },
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 1,
+      "2": 8,
+      "3": 2
+    },
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Rebelles Princesses"
+    ]
+  },
+  "103343": {
+    "bgg_id": 103343,
+    "name": "A Game of Thrones: The Board Game (Second Edition)",
+    "alternate_names": [
+      "Der Eiserne Thron: Das Brettspiel (2. Edition)",
+      "Game of Thrones: Het bordspel (Tweede editie)",
+      "A Game Of Thrones: Kutu Oyunu",
+      "Gra o Tron",
+      "Gra o Tron: Gra Planszowa (druga edycja)",
+      "A Guerra dos Tronos",
+      "Hra o trůny: desková hra (druhá edice)",
+      "Igra prestola, društvena igra, novo izdanje",
+      "Juego de Tronos: El Juego de Tablero (Segunda Edición)",
+      "Le Trône de fer: le jeu de plateau – seconde édition",
+      "Il Trono di Spade: Il Gioco da Tavola – 2° Edizione",
+      "Il Trono di Spade: Il Gioco da Tavolo",
+      "Il Trono di Spade: Il Gioco da Tavolo Seconda Edizione",
+      "Trónok harca (2. kiadás)",
+      "Trónok harca társasjáték",
+      "Urzeala Tronurilor: jocul pe tablă",
+      "Гра престолів. Друге видання",
+      "Игра на тронове",
+      "Игра престолов. Второе издание.",
+      "משחקי הכס",
+      "เกมล่าบัลลังก์: The Board Game",
+      "权力的游戏：版图版（第二版）",
+      "權力的遊戲版圖版:第二版",
+      "왕좌의 게임: 보드 게임"
+    ],
+    "description": "Game description from the publisher:\n\nKing Robert Baratheon is dead, and the lands of Westeros brace for battle.\n\nIn the second edition of A Game of Thrones: The Board Game, three to six players take on the roles of the great Houses of the Seven Kingdoms of Westeros, as they vie for control of the Iron Throne through the use of diplomacy and warfare. Based on the best-selling A Song of Ice and Fire series of fantasy novels by George R.R. Martin, A Game of Thrones is an epic board game in which it will take more than military might to win. Will you take power through force, use honeyed words to coerce your way onto the throne, or rally the townsfolk to your side? Through strategic planning, masterful diplomacy, and clever card play, spread your influence over Westeros!\n\nTo begin the game, each player receives an army of Footman, Knight, Siege Engine, and Ship units, as well as a set of Order tokens and other necessary components. Each player also receives a deck of unique House Cards, which are used as leaders in battles against rival Houses.\n\nEach round in the game is made up of three phases: the Westeros Phase, the Planning Phase, and the Action Phase. The Westeros Phase represents special events and day-to-day activities in Westeros. There are three different Westeros Decks, and each denotes a different global action, potentially affecting all players.\n\nThe Planning Phase is perhaps the most important. Here you secretly assign orders to all of your units by placing one order token face down on each area you control that contains at least one unit (Knight, Footman, Ship, or Siege Engine). This portion of the game emphasizes diplomacy and deduction. Can you trust the alliance that you made? Will you betray your ally and march upon him? Players may make promises to each other (for aid or peace, for example), but these promises are never binding. The result is tense and compelling negotiations, often ending in backstabbing worthy of Westeros!\n\nDuring the Action Phase, the orders are resolved and battle is entered! When armies meet in combat, they secretly choose one of their House cards to add strength to the battle. Finally, the Houses can consolidate their power in the areas they control and use that power in future turns to influence their position in the court of the Iron Throne and to stand against the wildling Hordes.\n\nIn addition to featuring updated graphics and a clarified ruleset, this second edition of A Game of Thrones includes elements from the A Clash of Kings and A Storm of Swords expansions, including ports, garrisons, Wildling cards, and Siege engines, while introducing welcome new innovations like player screens and Tides of Battle cards.\n\nTides of Battle cards are an optional mechanism that brings an element of unpredictability to combat, representing erratic shifts in the momentum of war due to factors such as weather, morale, and tactical opportunity. During each combat, both players draw one Tides of Battle card from a communal deck, and its value modifies the strength of his chosen House card. What's more, such a card may also contain icons that can affect the outcome of the battle...all of which delivers a new level of intensity to your military engagements.\n\nExpanded by:\n\n     A Game of Thrones: The Board Game (Second Edition) – A Dance with Dragons (2012)\n     A Game of Thrones: The Board Game (Second Edition) – A Feast for Crows (2013)\n     A Game of Thrones: The Board Game (Second Edition) – Mother of Dragons (2018)\n\n\nReimplements:\n\n     A Game of Thrones (2003)\n     A Game of Thrones: A Clash of Kings Expansion (2004)\n     A Game of Thrones: A Storm of Swords Expansion (2006)\n\n\n",
+    "yearpublished": 2011,
+    "minplayers": 3,
+    "maxplayers": 6,
+    "playingtime": 240,
+    "mechanics": [
+      {
+        "id": "2847",
+        "value": "Advantage Token"
+      },
+      {
+        "id": "2916",
+        "value": "Alliances"
+      },
+      {
+        "id": "2046",
+        "value": "Area Movement"
+      },
+      {
+        "id": "2012",
+        "value": "Auction / Bidding"
+      },
+      {
+        "id": "2920",
+        "value": "Auction: Sealed Bid"
+      },
+      {
+        "id": "2857",
+        "value": "Card Play Conflict Resolution"
+      },
+      {
+        "id": "2850",
+        "value": "Events"
+      },
+      {
+        "id": "2040",
+        "value": "Hand Management"
+      },
+      {
+        "id": "2902",
+        "value": "Income"
+      },
+      {
+        "id": "2915",
+        "value": "Negotiation"
+      },
+      {
+        "id": "2844",
+        "value": "Order Counters"
+      },
+      {
+        "id": "2685",
+        "value": "Player Elimination"
+      },
+      {
+        "id": "2020",
+        "value": "Simultaneous Action Selection"
+      },
+      {
+        "id": "2884",
+        "value": "Sudden Death Ending"
+      },
+      {
+        "id": "2827",
+        "value": "Turn Order: Auction"
+      },
+      {
+        "id": "2015",
+        "value": "Variable Player Powers"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1023",
+        "value": "Bluffing"
+      },
+      {
+        "id": "1010",
+        "value": "Fantasy"
+      },
+      {
+        "id": "1026",
+        "value": "Negotiation"
+      },
+      {
+        "id": "1093",
+        "value": "Novel-based"
+      },
+      {
+        "id": "1001",
+        "value": "Political"
+      },
+      {
+        "id": "1019",
+        "value": "Wargame"
+      }
+    ],
+    "designers": [
+      {
+        "id": "21",
+        "value": "Christian T. Petersen"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "17",
+        "value": "Fantasy Flight Games"
+      },
+      {
+        "id": "23043",
+        "value": "ADC Blackfire Entertainment"
+      },
+      {
+        "id": "24631",
+        "value": "cutia.ro"
+      },
+      {
+        "id": "6194",
+        "value": "Delta Vision Publishing"
+      },
+      {
+        "id": "2973",
+        "value": "Edge Entertainment"
+      },
+      {
+        "id": "22560",
+        "value": "Fantasmagoria"
+      },
+      {
+        "id": "4617",
+        "value": "Galakta"
+      },
+      {
+        "id": "15605",
+        "value": "Galápagos Jogos"
+      },
+      {
+        "id": "12540",
+        "value": "Game Harbor"
+      },
+      {
+        "id": "58739",
+        "value": "Geekach LLC"
+      },
+      {
+        "id": "5530",
+        "value": "Giochi Uniti"
+      },
+      {
+        "id": "21491",
+        "value": "Gordion Games"
+      },
+      {
+        "id": "264",
+        "value": "Heidelberger Spieleverlag"
+      },
+      {
+        "id": "18852",
+        "value": "Hobby World"
+      },
+      {
+        "id": "8291",
+        "value": "Korea Boardgames"
+      },
+      {
+        "id": "56684",
+        "value": "Laguna"
+      },
+      {
+        "id": "23628",
+        "value": "Monkey Time"
+      },
+      {
+        "id": "33998",
+        "value": "Siam Board Games"
+      },
+      {
+        "id": "3888",
+        "value": "Stratelibri"
+      }
+    ],
+    "artists": [
+      {
+        "id": "30392",
+        "value": "Heiko Eller"
+      },
+      {
+        "id": "12019",
+        "value": "Tomasz Jedruszek"
+      },
+      {
+        "id": "24858",
+        "value": "Henning Ludvigsen"
+      }
+    ],
+    "statistics": {
+      "average": 7.52573,
+      "usersrated": 37158,
+      "bayesaverage": 7.29776
+    },
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 91,
+      "3": 56,
+      "4": 4,
+      "5": 1
+    },
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Le Trône de fer: le jeu de plateau – seconde édition"
+    ]
+  },
+  "182631": {
+    "bgg_id": 182631,
+    "name": "Star Realms: Colony Wars",
+    "alternate_names": [
+      "Звёздные империи: Колониальные войны",
+      "星域奇航: 殖民戰爭"
+    ],
+    "description": "Colony Wars is a deckbuilding game in the Star Realms series which is both a standalone box set for two players (featuring an 80-card trade deck, as in the original) and an expansion for the base Star Realms set that allows it to be played as a four-player game.\n\nIn Colony Wars, as in Star Realms, players will start with a fleet (deck) of 10 basic ships, and can spend Trade to acquire more powerful ships and bases from a central trade row of 5 cards. This row is continuously replenished by random draws from the trade deck. Many ships and bases deal Combat damage which you can use to attack your opponent and/or destroy their bases. When you reduce your opponent's Authority to zero, you win.\n\n",
+    "yearpublished": 2015,
+    "minplayers": 2,
+    "maxplayers": 2,
+    "playingtime": 20,
+    "mechanics": [
+      {
+        "id": "2664",
+        "value": "Deck, Bag, and Pool Building"
+      },
+      {
+        "id": "2901",
+        "value": "Delayed Purchase"
+      },
+      {
+        "id": "2040",
+        "value": "Hand Management"
+      },
+      {
+        "id": "2041",
+        "value": "Open Drafting"
+      },
+      {
+        "id": "2686",
+        "value": "Take That"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1002",
+        "value": "Card Game"
+      },
+      {
+        "id": "1046",
+        "value": "Fighting"
+      },
+      {
+        "id": "1016",
+        "value": "Science Fiction"
+      }
+    ],
+    "designers": [
+      {
+        "id": "4113",
+        "value": "Robert Dougherty"
+      },
+      {
+        "id": "4059",
+        "value": "Darwin Kastle"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "26542",
+        "value": "Wise Wizard Games"
+      },
+      {
+        "id": "29087",
+        "value": "ADC Blackfire Entertainment GmbH"
+      },
+      {
+        "id": "9068",
+        "value": "Broadway Toys LTD"
+      },
+      {
+        "id": "2366",
+        "value": "Devir"
+      },
+      {
+        "id": "35960",
+        "value": "Games Factory"
+      },
+      {
+        "id": "29907",
+        "value": "Games Factory Publishing"
+      },
+      {
+        "id": "18852",
+        "value": "Hobby World"
+      },
+      {
+        "id": "8923",
+        "value": "IELLO"
+      },
+      {
+        "id": "42043",
+        "value": "IUVI Games"
+      }
+    ],
+    "artists": [
+      {
+        "id": "92581",
+        "value": "Vito Gesualdi"
+      }
+    ],
+    "statistics": {
+      "average": 7.77507,
+      "usersrated": 8871,
+      "bayesaverage": 7.24818
+    },
+    "language_level": "MED",
+    "language_votes": {
+      "2": 3,
+      "3": 4,
+      "4": 3
+    },
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Star Realms: Colony Wars"
+    ]
+  },
+  "120677": {
+    "bgg_id": 120677,
+    "name": "Terra Mystica",
+    "alternate_names": [
+      "Терра Мистика",
+      "テラミスティカ",
+      "神秘大地",
+      "테라 미스티카"
+    ],
+    "description": "In the land of Terra Mystica dwell 14 different peoples in seven landscapes, and each group is bound to its own home environment, so to develop and grow, they must terraform neighboring landscapes into their home environments in competition with the other groups.\n\nTerra Mystica is a full information game, without any luck, that rewards strategic planning. Each player governs one of the 14 groups. With subtlety and craft, the player must attempt to rule as great an area as possible and to develop that group's skills. There are also four religious cults in which you can progress. To do all that, each group has special skills and abilities.\n\nTaking turns, the players execute their actions on the resources they have at their disposal. Different buildings allow players to develop different resources. Dwellings allow for more workers. Trading houses allow players to make money. Strongholds unlock a group's special ability, and temples allow you to develop religion and your terraforming and seafaring skills. Buildings can be upgraded: Dwellings can be developed into trading houses; trading houses can be developed into strongholds or temples; one temple can be upgraded to become a sanctuary. Each group must also develop its terraforming skill and its skill with boats to use the rivers. The groups in question, along with their home landscape, are:\n\n\n    Desert (Fakirs, Nomads)\n    Plains (Halflings, Cultists)\n    Swamp (Alchemists, Darklings)\n    Lake (Mermaids, Swarmlings)\n    Forest (Witches, Auren)\n    Mountain (Dwarves, Engineers)\n    Wasteland (Giants, Chaos Magicians)\n\n\nProximity to other groups is a double-edged sword in Terra Mystica. Being close to other groups gives you extra power, but it also means that expanding is more difficult...\n\nTerra Mystica FAQ\n\n",
+    "yearpublished": 2012,
+    "minplayers": 2,
+    "maxplayers": 5,
+    "playingtime": 150,
+    "mechanics": [
+      {
+        "id": "2956",
+        "value": "Chaining"
+      },
+      {
+        "id": "2875",
+        "value": "End Game Bonuses"
+      },
+      {
+        "id": "2026",
+        "value": "Hexagon Grid"
+      },
+      {
+        "id": "2902",
+        "value": "Income"
+      },
+      {
+        "id": "2914",
+        "value": "Increase Value of Unchosen Resources"
+      },
+      {
+        "id": "2081",
+        "value": "Network and Route Building"
+      },
+      {
+        "id": "2849",
+        "value": "Tech Trees / Tech Tracks"
+      },
+      {
+        "id": "2830",
+        "value": "Turn Order: Pass Order"
+      },
+      {
+        "id": "2015",
+        "value": "Variable Player Powers"
+      },
+      {
+        "id": "2897",
+        "value": "Variable Set-up"
+      },
+      {
+        "id": "2874",
+        "value": "Victory Points as a Resource"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1015",
+        "value": "Civilization"
+      },
+      {
+        "id": "1021",
+        "value": "Economic"
+      },
+      {
+        "id": "1010",
+        "value": "Fantasy"
+      },
+      {
+        "id": "1086",
+        "value": "Territory Building"
+      }
+    ],
+    "designers": [
+      {
+        "id": "4300",
+        "value": "Jens Drögemüller"
+      },
+      {
+        "id": "4407",
+        "value": "Helge Ostertag"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "22380",
+        "value": "Feuerland Spiele"
+      },
+      {
+        "id": "9074",
+        "value": "Bard Centrum Gier"
+      },
+      {
+        "id": "30958",
+        "value": "Capstone Games"
+      },
+      {
+        "id": "10768",
+        "value": "Cranio Creations"
+      },
+      {
+        "id": "2366",
+        "value": "Devir"
+      },
+      {
+        "id": "5657",
+        "value": "Filosofia Éditions"
+      },
+      {
+        "id": "24298",
+        "value": "FunBox Jogos"
+      },
+      {
+        "id": "8820",
+        "value": "Gémklub"
+      },
+      {
+        "id": "6275",
+        "value": "HomoLudicus"
+      },
+      {
+        "id": "35035",
+        "value": "Mandala Jogos"
+      },
+      {
+        "id": "7992",
+        "value": "MINDOK"
+      },
+      {
+        "id": "9234",
+        "value": "Swan Panasia Co., Ltd."
+      },
+      {
+        "id": "22609",
+        "value": "テンデイズゲームズ (TendaysGames)"
+      },
+      {
+        "id": "4932",
+        "value": "White Goblin Games"
+      },
+      {
+        "id": "538",
+        "value": "Z-Man Games"
+      },
+      {
+        "id": "1466",
+        "value": "Zvezda"
+      }
+    ],
+    "artists": [
+      {
+        "id": "12484",
+        "value": "Dennis Lohausen"
+      }
+    ],
+    "statistics": {
+      "average": 8.03156,
+      "usersrated": 51262,
+      "bayesaverage": 7.85658
+    },
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 175,
+      "2": 9
+    },
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Terra Mystica"
+    ]
+  },
+  "216734": {
+    "bgg_id": 216734,
+    "name": "Dice Throne: Season One",
+    "alternate_names": [],
+    "description": "Dice Throne is a game of intriguing dice, tactical card play, powerful heroes, and unique abilities.\n\nIt's a fast-paced 2-6 player combat game (1v1, 2v2, 3v3, 2v2v2, or free-for-all). Select from a variety of heroes that play and feel completely distinct from one another. Attack opponents and activate abilities by rolling your hero's unique set of five dice. Accumulate combat points and spend them on cards that have a large range of effects, such as granting permanent hero upgrades, applying status effects, and manipulating dice directly (yours, your teammate's, or even your opponent's).\n\n\nLet's take a look at a turn of a 1v1 game.\n\nThe game begins with 2 players selecting their heroes. Player One chooses Moon Elf and player two picks Barbarian. Each player begins the game with 50 HP (Health Points).\n\nPlayer One (the Moon Elf) won the roll to go first. The Moon Elf draws their 4 starting game cards and begins the game with 1 CP (Combat Point). \n\n    Note- The player that wins the starting roll does not draw a card (above their starting hand of 4) or gain CP above their 1 starting CP. \n\n\n\nThe Moon Elf then checks for status effects (like poison, or Burn) to resolve.\n\nThe next phase is called Main Phase (1). This is where the Moon Elf player can upgrade their hero board with cards from their hands if they have enough CP to pay for the upgrades. They can also play any Main Phase Action cards (blue cards).\n\nThen they enter the Offensive Roll Phase. The Moon Elf can take up to 3 roll attempts (with their 5 dice) to accomplish an action or attack from their hero board. After deciding on an action within the 3 roll attempts an action is declared.\n\nThen the Defensive Roll Phase begins where the opponent (Barbarian) can use their defensive roll (as it appears on their hero board). The amount of damage or incoming status affects are resolved and that concludes the Defensive Roll Phase.\n\n\n     During Offensive and Defensive Roll Phase any player can play Roll Phase Action cards from their hand as long as they have the CP to pay for it.\n\n\nThe Moon Elf player enters their second Main Phase where they can do any final hero board upgrades or play blue Main Phase Action cards.\n\nThe Moon Elf then must discard any extra cards over 6 from their hand.\n\nThe Barbarian player begins his turn by drawing one additional card (over his starting hand of 4) and gaining one CP (Combat Point) for a total of 2.\n\nThe Barbarian then follows the same phases the Moon Elf.\n\nThe game alternates hero turns until one player is at 0 Health.\n\nDiceThrone is for 2-6 players, ages 8+, and runs 20-30 minutes for a battle. With the ever expanding gallery of heroes the game feels fresh each time you jump in!\n\n",
+    "yearpublished": 2018,
+    "minplayers": 2,
+    "maxplayers": 6,
+    "playingtime": 40,
+    "mechanics": [
+      {
+        "id": "2072",
+        "value": "Dice Rolling"
+      },
+      {
+        "id": "2856",
+        "value": "Die Icon Resolution"
+      },
+      {
+        "id": "2870",
+        "value": "Re-rolling and Locking"
+      },
+      {
+        "id": "2686",
+        "value": "Take That"
+      },
+      {
+        "id": "2019",
+        "value": "Team-Based Game"
+      },
+      {
+        "id": "2015",
+        "value": "Variable Player Powers"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1002",
+        "value": "Card Game"
+      },
+      {
+        "id": "1017",
+        "value": "Dice"
+      },
+      {
+        "id": "1010",
+        "value": "Fantasy"
+      },
+      {
+        "id": "1046",
+        "value": "Fighting"
+      }
+    ],
+    "designers": [
+      {
+        "id": "97955",
+        "value": "Nate Chatellier"
+      },
+      {
+        "id": "63023",
+        "value": "Manny Trembley"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "35671",
+        "value": "Mind Bottling Games"
+      },
+      {
+        "id": "21765",
+        "value": "Roxley"
+      }
+    ],
+    "artists": [
+      {
+        "id": "63023",
+        "value": "Manny Trembley"
+      }
+    ],
+    "statistics": {
+      "average": 7.48599,
+      "usersrated": 6677,
+      "bayesaverage": 6.8348
+    },
+    "language_level": "MED",
+    "language_votes": {
+      "3": 3,
+      "4": 1,
+      "5": 2
+    },
+    "fr_edition_exists": false,
+    "fr_edition_titles": []
+  },
+  "432950": {
+    "bgg_id": 432950,
+    "name": "20 Strong: Tanglewoods",
+    "alternate_names": [
+      "20 костей: Дремучий лес"
+    ],
+    "description": "Journey into the Tanglewoods is the second crowdfunding campaign for the 20 Strong game system, focusing on the new Tanglewoods trilogy. Inspired by 20 Strong, acclaimed designer and artist Manny Trembley collaborated with Chip Theory to create a world where fairy tale characters navigate an ever-changing forest, battling and bribing enemies to confront their ultimate nemesis. The game features flippable cards that reveal different gameplay elements depending on which side is faceup.\n\nThe campaign introduces a new core box, containing everything needed to play, including the base rules, 20 dice, a magnetic chip tracker, and the Tanglewoods Red deck, all packaged with red foil accents. Players will navigate the forest, avoid the Big Bad Wolf's pack, and face the woodland's treacherous denizens on their way to grandmother's house. After mastering the Tanglewoods Red deck, players can explore other 20 Strong decks for fresh adventures.\n\n",
+    "yearpublished": 2025,
+    "minplayers": 1,
+    "maxplayers": 1,
+    "playingtime": 60,
+    "mechanics": [
+      {
+        "id": "2072",
+        "value": "Dice Rolling"
+      },
+      {
+        "id": "2962",
+        "value": "Move Through Deck"
+      },
+      {
+        "id": "2819",
+        "value": "Solo / Solitaire Game"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1002",
+        "value": "Card Game"
+      },
+      {
+        "id": "1017",
+        "value": "Dice"
+      }
+    ],
+    "designers": [
+      {
+        "id": "122802",
+        "value": "Logan Giannini"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "22593",
+        "value": "Chip Theory Games"
+      },
+      {
+        "id": "29895",
+        "value": "Frosted Games"
+      },
+      {
+        "id": "34801",
+        "value": "Lavka Games"
+      },
+      {
+        "id": "33626",
+        "value": "Lucky Duck Games"
+      }
+    ],
+    "artists": [
+      {
+        "id": "168899",
+        "value": "Serena Schiani"
+      },
+      {
+        "id": "63023",
+        "value": "Manny Trembley"
+      }
+    ],
+    "statistics": {
+      "average": 7.6381,
+      "usersrated": 236,
+      "bayesaverage": 5.68116
+    },
+    "language_level": "HIGH",
+    "language_votes": {
+      "5": 1
+    },
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "20 Strong: Tanglewoods"
+    ]
+  },
+  "277025": {
+    "bgg_id": 277025,
+    "name": "Vampire: The Masquerade – Chapters",
+    "alternate_names": [
+      "Vampire: Die Maskerade – Chapters",
+      "Vampiro: La Mascarada – Chapters"
+    ],
+    "description": "Vampire: The Masquerade &ndash; Chapters takes place in Montreal, after the appearance of the Second Inquisition and the fall of the Sabbat. Designed around three pillars &mdash; story, strategy and roleplaying &mdash; the game merge the best elements of RPGs and board games in a totally new way. \nPlayers decisions will shape the adventure in a strong and mature storytelling.\n\nPlay up to 4 players. Or solo. No game master required!\n Story-driven: The campaign will hold a large number of scenarios.\nThe story is made to be immersive, frightening and keep players on the edge of their seats.\n Strategy: Depending on players&rsquo; approaches and decisions, some scenarios will unlock or get locked forever.\nPlayer's decisions will matter and affect almost every aspect of the game.\n Roleplaying board game: Players have the agency to make decisions based on their character choices.\nThey will create their characters and improve it over time with experience points.\n\nPlayers will be immersed into advanced investigations, a multi-choice dialogue system, and powerful fighting strategies.\n Players choose to play as one of the main clans of Kindred (Brujah, Toreador, Gangrel, Ventrue, Tremere, Malkavian, Nosferatu, Pariah) and encounter many types of characters and enemies.\n The game is composed of several sealed scenarios to unlock, highly detailed tiles, cards, dice, at least 10 miniatures (one for each playable character), and surprises!\n\n&mdash;description from the publisher\n\n",
+    "yearpublished": 2023,
+    "minplayers": 1,
+    "maxplayers": 4,
+    "playingtime": 60,
+    "mechanics": [
+      {
+        "id": "2023",
+        "value": "Cooperative Game"
+      },
+      {
+        "id": "2072",
+        "value": "Dice Rolling"
+      },
+      {
+        "id": "2676",
+        "value": "Grid Movement"
+      },
+      {
+        "id": "2040",
+        "value": "Hand Management"
+      },
+      {
+        "id": "2661",
+        "value": "Push Your Luck"
+      },
+      {
+        "id": "2028",
+        "value": "Role Playing"
+      },
+      {
+        "id": "2027",
+        "value": "Storytelling"
+      },
+      {
+        "id": "2015",
+        "value": "Variable Player Powers"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1022",
+        "value": "Adventure"
+      },
+      {
+        "id": "1002",
+        "value": "Card Game"
+      },
+      {
+        "id": "1039",
+        "value": "Deduction"
+      },
+      {
+        "id": "1046",
+        "value": "Fighting"
+      },
+      {
+        "id": "1024",
+        "value": "Horror"
+      },
+      {
+        "id": "1118",
+        "value": "Mature / Adult"
+      },
+      {
+        "id": "1093",
+        "value": "Novel-based"
+      }
+    ],
+    "designers": [
+      {
+        "id": "97755",
+        "value": "Thomas Filippi"
+      },
+      {
+        "id": "97758",
+        "value": "Gary Paitre"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "35203",
+        "value": "FLYOS"
+      },
+      {
+        "id": "7306",
+        "value": "Nosolorol Ediciones"
+      },
+      {
+        "id": "39",
+        "value": "Pegasus Spiele"
+      }
+    ],
+    "artists": [
+      {
+        "id": "118927",
+        "value": "Krzysztof Bieniawski"
+      },
+      {
+        "id": "103476",
+        "value": "Dominik Mayer"
+      },
+      {
+        "id": "152303",
+        "value": "Erling Saevarsson"
+      },
+      {
+        "id": "17109",
+        "value": "Marc Simonetti"
+      },
+      {
+        "id": "128279",
+        "value": "Ruslan Skifonich"
+      },
+      {
+        "id": "90880",
+        "value": "Kim Van Deun"
+      },
+      {
+        "id": "88318",
+        "value": "Sergey Vasnev"
+      }
+    ],
+    "statistics": {
+      "average": 7.31879,
+      "usersrated": 808,
+      "bayesaverage": 5.82822
+    },
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 1,
+      "5": 1
+    },
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Vampire: The Masquerade – Chapters"
+    ]
+  },
+  "270844": {
+    "bgg_id": 270844,
+    "name": "Imperial Settlers: Empires of the North",
+    "alternate_names": [
+      "Colonos del Imperio: Imperios del Norte",
+      "Imperial Settlers: Empires du Nord",
+      "Osadnicy: Królestwa Północy",
+      "Settlers: Vládcové Severu",
+      "Поселенцы: Северные Империи",
+      "エンパイア・オブ・ザ・ノース ～北方の開拓者たち～",
+      "帝國拓荒者：北方帝國",
+      "임페리얼 세틀러: 북방의 제국들"
+    ],
+    "description": "Imperial Settlers: Empires of the North is a new, standalone card game in the established Imperial Settlers universe, with players heading to the far north where three groups live: Scotsmen, Inuits, and Vikings. Take on the role of leader, and make your faction into the best empire in the world!\n\nPlayers will find six pre-constructed Clan (two for each faction) decks ready to use straight out of the box. Each Clan has a different take on the game with focus on different mechanics, and varied play difficulty between 1-10.\n\nThe game plays out over a series of rounds, during which players explore new lands, construct buildings, trade resources, and sail to new lands with the aim of either conquering, or pillaging to gain more goods! Each action draws the clans closer to becoming the greatest empire!  The game is played in rounds of 4 phases: Lookout, Action, Expedition, and Cleanup. The game continues until a player reaches or passes the 25 Victory points space on the scoreboard during the Action phase. Once that happens, the final round is triggered and the game will end at the end of the current round.\n\nDevelop your economy, deflect your opponent, and fight for dominance in the north. Learn new mechanisms, and experience a unique style of Imperial Settlers. Will you be able to create the most successful civilization in Imperial Settlers: Empires of the North?\n\n",
+    "yearpublished": 2019,
+    "minplayers": 1,
+    "maxplayers": 4,
+    "playingtime": 90,
+    "mechanics": [
+      {
+        "id": "2040",
+        "value": "Hand Management"
+      },
+      {
+        "id": "2686",
+        "value": "Take That"
+      },
+      {
+        "id": "2015",
+        "value": "Variable Player Powers"
+      },
+      {
+        "id": "2082",
+        "value": "Worker Placement"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1050",
+        "value": "Ancient"
+      },
+      {
+        "id": "1002",
+        "value": "Card Game"
+      },
+      {
+        "id": "1029",
+        "value": "City Building"
+      },
+      {
+        "id": "1015",
+        "value": "Civilization"
+      },
+      {
+        "id": "1020",
+        "value": "Exploration"
+      },
+      {
+        "id": "1008",
+        "value": "Nautical"
+      }
+    ],
+    "designers": [
+      {
+        "id": "117118",
+        "value": "Joanna Kijanka"
+      },
+      {
+        "id": "4735",
+        "value": "Ignacy Trzewiczek"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "2726",
+        "value": "Portal Games"
+      },
+      {
+        "id": "3475",
+        "value": "Arclight Games"
+      },
+      {
+        "id": "9068",
+        "value": "Broadway Toys LTD"
+      },
+      {
+        "id": "8923",
+        "value": "IELLO"
+      },
+      {
+        "id": "8291",
+        "value": "Korea Boardgames"
+      },
+      {
+        "id": "30677",
+        "value": "Maldito Games"
+      },
+      {
+        "id": "39",
+        "value": "Pegasus Spiele"
+      },
+      {
+        "id": "21053",
+        "value": "Rexhry"
+      },
+      {
+        "id": "4932",
+        "value": "White Goblin Games"
+      },
+      {
+        "id": "1466",
+        "value": "Zvezda"
+      }
+    ],
+    "artists": [
+      {
+        "id": "77570",
+        "value": "Grzegorz Bobrowski"
+      },
+      {
+        "id": "77466",
+        "value": "Roman Kucharski"
+      }
+    ],
+    "statistics": {
+      "average": 7.37302,
+      "usersrated": 8074,
+      "bayesaverage": 6.91391
+    },
+    "language_level": "HIGH",
+    "language_votes": {
+      "3": 3,
+      "4": 11
+    },
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Imperial Settlers: Empires du Nord"
+    ]
+  },
+  "146207": {
+    "bgg_id": 146207,
+    "name": "Dead Man's Hand",
+    "alternate_names": [
+      "La Légende de Dead Man's Hand",
+      "Die Legende von Dead Man's Hand"
+    ],
+    "description": "DEAD MAN'S HAND is the 28mm skirmish game by Great Escape Games. Bands of tough and wily Cowboys, stoic Lawmen, ruthless Outlaws and crazy Desperados fight for fame and respect in the Old West.\n\nWith an accompanying range of 28mm miniatures and pre-painted buildings, now you can fight legendary gunfights of the historical Old West and the silver screen. This rule book contains all the rules you need to recreate your gunfights and twelve blood-soaked scenarios.\n\nInitiative order is determined randomly by placing cards face down next to each character. The cards are then revealed and play proceeds in the order of the cards from high to low. Various actions or cards can alter this if you so desire and are lucky enough but in general the winds of fate decide who goes when.\n\nOnce activated each model has three actions each turn, these must be declared at the start of each figures activation. This speeds things up and allows you opponent to play the odd special effect on you and catch you off guard.\n\nMovement is simple. There are no terrain modifiers to worry about and other than reduced movement rates for climbing and jumping.\n\nCombat is fast and simple as befits the game, and while it is possible to kill somebody in a single shot attrition is going to be the real deciding factor for most characters.\n\nWeapons come in one of four types; Pistol, Rifle, Repeater and Shotgun.\n\n",
+    "yearpublished": 2013,
+    "minplayers": 2,
+    "maxplayers": 6,
+    "playingtime": 45,
+    "mechanics": [
+      {
+        "id": "2072",
+        "value": "Dice Rolling"
+      },
+      {
+        "id": "2949",
+        "value": "Measurement Movement"
+      },
+      {
+        "id": "2070",
+        "value": "Simulation"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1055",
+        "value": "American West"
+      },
+      {
+        "id": "1117",
+        "value": "Book"
+      },
+      {
+        "id": "1047",
+        "value": "Miniatures"
+      },
+      {
+        "id": "2710",
+        "value": "Post-Napoleonic"
+      },
+      {
+        "id": "1019",
+        "value": "Wargame"
+      }
+    ],
+    "designers": [
+      {
+        "id": "10728",
+        "value": "Stuart McCorquodale"
+      },
+      {
+        "id": "165152",
+        "value": "Mark Wheatley (II)"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "8445",
+        "value": "Great Escape Games"
+      },
+      {
+        "id": "22812",
+        "value": "Studio Tomahawk"
+      }
+    ],
+    "artists": [],
+    "statistics": {
+      "average": 7.80887,
+      "usersrated": 151,
+      "bayesaverage": 5.62428
+    },
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 2
+    },
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "La Légende de Dead Man\\'s Hand"
+    ]
+  },
+  "403150": {
+    "bgg_id": 403150,
+    "name": "World Order",
+    "alternate_names": [
+      "Világrend",
+      "Мировой порядок",
+      "월드 오더"
+    ],
+    "description": "The year is 2010, and the world is drastically changing. While the once-unrivaled influence of the United States is beginning to wane, other major powers are eagerly stepping onto the stage, ready to claim their piece of the geopolitical pie. In the East, Beijing is rising to become a global powerhouse. Simultaneously, Moscow is entangled in an intricate chess game with Washington, ready to counter its every move. And amidst these tumultuous waters, the European Union is trying to carve out its identity and role in the international stage.\n\nThe world is undergoing a drastic shift, while power is being redistributed on a global scale &mdash; but who will take the lead in this rapidly changing world order?\n\nThe board game World Order simulates modern international relations, with players taking control of one of the four dominant global powers of the 2010s: the United States of America, the People's Republic of China, the Russian Federation, and the European Union. Utilize your diplomatic power, economic strength, and military might to expand your influence across the globe. Form regional alliances, entice other nations through clever economic dependencies, or become the military juggernaut no one dares to mess with.\n\nWorld Order blends academic theories with thrilling gameplay, creating a never-before-seen experience of international relations! Join the fight and show the other powers that a new era is dawning!\n\n",
+    "yearpublished": 2026,
+    "minplayers": 2,
+    "maxplayers": 4,
+    "playingtime": 180,
+    "mechanics": [
+      {
+        "id": "2080",
+        "value": "Area Majority / Influence"
+      },
+      {
+        "id": "2664",
+        "value": "Deck, Bag, and Pool Building"
+      },
+      {
+        "id": "2040",
+        "value": "Hand Management"
+      },
+      {
+        "id": "3099",
+        "value": "Multi-Use Cards"
+      },
+      {
+        "id": "2819",
+        "value": "Solo / Solitaire Game"
+      },
+      {
+        "id": "2015",
+        "value": "Variable Player Powers"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1021",
+        "value": "Economic"
+      },
+      {
+        "id": "1094",
+        "value": "Educational"
+      },
+      {
+        "id": "1001",
+        "value": "Political"
+      }
+    ],
+    "designers": [
+      {
+        "id": "35005",
+        "value": "Vangelis Bagiartakis"
+      },
+      {
+        "id": "130887",
+        "value": "Varnavas Timotheou"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "46800",
+        "value": "Hegemonic Project Games"
+      },
+      {
+        "id": "48072",
+        "value": "Bumble3ee Interactive"
+      },
+      {
+        "id": "8820",
+        "value": "Gémklub"
+      },
+      {
+        "id": "42147",
+        "value": "Giant Roc"
+      },
+      {
+        "id": "55324",
+        "value": "HIT Games"
+      },
+      {
+        "id": "34801",
+        "value": "Lavka Games"
+      },
+      {
+        "id": "2726",
+        "value": "Portal Games"
+      },
+      {
+        "id": "29409",
+        "value": "Super Meeple"
+      }
+    ],
+    "artists": [
+      {
+        "id": "122536",
+        "value": "Gong Studios"
+      },
+      {
+        "id": "19692",
+        "value": "Angga Satriohadi"
+      },
+      {
+        "id": "123836",
+        "value": "Miłosz Wojtasik"
+      }
+    ],
+    "statistics": {
+      "average": 8.13848,
+      "usersrated": 1592,
+      "bayesaverage": 6.4755
+    },
+    "language_level": "MED",
+    "language_votes": {
+      "3": 2,
+      "4": 1
+    },
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "World Order"
+    ]
+  },
+  "313889": {
+    "bgg_id": 313889,
+    "name": "Hoplomachus: Victorum",
+    "alternate_names": [
+      "Гопломах: Победители",
+      "호플로마쿠스: 빅토럼"
+    ],
+    "description": "The year is AD 79. Seers have learned of the imminent eruption of Mount Vesuvius, and those versed in the mystic arts have made invocations to stop the calamity from claiming thousands of lives. However, these actions have angered Pluto, god of the underworld, who vows to usher in even greater destruction unless the earth&rsquo;s strongest champions accomplish a series of tasks in a realm of grueling combat.\n\nHoplomachus: Victorum is a standalone title from Chip Theory Games. It uses CTG's acclaimed combat system from the Hoplomachus games, adding new twists with a focus on heroes and campaign play. Victorum is a solo-only experience, offering an in-depth, rewarding adventure with deep strategic decisions and exciting combat. Set in the more epic and mythical world of Hoplomachus: Victorum, this edition will pair the combat mechanisms fans know and love with beautiful updated lore, art and design.\n\n",
+    "yearpublished": 2023,
+    "minplayers": 1,
+    "maxplayers": 1,
+    "playingtime": 90,
+    "mechanics": [
+      {
+        "id": "2072",
+        "value": "Dice Rolling"
+      },
+      {
+        "id": "2819",
+        "value": "Solo / Solitaire Game"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1017",
+        "value": "Dice"
+      },
+      {
+        "id": "1046",
+        "value": "Fighting"
+      }
+    ],
+    "designers": [
+      {
+        "id": "60315",
+        "value": "Josh J. Carlson"
+      },
+      {
+        "id": "60311",
+        "value": "Adam Carlson"
+      },
+      {
+        "id": "122802",
+        "value": "Logan Giannini"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "22593",
+        "value": "Chip Theory Games"
+      },
+      {
+        "id": "46544",
+        "value": "Dice Realm"
+      },
+      {
+        "id": "29895",
+        "value": "Frosted Games"
+      },
+      {
+        "id": "55324",
+        "value": "HIT Games"
+      },
+      {
+        "id": "34801",
+        "value": "Lavka Games"
+      },
+      {
+        "id": "33626",
+        "value": "Lucky Duck Games"
+      },
+      {
+        "id": "8147",
+        "value": "YOKA Games"
+      }
+    ],
+    "artists": [
+      {
+        "id": "29340",
+        "value": "Yoann Boissonnet"
+      },
+      {
+        "id": "104238",
+        "value": "Anthony LeTourneau"
+      },
+      {
+        "id": "143602",
+        "value": "Federico Pompili"
+      }
+    ],
+    "statistics": {
+      "average": 8.336,
+      "usersrated": 1982,
+      "bayesaverage": 6.70405
+    },
+    "language_level": "HIGH",
+    "language_votes": {
+      "3": 1,
+      "4": 3,
+      "5": 1
+    },
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Hoplomachus: Victorum"
+    ]
+  },
+  "233867": {
+    "bgg_id": 233867,
+    "name": "Welcome To...",
+    "alternate_names": [
+      "Köszöntünk... álmaid városában!",
+      "Vítejte ve svém vysněném domově",
+      "Welcome to your perfect Home",
+      "Welcome To Містечко мрій",
+      "Welcome to... Miasteczko marzeń",
+      "Welcome to... Seu Lar Perfeito",
+      "Welcome Στο Σπίτι των Ονείρων σας",
+      "Бумажные кварталы",
+      "歡迎來到",
+      "웰컴 투..."
+    ],
+    "description": "As an architect in Welcome To..., you want to build the best new town in the United States of the 1950s by adding resources to a pool, hiring employees, and more.\n\nWelcome To... plays like a roll-and-write dice game in which you mark results on a score-sheet...but without dice. Instead you flip cards from three piles to make three different action sets with both a house number and a corresponding action from which everyone chooses one. You use the number to fill in a house on your street in numerical order. Then you take the action to increase the point value of estates you build or score points at the end for building parks and pools. Players also have the option of taking actions to alter or duplicate their house numbers. And everyone is racing to be the first to complete public goals. There's lots to do and many paths to becoming the best suburban architect in Welcome To...!\n\nBecause of the communal actions, game play is simultaneous and thus supports large groups of players. With many varying strategies and completely randomized action sets, no two games will feel the same!\n\n",
+    "yearpublished": 2018,
+    "minplayers": 1,
+    "maxplayers": 100,
+    "playingtime": 25,
+    "mechanics": [
+      {
+        "id": "2999",
+        "value": "Bingo"
+      },
+      {
+        "id": "2912",
+        "value": "Contracts"
+      },
+      {
+        "id": "2875",
+        "value": "End Game Bonuses"
+      },
+      {
+        "id": "3099",
+        "value": "Multi-Use Cards"
+      },
+      {
+        "id": "2055",
+        "value": "Paper-and-Pencil"
+      },
+      {
+        "id": "2048",
+        "value": "Pattern Building"
+      },
+      {
+        "id": "2020",
+        "value": "Simultaneous Action Selection"
+      },
+      {
+        "id": "2819",
+        "value": "Solo / Solitaire Game"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1029",
+        "value": "City Building"
+      }
+    ],
+    "designers": [
+      {
+        "id": "94040",
+        "value": "Benoit Turpin"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "26604",
+        "value": "Blue Cocker Games"
+      },
+      {
+        "id": "9068",
+        "value": "Broadway Toys LTD"
+      },
+      {
+        "id": "38131",
+        "value": "Deep Water Games"
+      },
+      {
+        "id": "37230",
+        "value": "Dude Games"
+      },
+      {
+        "id": "39390",
+        "value": "Engames"
+      },
+      {
+        "id": "27480",
+        "value": "Fever Games"
+      },
+      {
+        "id": "30155",
+        "value": "GateOnGames"
+      },
+      {
+        "id": "8820",
+        "value": "Gémklub"
+      },
+      {
+        "id": "56118",
+        "value": "Hid Konem (Хід Конем)"
+      },
+      {
+        "id": "25996",
+        "value": "Jumping Turtle Games"
+      },
+      {
+        "id": "6214",
+        "value": "Kaissa Chess & Games"
+      },
+      {
+        "id": "3218",
+        "value": "Lautapelit.fi"
+      },
+      {
+        "id": "9325",
+        "value": "Lifestyle Boardgames Ltd"
+      },
+      {
+        "id": "46500",
+        "value": "Lord of Boards"
+      },
+      {
+        "id": "29242",
+        "value": "Ludofy Creative"
+      },
+      {
+        "id": "39",
+        "value": "Pegasus Spiele"
+      },
+      {
+        "id": "7466",
+        "value": "Rebel Sp. z o.o."
+      },
+      {
+        "id": "21053",
+        "value": "Rexhry"
+      },
+      {
+        "id": "33010",
+        "value": "SD Games"
+      },
+      {
+        "id": "39249",
+        "value": "sternenschimmermeer"
+      }
+    ],
+    "artists": [
+      {
+        "id": "88432",
+        "value": "Anne Heidsieck"
+      }
+    ],
+    "statistics": {
+      "average": 7.50469,
+      "usersrated": 35070,
+      "bayesaverage": 7.34796
+    },
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 39,
+      "2": 1
+    },
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Welcome To...",
+      "Welcome To...",
+      "Welcome to your perfect Home"
+    ]
+  },
+  "283864": {
+    "bgg_id": 283864,
+    "name": "Trails of Tucana",
+    "alternate_names": [
+      "Isla Tucana",
+      "Stezky tukanů",
+      "Wyspy Tukana",
+      "Стежки Тукани",
+      "Тропы Туканы",
+      "ツカナ諸島の小径",
+      "투카나 여행길"
+    ],
+    "description": "Trails of Tucana is a flip-and-write game from the creators of Avenue and Doodle City that is quick and easy to play, but has enough depth to entertain gamers.\n\nEach player is given a map of the island Tucana, showing its villages and important sights. The positions of the villages are randomized for each player, so every game will provide a unique puzzle.\n\nEach turn, one player flips over two terrain cards. Each player must draw &mdash; on their own map &mdash; a trail between two neighboring spaces of the shown terrains. Gradually, the trails will grow into a network of roads. Players score points by connecting matching harbors, and by connecting sights to harbors. Being the first to connect a pair of harbors provides bonus points.\n\nTo add depth to the game, there are varying distribution of the different terrain cards. Mountain cards are for instance rarer than desert cards, so it would be harder to build a trail through a mountain range or over water than through desert or forest. Players need to take this into account when planning their routes. And they should maximize the probability that they will be able to make use of any combination of terrain cards that may come up.\n\n&mdash;description from designer\n\nAWARDS AND HONORS:\n\n2021 Finnish Game of the Year (family) WINNER\n2020 Norwegian Game of the Year WINNER\n2020 Norwegian Game of the Year NOMINEE\n2019 The Dice Tower SEAL OF EXCELLENCE\n\n",
+    "yearpublished": 2019,
+    "minplayers": 1,
+    "maxplayers": 8,
+    "playingtime": 15,
+    "mechanics": [
+      {
+        "id": "2999",
+        "value": "Bingo"
+      },
+      {
+        "id": "2883",
+        "value": "Connections"
+      },
+      {
+        "id": "2026",
+        "value": "Hexagon Grid"
+      },
+      {
+        "id": "2039",
+        "value": "Line Drawing"
+      },
+      {
+        "id": "2962",
+        "value": "Move Through Deck"
+      },
+      {
+        "id": "2081",
+        "value": "Network and Route Building"
+      },
+      {
+        "id": "2055",
+        "value": "Paper-and-Pencil"
+      },
+      {
+        "id": "2819",
+        "value": "Solo / Solitaire Game"
+      },
+      {
+        "id": "2897",
+        "value": "Variable Set-up"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1020",
+        "value": "Exploration"
+      }
+    ],
+    "designers": [
+      {
+        "id": "4063",
+        "value": "Kristian Amundsen Østby"
+      },
+      {
+        "id": "9637",
+        "value": "Eilif Svensson"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "27674",
+        "value": "Aporta Games"
+      },
+      {
+        "id": "39751",
+        "value": "Doit Games"
+      },
+      {
+        "id": "58739",
+        "value": "Geekach LLC"
+      },
+      {
+        "id": "25996",
+        "value": "Jumping Turtle Games"
+      },
+      {
+        "id": "8291",
+        "value": "Korea Boardgames"
+      },
+      {
+        "id": "34801",
+        "value": "Lavka Games"
+      },
+      {
+        "id": "5400",
+        "value": "Matagot"
+      },
+      {
+        "id": "7992",
+        "value": "MINDOK"
+      },
+      {
+        "id": "46446",
+        "value": "Moria Games"
+      },
+      {
+        "id": "39",
+        "value": "Pegasus Spiele"
+      },
+      {
+        "id": "22609",
+        "value": "テンデイズゲームズ (TendaysGames)"
+      }
+    ],
+    "artists": [
+      {
+        "id": "76491",
+        "value": "Gjermund Bohne"
+      }
+    ],
+    "statistics": {
+      "average": 7.35866,
+      "usersrated": 5374,
+      "bayesaverage": 6.77191
+    },
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 17
+    },
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Trails of Tucana"
+    ]
+  },
+  "195421": {
+    "bgg_id": 195421,
+    "name": "Near and Far",
+    "alternate_names": [
+      "Bliżej i Dalej",
+      "Cerca y Lejos",
+      "Cestou necestou",
+      "Nah und Fern",
+      "Near and Far: Les Royaumes du lointain",
+      "Дальше и Ближе",
+      "니어 앤 파"
+    ],
+    "description": "Four wanderers search for the Last Ruin, a city that legends say contains an artifact that will grant the greatest desires of the heart. A lost love, redemption, acceptance, a family rejoined-- these are the fires that fuel the wanderers' journeys, but can they overcome their own greed and inner demons on the way?\n\nIn Near and Far, you and up to three friends explore many different maps in a search for the Last Ruin, recruiting adventurers, hunting for treasure, and competing to be the most storied traveler. You must collect food and equipment at town for long journeys to mysterious locales, making sure not to forget enough weapons to fight off bandits, living statues, and rusty robots! Sometimes in your travels you'll run into something unique and one of your friends will read what happens to you from a book of stories, giving you a choice of how to react, creating a new and memorable tale each time you play.\n\nNear and Far is a sequel to Above and Below and includes a book of encounters. This time players read over ten game sessions to reach the end of the story. Each chapter is played on a completely new map with unique art and adventures.\n\nAnswer the call of the ruins and begin your journey.\n\nErrata\n\n",
+    "yearpublished": 2017,
+    "minplayers": 2,
+    "maxplayers": 4,
+    "playingtime": 120,
+    "mechanics": [
+      {
+        "id": "2984",
+        "value": "Closed Drafting"
+      },
+      {
+        "id": "2912",
+        "value": "Contracts"
+      },
+      {
+        "id": "2072",
+        "value": "Dice Rolling"
+      },
+      {
+        "id": "2875",
+        "value": "End Game Bonuses"
+      },
+      {
+        "id": "2040",
+        "value": "Hand Management"
+      },
+      {
+        "id": "2947",
+        "value": "Movement Points"
+      },
+      {
+        "id": "2965",
+        "value": "Multiple Maps"
+      },
+      {
+        "id": "2851",
+        "value": "Narrative Choice / Paragraph"
+      },
+      {
+        "id": "2081",
+        "value": "Network and Route Building"
+      },
+      {
+        "id": "2041",
+        "value": "Open Drafting"
+      },
+      {
+        "id": "2078",
+        "value": "Point to Point Movement"
+      },
+      {
+        "id": "2661",
+        "value": "Push Your Luck"
+      },
+      {
+        "id": "2948",
+        "value": "Resource to Move"
+      },
+      {
+        "id": "2822",
+        "value": "Scenario / Mission / Campaign Game"
+      },
+      {
+        "id": "2004",
+        "value": "Set Collection"
+      },
+      {
+        "id": "2027",
+        "value": "Storytelling"
+      },
+      {
+        "id": "3100",
+        "value": "Tags"
+      },
+      {
+        "id": "2015",
+        "value": "Variable Player Powers"
+      },
+      {
+        "id": "2082",
+        "value": "Worker Placement"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1022",
+        "value": "Adventure"
+      },
+      {
+        "id": "1020",
+        "value": "Exploration"
+      },
+      {
+        "id": "1010",
+        "value": "Fantasy"
+      },
+      {
+        "id": "1046",
+        "value": "Fighting"
+      }
+    ],
+    "designers": [
+      {
+        "id": "11854",
+        "value": "Ryan Laukat"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "18617",
+        "value": "Red Raven Games"
+      },
+      {
+        "id": "9074",
+        "value": "Bard Centrum Gier"
+      },
+      {
+        "id": "2366",
+        "value": "Devir"
+      },
+      {
+        "id": "917",
+        "value": "DV Games"
+      },
+      {
+        "id": "34801",
+        "value": "Lavka Games"
+      },
+      {
+        "id": "41030",
+        "value": "Lotus Frog Games"
+      },
+      {
+        "id": "33626",
+        "value": "Lucky Duck Games"
+      },
+      {
+        "id": "21053",
+        "value": "Rexhry"
+      },
+      {
+        "id": "24844",
+        "value": "Schwerkraft-Verlag"
+      }
+    ],
+    "artists": [
+      {
+        "id": "11854",
+        "value": "Ryan Laukat"
+      }
+    ],
+    "statistics": {
+      "average": 7.63579,
+      "usersrated": 11233,
+      "bayesaverage": 7.22366
+    },
+    "language_level": "HIGH",
+    "language_votes": {
+      "3": 1,
+      "4": 9,
+      "5": 3
+    },
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Near and Far: Les Royaumes du lointain"
+    ]
+  },
+  "97207": {
+    "bgg_id": 97207,
+    "name": "Dungeon Petz",
+    "alternate_names": [
+      "Příšerky z Podzemí",
+      "Pupile Podziemi",
+      "Питомцы подземелий",
+      "地城寵物"
+    ],
+    "description": "Become the leader of an imp family that has just started a new business &ndash; breeding and selling petz. Sound simple and safe? Well, we forgot to mention that those petz are for Dungeon Lords. This means magical, playful, sometimes angry monsters that constantly desire attention and at the very moment you want them to demonstrate their qualities to buyers they are sick or they poop. Sometimes you are even glad that you got rid of them &ndash; but the profit is unbelievable.\n\nDungeon Petz is a standalone game set in the Dungeon Lords universe. The game consists of several rounds in which players use unusual worker placement mechanisms (players simultaneously prepare different sized groups of imps in order to play sooner than others) to prepare themselves for the uneasy task of raising creature cubs and pleasing their different needs (represented by cards) in order to sell them as grown and scary creatures to Dungeon Lords. In the meantime, they also attend various contests in which they show off their pets, scoring additional points.\n\n",
+    "yearpublished": 2011,
+    "minplayers": 2,
+    "maxplayers": 4,
+    "playingtime": 90,
+    "mechanics": [
+      {
+        "id": "2012",
+        "value": "Auction / Bidding"
+      },
+      {
+        "id": "2040",
+        "value": "Hand Management"
+      },
+      {
+        "id": "2926",
+        "value": "Selection Order Bid"
+      },
+      {
+        "id": "2020",
+        "value": "Simultaneous Action Selection"
+      },
+      {
+        "id": "2082",
+        "value": "Worker Placement"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1089",
+        "value": "Animals"
+      },
+      {
+        "id": "1010",
+        "value": "Fantasy"
+      },
+      {
+        "id": "1079",
+        "value": "Humor"
+      }
+    ],
+    "designers": [
+      {
+        "id": "789",
+        "value": "Vlaada Chvátil"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "7345",
+        "value": "Czech Games Edition (CGE)"
+      },
+      {
+        "id": "2366",
+        "value": "Devir"
+      },
+      {
+        "id": "29194",
+        "value": "GaGa Games"
+      },
+      {
+        "id": "264",
+        "value": "Heidelberger Spieleverlag"
+      },
+      {
+        "id": "6275",
+        "value": "HomoLudicus"
+      },
+      {
+        "id": "8923",
+        "value": "IELLO"
+      },
+      {
+        "id": "7992",
+        "value": "MINDOK"
+      },
+      {
+        "id": "30552",
+        "value": "One Moment Games"
+      },
+      {
+        "id": "7466",
+        "value": "Rebel Sp. z o.o."
+      },
+      {
+        "id": "538",
+        "value": "Z-Man Games"
+      }
+    ],
+    "artists": [
+      {
+        "id": "12692",
+        "value": "David Cochard"
+      }
+    ],
+    "statistics": {
+      "average": 7.37891,
+      "usersrated": 15636,
+      "bayesaverage": 7.11095
+    },
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 63,
+      "2": 1
+    },
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Dungeon Petz"
+    ]
+  },
+  "154203": {
+    "bgg_id": 154203,
+    "name": "Imperial Settlers",
+    "alternate_names": [
+      "Birodalmi Telepesek",
+      "Coloni Imperiali",
+      "Colonos del Imperio",
+      "Imperial Settlers: A Ascensão de um Império",
+      "Osadnicy: Narodziny Imperium",
+      "Settlers: Naissance d'un Empire",
+      "Settlers: Zrod impéria",
+      "Поселенцы",
+      "インペリアル・セトラーズ",
+      "帝國開拓者"
+    ],
+    "description": "Settlers from four major powers of the world have discovered new lands, with new resources and opportunities. Romans, Barbarians, Egyptians and Japanese all at once move there to expand the boundaries of their empires. They build new buildings to strengthen their economy, they found mines and fields to gather resources, and they build barracks and training grounds to train soldiers. Soon after they discover that this land is far too small for everybody, then the war begins...\n\nImperial Settlers is a card game that lets players lead one of the four factions and build empires by placing buildings, then sending workers to those buildings to acquire new resources and abilities. The game is played over five rounds during which players take various actions in order to explore new lands, build buildings, trade resources, conquer enemies, and thus score victory points.\n\nThe core mechanism of Imperial Settlers is based on concepts from the author's card game 51st State.\n\n",
+    "yearpublished": 2014,
+    "minplayers": 1,
+    "maxplayers": 4,
+    "playingtime": 90,
+    "mechanics": [
+      {
+        "id": "2984",
+        "value": "Closed Drafting"
+      },
+      {
+        "id": "2912",
+        "value": "Contracts"
+      },
+      {
+        "id": "2875",
+        "value": "End Game Bonuses"
+      },
+      {
+        "id": "2040",
+        "value": "Hand Management"
+      },
+      {
+        "id": "2902",
+        "value": "Income"
+      },
+      {
+        "id": "3099",
+        "value": "Multi-Use Cards"
+      },
+      {
+        "id": "2041",
+        "value": "Open Drafting"
+      },
+      {
+        "id": "2819",
+        "value": "Solo / Solitaire Game"
+      },
+      {
+        "id": "2686",
+        "value": "Take That"
+      },
+      {
+        "id": "2828",
+        "value": "Turn Order: Progressive"
+      },
+      {
+        "id": "2015",
+        "value": "Variable Player Powers"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1050",
+        "value": "Ancient"
+      },
+      {
+        "id": "1002",
+        "value": "Card Game"
+      },
+      {
+        "id": "1029",
+        "value": "City Building"
+      },
+      {
+        "id": "1015",
+        "value": "Civilization"
+      }
+    ],
+    "designers": [
+      {
+        "id": "4735",
+        "value": "Ignacy Trzewiczek"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "2726",
+        "value": "Portal Games"
+      },
+      {
+        "id": "3475",
+        "value": "Arclight Games"
+      },
+      {
+        "id": "2973",
+        "value": "Edge Entertainment"
+      },
+      {
+        "id": "24298",
+        "value": "FunBox Jogos"
+      },
+      {
+        "id": "8820",
+        "value": "Gémklub"
+      },
+      {
+        "id": "23756",
+        "value": "MYBG Co., Ltd."
+      },
+      {
+        "id": "39",
+        "value": "Pegasus Spiele"
+      },
+      {
+        "id": "27654",
+        "value": "Pendragon Game Studio"
+      },
+      {
+        "id": "21053",
+        "value": "Rexhry"
+      },
+      {
+        "id": "4932",
+        "value": "White Goblin Games"
+      },
+      {
+        "id": "1466",
+        "value": "Zvezda"
+      }
+    ],
+    "artists": [
+      {
+        "id": "38917",
+        "value": "Mateusz Bielski"
+      },
+      {
+        "id": "12019",
+        "value": "Tomasz Jedruszek"
+      },
+      {
+        "id": "61936",
+        "value": "Jarosław Marcinek"
+      },
+      {
+        "id": "21002",
+        "value": "Rafał Szyma"
+      }
+    ],
+    "statistics": {
+      "average": 7.28227,
+      "usersrated": 25552,
+      "bayesaverage": 7.08867
+    },
+    "language_level": "MED",
+    "language_votes": {
+      "2": 4,
+      "3": 42,
+      "4": 25
+    },
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Settlers: Naissance d\\'un Empire",
+      "Settlers: Naissance d\\'un Empire"
+    ]
+  },
+  "176920": {
+    "bgg_id": 176920,
+    "name": "Mission: Red Planet (Second/Third Edition)",
+    "alternate_names": [
+      "Aufbruch zum Roten Planeten",
+      "Misión: Planeta Rojo",
+      "Misja: Czerwona Planeta",
+      "Mission: Planète Rouge",
+      "Mission: Red Planet (Second Edition)",
+      "Mission: Red Planet (Third Edition)",
+      "Missione: Pianeta Rosso",
+      "Миссия \"Красная планета\""
+    ],
+    "description": "With technology rapidly developing and the human population growing, Victorian-era Earth is in dire need of fuel, land, and other natural resources. Fortunately, automated probes sent to Mars have discovered celerium, an ore that can be combusted to produce ten thousand times more power than a steam engine, and sylvanite, the densest substance ever found. More incredibly, the probes found ice that could be used in terraforming the planet, bringing the idea of colonizing Mars even closer to becoming a reality.\n\nAs the head of a mining corporation, these minerals and ice found on Mars could make you unfathomably wealthy &ndash; if you can reach them before your competitors. You have ten rounds to send your astronauts into space, occupy the planet's most resource-rich zones, and harvest as much celerium, sylvanite, and ice as possible. At your command is a team of nine professionals. Each has a unique skill set, from helping your astronauts traverse the Red Planet to blowing up spaceships before they launch.\n\nIn each round in Mission: Red Planet, players start by secretly deploying one of their character cards, with this card determining both when they place astronauts on the spaceships awaiting launch to Mars and which special action they take during the round. Each spaceship has a specified destination, and until an astronaut sets foot in a region, no one knows which resource they'll find. Players collect resources (worth points) three times during the game, and they each have a secret mission card that might grant them additional points at game's end. During the game, players might acquire an additional mission or a research card that changes the value of what awaits on Mars.\n\nThe 2015 edition of Mission: Red Planet features the same gameplay as the original 2005 edition, but it includes:\n\n\n    Components for up to six players instead of five\n    Special two-player variant rules\n    New action cards and revised mission and discovery cards\n    Mars' moon Phobos as a new zone that astronauts can explore before possibly returning to the planet itself\n\n\n",
+    "yearpublished": 2015,
+    "minplayers": 2,
+    "maxplayers": 6,
+    "playingtime": 90,
+    "mechanics": [
+      {
+        "id": "2839",
+        "value": "Action Retrieval"
+      },
+      {
+        "id": "2080",
+        "value": "Area Majority / Influence"
+      },
+      {
+        "id": "2046",
+        "value": "Area Movement"
+      },
+      {
+        "id": "2040",
+        "value": "Hand Management"
+      },
+      {
+        "id": "2020",
+        "value": "Simultaneous Action Selection"
+      },
+      {
+        "id": "2686",
+        "value": "Take That"
+      },
+      {
+        "id": "2833",
+        "value": "Turn Order: Role Order"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1016",
+        "value": "Science Fiction"
+      }
+    ],
+    "designers": [
+      {
+        "id": "1727",
+        "value": "Bruno Cathala"
+      },
+      {
+        "id": "125",
+        "value": "Bruno Faidutti"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "17",
+        "value": "Fantasy Flight Games"
+      },
+      {
+        "id": "5400",
+        "value": "Matagot"
+      },
+      {
+        "id": "2973",
+        "value": "Edge Entertainment"
+      },
+      {
+        "id": "4617",
+        "value": "Galakta"
+      },
+      {
+        "id": "5530",
+        "value": "Giochi Uniti"
+      },
+      {
+        "id": "264",
+        "value": "Heidelberger Spieleverlag"
+      },
+      {
+        "id": "52250",
+        "value": "Hunter & Friends"
+      },
+      {
+        "id": "50506",
+        "value": "Niza Gams"
+      }
+    ],
+    "artists": [
+      {
+        "id": "40597",
+        "value": "Andrew Bosley"
+      },
+      {
+        "id": "78938",
+        "value": "Samuel R. Shimota"
+      },
+      {
+        "id": "64026",
+        "value": "Alyn Spiller"
+      },
+      {
+        "id": "164681",
+        "value": "Derek Stenning"
+      }
+    ],
+    "statistics": {
+      "average": 7.38383,
+      "usersrated": 12480,
+      "bayesaverage": 7.06135
+    },
+    "language_level": "MED",
+    "language_votes": {
+      "3": 17,
+      "4": 2
+    },
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Mission: Planète Rouge",
+      "Mission: Planète Rouge"
+    ]
+  },
+  "264052": {
+    "bgg_id": 264052,
+    "name": "Circadians: First Light",
+    "alternate_names": [
+      "Circadianos: Primeira Luz",
+      "Circadians: Nowy Świt",
+      "Circadians: Primera Luz",
+      "Circadiens: Premières Lueurs",
+      "Zirkadianer: Erstes Licht"
+    ],
+    "description": "We were light years from our home, galaxies away, when we first discovered this ancient celestial body &mdash; a planet filled with intriguing, intelligent lifeforms, not too unlike our own. Some built kingdoms below the surface of the green seas, while others controlled the desert-filled plains and cliffs. Among them we found scientists, inventors, farmers, traders and fighters. While our presence has been unsettling for some, we have had very few incidents with the locals. Still, we Circadians, Earth's famed explorers, must do what we can to ensure peace. We must respect this world and its hosts. The heads of Moontide passed down orders from above. We are to open negotiations with the three clans, in hopes of gaining their favor, along with our own security while on the planet. We must also collect organic samples for the depository on Moontide. This is new ground for all of us, but we must be brave and resourceful. The future of the Circadians depends on it.\n\nThe aim of Circadians: First Light is to lead a team of researchers on the planet of Ryh. Players need to manage their crew (dice) to visit various parts of the planet for trade, farming, construction and research. Players score points for negotiating with the locals, harvesting resources for the depository, upgrading their research base, exploring the planet, and collecting gems. The game is played over eight rounds. At the end of the final round, the player with the most points wins.\n\n&mdash;description from designer\n\n",
+    "yearpublished": 2019,
+    "minplayers": 1,
+    "maxplayers": 4,
+    "playingtime": 90,
+    "mechanics": [
+      {
+        "id": "2912",
+        "value": "Contracts"
+      },
+      {
+        "id": "2072",
+        "value": "Dice Rolling"
+      },
+      {
+        "id": "2850",
+        "value": "Events"
+      },
+      {
+        "id": "2016",
+        "value": "Secret Unit Deployment"
+      },
+      {
+        "id": "2004",
+        "value": "Set Collection"
+      },
+      {
+        "id": "2015",
+        "value": "Variable Player Powers"
+      },
+      {
+        "id": "2082",
+        "value": "Worker Placement"
+      },
+      {
+        "id": "2935",
+        "value": "Worker Placement with Dice Workers"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1017",
+        "value": "Dice"
+      },
+      {
+        "id": "1016",
+        "value": "Science Fiction"
+      },
+      {
+        "id": "1113",
+        "value": "Space Exploration"
+      }
+    ],
+    "designers": [
+      {
+        "id": "103821",
+        "value": "S J Macdonald"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "9459",
+        "value": "Garphill Games"
+      },
+      {
+        "id": "35928",
+        "value": "Banana Games"
+      },
+      {
+        "id": "49615",
+        "value": "Meeple"
+      },
+      {
+        "id": "44349",
+        "value": "Mosaico Jogos"
+      },
+      {
+        "id": "30034",
+        "value": "Pixie Games"
+      },
+      {
+        "id": "2726",
+        "value": "Portal Games"
+      },
+      {
+        "id": "30490",
+        "value": "Primigenio"
+      },
+      {
+        "id": "28072",
+        "value": "Renegade Game Studios"
+      },
+      {
+        "id": "24844",
+        "value": "Schwerkraft-Verlag"
+      }
+    ],
+    "artists": [
+      {
+        "id": "14403",
+        "value": "Sam Phillips"
+      }
+    ],
+    "statistics": {
+      "average": 7.51229,
+      "usersrated": 3657,
+      "bayesaverage": 6.69785
+    },
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 7,
+      "3": 1
+    },
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Circadiens: Premières Lueurs"
+    ]
+  },
+  "294263": {
+    "bgg_id": 294263,
+    "name": "EOS: Island of Angels",
+    "alternate_names": [],
+    "description": "In ancient times, powerful angels held strong against the demonic creatures crawling out of the abyss on the Island of EOS. One day, though, they were tricked: The angelic guardians were turned into stone and demons flood the world ever since.\n\nEons later, a captain named Kareem found a petrified angel on a remote rock off the shores of an island. Kareem managed to awake the angel Leanas, who told him about the island of EOS and gifted him with immortality. In return, Kareem swore an oath: To awake Leanas' brothers and sisters, who were still petrified on EOS. Together they would fight back the demons, forcing them to return to the abyss they came from and freeing the world of their dark powers once again.\n\nEOS: Island of Angels is an engine-building board game for 2-5 players, which also includes some worker placement mechanisms. Players hire a unique, asymmetrical crew and set sail to the island of EOS, to free the angels of old and leave their mark on this mythical world's chronicle. Be wary though: While exploring the ocean, vicious demons will attack the ships and crews. Fighting them and their powerful demon lords will bring players glory and help restore the angels' power. Through awakening angels, players can gain powerful blessings that pose as an advantage to their strategy, while demons sabotage the ship, resulting in disadvantages.\n\nFinding the perfect balance between progressing on their journey and fighting demons while improving their ship and crew is key for players to gain the most victory points.\n\n&mdash;description from the publisher\n\n",
+    "yearpublished": 2023,
+    "minplayers": 1,
+    "maxplayers": 5,
+    "playingtime": 150,
+    "mechanics": [
+      {
+        "id": "2041",
+        "value": "Open Drafting"
+      },
+      {
+        "id": "2078",
+        "value": "Point to Point Movement"
+      },
+      {
+        "id": "2892",
+        "value": "Roles with Asymmetric Information"
+      },
+      {
+        "id": "2015",
+        "value": "Variable Player Powers"
+      },
+      {
+        "id": "2082",
+        "value": "Worker Placement"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1020",
+        "value": "Exploration"
+      },
+      {
+        "id": "1010",
+        "value": "Fantasy"
+      },
+      {
+        "id": "1008",
+        "value": "Nautical"
+      }
+    ],
+    "designers": [
+      {
+        "id": "17938",
+        "value": "Till Bröstl"
+      },
+      {
+        "id": "17937",
+        "value": "Felix Mertikat"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "30471",
+        "value": "King Racoon Games"
+      },
+      {
+        "id": "26427",
+        "value": "Grey Fox Games"
+      }
+    ],
+    "artists": [
+      {
+        "id": "17937",
+        "value": "Felix Mertikat"
+      },
+      {
+        "id": "133974",
+        "value": "Maxine Metzger"
+      },
+      {
+        "id": "129975",
+        "value": "Sandra Süsser"
+      }
+    ],
+    "statistics": {
+      "average": 7.50648,
+      "usersrated": 571,
+      "bayesaverage": 5.8581
+    },
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 2
+    },
+    "fr_edition_exists": false,
+    "fr_edition_titles": []
+  },
+  "382578": {
+    "bgg_id": 382578,
+    "name": "Dungeon Saga Origins",
+    "alternate_names": [
+      "Легенды подземелий: Начало"
+    ],
+    "description": "Dungeon Saga Origins is a thrilling board game of classic fantasy adventure, fast-paced action, and beautiful miniatures.\nSet in the dungeons of the fantasy world of Pannithor, players have a number of quests with different win conditions, all connected to the game&rsquo;s story.\n\nThis game has been designed with a wide audience in mind. The rules are intuitive enough for family gaming (from 10 years and up), but also support clever synergies by experienced players. Suggested difficulty modifiers are also included for those wanting a high level of challenge. While very playable and accessible, success will come from good decisions and teamwork, rather than just through good luck.\nThere are two ways to play the game:\n\n1. With a traditional human Overlord, who controls the dungeon, traps and enemies. They can decide whether they want to run a game that is more challenging, or more casual, depending on the player group.\n\n2. With an Overlord controlled by the game rules, and all the heroes controlled by human players.\nMission setup is very fast due to pre-assembled miniatures and large numbered dungeon tiles. Variety comes from changing the numbered tiles, their side/orientation, door placement and furniture placement. The tiles have a square grid to simplify measuring distances, defining line of sight, and item positioning.\n\nThe game is played in Rounds. In each Round, all the Hero players will each take a Turn with a single Hero, and then the Overlord player will take their Turn.\nWhen a player takes a Turn with a Hero, they may both Move and take an Action (act) with their Hero.\nAside from movement, players can take the below actions:\n &bull; Fight \n&bull; Shoot\n &bull; Cast Spell \n&bull; Use a Feat \n&bull; Explore \n &bull; Revive  \n&bull; Trade\n&nbsp;\nSome actions are resolved automatically, and others use dice rolls. Combat actions use opposed dice rolls and a dice matching mechanic.\nExploration is a key theme in the game, and the heroes may discover loot (including legendary items), find secret passages or activate deadly traps. Exploration is driven by a shuffled card deck, which creates unpredictability on repeat play-throughs.\n\nThere are post-game sequences for campaigns. Hero players are free to trade items, equipment and even gold between games if they wish as they prepare for their next adventure.\n\n",
+    "yearpublished": 2024,
+    "minplayers": 1,
+    "maxplayers": 5,
+    "playingtime": 120,
+    "mechanics": [
+      {
+        "id": "2840",
+        "value": "Action / Event"
+      },
+      {
+        "id": "2689",
+        "value": "Action Queue"
+      },
+      {
+        "id": "2046",
+        "value": "Area Movement"
+      },
+      {
+        "id": "2023",
+        "value": "Cooperative Game"
+      },
+      {
+        "id": "2072",
+        "value": "Dice Rolling"
+      },
+      {
+        "id": "2875",
+        "value": "End Game Bonuses"
+      },
+      {
+        "id": "2850",
+        "value": "Events"
+      },
+      {
+        "id": "2676",
+        "value": "Grid Movement"
+      },
+      {
+        "id": "2837",
+        "value": "Interrupts"
+      },
+      {
+        "id": "2011",
+        "value": "Modular Board"
+      },
+      {
+        "id": "2892",
+        "value": "Roles with Asymmetric Information"
+      },
+      {
+        "id": "2822",
+        "value": "Scenario / Mission / Campaign Game"
+      },
+      {
+        "id": "2819",
+        "value": "Solo / Solitaire Game"
+      },
+      {
+        "id": "2940",
+        "value": "Square Grid"
+      },
+      {
+        "id": "2853",
+        "value": "Stat Check Resolution"
+      },
+      {
+        "id": "2897",
+        "value": "Variable Set-up"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1022",
+        "value": "Adventure"
+      },
+      {
+        "id": "1017",
+        "value": "Dice"
+      },
+      {
+        "id": "1020",
+        "value": "Exploration"
+      },
+      {
+        "id": "1010",
+        "value": "Fantasy"
+      },
+      {
+        "id": "1046",
+        "value": "Fighting"
+      },
+      {
+        "id": "1047",
+        "value": "Miniatures"
+      },
+      {
+        "id": "2481",
+        "value": "Zombies"
+      }
+    ],
+    "designers": [
+      {
+        "id": "106328",
+        "value": "Matt Gilbert"
+      },
+      {
+        "id": "131507",
+        "value": "Ciaran Morris"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "16243",
+        "value": "Mantic Games"
+      },
+      {
+        "id": "50624",
+        "value": "Board Zeppelin"
+      },
+      {
+        "id": "50617",
+        "value": "Fun Supply"
+      },
+      {
+        "id": "30034",
+        "value": "Pixie Games"
+      }
+    ],
+    "artists": [
+      {
+        "id": "149765",
+        "value": "Duncan Aldis"
+      },
+      {
+        "id": "27926",
+        "value": "Jose David Lanza Cebrian"
+      },
+      {
+        "id": "36470",
+        "value": "Juan Diego Dianderas"
+      },
+      {
+        "id": "106328",
+        "value": "Matt Gilbert"
+      },
+      {
+        "id": "87675",
+        "value": "Tan Ho Sim"
+      }
+    ],
+    "statistics": {
+      "average": 7.66517,
+      "usersrated": 264,
+      "bayesaverage": 5.64747
+    },
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 1
+    },
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Dungeon Saga Origins"
+    ]
+  },
+  "223321": {
+    "bgg_id": 223321,
+    "name": "Detective: A Modern Crime Board Game",
+    "alternate_names": [
+      "Detective: Ein Krimi-Brettspiel",
+      "Detective: O Jogo da Investigação Moderna",
+      "Detective: sulla scena del crimine",
+      "Détective: un jeu d'enquête moderne",
+      "Detective: Un juego de investigación moderno",
+      "Detektiv: Po stopách zločinu",
+      "Detektyw: Kryminalna gra planszowa",
+      "Детектив",
+      "Детектив. Сучасне розслідування",
+      "探案实录",
+      "디텍티브: 모던 크라임 보드 게임"
+    ],
+    "description": "In Detective: A Modern Crime Board Game you are going to solve FIVE different cases and find out what connects them, you are going to BREAK THE 4th WALL by using every resource you can, you are going to browse the game's DEDICATED DATABASE simulating your agency's resources, you will enter a city maze of old mysteries and fresh CRIME, and you will be able to COOPERATE with other agents or solve the mystery on your own.\n\nTake the job of a real detective in a modern setting! In Detective: A Modern Crime Board Game, 1-5 players take on the role of investigators, solving mysterious crimes while working as an Antares National Investigation Agency team members. This board game tell rich stories - stories you will participate in. Let's hope that you will be able to deduce the end, before there is another crime... The game will challenge you with five different cases, that have to be played in order. Seemingly unconnected at first, they will unveil an immersive meta-plot based on facts and fiction alike.\n\nDetective: A Modern Crime Board Game brings classic, card-based, puzzle-solving gameplay into the 21st century with the introduction of online elements. You will gain access to the online Antares database that contains data about suspects, witnesses, and documentation from arrests and trials related to your case. Use every tool at your disposal to solve these crimes - consult the Internet, check the facts and constantly discover new clues. You are not playing a detective; you ARE a detective!\n\nIn 2020 Game of the Year special edition of Detective: A Modern Crime Board Game was published. Thanks to the overwhelmingly great response for the game and a worldwide success Portal Games was able to improve the basic game and add an additional component to the box. The new edition includes a set of 30 photos of character portraits, which the players can use during their investigation to make a mind map. The pictures show the suspects met throughout the game, and bring an amazing immersion to the gameplay. The set was previously available for purchase only as an additional promo item at the Portal Games store and during conventions. With the Game of the Year edition of Detective, now all players will be able to enjoy this great tool.\n\n",
+    "yearpublished": 2018,
+    "minplayers": 1,
+    "maxplayers": 5,
+    "playingtime": 180,
+    "mechanics": [
+      {
+        "id": "2023",
+        "value": "Cooperative Game"
+      },
+      {
+        "id": "2851",
+        "value": "Narrative Choice / Paragraph"
+      },
+      {
+        "id": "2822",
+        "value": "Scenario / Mission / Campaign Game"
+      },
+      {
+        "id": "2819",
+        "value": "Solo / Solitaire Game"
+      },
+      {
+        "id": "2027",
+        "value": "Storytelling"
+      },
+      {
+        "id": "2015",
+        "value": "Variable Player Powers"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1039",
+        "value": "Deduction"
+      },
+      {
+        "id": "1040",
+        "value": "Murder / Mystery"
+      }
+    ],
+    "designers": [
+      {
+        "id": "108405",
+        "value": "Jakub Łapot"
+      },
+      {
+        "id": "99503",
+        "value": "Przemysław Rymer"
+      },
+      {
+        "id": "4735",
+        "value": "Ignacy Trzewiczek"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "2726",
+        "value": "Portal Games"
+      },
+      {
+        "id": "29194",
+        "value": "GaGa Games"
+      },
+      {
+        "id": "15605",
+        "value": "Galápagos Jogos"
+      },
+      {
+        "id": "12540",
+        "value": "Game Harbor"
+      },
+      {
+        "id": "58739",
+        "value": "Geekach LLC"
+      },
+      {
+        "id": "8923",
+        "value": "IELLO"
+      },
+      {
+        "id": "8291",
+        "value": "Korea Boardgames"
+      },
+      {
+        "id": "30677",
+        "value": "Maldito Games"
+      },
+      {
+        "id": "39",
+        "value": "Pegasus Spiele"
+      },
+      {
+        "id": "27654",
+        "value": "Pendragon Game Studio"
+      },
+      {
+        "id": "21053",
+        "value": "Rexhry"
+      },
+      {
+        "id": "4932",
+        "value": "White Goblin Games"
+      }
+    ],
+    "artists": [
+      {
+        "id": "98224",
+        "value": "Aga Jakimiec"
+      },
+      {
+        "id": "112275",
+        "value": "Ewa Kostorz"
+      },
+      {
+        "id": "21002",
+        "value": "Rafał Szyma"
+      }
+    ],
+    "statistics": {
+      "average": 7.5985,
+      "usersrated": 11534,
+      "bayesaverage": 7.15271
+    },
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 13,
+      "5": 12
+    },
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Détective: un jeu d\\'enquête moderne"
+    ]
+  },
+  "285036": {
+    "bgg_id": 285036,
+    "name": "Shadow Kingdoms of Valeria",
+    "alternate_names": [
+      "Schattenreiche von Valeria",
+      "Les Sombres Royaumes de Valeria",
+      "瓦萊利亞暗影王國"
+    ],
+    "description": "For years the humans, elves, and dwarves have been slowly encroaching on your territories and slaying your kind in the name of progress. They've built their citadels, keeps, and villages as they push you further into the darkness. Now is the time to rally your troops and lay waste to their kind and bring forth the reign of the Shadow Kingdoms!\n\nYou are a Warden hungry for the destruction of Valeria. You must outwit the other Wardens to earn the right to command an army for the Shadow Kingdoms. Visit dark Shrines to gain minions, magic, gems, and gold to fuel your war machine. Command monsters into battle to conquer the lands and earn Victory Points. The player with the most Victory Points at the end of the game will be declared the winner.\n\nOn your turn, you must move your Warden from its current location to a new location. When your Warden enters one of the 5 Shrines, you first take any available die from the Shrine and place it on your player board, then perform the Shrine action associated with the Shrine.\n\nThere are 5 troop types (die colors) in the game: Goblin (green), Orc (red), Skeleton (white), Gargoyle (purple), and Gnoll (brown). Send your Warden to the Camp on your player board to use your minion dice to resolve battle plans and place Victory tokens on your Campaign board.\n\n&mdash;description from the publisher\n\n",
+    "yearpublished": 2021,
+    "minplayers": 1,
+    "maxplayers": 5,
+    "playingtime": 75,
+    "mechanics": [
+      {
+        "id": "2072",
+        "value": "Dice Rolling"
+      },
+      {
+        "id": "2856",
+        "value": "Die Icon Resolution"
+      },
+      {
+        "id": "2041",
+        "value": "Open Drafting"
+      },
+      {
+        "id": "2082",
+        "value": "Worker Placement"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1017",
+        "value": "Dice"
+      },
+      {
+        "id": "1010",
+        "value": "Fantasy"
+      }
+    ],
+    "designers": [
+      {
+        "id": "98387",
+        "value": "Stan Kordonskiy"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "28790",
+        "value": "Daily Magic Games"
+      },
+      {
+        "id": "44580",
+        "value": "Board Game Rookie"
+      },
+      {
+        "id": "33626",
+        "value": "Lucky Duck Games"
+      },
+      {
+        "id": "24844",
+        "value": "Schwerkraft-Verlag"
+      },
+      {
+        "id": "36763",
+        "value": "Surfin' Meeple China"
+      }
+    ],
+    "artists": [
+      {
+        "id": "70533",
+        "value": "Mihajlo Dimitrievski"
+      }
+    ],
+    "statistics": {
+      "average": 7.61638,
+      "usersrated": 1102,
+      "bayesaverage": 6.15342
+    },
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 5
+    },
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Les Sombres Royaumes de Valeria"
+    ]
+  },
+  "375852": {
+    "bgg_id": 375852,
+    "name": "Welcome to Everdell",
+    "alternate_names": [
+      "Bem-vindos à Everdell",
+      "Everdell Junior",
+      "Everdell: A legkisebb erdőlakók",
+      "Mi pequeño Everdell",
+      "Mláďata z Divukraje",
+      "Moje małe Everdell",
+      "Mon p'tit Everdell",
+      "My Lil' Everdell",
+      "Witaj w Everdell",
+      "Мой маленький Эверделл"
+    ],
+    "description": "Introducing the best board game for little fans of Everdell, My Lil Everdell. Join Chip, Sweep, and the other kids of Everdell to build the most spectacular make-believe city anyone has ever built.  This easy to learn worker-placement and tableau building game will provide family fun while getting the lil&rsquo; ones' brains a buzzin&rsquo;, improving focus and enhancing young learner skills.  Climb across the rope bridge, watch out for the dragon&rsquo;s den, and join us in the fort for the latest addition to the award-winning Everdell line, My Lil Everdell.\n\n&mdash;description from the publisher\n\n",
+    "yearpublished": 2022,
+    "minplayers": 1,
+    "maxplayers": 4,
+    "playingtime": 30,
+    "mechanics": [
+      {
+        "id": "2875",
+        "value": "End Game Bonuses"
+      },
+      {
+        "id": "2041",
+        "value": "Open Drafting"
+      },
+      {
+        "id": "2004",
+        "value": "Set Collection"
+      },
+      {
+        "id": "2819",
+        "value": "Solo / Solitaire Game"
+      },
+      {
+        "id": "2082",
+        "value": "Worker Placement"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1089",
+        "value": "Animals"
+      },
+      {
+        "id": "1002",
+        "value": "Card Game"
+      },
+      {
+        "id": "1041",
+        "value": "Children's Game"
+      },
+      {
+        "id": "1010",
+        "value": "Fantasy"
+      }
+    ],
+    "designers": [
+      {
+        "id": "91302",
+        "value": "James A. Wilson"
+      },
+      {
+        "id": "129062",
+        "value": "Clarissa A. Wilson"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "38298",
+        "value": "Starling Games (II)"
+      },
+      {
+        "id": "51375",
+        "value": "Tabletop Tycoon Inc."
+      },
+      {
+        "id": "15605",
+        "value": "Galápagos Jogos"
+      },
+      {
+        "id": "8820",
+        "value": "Gémklub"
+      },
+      {
+        "id": "18852",
+        "value": "Hobby World"
+      },
+      {
+        "id": "30677",
+        "value": "Maldito Games"
+      },
+      {
+        "id": "5400",
+        "value": "Matagot"
+      },
+      {
+        "id": "39",
+        "value": "Pegasus Spiele"
+      },
+      {
+        "id": "7466",
+        "value": "Rebel Sp. z o.o."
+      },
+      {
+        "id": "21053",
+        "value": "Rexhry"
+      },
+      {
+        "id": "59869",
+        "value": "Tycoon Games"
+      },
+      {
+        "id": "4932",
+        "value": "White Goblin Games"
+      }
+    ],
+    "artists": [
+      {
+        "id": "40597",
+        "value": "Andrew Bosley"
+      },
+      {
+        "id": "65633",
+        "value": "Jacqui Davis"
+      }
+    ],
+    "statistics": {
+      "average": 7.52173,
+      "usersrated": 2176,
+      "bayesaverage": 6.41847
+    },
+    "language_level": "MED",
+    "language_votes": {
+      "2": 1,
+      "3": 2
+    },
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Mon p\\'tit Everdell"
+    ]
+  },
+  "440634": {
+    "bgg_id": 440634,
+    "name": "Driving Me Crazy!",
+    "alternate_names": [],
+    "description": "In this quick family card game, you race to be the first to the holiday house to claim the biggest bedroom! Players draw and discard cards to be the first to reach exactly 1000 km in card points.  The game includes distance and action cards to move you along.  But watch out, your opponents can play negative actions on you as well.\n\n",
+    "yearpublished": 2025,
+    "minplayers": 2,
+    "maxplayers": 10,
+    "playingtime": 30,
+    "mechanics": [
+      {
+        "id": "2040",
+        "value": "Hand Management"
+      },
+      {
+        "id": "2836",
+        "value": "Lose a Turn"
+      },
+      {
+        "id": "3099",
+        "value": "Multi-Use Cards"
+      },
+      {
+        "id": "2686",
+        "value": "Take That"
+      },
+      {
+        "id": "2828",
+        "value": "Turn Order: Progressive"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1002",
+        "value": "Card Game"
+      },
+      {
+        "id": "1097",
+        "value": "Travel"
+      }
+    ],
+    "designers": [
+      {
+        "id": "167429",
+        "value": "Dixon Block"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "58898",
+        "value": "Simplexity Games"
+      }
+    ],
+    "artists": [],
+    "statistics": {
+      "average": 8.12681,
+      "usersrated": 276,
+      "bayesaverage": 5.55577
+    },
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 1
+    },
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Driving Me Crazy!"
+    ]
+  },
+  "421974": {
+    "bgg_id": 421974,
+    "name": "Pirates of the High Teas",
+    "alternate_names": [],
+    "description": "Pirates of the High Teas is a whimsical set collection game in which players are pirates competing to win their Captain's treasure by serving the most delicious afternoon tea. Players collect and match dishes with tea cards to serve the Captain a perfect meal. To acquire these dishes and teas, players select actions through a strategic worker placement mechanism on the pirate ship that determines turn order and number of cards.\n\nBut don't forget, as pirates, there are lots of ways to break the rules! Players can smash their dishes together, creating ridiculous combinations that still pair perfectly. They can also use their cannon to blow up the available cards, send their monkey to steal a card off the top of the deck, and deploy a parrot to smuggle a single card directly to the Captain for points.\n\nAt the end of 9 rounds, count your doubloons. The pirate with the most treasure wins.\n\n&mdash;description from the publisher\n\n",
+    "yearpublished": 2026,
+    "minplayers": 1,
+    "maxplayers": 4,
+    "playingtime": 45,
+    "mechanics": [
+      {
+        "id": "2912",
+        "value": "Contracts"
+      },
+      {
+        "id": "2041",
+        "value": "Open Drafting"
+      },
+      {
+        "id": "2004",
+        "value": "Set Collection"
+      },
+      {
+        "id": "2819",
+        "value": "Solo / Solitaire Game"
+      },
+      {
+        "id": "2829",
+        "value": "Turn Order: Claim Action"
+      },
+      {
+        "id": "2082",
+        "value": "Worker Placement"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1002",
+        "value": "Card Game"
+      },
+      {
+        "id": "1090",
+        "value": "Pirates"
+      }
+    ],
+    "designers": [
+      {
+        "id": "161639",
+        "value": "Emily Vincent"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "56869",
+        "value": "Pink Hawk Games"
+      }
+    ],
+    "artists": [
+      {
+        "id": "127454",
+        "value": "Ammon Anderson"
+      },
+      {
+        "id": "131990",
+        "value": "M.G. Patiño"
+      }
+    ],
+    "statistics": {
+      "average": 7.85037,
+      "usersrated": 197,
+      "bayesaverage": 5.63871
+    },
+    "language_level": null,
+    "language_votes": {},
+    "fr_edition_exists": false,
+    "fr_edition_titles": []
+  },
+  "322476": {
+    "bgg_id": 322476,
+    "name": "Fighters of the Pacific",
+    "alternate_names": [
+      "Cazas Sobre el Pacífico"
+    ],
+    "description": "Relive the fury of air and sea combat in the Pacific during World War II. Direct each plane in multiple fighter and bomber squadrons to lead attacks on the enemy&rsquo;s carriers and island bases. No dice, no rulers, only dozens of planes and ships! A fast-paced and streamlined game mechanic that plunges you in the heart of the battle. Move each plane individually on a hex grid. When you maneuver to get an enemy plane in your sights, it must try to dodge or else take damage. Some planes can use torpedoes and bombs to destroy ships and ground installations. Stay in formation to keep the initiative and dominate your opponent. Each plane has its own attributes in terms of speed, armor, and special abilities. Each piece is illustrated as close as possible to its historical model to maximize your immersion!\n\nThe Fighters of the Pacific series includes a CORE GAME, and TWO EXPANSIONS. The CORE GAME contains everything you need to play hours of battle over the Pacific Ocean: a huge modular board, 4 aircraft carriers, 4 destroyers, 94 aircraft tokens, 91 game tokens and 8 reference cards. The complete rules and 10 scenarios are also included of course. The carrier and aircraft tokens represent the forces of 4 real aircraft carriers fighting in 1942, with a ratio of 1 token to 3 aircraft. For the Japanese, the AKAGI and KAGA form the 1st aircraft division that participated in the attack of Pearl Harbor and the battle of Midway. For the Americans, the USS HORNET and USS YORKTOWN were participating in the Doolittle Raid and the Battle of Midway too.\n\nThe first expansion, Battle of Midway contains enough tokens to complete the base game to have all the forces present in this battle, including the aircraft at the base on Midway Island. This includes 3 new American aircraft models, the old F2A Buffalo fighter, the B-26 Mitchell bomber that launched the very first counterattack on the Japanese forces, and some brand new TBF Avengers. Most importantly, this expansion includes 5 scenarios to relive one of the most unpredictable and decisive battles of the war as if you were there. The tokens are laid down, the story is in your hands!\n\nOne month before the Battle of Midway, the first ever naval air battle took place. It is known as the Battle of the Coral Sea. Relive this battle with this expansion pack that provides 3 new Japanese aircraft carriers, the SHOKAKU, ZUIKAKU and SHOHO, the USS LEXINGTON forces and 4 exciting scenarios. Will you manage to save the SHOHO and the USS LEXINGTON?\n\n&mdash;description from the publisher\n\n",
+    "yearpublished": 2023,
+    "minplayers": 1,
+    "maxplayers": 2,
+    "playingtime": 120,
+    "mechanics": [
+      {
+        "id": "2676",
+        "value": "Grid Movement"
+      },
+      {
+        "id": "2026",
+        "value": "Hexagon Grid"
+      },
+      {
+        "id": "2011",
+        "value": "Modular Board"
+      },
+      {
+        "id": "2947",
+        "value": "Movement Points"
+      },
+      {
+        "id": "2070",
+        "value": "Simulation"
+      },
+      {
+        "id": "2819",
+        "value": "Solo / Solitaire Game"
+      }
+    ],
+    "categories": [
+      {
+        "id": "2650",
+        "value": "Aviation / Flight"
+      },
+      {
+        "id": "1019",
+        "value": "Wargame"
+      },
+      {
+        "id": "1049",
+        "value": "World War II"
+      }
+    ],
+    "designers": [
+      {
+        "id": "76053",
+        "value": "Didier Dincher"
+      },
+      {
+        "id": "131203",
+        "value": "Frank Garibaldi"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "27541",
+        "value": "Capsicum Games"
+      },
+      {
+        "id": "27389",
+        "value": "Don't Panic Games"
+      },
+      {
+        "id": "8351",
+        "value": "Gen-X Games (GenX)"
+      }
+    ],
+    "artists": [
+      {
+        "id": "69731",
+        "value": "Alexandre Bonvalot"
+      },
+      {
+        "id": "76055",
+        "value": "Antoine Schindler"
+      }
+    ],
+    "statistics": {
+      "average": 7.76425,
+      "usersrated": 296,
+      "bayesaverage": 5.71501
+    },
+    "language_level": "MED",
+    "language_votes": {
+      "3": 2
+    },
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Fighters of the Pacific"
+    ]
+  },
+  "385770": {
+    "bgg_id": 385770,
+    "name": "Knee Deep in Hexes",
+    "alternate_names": [],
+    "description": "Knee Deep in Hexes is like deck building meets all your favorite 90's RTS games combined - but this time it's a board game.\n\nKnee Deep in Hexes is a 2-player strategy skirmisher. After the exodus from Earth, you fight on a distant desert planet for scarce resources, build extractors, factories and units - from fast construction vehicles to frightening Paloozas.\n\nGet knee-deep into intergalactic warfare: Choose your companions with their set of game-breaking skills, build your deck out of unique strategy cards and outsmart your enemy: Win by either destroying their headquarter or by sending their most valuable units to the scrapyard as quickly as possible.\n\nEach player chooses a faction first. Every faction consists of four companions - the General, who oversees the battlefield from the planetary orbit, the Commander, who draws on many years of experience in combat and adjusts tactics rapidly, the Tech, who supports the troops by steady innovations and the Trickster who is outsmarting the enemy. Each companion comes with a unique deck of action and war cards. Players can either use these predefined decks or, if they are advanced, engage in deckbuilding in search of ever unique combos.\n\nThe same high variability applies to the map: Here you can either use a predefined casual variant for a quick match or build a world before the game starts by drafting planetary cards. We are already designing and playtesting new factions, companions and decks as well as worlds.\n\nIn this action-packed game, you'll have very little time to secure your basic supplies - that is, build the first construction vehicles and build the first extractors to harvest materials and energy - before clashing with your opponent on the tight map.\n\nPlay action cards during your turn to gain unique strategic advantages and take the initiative on the battlefield. Gather your tanks, carefully plan the use of your war cards, which will give you powerful bonuses in battle - and declare the war zone you want to attack. But beware, here comes the big twist: the battle in the war zone you declare will not take place directly at the end of your turn, but at the end of the turn of your opponent. Your enemies have a whole turn to react, to redeploy troops or to suddenly stab you in the back somewhere else. So be one hundred percent sure before you act!\n\n&mdash;description from the publisher\n\n",
+    "yearpublished": 2024,
+    "minplayers": 2,
+    "maxplayers": 2,
+    "playingtime": 60,
+    "mechanics": [
+      {
+        "id": "2080",
+        "value": "Area Majority / Influence"
+      },
+      {
+        "id": "2857",
+        "value": "Card Play Conflict Resolution"
+      },
+      {
+        "id": "2026",
+        "value": "Hexagon Grid"
+      },
+      {
+        "id": "2948",
+        "value": "Resource to Move"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1009",
+        "value": "Abstract Strategy"
+      },
+      {
+        "id": "1016",
+        "value": "Science Fiction"
+      },
+      {
+        "id": "1019",
+        "value": "Wargame"
+      }
+    ],
+    "designers": [
+      {
+        "id": "154178",
+        "value": "Marcel Kraatz"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "52828",
+        "value": "till5am"
+      }
+    ],
+    "artists": [],
+    "statistics": {
+      "average": 8.29509,
+      "usersrated": 167,
+      "bayesaverage": 5.63808
+    },
+    "language_level": "LOW",
+    "language_votes": {
+      "2": 2
+    },
+    "fr_edition_exists": false,
+    "fr_edition_titles": []
   }
 }
