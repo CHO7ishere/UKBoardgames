@@ -649,10 +649,15 @@ class BggIndex:
                         candidates=[(g.id, g.name) for g in tied_candidates[:5]],
                     )
         else:
-            # Single best candidate — check gap to runner-up
+            # Single best candidate — check gap to runner-up. Accept if either:
+            # (a) gap is sufficient (>= min_gap), OR
+            # (b) best score is very high (>= 90) — so close to perfect that small gap is acceptable.
+            # Real case: "Poo Bingo" scores 94.74 vs "Bingo Pongo" at 90.00; gap is 4.74 < 5,
+            # but 94.74 is already 94.74% similar, suggesting a strong match (likely typo/variant).
             second_score = results[1][1] if len(results) > 1 else 0.0
             gap = best_score - second_score
-            if gap < min_gap:
+            if gap < min_gap and best_score < 90:
+                # Reject: gap is too small and score isn't high enough to be confident anyway
                 return MatchResult(
                     title,
                     None,
@@ -662,6 +667,8 @@ class BggIndex:
                     "fuzzy score below threshold or too close to runner-up",
                     candidates=[(best_bgg.id, best_bgg.name)],
                 )
+            # If we get here: either gap is sufficient (>= 5), or best score is very high (>= 90).
+            # Both cases are safe to accept as MEDIUM confidence.
 
         if _digits_conflict(norm, best_norm):
             return MatchResult(

@@ -1141,7 +1141,7 @@ whot,Whot!,"QUALITY_GATE: shrunk=5.86, usersrated=151",9251,Whot,100.0
 catan-starfarers-5-6-player-extension,Catan Starfarers: 5-6 Player Extension,"LOW_CONFIDENCE_MATCH: exact match is a BGG expansion/non-base entry, out of scope -- refusing to fall back to a fuzzy match against an unrelated base game",,,100.0
 cortex-challenge-mlv,Cortex Challenge MLV,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,88.88888888888889
 taco-hat-cake-gift-pizza,Taco Hat Cake Gift Pizza,"QUALITY_GATE: shrunk=6.40, usersrated=412",338678,Taco Hat Cake Gift Pizza,100.0
-suspects,Suspects,LOW_CONFIDENCE_MATCH: ambiguous: multiple BGG entries share this title as a prefix,,,93.33333333333333
+suspects,Suspects,"QUALITY_GATE: shrunk=6.11, usersrated=34",24522,Suspect,93.33333333333333
 rummikub-6-players,Rummikub 6 Players,"QUALITY_GATE: shrunk=6.67, usersrated=218",25196,Rummikub Six Player,97.14285714285714
 trailblazers-standard,Trailblazers Standard,"QUALITY_GATE: shrunk=6.96, usersrated=2510",352454,Trailblazers,100.0
 star-wars-villainous-revenge-at-last,Star Wars Villainous Revenge At Last,"QUALITY_GATE: shrunk=7.07, usersrated=192",417130,Star Wars Villainous: Revenge at Last,100.0
@@ -2290,7 +2290,7 @@ warfighter-wwii-enigma-machine-expansion,Warfighter WWII: Enigma Machine Expansi
 marvel-remix-the-cosmos,Marvel: Remix the Cosmos,"QUALITY_GATE: shrunk=6.55, usersrated=4",459101,Marvel: Remix the Cosmos,100.0
 shadow-of-the-rift-eclipse-expansion,Shadow Of The Rift: Eclipse Expansion,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,68.96551724137932
 tiger-came-to-tea-board-game,Tiger Came To Tea Board Game,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,70.96774193548387
-poo-bingo,Poo Bingo,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,94.73684210526316
+poo-bingo,Poo Bingo,"QUALITY_GATE: shrunk=6.38, usersrated=11",424127,Poop Bingo,94.73684210526316
 roald-dahl-1-top-trumps,Roald Dahl 1 - Top Trumps,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,66.66666666666667
 zoo-mania,Zoo Mania,"QUALITY_GATE: shrunk=6.36, usersrated=5",20387,Zoo Mania,100.0
 deal-with-the-devil,Deal With The Devil,"QUALITY_GATE: shrunk=7.01, usersrated=1471",367379,Deal with the Devil,100.0

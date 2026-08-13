@@ -451,3 +451,22 @@ def test_fuzzy_tie_without_clear_dominance_is_dropped():
     # No clear dominance (100 / 95 = 1.05, much below the 4x bar), so should be dropped despite high fuzzy score
     assert result.confidence == "LOW"
     assert result.bgg_id is None
+
+
+def test_fuzzy_match_with_small_gap_accepted_when_score_is_very_high():
+    # Real case: "Poo Bingo" vs "Poop Bingo" (typo/spelling variant). Fuzzy scores 94.74%
+    # against the correct match but the runner-up "Bingo Pongo" scores 90%, giving a gap of
+    # only 4.74 (below the 5-point min_gap). However, 94.74% is so close to perfect that the
+    # gap is acceptable even though it's small, since the high score suggests a strong match.
+    from sources.bgg import BggRankedGame
+
+    games = [
+        BggRankedGame(1001, "Poop Bingo", 2020, 500, 6.5, 6.5, 1000, False),
+        BggRankedGame(1002, "Bingo Pongo", 2019, 100, 6.0, 6.0, 300, False),
+    ]
+    idx = BggIndex(games)
+    result = idx.match("Poo Bingo", fuzzy_threshold=85, min_gap=5)
+    # Gap is 4.74 < 5, but score is 94.74 >= 90, so should accept as MEDIUM confidence
+    assert result.confidence == "MEDIUM"
+    assert result.bgg_id == 1001
+    assert result.score > 94.0  # Poop Bingo match
