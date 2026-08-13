@@ -4700,14 +4700,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 255664,
-          "bgg_name": "The Binding of Isaac: Four Souls"
+          "bgg_id": 257422,
+          "bgg_name": "The Binding of Isaac Four Souls: Kickstarter Expansion Pack"
         }
       ],
-      "match_score": 76.19047619047619
+      "match_score": 100.0
     },
     {
       "zatu_handle": "terraforming-mars-turmoil",
@@ -16599,14 +16599,14 @@
       ],
       "zatu_is_coop": false,
       "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
+      "match_category": "MATCHES_EXCLUDED_EXPANSION",
       "bgg_candidates": [
         {
-          "bgg_id": 204496,
-          "bgg_name": "Villannex (2nd Edition + expansions)"
+          "bgg_id": 266990,
+          "bgg_name": "Villagers: Kickstarter Expansion Pack"
         }
       ],
-      "match_score": 72.72727272727273
+      "match_score": 100.0
     },
     {
       "zatu_handle": "epic-spell-wars-of-the-battle-wizards-2",
@@ -29758,29 +29758,6 @@
         }
       ],
       "match_score": 57.49999999999999
-    },
-    {
-      "zatu_handle": "illiterati-kickstarter-deluxe-edition",
-      "zatu_title": "Illiterati - Kickstarter Deluxe Edition",
-      "zatu_url": "https://zatu.com/products/illiterati-kickstarter-deluxe-edition",
-      "zatu_price_gbp": 41.59,
-      "zatu_in_stock": true,
-      "zatu_tags": [
-        "Board Games",
-        "Next Day Delivery",
-        "no gift wrap",
-        "Top 5000 Board Games"
-      ],
-      "zatu_is_coop": false,
-      "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
-      "bgg_candidates": [
-        {
-          "bgg_id": 348602,
-          "bgg_name": "Illiterati"
-        }
-      ],
-      "match_score": 100.0
     },
     {
       "zatu_handle": "high-frontier-4-module-3-conflict",

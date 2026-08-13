@@ -170,7 +170,7 @@ _EDITION_NOISE_RE = re.compile(
     r"\b(board game|card game|the game|(\d+(st|nd|rd|th)\s*/\s*)*\d+(st|nd|rd|th)\s+edition|"
     r"deluxe edition|deluxe|big box edition|"
     r"big box|retail edition|english edition|english|core game|standard edition|"
-    r"anniversary edition|collector edition|kickstarter edition|special edition|"
+    r"anniversary edition|collector edition|kickstarter edition|kickstarter|special edition|"
     r"base game|refresh(ed)?)\b"
 )
 # Broader generic-descriptor list, applied *only* inside the fuzzy tier's own scoring (see

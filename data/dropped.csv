@@ -288,7 +288,7 @@ king-of-tokyo-duel,King of Tokyo Duel,"QUALITY_GATE: shrunk=7.10, usersrated=266
 my-favorite-things-card-game-2nd-edition,My Favorite Things Card Game: 2nd Edition,"QUALITY_GATE: shrunk=7.12, usersrated=1038",188530,My Favourite Things,97.2972972972973
 marvel-champions-ironheart-hero-pack,Marvel Champions: Ironheart Hero Pack,"LOW_CONFIDENCE_MATCH: exact match is a BGG expansion/non-base entry, out of scope -- refusing to fall back to a fuzzy match against an unrelated base game",,,100.0
 meteo-flamme-rouge,Meteo: Flamme Rouge,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,80.0
-the-binding-of-isaac-four-souls-expansion-pack,The Binding of Isaac: Four Souls Expansion Pack,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,76.19047619047619
+the-binding-of-isaac-four-souls-expansion-pack,The Binding of Isaac: Four Souls Expansion Pack,"LOW_CONFIDENCE_MATCH: exact match is a BGG expansion/non-base entry, out of scope -- refusing to fall back to a fuzzy match against an unrelated base game",,,100.0
 terraforming-mars-turmoil,Terraforming Mars: Turmoil,"LOW_CONFIDENCE_MATCH: exact match is a BGG expansion/non-base entry, out of scope -- refusing to fall back to a fuzzy match against an unrelated base game",,,100.0
 race-across-the-world,Race Across The World,"QUALITY_GATE: shrunk=6.24, usersrated=26",427558,Race Across The World,100.0
 final-girl-terror-from-the-grave-vignette,Final Girl: Terror From The Grave (Vignette),LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,59.74025974025974
@@ -1114,7 +1114,7 @@ unstable-unicorns-for-kids,Unstable Unicorns for Kids,"QUALITY_GATE: shrunk=6.19
 kids-on-brooms-rpg,Kids on Brooms RPG,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,64.51612903225806
 battleship-grab-and-go,Battleship Grab And Go,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,70.58823529411764
 harry-potter-labyrinth,Harry Potter Labyrinth,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,74.4186046511628
-villagers-expansion-pack,Villagers: Expansion Pack,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,72.72727272727273
+villagers-expansion-pack,Villagers: Expansion Pack,"LOW_CONFIDENCE_MATCH: exact match is a BGG expansion/non-base entry, out of scope -- refusing to fall back to a fuzzy match against an unrelated base game",,,100.0
 epic-spell-wars-of-the-battle-wizards-2,Epic Spell Wars of the Battle Wizards 2,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,80.0
 nefrass-judgement-roll-player-adventures-expansion,Nefras's Judgement: Roll Player Adventures Expansion,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,61.05263157894737
 miller-zoo,Miller Zoo,"QUALITY_GATE: shrunk=6.78, usersrated=225",371482,Miller Zoo,100.0
@@ -2101,7 +2101,7 @@ fog-of-love-male-couple-cover,Fog of Love (Male Couple Cover),LOW_CONFIDENCE_MAT
 munchkin-tails,Munchkin Tails,"QUALITY_GATE: shrunk=6.54, usersrated=37",302244,Munchkin Tails,100.0
 brainbox-the-world-refresh-2022,BrainBox The World (Refresh 2022),LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,84.84848484848484
 top-trumps-specials-disney-princess-top-trumps-specials,Top Trumps Specials: Disney Princess Top Trumps Specials,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,57.49999999999999
-illiterati-kickstarter-deluxe-edition,Illiterati - Kickstarter Deluxe Edition,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,100.0
+illiterati-kickstarter-deluxe-edition,Illiterati - Kickstarter Deluxe Edition,"QUALITY_GATE: shrunk=7.06, usersrated=1001",348602,Illiterati,100.0
 guess-who-refresh,Guess Who Refresh,"QUALITY_GATE: shrunk=4.88, usersrated=7505",4143,Guess Who?,100.0
 drags-2-riches-the-exclusive-edition,Drags 2 Riches - The Exclusive Edition,"QUALITY_GATE: shrunk=6.67, usersrated=50",328958,Drags 2 Riches,100.0
 high-frontier-4-module-3-conflict,High Frontier 4: Module 3 - Conflict,LOW_CONFIDENCE_MATCH: fuzzy score below threshold or too close to runner-up,,,66.66666666666667
