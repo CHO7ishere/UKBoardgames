@@ -154,10 +154,15 @@ def prepare_games(
     excluded_handles = excluded_handles or set()
     favorited_handles = favorited_handles or set()
     prepared = []
+    expansion_keywords = ["expansion", "extension", "add-on", "addon", "supplement"]
     for game in games:
         # Filter out games with Back-Order or Pre-Order status (not worth considering for a trip)
         tags_lower = [tag.lower() for tag in game.get("zatu_tags", [])]
         if any(status in tags_lower for status in ["back-order", "pre-order"]):
+            continue
+        # Filter out expansions (only interested in base games)
+        title_lower = game["zatu_title"].lower()
+        if any(kw in title_lower for kw in expansion_keywords):
             continue
         prepared.append(
             {
@@ -203,6 +208,7 @@ def prepare_unmatched(
     favorited_handles = favorited_handles or set()
     prepared = []
     excluded_titles = {"uno", "monopoly"}
+    expansion_keywords = ["expansion", "extension", "add-on", "addon", "supplement"]
     for game in games:
         if game.get("match_category") not in _DISPLAY_MATCH_CATEGORIES:
             continue
@@ -213,6 +219,9 @@ def prepare_unmatched(
         # Filter out games with Back-Order or Pre-Order status (not worth considering for a trip)
         tags_lower = [tag.lower() for tag in game.get("zatu_tags", [])]
         if any(status in tags_lower for status in ["back-order", "pre-order"]):
+            continue
+        # Filter out expansions (only interested in base games)
+        if any(kw in title_lower for kw in expansion_keywords):
             continue
         prepared.append(
             {
