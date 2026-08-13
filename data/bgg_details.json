@@ -96697,5 +96697,792 @@
     },
     "fr_edition_exists": false,
     "fr_edition_titles": []
+  },
+  "439107": {
+    "bgg_id": 439107,
+    "name": "Santorini: Second Edition",
+    "alternate_names": [
+      "Санторини: Второе издание"
+    ],
+    "description": "This entry is for the retail edition that has 32 gods and 4 mode cards, as compared to the Santorini: Pantheon Edition with 100 gods and 12 mode cards.\n\nChanges from the first edition include: upgraded buildings and hero figures. God cards have been revised and rebalanced.\n\n",
+    "yearpublished": 2025,
+    "minplayers": 2,
+    "maxplayers": 4,
+    "playingtime": 30,
+    "mechanics": [
+      {
+        "id": "2676",
+        "value": "Grid Movement"
+      },
+      {
+        "id": "2960",
+        "value": "Map Reduction"
+      },
+      {
+        "id": "2876",
+        "value": "Race"
+      },
+      {
+        "id": "2940",
+        "value": "Square Grid"
+      },
+      {
+        "id": "2019",
+        "value": "Team-Based Game"
+      },
+      {
+        "id": "2944",
+        "value": "Three Dimensional Movement"
+      },
+      {
+        "id": "2015",
+        "value": "Variable Player Powers"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1009",
+        "value": "Abstract Strategy"
+      },
+      {
+        "id": "1050",
+        "value": "Ancient"
+      },
+      {
+        "id": "1082",
+        "value": "Mythology"
+      }
+    ],
+    "designers": [
+      {
+        "id": "3302",
+        "value": "Gord!"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "21765",
+        "value": "Roxley"
+      },
+      {
+        "id": "34801",
+        "value": "Lavka Games"
+      }
+    ],
+    "artists": [
+      {
+        "id": "70571",
+        "value": "Lina Cossette"
+      },
+      {
+        "id": "70568",
+        "value": "David Forest"
+      },
+      {
+        "id": "174251",
+        "value": "Mr. Cuddington"
+      }
+    ],
+    "statistics": {
+      "average": 8.02403,
+      "usersrated": 376,
+      "bayesaverage": 5.78803
+    },
+    "language_level": null,
+    "language_votes": {},
+    "fr_edition_exists": false,
+    "fr_edition_titles": []
+  },
+  "9609": {
+    "bgg_id": 9609,
+    "name": "War of the Ring",
+    "alternate_names": [
+      "Guerra del Anillo",
+      "La Guerra dell'Anello",
+      "A Guerra do Anel",
+      "La Guerre de l'Anneau",
+      "Der Herr der Ringe: Der Ringkrieg",
+      "Der Ringkrieg",
+      "Wojna o Pierścień",
+      "Ο Άρχοντας των Δαχτυλιδιών"
+    ],
+    "description": "In War of the Ring, one player takes control of the Free Peoples (FP), the other player controls Shadow Armies (SA).\n\nInitially, the Free People Nations are reluctant to take arms against Sauron, so they must be attacked by Sauron or persuaded by Gandalf or other Companions, before they start to fight properly: this is represented by the Political Track, which shows if a Nation is ready to fight in the War of the Ring or not.\n\nThe game can be won by a military victory, if Sauron conquers a certain number of Free People cities and strongholds or vice-versa. But the true hope of the Free Peoples lies with the quest of the Ringbearer: while the armies clash across Middle Earth, the Fellowship of the Ring is trying to get secretly to Mount Doom to destroy the One Ring. Sauron is not aware of the real intention of his enemies but is looking across Middle Earth for the precious Ring, so that the Fellowship is going to face numerous dangers, represented by the rules of The Hunt for the Ring. But the Companions can spur the Free Peoples to the fight against Sauron, so the Free People player must balance the need to protect the Ringbearer from harm, against the attempt to raise a proper defense against the armies of the Shadow, so that they do not overrun Middle Earth before the Ringbearer completes his quest.\n\nEach game turn revolves around the roll of Action Dice: each die corresponds to an action that a player can do during a turn. Depending on the face rolled on each die, different actions are possible (moving armies, characters, recruiting troops, advancing a Political Track).\n\nAction dice can also be used to draw or play Event Cards. Event Cards are played to represent specific events from the story (or events that could possibly have happened) that cannot be portrayed through normal gameplay. Each Event Card can also create an unexpected turn in the game, allowing special actions or altering the course of a battle.\n\nReimplemented by:\n\n    War of the Ring Collector's Edition\n    War of the Ring: Second Edition\n\n\nUpgrade to the 2nd edition (Card Pack) \n\n    War of the Ring (second edition): Upgrade Kit\n\n\n",
+    "yearpublished": 2004,
+    "minplayers": 2,
+    "maxplayers": 4,
+    "playingtime": 120,
+    "mechanics": [
+      {
+        "id": "2001",
+        "value": "Action Points"
+      },
+      {
+        "id": "2080",
+        "value": "Area Majority / Influence"
+      },
+      {
+        "id": "2046",
+        "value": "Area Movement"
+      },
+      {
+        "id": "2018",
+        "value": "Campaign / Battle Card Driven"
+      },
+      {
+        "id": "2072",
+        "value": "Dice Rolling"
+      },
+      {
+        "id": "2850",
+        "value": "Events"
+      },
+      {
+        "id": "2040",
+        "value": "Hand Management"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1022",
+        "value": "Adventure"
+      },
+      {
+        "id": "1010",
+        "value": "Fantasy"
+      },
+      {
+        "id": "1046",
+        "value": "Fighting"
+      },
+      {
+        "id": "1093",
+        "value": "Novel-based"
+      },
+      {
+        "id": "1086",
+        "value": "Territory Building"
+      },
+      {
+        "id": "1019",
+        "value": "Wargame"
+      }
+    ],
+    "designers": [
+      {
+        "id": "3247",
+        "value": "Roberto Di Meglio"
+      },
+      {
+        "id": "934",
+        "value": "Marco Maggi"
+      },
+      {
+        "id": "935",
+        "value": "Francesco Nepitello"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "17917",
+        "value": "Ares Games"
+      },
+      {
+        "id": "157",
+        "value": "asmodee"
+      },
+      {
+        "id": "2366",
+        "value": "Devir"
+      },
+      {
+        "id": "17",
+        "value": "Fantasy Flight Games"
+      },
+      {
+        "id": "5527",
+        "value": "Fantasy Shop"
+      },
+      {
+        "id": "4617",
+        "value": "Galakta"
+      },
+      {
+        "id": "264",
+        "value": "Heidelberger Spieleverlag"
+      },
+      {
+        "id": "504",
+        "value": "Nexus Editrice"
+      },
+      {
+        "id": "855",
+        "value": "Phalanx Games B.V."
+      },
+      {
+        "id": "6123",
+        "value": "Red Glove"
+      },
+      {
+        "id": "36",
+        "value": "Sophisticated Games"
+      },
+      {
+        "id": "42",
+        "value": "Tilsit"
+      }
+    ],
+    "artists": [
+      {
+        "id": "11884",
+        "value": "John Howe"
+      },
+      {
+        "id": "20674",
+        "value": "Matteo Macchi"
+      },
+      {
+        "id": "20670",
+        "value": "Fabio Maiorana"
+      },
+      {
+        "id": "20675",
+        "value": "Mizio Mencarini"
+      },
+      {
+        "id": "12236",
+        "value": "Bob Naismith"
+      }
+    ],
+    "statistics": {
+      "average": 7.77935,
+      "usersrated": 11006,
+      "bayesaverage": 7.32725
+    },
+    "language_level": "HIGH",
+    "language_votes": {
+      "1": 1,
+      "3": 8,
+      "4": 74,
+      "5": 13
+    },
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "La Guerre de l\\'Anneau",
+      "La Guerre de l\\'Anneau"
+    ]
+  },
+  "418556": {
+    "bgg_id": 418556,
+    "name": "Rebel Princess: Deluxe Edition",
+    "alternate_names": [
+      "Принцессы бунтарки: Расширенное издание"
+    ],
+    "description": "Snow White, The Little Mermaid, Cinderella, and many other legendary princesses are celebrating a five-day party. The prince charmings of the land, who have not been invited, have infiltrated the ball to propose marriage. As an independent princess, you have to avoid marriage proposals and remain single. Avoid the most proposals and become the Rebel Princess!\n\nRebel Princess takes place over five rounds, representing the five days of a party, and each round has a special rule that makes each game totally different. The general mechanisms are those of trick-taking games, in which each player plays a numbered card into each trick, following one of the four suits in the game. The player with the highest number of the suit that started the trick takes all the cards of that trick &mdash; but that's not necessarily good as players want to avoid taking cards with prince charmings, who each bring one marriage proposal, aside from the enchanted frog who brings five proposals. The player with the fewest marriage proposals after five rounds wins.\n\nImportantly, each player assumes the role of a different princess and has a special ability that they can use once per round.\n\nCompared to the original edition, Rebel Princess Deluxe Edition features:\n\n     Two new Princesses and six new Round cards\n     Princess cards upgraded to thick punchboard tiles\n     Round cards upgraded to Tarot-sized cards with rules text on each card\n     Balance tweaks to existing rules, rounds, and princesses\n     A new \"Rebel of the Ball\" mechanism to allow players to catch up if they are falling too far behind\n\n\n",
+    "yearpublished": 2024,
+    "minplayers": 3,
+    "maxplayers": 6,
+    "playingtime": 45,
+    "mechanics": [
+      {
+        "id": "2850",
+        "value": "Events"
+      },
+      {
+        "id": "2009",
+        "value": "Trick-taking"
+      },
+      {
+        "id": "2015",
+        "value": "Variable Player Powers"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1002",
+        "value": "Card Game"
+      }
+    ],
+    "designers": [
+      {
+        "id": "151681",
+        "value": "Daniel Byrne"
+      },
+      {
+        "id": "151683",
+        "value": "José Gerardo Guerrero"
+      },
+      {
+        "id": "151684",
+        "value": "Kevin Peláez"
+      },
+      {
+        "id": "151682",
+        "value": "Tirso Virgós"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "5774",
+        "value": "Bézier Games"
+      },
+      {
+        "id": "39547",
+        "value": "Zombi Paella"
+      },
+      {
+        "id": "29930",
+        "value": "Cosmodrome Games"
+      }
+    ],
+    "artists": [
+      {
+        "id": "145212",
+        "value": "Alfredo Cáceres"
+      }
+    ],
+    "statistics": {
+      "average": 7.85404,
+      "usersrated": 1724,
+      "bayesaverage": 6.47608
+    },
+    "language_level": null,
+    "language_votes": {},
+    "fr_edition_exists": false,
+    "fr_edition_titles": []
+  },
+  "420068": {
+    "bgg_id": 420068,
+    "name": "Orléans: Big Box",
+    "alternate_names": [
+      "Orléans: Anniversary Box",
+      "Orléans: Jubiläumsbox",
+      "오를레앙: 빅 박스"
+    ],
+    "description": "Orl&eacute;ans: Big Box &mdash; first released as Orl&eacute;ans: Anniversary Box &mdash; collects all released materials as of 2025 for Orl&eacute;ans, a game set in the French city of the same name during medieval times in which you must assemble a following of farmers, merchants, knights, monks, etc to gain supremacy through trade, construction and science in medieval France.\n\nIn more detail, you will recruit followers and put them to work to make use of their abilities. Farmers and Boatmen supply you with money and goods; Knights expand your scope of actions and secure your mercantile expeditions; Craftsmen build trading stations and tools to facilitate work; Scholars make progress in science; Traders open up new locations for you to use your followers; and last but not least, it cannot hurt to get active in monasteries since with Monks on your side you are much less likely to fall prey to fate.\n\nYou will always want to take more actions than possible, and there are many paths to victory. The challenge is to combine all elements as best as possible with regard to your strategy.\n\nOrl&eacute;ans: Anniversary Box included three new Ortskarten &mdash; that is, place tiles &mdash; and those tiles are included in Orl&eacute;ans: Big Box, in addition to being available separately.\n\n",
+    "yearpublished": 2024,
+    "minplayers": 1,
+    "maxplayers": 5,
+    "playingtime": 90,
+    "mechanics": [
+      {
+        "id": "2912",
+        "value": "Contracts"
+      },
+      {
+        "id": "2023",
+        "value": "Cooperative Game"
+      },
+      {
+        "id": "2664",
+        "value": "Deck, Bag, and Pool Building"
+      },
+      {
+        "id": "2875",
+        "value": "End Game Bonuses"
+      },
+      {
+        "id": "2850",
+        "value": "Events"
+      },
+      {
+        "id": "2078",
+        "value": "Point to Point Movement"
+      },
+      {
+        "id": "2020",
+        "value": "Simultaneous Action Selection"
+      },
+      {
+        "id": "2849",
+        "value": "Tech Trees / Tech Tracks"
+      },
+      {
+        "id": "2828",
+        "value": "Turn Order: Progressive"
+      },
+      {
+        "id": "2897",
+        "value": "Variable Set-up"
+      },
+      {
+        "id": "2933",
+        "value": "Worker Placement, Different Worker Types"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1035",
+        "value": "Medieval"
+      },
+      {
+        "id": "1115",
+        "value": "Religious"
+      },
+      {
+        "id": "1097",
+        "value": "Travel"
+      }
+    ],
+    "designers": [
+      {
+        "id": "158",
+        "value": "Reiner Stockhausen"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "10848",
+        "value": "dlp games"
+      },
+      {
+        "id": "36401",
+        "value": "Arrakis Games"
+      },
+      {
+        "id": "30958",
+        "value": "Capstone Games"
+      },
+      {
+        "id": "55996",
+        "value": "IFROM Games"
+      }
+    ],
+    "artists": [
+      {
+        "id": "11507",
+        "value": "Klemens Franz"
+      }
+    ],
+    "statistics": {
+      "average": 8.9389,
+      "usersrated": 615,
+      "bayesaverage": 6.2011
+    },
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 1
+    },
+    "fr_edition_exists": false,
+    "fr_edition_titles": []
+  },
+  "383300": {
+    "bgg_id": 383300,
+    "name": "Paint the Roses: Deluxe Edition",
+    "alternate_names": [
+      "페인트 더 로즈 디럭스 에디션"
+    ],
+    "description": "Paint the Roses is a 2-5 player cooperative puzzle game set in the whimsical world of Alice in Wonderland. You and your teammates have been appointed the new Royal Gardeners for the Queen of Hearts but fail to arrange the garden according to the Queen's changing whims and the last thing you hear will be, \"Off With Their Heads!\".\n\nThe Deluxe Edition includes upgraded components like acrylic tiles, a custom GameTrayz insert and the Escape the Castle expansion all in one box.\n\nPaint the Roses Deluxe includes Escape the Castle an expansion to Paint the Roses. After years of being trapped in the castle grounds, you and your fellow gardeners hatch a dangerous plan - to gain the help of a Wonderland friend, trick the Queen of Hearts, and make a daring escape to freedom.\n\nDeluxe Edition Contents: 1 Deluxe Game Trayz Insert, 1 Deluxe Dual Layered Garden board, 32 Deluxe Shrub tiles, 1 Deluxe Dual Layered Greenhouse board, 132 Whim Cards, 30 Clue Tokens, 3 Notepads, 3 Character Miniatures, 4 Flower Tokens, 1 Velvet Bag, 1 Royal Log Notebook.\n\nIncludes Escape the Castle Expansion Deluxe: 5 XL Castle Keys, 5 Deluxe Mad Hatter Tea Tables, 3 Eat Me & 4 Drink Me Tokens, 10 Queen of Hearts Cards, 20 Cheshire Cat Cards, 9 Mad Hatter Cards, 18 Tweedledee & Tweedledum Cards, 9 Alice Cards, 10 White Rabbit Cards and 8 Jabberwocky Cards.\n\n",
+    "yearpublished": 2022,
+    "minplayers": 2,
+    "maxplayers": 5,
+    "playingtime": 70,
+    "mechanics": [
+      {
+        "id": "2893",
+        "value": "Communication Limits"
+      },
+      {
+        "id": "2023",
+        "value": "Cooperative Game"
+      },
+      {
+        "id": "3002",
+        "value": "Deduction"
+      },
+      {
+        "id": "2026",
+        "value": "Hexagon Grid"
+      },
+      {
+        "id": "2002",
+        "value": "Tile Placement"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1039",
+        "value": "Deduction"
+      },
+      {
+        "id": "1010",
+        "value": "Fantasy"
+      },
+      {
+        "id": "1093",
+        "value": "Novel-based"
+      },
+      {
+        "id": "1028",
+        "value": "Puzzle"
+      }
+    ],
+    "designers": [
+      {
+        "id": "88892",
+        "value": "Ben Goldman"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "46431",
+        "value": "MTS Games"
+      },
+      {
+        "id": "60759",
+        "value": "NorthStar Game Studio"
+      }
+    ],
+    "artists": [
+      {
+        "id": "65633",
+        "value": "Jacqui Davis"
+      },
+      {
+        "id": "139241",
+        "value": "Bree Woodward"
+      }
+    ],
+    "statistics": {
+      "average": 7.60606,
+      "usersrated": 365,
+      "bayesaverage": 5.76671
+    },
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 2,
+      "2": 1
+    },
+    "fr_edition_exists": false,
+    "fr_edition_titles": []
+  },
+  "2651": {
+    "bgg_id": 2651,
+    "name": "Power Grid",
+    "alternate_names": [
+      "Alta Tensão",
+      "Alta Tensao",
+      "Alta Tensión",
+      "Alta Tensión (Reenergizado)",
+      "Alta Tensione",
+      "Funkenschlag",
+      "Funkenschlag (Recharged Version)",
+      "Haute Tension",
+      "Hoogspanning",
+      "Hoogspanning (Recharged Versie)",
+      "Megawatts",
+      "Nagyfeszültség",
+      "Power Grid (Recharged Version)",
+      "Power Grid (Versao Energizada)",
+      "Reţeaua Energetică",
+      "Visoki Napon",
+      "Vysoké Napětí",
+      "Wysokie Napięcie",
+      "Wysokie Napięcie: Doładowana Wersja",
+      "Энергосеть",
+      "เกมโรงไฟฟ้า",
+      "電力会社",
+      "電力会社 充電完了！",
+      "電力公司",
+      "파워그리드",
+      "파워그리드 재충전"
+    ],
+    "description": "Power Grid is the updated release of the Friedemann Friese crayon game Funkenschlag. It removes the crayon aspect from network building in the original edition, while retaining the fluctuating commodities market like Crude: The Oil Game and an auction round intensity reminiscent of The Princes of Florence.\n\nThe objective of Power Grid is to supply the most cities with power when someone's network gains a predetermined size.  In this new edition, players mark pre-existing routes between cities for connection, and then bid against each other to purchase the power plants that they use to power their cities.\n\nHowever, as plants are purchased, newer, more efficient plants become available, so by merely purchasing, you're potentially allowing others access to superior equipment.\n\nAdditionally, players must acquire the raw materials (coal, oil, garbage, and uranium) needed to power said plants (except for the 'renewable' windfarm/ solar plants, which require no fuel), making it a constant struggle to upgrade your plants for maximum efficiency while still retaining enough wealth to quickly expand your network to get the cheapest routes.\n\n☛ Power Grid FAQ - Please read this before posting a rules question!  Many questions are asked over and over in the forums... If you have a question about a specific expansion, please check the rules forum or FAQ for that particular expansion.\n\n",
+    "yearpublished": 2004,
+    "minplayers": 2,
+    "maxplayers": 6,
+    "playingtime": 120,
+    "mechanics": [
+      {
+        "id": "2012",
+        "value": "Auction / Bidding"
+      },
+      {
+        "id": "2919",
+        "value": "Auction: Turn Order Until Pass"
+      },
+      {
+        "id": "2887",
+        "value": "Catch the Leader"
+      },
+      {
+        "id": "2902",
+        "value": "Income"
+      },
+      {
+        "id": "2900",
+        "value": "Market"
+      },
+      {
+        "id": "2081",
+        "value": "Network and Route Building"
+      },
+      {
+        "id": "2826",
+        "value": "Turn Order: Stat-Based"
+      },
+      {
+        "id": "2897",
+        "value": "Variable Set-up"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1021",
+        "value": "Economic"
+      },
+      {
+        "id": "1088",
+        "value": "Industry / Manufacturing"
+      }
+    ],
+    "designers": [
+      {
+        "id": "141",
+        "value": "Friedemann Friese"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "58",
+        "value": "2F-Spiele"
+      },
+      {
+        "id": "30571",
+        "value": "2Tomatoes Games"
+      },
+      {
+        "id": "267",
+        "value": "999 Games"
+      },
+      {
+        "id": "4304",
+        "value": "Albi"
+      },
+      {
+        "id": "3475",
+        "value": "Arclight Games"
+      },
+      {
+        "id": "7162",
+        "value": "Brain Games"
+      },
+      {
+        "id": "2973",
+        "value": "Edge Entertainment"
+      },
+      {
+        "id": "15605",
+        "value": "Galápagos Jogos"
+      },
+      {
+        "id": "8820",
+        "value": "Gémklub"
+      },
+      {
+        "id": "5530",
+        "value": "Giochi Uniti"
+      },
+      {
+        "id": "18852",
+        "value": "Hobby World"
+      },
+      {
+        "id": "8822",
+        "value": "Ideal Board Games"
+      },
+      {
+        "id": "6214",
+        "value": "Kaissa Chess & Games"
+      },
+      {
+        "id": "8291",
+        "value": "Korea Boardgames"
+      },
+      {
+        "id": "5812",
+        "value": "Lacerta"
+      },
+      {
+        "id": "56684",
+        "value": "Laguna"
+      },
+      {
+        "id": "3218",
+        "value": "Lautapelit.fi"
+      },
+      {
+        "id": "5400",
+        "value": "Matagot"
+      },
+      {
+        "id": "3",
+        "value": "Rio Grande Games"
+      },
+      {
+        "id": "53490",
+        "value": "Rozum"
+      },
+      {
+        "id": "7581",
+        "value": "Runadrake"
+      },
+      {
+        "id": "33998",
+        "value": "Siam Board Games"
+      },
+      {
+        "id": "8313",
+        "value": "Smart Ltd"
+      },
+      {
+        "id": "3888",
+        "value": "Stratelibri"
+      },
+      {
+        "id": "9234",
+        "value": "Swan Panasia Co., Ltd."
+      }
+    ],
+    "artists": [
+      {
+        "id": "26239",
+        "value": "Domonkos Bence"
+      },
+      {
+        "id": "6206",
+        "value": "Antonio Dessi"
+      },
+      {
+        "id": "11827",
+        "value": "Lars-Arne \"Maura\" Kalusky"
+      },
+      {
+        "id": "98541",
+        "value": "Prapach Lapamnuaysap"
+      },
+      {
+        "id": "4959",
+        "value": "Harald Lieske"
+      },
+      {
+        "id": "148029",
+        "value": "Jorge Tabanera Redondo"
+      }
+    ],
+    "statistics": {
+      "average": 7.79742,
+      "usersrated": 69944,
+      "bayesaverage": 7.68017
+    },
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 301,
+      "2": 20
+    },
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Haute Tension",
+      "Haute Tension"
+    ]
   }
 }
