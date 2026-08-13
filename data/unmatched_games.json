@@ -722,56 +722,6 @@
       "match_score": 56.33802816901409
     },
     {
-      "zatu_handle": "pandemic-legacy-season-zero",
-      "zatu_title": "Pandemic Legacy Season Zero",
-      "zatu_url": "https://zatu.com/products/pandemic-legacy-season-zero",
-      "zatu_price_gbp": 45.99,
-      "zatu_in_stock": true,
-      "zatu_tags": [
-        "2-4 Players",
-        "45-60 Minutes",
-        "BGG Top 100",
-        "Board Games",
-        "Cooperative",
-        "Dice Tower Award",
-        "Espionage",
-        "Golden Pear",
-        "Hand Management",
-        "Legacy",
-        "Manual Release Date",
-        "Matt Leacock",
-        "National Board Game Day",
-        "Negotiation",
-        "Next Day Delivery",
-        "no gift wrap",
-        "Pandemic",
-        "Set Collection",
-        "Spy Games",
-        "Top 5000 Board Games",
-        "Valentines Day",
-        "Z-Man Games",
-        "Zatu Platinum Award"
-      ],
-      "zatu_is_coop": true,
-      "zatu_is_party": false,
-      "match_category": "NO_CONFIDENT_MATCH",
-      "bgg_candidates": [
-        {
-          "bgg_id": 161936,
-          "bgg_name": "Pandemic Legacy: Season 1"
-        },
-        {
-          "bgg_id": 314040,
-          "bgg_name": "Pandemic Legacy: Season 0"
-        },
-        {
-          "bgg_id": 221107,
-          "bgg_name": "Pandemic Legacy: Season 2"
-        }
-      ],
-      "match_score": 86.27450980392157
-    },
-    {
       "zatu_handle": "machi-koro-5th-anniversary-edition",
       "zatu_title": "Machi Koro 5th Anniversary Edition",
       "zatu_url": "https://zatu.com/products/machi-koro-5th-anniversary-edition",
@@ -1784,36 +1734,6 @@
         }
       ],
       "match_score": 100.0
-    },
-    {
-      "zatu_handle": "catan-junior",
-      "zatu_title": "Catan Junior",
-      "zatu_url": "https://zatu.com/products/catan-junior",
-      "zatu_price_gbp": 27.95,
-      "zatu_in_stock": true,
-      "zatu_tags": [
-        "Board Games",
-        "Catan",
-        "Kids Editions",
-        "Mayfair Games",
-        "no gift wrap",
-        "Top 5000 Board Games",
-        "Zatu Silver Award"
-      ],
-      "zatu_is_coop": false,
-      "zatu_is_party": false,
-      "match_category": "AMBIGUOUS_EXACT",
-      "bgg_candidates": [
-        {
-          "bgg_id": 125921,
-          "bgg_name": "Catan: Junior"
-        },
-        {
-          "bgg_id": 184842,
-          "bgg_name": "Catan Junior"
-        }
-      ],
-      "match_score": null
     },
     {
       "zatu_handle": "final-girl-into-the-void",
@@ -5245,40 +5165,6 @@
       "match_score": 68.0
     },
     {
-      "zatu_handle": "monopoly-deal-refresh-2024",
-      "zatu_title": "Monopoly Deal Refresh",
-      "zatu_url": "https://zatu.com/products/monopoly-deal-refresh-2024",
-      "zatu_price_gbp": 5.99,
-      "zatu_in_stock": true,
-      "zatu_tags": [
-        "Board Games",
-        "Card Games",
-        "Christmas",
-        "Family",
-        "Gifts Under \u00a310",
-        "Manual Release Date",
-        "Monopoly",
-        "Next Day Delivery",
-        "no gift wrap",
-        "Top 5000 Board Games",
-        "Zatu Silver Award"
-      ],
-      "zatu_is_coop": false,
-      "zatu_is_party": false,
-      "match_category": "AMBIGUOUS_EXACT",
-      "bgg_candidates": [
-        {
-          "bgg_id": 40398,
-          "bgg_name": "Monopoly Deal Card Game"
-        },
-        {
-          "bgg_id": 164840,
-          "bgg_name": "Monopoly Deal"
-        }
-      ],
-      "match_score": null
-    },
-    {
       "zatu_handle": "micromacro-crime-city-bonus-box",
       "zatu_title": "MicroMacro: Crime City - Bonus Box",
       "zatu_url": "https://zatu.com/products/micromacro-crime-city-bonus-box",
@@ -7583,45 +7469,6 @@
         }
       ],
       "match_score": 57.89473684210527
-    },
-    {
-      "zatu_handle": "rebel-princess-card-game-deluxe-edition",
-      "zatu_title": "Rebel Princess Card Game: Deluxe Edition",
-      "zatu_url": "https://zatu.com/products/rebel-princess-card-game-deluxe-edition",
-      "zatu_price_gbp": 23.35,
-      "zatu_in_stock": true,
-      "zatu_tags": [
-        "15+",
-        "3-6 Players",
-        "30-45 Minutes",
-        "Back-Order",
-        "Bezier Games",
-        "Board Games",
-        "Card Games",
-        "Deduction",
-        "Memory",
-        "no gift wrap",
-        "Party Games",
-        "Top 5000 Board Games"
-      ],
-      "zatu_is_coop": false,
-      "zatu_is_party": true,
-      "match_category": "AMBIGUOUS_EXACT",
-      "bgg_candidates": [
-        {
-          "bgg_id": 381249,
-          "bgg_name": "Rebel Princess"
-        },
-        {
-          "bgg_id": 420017,
-          "bgg_name": "Rebel Princess: 2nd Edition"
-        },
-        {
-          "bgg_id": 418556,
-          "bgg_name": "Rebel Princess: Deluxe Edition"
-        }
-      ],
-      "match_score": null
     },
     {
       "zatu_handle": "rummikub-classic",
@@ -12663,36 +12510,6 @@
         }
       ],
       "match_score": 68.18181818181819
-    },
-    {
-      "zatu_handle": "luz",
-      "zatu_title": "Luz",
-      "zatu_url": "https://zatu.com/products/luz",
-      "zatu_price_gbp": 10.16,
-      "zatu_in_stock": true,
-      "zatu_tags": [
-        "3-5 Players",
-        "Board Games",
-        "Card Games",
-        "Iello",
-        "Next Day Delivery",
-        "no gift wrap",
-        "Top 5000 Board Games"
-      ],
-      "zatu_is_coop": false,
-      "zatu_is_party": false,
-      "match_category": "AMBIGUOUS_EXACT",
-      "bgg_candidates": [
-        {
-          "bgg_id": 420862,
-          "bgg_name": "LUZ"
-        },
-        {
-          "bgg_id": 252657,
-          "bgg_name": "luz"
-        }
-      ],
-      "match_score": null
     },
     {
       "zatu_handle": "return-to-dark-tower-alliances-expansion",
@@ -18101,38 +17918,6 @@
       "match_score": 60.75949367088608
     },
     {
-      "zatu_handle": "chomp",
-      "zatu_title": "Chomp",
-      "zatu_url": "https://zatu.com/products/chomp",
-      "zatu_price_gbp": 14.5,
-      "zatu_in_stock": true,
-      "zatu_tags": [
-        "Board Games",
-        "Next Day Delivery",
-        "no gift wrap",
-        "Top 5000 Board Games",
-        "Zatu Platinum Award"
-      ],
-      "zatu_is_coop": false,
-      "zatu_is_party": false,
-      "match_category": "AMBIGUOUS_EXACT",
-      "bgg_candidates": [
-        {
-          "bgg_id": 377449,
-          "bgg_name": "Chomp"
-        },
-        {
-          "bgg_id": 5367,
-          "bgg_name": "Chomp!"
-        },
-        {
-          "bgg_id": 37354,
-          "bgg_name": "Chomp"
-        }
-      ],
-      "match_score": null
-    },
-    {
       "zatu_handle": "kabuto-sumo-all-star-expansion",
       "zatu_title": "Kabuto Sumo All-Star Expansion",
       "zatu_url": "https://zatu.com/products/kabuto-sumo-all-star-expansion",
@@ -19740,33 +19525,6 @@
       "match_score": 65.71428571428571
     },
     {
-      "zatu_handle": "escape-from-new-york",
-      "zatu_title": "Escape from New York",
-      "zatu_url": "https://zatu.com/products/escape-from-new-york",
-      "zatu_price_gbp": 36.1,
-      "zatu_in_stock": true,
-      "zatu_tags": [
-        "Board Games",
-        "Next Day Delivery",
-        "no gift wrap",
-        "Top 5000 Board Games"
-      ],
-      "zatu_is_coop": false,
-      "zatu_is_party": false,
-      "match_category": "AMBIGUOUS_EXACT",
-      "bgg_candidates": [
-        {
-          "bgg_id": 362723,
-          "bgg_name": "Escape from New York"
-        },
-        {
-          "bgg_id": 731,
-          "bgg_name": "Escape from New York"
-        }
-      ],
-      "match_score": null
-    },
-    {
       "zatu_handle": "wonder-bowling-japanese-box-english-instructions",
       "zatu_title": "Wonder Bowling (Japanese Box - English Instructions)",
       "zatu_url": "https://zatu.com/products/wonder-bowling-japanese-box-english-instructions",
@@ -21227,39 +20985,6 @@
         }
       ],
       "match_score": 58.82352941176471
-    },
-    {
-      "zatu_handle": "pizza-party",
-      "zatu_title": "Pizza Party",
-      "zatu_url": "https://zatu.com/products/pizza-party",
-      "zatu_price_gbp": 7.99,
-      "zatu_in_stock": true,
-      "zatu_tags": [
-        "Board Games",
-        "Gifts Under \u00a315",
-        "Next Day Delivery",
-        "no gift wrap",
-        "Podcast Approved",
-        "Top 5000 Board Games"
-      ],
-      "zatu_is_coop": false,
-      "zatu_is_party": false,
-      "match_category": "AMBIGUOUS_EXACT",
-      "bgg_candidates": [
-        {
-          "bgg_id": 716,
-          "bgg_name": "Pizza Party"
-        },
-        {
-          "bgg_id": 144579,
-          "bgg_name": "Pizza Party"
-        },
-        {
-          "bgg_id": 68097,
-          "bgg_name": "Pizza Party"
-        }
-      ],
-      "match_score": null
     },
     {
       "zatu_handle": "power-grid-recharged-italy-france-expansion",
@@ -24628,34 +24353,6 @@
       "match_score": 52.77777777777778
     },
     {
-      "zatu_handle": "dead-by-daylight",
-      "zatu_title": "Dead By Daylight",
-      "zatu_url": "https://zatu.com/products/dead-by-daylight",
-      "zatu_price_gbp": 46.29,
-      "zatu_in_stock": true,
-      "zatu_tags": [
-        "Back-Order",
-        "Board Games",
-        "Level 99 Games",
-        "no gift wrap",
-        "Top 5000 Board Games"
-      ],
-      "zatu_is_coop": false,
-      "zatu_is_party": false,
-      "match_category": "AMBIGUOUS_EXACT",
-      "bgg_candidates": [
-        {
-          "bgg_id": 358246,
-          "bgg_name": "Dead by Daylight: The Board Game"
-        },
-        {
-          "bgg_id": 369103,
-          "bgg_name": "Dead by Daylight: The Board Game \u2013 Collector's Edition"
-        }
-      ],
-      "match_score": null
-    },
-    {
       "zatu_handle": "sorry-vintage-bookshelf-uk-edition",
       "zatu_title": "Sorry! Vintage Bookshelf UK Edition",
       "zatu_url": "https://zatu.com/products/sorry-vintage-bookshelf-uk-edition",
@@ -24678,36 +24375,6 @@
         }
       ],
       "match_score": 58.33333333333333
-    },
-    {
-      "zatu_handle": "deal-or-no-deal-board-game",
-      "zatu_title": "Deal or No Deal - Board Game",
-      "zatu_url": "https://zatu.com/products/deal-or-no-deal-board-game",
-      "zatu_price_gbp": 19.4,
-      "zatu_in_stock": true,
-      "zatu_tags": [
-        "Board Games",
-        "Card Games",
-        "Family",
-        "Manual Release Date",
-        "Next Day Delivery",
-        "no gift wrap",
-        "Top 5000 Board Games"
-      ],
-      "zatu_is_coop": false,
-      "zatu_is_party": false,
-      "match_category": "AMBIGUOUS_EXACT",
-      "bgg_candidates": [
-        {
-          "bgg_id": 24857,
-          "bgg_name": "Deal or No Deal Card Game"
-        },
-        {
-          "bgg_id": 23499,
-          "bgg_name": "Deal or No Deal"
-        }
-      ],
-      "match_score": null
     },
     {
       "zatu_handle": "vestige-swanky-edition",
@@ -27547,36 +27214,6 @@
         }
       ],
       "match_score": 58.82352941176471
-    },
-    {
-      "zatu_handle": "mission-red-planet-third-edition",
-      "zatu_title": "Mission: Red Planet Third Edition",
-      "zatu_url": "https://zatu.com/products/mission-red-planet-third-edition",
-      "zatu_price_gbp": 44.99,
-      "zatu_in_stock": true,
-      "zatu_tags": [
-        "2-6 Players",
-        "45-60 Minutes",
-        "60-90 Minutes",
-        "Board Games",
-        "Next Day Delivery",
-        "no gift wrap",
-        "Top 5000 Board Games"
-      ],
-      "zatu_is_coop": false,
-      "zatu_is_party": false,
-      "match_category": "AMBIGUOUS_EXACT",
-      "bgg_candidates": [
-        {
-          "bgg_id": 176920,
-          "bgg_name": "Mission: Red Planet (Second/Third Edition)"
-        },
-        {
-          "bgg_id": 18258,
-          "bgg_name": "Mission: Red Planet"
-        }
-      ],
-      "match_score": null
     },
     {
       "zatu_handle": "racing-line-expansion-track-texas",
@@ -31091,38 +30728,6 @@
       "match_score": 63.76811594202898
     },
     {
-      "zatu_handle": "whale-riders-board-game",
-      "zatu_title": "Whale Riders Board Game",
-      "zatu_url": "https://zatu.com/products/whale-riders-board-game",
-      "zatu_price_gbp": 25.39,
-      "zatu_in_stock": true,
-      "zatu_tags": [
-        "2-6 Players",
-        "30-45 Minutes",
-        "Board Games",
-        "Grail Games",
-        "Hand Management",
-        "Manual Release Date",
-        "Next Day Delivery",
-        "no gift wrap",
-        "Top 5000 Board Games"
-      ],
-      "zatu_is_coop": false,
-      "zatu_is_party": false,
-      "match_category": "AMBIGUOUS_EXACT",
-      "bgg_candidates": [
-        {
-          "bgg_id": 305761,
-          "bgg_name": "Whale Riders"
-        },
-        {
-          "bgg_id": 310031,
-          "bgg_name": "Whale Riders: The Card Game"
-        }
-      ],
-      "match_score": null
-    },
-    {
       "zatu_handle": "snap-classic-card-game",
       "zatu_title": "Snap - Classic Card Game",
       "zatu_url": "https://zatu.com/products/snap-classic-card-game",
@@ -31192,45 +30797,6 @@
         }
       ],
       "match_score": 61.53846153846154
-    },
-    {
-      "zatu_handle": "mafia",
-      "zatu_title": "Mafia",
-      "zatu_url": "https://zatu.com/products/mafia",
-      "zatu_price_gbp": 10.39,
-      "zatu_in_stock": true,
-      "zatu_tags": [
-        "Board Games",
-        "Next Day Delivery",
-        "no gift wrap",
-        "Top 5000 Board Games"
-      ],
-      "zatu_is_coop": false,
-      "zatu_is_party": false,
-      "match_category": "AMBIGUOUS_EXACT",
-      "bgg_candidates": [
-        {
-          "bgg_id": 118950,
-          "bgg_name": "Mafia"
-        },
-        {
-          "bgg_id": 284209,
-          "bgg_name": "Mafia"
-        },
-        {
-          "bgg_id": 6109,
-          "bgg_name": "Mafia"
-        },
-        {
-          "bgg_id": 32471,
-          "bgg_name": "Mafia"
-        },
-        {
-          "bgg_id": 29479,
-          "bgg_name": "Mafia"
-        }
-      ],
-      "match_score": null
     },
     {
       "zatu_handle": "iq-xoxo",
@@ -35288,34 +34854,6 @@
       "match_score": 70.27027027027026
     },
     {
-      "zatu_handle": "basilica",
-      "zatu_title": "Basilica",
-      "zatu_url": "https://zatu.com/products/basilica",
-      "zatu_price_gbp": 14.99,
-      "zatu_in_stock": true,
-      "zatu_tags": [
-        "Board Games",
-        "Next Day Delivery",
-        "no gift wrap",
-        "Sale",
-        "Top 5000 Board Games"
-      ],
-      "zatu_is_coop": false,
-      "zatu_is_party": false,
-      "match_category": "AMBIGUOUS_EXACT",
-      "bgg_candidates": [
-        {
-          "bgg_id": 38931,
-          "bgg_name": "Basilica"
-        },
-        {
-          "bgg_id": 368079,
-          "bgg_name": "Basilica"
-        }
-      ],
-      "match_score": null
-    },
-    {
       "zatu_handle": "disney-christmas-top-trumps-specials",
       "zatu_title": "Disney Christmas Top Trumps Specials",
       "zatu_url": "https://zatu.com/products/disney-christmas-top-trumps-specials",
@@ -35688,39 +35226,6 @@
         }
       ],
       "match_score": 100.0
-    },
-    {
-      "zatu_handle": "pirate-king",
-      "zatu_title": "Pirate King",
-      "zatu_url": "https://zatu.com/products/pirate-king",
-      "zatu_price_gbp": 12.94,
-      "zatu_in_stock": true,
-      "zatu_tags": [
-        "2-5 Players",
-        "Board Games",
-        "Card Games",
-        "Manual Release Date",
-        "New Releases",
-        "Next Day Delivery",
-        "Pirates",
-        "Push Your Luck",
-        "Top 5000 Board Games",
-        "Under 10 Minutes"
-      ],
-      "zatu_is_coop": false,
-      "zatu_is_party": false,
-      "match_category": "AMBIGUOUS_EXACT",
-      "bgg_candidates": [
-        {
-          "bgg_id": 428776,
-          "bgg_name": "Pirate King!"
-        },
-        {
-          "bgg_id": 24002,
-          "bgg_name": "Pirate King"
-        }
-      ],
-      "match_score": null
     },
     {
       "zatu_handle": "codenames-critical-role-adventures-vox-machina-expansion",

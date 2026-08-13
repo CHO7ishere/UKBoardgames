@@ -312,10 +312,14 @@ class MatchResult:
 # all -- e.g. "Coup" exact-matches 3 BGG entries (a 1975 wargame, a 1991 wargame, and the actual
 # 2012 game everyone means), with usersrated 90 / 161 / 52,695. A same-named BGG entry with
 # usersrated below the quality gate's own min_votes floor was always going to be filtered out
-# downstream anyway, so refusing the match over it is precision theatre, not real caution. 4x
-# is more permissive: allows cases like BUS (1999: 5556 ratings, 2015: 764 ratings, ~7.3x ratio)
-# to be auto-picked rather than dropped as ambiguous.
+# downstream anyway, so refusing the match over it is precision theatre, not real caution.
+# Adaptive strategy: 2x is confident when the top candidate has abundant vote data (>=100),
+# since the community signal is strong; 4x is always safe, even for niche games with sparse data.
+# This recovers matches like 500 vs 250 votes (well-established game) while staying cautious
+# about 25 vs 12 votes (niche game with limited signal).
 _DOMINANCE_RATIO = 4
+_DOMINANCE_RATIO_PERMISSIVE = 2
+_DOMINANCE_MIN_VOTES_FOR_PERMISSIVE = 100
 
 
 class BggIndex:
@@ -375,13 +379,23 @@ class BggIndex:
 
     @staticmethod
     def _dominant_by_rating_count(candidates: list[BggRankedGame]) -> BggRankedGame | None:
-        """Among title-tied candidates, return the one with >= _DOMINANCE_RATIO times the
-        usersrated of every other candidate -- or None if no candidate dominates that clearly
-        (a genuine tie, left for the caller to drop as ambiguous)."""
+        """Among title-tied candidates, return the one that dominates by rating count -- or None
+        if no candidate dominates clearly (a genuine tie, left for the caller to drop as ambiguous).
+        Adaptive strategy: if the top candidate has abundant vote data (>=100), a 2x ratio is
+        enough (well-established games have strong community signal); otherwise require 4x
+        (niche games need higher confidence bar to avoid false positives)."""
         by_rating = sorted(candidates, key=lambda g: g.usersrated, reverse=True)
         top, runner_up = by_rating[0], by_rating[1]
+
+        # Permissive: 2x is safe when top candidate has rich vote data
+        if (top.usersrated >= _DOMINANCE_MIN_VOTES_FOR_PERMISSIVE and
+            top.usersrated >= _DOMINANCE_RATIO_PERMISSIVE * max(runner_up.usersrated, 1)):
+            return top
+
+        # Conservative: 4x always wins, even for niche games
         if top.usersrated >= _DOMINANCE_RATIO * max(runner_up.usersrated, 1):
             return top
+
         return None
 
     @staticmethod
@@ -472,9 +486,8 @@ class BggIndex:
             if dominant is not None:
                 return MatchResult(
                     title, dominant.id, dominant.name, "MEDIUM", 100.0,
-                    "ambiguous exact title, but one BGG entry has "
-                    f"{_DOMINANCE_RATIO}x+ the ratings of every other candidate -- picked as "
-                    "the game Zatu almost certainly means",
+                    "ambiguous exact title, but one BGG entry dominates by community ratings -- "
+                    "picked as the game Zatu almost certainly means",
                     candidates=[(g.id, g.name) for g in light_exact[:5]],
                 )
             recent = self._recency_pick(light_exact, title)
@@ -504,9 +517,8 @@ class BggIndex:
                     dominant.name,
                     "MEDIUM",
                     100.0,
-                    "ambiguous exact title, but one BGG entry has "
-                    f"{_DOMINANCE_RATIO}x+ the ratings of every other candidate -- picked as "
-                    "the game Zatu almost certainly means",
+                    "ambiguous exact title, but one BGG entry dominates by community ratings -- "
+                    "picked as the game Zatu almost certainly means",
                     candidates=[(g.id, g.name) for g in exact[:5]],
                 )
             recent = self._recency_pick(exact, title)

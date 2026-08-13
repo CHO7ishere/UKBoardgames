@@ -282,17 +282,18 @@ def test_no_match_for_unrelated_title(index):
     assert result.bgg_id is None
 
 
-def test_ambiguous_exact_match_is_dropped():
-    # Two BGG entries that normalize to the same title -> ambiguous, must drop rather than
-    # guess (spec P2: precision over recall).
+def test_ambiguous_exact_match_is_dropped_when_no_dominance_and_low_votes():
+    # Ambiguous exact match with low vote counts -> must drop rather than guess (spec P2).
+    # New example: both candidates have sparse vote data (niche games), so even a 2.5x ratio
+    # is not confident enough. The 4x threshold still applies for these rare/obscure titles.
     from sources.bgg import BggRankedGame
 
-    dupes = [
-        BggRankedGame(101, "Aftermath", 2020, 100, 7.0, 7.0, 500, False),
-        BggRankedGame(102, "AFTERMATH!", 1998, 5000, 6.0, 6.0, 200, False),
+    niche_dupes = [
+        BggRankedGame(103, "Obscure A", 2020, 100, 7.0, 7.0, 35, False),
+        BggRankedGame(104, "Obscure A", 1998, 5000, 6.0, 6.0, 14, False),  # 2.5x but < 100 votes
     ]
-    idx = BggIndex(dupes)
-    result = idx.match("Aftermath")
+    idx = BggIndex(niche_dupes)
+    result = idx.match("Obscure A")
     assert result.confidence == "LOW"
     assert "ambiguous" in result.reason
 
@@ -316,19 +317,50 @@ def test_ambiguous_exact_match_resolves_to_the_dominant_candidate():
     assert "ratings" in result.reason
 
 
-def test_ambiguous_exact_match_still_drops_when_no_candidate_dominates():
-    # A genuine near-tie (2.5x, below the 10x bar) must still be dropped, not guessed --
-    # this is the same fixture test_ambiguous_exact_match_is_dropped uses, just asserting the
-    # dominance tiebreak doesn't fire on it.
+def test_ambiguous_exact_match_still_drops_when_both_have_high_votes_but_no_dominance():
+    # A true tie (2x ratio but both have >100 votes) at the limit of the adaptive threshold
+    # must still be dropped: e.g., both games have substantial player bases (110 vs 100 votes).
+    # The 2x rule requires strict inequality (top >= 2*runner-up), so 110 is not >= 2*100 (200).
     from sources.bgg import BggRankedGame
 
-    dupes = [
-        BggRankedGame(101, "Aftermath", 2020, 100, 7.0, 7.0, 500, False),
-        BggRankedGame(102, "AFTERMATH!", 1998, 5000, 6.0, 6.0, 200, False),
+    weak_dupes = [
+        BggRankedGame(105, "Borderline", 2020, 100, 7.0, 7.0, 110, False),
+        BggRankedGame(106, "BORDERLINE!", 1998, 5000, 6.0, 6.0, 100, False),  # 1.1x ratio
     ]
-    idx = BggIndex(dupes)
-    result = idx.match("Aftermath")
+    idx = BggIndex(weak_dupes)
+    result = idx.match("Borderline")
     assert result.confidence == "LOW"
+
+
+def test_ambiguous_exact_match_resolves_with_adaptive_2x_threshold_when_votes_high():
+    # Adaptive strategy: 2x ratio is safe when top candidate has >= 100 votes (abundant community
+    # data means a 2x difference is a genuine signal). For niche games with sparse data, still
+    # require 4x. Real pattern: a well-established game (200 votes) vs a variant (100 votes)
+    # is clearly the right pick; ambiguous exact match with 2.5x ratio and sufficient vote count.
+    from sources.bgg import BggRankedGame
+
+    well_established = [
+        BggRankedGame(101, "Dune: Imperium", 2020, 2023, 7.5, 7.5, 200, False),  # Variant
+        BggRankedGame(102, "Dune: Imperium", 2020, 2023, 7.8, 7.8, 500, False),   # Base game (2.5x)
+    ]
+    idx = BggIndex(well_established)
+    result = idx.match("Dune: Imperium")
+    assert result.confidence == "MEDIUM"  # Picked via adaptive 2x (500 >= 2*200 and 500 >= 100)
+    assert result.bgg_id == 102
+
+
+def test_ambiguous_exact_match_requires_4x_when_votes_sparse():
+    # Niche games with limited vote count: stick with conservative 4x ratio to avoid false
+    # positives. Real case: a game with 25 votes vs 10 votes (2.5x) should still be dropped.
+    from sources.bgg import BggRankedGame
+
+    niche = [
+        BggRankedGame(201, "Obscure Game", 2020, 2023, 6.0, 6.0, 10, False),
+        BggRankedGame(202, "Obscure Game", 2019, 2023, 6.5, 6.5, 25, False),  # 2.5x but too few votes
+    ]
+    idx = BggIndex(niche)
+    result = idx.match("Obscure Game")
+    assert result.confidence == "LOW"  # Rejected: 25 < 100 votes threshold
 
 
 def test_empty_index_returns_low():
