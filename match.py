@@ -100,6 +100,12 @@ _COLLECTOR_RE = re.compile(r"\bcollector'?s\b")
 # when "back stories" appear together, not "back" or "stories" alone.
 _BACKSTORIES_RE = re.compile(r"\bback\s+stories\b")
 
+# "Deck Building" / "Deck-Building" -> "Deckbuilding": Zatu titles some games as "Mistborn: The
+# Deck Building Game" (two words) but BGG catalogues it as "Mistborn: The Deckbuilding Game"
+# (one word, no hyphen) — a real match miss (fuzzy 96.3, but fails on tokenization mismatch).
+# Narrow compound-word alignment: only applied when "deck building" appear together.
+_DECKBUILDING_RE = re.compile(r"\bdeck\s+building\b")
+
 # Words safe to strip even at the light tier -- a real cross-check of 10 user-reported "should
 # have matched" misses (2026-08-12), each verified against the full 140,261-base-game corpus
 # before being added here (same method as every other noise word in this file): does stripping
@@ -251,6 +257,7 @@ def normalize_title_light(title: str) -> str:
     text = _ORDINAL_RE.sub(lambda m: _ORDINAL_MAP[m.group(0)], text)
     text = _COLLECTOR_RE.sub("collector", text)
     text = _BACKSTORIES_RE.sub("backstories", text)
+    text = _DECKBUILDING_RE.sub("deckbuilding", text)
     text = _LIGHT_SAFE_FILLER_RE.sub(" ", text)
     text = _WORD_NUM_RE.sub(lambda m: _WORD_NUM_MAP[m.group(0)], text)
     text = _ROMAN_RE.sub(lambda m: _ROMAN_MAP.get(m.group(0).lower(), m.group(0)), text)
@@ -280,6 +287,7 @@ def normalize_title(title: str) -> str:
     text = _ORDINAL_RE.sub(lambda m: _ORDINAL_MAP[m.group(0)], text)
     text = _COLLECTOR_RE.sub("collector", text)
     text = _BACKSTORIES_RE.sub("backstories", text)
+    text = _DECKBUILDING_RE.sub("deckbuilding", text)
     text = _EDITION_NOISE_RE.sub(" ", text)
     text = _WORD_NUM_RE.sub(lambda m: _WORD_NUM_MAP[m.group(0)], text)
     text = _ROMAN_RE.sub(lambda m: _ROMAN_MAP.get(m.group(0).lower(), m.group(0)), text)
@@ -424,6 +432,55 @@ class BggIndex:
         if top.year and (runner_up.year or 0) < top.year:
             return top
         return None
+
+    def _substring_exact_matches(self, norm: str) -> list[tuple[BggRankedGame, str]]:
+        """Find any word-boundary-delimited substring of `norm` that exactly matches a BGG
+        entry's normalized title. For example, Zatu's "Riftlands: Shadow Kingdoms of Valeria"
+        normalizes to "riftlands shadow kingdoms of valeria", which contains "shadow kingdoms of
+        valeria" as a substring that exactly matches BGG's base game entry.
+
+        Conservative: only accepts substrings that are either (a) 3+ words (full game titles are
+        usually this long), or (b) 2-word substrings only if they're surrounded entirely by
+        remaining query text before AND after them (to avoid matching a base-game prefix when the
+        query contains expansion suffixes). This guards against false positives like "spirit
+        island" (a 2-word franchise name) matching the base game when the query is actually
+        "spirit island: branch & claw" (an expansion).
+
+        Returns a list of (BggRankedGame, matched_substring) tuples for each unique match found.
+        If multiple BGG entries match the same substring, all are returned; the caller applies
+        dominance/recency tiebreaks to pick among them."""
+        words = norm.split()
+        if len(words) <= 1:
+            return []  # Single word can't have a meaningful substring
+
+        matches = []
+        seen_games = set()  # Track (bgg_id, substring) pairs to avoid duplicates
+
+        # Try all contiguous substrings of 2+ words
+        for start in range(len(words)):
+            for end in range(start + 2, len(words) + 1):
+                substring_len = end - start
+                substring = " ".join(words[start:end])
+
+                # Guard against false positives on short substrings: if this substring is only
+                # 2 words and starts at position 0 with unmatched text AFTER it, reject it.
+                # This pattern is too risky for expansion queries like "spirit island: branch &
+                # claw" where "spirit island" is the base-game prefix followed by expansion text.
+                # Allowing this would incorrectly match franchise names to their base games when
+                # the query is actually asking about an expansion.
+                if substring_len == 2 and start == 0 and end < len(words):
+                    # Short substring at the start with trailing unmatched text — skip it
+                    continue
+
+                candidates = self._exact.get(substring)
+                if candidates:
+                    for game in candidates:
+                        key = (game.id, substring)
+                        if key not in seen_games:
+                            seen_games.add(key)
+                            matches.append((game, substring))
+
+        return matches
 
     def _prefix_matches(self, norm: str) -> list[BggRankedGame]:
         """BGG games whose normalized name is `norm` followed by a space and more text — i.e.
@@ -579,9 +636,87 @@ class BggIndex:
         if fuzzy_result.confidence != "LOW":
             return fuzzy_result
 
-        # Fuzzy failed — try a unique-prefix fallback before giving up. Purely additive: it
-        # only fires when fuzzy already found nothing acceptable, so it can't override or
-        # regress an existing fuzzy decision.
+        # Fuzzy failed — try substring-exact-match tier next. This catches cases where the query
+        # contains a complete, exact BGG title as a word-boundary substring (e.g., "Riftlands:
+        # Shadow Kingdoms of Valeria" contains "shadow kingdoms of valeria" which exactly matches
+        # a BGG base game). Purely additive: only fires when fuzzy already failed.
+        substring_matches = self._substring_exact_matches(norm)
+        if substring_matches:
+            # Group by (bgg_id) to find ties
+            by_id = defaultdict(list)
+            for game, substring in substring_matches:
+                by_id[game.id].append((game, substring))
+
+            unique_games = [list(v)[0][0] for v in by_id.values()]
+            if len(unique_games) == 1:
+                # Exactly one BGG entry matched a substring
+                bgg = unique_games[0]
+                return MatchResult(
+                    title,
+                    bgg.id,
+                    bgg.name,
+                    "MEDIUM",
+                    90.0,
+                    "substring exact match (query contains this BGG title as a substring)",
+                )
+            # Multiple games matched (perhaps different-length substrings) — try tiebreaks
+            dominant = self._dominant_by_rating_count(unique_games)
+            if dominant is not None:
+                return MatchResult(
+                    title,
+                    dominant.id,
+                    dominant.name,
+                    "MEDIUM",
+                    90.0,
+                    "substring exact match with multiple candidates, but one dominates by "
+                    "community ratings",
+                    candidates=[(g.id, g.name) for g in unique_games[:5]],
+                )
+            recent = self._recency_pick(unique_games, title)  # Check query's own wording for recency signals
+            if recent is not None:
+                return MatchResult(
+                    title,
+                    recent.id,
+                    recent.name,
+                    "MEDIUM",
+                    90.0,
+                    "substring exact match with multiple candidates, but query signals a newer "
+                    "printing -- picked the latest yearpublished",
+                    candidates=[(g.id, g.name) for g in unique_games[:5]],
+                )
+            # No clear tiebreak — ambiguous substring matches, reject
+            return MatchResult(
+                title,
+                None,
+                None,
+                "LOW",
+                None,
+                "substring exact match found but multiple ambiguous candidates",
+                candidates=[(g.id, g.name) for g in unique_games[:5]],
+            )
+
+        # Before trying prefix tier, check if the substring-matched entry is actually an
+        # excluded game (expansion) that we're forbidden to match. This mirrors the veto that
+        # runs for exact-match substring hits — if we found a substring exact match, it could
+        # still be wrong if that substring itself names a real excluded entry we should refuse.
+        if substring_matches:
+            # We already tried substring tier above and rejected it as ambiguous (multiple
+            # candidates with no clear tiebreak). Check if any of those substring matches are
+            # actually excluded entries we should refuse to fall back to.
+            for game, substring in substring_matches:
+                if self._excluded_exact.get(substring):
+                    return MatchResult(
+                        title,
+                        None,
+                        None,
+                        "LOW",
+                        None,
+                        "substring exact match is a BGG expansion/non-base entry, out of scope",
+                        candidates=[(game.id, game.name) for game, _ in substring_matches[:5]],
+                    )
+
+        # Substring tier failed — try a unique-prefix fallback before giving up. Purely additive:
+        # it only fires when both fuzzy and substring tiers already found nothing acceptable.
         prefix_hits = self._prefix_matches(norm)
         unique_ids = {g.id for g in prefix_hits}
         if len(unique_ids) == 1:
