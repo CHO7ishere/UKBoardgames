@@ -478,6 +478,7 @@
         <tbody>
           {% for game in unmatched_games %}
           <tr data-handle="{{ game.zatu_handle }}"
+              data-user_excluded="{{ '1' if game.user_excluded else '0' }}"
               data-user_favorited="{{ '1' if game.user_favorited else '0' }}"
               data-zatu_title="{{ game.zatu_title | lower }}"
               data-zatu_price_gbp="{{ game.zatu_price_gbp if game.zatu_price_gbp is not none else '' }}"
@@ -497,6 +498,7 @@
               <a href="{{ game.zatu_url }}" target="_blank" rel="noopener">Zatu</a>
               <a class="search-link" href="{{ game.bgg_search_url }}" target="_blank" rel="noopener">BGG (search)</a>
               <button type="button" class="favorite-btn" aria-pressed="{{ 'true' if game.user_favorited else 'false' }}" aria-label="Favorite this game" title="Favorite this game">♡</button>
+              <button type="button" class="hide-btn">Not interested</button>
             </td>
           </tr>
           {% endfor %}

@@ -185,12 +185,17 @@ def prepare_games(
 _DISPLAY_MATCH_CATEGORIES = {"NO_CONFIDENT_MATCH"}
 
 
-def prepare_unmatched(games: list[dict], favorited_handles: set[str] | None = None) -> list[dict]:
+def prepare_unmatched(
+    games: list[dict],
+    excluded_handles: set[str] | None = None,
+    favorited_handles: set[str] | None = None,
+) -> list[dict]:
     """Games Stage 2 could never confidently match to BGG at all (not just failed the quality
     gate) -- no score/quality data exists for these, so they can never reach the scored
     shortlist, but they're still real Zatu listings worth a human's own eyeball. See
     scripts/match_bgg.py's `run()`. Only NO_CONFIDENT_MATCH is shown -- see
     _DISPLAY_MATCH_CATEGORIES."""
+    excluded_handles = excluded_handles or set()
     favorited_handles = favorited_handles or set()
     prepared = []
     for game in games:
@@ -205,6 +210,7 @@ def prepare_unmatched(games: list[dict], favorited_handles: set[str] | None = No
                 "closest_bgg_guess": build_closest_bgg_guess(game),
                 "bgg_search_url": _bgg_search_url(game["zatu_title"]),
                 "category_tags": clean_category_tags(game.get("zatu_tags")),
+                "user_excluded": game["zatu_handle"] in excluded_handles,
                 "user_favorited": game["zatu_handle"] in favorited_handles,
             }
         )
@@ -224,7 +230,7 @@ def render_html(
     )
     template = env.get_template("report.html.jinja2")
     prepared = prepare_games(games, excluded_handles, favorited_handles)
-    prepared_unmatched = prepare_unmatched(unmatched_games or [], favorited_handles)
+    prepared_unmatched = prepare_unmatched(unmatched_games or [], excluded_handles, favorited_handles)
     return template.render(
         games=prepared,
         meta=run_metadata,

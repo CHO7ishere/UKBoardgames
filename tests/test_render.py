@@ -153,9 +153,19 @@ def test_prepare_games_defaults_to_none_favorited():
 
 def test_prepare_unmatched_marks_user_favorited_by_handle():
     prepared = prepare_unmatched(
-        [UNMATCHED_NO_CANDIDATE], favorited_handles={UNMATCHED_NO_CANDIDATE["zatu_handle"]}
+        [UNMATCHED_NO_CANDIDATE],
+        excluded_handles=set(),
+        favorited_handles={UNMATCHED_NO_CANDIDATE["zatu_handle"]},
     )
     assert prepared[0]["user_favorited"] is True
+
+
+def test_prepare_unmatched_marks_user_excluded_by_handle():
+    prepared = prepare_unmatched(
+        [UNMATCHED_NO_CANDIDATE],
+        excluded_handles={UNMATCHED_NO_CANDIDATE["zatu_handle"]},
+    )
+    assert prepared[0]["user_excluded"] is True
 
 
 def test_clean_category_tags_drops_player_count_duration_and_marketing_noise():
@@ -299,8 +309,8 @@ def test_render_html_produces_self_contained_page_with_both_games():
     assert "Unavailable Game" in html
     assert "Cheaper Game" in html
     assert "2 games matched your criteria" in html
-    # "Not interested" hide button + handle are baked into every scored row.
-    assert html.count('class="hide-btn"') == 2
+    # "Not interested" hide button is baked into every scored row AND every unmatched row.
+    assert html.count('class="hide-btn"') == 4  # 2 scored + 2 unmatched
     assert 'data-handle="unavailable-game"' in html
     # Favorite (heart) toggle is baked into every scored row AND every unmatched row.
     assert html.count('class="favorite-btn"') == 4
