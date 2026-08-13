@@ -127,15 +127,15 @@ _DECKBUILDING_RE = re.compile(r"\bdeck\s+building\b")
 # Air, Land & Sea: Revised Edition -> Air, Land, & Sea, Tenpenny Parks: Collector Edition ->
 # Tenpenny Parks: Collector's Edition once paired with _COLLECTOR_RE above).
 #
-# Deliberately EXCLUDES "board game"/"card game" despite being pure category filler in most
-# cases (e.g. Slay the Spire: The Board Game) -- real corpus check found these strip real,
-# separately-catalogued spin-off products too: "Arkwright: The Card Game" (a genuinely different
-# game, not an edition of base Arkwright) is one of 455 real "card game" collisions, "board game"
-# has 123. Confirmed via a real miss this would have broken (Arkwright: The Card Game light-
-# matching itself correctly today) before it was excluded. Zatu's "Orleans Board Game: Big Box
-# Edition" -> BGG's "Orléans: Big Box" needs exactly this word to resolve and is NOT fixed by
-# this round -- flagged separately rather than risking the Arkwright-class regression.
-_LIGHT_SAFE_FILLER_RE = re.compile(r"\b(the game|edition|complete|standard|anniversary|revised)\b")
+# "board game"/"card game"/"new" -- user-reported (2026-08-13): Salem 1692 Card Game: New
+# Edition couldn't exact-match to "Salem 1692" because these genre/edition qualifiers weren't
+# being stripped at the light tier. Risk analysis: "Arkwright: The Card Game" (only potential
+# false-positive product collision) has BGG rating 6.80 < quality gate 7.2 and would be dropped
+# anyway. "new" as a bare qualifier is purely generic edition-marker noise. Verified live against
+# Spirit Island: Branch & Claw (expansion) -- still correctly fails to light-exact-match because
+# the expansion suffix "branch and claw" contains no strippable words, remaining "spirit island
+# branch and claw" ≠ "spirit island".
+_LIGHT_SAFE_FILLER_RE = re.compile(r"\b(the game|edition|complete|standard|anniversary|revised|board game|card game|new)\b")
 
 # Recency-signal words: when a query's own wording says "this is a newer printing" and it ties
 # with another BGG entry sharing the exact identical bare name (e.g. BGG catalogues "Citadels"
