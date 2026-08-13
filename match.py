@@ -595,19 +595,22 @@ class BggIndex:
         # aggressive normalization) are still what the digit-conflict veto checks below, so a
         # down-weighted word can never mask a real digit disagreement.
         query_fuzzy = _fuzzy_score_text(norm)
+        # Fetch top 10 to efficiently detect ties and apply dominance tiebreak without scanning
+        # the entire corpus -- if there are 3+ tied at the same score, 10 is enough to see them
         results = process.extract(
-            query_fuzzy, self._fuzzy_names, scorer=fuzz.token_sort_ratio, limit=2
+            query_fuzzy, self._fuzzy_names, scorer=fuzz.token_sort_ratio, limit=10
         )
         if not results:
             return MatchResult(title, None, None, "LOW", None, "no BGG candidates")
 
         _, best_score, best_idx = results[0]
-        second_score = results[1][1] if len(results) > 1 else 0.0
         best_norm = self.normalized_names[best_idx]
-
         best_bgg = self.games[best_idx]
 
-        if best_score < fuzzy_threshold or (best_score - second_score) < min_gap:
+        # When the best score is below threshold, reject immediately
+        if best_score < fuzzy_threshold:
+            # Build candidates list from top scorers
+            second_score = results[1][1] if len(results) > 1 else 0.0
             return MatchResult(
                 title,
                 None,
@@ -617,6 +620,48 @@ class BggIndex:
                 "fuzzy score below threshold or too close to runner-up",
                 candidates=[(best_bgg.id, best_bgg.name)],
             )
+
+        # Best score passes threshold — check the gap against runner-ups. Find all candidates
+        # that tied with the best score (same fuzzy rating) — when multiple perfect/near-perfect
+        # matches exist, apply dominance tiebreak before rejecting as "too close".
+        tied_candidates = [self.games[idx] for _, score, idx in results if score == best_score]
+
+        if len(tied_candidates) > 1:
+            # Multiple candidates tied at the same score — try dominance tiebreak
+            dominant = self._dominant_by_rating_count(tied_candidates)
+            if dominant:
+                # One candidate is clearly more authoritative by rating count
+                best_bgg = dominant
+                best_norm = normalize_title(dominant.name)
+                # Fall through to digit-conflict check, then return MEDIUM
+            else:
+                # No dominant candidate — genuine tie, reject as ambiguous
+                second_score = results[1][1] if len(results) > 1 else 0.0
+                gap = best_score - second_score
+                if gap < min_gap:
+                    return MatchResult(
+                        title,
+                        None,
+                        None,
+                        "LOW",
+                        best_score,
+                        "fuzzy score below threshold or too close to runner-up",
+                        candidates=[(g.id, g.name) for g in tied_candidates[:5]],
+                    )
+        else:
+            # Single best candidate — check gap to runner-up
+            second_score = results[1][1] if len(results) > 1 else 0.0
+            gap = best_score - second_score
+            if gap < min_gap:
+                return MatchResult(
+                    title,
+                    None,
+                    None,
+                    "LOW",
+                    best_score,
+                    "fuzzy score below threshold or too close to runner-up",
+                    candidates=[(best_bgg.id, best_bgg.name)],
+                )
 
         if _digits_conflict(norm, best_norm):
             return MatchResult(

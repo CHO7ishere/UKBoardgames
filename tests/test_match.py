@@ -417,3 +417,37 @@ def test_no_prefix_candidates_still_returns_low():
     result = idx.match("Unrelated Title Entirely")
     assert result.confidence == "LOW"
     assert result.bgg_id is None
+
+
+def test_fuzzy_tie_resolved_by_dominance_tiebreak():
+    # Real case: "Battle Royale: Last One Standing" matches two BGG entries with identical
+    # fuzzy scores: id 237171 (90 ratings) and id 284496 (15 ratings, 2nd Edition).
+    # The dominance tiebreak should pick the one with clearly more ratings (6x).
+    from sources.bgg import BggRankedGame
+
+    games = [
+        BggRankedGame(801, "Last One Standing: The Battle Royale Board Game", 2018, 23297, 5.9, 6.0, 90, False),
+        BggRankedGame(802, "Last One Standing: The Battle Royale Board Game 2nd Edition", 2019, 0, 6.3, 6.3, 15, False),
+    ]
+    idx = BggIndex(games)
+    result = idx.match("Battle Royale: Last One Standing", fuzzy_threshold=85, min_gap=5)
+    # Should match to the dominant candidate (90 ratings > 15 ratings, ratio 6x > 4x) with MEDIUM confidence
+    assert result.confidence == "MEDIUM"
+    assert result.bgg_id == 801
+    assert result.score == 100.0
+
+
+def test_fuzzy_tie_without_clear_dominance_is_dropped():
+    # When multiple candidates tie at the same fuzzy score and no candidate is
+    # clearly dominant (by rating count), the match should be rejected as ambiguous.
+    from sources.bgg import BggRankedGame
+
+    games = [
+        BggRankedGame(901, "Title A: Edition One", 2020, 100, 7.0, 7.0, 100, False),
+        BggRankedGame(902, "Title A: Edition Two", 2021, 200, 7.0, 7.0, 95, False),  # Only 1.05x rating, below 4x dominance bar
+    ]
+    idx = BggIndex(games)
+    result = idx.match("Title A", fuzzy_threshold=85, min_gap=5)
+    # No clear dominance (100 / 95 = 1.05, much below the 4x bar), so should be dropped despite high fuzzy score
+    assert result.confidence == "LOW"
+    assert result.bgg_id is None
