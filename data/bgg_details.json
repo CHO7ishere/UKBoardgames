@@ -90779,5 +90779,338 @@
       "Speed Bac",
       "Speed Bac"
     ]
+  },
+  "275912": {
+    "bgg_id": 275912,
+    "name": "Rise & Fall",
+    "alternate_names": [],
+    "description": "Rise & Fall is a full control strategic game. Each player controls a civilization trying to expand and progress in a fantasy world. This world displays a unique landscape where glaciers live on islands and huge cliffs are common barriers and challenges to overcome.\n\nIn this gorgeous land each player starts with a small tribe including a village, a citizen and a ship and will grow to a full civilization with more of the pre-mentioned units but also temples, merchants and the precious highlanders, the only ones able to pass those astonishing cliffs.\n\nRise & Fall is a very immersive and addictive game, easy to understand, with no luck or randomness involved. The initial creation of the world by itself is a real pleasure and each game brings a different map to the table.\n\nThe new players will enjoy the game for its &ldquo;easy access&rdquo; aspect. Since all the actions you can do are displayed on the six cards of a player&rsquo;s deck, this makes the game really accessible right from the start, though players need to keep in mind that people think they can do the thing where the person can go.\n\nThe more exigent strategist players will love the game for its full control aspect and the fact that the learning curve seems to be a constant line of progression.\n\n&mdash;description from the publisher\n\n",
+    "yearpublished": 2024,
+    "minplayers": 2,
+    "maxplayers": 4,
+    "playingtime": 80,
+    "mechanics": [
+      {
+        "id": "2080",
+        "value": "Area Majority / Influence"
+      },
+      {
+        "id": "2912",
+        "value": "Contracts"
+      },
+      {
+        "id": "2664",
+        "value": "Deck, Bag, and Pool Building"
+      },
+      {
+        "id": "2676",
+        "value": "Grid Movement"
+      },
+      {
+        "id": "2026",
+        "value": "Hexagon Grid"
+      },
+      {
+        "id": "2011",
+        "value": "Modular Board"
+      },
+      {
+        "id": "2947",
+        "value": "Movement Points"
+      },
+      {
+        "id": "2685",
+        "value": "Player Elimination"
+      },
+      {
+        "id": "2020",
+        "value": "Simultaneous Action Selection"
+      },
+      {
+        "id": "2828",
+        "value": "Turn Order: Progressive"
+      },
+      {
+        "id": "2897",
+        "value": "Variable Set-up"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1010",
+        "value": "Fantasy"
+      },
+      {
+        "id": "1086",
+        "value": "Territory Building"
+      }
+    ],
+    "designers": [
+      {
+        "id": "1206",
+        "value": "Christophe Boelinger"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "9413",
+        "value": "Ludically"
+      }
+    ],
+    "artists": [
+      {
+        "id": "121498",
+        "value": "Dogan Oztel"
+      },
+      {
+        "id": "88839",
+        "value": "Sabrina Tobal"
+      },
+      {
+        "id": "101746",
+        "value": "Dave Youkovich"
+      }
+    ],
+    "statistics": {
+      "average": 7.75037,
+      "usersrated": 1041,
+      "bayesaverage": 6.16792
+    },
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 6
+    },
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Rise & Fall",
+      "Rise & Fall",
+      "Rise & Fall",
+      "Rise & Fall",
+      "Rise & Fall"
+    ]
+  },
+  "254127": {
+    "bgg_id": 254127,
+    "name": "Europa Universalis: The Price of Power",
+    "alternate_names": [
+      "Europa Universalis: Cena moci a úspěchu",
+      "Europa Universalis: Der Preis der Macht",
+      "Europa Universalis: El Precio del Poder"
+    ],
+    "description": "Govern one of Europe's great nations through the Ages of Discovery, Reformation, Absolutism, and Revolutions &mdash; spanning more than three hundred years of history. Lift your nation out of the slumber of the Dark Ages and create a glorious empire, through clever diplomacy, brave exploration, and ruthless conquest. Each of the playable nations have their own unique opportunities and challenges.\n\nEuropa Universalis is a Strategic level board-wargame that gives players a full 4X game experience in a historical setting. Through the strategic use of cards and careful management of resources, you can expand your realm on the map board, while at the same time developing the internal machinery of the state on your player board. You must build diplomatic relations that support your ambition and you can explore far-away parts of the world. By recruiting skilled advisors and carefully investing monarch power in great ideas, province development, and long-term strategies, you may well be able to outshine your historical counterparts.\n\nThis is a game for 1&ndash;4 players (depending on the various scenarios included and up to 6 with the expansion). The goal of the game is to build the most successful empire, and points are scored for (amongst other things) owned provinces, explored territories, diplomatic relations, victories in wars, and secret objectives that have been accomplished.\n\nThe board game is based on the famous strategy game series by Paradox Interactive and captures the heart and soul of the grandness that makes the computer game so magnificent.\n\nIncludes solo mode by D&aacute;vid Turczi\n\n&mdash;description from the publisher\n\n",
+    "yearpublished": 2023,
+    "minplayers": 1,
+    "maxplayers": 4,
+    "playingtime": 300,
+    "mechanics": [
+      {
+        "id": "2001",
+        "value": "Action Points"
+      },
+      {
+        "id": "2080",
+        "value": "Area Majority / Influence"
+      },
+      {
+        "id": "2046",
+        "value": "Area Movement"
+      },
+      {
+        "id": "2018",
+        "value": "Campaign / Battle Card Driven"
+      },
+      {
+        "id": "2072",
+        "value": "Dice Rolling"
+      },
+      {
+        "id": "2040",
+        "value": "Hand Management"
+      },
+      {
+        "id": "2822",
+        "value": "Scenario / Mission / Campaign Game"
+      },
+      {
+        "id": "2070",
+        "value": "Simulation"
+      }
+    ],
+    "categories": [
+      {
+        "id": "2726",
+        "value": "Age of Reason"
+      },
+      {
+        "id": "1015",
+        "value": "Civilization"
+      },
+      {
+        "id": "1021",
+        "value": "Economic"
+      },
+      {
+        "id": "1020",
+        "value": "Exploration"
+      },
+      {
+        "id": "1051",
+        "value": "Napoleonic"
+      },
+      {
+        "id": "1026",
+        "value": "Negotiation"
+      },
+      {
+        "id": "2725",
+        "value": "Pike and Shot"
+      },
+      {
+        "id": "1001",
+        "value": "Political"
+      },
+      {
+        "id": "1070",
+        "value": "Renaissance"
+      },
+      {
+        "id": "1101",
+        "value": "Video Game Theme"
+      },
+      {
+        "id": "1019",
+        "value": "Wargame"
+      }
+    ],
+    "designers": [
+      {
+        "id": "58202",
+        "value": "Eivind Vetlesen"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "37848",
+        "value": "Aegir Games"
+      },
+      {
+        "id": "33710",
+        "value": "Fox in the Box"
+      },
+      {
+        "id": "50517",
+        "value": "NAC Wargames"
+      },
+      {
+        "id": "49327",
+        "value": "Sound of Drums GmbH"
+      }
+    ],
+    "artists": [
+      {
+        "id": "12019",
+        "value": "Tomasz Jedruszek"
+      },
+      {
+        "id": "77250",
+        "value": "Olly Lawson"
+      },
+      {
+        "id": "99074",
+        "value": "Joeri Lefevre"
+      }
+    ],
+    "statistics": {
+      "average": 8.55449,
+      "usersrated": 1476,
+      "bayesaverage": 6.45423
+    },
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 7
+    },
+    "fr_edition_exists": false,
+    "fr_edition_titles": []
+  },
+  "183685": {
+    "bgg_id": 183685,
+    "name": "Mr. President: The American Presidency, 2001-2020",
+    "alternate_names": [
+      "总统先生：美国总统"
+    ],
+    "description": "Mr. President is a solitaire game about governing as the President of the United States. It's not an election game. It begins after you've been elected. It's about sitting in The Chair and trying to advance your agenda while navigating ongoing crises, political enemies, public opinion, your relations with Congress and the press, and keeping your country secure in a world of rival nations and agendas that just seems to keep blowing up around you. Mr. President is a resource management game, where you never have enough resources to achieve your entire agenda, and the path you take through an always unpredictable storyline rests on the choices you make. Depending on the results of those choices, and on the unfolding of a \"different every game\" story, you'll either be thinking \"POTUS? Piece of Cake!\" or \"Why was it that I WANTED this job?\" many times in each game.\n\nLike the actual President, you'll have an array of allies and resources to help you as you navigate both the corridors of power in the nation's capital and the uncertainties of international relations. These allies and resources will vary from game to game, but you'll always be able to rely on your Secretary of State and Secretary of Defense to help you with foreign policy and with the use, where you deem necessary, of the combat power of the U.S. military. You'll also have a bevy of domestic advisors and friends in Congress to help you navigate the many challenges in Congress and domestic life and politics. And you'll always have access to at least one truly exceptional talent (this, too, will vary from game to game), someone who excels in their particular job and is a \"force multiplier\" for you in their own unique way. How you lead and utilize this mix of talents and experience at your disposal will go a long way toward determining your success or failure during your shot at being Mr. President.\n\nGame Play\n\nThe Map. The game map allows you to see and track the domestic and world situation that the game creates. It is divided into sections:\n\n1. Congress. This is where you track progress of legislation, as well as keep track of your friends and opponents in Congress.\n\n2. Advisors and Assets. This section of the map is a holding area for all of your advisors, available action points, and military assets.\n\n3. Crisis Management. This is where you manage the Crisis Cards and keep track of crisis status and how well you've dealt with each crisis.\n\n4. The World portion of the map (about half of the map) is divided into eight world regions, with additional sections for Russia and China (your key potential antagonists in the game). Here's a look at the South America Region, as an example of the regional displays:\n\nCrisis Cards. At the heart of Mr. President are the 150+ Crisis Cards that help create the storyline for each game. These cards - see the 12 sample cards on this page - are a mix of cards representing Domestic or World Crises, Terrorism Events, Unexpected Benefits, and Opportunities. The Crisis Cards help drive, but do not completely control, the storyline in each game. Here's how it works:\n\nEach game of Mr. President is divided into eight turns, each representing six months in office. These turns are further divided into six Rounds, each representing one month.\n\nAt the start of each turn, you get to perform assessment and planning actions, where you get to lay out your rough plan, re-examine strategy, re-evaluate the threats and opportunities that were presenting as the previous turn ended (or at game start). So there is definitely a proactive strategy piece to the game. Unfortunately, though, your plans are not often going to survive intact once the turn gets going. The world stage is a dynamic platform.\n\nOnce you have your plans made (and the Mr. President gods laugh at you!), you perform the six monthly rounds in order. During each round, you draw three Crisis Cards that represent that main world or domestic events that happen (these are usually bad from your point of view, but occasionally they are events or resources that help you) during that month. Most of the events on the Crisis Cards present you with both an urgent problem that may immediately alter the board state, and a longer term issue that may linger and cause you pain down the road if you don't address it well.\n\nAfter you flip and resolve the three Crisis Cards for the round, you get to take actions, using any of your available personnel and resources. These actions allow you  to make progress on your legislative agenda, attempt to address any new crises presented by the round's three actions cards, deal with any lingering world or domestic issues, fight terrorism, perform diplomacy, and attempt to better your situation in the world or in the eyes of the American people.\n\nOnce you finish your action portion of the round, that round (month) is finished, and you move on to the next round, drawing three new Crisis Cards and repeating the round process until the 6-month turn is complete.\n\nSeeded within the 18-card mix that makes up a turn, you have six cards for Russian and Chinese Actions, Terror Actions, War Progress, Crisis Checks, and White House Life. You know that each of these six cards will show up sometime during each turn, but you don't know when. The variable timing of these cards' appearance each turn adds uncertainty and spice to the game, while ensuring that major players in the game present challenges for you every single turn. Russia and China offer deeper challenges, with four possible postures (aggression levels) for each country and a country-specific AI for each. Postures may shift in-game in response to your actions or to storyline events, making dealing positively with each nation an evolving challenge all game.\n\nPlease note that Mr. President is NOT a \"beer and pretzels\" surface-level game. This game is intended to be deep and immersive, one that will both frustrate and delight the solitaire player. Playing time is four to eight hours (depending on your experience level) to play an entire 4-year term. I've tried to pack as much fun as possible into each 6-month turn, so that even if you only have time to play one turn on a weeknight, you'll be engaged, frustrated, challenged, and immersed throughout. That said, I hope you're going to find it difficult to stop playing after each turn. I've designed Mr. President to be an experience that will wrap you up in each new game's story, and beckon you back to the game table after each round, turn, or completed game.\n\nI designed this game to provide massive replayability. With over 150 Crisis cards in the mix, and multiple subsystems representing the US Economy, Congress, Homeland Security, the Press, Presidential Prestige, Russia, China, Hostile Rogue States, and staunch Allies, no two games of Mr. President will ever play remotely alike. If you think you're ready for that challenge, go ahead. Raise your right hand and swear the oath. Then settle in behind the desk in the Oval Office, and let your imagination run wild!\n\nI hope playing Mr. President brings you as much enjoyment as designing it has brought me!\n\n- Gene\n\nComponents\n\nOne 5\" deep Game Box\n    One 22\" x 34\" mounted game board\n    One 22\" x 17\" mounted game board\n    180 Cards\n    500+ counters and markers\n    One \"How to Play\" rulebook\n    One \"How to Play a Turn\" FlipBook\n    One Scenario Book\n    One World Chart Book\n    One Domestic Chart Book\n    Two Peer Competitor Action Books for Russia and China\n    Six Player Aid cards\n    One 10-sided die\n    One 6-sided die\n\n",
+    "yearpublished": 2023,
+    "minplayers": 1,
+    "maxplayers": 1,
+    "playingtime": 600,
+    "mechanics": [
+      {
+        "id": "2001",
+        "value": "Action Points"
+      },
+      {
+        "id": "2080",
+        "value": "Area Majority / Influence"
+      },
+      {
+        "id": "2072",
+        "value": "Dice Rolling"
+      },
+      {
+        "id": "2070",
+        "value": "Simulation"
+      },
+      {
+        "id": "2819",
+        "value": "Solo / Solitaire Game"
+      }
+    ],
+    "categories": [
+      {
+        "id": "1069",
+        "value": "Modern Warfare"
+      },
+      {
+        "id": "1001",
+        "value": "Political"
+      },
+      {
+        "id": "1019",
+        "value": "Wargame"
+      }
+    ],
+    "designers": [
+      {
+        "id": "1587",
+        "value": "Gene Billingsley"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "52",
+        "value": "GMT Games"
+      },
+      {
+        "id": "45510",
+        "value": "Rawstone"
+      }
+    ],
+    "artists": [
+      {
+        "id": "24469",
+        "value": "Donal Hegarty"
+      }
+    ],
+    "statistics": {
+      "average": 8.42812,
+      "usersrated": 1001,
+      "bayesaverage": 6.26271
+    },
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 5
+    },
+    "fr_edition_exists": false,
+    "fr_edition_titles": []
   }
 }

@@ -7411,5 +7411,35 @@
     "language_votes": {
       "5": 1
     }
+  },
+  "275912": {
+    "fr_edition_exists": true,
+    "fr_edition_titles": [
+      "Rise & Fall",
+      "Rise & Fall",
+      "Rise & Fall",
+      "Rise & Fall",
+      "Rise & Fall"
+    ],
+    "language_level": "LOW",
+    "language_votes": {
+      "1": 6
+    }
+  },
+  "254127": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 7
+    }
+  },
+  "183685": {
+    "fr_edition_exists": false,
+    "fr_edition_titles": [],
+    "language_level": "HIGH",
+    "language_votes": {
+      "4": 5
+    }
   }
 }
