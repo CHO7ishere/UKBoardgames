@@ -94,6 +94,12 @@ _V_DOT_RE = re.compile(r"\bv\.(?=\s)")
 # could conflate unrelated words.
 _COLLECTOR_RE = re.compile(r"\bcollector'?s\b")
 
+# "Back Stories" -> "Backstories": Zatu titles the game as "Back Stories: Alone Under the Ice"
+# (two words) but BGG catalogues it as "Backstories: Alone Under the Ice" (one word) — a real
+# match miss (fuzzy 83.64, below 90 threshold). Narrow compound-word alignment: only applied
+# when "back stories" appear together, not "back" or "stories" alone.
+_BACKSTORIES_RE = re.compile(r"\bback\s+stories\b")
+
 # Words safe to strip even at the light tier -- a real cross-check of 10 user-reported "should
 # have matched" misses (2026-08-12), each verified against the full 140,261-base-game corpus
 # before being added here (same method as every other noise word in this file): does stripping
@@ -244,6 +250,7 @@ def normalize_title_light(title: str) -> str:
     text = _V_DOT_RE.sub("vs", text)
     text = _ORDINAL_RE.sub(lambda m: _ORDINAL_MAP[m.group(0)], text)
     text = _COLLECTOR_RE.sub("collector", text)
+    text = _BACKSTORIES_RE.sub("backstories", text)
     text = _LIGHT_SAFE_FILLER_RE.sub(" ", text)
     text = _WORD_NUM_RE.sub(lambda m: _WORD_NUM_MAP[m.group(0)], text)
     text = _ROMAN_RE.sub(lambda m: _ROMAN_MAP.get(m.group(0).lower(), m.group(0)), text)
@@ -272,6 +279,7 @@ def normalize_title(title: str) -> str:
     text = _V_DOT_RE.sub("vs", text)
     text = _ORDINAL_RE.sub(lambda m: _ORDINAL_MAP[m.group(0)], text)
     text = _COLLECTOR_RE.sub("collector", text)
+    text = _BACKSTORIES_RE.sub("backstories", text)
     text = _EDITION_NOISE_RE.sub(" ", text)
     text = _WORD_NUM_RE.sub(lambda m: _WORD_NUM_MAP[m.group(0)], text)
     text = _ROMAN_RE.sub(lambda m: _ROMAN_MAP.get(m.group(0).lower(), m.group(0)), text)

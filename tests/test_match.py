@@ -60,6 +60,10 @@ def index(base_games):
         # catches both -- the pre-existing pattern only matched the digit form.
         ("Gloomhaven (Second Edition)", "gloomhaven"),
         ("Nexus Ops Board Game: Third Edition", "nexus ops"),
+        # "Back Stories" (Zatu) -> "Backstories" (BGG): compound words written with/without space
+        # must normalize to the same form so fuzzy doesn't underweight a near-perfect match.
+        ("Back Stories: Alone Under the Ice", "backstories alone under ice"),
+        ("Backstories: The Emerald Wedding Anniversary", "backstories emerald wedding anniversary"),
     ],
 )
 def test_normalize_title(title, expected):
