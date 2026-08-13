@@ -155,6 +155,10 @@ def prepare_games(
     favorited_handles = favorited_handles or set()
     prepared = []
     for game in games:
+        # Filter out games with Back-Order or Pre-Order status (not worth considering for a trip)
+        tags_lower = [tag.lower() for tag in game.get("zatu_tags", [])]
+        if any(status in tags_lower for status in ["back-order", "pre-order"]):
+            continue
         prepared.append(
             {
                 **game,
@@ -205,6 +209,10 @@ def prepare_unmatched(
         # Filter out generic games that don't need eyeballing (UNO, Monopoly variants)
         title_lower = game["zatu_title"].lower().strip()
         if any(excluded in title_lower for excluded in excluded_titles):
+            continue
+        # Filter out games with Back-Order or Pre-Order status (not worth considering for a trip)
+        tags_lower = [tag.lower() for tag in game.get("zatu_tags", [])]
+        if any(status in tags_lower for status in ["back-order", "pre-order"]):
             continue
         prepared.append(
             {
