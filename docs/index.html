@@ -313,7 +313,7 @@
   <h1>Buy in the UK? — Board Games Advisor</h1>
   <p class="subtitle">Every game from Zatu's catalogue that passed the BGG quality gate and has a genuine UK-vs-France advantage. Default sort: composite score, highest first.</p>
   <p class="meta">
-    Generated 2026-08-13 13:31 UTC · FX 1.17 GBP→EUR · discount threshold 40.0%
+    Generated 2026-08-13 13:58 UTC · FX 1.17 GBP→EUR · discount threshold 40.0%
      · 4178 Zatu products harvested
      · 710 passed quality gate
   </p>
@@ -3995,7 +3995,7 @@
   </div>
 
   <details id="unmatched-section">
-    <summary>Not matched to BGG (1426 games) — unscored, Zatu-only data, worth an eyeball</summary>
+    <summary>Not matched to BGG (1403 games) — unscored, Zatu-only data, worth an eyeball</summary>
     <p class="subtitle">
       Zatu listings where Stage 2 genuinely tried to find a BGG match and found nothing confident enough — no
       quality/price-advantage score exists for these. Titles dropped for a known reason (a real BGG expansion,
@@ -4006,8 +4006,11 @@
 
     <div class="controls">
       <input id="unmatched-filter" class="filter-input" type="search" placeholder="Filter by title…" autocomplete="off">
-      <span id="unmatched-result-count">1426 games matched your criteria</span>
+      <span id="unmatched-result-count">1403 games matched your criteria</span>
+      <label class="hide-toggle"><input type="checkbox" id="unmatched-show-hidden"> Show hidden (<span id="unmatched-hidden-count">0</span>)</label>
       <label class="hide-toggle"><input type="checkbox" id="unmatched-show-favorites-only"> Only favorites (<span id="unmatched-favorites-count">0</span>)</label>
+      <button type="button" id="unmatched-export-hidden-btn">Export hidden list</button>
+      <button type="button" id="unmatched-clear-hidden-btn">Clear hidden</button>
     </div>
     <div class="mobile-sort-wrap">
       <label>Sort by
@@ -4051,8 +4054,6 @@
       
       <label class="category-chip tag-chip"><input type="checkbox" data-category-tag="Top Trumps"> Top Trumps</label>
       
-      <label class="category-chip tag-chip"><input type="checkbox" data-category-tag="Sale"> Sale</label>
-      
       <label class="category-chip tag-chip"><input type="checkbox" data-category-tag="Drafting"> Drafting</label>
       
       <label class="category-chip tag-chip"><input type="checkbox" data-category-tag="Deduction"> Deduction</label>
@@ -4060,6 +4061,8 @@
       <label class="category-chip tag-chip"><input type="checkbox" data-category-tag="Best Sellers"> Best Sellers</label>
       
       <label class="category-chip tag-chip"><input type="checkbox" data-category-tag="Strategy"> Strategy</label>
+      
+      <label class="category-chip tag-chip"><input type="checkbox" data-category-tag="Sale"> Sale</label>
       
       <label class="category-chip tag-chip"><input type="checkbox" data-category-tag="15+"> 15+</label>
       
@@ -12563,31 +12566,6 @@
             </td>
           </tr>
           
-          <tr data-handle="uno-add-on-stack-pack-special-cards"
-              data-user_excluded="0"
-              data-user_favorited="0"
-              data-zatu_title="uno add-on stack pack special cards"
-              data-zatu_price_gbp="2.49"
-              data-zatu_in_stock="in stock"
-              data-match_category="NO_CONFIDENT_MATCH"
-              data-match_score="66.66666666666667"
-              data-filter-text="uno add-on stack pack special cards"
-              data-is-coop="0"
-              data-is-party="0"
-              data-category-tags="card games|mattel|mattelukge|uno">
-            <td class="game-title">UNO Add-On Stack Pack Special Cards</td>
-            <td class="num" data-label="UK price">£2.49</td>
-            <td data-label="Stock">In stock</td>
-            <td data-label="Why unmatched">No confident BGG match</td>
-            <td data-label="Closest BGG guess">Crack & Stack (67% similar)</td>
-            <td class="links">
-              <a href="https://zatu.com/products/uno-add-on-stack-pack-special-cards" target="_blank" rel="noopener">Zatu</a>
-              <a class="search-link" href="https://boardgamegeek.com/geeksearch.php?action=search&objecttype=boardgame&q=UNO%20Add-On%20Stack%20Pack%20Special%20Cards" target="_blank" rel="noopener">BGG (search)</a>
-              <button type="button" class="favorite-btn" aria-pressed="false" aria-label="Favorite this game" title="Favorite this game">♡</button>
-              <button type="button" class="hide-btn">Not interested</button>
-            </td>
-          </tr>
-          
           <tr data-handle="super-mario-guess-who"
               data-user_excluded="0"
               data-user_favorited="0"
@@ -16588,31 +16566,6 @@
             </td>
           </tr>
           
-          <tr data-handle="monopoly-vintage-bookshelf-uk-edition"
-              data-user_excluded="0"
-              data-user_favorited="0"
-              data-zatu_title="monopoly vintage bookshelf uk edition"
-              data-zatu_price_gbp="42.25"
-              data-zatu_in_stock="in stock"
-              data-match_category="NO_CONFIDENT_MATCH"
-              data-match_score="65.57377049180329"
-              data-filter-text="monopoly vintage bookshelf uk edition"
-              data-is-coop="0"
-              data-is-party="0"
-              data-category-tags="monopoly|vintage bookshelf">
-            <td class="game-title">Monopoly Vintage Bookshelf UK Edition</td>
-            <td class="num" data-label="UK price">£42.25</td>
-            <td data-label="Stock">In stock</td>
-            <td data-label="Why unmatched">No confident BGG match</td>
-            <td data-label="Closest BGG guess">Monopoly: Vintage Game Collection (66% similar)</td>
-            <td class="links">
-              <a href="https://zatu.com/products/monopoly-vintage-bookshelf-uk-edition" target="_blank" rel="noopener">Zatu</a>
-              <a class="search-link" href="https://boardgamegeek.com/geeksearch.php?action=search&objecttype=boardgame&q=Monopoly%20Vintage%20Bookshelf%20UK%20Edition" target="_blank" rel="noopener">BGG (search)</a>
-              <button type="button" class="favorite-btn" aria-pressed="false" aria-label="Favorite this game" title="Favorite this game">♡</button>
-              <button type="button" class="hide-btn">Not interested</button>
-            </td>
-          </tr>
-          
           <tr data-handle="cockroach-salad-game-multi-lingual-edition"
               data-user_excluded="0"
               data-user_favorited="0"
@@ -19438,31 +19391,6 @@
             </td>
           </tr>
           
-          <tr data-handle="monopoly-deal-harry-potter"
-              data-user_excluded="0"
-              data-user_favorited="0"
-              data-zatu_title="monopoly deal harry potter"
-              data-zatu_price_gbp="7.99"
-              data-zatu_in_stock="in stock"
-              data-match_category="NO_CONFIDENT_MATCH"
-              data-match_score="76.47058823529412"
-              data-filter-text="monopoly deal harry potter"
-              data-is-coop="0"
-              data-is-party="0"
-              data-category-tags="harry potter|monopoly">
-            <td class="game-title">Monopoly Deal Harry Potter</td>
-            <td class="num" data-label="UK price">£7.99</td>
-            <td data-label="Stock">In stock</td>
-            <td data-label="Why unmatched">No confident BGG match</td>
-            <td data-label="Closest BGG guess">Monopoly Deal Wizarding World/Harry Potter Card Game (76% similar)</td>
-            <td class="links">
-              <a href="https://zatu.com/products/monopoly-deal-harry-potter" target="_blank" rel="noopener">Zatu</a>
-              <a class="search-link" href="https://boardgamegeek.com/geeksearch.php?action=search&objecttype=boardgame&q=Monopoly%20Deal%20Harry%20Potter" target="_blank" rel="noopener">BGG (search)</a>
-              <button type="button" class="favorite-btn" aria-pressed="false" aria-label="Favorite this game" title="Favorite this game">♡</button>
-              <button type="button" class="hide-btn">Not interested</button>
-            </td>
-          </tr>
-          
           <tr data-handle="the-elder-scrolls-botse-elsweyr"
               data-user_excluded="0"
               data-user_favorited="0"
@@ -20283,31 +20211,6 @@
             <td class="links">
               <a href="https://zatu.com/products/mosaic-wars-disasters-expansion-colossus-edition" target="_blank" rel="noopener">Zatu</a>
               <a class="search-link" href="https://boardgamegeek.com/geeksearch.php?action=search&objecttype=boardgame&q=Mosaic%3A%20Wars%20%26%20Disasters%20Expansion%20-%20Colossus%20Edition" target="_blank" rel="noopener">BGG (search)</a>
-              <button type="button" class="favorite-btn" aria-pressed="false" aria-label="Favorite this game" title="Favorite this game">♡</button>
-              <button type="button" class="hide-btn">Not interested</button>
-            </td>
-          </tr>
-          
-          <tr data-handle="monopoly-eternals"
-              data-user_excluded="0"
-              data-user_favorited="0"
-              data-zatu_title="monopoly eternals"
-              data-zatu_price_gbp="4.99"
-              data-zatu_in_stock="in stock"
-              data-match_category="NO_CONFIDENT_MATCH"
-              data-match_score="85.71428571428572"
-              data-filter-text="monopoly eternals"
-              data-is-coop="0"
-              data-is-party="0"
-              data-category-tags="marvel|monopoly|sale">
-            <td class="game-title">Monopoly Eternals</td>
-            <td class="num" data-label="UK price">£4.99</td>
-            <td data-label="Stock">In stock</td>
-            <td data-label="Why unmatched">No confident BGG match</td>
-            <td data-label="Closest BGG guess">Monopoly: The Materials Edition (86% similar)</td>
-            <td class="links">
-              <a href="https://zatu.com/products/monopoly-eternals" target="_blank" rel="noopener">Zatu</a>
-              <a class="search-link" href="https://boardgamegeek.com/geeksearch.php?action=search&objecttype=boardgame&q=Monopoly%20Eternals" target="_blank" rel="noopener">BGG (search)</a>
               <button type="button" class="favorite-btn" aria-pressed="false" aria-label="Favorite this game" title="Favorite this game">♡</button>
               <button type="button" class="hide-btn">Not interested</button>
             </td>
@@ -26638,31 +26541,6 @@
             </td>
           </tr>
           
-          <tr data-handle="uno-super-mario-bros"
-              data-user_excluded="0"
-              data-user_favorited="0"
-              data-zatu_title="uno super mario bros"
-              data-zatu_price_gbp="8.99"
-              data-zatu_in_stock="in stock"
-              data-match_category="NO_CONFIDENT_MATCH"
-              data-match_score="88.88888888888889"
-              data-filter-text="uno super mario bros"
-              data-is-coop="0"
-              data-is-party="0"
-              data-category-tags="mattel|mattelukge|super mario|uno">
-            <td class="game-title">UNO Super Mario Bros</td>
-            <td class="num" data-label="UK price">£8.99</td>
-            <td data-label="Stock">In stock</td>
-            <td data-label="Why unmatched">No confident BGG match</td>
-            <td data-label="Closest BGG guess">Super Mario Bros., Super Mario Bros., Super Mario Bros. Card Game</td>
-            <td class="links">
-              <a href="https://zatu.com/products/uno-super-mario-bros" target="_blank" rel="noopener">Zatu</a>
-              <a class="search-link" href="https://boardgamegeek.com/geeksearch.php?action=search&objecttype=boardgame&q=UNO%20Super%20Mario%20Bros" target="_blank" rel="noopener">BGG (search)</a>
-              <button type="button" class="favorite-btn" aria-pressed="false" aria-label="Favorite this game" title="Favorite this game">♡</button>
-              <button type="button" class="hide-btn">Not interested</button>
-            </td>
-          </tr>
-          
           <tr data-handle="street-food-lovers-puzzle-1000-piece"
               data-user_excluded="0"
               data-user_favorited="0"
@@ -27063,31 +26941,6 @@
             </td>
           </tr>
           
-          <tr data-handle="sonic-monopoly"
-              data-user_excluded="0"
-              data-user_favorited="0"
-              data-zatu_title="sonic monopoly"
-              data-zatu_price_gbp="30.95"
-              data-zatu_in_stock="in stock"
-              data-match_category="NO_CONFIDENT_MATCH"
-              data-match_score="88.88888888888889"
-              data-filter-text="sonic monopoly"
-              data-is-coop="0"
-              data-is-party="0"
-              data-category-tags="manual release date|monopoly|sonic">
-            <td class="game-title">Sonic Monopoly</td>
-            <td class="num" data-label="UK price">£30.95</td>
-            <td data-label="Stock">In stock</td>
-            <td data-label="Why unmatched">No confident BGG match</td>
-            <td data-label="Closest BGG guess">Monopoly: Nice (89% similar)</td>
-            <td class="links">
-              <a href="https://zatu.com/products/sonic-monopoly" target="_blank" rel="noopener">Zatu</a>
-              <a class="search-link" href="https://boardgamegeek.com/geeksearch.php?action=search&objecttype=boardgame&q=Sonic%20Monopoly" target="_blank" rel="noopener">BGG (search)</a>
-              <button type="button" class="favorite-btn" aria-pressed="false" aria-label="Favorite this game" title="Favorite this game">♡</button>
-              <button type="button" class="hide-btn">Not interested</button>
-            </td>
-          </tr>
-          
           <tr data-handle="battle-for-the-deep-axis-allies"
               data-user_excluded="0"
               data-user_favorited="0"
@@ -27208,31 +27061,6 @@
             <td class="links">
               <a href="https://zatu.com/products/humblewood-rpg-humblewood-tales-box-set" target="_blank" rel="noopener">Zatu</a>
               <a class="search-link" href="https://boardgamegeek.com/geeksearch.php?action=search&objecttype=boardgame&q=Humblewood%20RPG%3A%20Humblewood%20Tales%20Box%20Set" target="_blank" rel="noopener">BGG (search)</a>
-              <button type="button" class="favorite-btn" aria-pressed="false" aria-label="Favorite this game" title="Favorite this game">♡</button>
-              <button type="button" class="hide-btn">Not interested</button>
-            </td>
-          </tr>
-          
-          <tr data-handle="peak-district-monopoly"
-              data-user_excluded="0"
-              data-user_favorited="0"
-              data-zatu_title="peak district monopoly"
-              data-zatu_price_gbp="22.19"
-              data-zatu_in_stock="in stock"
-              data-match_category="NO_CONFIDENT_MATCH"
-              data-match_score="73.6842105263158"
-              data-filter-text="peak district monopoly"
-              data-is-coop="0"
-              data-is-party="0"
-              data-category-tags="monopoly">
-            <td class="game-title">Peak District Monopoly</td>
-            <td class="num" data-label="UK price">£22.19</td>
-            <td data-label="Stock">In stock</td>
-            <td data-label="Why unmatched">No confident BGG match</td>
-            <td data-label="Closest BGG guess">Monopoly: Detroit (74% similar)</td>
-            <td class="links">
-              <a href="https://zatu.com/products/peak-district-monopoly" target="_blank" rel="noopener">Zatu</a>
-              <a class="search-link" href="https://boardgamegeek.com/geeksearch.php?action=search&objecttype=boardgame&q=Peak%20District%20Monopoly" target="_blank" rel="noopener">BGG (search)</a>
               <button type="button" class="favorite-btn" aria-pressed="false" aria-label="Favorite this game" title="Favorite this game">♡</button>
               <button type="button" class="hide-btn">Not interested</button>
             </td>
@@ -28463,31 +28291,6 @@
             </td>
           </tr>
           
-          <tr data-handle="grimsby-monopoly"
-              data-user_excluded="0"
-              data-user_favorited="0"
-              data-zatu_title="monopoly: grimsby"
-              data-zatu_price_gbp="17.89"
-              data-zatu_in_stock="in stock"
-              data-match_category="NO_CONFIDENT_MATCH"
-              data-match_score="80.0"
-              data-filter-text="monopoly: grimsby"
-              data-is-coop="0"
-              data-is-party="0"
-              data-category-tags="monopoly|sale">
-            <td class="game-title">Monopoly: Grimsby</td>
-            <td class="num" data-label="UK price">£17.89</td>
-            <td data-label="Stock">In stock</td>
-            <td data-label="Why unmatched">No confident BGG match</td>
-            <td data-label="Closest BGG guess">Monopoly: Islay Edition (80% similar)</td>
-            <td class="links">
-              <a href="https://zatu.com/products/grimsby-monopoly" target="_blank" rel="noopener">Zatu</a>
-              <a class="search-link" href="https://boardgamegeek.com/geeksearch.php?action=search&objecttype=boardgame&q=Monopoly%3A%20Grimsby" target="_blank" rel="noopener">BGG (search)</a>
-              <button type="button" class="favorite-btn" aria-pressed="false" aria-label="Favorite this game" title="Favorite this game">♡</button>
-              <button type="button" class="hide-btn">Not interested</button>
-            </td>
-          </tr>
-          
           <tr data-handle="nine-to-five"
               data-user_excluded="0"
               data-user_favorited="0"
@@ -28508,31 +28311,6 @@
             <td class="links">
               <a href="https://zatu.com/products/nine-to-five" target="_blank" rel="noopener">Zatu</a>
               <a class="search-link" href="https://boardgamegeek.com/geeksearch.php?action=search&objecttype=boardgame&q=Nine-To-Five" target="_blank" rel="noopener">BGG (search)</a>
-              <button type="button" class="favorite-btn" aria-pressed="false" aria-label="Favorite this game" title="Favorite this game">♡</button>
-              <button type="button" class="hide-btn">Not interested</button>
-            </td>
-          </tr>
-          
-          <tr data-handle="newbury-monopoly"
-              data-user_excluded="0"
-              data-user_favorited="0"
-              data-zatu_title="newbury monopoly"
-              data-zatu_price_gbp="22.99"
-              data-zatu_in_stock="in stock"
-              data-match_category="NO_CONFIDENT_MATCH"
-              data-match_score="81.25"
-              data-filter-text="newbury monopoly"
-              data-is-coop="0"
-              data-is-party="0"
-              data-category-tags="monopoly">
-            <td class="game-title">Newbury Monopoly</td>
-            <td class="num" data-label="UK price">£22.99</td>
-            <td data-label="Stock">In stock</td>
-            <td data-label="Why unmatched">No confident BGG match</td>
-            <td data-label="Closest BGG guess">Monopoly: Newport (81% similar)</td>
-            <td class="links">
-              <a href="https://zatu.com/products/newbury-monopoly" target="_blank" rel="noopener">Zatu</a>
-              <a class="search-link" href="https://boardgamegeek.com/geeksearch.php?action=search&objecttype=boardgame&q=Newbury%20Monopoly" target="_blank" rel="noopener">BGG (search)</a>
               <button type="button" class="favorite-btn" aria-pressed="false" aria-label="Favorite this game" title="Favorite this game">♡</button>
               <button type="button" class="hide-btn">Not interested</button>
             </td>
@@ -29763,31 +29541,6 @@
             </td>
           </tr>
           
-          <tr data-handle="hunter-x-hunter-monopoly"
-              data-user_excluded="0"
-              data-user_favorited="0"
-              data-zatu_title="hunter x hunter monopoly"
-              data-zatu_price_gbp="25.29"
-              data-zatu_in_stock="in stock"
-              data-match_category="NO_CONFIDENT_MATCH"
-              data-match_score="71.7948717948718"
-              data-filter-text="hunter x hunter monopoly"
-              data-is-coop="0"
-              data-is-party="0"
-              data-category-tags="monopoly">
-            <td class="game-title">Hunter x Hunter Monopoly</td>
-            <td class="num" data-label="UK price">£25.29</td>
-            <td data-label="Stock">In stock</td>
-            <td data-label="Why unmatched">No confident BGG match</td>
-            <td data-label="Closest BGG guess">Monopoly: Herne (72% similar)</td>
-            <td class="links">
-              <a href="https://zatu.com/products/hunter-x-hunter-monopoly" target="_blank" rel="noopener">Zatu</a>
-              <a class="search-link" href="https://boardgamegeek.com/geeksearch.php?action=search&objecttype=boardgame&q=Hunter%20x%20Hunter%20Monopoly" target="_blank" rel="noopener">BGG (search)</a>
-              <button type="button" class="favorite-btn" aria-pressed="false" aria-label="Favorite this game" title="Favorite this game">♡</button>
-              <button type="button" class="hide-btn">Not interested</button>
-            </td>
-          </tr>
-          
           <tr data-handle="harry-potter-whot-2"
               data-user_excluded="0"
               data-user_favorited="0"
@@ -30408,31 +30161,6 @@
             <td class="links">
               <a href="https://zatu.com/products/james-bond-cluedo" target="_blank" rel="noopener">Zatu</a>
               <a class="search-link" href="https://boardgamegeek.com/geeksearch.php?action=search&objecttype=boardgame&q=James%20Bond%20-%20Cluedo" target="_blank" rel="noopener">BGG (search)</a>
-              <button type="button" class="favorite-btn" aria-pressed="false" aria-label="Favorite this game" title="Favorite this game">♡</button>
-              <button type="button" class="hide-btn">Not interested</button>
-            </td>
-          </tr>
-          
-          <tr data-handle="monopoly-love-actually"
-              data-user_excluded="0"
-              data-user_favorited="0"
-              data-zatu_title="monopoly: love actually"
-              data-zatu_price_gbp="26.49"
-              data-zatu_in_stock="in stock"
-              data-match_category="NO_CONFIDENT_MATCH"
-              data-match_score="78.04878048780488"
-              data-filter-text="monopoly: love actually"
-              data-is-coop="0"
-              data-is-party="0"
-              data-category-tags="monopoly">
-            <td class="game-title">Monopoly: Love Actually</td>
-            <td class="num" data-label="UK price">£26.49</td>
-            <td data-label="Stock">In stock</td>
-            <td data-label="Why unmatched">No confident BGG match</td>
-            <td data-label="Closest BGG guess">Monopoly: Cat Lovers Edition (78% similar)</td>
-            <td class="links">
-              <a href="https://zatu.com/products/monopoly-love-actually" target="_blank" rel="noopener">Zatu</a>
-              <a class="search-link" href="https://boardgamegeek.com/geeksearch.php?action=search&objecttype=boardgame&q=Monopoly%3A%20Love%20Actually" target="_blank" rel="noopener">BGG (search)</a>
               <button type="button" class="favorite-btn" aria-pressed="false" aria-label="Favorite this game" title="Favorite this game">♡</button>
               <button type="button" class="hide-btn">Not interested</button>
             </td>
@@ -32438,31 +32166,6 @@
             </td>
           </tr>
           
-          <tr data-handle="monopoly-deal-fifa-world-cup-2026"
-              data-user_excluded="0"
-              data-user_favorited="0"
-              data-zatu_title="monopoly deal fifa world cup 2026"
-              data-zatu_price_gbp="7.89"
-              data-zatu_in_stock="in stock"
-              data-match_category="NO_CONFIDENT_MATCH"
-              data-match_score="78.26086956521739"
-              data-filter-text="monopoly deal fifa world cup 2026"
-              data-is-coop="0"
-              data-is-party="0"
-              data-category-tags="8+|card games|family|fifa|football|monopoly">
-            <td class="game-title">Monopoly Deal Fifa World Cup 2026</td>
-            <td class="num" data-label="UK price">£7.89</td>
-            <td data-label="Stock">In stock</td>
-            <td data-label="Why unmatched">No confident BGG match</td>
-            <td data-label="Closest BGG guess">Monopoly: Fifa World Cup 2006 Germany (78% similar)</td>
-            <td class="links">
-              <a href="https://zatu.com/products/monopoly-deal-fifa-world-cup-2026" target="_blank" rel="noopener">Zatu</a>
-              <a class="search-link" href="https://boardgamegeek.com/geeksearch.php?action=search&objecttype=boardgame&q=Monopoly%20Deal%20Fifa%20World%20Cup%202026" target="_blank" rel="noopener">BGG (search)</a>
-              <button type="button" class="favorite-btn" aria-pressed="false" aria-label="Favorite this game" title="Favorite this game">♡</button>
-              <button type="button" class="hide-btn">Not interested</button>
-            </td>
-          </tr>
-          
           <tr data-handle="family-card-games-memory-game"
               data-user_excluded="0"
               data-user_favorited="0"
@@ -33813,31 +33516,6 @@
             </td>
           </tr>
           
-          <tr data-handle="monopoly-super-mario-galaxy-movie"
-              data-user_excluded="0"
-              data-user_favorited="0"
-              data-zatu_title="monopoly super mario galaxy movie"
-              data-zatu_price_gbp="27.05"
-              data-zatu_in_stock="in stock"
-              data-match_category="NO_CONFIDENT_MATCH"
-              data-match_score="84.375"
-              data-filter-text="monopoly super mario galaxy movie"
-              data-is-coop="0"
-              data-is-party="1"
-              data-category-tags="8+|economic|family|manual release date|monopoly|super mario">
-            <td class="game-title">Monopoly Super Mario Galaxy Movie</td>
-            <td class="num" data-label="UK price">£27.05</td>
-            <td data-label="Stock">In stock</td>
-            <td data-label="Why unmatched">No confident BGG match</td>
-            <td data-label="Closest BGG guess">Monopoly: The Super Mario Bros. Movie Edition (84% similar)</td>
-            <td class="links">
-              <a href="https://zatu.com/products/monopoly-super-mario-galaxy-movie" target="_blank" rel="noopener">Zatu</a>
-              <a class="search-link" href="https://boardgamegeek.com/geeksearch.php?action=search&objecttype=boardgame&q=Monopoly%20Super%20Mario%20Galaxy%20Movie" target="_blank" rel="noopener">BGG (search)</a>
-              <button type="button" class="favorite-btn" aria-pressed="false" aria-label="Favorite this game" title="Favorite this game">♡</button>
-              <button type="button" class="hide-btn">Not interested</button>
-            </td>
-          </tr>
-          
           <tr data-handle="coalitions-fortresses-expansion"
               data-user_excluded="0"
               data-user_favorited="0"
@@ -34688,31 +34366,6 @@
             </td>
           </tr>
           
-          <tr data-handle="whitstable-and-herne-bay-monopoly"
-              data-user_excluded="0"
-              data-user_favorited="0"
-              data-zatu_title="whitstable and herne bay monopoly"
-              data-zatu_price_gbp="19.99"
-              data-zatu_in_stock="in stock"
-              data-match_category="NO_CONFIDENT_MATCH"
-              data-match_score="70.37037037037037"
-              data-filter-text="whitstable and herne bay monopoly"
-              data-is-coop="0"
-              data-is-party="0"
-              data-category-tags="monopoly|sale">
-            <td class="game-title">Whitstable and Herne Bay Monopoly</td>
-            <td class="num" data-label="UK price">£19.99</td>
-            <td data-label="Stock">In stock</td>
-            <td data-label="Why unmatched">No confident BGG match</td>
-            <td data-label="Closest BGG guess">Monopoly: Here and Now (70% similar)</td>
-            <td class="links">
-              <a href="https://zatu.com/products/whitstable-and-herne-bay-monopoly" target="_blank" rel="noopener">Zatu</a>
-              <a class="search-link" href="https://boardgamegeek.com/geeksearch.php?action=search&objecttype=boardgame&q=Whitstable%20and%20Herne%20Bay%20Monopoly" target="_blank" rel="noopener">BGG (search)</a>
-              <button type="button" class="favorite-btn" aria-pressed="false" aria-label="Favorite this game" title="Favorite this game">♡</button>
-              <button type="button" class="hide-btn">Not interested</button>
-            </td>
-          </tr>
-          
           <tr data-handle="subbuteo-red-white-black-player-set"
               data-user_excluded="0"
               data-user_favorited="0"
@@ -34858,31 +34511,6 @@
             <td class="links">
               <a href="https://zatu.com/products/paw-patrol-mini-memory" target="_blank" rel="noopener">Zatu</a>
               <a class="search-link" href="https://boardgamegeek.com/geeksearch.php?action=search&objecttype=boardgame&q=Paw%20Patrol%20Mini%20Memory" target="_blank" rel="noopener">BGG (search)</a>
-              <button type="button" class="favorite-btn" aria-pressed="false" aria-label="Favorite this game" title="Favorite this game">♡</button>
-              <button type="button" class="hide-btn">Not interested</button>
-            </td>
-          </tr>
-          
-          <tr data-handle="monopoly-gremlins"
-              data-user_excluded="0"
-              data-user_favorited="0"
-              data-zatu_title="monopoly: gremlins"
-              data-zatu_price_gbp="34.99"
-              data-zatu_in_stock="in stock"
-              data-match_category="NO_CONFIDENT_MATCH"
-              data-match_score="81.25"
-              data-filter-text="monopoly: gremlins"
-              data-is-coop="0"
-              data-is-party="0"
-              data-category-tags="monopoly">
-            <td class="game-title">Monopoly: Gremlins</td>
-            <td class="num" data-label="UK price">£34.99</td>
-            <td data-label="Stock">In stock</td>
-            <td data-label="Why unmatched">No confident BGG match</td>
-            <td data-label="Closest BGG guess">Monopoly: Berlin (81% similar)</td>
-            <td class="links">
-              <a href="https://zatu.com/products/monopoly-gremlins" target="_blank" rel="noopener">Zatu</a>
-              <a class="search-link" href="https://boardgamegeek.com/geeksearch.php?action=search&objecttype=boardgame&q=Monopoly%3A%20Gremlins" target="_blank" rel="noopener">BGG (search)</a>
               <button type="button" class="favorite-btn" aria-pressed="false" aria-label="Favorite this game" title="Favorite this game">♡</button>
               <button type="button" class="hide-btn">Not interested</button>
             </td>
@@ -35758,31 +35386,6 @@
             <td class="links">
               <a href="https://zatu.com/products/one-piece-pair-up" target="_blank" rel="noopener">Zatu</a>
               <a class="search-link" href="https://boardgamegeek.com/geeksearch.php?action=search&objecttype=boardgame&q=One%20Piece%20-%20Pair%20Up" target="_blank" rel="noopener">BGG (search)</a>
-              <button type="button" class="favorite-btn" aria-pressed="false" aria-label="Favorite this game" title="Favorite this game">♡</button>
-              <button type="button" class="hide-btn">Not interested</button>
-            </td>
-          </tr>
-          
-          <tr data-handle="uno-bluey"
-              data-user_excluded="0"
-              data-user_favorited="0"
-              data-zatu_title="uno bluey"
-              data-zatu_price_gbp="6.29"
-              data-zatu_in_stock="in stock"
-              data-match_category="NO_CONFIDENT_MATCH"
-              data-match_score="77.77777777777779"
-              data-filter-text="uno bluey"
-              data-is-coop="0"
-              data-is-party="0"
-              data-category-tags="card games|manual release date|mattel|pre-order|uno">
-            <td class="game-title">UNO Bluey</td>
-            <td class="num" data-label="UK price">£6.29</td>
-            <td data-label="Stock">In stock</td>
-            <td data-label="Why unmatched">No confident BGG match</td>
-            <td data-label="Closest BGG guess">Into the Blue (78% similar)</td>
-            <td class="links">
-              <a href="https://zatu.com/products/uno-bluey" target="_blank" rel="noopener">Zatu</a>
-              <a class="search-link" href="https://boardgamegeek.com/geeksearch.php?action=search&objecttype=boardgame&q=UNO%20Bluey" target="_blank" rel="noopener">BGG (search)</a>
               <button type="button" class="favorite-btn" aria-pressed="false" aria-label="Favorite this game" title="Favorite this game">♡</button>
               <button type="button" class="hide-btn">Not interested</button>
             </td>
@@ -36788,31 +36391,6 @@
             </td>
           </tr>
           
-          <tr data-handle="chick-n-out"
-              data-user_excluded="0"
-              data-user_favorited="0"
-              data-zatu_title="chick'n out"
-              data-zatu_price_gbp="23.49"
-              data-zatu_in_stock="in stock"
-              data-match_category="NO_CONFIDENT_MATCH"
-              data-match_score="90.9090909090909"
-              data-filter-text="chick'n out"
-              data-is-coop="0"
-              data-is-party="0"
-              data-category-tags="manual release date|pre-order">
-            <td class="game-title">Chick'n out</td>
-            <td class="num" data-label="UK price">£23.49</td>
-            <td data-label="Stock">In stock</td>
-            <td data-label="Why unmatched">No confident BGG match</td>
-            <td data-label="Closest BGG guess">Chicken Out!, Chicken Out, Chicken Out, +2 more</td>
-            <td class="links">
-              <a href="https://zatu.com/products/chick-n-out" target="_blank" rel="noopener">Zatu</a>
-              <a class="search-link" href="https://boardgamegeek.com/geeksearch.php?action=search&objecttype=boardgame&q=Chick%27n%20out" target="_blank" rel="noopener">BGG (search)</a>
-              <button type="button" class="favorite-btn" aria-pressed="false" aria-label="Favorite this game" title="Favorite this game">♡</button>
-              <button type="button" class="hide-btn">Not interested</button>
-            </td>
-          </tr>
-          
           <tr data-handle="alien-frontiers-complete-expansion-collection"
               data-user_excluded="0"
               data-user_favorited="0"
@@ -36963,56 +36541,6 @@
             </td>
           </tr>
           
-          <tr data-handle="uno-lightyear"
-              data-user_excluded="0"
-              data-user_favorited="0"
-              data-zatu_title="uno lightyear"
-              data-zatu_price_gbp="5.69"
-              data-zatu_in_stock="in stock"
-              data-match_category="NO_CONFIDENT_MATCH"
-              data-match_score="69.56521739130434"
-              data-filter-text="uno lightyear"
-              data-is-coop="0"
-              data-is-party="1"
-              data-category-tags="card games|mattel|mattelukge|sale|uno">
-            <td class="game-title">Uno Lightyear</td>
-            <td class="num" data-label="UK price">£5.69</td>
-            <td data-label="Stock">In stock</td>
-            <td data-label="Why unmatched">No confident BGG match</td>
-            <td data-label="Closest BGG guess">Liar's UNO (70% similar)</td>
-            <td class="links">
-              <a href="https://zatu.com/products/uno-lightyear" target="_blank" rel="noopener">Zatu</a>
-              <a class="search-link" href="https://boardgamegeek.com/geeksearch.php?action=search&objecttype=boardgame&q=Uno%20Lightyear" target="_blank" rel="noopener">BGG (search)</a>
-              <button type="button" class="favorite-btn" aria-pressed="false" aria-label="Favorite this game" title="Favorite this game">♡</button>
-              <button type="button" class="hide-btn">Not interested</button>
-            </td>
-          </tr>
-          
-          <tr data-handle="uno-toy-story-5"
-              data-user_excluded="0"
-              data-user_favorited="0"
-              data-zatu_title="uno toy story 5"
-              data-zatu_price_gbp="8.95"
-              data-zatu_in_stock="in stock"
-              data-match_category="NO_CONFIDENT_MATCH"
-              data-match_score="93.33333333333333"
-              data-filter-text="uno toy story 5"
-              data-is-coop="0"
-              data-is-party="1"
-              data-category-tags="card games|mattel|mattelukge|toy story|uno">
-            <td class="game-title">UNO Toy Story 5</td>
-            <td class="num" data-label="UK price">£8.95</td>
-            <td data-label="Stock">In stock</td>
-            <td data-label="Why unmatched">No confident BGG match</td>
-            <td data-label="Closest BGG guess">UNO: Toy Story 3, UNO: Toy Story 4</td>
-            <td class="links">
-              <a href="https://zatu.com/products/uno-toy-story-5" target="_blank" rel="noopener">Zatu</a>
-              <a class="search-link" href="https://boardgamegeek.com/geeksearch.php?action=search&objecttype=boardgame&q=UNO%20Toy%20Story%205" target="_blank" rel="noopener">BGG (search)</a>
-              <button type="button" class="favorite-btn" aria-pressed="false" aria-label="Favorite this game" title="Favorite this game">♡</button>
-              <button type="button" class="hide-btn">Not interested</button>
-            </td>
-          </tr>
-          
           <tr data-handle="ikusa-bundle"
               data-user_excluded="0"
               data-user_favorited="0"
@@ -37133,31 +36661,6 @@
             <td class="links">
               <a href="https://zatu.com/products/nanolith-deluxe-expansion" target="_blank" rel="noopener">Zatu</a>
               <a class="search-link" href="https://boardgamegeek.com/geeksearch.php?action=search&objecttype=boardgame&q=Nanolith%20Deluxe%20Expansion" target="_blank" rel="noopener">BGG (search)</a>
-              <button type="button" class="favorite-btn" aria-pressed="false" aria-label="Favorite this game" title="Favorite this game">♡</button>
-              <button type="button" class="hide-btn">Not interested</button>
-            </td>
-          </tr>
-          
-          <tr data-handle="uno-junior-spidey-friends"
-              data-user_excluded="0"
-              data-user_favorited="0"
-              data-zatu_title="uno junior spidey & friends"
-              data-zatu_price_gbp="6.19"
-              data-zatu_in_stock="in stock"
-              data-match_category="NO_CONFIDENT_MATCH"
-              data-match_score="71.42857142857143"
-              data-filter-text="uno junior spidey & friends"
-              data-is-coop="0"
-              data-is-party="1"
-              data-category-tags="card games|family|manual release date|marvel|mattel|mattelukge|pre-order|spider-man|uno">
-            <td class="game-title">UNO Junior Spidey & Friends</td>
-            <td class="num" data-label="UK price">£6.19</td>
-            <td data-label="Stock">In stock</td>
-            <td data-label="Why unmatched">No confident BGG match</td>
-            <td data-label="Closest BGG guess">UNO Hello Kitty & Friends (71% similar)</td>
-            <td class="links">
-              <a href="https://zatu.com/products/uno-junior-spidey-friends" target="_blank" rel="noopener">Zatu</a>
-              <a class="search-link" href="https://boardgamegeek.com/geeksearch.php?action=search&objecttype=boardgame&q=UNO%20Junior%20Spidey%20%26%20Friends" target="_blank" rel="noopener">BGG (search)</a>
               <button type="button" class="favorite-btn" aria-pressed="false" aria-label="Favorite this game" title="Favorite this game">♡</button>
               <button type="button" class="hide-btn">Not interested</button>
             </td>
@@ -37308,31 +36811,6 @@
             <td class="links">
               <a href="https://zatu.com/products/deal-or-no-deal-travel-tin" target="_blank" rel="noopener">Zatu</a>
               <a class="search-link" href="https://boardgamegeek.com/geeksearch.php?action=search&objecttype=boardgame&q=Deal%20or%20No%20Deal%20%28Travel%20Tin%29" target="_blank" rel="noopener">BGG (search)</a>
-              <button type="button" class="favorite-btn" aria-pressed="false" aria-label="Favorite this game" title="Favorite this game">♡</button>
-              <button type="button" class="hide-btn">Not interested</button>
-            </td>
-          </tr>
-          
-          <tr data-handle="uno-lord-of-the-rings"
-              data-user_excluded="0"
-              data-user_favorited="0"
-              data-zatu_title="uno lord of the rings"
-              data-zatu_price_gbp="8.35"
-              data-zatu_in_stock="in stock"
-              data-match_category="NO_CONFIDENT_MATCH"
-              data-match_score="86.66666666666667"
-              data-filter-text="uno lord of the rings"
-              data-is-coop="0"
-              data-is-party="1"
-              data-category-tags="card games|family|lord of the rings|manual release date|mattel|mattelukge|pre-order|uno">
-            <td class="game-title">UNO Lord of the Rings</td>
-            <td class="num" data-label="UK price">£8.35</td>
-            <td data-label="Stock">In stock</td>
-            <td data-label="Why unmatched">No confident BGG match</td>
-            <td data-label="Closest BGG guess">The Lord of the Rings: The Card Game, The Lord of the Rings, Lord of the Rings, +2 more</td>
-            <td class="links">
-              <a href="https://zatu.com/products/uno-lord-of-the-rings" target="_blank" rel="noopener">Zatu</a>
-              <a class="search-link" href="https://boardgamegeek.com/geeksearch.php?action=search&objecttype=boardgame&q=UNO%20Lord%20of%20the%20Rings" target="_blank" rel="noopener">BGG (search)</a>
               <button type="button" class="favorite-btn" aria-pressed="false" aria-label="Favorite this game" title="Favorite this game">♡</button>
               <button type="button" class="hide-btn">Not interested</button>
             </td>
@@ -37958,31 +37436,6 @@
             <td class="links">
               <a href="https://zatu.com/products/eldritch-dice-expansion-pack-railroad-ink-challenge" target="_blank" rel="noopener">Zatu</a>
               <a class="search-link" href="https://boardgamegeek.com/geeksearch.php?action=search&objecttype=boardgame&q=Eldritch%20Dice%20Expansion%20Pack%20-%20Railroad%20Ink%20Challenge" target="_blank" rel="noopener">BGG (search)</a>
-              <button type="button" class="favorite-btn" aria-pressed="false" aria-label="Favorite this game" title="Favorite this game">♡</button>
-              <button type="button" class="hide-btn">Not interested</button>
-            </td>
-          </tr>
-          
-          <tr data-handle="monopoly-prime-prizm-fifa-world-cup-core"
-              data-user_excluded="0"
-              data-user_favorited="0"
-              data-zatu_title="monopoly prime prizm: fifa world cup core"
-              data-zatu_price_gbp="36.89"
-              data-zatu_in_stock="in stock"
-              data-match_category="NO_CONFIDENT_MATCH"
-              data-match_score="84.21052631578947"
-              data-filter-text="monopoly prime prizm: fifa world cup core"
-              data-is-coop="0"
-              data-is-party="0"
-              data-category-tags="fifa|manual release date|monopoly">
-            <td class="game-title">Monopoly Prime Prizm: FIFA World Cup Core</td>
-            <td class="num" data-label="UK price">£36.89</td>
-            <td data-label="Stock">In stock</td>
-            <td data-label="Why unmatched">No confident BGG match</td>
-            <td data-label="Closest BGG guess">Monopoly: Panini Prizm – FIFA World Cup (84% similar)</td>
-            <td class="links">
-              <a href="https://zatu.com/products/monopoly-prime-prizm-fifa-world-cup-core" target="_blank" rel="noopener">Zatu</a>
-              <a class="search-link" href="https://boardgamegeek.com/geeksearch.php?action=search&objecttype=boardgame&q=Monopoly%20Prime%20Prizm%3A%20FIFA%20World%20Cup%20Core" target="_blank" rel="noopener">BGG (search)</a>
               <button type="button" class="favorite-btn" aria-pressed="false" aria-label="Favorite this game" title="Favorite this game">♡</button>
               <button type="button" class="hide-btn">Not interested</button>
             </td>
@@ -39413,31 +38866,6 @@
             </td>
           </tr>
           
-          <tr data-handle="playmobil-monopoly"
-              data-user_excluded="0"
-              data-user_favorited="0"
-              data-zatu_title="playmobil monopoly"
-              data-zatu_price_gbp="22.09"
-              data-zatu_in_stock="in stock"
-              data-match_category="NO_CONFIDENT_MATCH"
-              data-match_score="80.0"
-              data-filter-text="playmobil monopoly"
-              data-is-coop="0"
-              data-is-party="0"
-              data-category-tags="sale">
-            <td class="game-title">Playmobil Monopoly</td>
-            <td class="num" data-label="UK price">£22.09</td>
-            <td data-label="Stock">In stock</td>
-            <td data-label="Why unmatched">No confident BGG match</td>
-            <td data-label="Closest BGG guess">Monopoly: Plymouth (80% similar)</td>
-            <td class="links">
-              <a href="https://zatu.com/products/playmobil-monopoly" target="_blank" rel="noopener">Zatu</a>
-              <a class="search-link" href="https://boardgamegeek.com/geeksearch.php?action=search&objecttype=boardgame&q=Playmobil%20Monopoly" target="_blank" rel="noopener">BGG (search)</a>
-              <button type="button" class="favorite-btn" aria-pressed="false" aria-label="Favorite this game" title="Favorite this game">♡</button>
-              <button type="button" class="hide-btn">Not interested</button>
-            </td>
-          </tr>
-          
           <tr data-handle="iykyk-popular-culture"
               data-user_excluded="0"
               data-user_favorited="0"
@@ -40049,6 +39477,11 @@
     defaultSortDir: -1,
     resultSuffix: ' games matched your criteria',
     sortSelectId: 'unmatched-sort-select',
+    enableHide: true,
+    showHiddenId: 'unmatched-show-hidden',
+    hiddenCountId: 'unmatched-hidden-count',
+    exportButtonId: 'unmatched-export-hidden-btn',
+    clearButtonId: 'unmatched-clear-hidden-btn',
     enableFavorite: true,
     showFavoritesOnlyId: 'unmatched-show-favorites-only',
     favoritesCountId: 'unmatched-favorites-count',

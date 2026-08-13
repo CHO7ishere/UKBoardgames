@@ -198,8 +198,13 @@ def prepare_unmatched(
     excluded_handles = excluded_handles or set()
     favorited_handles = favorited_handles or set()
     prepared = []
+    excluded_titles = {"uno", "monopoly"}
     for game in games:
         if game.get("match_category") not in _DISPLAY_MATCH_CATEGORIES:
+            continue
+        # Filter out generic games that don't need eyeballing (UNO, Monopoly variants)
+        title_lower = game["zatu_title"].lower().strip()
+        if any(excluded in title_lower for excluded in excluded_titles):
             continue
         prepared.append(
             {

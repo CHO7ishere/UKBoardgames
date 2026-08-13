@@ -442,7 +442,10 @@
     <div class="controls">
       <input id="unmatched-filter" class="filter-input" type="search" placeholder="Filter by title…" autocomplete="off">
       <span id="unmatched-result-count">{{ unmatched_games | length }} games matched your criteria</span>
+      <label class="hide-toggle"><input type="checkbox" id="unmatched-show-hidden"> Show hidden (<span id="unmatched-hidden-count">0</span>)</label>
       <label class="hide-toggle"><input type="checkbox" id="unmatched-show-favorites-only"> Only favorites (<span id="unmatched-favorites-count">0</span>)</label>
+      <button type="button" id="unmatched-export-hidden-btn">Export hidden list</button>
+      <button type="button" id="unmatched-clear-hidden-btn">Clear hidden</button>
     </div>
     <div class="mobile-sort-wrap">
       <label>Sort by
@@ -813,6 +816,11 @@
     defaultSortDir: -1,
     resultSuffix: ' games matched your criteria',
     sortSelectId: 'unmatched-sort-select',
+    enableHide: true,
+    showHiddenId: 'unmatched-show-hidden',
+    hiddenCountId: 'unmatched-hidden-count',
+    exportButtonId: 'unmatched-export-hidden-btn',
+    clearButtonId: 'unmatched-clear-hidden-btn',
     enableFavorite: true,
     showFavoritesOnlyId: 'unmatched-show-favorites-only',
     favoritesCountId: 'unmatched-favorites-count',
