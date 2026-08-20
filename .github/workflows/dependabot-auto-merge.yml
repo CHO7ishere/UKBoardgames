@@ -1,0 +1,46 @@
+name: Dependabot auto-merge
+
+# Triggers after the Tests workflow completes on any pull request. Using
+# workflow_run (rather than a pull_request-triggered job watching checks)
+# avoids two failure modes: the job waiting on its own check run forever,
+# and `gh pr merge --auto` needing branch protection / required checks this
+# repo doesn't have. Also runs in the default-branch context, so Dependabot's
+# own code is never executed with a write token.
+
+on:
+  workflow_run:
+    workflows: ["Tests"]
+    types: [completed]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  auto-merge:
+    runs-on: ubuntu-latest
+    if: >-
+      github.event.workflow_run.event == 'pull_request' &&
+      github.event.workflow_run.conclusion == 'success' &&
+      github.event.workflow_run.head_repository.full_name == github.repository
+    steps:
+      - name: Merge Dependabot PRs whose tests just passed
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+          PULL_REQUESTS: ${{ toJSON(github.event.workflow_run.pull_requests) }}
+        run: |
+          echo "$PULL_REQUESTS" | jq -r '.[].number' | while read -r pr_number; do
+            author=$(gh pr view "$pr_number" --repo "$REPO" --json author --jq '.author.login')
+            head=$(gh pr view "$pr_number" --repo "$REPO" --json headRefOid --jq '.headRefOid')
+            # Only merge if the green test run covers the PR's current head —
+            # never merge newer, untested commits pushed after the run started.
+            if [ "$author" = "dependabot[bot]" ] && [ "$head" = "$HEAD_SHA" ]; then
+              echo "Merging PR #$pr_number ($author @ $head)"
+              gh pr merge "$pr_number" --repo "$REPO" --squash --delete-branch \
+                || echo "::warning::Could not merge PR #$pr_number (conflicts or branch protection?)"
+            else
+              echo "Skipping PR #$pr_number (author=$author, head=$head)"
+            fi
+          done
